@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+#set($classInfo=$collection.classInfo)
+#set($tableInfo=$collection.tableInfo)
+#set($keys=$collection.keys)
+#set($columns=$collection.columns)
+#set($queryConditions=$collection.queryConditions)
+#set($ascConditions=$collection.ascConditions)
+#set($descConditons=$collection.descConditions)
+#set($insertList=$collection.insertList)
+#set($updateList=$collection.updateList)
+<mapper namespace="${classInfo.packageName}.dao.mybatis.${classInfo.className}Mapper">
+	<!--
+	注意：
+	1.需要手工调整commonQuery，例如时间范围和数值查询等；
+	2.数值型基础数据类型使用包装类，进行非空判断。
+	-->
+	
+	<!-- 按主键查询 -->
+	<select id="getByKey" resultType="${classInfo.classFullName}" parameterType="java.util.Map">
+		SELECT
+#foreach($column in $columns)
+			a.${column.columnName} ${column.fieldName}#if($velocityCount<$columns.size()),#end
+	
+#end
+		FROM ${tableInfo.tableName} a
+		WHERE
+#foreach($key in $keys)
+		a.${key.keyColumn} = #{${key.keyField},jdbcType=${key.jdbcType}}
+#if($velocityCount<$keys.size()) AND #end
+#end
+	</select>
+
+	<!-- 条件：通用查询 -->
+	<sql id="commonQuery">
+		<where>
+#foreach($column in $columns)
+#if(${column.jdbcType} == 'TEXT' || ${column.jdbcType} == 'VARCHAR')
+			<if test="${column.fieldName}!=null and ${column.fieldName}!=''">
+				AND a.${column.columnName} = #{${column.fieldName}, jdbcType=${column.jdbcType}}
+			</if>
+#else
+			<if test="${column.fieldName}!=null">
+				AND a.${column.columnName} = #{${column.fieldName}, jdbcType=${column.jdbcType}}
+			</if>
+#end
+#end
+		</where>
+	</sql>
+
+	<!-- 条件：排序 -->
+	<sql id="commonOrder">
+#if($ascConditions.size()>0)
+		 ORDER BY
+#foreach($cond in $ascConditions)
+		 a.${cond}#if($velocityCount<$ascConditions.size()),#end
+#end
+ ASC
+#else
+		 ORDER BY a.update_time DESC
+#end
+	</sql>
+
+	<!-- 条件：分页 -->
+	<sql id="commonPage">
+		<if test="from!=null and to!=null">
+			LIMIT #{from}, #{to}
+		</if>
+	</sql>
+
+	<!-- 通用条件查询 -->
+	<select id="query" resultType="${classInfo.classFullName}" parameterType="java.util.Map">
+		SELECT
+#foreach($column in $columns)
+			a.${column.columnName} ${column.fieldName}#if($velocityCount<$columns.size()),#end
+
+#end
+		FROM ${tableInfo.tableName} a
+		<include refid="commonQuery"/>
+	</select>
+
+	<!-- 分页查询查询 -->
+	<select id="pageQuery" resultType="${classInfo.classFullName}" parameterType="java.util.Map">
+		SELECT
+#foreach($column in $columns)
+			a.${column.columnName} ${column.fieldName}#if($velocityCount<$columns.size()),#end
+
+#end
+		FROM ${tableInfo.tableName} a
+		<include refid="commonQuery"/>
+		<include refid="commonOrder"/>
+		<include refid="commonPage"/>
+	</select>
+
+	<!-- 数量统计 -->
+	<select id="count" resultType="java.lang.Integer" parameterType="java.util.Map">
+		SELECT count(1)
+		FROM ${tableInfo.tableName} a
+		<include refid="commonQuery"/>
+	</select>
+
+	<!-- 单条保存 -->
+	<insert id="save" parameterType="${classInfo.classFullName}">
+		insert into ${tableInfo.tableName} (
+#foreach($ins in $insertList)
+			${ins.insertColumn}#if($velocityCount < $insertList.size()),#end
+
+#end
+		) values (
+#foreach($ins in $insertList)
+#if(${ins.insertField}=='createTime' || ${ins.insertField}=='updateTime')
+			now()#if($velocityCount < $insertList.size()),#end#else			#{${ins.insertField}}#if($velocityCount < $insertList.size()),#end
+#end
+
+#end
+		)
+#if($tableInfo.isKeyAutoIncrease)
+		<selectKey resultType="Long" keyProperty="$keys[0].keyField">  
+			select LAST_INSERT_ID()
+		</selectKey>
+#end
+	</insert>
+    
+	<!-- 批量保存 -->
+	<insert id="saveBatch" parameterType="java.util.List">
+		insert into ${tableInfo.tableName}
+		(
+#foreach($ins in $insertList)
+			${ins.insertColumn}#if($velocityCount < $insertList.size()),#end
+
+#end
+		)
+		values
+		<foreach collection="list" item="item" index="index" separator=",">
+        (
+#foreach($ins in $insertList)
+#if(${ins.insertField}=='createTime' || ${ins.insertField}=='updateTime')
+			now()#if($velocityCount < $insertList.size()),#end#else			#{item.${ins.insertField}}#if($velocityCount < $insertList.size()),#end
+#end
+
+#end
+		)
+		</foreach>
+#if($tableInfo.isKeyAutoIncrease)
+		<selectKey resultType="Long" keyProperty="$keys[0].keyField">  
+			select LAST_INSERT_ID()
+		</selectKey>
+#end
+	</insert>
+
+	<!-- 按主键更新全部字段 -->
+#if($tableInfo.updateAble)
+	<update id="update" parameterType="${classInfo.classFullName}">
+		UPDATE ${tableInfo.tableName} a SET 
+#foreach($upt in $updateList)
+			a.${upt.updateColumn} = #{${upt.updateField}},
+#end
+			a.update_by = #{updateBy},
+			a.update_time = now()
+		WHERE 
+#foreach($key in $keys)
+		a.${key.keyColumn} = #{${key.keyField},jdbcType=${key.jdbcType}}#if($velocityCount<$keys.size()) AND #end
+
+#end
+	</update>
+
+	<!-- 按主键更新非空字段 -->
+	<update id="updateNotEmpty" parameterType="${classInfo.classFullName}">
+		UPDATE ${tableInfo.tableName} a
+		<set>
+#foreach($upt in $updateList)
+#if(${upt.jdbcType} == 'TEXT' || ${upt.jdbcType} == 'VARCHAR')
+			<if test="${upt.updateField}!=null and ${upt.updateField}!=''">
+				a.${upt.updateColumn} = #{${upt.updateField}, jdbcType=${upt.jdbcType}}#if($velocityCount<$updateList.size()),#end
+
+			</if>
+#else
+			<if test="${upt.updateField}!=null">
+				a.${upt.updateColumn} = #{${upt.updateField}, jdbcType=${upt.jdbcType}}#if($velocityCount<$updateList.size()),#end
+
+			</if>
+#end
+#end
+		</set>
+			a.update_by = #{updateBy},
+			a.update_time = now()
+		WHERE
+#foreach($key in $keys)
+		a.${key.keyColumn} = #{${key.keyField},jdbcType=${key.jdbcType}}#if($velocityCount<$keys.size()) AND #end
+
+#end
+	</update>
+
+	<!-- 按主键删除 -->
+	<delete id="deleteByKey" parameterType="java.util.Map">
+		delete from ${tableInfo.tableName}
+		where
+#foreach($key in $keys)
+        ${key.keyColumn} = #{${key.keyField},jdbcType=${key.jdbcType}}#if($velocityCount<$keys.size()) AND #end
+
+#end
+	</delete>
+#end
+</mapper>

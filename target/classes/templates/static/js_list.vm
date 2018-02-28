@@ -1,0 +1,70 @@
+#set($classInfo=$collection.classInfo)
+#set($tableInfo=$collection.tableInfo)
+#set($keys=$collection.keys)
+var ${classInfo.handleName}ListVM = new Vue({
+	el : '#${classInfo.handleName}List',
+	/* data */
+	data : {
+		${classInfo.handleName}List : [],
+		queryObj : {},
+		page : {
+			pageSize : 10,
+			pageNumber : 1,
+			total : null
+		}
+	},
+	/* methods */
+	methods : {
+		pageQuery : function(page) {
+			var _this = this;
+			_this.page.queryObj = _this.queryObj;
+			${classInfo.className}Service.pageQuery(page, function(result) {
+				_this.page.total = result.data.total;
+				_this.${classInfo.handleName}List = result.data.rows;
+			});
+		},
+		openCreateModal : function() {
+			var _this = this;
+			${classInfo.className}Service.openCreateModal("新增${tableInfo.comment}", function() {
+				_this.pageQuery(_this.page);
+			});
+		},
+		openUpdateModal : function(index) {
+			var _this = this;
+			${classInfo.className}Service.openUpdateModal("修改${tableInfo.comment}",_this.${classInfo.handleName}List[index], function() {
+				_this.pageQuery(_this.page);
+			});
+		},
+		deleteRow : function(index) {
+			var _this = this;
+			var delObj = _this.${classInfo.handleName}List[index];
+			var key = {#foreach($key in $keys)${key.keyField}: delObj.${key.keyField}#if($velocityCount<$keys.size()),#end#end}
+			// confirm时，指定关键信息提示 "确定要删除***吗？"
+			$.xfm.confirm("确认要删除吗？", function() {
+				${classInfo.className}Service.deleteByKey(key, function(result) {
+					$.xfm.alert(result.message.info, function() {
+						_this.pageQuery(_this.page);
+					});
+				});
+			});
+		}
+	},
+	/* computed */
+	computed : {
+		// 列表展示信息，指定哪些列需要转换
+		show${classInfo.className}List : function() {
+			var show${classInfo.className}List = [];
+			this.${classInfo.handleName}List.filter(function(${classInfo.handleName}) {
+				// 生成新对象，否则编辑时会显示computed后的数据
+				var t${classInfo.className} = $.extend({}, ${classInfo.handleName});
+				// t${classInfo.className}.*** = Vue.select(t${classInfo.className}.***, xxx);
+				show${classInfo.className}List.push(t${classInfo.className});
+			});
+			return show${classInfo.className}List;
+		}
+	},
+	/* created */
+	created : function() {
+		this.pageQuery(this.page);
+	}
+});
