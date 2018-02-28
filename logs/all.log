@@ -1,0 +1,52 @@
+2018-02-28 09:37:10,925  INFO AdventureApplication:48 - Starting AdventureApplication on PC-20171126RQUJ with PID 4720 (D:\SpringCloud\Adventure\target\classes started by Administrator in D:\SpringCloud\Adventure)
+2018-02-28 09:37:10,941 DEBUG AdventureApplication:51 - Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-02-28 09:37:10,941  INFO AdventureApplication:593 - No active profile set, falling back to default profiles: default
+2018-02-28 09:37:11,194  INFO AnnotationConfigEmbeddedWebApplicationContext:583 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5129b983: startup date [Wed Feb 28 09:37:11 CST 2018]; root of context hierarchy
+2018-02-28 09:37:11,257  INFO Version:30 - HV000001: Hibernate Validator 5.3.6.Final
+2018-02-28 09:37:11,806  INFO RepositoryConfigurationDelegate:165 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-02-28 09:37:12,669  INFO TomcatEmbeddedServletContainer:89 - Tomcat initialized with port(s): 8080 (http)
+2018-02-28 09:37:12,799  INFO ContextLoader:276 - Root WebApplicationContext: initialization completed in 1605 ms
+2018-02-28 09:37:12,936  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-02-28 09:37:12,936  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-02-28 09:37:12,936  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-02-28 09:37:12,936  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-02-28 09:37:12,936  INFO DelegatingFilterProxyRegistrationBean:258 - Mapping filter: 'springSecurityFilterChain' to: [/*]
+2018-02-28 09:37:12,936  INFO ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+2018-02-28 09:37:13,760  INFO DefaultSecurityFilterChain:43 - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@43999415, org.springframework.security.web.context.SecurityContextPersistenceFilter@745a3592, org.springframework.security.web.header.HeaderWriterFilter@5fe797f3, org.springframework.security.web.csrf.CsrfFilter@614fef93, org.springframework.security.web.authentication.logout.LogoutFilter@3638b2f8, com.firstTry.Adventure.config.JWTLoginFilter@6ca1b30a, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7c175c79, com.firstTry.Adventure.config.JWTAuthenticationFilter@3ab572fb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2f7ffa6b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1d82fede, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@118b6fe6, org.springframework.security.web.session.SessionManagementFilter@6fa304ff, org.springframework.security.web.access.ExceptionTranslationFilter@38838b16, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6c6033da]
+2018-02-28 09:37:13,777  INFO ThreadPoolTaskExecutor:165 - Initializing ExecutorService 
+2018-02-28 09:37:13,783  INFO ThreadPoolTaskExecutor:165 - Initializing ExecutorService  'defaultThreadPool'
+2018-02-28 09:37:13,935  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5129b983: startup date [Wed Feb 28 09:37:11 CST 2018]; root of context hierarchy
+2018-02-28 09:37:13,986  INFO RequestMappingHandlerMapping:543 - Mapped "{[/]}" onto public java.lang.String com.firstTry.Adventure.config.DefaultView.index(javax.servlet.http.HttpServletRequest)
+2018-02-28 09:37:13,987  INFO RequestMappingHandlerMapping:543 - Mapped "{[/hello]}" onto public java.lang.String com.firstTry.Adventure.config.DefaultView.hello()
+2018-02-28 09:37:13,987  INFO RequestMappingHandlerMapping:543 - Mapped "{[/login]}" onto public java.lang.String com.firstTry.Adventure.config.DefaultView.login()
+2018-02-28 09:37:13,987  INFO RequestMappingHandlerMapping:543 - Mapped "{[/index]}" onto public java.lang.String com.firstTry.Adventure.controller.UserLoginController.index()
+2018-02-28 09:37:13,988  INFO RequestMappingHandlerMapping:543 - Mapped "{[/hi]}" onto public java.lang.String com.firstTry.Adventure.controller.UserLoginController.hello() throws java.lang.Exception
+2018-02-28 09:37:13,989  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-02-28 09:37:13,990  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-02-28 09:37:14,017  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-02-28 09:37:14,017  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-02-28 09:37:14,030  INFO ExceptionHandlerExceptionResolver:273 - Detected @ExceptionHandler methods in globalExceptionHandler
+2018-02-28 09:37:14,051  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-02-28 09:37:14,485  INFO OptionalLiveReloadServer:58 - LiveReload server is running on port 35729
+2018-02-28 09:37:14,488  WARN RedisStarterDeprecationWarningAutoConfiguration:43 - spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2018-02-28 09:37:14,524  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2018-02-28 09:37:14,574  INFO AutoConfigurationReportLoggingInitializer:101 - 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2018-02-28 09:37:14,577 ERROR LoggingFailureAnalysisReporter:42 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8080 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8080, or configure this application to listen on another port.
+
+2018-02-28 09:37:14,581  INFO AnnotationConfigEmbeddedWebApplicationContext:984 - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5129b983: startup date [Wed Feb 28 09:37:11 CST 2018]; root of context hierarchy
+2018-02-28 09:37:14,583  INFO AnnotationMBeanExporter:449 - Unregistering JMX-exposed beans on shutdown
+2018-02-28 09:37:14,584  INFO ThreadPoolTaskExecutor:202 - Shutting down ExecutorService 'defaultThreadPool'

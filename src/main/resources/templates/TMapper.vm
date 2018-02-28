@@ -1,0 +1,32 @@
+#set($classInfo=$collection.classInfo)
+#set($tableInfo=$collection.tableInfo)
+package ${classInfo.packageName}.dao.mybatis;
+
+import java.util.List;
+import java.util.Map;
+import ${classInfo.classFullName};
+import org.apache.ibatis.annotations.Mapper;
+
+@Mapper
+public interface ${classInfo.className}Mapper {
+	// 按主键查询
+	${classInfo.className} getByKey(Map<String, Object> keyMap);
+	// 通用条件查询
+	List<${classInfo.className}> query(Map<String, Object> queryMap);
+	// 分页查询
+	List<${classInfo.className}> pageQuery(Map<String, Object> pageQueryMap);
+	// 数量统计
+	int count(Map<String, Object> countMap);
+	// 单条保存
+	int save(${classInfo.className} ${classInfo.handleName});
+	// 批量保存
+	int saveBatch(List<${classInfo.className}> ${classInfo.handleName}List);
+#if($tableInfo.updateAble)
+	// 按主键更新全部字段
+	int update(${classInfo.className} ${classInfo.handleName});
+	// 按主键更新非空字段
+	int updateNotEmpty(${classInfo.className} ${classInfo.handleName});
+	// 按主键删除
+	int deleteByKey(Map<String, Object> keyMap);
+#end
+}

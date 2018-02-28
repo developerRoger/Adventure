@@ -1,0 +1,274 @@
+2018-02-12 14:21:09,687  INFO AdventureApplication:48 ---- Starting AdventureApplication on PC-20171126RQUJ with PID 8176 (D:\SpringCloud\Adventure\target\classes started by Administrator in D:\SpringCloud\Adventure)
+2018-02-12 14:21:09,690 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-02-12 14:21:09,691  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-02-12 14:21:45,643  INFO AdventureApplication:48 ---- Starting AdventureApplication on PC-20171126RQUJ with PID 6872 (D:\SpringCloud\Adventure\target\classes started by Administrator in D:\SpringCloud\Adventure)
+2018-02-12 14:21:45,645 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-02-12 14:21:45,645  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-02-12 14:26:06,212  INFO AdventureApplication:48 ---- Starting AdventureApplication on PC-20171126RQUJ with PID 7120 (D:\SpringCloud\Adventure\target\classes started by Administrator in D:\SpringCloud\Adventure)
+2018-02-12 14:26:06,213 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-02-12 14:26:06,214  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-02-12 14:33:04,279  INFO AdventureApplication:48 ---- Starting AdventureApplication on PC-20171126RQUJ with PID 7092 (D:\SpringCloud\Adventure\target\classes started by Administrator in D:\SpringCloud\Adventure)
+2018-02-12 14:33:04,280 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-02-12 14:33:04,281  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-02-12 14:44:39,846  INFO AdventureApplication:48 ---- Starting AdventureApplication on PC-20171126RQUJ with PID 7660 (D:\SpringCloud\Adventure\target\classes started by Administrator in D:\SpringCloud\Adventure)
+2018-02-12 14:44:39,847 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-02-12 14:44:39,848  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-02-12 14:46:49,715  INFO AdventureApplication:48 ---- Starting AdventureApplication on PC-20171126RQUJ with PID 3736 (D:\SpringCloud\Adventure\target\classes started by Administrator in D:\SpringCloud\Adventure)
+2018-02-12 14:46:49,717 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-02-12 14:46:49,718  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-02-12 14:47:53,255  INFO AdventureApplication:48 ---- Starting AdventureApplication on PC-20171126RQUJ with PID 7200 (D:\SpringCloud\Adventure\target\classes started by Administrator in D:\SpringCloud\Adventure)
+2018-02-12 14:47:53,257 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-02-12 14:47:53,257  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-02-12 14:51:08,971  INFO AdventureApplication:48 ---- Starting AdventureApplication on PC-20171126RQUJ with PID 6648 (D:\SpringCloud\Adventure\target\classes started by Administrator in D:\SpringCloud\Adventure)
+2018-02-12 14:51:08,973 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-02-12 14:51:08,973  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-02-12 14:51:12,431  INFO AdventureApplication:57 ---- Started AdventureApplication in 3.61 seconds (JVM running for 3.927)
+2018-02-12 14:55:54,414  INFO AdventureApplication:48 ---- Starting AdventureApplication on PC-20171126RQUJ with PID 8920 (D:\SpringCloud\Adventure\target\classes started by Administrator in D:\SpringCloud\Adventure)
+2018-02-12 14:55:54,415 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-02-12 14:55:54,416  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-02-12 15:14:28,225  INFO AdventureApplication:48 ---- Starting AdventureApplication on PC-20171126RQUJ with PID 6988 (D:\SpringCloud\Adventure\target\classes started by Administrator in D:\SpringCloud\Adventure)
+2018-02-12 15:14:28,226 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-02-12 15:14:28,226  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-02-12 15:32:28,594  INFO AdventureApplication:48 ---- Starting AdventureApplication on PC-20171126RQUJ with PID 8368 (D:\SpringCloud\Adventure\target\classes started by Administrator in D:\SpringCloud\Adventure)
+2018-02-12 15:32:28,595 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-02-12 15:32:28,596  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-02-12 15:32:33,067  INFO AdventureApplication:57 ---- Started AdventureApplication in 4.637 seconds (JVM running for 5.017)
+2018-02-12 15:34:45,699 DEBUG JWTLoginFilter:206 ---- Request is to process authentication
+2018-02-12 15:39:02,723  INFO AdventureApplication:48 ---- Starting AdventureApplication on PC-20171126RQUJ with PID 8368 (D:\SpringCloud\Adventure\target\classes started by Administrator in D:\SpringCloud\Adventure)
+2018-02-12 15:39:02,723 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-02-12 15:39:02,723  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-02-12 15:39:03,730  INFO AdventureApplication:57 ---- Started AdventureApplication in 1.032 seconds (JVM running for 395.659)
+2018-02-12 15:39:30,457 DEBUG JWTLoginFilter:206 ---- Request is to process authentication
+2018-02-12 15:39:30,486 DEBUG JWTLoginFilter:345 ---- Authentication request failed: org.springframework.security.authentication.BadCredentialsException: Bad credentials
+org.springframework.security.authentication.BadCredentialsException: Bad credentials
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:151)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:174)
+	at com.firstTry.Adventure.config.JWTLoginFilter.attemptAuthentication(JWTLoginFilter.java:40)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:124)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:64)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:214)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:177)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:347)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:263)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:108)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2018-02-12 15:39:30,488 DEBUG JWTLoginFilter:346 ---- Updated SecurityContextHolder to contain null Authentication
+2018-02-12 15:39:30,489 DEBUG JWTLoginFilter:347 ---- Delegating to authentication failure handler org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler@58be91df
+2018-02-12 15:41:35,095 DEBUG JWTLoginFilter:206 ---- Request is to process authentication
+2018-02-12 15:46:40,285 DEBUG JWTLoginFilter:345 ---- Authentication request failed: org.springframework.security.authentication.BadCredentialsException: Bad credentials
+org.springframework.security.authentication.BadCredentialsException: Bad credentials
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:151)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:174)
+	at com.firstTry.Adventure.config.JWTLoginFilter.attemptAuthentication(JWTLoginFilter.java:40)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:124)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:64)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:214)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:177)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:347)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:263)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:108)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2018-02-12 15:46:40,289 DEBUG JWTLoginFilter:346 ---- Updated SecurityContextHolder to contain null Authentication
+2018-02-12 15:46:40,291 DEBUG JWTLoginFilter:347 ---- Delegating to authentication failure handler org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler@58be91df
+2018-02-12 16:18:20,512  INFO AdventureApplication:48 ---- Starting AdventureApplication on PC-20171126RQUJ with PID 8368 (D:\SpringCloud\Adventure\target\classes started by Administrator in D:\SpringCloud\Adventure)
+2018-02-12 16:18:20,512 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-02-12 16:18:20,512  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-02-12 16:18:31,259  INFO AdventureApplication:57 ---- Started AdventureApplication in 10.772 seconds (JVM running for 2763.057)
+2018-02-12 16:18:45,109 DEBUG JWTLoginFilter:206 ---- Request is to process authentication
+2018-02-12 16:19:12,784 DEBUG JWTLoginFilter:206 ---- Request is to process authentication
+2018-02-12 16:21:30,160  INFO AdventureApplication:48 ---- Starting AdventureApplication on PC-20171126RQUJ with PID 8368 (D:\SpringCloud\Adventure\target\classes started by Administrator in D:\SpringCloud\Adventure)
+2018-02-12 16:21:30,160 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-02-12 16:21:30,160  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-02-12 16:21:35,574  INFO AdventureApplication:57 ---- Started AdventureApplication in 5.438 seconds (JVM running for 2947.361)
+2018-02-12 16:22:07,781  INFO AdventureApplication:48 ---- Starting AdventureApplication on PC-20171126RQUJ with PID 8364 (D:\SpringCloud\Adventure\target\classes started by Administrator in D:\SpringCloud\Adventure)
+2018-02-12 16:22:07,783 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-02-12 16:22:07,783  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-02-12 16:22:17,255  INFO AdventureApplication:57 ---- Started AdventureApplication in 9.637 seconds (JVM running for 9.99)
+2018-02-12 16:22:29,030 DEBUG JWTLoginFilter:206 ---- Request is to process authentication
+2018-02-12 16:23:37,310  INFO AdventureApplication:48 ---- Starting AdventureApplication on PC-20171126RQUJ with PID 8364 (D:\SpringCloud\Adventure\target\classes started by Administrator in D:\SpringCloud\Adventure)
+2018-02-12 16:23:37,310 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-02-12 16:23:37,310  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-02-12 16:23:48,068  INFO AdventureApplication:57 ---- Started AdventureApplication in 10.783 seconds (JVM running for 100.798)
+2018-02-12 16:23:59,368 DEBUG JWTLoginFilter:206 ---- Request is to process authentication
+2018-02-12 16:39:35,123  INFO AdventureApplication:48 ---- Starting AdventureApplication on PC-20171126RQUJ with PID 8364 (D:\SpringCloud\Adventure\target\classes started by Administrator in D:\SpringCloud\Adventure)
+2018-02-12 16:39:35,123 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-02-12 16:39:35,123  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-02-12 16:39:36,144  INFO AdventureApplication:57 ---- Started AdventureApplication in 1.045 seconds (JVM running for 1048.821)
+2018-02-12 16:39:44,705  INFO AdventureApplication:48 ---- Starting AdventureApplication on PC-20171126RQUJ with PID 8364 (D:\SpringCloud\Adventure\target\classes started by Administrator in D:\SpringCloud\Adventure)
+2018-02-12 16:39:44,705 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-02-12 16:39:44,706  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-02-12 16:39:45,678  INFO AdventureApplication:57 ---- Started AdventureApplication in 0.993 seconds (JVM running for 1058.355)
+2018-02-12 16:39:48,266  INFO AdventureApplication:48 ---- Starting AdventureApplication on PC-20171126RQUJ with PID 8364 (D:\SpringCloud\Adventure\target\classes started by Administrator in D:\SpringCloud\Adventure)
+2018-02-12 16:39:48,267 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-02-12 16:39:48,267  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-02-12 16:39:49,100  INFO AdventureApplication:57 ---- Started AdventureApplication in 0.855 seconds (JVM running for 1061.777)
+2018-02-12 16:41:49,159 DEBUG JWTLoginFilter:206 ---- Request is to process authentication
+2018-02-12 16:41:49,169 DEBUG JWTLoginFilter:345 ---- Authentication request failed: org.springframework.security.authentication.BadCredentialsException: Bad credentials
+org.springframework.security.authentication.BadCredentialsException: Bad credentials
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:151)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:174)
+	at com.firstTry.Adventure.config.JWTLoginFilter.attemptAuthentication(JWTLoginFilter.java:36)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:124)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:64)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:214)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:177)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:347)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:263)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:108)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2018-02-12 16:41:49,175 DEBUG JWTLoginFilter:346 ---- Updated SecurityContextHolder to contain null Authentication
+2018-02-12 16:41:49,176 DEBUG JWTLoginFilter:347 ---- Delegating to authentication failure handler org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler@2ff93bd1
+2018-02-12 17:31:03,377  INFO AdventureApplication:48 ---- Starting AdventureApplication on PC-20171126RQUJ with PID 8364 (D:\SpringCloud\Adventure\target\classes started by Administrator in D:\SpringCloud\Adventure)
+2018-02-12 17:31:03,378 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-02-12 17:31:03,378  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-02-12 17:31:04,421  INFO AdventureApplication:57 ---- Started AdventureApplication in 1.065 seconds (JVM running for 4136.927)
+2018-02-12 17:31:32,335 DEBUG JWTLoginFilter:206 ---- Request is to process authentication
+2018-02-12 17:32:10,612 DEBUG JWTLoginFilter:206 ---- Request is to process authentication
+2018-02-12 17:33:39,430  INFO AdventureApplication:48 ---- Starting AdventureApplication on PC-20171126RQUJ with PID 8364 (D:\SpringCloud\Adventure\target\classes started by Administrator in D:\SpringCloud\Adventure)
+2018-02-12 17:33:39,430 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-02-12 17:33:39,430  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-02-12 17:33:40,372  INFO AdventureApplication:57 ---- Started AdventureApplication in 0.961 seconds (JVM running for 4292.869)
+2018-02-12 17:40:17,014 DEBUG JWTLoginFilter:206 ---- Request is to process authentication
+2018-02-12 17:58:35,596  INFO AdventureApplication:48 ---- Starting AdventureApplication on PC-20171126RQUJ with PID 8364 (D:\SpringCloud\Adventure\target\classes started by Administrator in D:\SpringCloud\Adventure)
+2018-02-12 17:58:35,597 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-02-12 17:58:35,597  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-02-12 17:58:36,465  INFO AdventureApplication:57 ---- Started AdventureApplication in 0.893 seconds (JVM running for 5788.88)
+2018-02-12 18:22:58,009  INFO AdventureApplication:48 ---- Starting AdventureApplication on PC-20171126RQUJ with PID 8364 (D:\SpringCloud\Adventure\target\classes started by Administrator in D:\SpringCloud\Adventure)
+2018-02-12 18:22:58,010 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-02-12 18:22:58,010  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-02-12 18:22:58,894  INFO AdventureApplication:57 ---- Started AdventureApplication in 0.903 seconds (JVM running for 7251.228)

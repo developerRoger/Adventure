@@ -1,0 +1,66 @@
+#set($classInfo=$collection.classInfo)
+/**
+ * ${classInfo.className}Service，提供Ajax与后台服务交互的方法，以及openModal方法
+ */
+var ${classInfo.className}Service = {
+	getByKey: function(key, _callback) {
+		return $.xfm.post({
+			url : "/openapi/*app*/${classInfo.handleName}/getByKey",
+			data : key,
+			success : function(result) {
+				if(_callback) _callback(result);
+			}
+		});
+	},
+	pageQuery: function(page, _callback) {
+		return $.xfm.post({
+			url : "/openapi/*app*/${classInfo.handleName}/pageQuery",
+			data : page,
+			success : function(result) {
+				if(_callback) _callback(result);
+			}
+		});
+	},
+	query: function(params, _callback) {
+		return $.xfm.post({
+			url : "/openapi/*app*/${classInfo.handleName}/query",
+			data : params,
+			success : function(result) {
+				if(_callback) _callback(result);
+			}
+		});
+	},
+	save: function(user, _callback) {
+		return $.xfm.post({
+			url : "/openapi/*app*/${classInfo.handleName}/save",
+			data : user,
+			success : function(result) {
+				if(_callback) _callback(result);
+			}
+		});
+	},
+	update: function(user, _callback) {
+		return $.xfm.post({
+			url : "/openapi/*app*/${classInfo.handleName}/update",
+			data : user,
+			success : function(result) {
+				if(_callback) _callback(result);
+			}
+		});
+	},
+	deleteByKey: function(key, _callback) {
+		return $.xfm.post({
+			url : "/openapi/*app*/${classInfo.handleName}/deleteByKey",
+			data : key,
+			success : function(result) {
+				if(_callback) _callback(result);
+			}
+		});
+	},
+	openCreateModal: function(title, _callback) {
+		$.xfm.openModal(title, "./${classInfo.handleName}-detail.shtml", _callback)
+	},
+	openUpdateModal: function(title, ${classInfo.handleName}, _callback) {
+		$.xfm.openModal(title, "./${classInfo.handleName}-detail.shtml?&id=" + ${classInfo.handleName}.${classInfo.handleName}Id, _callback)
+	}
+}

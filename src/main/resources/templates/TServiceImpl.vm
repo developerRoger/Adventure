@@ -1,0 +1,76 @@
+#set($classInfo=$collection.classInfo)
+#set($tableInfo=$collection.tableInfo)
+package ${classInfo.packageName}.service.impl;
+
+import java.util.List;
+import java.util.Map;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+import ${classInfo.packageName}.service.${classInfo.className}Service;
+import ${classInfo.packageName}.dao.mybatis.${classInfo.className}Mapper;
+import ${classInfo.classFullName};
+import xframework.core.pagenation.Page;
+import xframework.core.pagenation.PageConverter;
+import xframework.core.validater.XValidation;
+
+@Service("${classInfo.handleName}Service")
+public class ${classInfo.className}ServiceImpl implements ${classInfo.className}Service {
+	
+	@Autowired
+	private ${classInfo.className}Mapper ${classInfo.handleName}Mapper;
+	
+	@Override
+	public ${classInfo.className} getByKey(Map<String, Object> keyMap) {
+		return ${classInfo.handleName}Mapper.getByKey(keyMap);
+	}
+
+	@Override
+	public List<${classInfo.className}> query(Map<String, Object> queryMap) {
+		return ${classInfo.handleName}Mapper.query(queryMap);
+	}
+
+	@Override
+	public Page<${classInfo.className}> pageQuery(Page<${classInfo.className}> page) {
+		Map<String, Object> queryMap = PageConverter.createQueryParamMap(page);
+		List<${classInfo.className}> data = ${classInfo.handleName}Mapper.pageQuery(queryMap);
+		int total = ${classInfo.handleName}Mapper.count(queryMap);
+		page.setRows(data);
+		page.setTotal(total);
+		return page;
+	}
+
+	@Override
+	@Transactional
+	public int save(${classInfo.className} ${classInfo.handleName}) {
+		XValidation.valiate(${classInfo.handleName}, XValidation.INSERT);
+		return ${classInfo.handleName}Mapper.save(${classInfo.handleName});
+	}
+	
+	@Override
+	@Transactional
+	public int saveBatch(List<${classInfo.className}> ${classInfo.handleName}List) {
+		return ${classInfo.handleName}Mapper.saveBatch(${classInfo.handleName}List);
+	}
+	
+#if($tableInfo.updateAble )
+	@Override
+	@Transactional
+	public int update(${classInfo.className} ${classInfo.handleName}) {
+		XValidation.valiate(${classInfo.handleName}, XValidation.UPDATE);
+		return ${classInfo.handleName}Mapper.update(${classInfo.handleName});
+	}
+	
+	@Override
+	@Transactional
+	public int updateNotEmpty(${classInfo.className} ${classInfo.handleName}) {
+		return ${classInfo.handleName}Mapper.updateNotEmpty(${classInfo.handleName});
+	}
+	
+	@Override
+	@Transactional
+	public int deleteByKey(Map<String, Object> keyMap) {
+		return ${classInfo.handleName}Mapper.deleteByKey(keyMap);
+	}
+#end
+}
