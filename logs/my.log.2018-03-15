@@ -1,0 +1,25 @@
+2018-03-15 15:24:54,887  INFO AdventureApplication:48 ---- Starting AdventureApplication on PC-20171126RQUJ with PID 5644 (D:\SpringCloud\Adventure\target\classes started by Administrator in D:\SpringCloud\Adventure)
+2018-03-15 15:24:54,891 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-03-15 15:24:54,892  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-03-15 15:24:58,602  INFO AdventureApplication:57 ---- Started AdventureApplication in 3.885 seconds (JVM running for 4.191)
+2018-03-15 15:26:10,722 DEBUG JWTLoginFilter:206 ---- Request is to process authentication
+2018-03-15 16:30:00,456  INFO AdventureApplication:48 ---- Starting AdventureApplication on PC-20171126RQUJ with PID 8124 (D:\SpringCloud\Adventure\target\classes started by Administrator in D:\SpringCloud\Adventure)
+2018-03-15 16:30:00,459 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-03-15 16:30:00,459  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-03-15 16:30:04,179  INFO AdventureApplication:57 ---- Started AdventureApplication in 3.924 seconds (JVM running for 4.314)
+2018-03-15 16:33:03,743 DEBUG JWTLoginFilter:206 ---- Request is to process authentication
+2018-03-15 16:46:10,956  INFO AdventureApplication:48 ---- Starting AdventureApplication on PC-20171126RQUJ with PID 3144 (D:\SpringCloud\Adventure\target\classes started by Administrator in D:\SpringCloud\Adventure)
+2018-03-15 16:46:10,958 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-03-15 16:46:10,958  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-03-15 16:46:14,099  INFO AdventureApplication:57 ---- Started AdventureApplication in 3.296 seconds (JVM running for 3.6)
+2018-03-15 17:12:21,450  INFO AdventureApplicationTests:48 ---- Starting AdventureApplicationTests on PC-20171126RQUJ with PID 8440 (started by Administrator in D:\SpringCloud\Adventure)
+2018-03-15 17:12:21,451 DEBUG AdventureApplicationTests:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-03-15 17:12:21,451  INFO AdventureApplicationTests:593 ---- No active profile set, falling back to default profiles: default
+2018-03-15 17:12:24,614  INFO AdventureApplicationTests:57 ---- Started AdventureApplicationTests in 3.336 seconds (JVM running for 3.853)
+2018-03-15 17:13:21,947  INFO AdventureApplicationTests:48 ---- Starting AdventureApplicationTests on PC-20171126RQUJ with PID 3248 (started by Administrator in D:\SpringCloud\Adventure)
+2018-03-15 17:13:21,948 DEBUG AdventureApplicationTests:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-03-15 17:13:21,964  INFO AdventureApplicationTests:593 ---- No active profile set, falling back to default profiles: default
+2018-03-15 17:13:24,783  INFO AdventureApplicationTests:57 ---- Started AdventureApplicationTests in 3.024 seconds (JVM running for 3.482)
+2018-03-15 17:13:26,562 DEBUG findByName:145 ---- ==>  Preparing: SELECT * FROM user WHERE name = ? 
+2018-03-15 17:13:26,587 DEBUG findByName:145 ---- ==> Parameters: 2(String)
+2018-03-15 17:13:26,625 DEBUG findByName:145 ---- <==      Total: 1

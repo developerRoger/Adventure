@@ -1,0 +1,259 @@
+2018-03-15 15:24:54,887  INFO AdventureApplication:48 - Starting AdventureApplication on PC-20171126RQUJ with PID 5644 (D:\SpringCloud\Adventure\target\classes started by Administrator in D:\SpringCloud\Adventure)
+2018-03-15 15:24:54,891 DEBUG AdventureApplication:51 - Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-03-15 15:24:54,892  INFO AdventureApplication:593 - No active profile set, falling back to default profiles: default
+2018-03-15 15:24:55,082  INFO AnnotationConfigEmbeddedWebApplicationContext:583 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@50315f1b: startup date [Thu Mar 15 15:24:55 CST 2018]; root of context hierarchy
+2018-03-15 15:24:55,129  INFO Version:30 - HV000001: Hibernate Validator 5.3.6.Final
+2018-03-15 15:24:55,739  INFO RepositoryConfigurationDelegate:165 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-03-15 15:24:56,563  INFO TomcatEmbeddedServletContainer:89 - Tomcat initialized with port(s): 8080 (http)
+2018-03-15 15:24:56,695  INFO ContextLoader:276 - Root WebApplicationContext: initialization completed in 1616 ms
+2018-03-15 15:24:56,884  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-03-15 15:24:56,885  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-03-15 15:24:56,885  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-03-15 15:24:56,885  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-03-15 15:24:56,887  INFO DelegatingFilterProxyRegistrationBean:258 - Mapping filter: 'springSecurityFilterChain' to: [/*]
+2018-03-15 15:24:56,887  INFO ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+2018-03-15 15:24:57,685  INFO DefaultSecurityFilterChain:43 - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@325a99be, org.springframework.security.web.context.SecurityContextPersistenceFilter@23eff6a0, org.springframework.security.web.header.HeaderWriterFilter@3c07278d, org.springframework.security.web.csrf.CsrfFilter@2d3a7246, org.springframework.security.web.authentication.logout.LogoutFilter@1d301b28, com.firstTry.Adventure.config.JWTLoginFilter@79feb7bb, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4ccaa93b, com.firstTry.Adventure.config.JWTAuthenticationFilter@25b31488, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@53c91dad, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2d46409d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@64d3fea9, org.springframework.security.web.session.SessionManagementFilter@7d5c7bc9, org.springframework.security.web.access.ExceptionTranslationFilter@11828068, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@22f57b30]
+2018-03-15 15:24:57,701  INFO ThreadPoolTaskExecutor:165 - Initializing ExecutorService 
+2018-03-15 15:24:57,706  INFO ThreadPoolTaskExecutor:165 - Initializing ExecutorService  'defaultThreadPool'
+2018-03-15 15:24:57,858  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@50315f1b: startup date [Thu Mar 15 15:24:55 CST 2018]; root of context hierarchy
+2018-03-15 15:24:57,905  INFO RequestMappingHandlerMapping:543 - Mapped "{[/]}" onto public java.lang.String com.firstTry.Adventure.config.DefaultView.index(javax.servlet.http.HttpServletRequest)
+2018-03-15 15:24:57,906  INFO RequestMappingHandlerMapping:543 - Mapped "{[/hello]}" onto public java.lang.String com.firstTry.Adventure.config.DefaultView.hello()
+2018-03-15 15:24:57,906  INFO RequestMappingHandlerMapping:543 - Mapped "{[/login]}" onto public java.lang.String com.firstTry.Adventure.config.DefaultView.login()
+2018-03-15 15:24:57,907  INFO RequestMappingHandlerMapping:543 - Mapped "{[/index]}" onto public java.lang.String com.firstTry.Adventure.controller.UserLoginController.index()
+2018-03-15 15:24:57,907  INFO RequestMappingHandlerMapping:543 - Mapped "{[/hi]}" onto public java.lang.String com.firstTry.Adventure.controller.UserLoginController.hello() throws java.lang.Exception
+2018-03-15 15:24:57,909  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-03-15 15:24:57,910  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-03-15 15:24:57,937  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-03-15 15:24:57,937  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-03-15 15:24:57,948  INFO ExceptionHandlerExceptionResolver:273 - Detected @ExceptionHandler methods in globalExceptionHandler
+2018-03-15 15:24:57,968  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-03-15 15:24:58,521  INFO OptionalLiveReloadServer:58 - LiveReload server is running on port 35729
+2018-03-15 15:24:58,524  WARN RedisStarterDeprecationWarningAutoConfiguration:43 - spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2018-03-15 15:24:58,555  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2018-03-15 15:24:58,598  INFO TomcatEmbeddedServletContainer:201 - Tomcat started on port(s): 8080 (http)
+2018-03-15 15:24:58,602  INFO AdventureApplication:57 - Started AdventureApplication in 3.885 seconds (JVM running for 4.191)
+2018-03-15 15:25:32,033  INFO DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+2018-03-15 15:25:32,046  INFO DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 13 ms
+2018-03-15 15:26:04,389  INFO TemplateEngine:825 - [THYMELEAF] INITIALIZING TEMPLATE ENGINE
+2018-03-15 15:26:04,422  INFO AbstractTemplateResolver:99 - [THYMELEAF] INITIALIZING TEMPLATE RESOLVER: org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+2018-03-15 15:26:04,423  INFO AbstractTemplateResolver:110 - [THYMELEAF] TEMPLATE RESOLVER INITIALIZED OK
+2018-03-15 15:26:04,423  INFO AbstractMessageResolver:72 - [THYMELEAF] INITIALIZING MESSAGE RESOLVER: org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+2018-03-15 15:26:04,423  INFO AbstractMessageResolver:78 - [THYMELEAF] MESSAGE RESOLVER INITIALIZED OK
+2018-03-15 15:26:04,427  INFO CONFIG:123 - [THYMELEAF] TEMPLATE ENGINE CONFIGURATION:
+[THYMELEAF] * Cache Factory implementation: org.thymeleaf.cache.StandardCacheManager
+[THYMELEAF] * Template modes:
+[THYMELEAF]     * XHTML
+[THYMELEAF]     * LEGACYHTML5
+[THYMELEAF]     * XML
+[THYMELEAF]     * HTML5
+[THYMELEAF]     * VALIDXHTML
+[THYMELEAF]     * VALIDXML
+[THYMELEAF] * Template resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+[THYMELEAF] * Message resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+[THYMELEAF] * Dialect [1 of 2]: org.thymeleaf.spring4.dialect.SpringStandardDialect
+[THYMELEAF]     * Prefix: "th"
+[THYMELEAF] * Dialect [2 of 2]: nz.net.ultraq.thymeleaf.LayoutDialect
+[THYMELEAF]     * Prefix: "layout"
+[THYMELEAF] TEMPLATE ENGINE CONFIGURED OK
+2018-03-15 15:26:04,428  INFO TemplateEngine:838 - [THYMELEAF] TEMPLATE ENGINE INITIALIZED
+2018-03-15 15:26:10,722 DEBUG JWTLoginFilter:206 - Request is to process authentication
+2018-03-15 16:30:00,456  INFO AdventureApplication:48 - Starting AdventureApplication on PC-20171126RQUJ with PID 8124 (D:\SpringCloud\Adventure\target\classes started by Administrator in D:\SpringCloud\Adventure)
+2018-03-15 16:30:00,459 DEBUG AdventureApplication:51 - Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-03-15 16:30:00,459  INFO AdventureApplication:593 - No active profile set, falling back to default profiles: default
+2018-03-15 16:30:00,699  INFO AnnotationConfigEmbeddedWebApplicationContext:583 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5129b983: startup date [Thu Mar 15 16:30:00 CST 2018]; root of context hierarchy
+2018-03-15 16:30:00,777  INFO Version:30 - HV000001: Hibernate Validator 5.3.6.Final
+2018-03-15 16:30:01,311  INFO RepositoryConfigurationDelegate:165 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-03-15 16:30:02,251  INFO TomcatEmbeddedServletContainer:89 - Tomcat initialized with port(s): 8080 (http)
+2018-03-15 16:30:02,365  INFO ContextLoader:276 - Root WebApplicationContext: initialization completed in 1670 ms
+2018-03-15 16:30:02,494  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-03-15 16:30:02,494  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-03-15 16:30:02,495  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-03-15 16:30:02,495  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-03-15 16:30:02,496  INFO DelegatingFilterProxyRegistrationBean:258 - Mapping filter: 'springSecurityFilterChain' to: [/*]
+2018-03-15 16:30:02,497  INFO ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+2018-03-15 16:30:03,377  INFO DefaultSecurityFilterChain:43 - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@78f5d6eb, org.springframework.security.web.context.SecurityContextPersistenceFilter@2f207b47, org.springframework.security.web.header.HeaderWriterFilter@736cf866, org.springframework.security.web.csrf.CsrfFilter@584c276c, org.springframework.security.web.authentication.logout.LogoutFilter@a46375a, com.firstTry.Adventure.config.JWTLoginFilter@76ebafc4, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3903eed7, com.firstTry.Adventure.config.JWTAuthenticationFilter@43999415, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@745a3592, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6f351bc5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6ca1b30a, org.springframework.security.web.session.SessionManagementFilter@5fe797f3, org.springframework.security.web.access.ExceptionTranslationFilter@67c6cef8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7371e7b7]
+2018-03-15 16:30:03,392  INFO ThreadPoolTaskExecutor:165 - Initializing ExecutorService 
+2018-03-15 16:30:03,396  INFO ThreadPoolTaskExecutor:165 - Initializing ExecutorService  'defaultThreadPool'
+2018-03-15 16:30:03,548  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5129b983: startup date [Thu Mar 15 16:30:00 CST 2018]; root of context hierarchy
+2018-03-15 16:30:03,599  INFO RequestMappingHandlerMapping:543 - Mapped "{[/]}" onto public java.lang.String com.firstTry.Adventure.config.DefaultView.index(javax.servlet.http.HttpServletRequest)
+2018-03-15 16:30:03,599  INFO RequestMappingHandlerMapping:543 - Mapped "{[/hello]}" onto public java.lang.String com.firstTry.Adventure.config.DefaultView.hello()
+2018-03-15 16:30:03,600  INFO RequestMappingHandlerMapping:543 - Mapped "{[/login]}" onto public java.lang.String com.firstTry.Adventure.config.DefaultView.login()
+2018-03-15 16:30:03,600  INFO RequestMappingHandlerMapping:543 - Mapped "{[/index]}" onto public java.lang.String com.firstTry.Adventure.controller.UserLoginController.index()
+2018-03-15 16:30:03,601  INFO RequestMappingHandlerMapping:543 - Mapped "{[/hi]}" onto public java.lang.String com.firstTry.Adventure.controller.UserLoginController.hello() throws java.lang.Exception
+2018-03-15 16:30:03,602  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-03-15 16:30:03,602  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-03-15 16:30:03,633  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-03-15 16:30:03,633  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-03-15 16:30:03,647  INFO ExceptionHandlerExceptionResolver:273 - Detected @ExceptionHandler methods in globalExceptionHandler
+2018-03-15 16:30:03,666  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-03-15 16:30:04,097  INFO OptionalLiveReloadServer:58 - LiveReload server is running on port 35729
+2018-03-15 16:30:04,100  WARN RedisStarterDeprecationWarningAutoConfiguration:43 - spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2018-03-15 16:30:04,135  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2018-03-15 16:30:04,176  INFO TomcatEmbeddedServletContainer:201 - Tomcat started on port(s): 8080 (http)
+2018-03-15 16:30:04,179  INFO AdventureApplication:57 - Started AdventureApplication in 3.924 seconds (JVM running for 4.314)
+2018-03-15 16:31:15,361  INFO DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+2018-03-15 16:31:15,392  INFO DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 30 ms
+2018-03-15 16:31:15,468  INFO TemplateEngine:825 - [THYMELEAF] INITIALIZING TEMPLATE ENGINE
+2018-03-15 16:31:15,503  INFO AbstractTemplateResolver:99 - [THYMELEAF] INITIALIZING TEMPLATE RESOLVER: org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+2018-03-15 16:31:15,503  INFO AbstractTemplateResolver:110 - [THYMELEAF] TEMPLATE RESOLVER INITIALIZED OK
+2018-03-15 16:31:15,503  INFO AbstractMessageResolver:72 - [THYMELEAF] INITIALIZING MESSAGE RESOLVER: org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+2018-03-15 16:31:15,504  INFO AbstractMessageResolver:78 - [THYMELEAF] MESSAGE RESOLVER INITIALIZED OK
+2018-03-15 16:31:15,510  INFO CONFIG:123 - [THYMELEAF] TEMPLATE ENGINE CONFIGURATION:
+[THYMELEAF] * Cache Factory implementation: org.thymeleaf.cache.StandardCacheManager
+[THYMELEAF] * Template modes:
+[THYMELEAF]     * XML
+[THYMELEAF]     * HTML5
+[THYMELEAF]     * VALIDXHTML
+[THYMELEAF]     * VALIDXML
+[THYMELEAF]     * LEGACYHTML5
+[THYMELEAF]     * XHTML
+[THYMELEAF] * Template resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+[THYMELEAF] * Message resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+[THYMELEAF] * Dialect [1 of 2]: org.thymeleaf.spring4.dialect.SpringStandardDialect
+[THYMELEAF]     * Prefix: "th"
+[THYMELEAF] * Dialect [2 of 2]: nz.net.ultraq.thymeleaf.LayoutDialect
+[THYMELEAF]     * Prefix: "layout"
+[THYMELEAF] TEMPLATE ENGINE CONFIGURED OK
+2018-03-15 16:31:15,510  INFO TemplateEngine:838 - [THYMELEAF] TEMPLATE ENGINE INITIALIZED
+2018-03-15 16:33:03,743 DEBUG JWTLoginFilter:206 - Request is to process authentication
+2018-03-15 16:46:10,956  INFO AdventureApplication:48 - Starting AdventureApplication on PC-20171126RQUJ with PID 3144 (D:\SpringCloud\Adventure\target\classes started by Administrator in D:\SpringCloud\Adventure)
+2018-03-15 16:46:10,958 DEBUG AdventureApplication:51 - Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-03-15 16:46:10,958  INFO AdventureApplication:593 - No active profile set, falling back to default profiles: default
+2018-03-15 16:46:11,109  INFO AnnotationConfigEmbeddedWebApplicationContext:583 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5129b983: startup date [Thu Mar 15 16:46:11 CST 2018]; root of context hierarchy
+2018-03-15 16:46:11,159  INFO Version:30 - HV000001: Hibernate Validator 5.3.6.Final
+2018-03-15 16:46:11,652  INFO RepositoryConfigurationDelegate:165 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-03-15 16:46:12,385  INFO TomcatEmbeddedServletContainer:89 - Tomcat initialized with port(s): 80 (http)
+2018-03-15 16:46:12,479  INFO ContextLoader:276 - Root WebApplicationContext: initialization completed in 1372 ms
+2018-03-15 16:46:12,615  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-03-15 16:46:12,616  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-03-15 16:46:12,616  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-03-15 16:46:12,616  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-03-15 16:46:12,617  INFO DelegatingFilterProxyRegistrationBean:258 - Mapping filter: 'springSecurityFilterChain' to: [/*]
+2018-03-15 16:46:12,617  INFO ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+2018-03-15 16:46:13,347  INFO DefaultSecurityFilterChain:43 - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@76ebafc4, org.springframework.security.web.context.SecurityContextPersistenceFilter@4c1b295f, org.springframework.security.web.header.HeaderWriterFilter@220c59fd, org.springframework.security.web.csrf.CsrfFilter@69b56f1c, org.springframework.security.web.authentication.logout.LogoutFilter@385cc2, com.firstTry.Adventure.config.JWTLoginFilter@43999415, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6f7a17f1, com.firstTry.Adventure.config.JWTAuthenticationFilter@6ca1b30a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3a9431a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@94f3c80, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3ab572fb, org.springframework.security.web.session.SessionManagementFilter@7b987c22, org.springframework.security.web.access.ExceptionTranslationFilter@4bb6c413, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@bbed986]
+2018-03-15 16:46:13,363  INFO ThreadPoolTaskExecutor:165 - Initializing ExecutorService 
+2018-03-15 16:46:13,368  INFO ThreadPoolTaskExecutor:165 - Initializing ExecutorService  'defaultThreadPool'
+2018-03-15 16:46:13,509  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5129b983: startup date [Thu Mar 15 16:46:11 CST 2018]; root of context hierarchy
+2018-03-15 16:46:13,556  INFO RequestMappingHandlerMapping:543 - Mapped "{[/]}" onto public java.lang.String com.firstTry.Adventure.config.DefaultView.index(javax.servlet.http.HttpServletRequest)
+2018-03-15 16:46:13,557  INFO RequestMappingHandlerMapping:543 - Mapped "{[/hello]}" onto public java.lang.String com.firstTry.Adventure.config.DefaultView.hello()
+2018-03-15 16:46:13,558  INFO RequestMappingHandlerMapping:543 - Mapped "{[/login]}" onto public java.lang.String com.firstTry.Adventure.config.DefaultView.login()
+2018-03-15 16:46:13,558  INFO RequestMappingHandlerMapping:543 - Mapped "{[/index]}" onto public java.lang.String com.firstTry.Adventure.controller.UserLoginController.index()
+2018-03-15 16:46:13,558  INFO RequestMappingHandlerMapping:543 - Mapped "{[/hi]}" onto public java.lang.String com.firstTry.Adventure.controller.UserLoginController.hello() throws java.lang.Exception
+2018-03-15 16:46:13,560  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-03-15 16:46:13,560  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-03-15 16:46:13,584  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-03-15 16:46:13,585  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-03-15 16:46:13,595  INFO ExceptionHandlerExceptionResolver:273 - Detected @ExceptionHandler methods in globalExceptionHandler
+2018-03-15 16:46:13,611  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-03-15 16:46:14,020  INFO OptionalLiveReloadServer:58 - LiveReload server is running on port 35729
+2018-03-15 16:46:14,023  WARN RedisStarterDeprecationWarningAutoConfiguration:43 - spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2018-03-15 16:46:14,059  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2018-03-15 16:46:14,096  INFO TomcatEmbeddedServletContainer:201 - Tomcat started on port(s): 80 (http)
+2018-03-15 16:46:14,099  INFO AdventureApplication:57 - Started AdventureApplication in 3.296 seconds (JVM running for 3.6)
+2018-03-15 16:46:36,738  INFO DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+2018-03-15 16:46:36,749  INFO DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 11 ms
+2018-03-15 16:46:36,796  INFO TemplateEngine:825 - [THYMELEAF] INITIALIZING TEMPLATE ENGINE
+2018-03-15 16:46:36,830  INFO AbstractTemplateResolver:99 - [THYMELEAF] INITIALIZING TEMPLATE RESOLVER: org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+2018-03-15 16:46:36,831  INFO AbstractTemplateResolver:110 - [THYMELEAF] TEMPLATE RESOLVER INITIALIZED OK
+2018-03-15 16:46:36,831  INFO AbstractMessageResolver:72 - [THYMELEAF] INITIALIZING MESSAGE RESOLVER: org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+2018-03-15 16:46:36,831  INFO AbstractMessageResolver:78 - [THYMELEAF] MESSAGE RESOLVER INITIALIZED OK
+2018-03-15 16:46:36,836  INFO CONFIG:123 - [THYMELEAF] TEMPLATE ENGINE CONFIGURATION:
+[THYMELEAF] * Cache Factory implementation: org.thymeleaf.cache.StandardCacheManager
+[THYMELEAF] * Template modes:
+[THYMELEAF]     * VALIDXHTML
+[THYMELEAF]     * LEGACYHTML5
+[THYMELEAF]     * XHTML
+[THYMELEAF]     * XML
+[THYMELEAF]     * HTML5
+[THYMELEAF]     * VALIDXML
+[THYMELEAF] * Template resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+[THYMELEAF] * Message resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+[THYMELEAF] * Dialect [1 of 2]: org.thymeleaf.spring4.dialect.SpringStandardDialect
+[THYMELEAF]     * Prefix: "th"
+[THYMELEAF] * Dialect [2 of 2]: nz.net.ultraq.thymeleaf.LayoutDialect
+[THYMELEAF]     * Prefix: "layout"
+[THYMELEAF] TEMPLATE ENGINE CONFIGURED OK
+2018-03-15 16:46:36,837  INFO TemplateEngine:838 - [THYMELEAF] TEMPLATE ENGINE INITIALIZED
+2018-03-15 17:12:21,066  INFO SpringBootTestContextBootstrapper:319 - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.firstTry.Adventure.AdventureApplicationTests], using SpringBootContextLoader
+2018-03-15 17:12:21,073  INFO AbstractContextLoader:264 - Could not detect default resource locations for test class [com.firstTry.Adventure.AdventureApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2018-03-15 17:12:21,074  INFO AnnotationConfigContextLoaderUtils:81 - Could not detect default configuration classes for test class [com.firstTry.Adventure.AdventureApplicationTests]: AdventureApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2018-03-15 17:12:21,173  INFO SpringBootTestContextBootstrapper:206 - Found @SpringBootConfiguration com.firstTry.Adventure.AdventureApplication for test class com.firstTry.Adventure.AdventureApplicationTests
+2018-03-15 17:12:21,180  INFO SpringBootTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-03-15 17:12:21,197  INFO SpringBootTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1a38c59b, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7f77e91b, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@44a664f2, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7f9fcf7f, org.springframework.test.context.transaction.TransactionalTestExecutionListener@2357d90a, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6328d34a, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@145eaa29, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@15bb6bea, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@8b96fde, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@2d2e5f00, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@4c40b76e, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2ea6137]
+2018-03-15 17:12:21,202  INFO SpringBootTestContextBootstrapper:319 - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.firstTry.Adventure.AdventureApplicationTests], using SpringBootContextLoader
+2018-03-15 17:12:21,207  INFO AbstractContextLoader:264 - Could not detect default resource locations for test class [com.firstTry.Adventure.AdventureApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2018-03-15 17:12:21,207  INFO AnnotationConfigContextLoaderUtils:81 - Could not detect default configuration classes for test class [com.firstTry.Adventure.AdventureApplicationTests]: AdventureApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2018-03-15 17:12:21,211  INFO SpringBootTestContextBootstrapper:206 - Found @SpringBootConfiguration com.firstTry.Adventure.AdventureApplication for test class com.firstTry.Adventure.AdventureApplicationTests
+2018-03-15 17:12:21,215  INFO SpringBootTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-03-15 17:12:21,217  INFO SpringBootTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@79ca92b9, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1460a8c0, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@4f638935, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4387b79e, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6e75aa0d, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7fc229ab, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@2cbb3d47, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@527e5409, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@1198b989, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@7ff95560, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@add0edd, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2aa3cd93]
+2018-03-15 17:12:21,450  INFO AdventureApplicationTests:48 - Starting AdventureApplicationTests on PC-20171126RQUJ with PID 8440 (started by Administrator in D:\SpringCloud\Adventure)
+2018-03-15 17:12:21,451 DEBUG AdventureApplicationTests:51 - Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-03-15 17:12:21,451  INFO AdventureApplicationTests:593 - No active profile set, falling back to default profiles: default
+2018-03-15 17:12:21,631  INFO GenericWebApplicationContext:583 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@1e683a3e: startup date [Thu Mar 15 17:12:21 CST 2018]; root of context hierarchy
+2018-03-15 17:12:21,803  INFO Version:30 - HV000001: Hibernate Validator 5.3.6.Final
+2018-03-15 17:12:22,125  INFO RepositoryConfigurationDelegate:165 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-03-15 17:12:23,503  INFO DefaultSecurityFilterChain:43 - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@551e4c6d, org.springframework.security.web.context.SecurityContextPersistenceFilter@5a8c93, org.springframework.security.web.header.HeaderWriterFilter@656f62dc, org.springframework.security.web.csrf.CsrfFilter@48df4071, org.springframework.security.web.authentication.logout.LogoutFilter@470d183, com.firstTry.Adventure.config.JWTLoginFilter@625a9c5d, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@575b5f7d, com.firstTry.Adventure.config.JWTAuthenticationFilter@5d1e0fbb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@119b0892, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@37ad042b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2eed37f4, org.springframework.security.web.session.SessionManagementFilter@1115433e, org.springframework.security.web.access.ExceptionTranslationFilter@3003827c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@bbd4791]
+2018-03-15 17:12:23,521  INFO ThreadPoolTaskExecutor:165 - Initializing ExecutorService 
+2018-03-15 17:12:23,527  INFO ThreadPoolTaskExecutor:165 - Initializing ExecutorService  'defaultThreadPool'
+2018-03-15 17:12:23,913  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@1e683a3e: startup date [Thu Mar 15 17:12:21 CST 2018]; root of context hierarchy
+2018-03-15 17:12:23,965  INFO RequestMappingHandlerMapping:543 - Mapped "{[/]}" onto public java.lang.String com.firstTry.Adventure.config.DefaultView.index(javax.servlet.http.HttpServletRequest)
+2018-03-15 17:12:23,966  INFO RequestMappingHandlerMapping:543 - Mapped "{[/hello]}" onto public java.lang.String com.firstTry.Adventure.config.DefaultView.hello()
+2018-03-15 17:12:23,966  INFO RequestMappingHandlerMapping:543 - Mapped "{[/login]}" onto public java.lang.String com.firstTry.Adventure.config.DefaultView.login()
+2018-03-15 17:12:23,967  INFO RequestMappingHandlerMapping:543 - Mapped "{[/index]}" onto public java.lang.String com.firstTry.Adventure.controller.UserLoginController.index()
+2018-03-15 17:12:23,967  INFO RequestMappingHandlerMapping:543 - Mapped "{[/hi]}" onto public java.lang.String com.firstTry.Adventure.controller.UserLoginController.hello() throws java.lang.Exception
+2018-03-15 17:12:23,969  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-03-15 17:12:23,969  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-03-15 17:12:23,995  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-03-15 17:12:23,995  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-03-15 17:12:24,010  INFO ExceptionHandlerExceptionResolver:273 - Detected @ExceptionHandler methods in globalExceptionHandler
+2018-03-15 17:12:24,030  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-03-15 17:12:24,560  WARN RedisStarterDeprecationWarningAutoConfiguration:43 - spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2018-03-15 17:12:24,614  INFO AdventureApplicationTests:57 - Started AdventureApplicationTests in 3.336 seconds (JVM running for 3.853)
+2018-03-15 17:12:24,875  INFO GenericWebApplicationContext:984 - Closing org.springframework.web.context.support.GenericWebApplicationContext@1e683a3e: startup date [Thu Mar 15 17:12:21 CST 2018]; root of context hierarchy
+2018-03-15 17:12:24,877  INFO ThreadPoolTaskExecutor:202 - Shutting down ExecutorService 'defaultThreadPool'
+2018-03-15 17:13:21,553  INFO SpringBootTestContextBootstrapper:319 - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.firstTry.Adventure.AdventureApplicationTests], using SpringBootContextLoader
+2018-03-15 17:13:21,558  INFO AbstractContextLoader:264 - Could not detect default resource locations for test class [com.firstTry.Adventure.AdventureApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2018-03-15 17:13:21,559  INFO AnnotationConfigContextLoaderUtils:81 - Could not detect default configuration classes for test class [com.firstTry.Adventure.AdventureApplicationTests]: AdventureApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2018-03-15 17:13:21,643  INFO SpringBootTestContextBootstrapper:206 - Found @SpringBootConfiguration com.firstTry.Adventure.AdventureApplication for test class com.firstTry.Adventure.AdventureApplicationTests
+2018-03-15 17:13:21,651  INFO SpringBootTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-03-15 17:13:21,667  INFO SpringBootTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1a38c59b, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7f77e91b, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@44a664f2, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7f9fcf7f, org.springframework.test.context.transaction.TransactionalTestExecutionListener@2357d90a, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6328d34a, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@145eaa29, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@15bb6bea, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@8b96fde, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@2d2e5f00, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@4c40b76e, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2ea6137]
+2018-03-15 17:13:21,671  INFO SpringBootTestContextBootstrapper:319 - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.firstTry.Adventure.AdventureApplicationTests], using SpringBootContextLoader
+2018-03-15 17:13:21,686  INFO AbstractContextLoader:264 - Could not detect default resource locations for test class [com.firstTry.Adventure.AdventureApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2018-03-15 17:13:21,687  INFO AnnotationConfigContextLoaderUtils:81 - Could not detect default configuration classes for test class [com.firstTry.Adventure.AdventureApplicationTests]: AdventureApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2018-03-15 17:13:21,692  INFO SpringBootTestContextBootstrapper:206 - Found @SpringBootConfiguration com.firstTry.Adventure.AdventureApplication for test class com.firstTry.Adventure.AdventureApplicationTests
+2018-03-15 17:13:21,697  INFO SpringBootTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-03-15 17:13:21,701  INFO SpringBootTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@79ca92b9, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1460a8c0, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@4f638935, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4387b79e, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6e75aa0d, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7fc229ab, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@2cbb3d47, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@527e5409, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@1198b989, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@7ff95560, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@add0edd, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2aa3cd93]
+2018-03-15 17:13:21,947  INFO AdventureApplicationTests:48 - Starting AdventureApplicationTests on PC-20171126RQUJ with PID 3248 (started by Administrator in D:\SpringCloud\Adventure)
+2018-03-15 17:13:21,948 DEBUG AdventureApplicationTests:51 - Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-03-15 17:13:21,964  INFO AdventureApplicationTests:593 - No active profile set, falling back to default profiles: default
+2018-03-15 17:13:22,132  INFO GenericWebApplicationContext:583 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@1e683a3e: startup date [Thu Mar 15 17:13:22 CST 2018]; root of context hierarchy
+2018-03-15 17:13:22,249  INFO Version:30 - HV000001: Hibernate Validator 5.3.6.Final
+2018-03-15 17:13:22,592  INFO RepositoryConfigurationDelegate:165 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-03-15 17:13:23,800  INFO DefaultSecurityFilterChain:43 - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7219ac49, org.springframework.security.web.context.SecurityContextPersistenceFilter@4fdca00a, org.springframework.security.web.header.HeaderWriterFilter@29b40b3, org.springframework.security.web.csrf.CsrfFilter@73809e7, org.springframework.security.web.authentication.logout.LogoutFilter@75e09567, com.firstTry.Adventure.config.JWTLoginFilter@21da4b5f, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@64f981e2, com.firstTry.Adventure.config.JWTAuthenticationFilter@551e4c6d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5a8c93, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5634a861, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@625a9c5d, org.springframework.security.web.session.SessionManagementFilter@656f62dc, org.springframework.security.web.access.ExceptionTranslationFilter@45f756e6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@ae73c80]
+2018-03-15 17:13:23,817  INFO ThreadPoolTaskExecutor:165 - Initializing ExecutorService 
+2018-03-15 17:13:23,822  INFO ThreadPoolTaskExecutor:165 - Initializing ExecutorService  'defaultThreadPool'
+2018-03-15 17:13:24,107  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@1e683a3e: startup date [Thu Mar 15 17:13:22 CST 2018]; root of context hierarchy
+2018-03-15 17:13:24,150  INFO RequestMappingHandlerMapping:543 - Mapped "{[/]}" onto public java.lang.String com.firstTry.Adventure.config.DefaultView.index(javax.servlet.http.HttpServletRequest)
+2018-03-15 17:13:24,151  INFO RequestMappingHandlerMapping:543 - Mapped "{[/login]}" onto public java.lang.String com.firstTry.Adventure.config.DefaultView.login()
+2018-03-15 17:13:24,151  INFO RequestMappingHandlerMapping:543 - Mapped "{[/hello]}" onto public java.lang.String com.firstTry.Adventure.config.DefaultView.hello()
+2018-03-15 17:13:24,151  INFO RequestMappingHandlerMapping:543 - Mapped "{[/index]}" onto public java.lang.String com.firstTry.Adventure.controller.UserLoginController.index()
+2018-03-15 17:13:24,152  INFO RequestMappingHandlerMapping:543 - Mapped "{[/hi]}" onto public java.lang.String com.firstTry.Adventure.controller.UserLoginController.hello() throws java.lang.Exception
+2018-03-15 17:13:24,153  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-03-15 17:13:24,154  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-03-15 17:13:24,184  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-03-15 17:13:24,185  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-03-15 17:13:24,200  INFO ExceptionHandlerExceptionResolver:273 - Detected @ExceptionHandler methods in globalExceptionHandler
+2018-03-15 17:13:24,223  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-03-15 17:13:24,723  WARN RedisStarterDeprecationWarningAutoConfiguration:43 - spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2018-03-15 17:13:24,783  INFO AdventureApplicationTests:57 - Started AdventureApplicationTests in 3.024 seconds (JVM running for 3.482)
+2018-03-15 17:13:26,562 DEBUG findByName:145 - ==>  Preparing: SELECT * FROM user WHERE name = ? 
+2018-03-15 17:13:26,587 DEBUG findByName:145 - ==> Parameters: 2(String)
+2018-03-15 17:13:26,625 DEBUG findByName:145 - <==      Total: 1
+2018-03-15 17:13:26,640  INFO GenericWebApplicationContext:984 - Closing org.springframework.web.context.support.GenericWebApplicationContext@1e683a3e: startup date [Thu Mar 15 17:13:22 CST 2018]; root of context hierarchy
+2018-03-15 17:13:26,642  INFO ThreadPoolTaskExecutor:202 - Shutting down ExecutorService 'defaultThreadPool'
