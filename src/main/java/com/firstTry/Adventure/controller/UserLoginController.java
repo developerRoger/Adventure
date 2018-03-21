@@ -2,16 +2,15 @@ package com.firstTry.Adventure.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.servlet.ModelAndView;
 
 @RestController
 public class UserLoginController {
 
-	@RequestMapping("/index")
+/*	@RequestMapping("/index")
 	public String index() {
 		System.out.println("---------------");
 		return "Hello World";
-	}
+	}*/
 
 	@RequestMapping("/hi")
 	public String hello() throws Exception {

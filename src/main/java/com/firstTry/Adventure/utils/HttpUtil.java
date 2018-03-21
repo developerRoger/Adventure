@@ -23,7 +23,9 @@ import org.apache.http.util.EntityUtils;
 /**
  * HTTP相关的工具类
  * 
- * @author billy.lin
+ * @author Roger
+ * @email luojie2luojuan@qq.com
+ * @date 2018-3-19
  *
  */
 public class HttpUtil {

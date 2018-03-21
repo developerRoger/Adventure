@@ -1,10 +1,10 @@
 package com.firstTry.Adventure.config;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.servlet.ModelAndView;
 
 /**
  * 默认首页,请求/
@@ -14,8 +14,8 @@ import org.springframework.web.servlet.ModelAndView;
  */
 @Controller
 public class DefaultView {
-	@RequestMapping("/")
-	public String index(HttpServletRequest request) {
+	@RequestMapping("/123")
+	public String index(HttpServletRequest request,HttpServletResponse response) {
 		System.out.println(getIpAddress(request));
 		return "html/index";
 	}

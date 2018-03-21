@@ -1,8 +1,10 @@
 package com.firstTry.Adventure.entity;
 
+import java.util.ArrayList;
 import java.util.Collection;
 
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 /**
@@ -11,6 +13,10 @@ import org.springframework.security.core.userdetails.UserDetails;
  *
  */
 public class UserTest  implements UserDetails{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private Long id;
 	private String name;
 	private String mobie;
@@ -69,33 +75,40 @@ public class UserTest  implements UserDetails{
 	}
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
+		 // 还可以从数据库中查出该用户所拥有的权限,设置到 authorities 中去,这里模拟数据库查询.
+        ArrayList<GrantedAuthority> authorities = new ArrayList<>();
+        /*不要使用GrantedAuthorityImpl，官网说这个已过期了，
+         * SimpleGrantedAuthority代替GrantedAuthorityImpl，赋予一个角色（即权限）
+         * 
+         * */
+        authorities.add(new SimpleGrantedAuthority("ADMIN"));
 		// TODO Auto-generated method stub
-		return null;
+		return authorities;
 	}
 	@Override
 	public String getUsername() {
 		// TODO Auto-generated method stub
-		return null;
+		return this.name;
 	}
 	@Override
 	public boolean isAccountNonExpired() {
 		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 	@Override
 	public boolean isAccountNonLocked() {
 		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 	@Override
 	public boolean isCredentialsNonExpired() {
 		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 	@Override
 	public boolean isEnabled() {
 		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 
 }

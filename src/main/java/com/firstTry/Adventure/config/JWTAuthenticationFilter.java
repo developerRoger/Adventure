@@ -13,8 +13,7 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;
-
-import com.firstTry.Adventure.exception.MyException;
+import com.firstTry.Adventure.exception.RRException;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
@@ -29,7 +28,7 @@ public class JWTAuthenticationFilter extends BasicAuthenticationFilter{
 	@Override  
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain chain) throws IOException, ServletException {  
         String header = request.getHeader("Authorization");  
-  
+        response.setHeader("X-Frame-Options", "SAMEORIGIN");
         if (header == null || !header.startsWith("Bearer ")) {  
             chain.doFilter(request, response);  
             return;  
@@ -38,19 +37,20 @@ public class JWTAuthenticationFilter extends BasicAuthenticationFilter{
         UsernamePasswordAuthenticationToken authentication = null;
 		try {
 			authentication = getAuthentication(request);
-		} catch (MyException e) {
+		} catch (RRException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}  
   
         SecurityContextHolder.getContext().setAuthentication(authentication);  
+        
+        //放行
         chain.doFilter(request, response);  
   
     }  	
   
-    private UsernamePasswordAuthenticationToken getAuthentication(HttpServletRequest request) throws MyException {  
+    private UsernamePasswordAuthenticationToken getAuthentication(HttpServletRequest request) throws RRException {  
         String token = request.getHeader("Authorization");  
-        
         if (token != null) {  
             // parse the token.  
         	Claims claims = Jwts.parser()  
@@ -70,7 +70,7 @@ public class JWTAuthenticationFilter extends BasicAuthenticationFilter{
 
             if (now.getTime() > expiration.getTime()) {
 
-                throw new MyException("该账号已过期,请重新登陆");
+                throw new RRException("该账号已过期,请重新登陆");
             }
             if (username != null) {  
                 return new UsernamePasswordAuthenticationToken(username, null, new ArrayList<>());  

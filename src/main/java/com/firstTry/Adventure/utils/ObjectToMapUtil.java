@@ -3,7 +3,13 @@ package com.firstTry.Adventure.utils;
 import java.util.HashMap;
 import java.util.Map;
 import org.apache.commons.beanutils.BeanMap;
-
+/**
+ * 
+ * @author Roger
+ * @email luojie2luojuan@qq.com
+ * @date 2018-3-19
+ *
+ */
 public class ObjectToMapUtil {
 	/**
 	 * 将对象转为Map

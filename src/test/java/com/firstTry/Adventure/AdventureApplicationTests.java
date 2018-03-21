@@ -1,18 +1,21 @@
 package com.firstTry.Adventure;
 
 
-import org.json.JSONObject;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.firstTry.Adventure.entity.UserTest;
+import com.firstTry.Adventure.mapper.SysGeneratorMapper;
 import com.firstTry.Adventure.mapper.UserMapper;
+import com.firstTry.Adventure.service.SysGeneratorService;
 import com.firstTry.Adventure.service.UserService;
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -27,6 +30,9 @@ public class AdventureApplicationTests {
 	
 	@Autowired
 	private UserMapper userMapper;
+	
+	@Autowired
+	private SysGeneratorMapper sysGeneratorService;
 	 /**
      * 数据源1
      */
@@ -49,11 +55,11 @@ public class AdventureApplicationTests {
 	public void test() throws Exception {
 		UserTest user=new UserTest();
 		user.setId(1l);
-		user.setName("测试");
+		user.setName("cahihaea");
 		user.setMobie("1008611");
 		user.setAdders("广州天河");
-		user.setPassword("123456");
-		user.setRemark("备注");
+		user.setPassword("544");
+		user.setRemark("ppop");
 		// 插入个用户
 		userSerivce.create(user);
 	}
@@ -86,9 +92,15 @@ public class AdventureApplicationTests {
 	 * 跟mybatis整合
 	 * 查询测试
 	 */
-	@Test
+//	@Test
 	public void testMybatis(){
 		UserTest userTest=userMapper.findByName("2");
 		System.out.println(userTest.getAdders()+"======");
+	}
+	
+	@Test
+	public void TestService(){
+		List<Map<String,Object>> listMap=sysGeneratorService.queryList(new HashMap<>());
+		System.out.println(listMap);
 	}
 }

@@ -4,18 +4,17 @@ import java.util.concurrent.Executor;
 import java.util.concurrent.ThreadPoolExecutor;
 
 import org.mybatis.spring.annotation.MapperScan;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
-import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 /**
  * 扫描不到手动配置进行扫描
  * @author 	Roger	
@@ -26,6 +25,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableScheduling//定时任务发现注解
 @ComponentScan(value={"com.firstTry.adventure.*"})
 @MapperScan("com.firstTry.adventure.mapper")
+@EnableSwagger2
 /*//此方法为关闭数据库连接或为禁止数据库链接
 @EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class})//在测试的时候不连接数据库
 */@SpringBootApplication

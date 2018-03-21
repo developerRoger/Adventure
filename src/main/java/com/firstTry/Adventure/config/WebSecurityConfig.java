@@ -1,17 +1,14 @@
 package com.firstTry.Adventure.config;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.annotation.Order;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.boot.autoconfigure.security.SecurityProperties;  
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-
 import com.firstTry.Adventure.service.UserService;
 /**
  *  权限控制拦截
@@ -21,6 +18,7 @@ import com.firstTry.Adventure.service.UserService;
 @Configuration
 @EnableWebSecurity
 @Order(SecurityProperties.ACCESS_OVERRIDE_ORDER)  
+@EnableGlobalMethodSecurity(prePostEnabled = true)
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	
 	@Autowired
@@ -33,36 +31,61 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	 */
 	private static final String[] PASS_URL = { 
 		"/",
-		"index"
+		"index",
+		"/sys/generator/*",
+		//访问静态资源文件去除拦截
+		"/js/**",
+		"/css/**",
+		"/img/**",
+		"/img/**",
+		"/fonts/**",
+		"/favicon.ico",
+		"/libs/**",
+		"/plugins/**",
+		"/views/**",
+		"/**/**.html",
+		"*/swagger-ui.html",
+		"/**.png",
+		"/webjars/**",
+		"/swagger-resources/**",
+		"/v2/**"
 	};
 
     public WebSecurityConfig(UserService userDetailsService, BCryptPasswordEncoder bCryptPasswordEncoder) {  
         this.userDetailsService = userDetailsService;  
         this.bCryptPasswordEncoder = bCryptPasswordEncoder;  
     }  
+    
+
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http
-            .authorizeRequests()
+    	System.err.println("-------1---------");
+    	//禁用 csrf
+        http.cors().and().csrf().disable().authorizeRequests()
+                //允许以下请求
                 .antMatchers(PASS_URL).permitAll()
+                // 所有请求需要身份认证
                 .anyRequest().authenticated()
                 .and()
-            .formLogin()
-                .loginPage("/login")
-                .permitAll()
-                .and()
-                .addFilter(new JWTLoginFilter(authenticationManager()))  
+                //验证登陆
+                .addFilter(new JWTLoginFilter(authenticationManager()))
+                //验证token
                 .addFilter(new JWTAuthenticationFilter(authenticationManager()))
-            .logout()
-            .logoutSuccessUrl("/login")
+	            .logout()
+	            .logoutSuccessUrl("/login")
                 .permitAll();
     }
+    
+    @Override  
+    public void configure(AuthenticationManagerBuilder auth) throws Exception {  
+        auth.userDetailsService(userDetailsService).passwordEncoder(bCryptPasswordEncoder);  
+    } 
+    
+/*    public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
+    	System.err.println("自定义校验---------------进来了");
 
-/*    @Autowired
-    public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
-        auth
-            .inMemoryAuthentication()
-                .withUser("user").password("password").roles("USER");
-    	 auth.userDetailsService(userDetailsService).passwordEncoder(bCryptPasswordEncoder);  
+        // auth.userDetailsService(userDetailsService).passwordEncoder(bCryptPasswordEncoder);
+         // 使用自定义身份验证组件
+         auth.authenticationProvider(new CustomAuthenticationProvider(userDetailsService,bCryptPasswordEncoder));
     }*/
 }

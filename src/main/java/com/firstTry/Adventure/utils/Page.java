@@ -3,7 +3,8 @@ package com.firstTry.Adventure.utils;
 import java.io.Serializable;
 import java.util.List;
 
-/**
+/***
+ * 
  * 分页支持
  */
 public class Page<T> implements Serializable {

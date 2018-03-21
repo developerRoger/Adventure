@@ -42,7 +42,7 @@ public class GlobalExceptionHandler {
 	     * @return
 	     * @throws Exception
 	     */
-	    @ExceptionHandler(value = MyException.class)
+	    @ExceptionHandler(value = RRException.class)
 	    @ResponseBody
 	    public Page<SessionTimeOutException> jsonErrorHandler(HttpServletRequest req, MyException e) throws Exception {
 	    	Page<SessionTimeOutException> r = new Page<SessionTimeOutException>();

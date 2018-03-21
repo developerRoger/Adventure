@@ -13,15 +13,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by xiaoq on 17-8-10.
+ * 
+ * @author Roger
+ * @email luojie2luojuan@qq.com
+ * @date 2018-3-19
+ *
  */
 public class JSONMapperUtil {
 
-    public static <T> List<T> obj2List(Object object, TypeReference valueTypeRef) throws MyException {
+    public static <T> List<T> obj2List(Object object, TypeReference<?> valueTypeRef) throws MyException {
         return json2List(JSONUtil.toJsonStr(object), valueTypeRef);
     }
 
-    public static <T> List<T> json2List(String jsonStr, TypeReference valueTypeRef) throws MyException {
+    public static <T> List<T> json2List(String jsonStr, TypeReference<?> valueTypeRef) throws MyException {
         List<T> result = json2Generic(jsonStr, valueTypeRef);
         if (result == null){
             return new ArrayList<>();
@@ -30,7 +34,7 @@ public class JSONMapperUtil {
         return result;
     }
     
-    public static <T>T json2Generic(String jsonStr, TypeReference valueTypeRef) throws MyException{
+    public static <T>T json2Generic(String jsonStr, TypeReference<?> valueTypeRef) throws MyException{
         ObjectMapper mapper = new ObjectMapper();
         mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
         try {

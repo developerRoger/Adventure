@@ -1,14 +1,15 @@
 package com.firstTry.Adventure.service;
 
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
 
 import com.firstTry.Adventure.entity.UserTest;
 /**
  * 
  * @author Roger
- *
+ * 实现SpringSecurity的loadUserByUsername方法
  */
-public interface UserService {
+public interface UserService extends UserDetailsService{
 	/**
      * 新增一个用户
      * @param name
