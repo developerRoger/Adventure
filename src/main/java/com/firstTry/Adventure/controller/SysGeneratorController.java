@@ -41,8 +41,12 @@ public class SysGeneratorController {
 	 * 列表
 	 */
 	@ResponseBody
+	@ApiOperation(value="查询列表数据", notes="查询当前数据库所有的表名和创建时间等...")
+	@ApiImplicitParam(name = "params", value = "用户请求参数", required = false)
 	@RequestMapping("/list")
 	public R list(@RequestParam Map<String, Object> params){
+		
+		System.out.println(params);
 		//查询列表数据
 		Query query = new Query(params);
 		List<Map<String, Object>> list = sysGeneratorService.queryList(query);

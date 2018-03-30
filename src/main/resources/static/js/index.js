@@ -7,7 +7,25 @@ $(window).on('resize', function() {
 	});
 }).resize();
 
-
+$(function () {
+	//请求登陆     
+	function getAccse(){
+		var Authorization="<%=session.getAttribute('Authorization')%>"; 
+		console.log(Authorization+"heihei");
+		debugger	
+	}
+});
+function getCookie(name) {                  //获取一个cookie  
+    var strCookie = document.cookie;  
+    var arr = strCookie.split(';');  
+    for (var i = 0; i < arr.length; i++) {  
+       var t = arr[i].split("=");  
+        if(t[0] == name) {  
+            return t[1];  
+        }  
+    };  
+    return null;  
+}  
 var vm = new Vue({
 	el:'#rrapp',
 	data:{

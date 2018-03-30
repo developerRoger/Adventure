@@ -1,0 +1,6 @@
+2018-03-10 11:25:25,484  INFO AdventureApplication:48 ---- Starting AdventureApplication on PC-20171126RQUJ with PID 8120 (D:\SpringCloud\Adventure\target\classes started by Administrator in D:\SpringCloud\Adventure)
+2018-03-10 11:25:25,491 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-03-10 11:25:25,492  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-03-10 11:25:29,385  INFO AdventureApplication:57 ---- Started AdventureApplication in 4.106 seconds (JVM running for 4.472)
+2018-03-10 11:26:43,442 DEBUG JWTLoginFilter:206 ---- Request is to process authentication
+2018-03-10 11:27:12,190 DEBUG JWTLoginFilter:206 ---- Request is to process authentication

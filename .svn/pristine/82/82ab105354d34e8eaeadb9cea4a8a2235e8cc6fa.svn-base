@@ -1,0 +1,10 @@
+document.write("<script src='libs/jquery.min.js'></script>");
+document.write("<script src='plugins/layer/layer.js'></script>");
+document.write("<script src='libs/bootstrap.min.js'></script>");
+document.write("<script src='libs/vue.min.js'></script>");
+document.write("<script src='plugins/jqgrid/grid.locale-cn.js'></script>");
+document.write("<script src='plugins/jqgrid/jquery.jqGrid.min.js'></script>");
+document.write("<script src='js/common.js'></script>");
+document.write("<script src='libs/router.js'></script>");
+document.write("<script src='libs/fastclick.min.js'></script>");
+document.write("<script src='libs/app.js'></script>");

@@ -14,10 +14,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 @Controller
 public class DefaultView {
-	@RequestMapping("/123")
+	@RequestMapping("/go")
 	public String index(HttpServletRequest request,HttpServletResponse response) {
 		System.out.println(getIpAddress(request));
-		return "html/index";
+		return "index";
 	}
 
 	/**

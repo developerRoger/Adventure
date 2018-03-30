@@ -28,10 +28,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	private BCryptPasswordEncoder bCryptPasswordEncoder;  
 	/**
 	 * 跳过校验token验证请求的链接
+	 * 静态文件也要设置
 	 */
 	private static final String[] PASS_URL = { 
 		"/",
-		"index",
+		"/index",
 		"/sys/generator/*",
 		//访问静态资源文件去除拦截
 		"/js/**",
@@ -42,9 +43,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		"/favicon.ico",
 		"/libs/**",
 		"/plugins/**",
+		"*/swagger-ui.html",
 		"/views/**",
 		"/**/**.html",
-		"*/swagger-ui.html",
 		"/**.png",
 		"/webjars/**",
 		"/swagger-resources/**",
@@ -59,7 +60,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-    	System.err.println("-------1---------");
     	//禁用 csrf
         http.cors().and().csrf().disable().authorizeRequests()
                 //允许以下请求
@@ -71,8 +71,12 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .addFilter(new JWTLoginFilter(authenticationManager()))
                 //验证token
                 .addFilter(new JWTAuthenticationFilter(authenticationManager()))
+                .formLogin()
+                .loginPage("/login")
+                .defaultSuccessUrl("/index.html")
+                .permitAll()
+                .and()
 	            .logout()
-	            .logoutSuccessUrl("/login")
                 .permitAll();
     }
     

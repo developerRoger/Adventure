@@ -1,0 +1,82 @@
+package com.firstTry.Adventure.config;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Date;
+
+import javax.servlet.FilterChain;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;
+import com.firstTry.Adventure.exception.RRException;
+
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.Jwts;
+
+public class JWTAuthenticationFilter extends BasicAuthenticationFilter{
+
+    public JWTAuthenticationFilter(AuthenticationManager authenticationManager) {  
+        super(authenticationManager);  
+    }  
+  
+
+	@Override  
+    protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain chain) throws IOException, ServletException {  
+        String header = request.getHeader("Authorization");  
+        response.setHeader("X-Frame-Options", "SAMEORIGIN");
+        if (header == null || !header.startsWith("Bearer ")) {  
+            chain.doFilter(request, response);  
+            return;  
+        }  
+  
+        UsernamePasswordAuthenticationToken authentication = null;
+		try {
+			authentication = getAuthentication(request);
+		} catch (RRException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}  
+  
+        SecurityContextHolder.getContext().setAuthentication(authentication);  
+        
+        //放行
+        chain.doFilter(request, response);  
+  
+    }  	
+  
+    private UsernamePasswordAuthenticationToken getAuthentication(HttpServletRequest request) throws RRException {  
+        String token = request.getHeader("Authorization");  
+        if (token != null) {  
+            // parse the token.  
+        	Claims claims = Jwts.parser()  
+                    .setSigningKey("MyJwtSecret")  
+                    .parseClaimsJws(token.replace("Bearer ", ""))  
+                    .getBody();
+        	
+            System.out.println("claims---------."+claims);
+            //得到用户名
+            String username = claims.getSubject();
+
+            //得到过期时间
+            Date expiration = claims.getExpiration();
+
+            //判断是否过期
+            Date now = new Date();
+
+            if (now.getTime() > expiration.getTime()) {
+
+                throw new RRException("该账号已过期,请重新登陆");
+            }
+            if (username != null) {  
+                return new UsernamePasswordAuthenticationToken(username, null, new ArrayList<>());  
+            }  
+            return null;
+        }  
+        return null;  
+    }  
+}

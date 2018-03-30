@@ -6,6 +6,7 @@ import java.util.concurrent.ThreadPoolExecutor;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.scheduling.annotation.EnableAsync;
@@ -29,7 +30,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 /*//此方法为关闭数据库连接或为禁止数据库链接
 @EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class})//在测试的时候不连接数据库
 */@SpringBootApplication
-public class AdventureApplication {
+public class AdventureApplication extends SpringBootServletInitializer{
 	
 	/**
 	 * 线程池配置
@@ -62,4 +63,9 @@ public class AdventureApplication {
 	public static void main(String[] args) {
 		 new SpringApplicationBuilder(AdventureApplication.class).web(true).run(args);
 	}
+	
+	 @Override
+	    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+	        return application.sources(AdventureApplication.class);
+	    }
 }

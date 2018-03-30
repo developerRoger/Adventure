@@ -28,8 +28,15 @@ public class JWTAuthenticationFilter extends BasicAuthenticationFilter{
 	@Override  
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain chain) throws IOException, ServletException {  
         String header = request.getHeader("Authorization");  
-        response.setHeader("X-Frame-Options", "SAMEORIGIN");
+       System.out.println("header");
+       	//ajax跨域访问
+       	response.setHeader("Access-Control-Allow-Origin", "*");
+		response.setHeader("Access-Control-Allow-Methods", "*");
+		response.setHeader("Access-Control-Max-Age", "3600");
+		response.setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept,phoneType,appId,agent,UserName,UserToken,SeesionId,platform");
         if (header == null || !header.startsWith("Bearer ")) {  
+        	 //为防止html跨域访问
+        	response.setHeader("X-Frame-Options", "SAMEORIGIN");
             chain.doFilter(request, response);  
             return;  
         }  

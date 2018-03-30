@@ -1,0 +1,23 @@
+package ${package}.mapper;
+
+import ${package}.entity.${className}Entity;
+import org.apache.ibatis.annotations.Mapper;
+
+/**
+ * ${comments}
+ * 
+ * @author ${author}
+ * @email ${email}
+ * @date ${datetime}
+ */
+@Mapper
+public interface ${className}Dao {
+	   // 通用条件查询
+    List<${className}Entity> query(Map<String, Object> queryMap);
+    // 按主键删除
+    int deleteByKey(Map<String, Object> keyMap);
+    // 单条保存
+	int save(${className}Entity ${classname});
+	// 按主键更新全部字段
+	int update(${className}Entity ${classname});
+}

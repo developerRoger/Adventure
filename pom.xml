@@ -64,6 +64,13 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+			<!-- 移除嵌入式tomcat插件 -->
+<!-- 			<exclusions>
+	        <exclusion>
+	            <groupId>org.springframework.boot</groupId>
+	            <artifactId>spring-boot-starter-tomcat</artifactId>
+	        </exclusion>
+    </exclusions> -->
 		</dependency>
 		<!-- redis -->
 		<dependency>
@@ -78,10 +85,10 @@
 			<scope>test</scope>
 		</dependency>
 		<!--使用Thymeleaf模板引擎渲染web视图 -->
- 		<dependency>
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
-		</dependency> 
+		</dependency>
 		<!-- mysql链接 =此依赖已包含spring-boot-starter-jdbc依赖 -->
 		<dependency>
 			<groupId>org.mybatis.spring.boot</groupId>
@@ -124,11 +131,11 @@
 			<version>0.7.0</version>
 		</dependency>
 		<!-- 打包时排除tomcat. -->
-		<dependency>
+<!-- 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-tomcat</artifactId>
 			<scope>provided</scope>
-		</dependency>
+		</dependency> -->
 		<!--json-lib -->
 		<dependency>
 			<groupId>net.sf.json-lib</groupId>
@@ -140,7 +147,7 @@
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpclient</artifactId>
-			</dependency>
+		</dependency>
 		<!-- commons 配置文件的读取 -->
 		<dependency>
 			<groupId>commons-lang</groupId>
@@ -173,6 +180,11 @@
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-swagger-ui</artifactId>
 			<version>2.6.1</version>
+		</dependency>
+			<!-- https://mvnrepository.com/artifact/net.sourceforge.nekohtml/nekohtml -->
+		<dependency>
+		    <groupId>net.sourceforge.nekohtml</groupId>
+		    <artifactId>nekohtml</artifactId>
 		</dependency>
 	</dependencies>
 	<build>

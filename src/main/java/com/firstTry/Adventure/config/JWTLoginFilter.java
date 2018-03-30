@@ -6,9 +6,12 @@ import java.util.Date;
 
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
+import org.apache.catalina.Session;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -71,7 +74,11 @@ public class JWTLoginFilter extends UsernamePasswordAuthenticationFilter {
 				.signWith(SignatureAlgorithm.HS512, "MyJwtSecret").compact();
 		//将token返回
 		res.addHeader("Authorization", "Bearer " + token);
-		System.out.println("token====" + token);
+		
+		HttpSession hs=req.getSession();
+		hs.setAttribute("Authorization", "Bearer " + token);
+		//登陆成功默认跳转路径
+		res.sendRedirect("/index.html");
 	}
 
 }

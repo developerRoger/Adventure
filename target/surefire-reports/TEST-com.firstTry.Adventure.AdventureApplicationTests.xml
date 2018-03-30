@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.firstTry.Adventure.AdventureApplicationTests" time="0.04" tests="1" errors="1" skipped="0" failures="0">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="D:\Program Files\Java\jdk1.8.0_101\jre\bin"/>
+    <property name="java.vm.version" value="25.101-b13"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="D:\SpringCloud\Adventure"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="CN"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="Service Pack 1"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="D:\SpringCloud\Adventure"/>
+    <property name="java.runtime.version" value="1.8.0_101-b13"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="D:\Program Files\Java\jdk1.8.0_101\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\ADMINI~1\AppData\Local\Temp\"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 7"/>
+    <property name="classworlds.conf" value="C:\Users\Administrator\workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf8971353963541403866.tmp"/>
+    <property name="sun.jnu.encoding" value="GBK"/>
+    <property name="java.library.path" value="D:\Program Files\Java\jdk1.8.0_101\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:/Program Files/Java/jre/bin/server;D:/Program Files/Java/jre/bin;D:/Program Files/Java/jre/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\Program Files\Java\jdk1.8.0_101\bin;D:\Program Files\Java\jdk1.8.0_101\jre\bin;D:\Program Files\MySQL\MySQL Server 5.5\bin;D:\Program Files\TortoiseGit\bin;D:\java\apache-maven-3.3.9\bin;;D:\BaiduNetdiskDownload\eclipse;;."/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="6.1"/>
+    <property name="user.home" value="C:\Users\Administrator"/>
+    <property name="user.timezone" value="Asia/Shanghai"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="user.name" value="Administrator"/>
+    <property name="java.class.path" value="D:\java\apache-maven-3.3.9\boot\plexus-classworlds-2.5.2.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="D:\Program Files\Java\jdk1.8.0_101\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B install"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="zh"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_101"/>
+    <property name="java.ext.dirs" value="D:\Program Files\Java\jdk1.8.0_101\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="D:\Program Files\Java\jdk1.8.0_101\jre\lib\resources.jar;D:\Program Files\Java\jdk1.8.0_101\jre\lib\rt.jar;D:\Program Files\Java\jdk1.8.0_101\jre\lib\sunrsasign.jar;D:\Program Files\Java\jdk1.8.0_101\jre\lib\jsse.jar;D:\Program Files\Java\jdk1.8.0_101\jre\lib\jce.jar;D:\Program Files\Java\jdk1.8.0_101\jre\lib\charsets.jar;D:\Program Files\Java\jdk1.8.0_101\jre\lib\jfr.jar;D:\Program Files\Java\jdk1.8.0_101\jre\classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="D:\java\apache-maven-3.3.9"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase name="TestService" classname="com.firstTry.Adventure.AdventureApplicationTests" time="0.04">
+    <error message="Invalid bound statement (not found): com.firstTry.Adventure.mapper.SysGeneratorMapper.queryList" type="org.apache.ibatis.binding.BindingException"><![CDATA[org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.firstTry.Adventure.mapper.SysGeneratorMapper.queryList
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:214)
+	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:48)
+	at org.apache.ibatis.binding.MapperProxy.cachedMapperMethod(MapperProxy.java:59)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:52)
+	at com.sun.proxy.$Proxy99.queryList(Unknown Source)
+	at com.firstTry.Adventure.AdventureApplicationTests.TestService(AdventureApplicationTests.java:103)
+]]></error>
+    <system-out><![CDATA[2018-03-28 18:10:11,821  INFO SpringBootTestContextBootstrapper:319 - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.firstTry.Adventure.AdventureApplicationTests], using SpringBootContextLoader
+2018-03-28 18:10:11,830  INFO AbstractContextLoader:264 - Could not detect default resource locations for test class [com.firstTry.Adventure.AdventureApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2018-03-28 18:10:11,832  INFO AnnotationConfigContextLoaderUtils:81 - Could not detect default configuration classes for test class [com.firstTry.Adventure.AdventureApplicationTests]: AdventureApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2018-03-28 18:10:11,928  INFO SpringBootTestContextBootstrapper:206 - Found @SpringBootConfiguration com.firstTry.Adventure.AdventureApplication for test class com.firstTry.Adventure.AdventureApplicationTests
+2018-03-28 18:10:11,935  INFO SpringBootTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-03-28 18:10:11,972  INFO SpringBootTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@25b485ba, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2b546384, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@5d740a0f, org.springframework.test.context.support.DirtiesContextTestExecutionListener@214b199c, org.springframework.test.context.transaction.TransactionalTestExecutionListener@20d3d15a, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2893de87, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@55ca8de8, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@2c34f934, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@12d3a4e9, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@240237d2, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@25a65b77, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2ed0fbae]
+2018-03-28 18:10:11,976  INFO SpringBootTestContextBootstrapper:319 - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.firstTry.Adventure.AdventureApplicationTests], using SpringBootContextLoader
+2018-03-28 18:10:11,977  INFO AbstractContextLoader:264 - Could not detect default resource locations for test class [com.firstTry.Adventure.AdventureApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2018-03-28 18:10:11,977  INFO AnnotationConfigContextLoaderUtils:81 - Could not detect default configuration classes for test class [com.firstTry.Adventure.AdventureApplicationTests]: AdventureApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2018-03-28 18:10:11,981  INFO SpringBootTestContextBootstrapper:206 - Found @SpringBootConfiguration com.firstTry.Adventure.AdventureApplication for test class com.firstTry.Adventure.AdventureApplicationTests
+2018-03-28 18:10:11,985  INFO SpringBootTestContextBootstrapper:260 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-03-28 18:10:11,988  INFO SpringBootTestContextBootstrapper:187 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@38c5cc4c, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@37918c79, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@78e94dcf, org.springframework.test.context.support.DirtiesContextTestExecutionListener@233fe9b6, org.springframework.test.context.transaction.TransactionalTestExecutionListener@358ee631, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@ec756bd, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@3c72f59f, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@60dcc9fe, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@222114ba, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@16e7dcfd, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3d121db3, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@3b07a0d6]
+ .----------------.  .----------------.  .----------------.  .----------------.  .----------------.  .----------------.  .----------------.  .----------------.  .----------------.  .-----------------. .----------------. 
+| .--------------. || .--------------. || .--------------. || .--------------. || .--------------. || .--------------. || .--------------. || .--------------. || .--------------. || .--------------. || .--------------. |
+| |  ____  ____  | || |     _____    | || |  _________   | || |  ____  ____  | || |     _____    | || |      __      | || |     ____     | || |  _________   | || |      __      | || | ____  _____  | || |    ______    | |
+| | |_  _||_  _| | || |    |_   _|   | || | |_   ___  |  | || | |_  _||_  _| | || |    |_   _|   | || |     /  \     | || |   .'    `.   | || | |_   ___  |  | || |     /  \     | || ||_   \|_   _| | || |  .' ___  |   | |
+| |   \ \  / /   | || |      | |     | || |   | |_  \_|  | || |   \ \  / /   | || |      | |     | || |    / /\ \    | || |  /  .--.  \  | || |   | |_  \_|  | || |    / /\ \    | || |  |   \ | |   | || | / .'   \_|   | |
+| |    > `' <    | || |      | |     | || |   |  _|  _   | || |    > `' <    | || |      | |     | || |   / ____ \   | || |  | |    | |  | || |   |  _|      | || |   / ____ \   | || |  | |\ \| |   | || | | |    ____  | |
+| |  _/ /'`\ \_  | || |     _| |_    | || |  _| |___/ |  | || |  _/ /'`\ \_  | || |     _| |_    | || | _/ /    \ \_ | || |  \  `--'  /  | || |  _| |_       | || | _/ /    \ \_ | || | _| |_\   |_  | || | \ `.___]  _| | |
+| | |____||____| | || |    |_____|   | || | |_________|  | || | |____||____| | || |    |_____|   | || ||____|  |____|| || |   `.____.'   | || | |_____|      | || ||____|  |____|| || ||_____|\____| | || |  `._____.'   | |
+| |              | || |              | || |              | || |              | || |              | || |              | || |              | || |              | || |              | || |              | || |              | |
+| '--------------' || '--------------' || '--------------' || '--------------' || '--------------' || '--------------' || '--------------' || '--------------' || '--------------' || '--------------' || '--------------' |
+ '----------------'  '----------------'  '----------------'  '----------------'  '----------------'  '----------------'  '----------------'  '----------------'  '----------------'  '----------------'  '----------------'
+2018-03-28 18:10:12,215  INFO AdventureApplicationTests:48 - Starting AdventureApplicationTests on PC-20171126RQUJ with PID 7284 (started by Administrator in D:\SpringCloud\Adventure)
+2018-03-28 18:10:12,215 DEBUG AdventureApplicationTests:51 - Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-03-28 18:10:12,215  INFO AdventureApplicationTests:593 - No active profile set, falling back to default profiles: default
+2018-03-28 18:10:12,343  INFO GenericWebApplicationContext:583 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@6da21078: startup date [Wed Mar 28 18:10:12 CST 2018]; root of context hierarchy
+2018-03-28 18:10:12,428  INFO Version:30 - HV000001: Hibernate Validator 5.3.6.Final
+2018-03-28 18:10:13,022  INFO RepositoryConfigurationDelegate:165 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-03-28 18:10:13,452  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 - Bean 'redisConfig' of type [com.firstTry.Adventure.config.RedisConfig$$EnhancerBySpringCGLIB$$e2d15e66] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-03-28 18:10:13,463  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 - Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$9e145896] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-03-28 18:10:13,468  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$566905c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-03-28 18:10:13,500  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 - Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-03-28 18:10:13,503  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@7fd26ad8' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-03-28 18:10:13,511  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 - Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$c2e8fb48] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-03-28 18:10:13,521  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-03-28 18:10:13,535  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 - Bean 'keyGenerator' of type [com.firstTry.Adventure.config.RedisConfig$1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-03-28 18:10:13,536  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 - Bean 'org.springframework.cache.annotation.ProxyCachingConfiguration' of type [org.springframework.cache.annotation.ProxyCachingConfiguration$$EnhancerBySpringCGLIB$$4e78c67a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-03-28 18:10:14,435  INFO RequestMappingHandlerMapping:543 - Mapped "{[/index]}" onto public java.lang.String com.firstTry.Adventure.config.DefaultView.index(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-03-28 18:10:14,436  INFO RequestMappingHandlerMapping:543 - Mapped "{[/login]}" onto public java.lang.String com.firstTry.Adventure.config.DefaultView.login()
+2018-03-28 18:10:14,436  INFO RequestMappingHandlerMapping:543 - Mapped "{[/hello]}" onto public java.lang.String com.firstTry.Adventure.config.DefaultView.hello()
+2018-03-28 18:10:14,437  INFO RequestMappingHandlerMapping:543 - Mapped "{[/sys/generator/list]}" onto public com.firstTry.Adventure.utils.R com.firstTry.Adventure.controller.SysGeneratorController.list(java.util.Map<java.lang.String, java.lang.Object>)
+2018-03-28 18:10:14,437  INFO RequestMappingHandlerMapping:543 - Mapped "{[/sys/generator/code]}" onto public void com.firstTry.Adventure.controller.SysGeneratorController.code(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException
+2018-03-28 18:10:14,438  INFO RequestMappingHandlerMapping:543 - Mapped "{[/hi]}" onto public java.lang.String com.firstTry.Adventure.controller.UserLoginController.hello() throws java.lang.Exception
+2018-03-28 18:10:14,438  INFO RequestMappingHandlerMapping:543 - Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2018-03-28 18:10:14,440  INFO RequestMappingHandlerMapping:543 - Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2018-03-28 18:10:14,441  INFO RequestMappingHandlerMapping:543 - Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2018-03-28 18:10:14,441  INFO RequestMappingHandlerMapping:543 - Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2018-03-28 18:10:14,444  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-03-28 18:10:14,444  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-03-28 18:10:14,993  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-03-28 18:10:14,993  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-03-28 18:10:15,017  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-03-28 18:10:15,023  INFO WebMvcAutoConfiguration$WelcomePageHandlerMapping:549 - Adding welcome page: class path resource [views/index.html]
+2018-03-28 18:10:15,061  INFO DefaultSecurityFilterChain:43 - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@b1b471, org.springframework.security.web.context.SecurityContextPersistenceFilter@4c38cd16, org.springframework.security.web.header.HeaderWriterFilter@75eaba95, org.springframework.web.filter.CorsFilter@526f6427, org.springframework.security.web.authentication.logout.LogoutFilter@69ec93c2, com.firstTry.Adventure.config.JWTLoginFilter@4f1afe8f, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@372f0a99, com.firstTry.Adventure.config.JWTAuthenticationFilter@492521c4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@f5bf288, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@20440c6c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@443a06ad, org.springframework.security.web.session.SessionManagementFilter@435e416c, org.springframework.security.web.access.ExceptionTranslationFilter@6af65f29, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1e226bcd]
+2018-03-28 18:10:15,084  INFO ThreadPoolTaskExecutor:165 - Initializing ExecutorService 
+2018-03-28 18:10:15,089  INFO ThreadPoolTaskExecutor:165 - Initializing ExecutorService  'defaultThreadPool'
+2018-03-28 18:10:15,461  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@6da21078: startup date [Wed Mar 28 18:10:12 CST 2018]; root of context hierarchy
+2018-03-28 18:10:15,512  INFO ExceptionHandlerExceptionResolver:273 - Detected @ExceptionHandler methods in globalExceptionHandler
+2018-03-28 18:10:16,086  WARN RedisStarterDeprecationWarningAutoConfiguration:43 - spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2018-03-28 18:10:16,129  INFO DefaultLifecycleProcessor:343 - Starting beans in phase 2147483647
+2018-03-28 18:10:16,130  INFO DocumentationPluginsBootstrapper:120 - Context refreshed
+2018-03-28 18:10:16,145  INFO DocumentationPluginsBootstrapper:123 - Found 1 custom documentation plugin(s)
+2018-03-28 18:10:16,153  INFO ApiListingReferenceScanner:41 - Scanning for api listing references
+2018-03-28 18:10:16,306  INFO AdventureApplicationTests:57 - Started AdventureApplicationTests in 4.273 seconds (JVM running for 4.808)
+]]></system-out>
+    <system-err><![CDATA[-------1---------
+]]></system-err>
+  </testcase>
+</testsuite>

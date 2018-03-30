@@ -1,0 +1,178 @@
+2018-03-27 14:55:25,961  INFO AdventureApplicationTests:48 ---- Starting AdventureApplicationTests on PC-20171126RQUJ with PID 2688 (started by Administrator in D:\SpringCloud\Adventure)
+2018-03-27 14:55:25,963 DEBUG AdventureApplicationTests:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-03-27 14:55:25,963  INFO AdventureApplicationTests:593 ---- No active profile set, falling back to default profiles: default
+2018-03-27 14:55:30,482  INFO AdventureApplicationTests:57 ---- Started AdventureApplicationTests in 4.682 seconds (JVM running for 5.173)
+2018-03-27 14:55:32,346 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) order by create_time desc 
+2018-03-27 14:55:32,384 DEBUG queryList:145 ---- ==> Parameters: 
+2018-03-27 14:55:32,462 DEBUG queryList:145 ---- <==      Total: 1
+2018-03-27 15:27:12,815  INFO AdventureApplicationTests:48 ---- Starting AdventureApplicationTests on PC-20171126RQUJ with PID 8076 (started by Administrator in D:\SpringCloud\Adventure)
+2018-03-27 15:27:12,816 DEBUG AdventureApplicationTests:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-03-27 15:27:12,816  INFO AdventureApplicationTests:593 ---- No active profile set, falling back to default profiles: default
+2018-03-27 15:27:17,005  INFO AdventureApplicationTests:57 ---- Started AdventureApplicationTests in 4.442 seconds (JVM running for 4.924)
+2018-03-27 15:27:20,609 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) order by create_time desc 
+2018-03-27 15:27:20,649 DEBUG queryList:145 ---- ==> Parameters: 
+2018-03-27 15:27:20,680 DEBUG queryList:145 ---- <==      Total: 1
+2018-03-27 15:34:46,755  INFO AdventureApplication:48 ---- Starting AdventureApplication on PC-20171126RQUJ with PID 6824 (D:\SpringCloud\Adventure\target\classes started by Administrator in D:\SpringCloud\Adventure)
+2018-03-27 15:34:46,757 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-03-27 15:34:46,757  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-03-27 15:34:51,429  INFO AdventureApplication:57 ---- Started AdventureApplication in 4.842 seconds (JVM running for 5.183)
+2018-03-27 15:35:31,471  INFO AdventureApplicationTests:48 ---- Starting AdventureApplicationTests on PC-20171126RQUJ with PID 1260 (started by Administrator in D:\SpringCloud\Adventure)
+2018-03-27 15:35:31,472 DEBUG AdventureApplicationTests:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-03-27 15:35:31,473  INFO AdventureApplicationTests:593 ---- No active profile set, falling back to default profiles: default
+2018-03-27 15:35:35,554  INFO AdventureApplicationTests:57 ---- Started AdventureApplicationTests in 4.278 seconds (JVM running for 4.752)
+2018-03-27 15:35:37,296 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) order by create_time desc 
+2018-03-27 15:35:37,330 DEBUG queryList:145 ---- ==> Parameters: 
+2018-03-27 15:35:37,355 DEBUG queryList:145 ---- <==      Total: 1
+2018-03-27 15:42:37,485  INFO AdventureApplication:48 ---- Starting AdventureApplication on PC-20171126RQUJ with PID 6812 (D:\SpringCloud\Adventure\target\classes started by Administrator in D:\SpringCloud\Adventure)
+2018-03-27 15:42:37,486 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-03-27 15:42:37,487  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-03-27 15:42:42,229  INFO AdventureApplication:57 ---- Started AdventureApplication in 4.899 seconds (JVM running for 5.218)
+2018-03-27 15:43:02,064  INFO AdventureApplicationTests:48 ---- Starting AdventureApplicationTests on PC-20171126RQUJ with PID 7048 (started by Administrator in D:\SpringCloud\Adventure)
+2018-03-27 15:43:02,064 DEBUG AdventureApplicationTests:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-03-27 15:43:02,065  INFO AdventureApplicationTests:593 ---- No active profile set, falling back to default profiles: default
+2018-03-27 15:43:06,281  INFO AdventureApplicationTests:57 ---- Started AdventureApplicationTests in 4.428 seconds (JVM running for 4.894)
+2018-03-27 15:43:08,293 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) order by create_time desc 
+2018-03-27 15:43:08,329 DEBUG queryList:145 ---- ==> Parameters: 
+2018-03-27 15:43:08,356 DEBUG queryList:145 ---- <==      Total: 1
+2018-03-27 16:07:55,471  INFO AdventureApplicationTests:48 ---- Starting AdventureApplicationTests on PC-20171126RQUJ with PID 7908 (started by Administrator in D:\SpringCloud\Adventure)
+2018-03-27 16:07:55,472 DEBUG AdventureApplicationTests:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-03-27 16:07:55,472  INFO AdventureApplicationTests:593 ---- No active profile set, falling back to default profiles: default
+2018-03-27 16:07:59,803  INFO AdventureApplicationTests:57 ---- Started AdventureApplicationTests in 4.493 seconds (JVM running for 4.937)
+2018-03-27 16:08:01,745 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) order by create_time desc 
+2018-03-27 16:08:01,779 DEBUG queryList:145 ---- ==> Parameters: 
+2018-03-27 16:08:01,805 DEBUG queryList:145 ---- <==      Total: 1
+2018-03-27 16:32:12,199  INFO AdventureApplicationTests:48 ---- Starting AdventureApplicationTests on PC-20171126RQUJ with PID 5872 (started by Administrator in D:\SpringCloud\Adventure)
+2018-03-27 16:32:12,200 DEBUG AdventureApplicationTests:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-03-27 16:32:12,200  INFO AdventureApplicationTests:593 ---- No active profile set, falling back to default profiles: default
+2018-03-27 16:32:16,551  INFO AdventureApplicationTests:57 ---- Started AdventureApplicationTests in 4.563 seconds (JVM running for 5.049)
+2018-03-27 16:32:21,981 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) order by create_time desc 
+2018-03-27 16:32:22,027 DEBUG queryList:145 ---- ==> Parameters: 
+2018-03-27 16:32:22,073 DEBUG queryList:145 ---- <==      Total: 1
+2018-03-27 16:38:25,175  INFO AdventureApplicationTests:48 ---- Starting AdventureApplicationTests on PC-20171126RQUJ with PID 6512 (started by Administrator in D:\SpringCloud\Adventure)
+2018-03-27 16:38:25,176 DEBUG AdventureApplicationTests:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-03-27 16:38:25,177  INFO AdventureApplicationTests:593 ---- No active profile set, falling back to default profiles: default
+2018-03-27 16:38:29,071  INFO AdventureApplicationTests:57 ---- Started AdventureApplicationTests in 4.097 seconds (JVM running for 4.587)
+2018-03-27 16:38:31,315 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) order by create_time desc 
+2018-03-27 16:38:31,361 DEBUG queryList:145 ---- ==> Parameters: 
+2018-03-27 16:38:31,393 DEBUG queryList:145 ---- <==      Total: 1
+2018-03-27 16:59:08,041  INFO AdventureApplicationTests:48 ---- Starting AdventureApplicationTests on PC-20171126RQUJ with PID 8548 (started by Administrator in D:\SpringCloud\Adventure)
+2018-03-27 16:59:08,042 DEBUG AdventureApplicationTests:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-03-27 16:59:08,042  INFO AdventureApplicationTests:593 ---- No active profile set, falling back to default profiles: default
+2018-03-27 16:59:12,274  INFO AdventureApplicationTests:57 ---- Started AdventureApplicationTests in 4.456 seconds (JVM running for 4.928)
+2018-03-27 16:59:14,303 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) order by create_time desc 
+2018-03-27 16:59:14,334 DEBUG queryList:145 ---- ==> Parameters: 
+2018-03-27 16:59:14,362 DEBUG queryList:145 ---- <==      Total: 1
+2018-03-27 17:28:37,798  INFO AdventureApplication:48 ---- Starting AdventureApplication on PC-20171126RQUJ with PID 8548 (D:\SpringCloud\Adventure\target\classes started by Administrator in D:\SpringCloud\Adventure)
+2018-03-27 17:28:37,799 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-03-27 17:28:37,800  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-03-27 17:28:42,403  INFO AdventureApplication:57 ---- Started AdventureApplication in 4.768 seconds (JVM running for 5.089)
+2018-03-27 17:28:54,685 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-03-27 17:28:54,685 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-03-27 17:28:54,711 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-03-27 17:28:54,711 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-03-27 17:28:54,796 DEBUG queryList:145 ---- <==      Total: 1
+2018-03-27 17:28:54,796 DEBUG queryList:145 ---- <==      Total: 1
+2018-03-27 17:28:54,799 DEBUG queryTotal:145 ---- ==>  Preparing: select count(*) from information_schema.tables where table_schema = (select database()) 
+2018-03-27 17:28:54,800 DEBUG queryTotal:145 ---- ==>  Preparing: select count(*) from information_schema.tables where table_schema = (select database()) 
+2018-03-27 17:28:54,800 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-03-27 17:28:54,801 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-03-27 17:28:54,858 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-03-27 17:28:54,858 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-03-27 17:58:14,391  INFO AdventureApplication:48 ---- Starting AdventureApplication on PC-20171126RQUJ with PID 8548 (D:\SpringCloud\Adventure\target\classes started by Administrator in D:\SpringCloud\Adventure)
+2018-03-27 17:58:14,391 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-03-27 17:58:14,391  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-03-27 17:58:15,826  INFO AdventureApplication:57 ---- Started AdventureApplication in 1.455 seconds (JVM running for 1778.453)
+2018-03-27 17:58:27,663  INFO AdventureApplication:48 ---- Starting AdventureApplication on PC-20171126RQUJ with PID 8548 (D:\SpringCloud\Adventure\target\classes started by Administrator in D:\SpringCloud\Adventure)
+2018-03-27 17:58:27,663 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-03-27 17:58:27,663  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-03-27 17:58:29,108  INFO AdventureApplication:57 ---- Started AdventureApplication in 1.468 seconds (JVM running for 1791.735)
+2018-03-27 17:58:33,816  INFO AdventureApplication:48 ---- Starting AdventureApplication on PC-20171126RQUJ with PID 8548 (D:\SpringCloud\Adventure\target\classes started by Administrator in D:\SpringCloud\Adventure)
+2018-03-27 17:58:33,817 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-03-27 17:58:33,817  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-03-27 17:58:35,118  INFO AdventureApplication:57 ---- Started AdventureApplication in 1.32 seconds (JVM running for 1797.745)
+2018-03-27 17:58:56,999 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-03-27 17:58:56,999 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-03-27 17:58:57,001 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-03-27 17:58:57,005 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-03-27 17:58:57,032 DEBUG queryList:145 ---- <==      Total: 1
+2018-03-27 17:58:57,035 DEBUG queryTotal:145 ---- ==>  Preparing: select count(*) from information_schema.tables where table_schema = (select database()) 
+2018-03-27 17:58:57,036 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-03-27 17:58:57,066 DEBUG queryList:145 ---- <==      Total: 1
+2018-03-27 17:58:57,066 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-03-27 17:58:57,068 DEBUG queryTotal:145 ---- ==>  Preparing: select count(*) from information_schema.tables where table_schema = (select database()) 
+2018-03-27 17:58:57,069 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-03-27 17:58:57,154 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-03-27 18:01:52,898  INFO AdventureApplication:48 ---- Starting AdventureApplication on PC-20171126RQUJ with PID 8548 (D:\SpringCloud\Adventure\target\classes started by Administrator in D:\SpringCloud\Adventure)
+2018-03-27 18:01:52,898 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-03-27 18:01:52,898  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-03-27 18:01:54,166  INFO AdventureApplication:57 ---- Started AdventureApplication in 1.288 seconds (JVM running for 1996.785)
+2018-03-27 18:02:08,097 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-03-27 18:02:08,099 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-03-27 18:02:08,116 DEBUG queryList:145 ---- <==      Total: 1
+2018-03-27 18:02:08,118 DEBUG queryTotal:145 ---- ==>  Preparing: select count(*) from information_schema.tables where table_schema = (select database()) 
+2018-03-27 18:02:08,119 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-03-27 18:02:08,136 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-03-27 18:02:17,165 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-03-27 18:02:17,166 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-03-27 18:02:17,325 DEBUG queryList:145 ---- <==      Total: 1
+2018-03-27 18:02:17,327 DEBUG queryTotal:145 ---- ==>  Preparing: select count(*) from information_schema.tables where table_schema = (select database()) 
+2018-03-27 18:02:17,328 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-03-27 18:02:17,348 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-03-27 18:03:20,163  INFO AdventureApplicationTests:48 ---- Starting AdventureApplicationTests on PC-20171126RQUJ with PID 8484 (started by Administrator in D:\SpringCloud\Adventure)
+2018-03-27 18:03:20,164 DEBUG AdventureApplicationTests:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-03-27 18:03:20,164  INFO AdventureApplicationTests:593 ---- No active profile set, falling back to default profiles: default
+2018-03-27 18:03:24,247  INFO AdventureApplicationTests:57 ---- Started AdventureApplicationTests in 4.284 seconds (JVM running for 4.761)
+2018-03-27 18:03:26,566 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) order by create_time desc 
+2018-03-27 18:03:26,600 DEBUG queryList:145 ---- ==> Parameters: 
+2018-03-27 18:03:26,623 DEBUG queryList:145 ---- <==      Total: 1
+2018-03-27 18:09:36,344  INFO AdventureApplication:48 ---- Starting AdventureApplication on PC-20171126RQUJ with PID 9144 (D:\SpringCloud\Adventure\target\classes started by Administrator in D:\SpringCloud\Adventure)
+2018-03-27 18:09:36,346 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-03-27 18:09:36,347  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-03-27 18:09:41,065  INFO AdventureApplication:57 ---- Started AdventureApplication in 4.872 seconds (JVM running for 5.166)
+2018-03-27 18:11:00,518 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-03-27 18:11:00,554 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-03-27 18:11:00,584 DEBUG queryList:145 ---- <==      Total: 1
+2018-03-27 18:11:00,585 DEBUG queryTotal:145 ---- ==>  Preparing: select count(*) from information_schema.tables where table_schema = (select database()) 
+2018-03-27 18:11:00,586 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-03-27 18:11:00,598 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-03-27 18:11:27,414  INFO AdventureApplication:48 ---- Starting AdventureApplication on PC-20171126RQUJ with PID 8256 (D:\SpringCloud\Adventure\target\classes started by Administrator in D:\SpringCloud\Adventure)
+2018-03-27 18:11:27,415 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-03-27 18:11:27,416  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-03-27 18:11:32,018  INFO AdventureApplication:57 ---- Started AdventureApplication in 4.759 seconds (JVM running for 5.064)
+2018-03-27 18:16:10,887  INFO AdventureApplication:48 ---- Starting AdventureApplication on PC-20171126RQUJ with PID 5628 (D:\SpringCloud\Adventure\target\classes started by Administrator in D:\SpringCloud\Adventure)
+2018-03-27 18:16:10,888 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-03-27 18:16:10,889  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-03-27 18:16:15,477  INFO AdventureApplication:57 ---- Started AdventureApplication in 4.748 seconds (JVM running for 5.052)
+2018-03-27 18:16:38,774 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-03-27 18:16:38,818 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-03-27 18:16:38,847 DEBUG queryList:145 ---- <==      Total: 1
+2018-03-27 18:16:38,849 DEBUG queryTotal:145 ---- ==>  Preparing: select count(*) from information_schema.tables where table_schema = (select database()) 
+2018-03-27 18:16:38,849 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-03-27 18:16:38,875 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-03-27 18:17:02,983 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-03-27 18:17:02,984 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-03-27 18:17:03,006 DEBUG queryList:145 ---- <==      Total: 1
+2018-03-27 18:17:03,007 DEBUG queryTotal:145 ---- ==>  Preparing: select count(*) from information_schema.tables where table_schema = (select database()) 
+2018-03-27 18:17:03,008 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-03-27 18:17:03,055 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-03-27 18:17:58,608  INFO AdventureApplicationTests:48 ---- Starting AdventureApplicationTests on PC-20171126RQUJ with PID 2780 (started by Administrator in D:\SpringCloud\Adventure)
+2018-03-27 18:17:58,608 DEBUG AdventureApplicationTests:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-03-27 18:17:58,609  INFO AdventureApplicationTests:593 ---- No active profile set, falling back to default profiles: default
+2018-03-27 18:18:02,754  INFO AdventureApplicationTests:57 ---- Started AdventureApplicationTests in 4.352 seconds (JVM running for 4.859)
+2018-03-27 18:18:04,594 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) order by create_time desc 
+2018-03-27 18:18:04,630 DEBUG queryList:145 ---- ==> Parameters: 
+2018-03-27 18:18:04,653 DEBUG queryList:145 ---- <==      Total: 1
+2018-03-27 18:18:49,568  INFO AdventureApplicationTests:48 ---- Starting AdventureApplicationTests on PC-20171126RQUJ with PID 7812 (started by Administrator in D:\SpringCloud\Adventure)
+2018-03-27 18:18:49,569 DEBUG AdventureApplicationTests:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-03-27 18:18:49,569  INFO AdventureApplicationTests:593 ---- No active profile set, falling back to default profiles: default
+2018-03-27 18:18:54,405  INFO AdventureApplicationTests:57 ---- Started AdventureApplicationTests in 5.093 seconds (JVM running for 5.594)
+2018-03-27 18:18:56,040 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) order by create_time desc 
+2018-03-27 18:18:56,061 DEBUG queryList:145 ---- ==> Parameters: 
+2018-03-27 18:18:56,089 DEBUG queryList:145 ---- <==      Total: 1
+2018-03-27 18:35:23,666  INFO AdventureApplicationTests:48 ---- Starting AdventureApplicationTests on PC-20171126RQUJ with PID 6816 (started by Administrator in D:\SpringCloud\Adventure)
+2018-03-27 18:35:23,667 DEBUG AdventureApplicationTests:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-03-27 18:35:23,668  INFO AdventureApplicationTests:593 ---- No active profile set, falling back to default profiles: default
+2018-03-27 18:35:27,821  INFO AdventureApplicationTests:57 ---- Started AdventureApplicationTests in 4.347 seconds (JVM running for 4.808)
+2018-03-27 18:35:29,498 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) order by create_time desc 
+2018-03-27 18:35:29,534 DEBUG queryList:145 ---- ==> Parameters: 
+2018-03-27 18:35:29,557 DEBUG queryList:145 ---- <==      Total: 1
