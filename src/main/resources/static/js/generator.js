@@ -99,7 +99,7 @@ var vm = new Vue({
 				 type: 1,
 				 title: false,
 				 moveType: 0,
-                 area:['100%','100%'],
+                 area:['60%','75%'],
                  offset: '60px',
                  content: $('#showDis')
              })
