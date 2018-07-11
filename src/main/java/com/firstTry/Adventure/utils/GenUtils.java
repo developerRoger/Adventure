@@ -32,15 +32,15 @@ public class GenUtils {
 
     public static List<String> getTemplates(){
         List<String> templates = new ArrayList<String>();
-        templates.add("templates/Entity.java.vm");
-        templates.add("templates/Dao.java.vm");
+/*        templates.add("templates/Entity.java.vm");
+        templates.add("templates/Dao.java.vm");*/
         templates.add("templates/Dao.xml.vm");
-        templates.add("templates/Service.java.vm");
+/*        templates.add("templates/Service.java.vm");
         templates.add("templates/ServiceImpl.java.vm");
         templates.add("templates/Controller.java.vm");
         templates.add("templates/list.html.vm");
         templates.add("templates/list.js.vm");
-        templates.add("templates/menu.sql.vm");
+        templates.add("templates/menu.sql.vm");*/
 //        templates.add("templates/TDDL.vm");
         return templates;
     }
@@ -73,8 +73,10 @@ public class GenUtils {
 
             //列名转换成Java属性名
             String attrName = columnToJava(columnEntity.getColumnName());
-            columnEntity.setAttrName(attrName);
-            columnEntity.setAttrname(StringUtils.uncapitalize(attrName));
+            System.err.println(attrName);
+            String Attrname =column.get("columnName" );
+            Character.isLowerCase(Attrname.charAt(0));
+            columnEntity.setAttrname((new StringBuilder()).append(Character.toLowerCase(Attrname.charAt(0))).append(Attrname.substring(1)).toString());
 
             //列的数据类型，转换成Java类型
             String attrType = config.getString(columnEntity.getDataType(), "unknowType" );
@@ -179,23 +181,23 @@ public class GenUtils {
         }
 
         if (template.contains("Entity.java.vm" )) {
-            return packagePath + "entity" + File.separator  + "Entity.java";
+            return   "entity" + File.separator  + "Entity.java";
         }
 
         if (template.contains("Dao.java.vm" )) {
-            return packagePath + "dao" + File.separator  + "Dao.java";
+            return   "dao" + File.separator  + "Dao.java";
         }
 
         if (template.contains("Service.java.vm" )) {
-            return packagePath + "service" + File.separator  + "Service.java";
+            return   "service" + File.separator  + "Service.java";
         }
 
         if (template.contains("ServiceImpl.java.vm" )) {
-            return packagePath + "service" + File.separator + "impl" + File.separator  + "ServiceImpl.java";
+            return   "service" + File.separator + "impl" + File.separator  + "ServiceImpl.java";
         }
 
         if (template.contains("Controller.java.vm" )) {
-            return packagePath + "controller" + File.separator  + "Controller.java";
+            return   "controller" + File.separator  + "Controller.java";
         }
 
         if (template.contains("Dao.xml.vm" )) {

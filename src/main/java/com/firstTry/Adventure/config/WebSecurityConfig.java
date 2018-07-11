@@ -38,7 +38,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		"/js/**",
 		"/css/**",
 		"/img/**",
-		"/img/**",
 		"/fonts/**",
 		"/favicon.ico",
 		"/libs/**",
@@ -46,6 +45,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		"*/swagger-ui.html",
 		"/views/**",
 		"/**/**.html",
+		"/xinxinniannian",
+		"/narcotics",
 		"/**.png",
 		"/webjars/**",
 		"/swagger-resources/**",
@@ -73,7 +74,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .addFilter(new JWTAuthenticationFilter(authenticationManager()))
                 .formLogin()
                 .loginPage("/login")
-                .defaultSuccessUrl("/index.html")
                 .permitAll()
                 .and()
 	            .logout()

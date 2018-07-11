@@ -40,7 +40,7 @@ var vm = new Vue({
                 area: ['806px', '467px'],
                 closeBtn: 1,
                 shadeClose: false,
-                content: ['http://cdn.renren.io/donate.jpg', 'no']
+                content: ['img/login/demo-1-bg.jpg', 'no']
             });
         }
     }

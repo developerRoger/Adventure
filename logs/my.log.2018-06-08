@@ -1,0 +1,80 @@
+2018-06-08 18:14:44,090  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 6248 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-06-08 18:14:44,124 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-06-08 18:14:44,125  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-06-08 18:15:00,102  INFO AdventureApplication:57 ---- Started AdventureApplication in 16.709 seconds (JVM running for 17.913)
+2018-06-08 18:16:28,305 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-06-08 18:16:28,332 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-06-08 18:16:28,390 DEBUG queryList:145 ---- <==      Total: 10
+2018-06-08 18:16:28,393 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-06-08 18:16:28,394 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-06-08 18:16:28,405 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-06-08 18:16:34,981 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) and table_name like concat('%', ?, '%') order by create_time desc limit ?, ? 
+2018-06-08 18:16:34,982 DEBUG queryList:145 ---- ==> Parameters: t_order(String), 0(Integer), 10(Integer)
+2018-06-08 18:16:34,993 DEBUG queryList:145 ---- <==      Total: 10
+2018-06-08 18:16:34,995 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) and table_name like concat('%', ?, '%') 
+2018-06-08 18:16:34,996 DEBUG queryTotal:145 ---- ==> Parameters: t_order(String)
+2018-06-08 18:16:35,006 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-06-08 18:16:37,058 DEBUG queryTable:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) and table_name = ? 
+2018-06-08 18:16:37,059 DEBUG queryTable:145 ---- ==> Parameters: t_order(String)
+2018-06-08 18:16:37,069 DEBUG queryTable:145 ---- <==      Total: 1
+2018-06-08 18:16:37,070 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-06-08 18:16:37,071 DEBUG queryColumns:145 ---- ==> Parameters: t_order(String)
+2018-06-08 18:16:37,083 DEBUG queryColumns:145 ---- <==      Total: 39
+2018-06-08 18:17:48,320  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 6248 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-06-08 18:17:48,320 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-06-08 18:17:48,321  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-06-08 18:17:51,964  INFO AdventureApplication:57 ---- Started AdventureApplication in 3.701 seconds (JVM running for 189.772)
+2018-06-08 18:19:52,647 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-06-08 18:19:52,648 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-06-08 18:19:52,688 DEBUG queryList:145 ---- <==      Total: 10
+2018-06-08 18:19:52,689 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-06-08 18:19:52,690 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-06-08 18:19:52,702 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-06-08 18:19:55,637 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) and table_name like concat('%', ?, '%') order by create_time desc limit ?, ? 
+2018-06-08 18:19:55,638 DEBUG queryList:145 ---- ==> Parameters: t_order(String), 0(Integer), 10(Integer)
+2018-06-08 18:19:55,650 DEBUG queryList:145 ---- <==      Total: 10
+2018-06-08 18:19:55,651 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) and table_name like concat('%', ?, '%') 
+2018-06-08 18:19:55,652 DEBUG queryTotal:145 ---- ==> Parameters: t_order(String)
+2018-06-08 18:19:55,662 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-06-08 18:19:57,856 DEBUG queryTable:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) and table_name = ? 
+2018-06-08 18:19:57,857 DEBUG queryTable:145 ---- ==> Parameters: t_order(String)
+2018-06-08 18:19:57,867 DEBUG queryTable:145 ---- <==      Total: 1
+2018-06-08 18:19:57,869 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-06-08 18:19:57,870 DEBUG queryColumns:145 ---- ==> Parameters: t_order(String)
+2018-06-08 18:19:57,882 DEBUG queryColumns:145 ---- <==      Total: 39
+2018-06-08 18:20:59,019  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 6248 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-06-08 18:20:59,020 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-06-08 18:20:59,020  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-06-08 18:21:02,213  INFO AdventureApplication:57 ---- Started AdventureApplication in 3.25 seconds (JVM running for 380.016)
+2018-06-08 18:21:11,653 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-06-08 18:21:11,654 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-06-08 18:21:11,681 DEBUG queryList:145 ---- <==      Total: 10
+2018-06-08 18:21:11,683 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-06-08 18:21:11,684 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-06-08 18:21:11,693 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-06-08 18:21:17,719 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) and table_name like concat('%', ?, '%') order by create_time desc limit ?, ? 
+2018-06-08 18:21:17,720 DEBUG queryList:145 ---- ==> Parameters: order(String), 0(Integer), 10(Integer)
+2018-06-08 18:21:17,730 DEBUG queryList:145 ---- <==      Total: 10
+2018-06-08 18:21:17,732 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) and table_name like concat('%', ?, '%') 
+2018-06-08 18:21:17,733 DEBUG queryTotal:145 ---- ==> Parameters: order(String)
+2018-06-08 18:21:17,743 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-06-08 18:21:20,072 DEBUG queryTable:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) and table_name = ? 
+2018-06-08 18:21:20,073 DEBUG queryTable:145 ---- ==> Parameters: t_order(String)
+2018-06-08 18:21:20,088 DEBUG queryTable:145 ---- <==      Total: 1
+2018-06-08 18:21:20,089 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-06-08 18:21:20,089 DEBUG queryColumns:145 ---- ==> Parameters: t_order(String)
+2018-06-08 18:21:20,103 DEBUG queryColumns:145 ---- <==      Total: 39
+2018-06-08 18:23:37,838  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 6248 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-06-08 18:23:37,839 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-06-08 18:23:37,839  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-06-08 18:23:40,518  INFO AdventureApplication:57 ---- Started AdventureApplication in 2.723 seconds (JVM running for 538.317)
+2018-06-08 18:24:49,724 DEBUG queryTable:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) and table_name = ? 
+2018-06-08 18:24:49,724 DEBUG queryTable:145 ---- ==> Parameters: t_order(String)
+2018-06-08 18:24:49,734 DEBUG queryTable:145 ---- <==      Total: 1
+2018-06-08 18:24:49,735 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-06-08 18:24:49,736 DEBUG queryColumns:145 ---- ==> Parameters: t_order(String)
+2018-06-08 18:24:49,746 DEBUG queryColumns:145 ---- <==      Total: 39
+2018-06-08 18:39:23,258  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 6248 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-06-08 18:39:23,259 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-06-08 18:39:23,259  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-06-08 18:39:26,407  INFO AdventureApplication:57 ---- Started AdventureApplication in 3.209 seconds (JVM running for 1484.181)

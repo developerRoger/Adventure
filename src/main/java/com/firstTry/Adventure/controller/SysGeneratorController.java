@@ -79,4 +79,24 @@ public class SysGeneratorController {
   
         IOUtils.write(data, response.getOutputStream());  
 	}
+	
+	/**
+	 * 获取单个表的字段实列
+	 * @param request
+	 * @return
+	 */
+	@RequestMapping("/queryColumns")
+	@ResponseBody
+	public R queryColumns(HttpServletRequest request){
+		
+		String tableName = request.getParameter("tableName");
+		//查询列信息
+		List<Map<String, String>> columns = sysGeneratorService.queryColumns(tableName);
+		
+		if(columns.size()>0)
+			return R.ok().put("list", columns);
+		else
+			return R.error("无法根据表名获取数据");	
+		
+	}
 }

@@ -24,7 +24,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableAsync//线程异步使用注解
 @EnableTransactionManagement
 @EnableScheduling//定时任务发现注解
-@ComponentScan(value={"com.firstTry.adventure.*"})
+@ComponentScan(value={"com.firstTry.Adventure.*"})
 @MapperScan("com.firstTry.adventure.mapper")
 @EnableSwagger2
 /*//此方法为关闭数据库连接或为禁止数据库链接

@@ -1,0 +1,1036 @@
+2018-07-07 10:53:24,720  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 5924 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-07-07 10:53:24,731 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-07-07 10:53:24,733  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-07-07 10:53:36,077  INFO AdventureApplication:57 ---- Started AdventureApplication in 11.75 seconds (JVM running for 12.331)
+2018-07-07 10:55:55,070  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 5924 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-07-07 10:55:55,070 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-07-07 10:55:55,071  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-07-07 10:55:58,347  INFO AdventureApplication:57 ---- Started AdventureApplication in 3.32 seconds (JVM running for 154.598)
+2018-07-07 10:56:50,593 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-07-07 10:56:50,633 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-07-07 10:56:50,683 DEBUG queryList:145 ---- <==      Total: 10
+2018-07-07 10:56:50,686 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-07-07 10:56:50,687 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-07-07 10:56:50,698 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-07-07 10:56:54,485 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 10:56:54,488 DEBUG queryColumns:145 ---- ==> Parameters: t_app_message(String)
+2018-07-07 10:56:54,500 DEBUG queryColumns:145 ---- <==      Total: 13
+2018-07-07 11:00:50,293 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-07-07 11:00:50,295 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-07-07 11:00:50,317 DEBUG queryList:145 ---- <==      Total: 10
+2018-07-07 11:00:50,319 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-07-07 11:00:50,321 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-07-07 11:00:50,334 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-07-07 11:00:51,091 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 11:00:51,094 DEBUG queryColumns:145 ---- ==> Parameters: t_app_message(String)
+2018-07-07 11:00:51,105 DEBUG queryColumns:145 ---- <==      Total: 13
+2018-07-07 11:00:53,225 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 11:00:53,225 DEBUG queryColumns:145 ---- ==> Parameters: t_app_message(String)
+2018-07-07 11:00:53,236 DEBUG queryColumns:145 ---- <==      Total: 13
+2018-07-07 11:01:07,694 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 11:01:07,695 DEBUG queryColumns:145 ---- ==> Parameters: t_app_message(String)
+2018-07-07 11:01:07,708 DEBUG queryColumns:145 ---- <==      Total: 13
+2018-07-07 11:01:08,961 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 11:01:08,962 DEBUG queryColumns:145 ---- ==> Parameters: t_app_message(String)
+2018-07-07 11:01:08,975 DEBUG queryColumns:145 ---- <==      Total: 13
+2018-07-07 11:01:11,833 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 11:01:11,834 DEBUG queryColumns:145 ---- ==> Parameters: t_app_message(String)
+2018-07-07 11:01:11,859 DEBUG queryColumns:145 ---- <==      Total: 13
+2018-07-07 11:01:29,055 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 11:01:29,055 DEBUG queryColumns:145 ---- ==> Parameters: t_payment(String)
+2018-07-07 11:01:29,069 DEBUG queryColumns:145 ---- <==      Total: 18
+2018-07-07 11:02:00,859 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-07-07 11:02:00,860 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-07-07 11:02:00,881 DEBUG queryList:145 ---- <==      Total: 10
+2018-07-07 11:02:00,883 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-07-07 11:02:00,884 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-07-07 11:02:00,895 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-07-07 11:02:05,035 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 11:02:05,036 DEBUG queryColumns:145 ---- ==> Parameters: t_image_media(String)
+2018-07-07 11:02:05,057 DEBUG queryColumns:145 ---- <==      Total: 17
+2018-07-07 11:04:08,881 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-07-07 11:04:08,885 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-07-07 11:04:08,935 DEBUG queryList:145 ---- <==      Total: 10
+2018-07-07 11:04:08,937 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-07-07 11:04:08,938 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-07-07 11:04:08,961 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-07-07 11:04:09,892 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 11:04:09,895 DEBUG queryColumns:145 ---- ==> Parameters: t_app_message(String)
+2018-07-07 11:04:09,909 DEBUG queryColumns:145 ---- <==      Total: 13
+2018-07-07 11:04:25,139 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-07-07 11:04:25,140 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-07-07 11:04:25,749 DEBUG queryList:145 ---- <==      Total: 10
+2018-07-07 11:04:25,750 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-07-07 11:04:25,750 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-07-07 11:04:26,667 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-07-07 11:05:42,166 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 11:05:42,167 DEBUG queryColumns:145 ---- ==> Parameters: t_merchant_whitelist(String)
+2018-07-07 11:05:42,199 DEBUG queryColumns:145 ---- <==      Total: 7
+2018-07-07 11:05:52,690 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 11:05:52,692 DEBUG queryColumns:145 ---- ==> Parameters: t_app_message(String)
+2018-07-07 11:05:52,704 DEBUG queryColumns:145 ---- <==      Total: 13
+2018-07-07 11:06:04,982 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 11:06:04,982 DEBUG queryColumns:145 ---- ==> Parameters: t_app_message(String)
+2018-07-07 11:06:04,993 DEBUG queryColumns:145 ---- <==      Total: 13
+2018-07-07 11:07:53,580 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-07-07 11:07:53,581 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-07-07 11:07:53,603 DEBUG queryList:145 ---- <==      Total: 10
+2018-07-07 11:07:53,604 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-07-07 11:07:53,605 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-07-07 11:07:53,616 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-07-07 11:07:57,622 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 11:07:57,627 DEBUG queryColumns:145 ---- ==> Parameters: t_app_message(String)
+2018-07-07 11:07:57,640 DEBUG queryColumns:145 ---- <==      Total: 13
+2018-07-07 11:08:31,834 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-07-07 11:08:31,835 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-07-07 11:08:31,880 DEBUG queryList:145 ---- <==      Total: 10
+2018-07-07 11:08:31,881 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-07-07 11:08:31,882 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-07-07 11:08:31,918 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-07-07 11:08:32,851 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 11:08:32,852 DEBUG queryColumns:145 ---- ==> Parameters: t_app_message(String)
+2018-07-07 11:08:32,862 DEBUG queryColumns:145 ---- <==      Total: 13
+2018-07-07 11:10:06,505 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-07-07 11:10:06,506 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-07-07 11:10:06,538 DEBUG queryList:145 ---- <==      Total: 10
+2018-07-07 11:10:06,539 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-07-07 11:10:06,540 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-07-07 11:10:06,550 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-07-07 11:10:07,219 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 11:10:07,219 DEBUG queryColumns:145 ---- ==> Parameters: t_merchant_whitelist(String)
+2018-07-07 11:10:07,521 DEBUG queryColumns:145 ---- <==      Total: 7
+2018-07-07 11:12:11,606 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 11:12:11,607 DEBUG queryColumns:145 ---- ==> Parameters: t_payment(String)
+2018-07-07 11:12:11,619 DEBUG queryColumns:145 ---- <==      Total: 18
+2018-07-07 11:12:20,854 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 11:12:20,855 DEBUG queryColumns:145 ---- ==> Parameters: t_payment(String)
+2018-07-07 11:12:20,865 DEBUG queryColumns:145 ---- <==      Total: 18
+2018-07-07 11:12:48,456 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-07-07 11:12:48,457 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-07-07 11:12:48,478 DEBUG queryList:145 ---- <==      Total: 10
+2018-07-07 11:12:48,480 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-07-07 11:12:48,480 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-07-07 11:12:48,493 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-07-07 11:12:49,905 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 11:12:49,906 DEBUG queryColumns:145 ---- ==> Parameters: t_payment(String)
+2018-07-07 11:12:49,918 DEBUG queryColumns:145 ---- <==      Total: 18
+2018-07-07 11:43:19,486  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 5924 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-07-07 11:43:19,486 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-07-07 11:43:19,486  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-07-07 11:43:22,660  INFO AdventureApplication:57 ---- Started AdventureApplication in 3.224 seconds (JVM running for 2998.876)
+2018-07-07 11:43:28,884 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 11:43:28,885 DEBUG queryColumns:145 ---- ==> Parameters: t_payment(String)
+2018-07-07 11:43:28,896 DEBUG queryColumns:145 ---- <==      Total: 18
+2018-07-07 11:43:40,074 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-07-07 11:43:40,075 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-07-07 11:43:40,096 DEBUG queryList:145 ---- <==      Total: 10
+2018-07-07 11:43:40,097 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-07-07 11:43:40,098 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-07-07 11:43:40,108 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-07-07 11:43:41,063 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 11:43:41,064 DEBUG queryColumns:145 ---- ==> Parameters: t_join_pay_record(String)
+2018-07-07 11:43:41,073 DEBUG queryColumns:145 ---- <==      Total: 9
+2018-07-07 11:43:57,688 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 11:43:57,689 DEBUG queryColumns:145 ---- ==> Parameters: t_payment(String)
+2018-07-07 11:43:57,700 DEBUG queryColumns:145 ---- <==      Total: 18
+2018-07-07 11:44:47,010  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 5924 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-07-07 11:44:47,010 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-07-07 11:44:47,010  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-07-07 11:44:49,814  INFO AdventureApplication:57 ---- Started AdventureApplication in 2.843 seconds (JVM running for 3086.029)
+2018-07-07 11:44:53,408 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-07-07 11:44:53,409 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-07-07 11:44:53,718 DEBUG queryList:145 ---- <==      Total: 10
+2018-07-07 11:44:53,719 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-07-07 11:44:53,719 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-07-07 11:44:53,729 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-07-07 11:44:54,720 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 11:44:54,721 DEBUG queryColumns:145 ---- ==> Parameters: t_app_message(String)
+2018-07-07 11:44:54,730 DEBUG queryColumns:145 ---- <==      Total: 13
+2018-07-07 11:45:06,516 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 11:45:06,517 DEBUG queryColumns:145 ---- ==> Parameters: t_join_pay_record(String)
+2018-07-07 11:45:06,528 DEBUG queryColumns:145 ---- <==      Total: 9
+2018-07-07 11:54:17,287  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 5924 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-07-07 11:54:17,287 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-07-07 11:54:17,287  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-07-07 11:54:19,960  INFO AdventureApplication:57 ---- Started AdventureApplication in 2.717 seconds (JVM running for 3656.164)
+2018-07-07 11:55:40,657 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-07-07 11:55:40,658 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-07-07 11:55:40,676 DEBUG queryList:145 ---- <==      Total: 10
+2018-07-07 11:55:40,677 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-07-07 11:55:40,678 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-07-07 11:55:40,694 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-07-07 11:55:41,679 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 11:55:41,680 DEBUG queryColumns:145 ---- ==> Parameters: t_image_media(String)
+2018-07-07 11:55:41,689 DEBUG queryColumns:145 ---- <==      Total: 17
+2018-07-07 11:56:28,466  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 5924 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-07-07 11:56:28,466 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-07-07 11:56:28,466  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-07-07 11:56:30,963  INFO AdventureApplication:57 ---- Started AdventureApplication in 2.54 seconds (JVM running for 3787.165)
+2018-07-07 11:57:34,688 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-07-07 11:57:34,689 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-07-07 11:57:34,710 DEBUG queryList:145 ---- <==      Total: 10
+2018-07-07 11:57:34,711 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-07-07 11:57:34,711 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-07-07 11:57:34,722 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-07-07 11:57:36,655 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 11:57:36,656 DEBUG queryColumns:145 ---- ==> Parameters: t_payment(String)
+2018-07-07 11:57:36,666 DEBUG queryColumns:145 ---- <==      Total: 18
+2018-07-07 11:58:01,397 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-07-07 11:58:01,398 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-07-07 11:58:01,421 DEBUG queryList:145 ---- <==      Total: 10
+2018-07-07 11:58:01,422 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-07-07 11:58:01,423 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-07-07 11:58:01,440 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-07-07 11:58:02,350 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 11:58:02,351 DEBUG queryColumns:145 ---- ==> Parameters: t_payment(String)
+2018-07-07 11:58:02,366 DEBUG queryColumns:145 ---- <==      Total: 18
+2018-07-07 11:58:19,415  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 5924 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-07-07 11:58:19,415 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-07-07 11:58:19,416  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-07-07 11:58:22,224  INFO AdventureApplication:57 ---- Started AdventureApplication in 2.842 seconds (JVM running for 3898.423)
+2018-07-07 11:58:26,604 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-07-07 11:58:26,605 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-07-07 11:58:26,627 DEBUG queryList:145 ---- <==      Total: 10
+2018-07-07 11:58:26,628 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-07-07 11:58:26,628 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-07-07 11:58:26,640 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-07-07 11:58:27,809 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 11:58:27,810 DEBUG queryColumns:145 ---- ==> Parameters: t_image_media_type(String)
+2018-07-07 11:58:27,822 DEBUG queryColumns:145 ---- <==      Total: 6
+2018-07-07 11:59:06,983  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 5924 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-07-07 11:59:06,983 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-07-07 11:59:06,983  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-07-07 11:59:09,714  INFO AdventureApplication:57 ---- Started AdventureApplication in 2.772 seconds (JVM running for 3945.913)
+2018-07-07 11:59:13,322 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-07-07 11:59:13,322 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-07-07 11:59:13,342 DEBUG queryList:145 ---- <==      Total: 10
+2018-07-07 11:59:13,343 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-07-07 11:59:13,344 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-07-07 11:59:13,354 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-07-07 11:59:14,319 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 11:59:14,320 DEBUG queryColumns:145 ---- ==> Parameters: t_image_media_type(String)
+2018-07-07 11:59:14,331 DEBUG queryColumns:145 ---- <==      Total: 6
+2018-07-07 12:00:40,317 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-07-07 12:00:40,318 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-07-07 12:00:40,347 DEBUG queryList:145 ---- <==      Total: 10
+2018-07-07 12:00:40,348 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-07-07 12:00:40,349 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-07-07 12:00:40,361 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-07-07 12:00:41,222 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 12:00:41,223 DEBUG queryColumns:145 ---- ==> Parameters: t_payment(String)
+2018-07-07 12:00:41,233 DEBUG queryColumns:145 ---- <==      Total: 18
+2018-07-07 12:02:17,255  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 5924 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-07-07 12:02:17,255 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-07-07 12:02:17,255  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-07-07 12:02:19,891  INFO AdventureApplication:57 ---- Started AdventureApplication in 2.666 seconds (JVM running for 4136.086)
+2018-07-07 12:02:21,866 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-07-07 12:02:21,866 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-07-07 12:02:21,889 DEBUG queryList:145 ---- <==      Total: 10
+2018-07-07 12:02:21,890 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-07-07 12:02:21,890 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-07-07 12:02:21,900 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-07-07 12:02:22,671 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 12:02:22,672 DEBUG queryColumns:145 ---- ==> Parameters: t_payment(String)
+2018-07-07 12:02:22,692 DEBUG queryColumns:145 ---- <==      Total: 18
+2018-07-07 12:03:19,306  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 5924 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-07-07 12:03:19,306 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-07-07 12:03:19,307  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-07-07 12:03:21,451  INFO AdventureApplication:57 ---- Started AdventureApplication in 2.195 seconds (JVM running for 4197.644)
+2018-07-07 12:03:27,349 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-07-07 12:03:27,350 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-07-07 12:03:27,370 DEBUG queryList:145 ---- <==      Total: 10
+2018-07-07 12:03:27,371 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-07-07 12:03:27,372 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-07-07 12:03:27,382 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-07-07 12:03:28,510 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 12:03:28,512 DEBUG queryColumns:145 ---- ==> Parameters: t_merchant_whitelist(String)
+2018-07-07 12:03:28,526 DEBUG queryColumns:145 ---- <==      Total: 7
+2018-07-07 12:03:49,265  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 5924 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-07-07 12:03:49,265 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-07-07 12:03:49,265  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-07-07 12:03:51,464  INFO AdventureApplication:57 ---- Started AdventureApplication in 2.227 seconds (JVM running for 4227.657)
+2018-07-07 12:03:54,593 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-07-07 12:03:54,593 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-07-07 12:03:54,614 DEBUG queryList:145 ---- <==      Total: 10
+2018-07-07 12:03:54,615 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-07-07 12:03:54,616 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-07-07 12:03:54,629 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-07-07 12:03:55,502 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 12:03:55,503 DEBUG queryColumns:145 ---- ==> Parameters: t_payment(String)
+2018-07-07 12:03:55,517 DEBUG queryColumns:145 ---- <==      Total: 18
+2018-07-07 12:04:44,382  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 5924 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-07-07 12:04:44,382 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-07-07 12:04:44,382  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-07-07 12:04:46,384  INFO AdventureApplication:57 ---- Started AdventureApplication in 2.024 seconds (JVM running for 4282.575)
+2018-07-07 12:04:48,170 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 12:04:48,171 DEBUG queryColumns:145 ---- ==> Parameters: t_join_pay_record(String)
+2018-07-07 12:04:48,182 DEBUG queryColumns:145 ---- <==      Total: 9
+2018-07-07 12:04:49,259 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-07-07 12:04:49,261 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-07-07 12:04:49,280 DEBUG queryList:145 ---- <==      Total: 10
+2018-07-07 12:04:49,282 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-07-07 12:04:49,283 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-07-07 12:04:49,293 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-07-07 12:04:58,469 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 12:04:58,470 DEBUG queryColumns:145 ---- ==> Parameters: t_join_pay_record(String)
+2018-07-07 12:04:58,480 DEBUG queryColumns:145 ---- <==      Total: 9
+2018-07-07 12:05:17,233  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 5924 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-07-07 12:05:17,234 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-07-07 12:05:17,234  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-07-07 12:05:19,114  INFO AdventureApplication:57 ---- Started AdventureApplication in 1.905 seconds (JVM running for 4315.304)
+2018-07-07 12:05:20,692  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 5924 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-07-07 12:05:20,692 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-07-07 12:05:20,692  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-07-07 12:05:22,702  INFO AdventureApplication:57 ---- Started AdventureApplication in 2.034 seconds (JVM running for 4318.893)
+2018-07-07 12:05:36,821 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-07-07 12:05:36,821 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-07-07 12:05:36,840 DEBUG queryList:145 ---- <==      Total: 10
+2018-07-07 12:05:36,841 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-07-07 12:05:36,842 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-07-07 12:05:36,851 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-07-07 12:05:38,143 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 12:05:38,144 DEBUG queryColumns:145 ---- ==> Parameters: t_payment(String)
+2018-07-07 12:05:38,155 DEBUG queryColumns:145 ---- <==      Total: 18
+2018-07-07 12:05:55,071 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 12:05:55,072 DEBUG queryColumns:145 ---- ==> Parameters: t_image_media_type(String)
+2018-07-07 12:05:55,082 DEBUG queryColumns:145 ---- <==      Total: 6
+2018-07-07 12:05:59,344 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 12:05:59,345 DEBUG queryColumns:145 ---- ==> Parameters: t_merchant_whitelist(String)
+2018-07-07 12:05:59,358 DEBUG queryColumns:145 ---- <==      Total: 7
+2018-07-07 12:06:42,888  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 5924 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-07-07 12:06:42,889 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-07-07 12:06:42,889  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-07-07 12:06:45,002  INFO AdventureApplication:57 ---- Started AdventureApplication in 2.14 seconds (JVM running for 4401.192)
+2018-07-07 12:06:58,674  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 5924 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-07-07 12:06:58,674 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-07-07 12:06:58,674  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-07-07 12:07:00,900  INFO AdventureApplication:57 ---- Started AdventureApplication in 2.263 seconds (JVM running for 4417.089)
+2018-07-07 12:07:06,067 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-07-07 12:07:06,068 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-07-07 12:07:06,088 DEBUG queryList:145 ---- <==      Total: 10
+2018-07-07 12:07:06,089 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-07-07 12:07:06,090 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-07-07 12:07:06,099 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-07-07 12:07:07,207 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 12:07:07,208 DEBUG queryColumns:145 ---- ==> Parameters: t_join_pay_record(String)
+2018-07-07 12:07:07,218 DEBUG queryColumns:145 ---- <==      Total: 9
+2018-07-07 12:07:09,847 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 12:07:09,848 DEBUG queryColumns:145 ---- ==> Parameters: t_app_message(String)
+2018-07-07 12:07:09,886 DEBUG queryColumns:145 ---- <==      Total: 13
+2018-07-07 12:08:11,348 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-07-07 12:08:11,349 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-07-07 12:08:11,368 DEBUG queryList:145 ---- <==      Total: 10
+2018-07-07 12:08:11,369 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-07-07 12:08:11,370 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-07-07 12:08:11,381 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-07-07 12:08:12,673 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 12:08:12,674 DEBUG queryColumns:145 ---- ==> Parameters: t_app_message(String)
+2018-07-07 12:08:12,683 DEBUG queryColumns:145 ---- <==      Total: 13
+2018-07-07 12:08:14,583 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 12:08:14,584 DEBUG queryColumns:145 ---- ==> Parameters: t_join_pay_record(String)
+2018-07-07 12:08:14,593 DEBUG queryColumns:145 ---- <==      Total: 9
+2018-07-07 12:08:39,997 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 12:08:39,998 DEBUG queryColumns:145 ---- ==> Parameters: t_join_pay_record(String)
+2018-07-07 12:08:40,007 DEBUG queryColumns:145 ---- <==      Total: 9
+2018-07-07 12:08:48,523 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-07-07 12:08:48,525 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-07-07 12:08:48,547 DEBUG queryList:145 ---- <==      Total: 10
+2018-07-07 12:08:48,548 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-07-07 12:08:48,549 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-07-07 12:08:48,561 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-07-07 12:10:58,993 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 12:10:58,995 DEBUG queryColumns:145 ---- ==> Parameters: t_payment(String)
+2018-07-07 12:10:59,004 DEBUG queryColumns:145 ---- <==      Total: 18
+2018-07-07 12:11:01,852 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 12:11:01,853 DEBUG queryColumns:145 ---- ==> Parameters: t_payment(String)
+2018-07-07 12:11:01,862 DEBUG queryColumns:145 ---- <==      Total: 18
+2018-07-07 12:11:07,301 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 12:11:07,302 DEBUG queryColumns:145 ---- ==> Parameters: t_join_pay_record(String)
+2018-07-07 12:11:07,310 DEBUG queryColumns:145 ---- <==      Total: 9
+2018-07-07 12:11:12,296 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 12:11:12,297 DEBUG queryColumns:145 ---- ==> Parameters: t_join_pay_record(String)
+2018-07-07 12:11:12,305 DEBUG queryColumns:145 ---- <==      Total: 9
+2018-07-07 12:11:15,525 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 12:11:15,525 DEBUG queryColumns:145 ---- ==> Parameters: t_join_pay_record(String)
+2018-07-07 12:11:15,535 DEBUG queryColumns:145 ---- <==      Total: 9
+2018-07-07 12:11:21,580 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 12:11:21,580 DEBUG queryColumns:145 ---- ==> Parameters: t_join_pay_record(String)
+2018-07-07 12:11:21,589 DEBUG queryColumns:145 ---- <==      Total: 9
+2018-07-07 12:11:25,166 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 12:11:25,167 DEBUG queryColumns:145 ---- ==> Parameters: t_image_media_type(String)
+2018-07-07 12:11:25,175 DEBUG queryColumns:145 ---- <==      Total: 6
+2018-07-07 12:11:29,529 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 12:11:29,530 DEBUG queryColumns:145 ---- ==> Parameters: t_bag_storage(String)
+2018-07-07 12:11:29,540 DEBUG queryColumns:145 ---- <==      Total: 14
+2018-07-07 12:12:38,879 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 12:12:38,880 DEBUG queryColumns:145 ---- ==> Parameters: t_join_pay_record(String)
+2018-07-07 12:12:38,888 DEBUG queryColumns:145 ---- <==      Total: 9
+2018-07-07 12:13:08,998 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 12:13:08,999 DEBUG queryColumns:145 ---- ==> Parameters: t_join_pay_record(String)
+2018-07-07 12:13:09,010 DEBUG queryColumns:145 ---- <==      Total: 9
+2018-07-07 12:13:16,814 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 12:13:16,814 DEBUG queryColumns:145 ---- ==> Parameters: t_app_message(String)
+2018-07-07 12:13:16,824 DEBUG queryColumns:145 ---- <==      Total: 13
+2018-07-07 12:13:21,181 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 12:13:21,182 DEBUG queryColumns:145 ---- ==> Parameters: t_join_pay_record(String)
+2018-07-07 12:13:21,191 DEBUG queryColumns:145 ---- <==      Total: 9
+2018-07-07 12:15:00,599  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 5924 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-07-07 12:15:00,599 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-07-07 12:15:00,599  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-07-07 12:15:02,746  INFO AdventureApplication:57 ---- Started AdventureApplication in 2.177 seconds (JVM running for 4898.926)
+2018-07-07 12:15:18,854 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-07-07 12:15:18,854 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-07-07 12:15:18,875 DEBUG queryList:145 ---- <==      Total: 10
+2018-07-07 12:15:18,876 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-07-07 12:15:18,877 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-07-07 12:15:18,887 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-07-07 12:15:19,806 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 12:15:19,807 DEBUG queryColumns:145 ---- ==> Parameters: t_join_pay_record(String)
+2018-07-07 12:15:19,817 DEBUG queryColumns:145 ---- <==      Total: 9
+2018-07-07 12:15:28,412 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 12:15:28,412 DEBUG queryColumns:145 ---- ==> Parameters: t_join_pay_record(String)
+2018-07-07 12:15:28,422 DEBUG queryColumns:145 ---- <==      Total: 9
+2018-07-07 12:15:35,050 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 12:15:35,050 DEBUG queryColumns:145 ---- ==> Parameters: t_image_media_type(String)
+2018-07-07 12:15:35,060 DEBUG queryColumns:145 ---- <==      Total: 6
+2018-07-07 12:15:37,413 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 12:15:37,413 DEBUG queryColumns:145 ---- ==> Parameters: t_image_media_type(String)
+2018-07-07 12:15:37,427 DEBUG queryColumns:145 ---- <==      Total: 6
+2018-07-07 12:15:39,888 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 12:15:39,888 DEBUG queryColumns:145 ---- ==> Parameters: t_payment(String)
+2018-07-07 12:15:39,898 DEBUG queryColumns:145 ---- <==      Total: 18
+2018-07-07 12:15:41,604 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 12:15:41,605 DEBUG queryColumns:145 ---- ==> Parameters: t_payment(String)
+2018-07-07 12:15:41,618 DEBUG queryColumns:145 ---- <==      Total: 18
+2018-07-07 12:15:59,706 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-07-07 12:15:59,707 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-07-07 12:15:59,727 DEBUG queryList:145 ---- <==      Total: 10
+2018-07-07 12:15:59,728 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-07-07 12:15:59,728 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-07-07 12:15:59,741 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-07-07 12:16:01,598 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 12:16:01,598 DEBUG queryColumns:145 ---- ==> Parameters: t_join_pay_record(String)
+2018-07-07 12:16:01,608 DEBUG queryColumns:145 ---- <==      Total: 9
+2018-07-07 12:16:05,856 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 12:16:05,856 DEBUG queryColumns:145 ---- ==> Parameters: t_join_pay_record(String)
+2018-07-07 12:16:05,865 DEBUG queryColumns:145 ---- <==      Total: 9
+2018-07-07 12:16:27,208 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-07-07 12:16:27,209 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-07-07 12:16:27,228 DEBUG queryList:145 ---- <==      Total: 10
+2018-07-07 12:16:27,229 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-07-07 12:16:27,230 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-07-07 12:16:27,239 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-07-07 12:16:28,662 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 12:16:28,662 DEBUG queryColumns:145 ---- ==> Parameters: t_image_media(String)
+2018-07-07 12:16:28,790 DEBUG queryColumns:145 ---- <==      Total: 17
+2018-07-07 12:16:32,918 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 12:16:32,918 DEBUG queryColumns:145 ---- ==> Parameters: t_bag_storage(String)
+2018-07-07 12:16:32,927 DEBUG queryColumns:145 ---- <==      Total: 14
+2018-07-07 12:17:48,137 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-07-07 12:17:48,137 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-07-07 12:17:48,156 DEBUG queryList:145 ---- <==      Total: 10
+2018-07-07 12:17:48,157 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-07-07 12:17:48,158 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-07-07 12:17:48,168 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-07-07 12:17:49,109 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 12:17:49,110 DEBUG queryColumns:145 ---- ==> Parameters: t_join_pay_record(String)
+2018-07-07 12:17:49,120 DEBUG queryColumns:145 ---- <==      Total: 9
+2018-07-07 12:18:15,894 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 12:18:15,895 DEBUG queryColumns:145 ---- ==> Parameters: t_join_pay_record(String)
+2018-07-07 12:18:15,905 DEBUG queryColumns:145 ---- <==      Total: 9
+2018-07-07 12:19:27,208  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 5924 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-07-07 12:19:27,209 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-07-07 12:19:27,209  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-07-07 12:19:29,346  INFO AdventureApplication:57 ---- Started AdventureApplication in 2.168 seconds (JVM running for 5165.52)
+2018-07-07 12:19:33,995 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-07-07 12:19:33,996 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-07-07 12:19:34,016 DEBUG queryList:145 ---- <==      Total: 10
+2018-07-07 12:19:34,016 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-07-07 12:19:34,017 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-07-07 12:19:34,027 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-07-07 12:19:35,303 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 12:19:35,304 DEBUG queryColumns:145 ---- ==> Parameters: t_join_pay_record(String)
+2018-07-07 12:19:35,315 DEBUG queryColumns:145 ---- <==      Total: 9
+2018-07-07 14:16:07,089 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-07-07 14:16:07,091 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-07-07 14:16:07,545 DEBUG queryList:145 ---- <==      Total: 10
+2018-07-07 14:16:07,548 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-07-07 14:16:07,549 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-07-07 14:16:07,563 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-07-07 14:16:23,225  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 6212 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-07-07 14:16:23,228 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-07-07 14:16:23,229  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-07-07 14:16:34,268  INFO AdventureApplication:57 ---- Started AdventureApplication in 11.378 seconds (JVM running for 11.955)
+2018-07-07 14:16:42,716 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-07-07 14:16:42,782 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-07-07 14:16:42,874 DEBUG queryList:145 ---- <==      Total: 10
+2018-07-07 14:16:42,876 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-07-07 14:16:42,877 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-07-07 14:16:42,887 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-07-07 14:16:44,087 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 14:16:44,088 DEBUG queryColumns:145 ---- ==> Parameters: t_payment(String)
+2018-07-07 14:16:44,103 DEBUG queryColumns:145 ---- <==      Total: 18
+2018-07-07 14:16:48,574 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 14:16:48,576 DEBUG queryColumns:145 ---- ==> Parameters: t_join_pay_record(String)
+2018-07-07 14:16:48,586 DEBUG queryColumns:145 ---- <==      Total: 9
+2018-07-07 14:16:57,715 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-07-07 14:16:57,716 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-07-07 14:16:57,736 DEBUG queryList:145 ---- <==      Total: 10
+2018-07-07 14:16:57,737 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-07-07 14:16:57,738 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-07-07 14:16:57,749 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-07-07 14:16:59,105 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 14:16:59,106 DEBUG queryColumns:145 ---- ==> Parameters: t_bag_storage(String)
+2018-07-07 14:16:59,133 DEBUG queryColumns:145 ---- <==      Total: 14
+2018-07-07 14:17:02,736 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 14:17:02,737 DEBUG queryColumns:145 ---- ==> Parameters: t_bag_storage(String)
+2018-07-07 14:17:02,747 DEBUG queryColumns:145 ---- <==      Total: 14
+2018-07-07 14:17:23,399  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 6212 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-07-07 14:17:23,399 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-07-07 14:17:23,400  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-07-07 14:17:26,604  INFO AdventureApplication:57 ---- Started AdventureApplication in 3.254 seconds (JVM running for 64.291)
+2018-07-07 14:18:25,551 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-07-07 14:18:25,552 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-07-07 14:18:25,572 DEBUG queryList:145 ---- <==      Total: 10
+2018-07-07 14:18:25,573 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-07-07 14:18:25,574 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-07-07 14:18:25,585 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-07-07 14:18:27,567 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-07-07 14:18:27,569 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-07-07 14:18:27,589 DEBUG queryList:145 ---- <==      Total: 10
+2018-07-07 14:18:27,590 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-07-07 14:18:27,592 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-07-07 14:18:27,601 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-07-07 14:18:31,697 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 14:18:31,697 DEBUG queryColumns:145 ---- ==> Parameters: t_image_media(String)
+2018-07-07 14:18:31,708 DEBUG queryColumns:145 ---- <==      Total: 17
+2018-07-07 14:18:34,039 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 14:18:34,040 DEBUG queryColumns:145 ---- ==> Parameters: t_merchant_whitelist(String)
+2018-07-07 14:18:34,052 DEBUG queryColumns:145 ---- <==      Total: 7
+2018-07-07 14:18:36,921 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 14:18:36,921 DEBUG queryColumns:145 ---- ==> Parameters: t_join_pay_record(String)
+2018-07-07 14:18:36,939 DEBUG queryColumns:145 ---- <==      Total: 9
+2018-07-07 14:18:55,299 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-07-07 14:18:55,301 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-07-07 14:18:55,321 DEBUG queryList:145 ---- <==      Total: 10
+2018-07-07 14:18:55,322 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-07-07 14:18:55,323 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-07-07 14:18:55,333 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-07-07 14:18:58,502 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 14:18:58,503 DEBUG queryColumns:145 ---- ==> Parameters: t_join_pay_record(String)
+2018-07-07 14:18:58,513 DEBUG queryColumns:145 ---- <==      Total: 9
+2018-07-07 14:19:00,704 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 14:19:00,704 DEBUG queryColumns:145 ---- ==> Parameters: t_image_media(String)
+2018-07-07 14:19:00,724 DEBUG queryColumns:145 ---- <==      Total: 17
+2018-07-07 14:19:52,943 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-07-07 14:19:52,944 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-07-07 14:19:52,969 DEBUG queryList:145 ---- <==      Total: 10
+2018-07-07 14:19:52,971 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-07-07 14:19:52,972 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-07-07 14:19:52,981 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-07-07 14:19:54,240 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 14:19:54,241 DEBUG queryColumns:145 ---- ==> Parameters: t_join_pay_record(String)
+2018-07-07 14:19:54,252 DEBUG queryColumns:145 ---- <==      Total: 9
+2018-07-07 14:19:59,622 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 14:19:59,623 DEBUG queryColumns:145 ---- ==> Parameters: t_payment(String)
+2018-07-07 14:19:59,640 DEBUG queryColumns:145 ---- <==      Total: 18
+2018-07-07 14:20:09,568 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-07-07 14:20:09,569 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-07-07 14:20:09,589 DEBUG queryList:145 ---- <==      Total: 10
+2018-07-07 14:20:09,590 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-07-07 14:20:09,591 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-07-07 14:20:09,601 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-07-07 14:20:10,464 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 14:20:10,465 DEBUG queryColumns:145 ---- ==> Parameters: t_app_message(String)
+2018-07-07 14:20:11,099 DEBUG queryColumns:145 ---- <==      Total: 13
+2018-07-07 14:20:20,750 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 14:20:20,751 DEBUG queryColumns:145 ---- ==> Parameters: t_bag_storage(String)
+2018-07-07 14:20:20,761 DEBUG queryColumns:145 ---- <==      Total: 14
+2018-07-07 14:26:30,497 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 14:26:30,498 DEBUG queryColumns:145 ---- ==> Parameters: t_join_pay_record(String)
+2018-07-07 14:26:30,508 DEBUG queryColumns:145 ---- <==      Total: 9
+2018-07-07 14:27:15,079  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 6212 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-07-07 14:27:15,080 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-07-07 14:27:15,080  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-07-07 14:27:18,064  INFO AdventureApplication:57 ---- Started AdventureApplication in 3.028 seconds (JVM running for 655.743)
+2018-07-07 14:30:23,652 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-07-07 14:30:23,653 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-07-07 14:30:23,672 DEBUG queryList:145 ---- <==      Total: 10
+2018-07-07 14:30:23,673 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-07-07 14:30:23,674 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-07-07 14:30:23,683 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-07-07 14:35:12,910 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-07-07 14:35:12,913 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-07-07 14:35:12,935 DEBUG queryList:145 ---- <==      Total: 10
+2018-07-07 14:35:12,938 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-07-07 14:35:12,940 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-07-07 14:35:12,951 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-07-07 14:35:14,151 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 14:35:14,163 DEBUG queryColumns:145 ---- ==> Parameters: t_join_pay_record(String)
+2018-07-07 14:35:14,198 DEBUG queryColumns:145 ---- <==      Total: 9
+2018-07-07 14:35:43,364  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 6212 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-07-07 14:35:43,365 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-07-07 14:35:43,365  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-07-07 14:35:45,983  INFO AdventureApplication:57 ---- Started AdventureApplication in 2.664 seconds (JVM running for 1163.656)
+2018-07-07 14:51:19,431 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-07-07 14:51:19,432 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-07-07 14:51:19,453 DEBUG queryList:145 ---- <==      Total: 10
+2018-07-07 14:51:19,454 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-07-07 14:51:19,454 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-07-07 14:51:19,465 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-07-07 14:51:20,360 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 14:51:20,361 DEBUG queryColumns:145 ---- ==> Parameters: t_app_message(String)
+2018-07-07 14:51:20,377 DEBUG queryColumns:145 ---- <==      Total: 13
+2018-07-07 14:53:37,236 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-07-07 14:53:37,237 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-07-07 14:53:37,259 DEBUG queryList:145 ---- <==      Total: 10
+2018-07-07 14:53:37,261 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-07-07 14:53:37,262 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-07-07 14:53:37,273 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-07-07 14:53:38,215 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 14:53:38,216 DEBUG queryColumns:145 ---- ==> Parameters: t_join_pay_record(String)
+2018-07-07 14:53:38,227 DEBUG queryColumns:145 ---- <==      Total: 9
+2018-07-07 14:54:00,943 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-07-07 14:54:00,944 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-07-07 14:54:00,966 DEBUG queryList:145 ---- <==      Total: 10
+2018-07-07 14:54:00,967 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-07-07 14:54:00,968 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-07-07 14:54:00,980 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-07-07 14:54:02,359 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 14:54:02,360 DEBUG queryColumns:145 ---- ==> Parameters: t_app_message(String)
+2018-07-07 14:54:02,371 DEBUG queryColumns:145 ---- <==      Total: 13
+2018-07-07 15:21:07,352 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 15:21:07,353 DEBUG queryColumns:145 ---- ==> Parameters: t_image_media(String)
+2018-07-07 15:21:07,368 DEBUG queryColumns:145 ---- <==      Total: 17
+2018-07-07 15:21:08,408 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-07-07 15:21:08,409 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-07-07 15:21:08,433 DEBUG queryList:145 ---- <==      Total: 10
+2018-07-07 15:21:08,434 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-07-07 15:21:08,434 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-07-07 15:21:08,445 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-07-07 16:06:04,600  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 6212 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-07-07 16:06:04,601 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-07-07 16:06:04,601  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-07-07 16:06:07,930  INFO AdventureApplication:57 ---- Started AdventureApplication in 3.373 seconds (JVM running for 6585.128)
+2018-07-07 16:07:00,812 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time FROM_UNIXTIME(createTime,'%Y-%m-%d %H:%i:%S') from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-07-07 16:07:00,813 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-07-07 16:09:12,780  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 6212 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-07-07 16:09:12,780 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-07-07 16:09:12,781  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-07-07 16:09:15,710  INFO AdventureApplication:57 ---- Started AdventureApplication in 2.974 seconds (JVM running for 6772.904)
+2018-07-07 16:09:46,536 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-07-07 16:09:46,537 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-07-07 16:09:46,569 DEBUG queryList:145 ---- <==      Total: 10
+2018-07-07 16:09:46,570 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-07-07 16:09:46,570 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-07-07 16:09:46,581 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-07-07 16:11:22,381 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-07-07 16:11:22,381 DEBUG queryList:145 ---- ==> Parameters: 10(Integer), 10(Integer)
+2018-07-07 16:11:22,403 DEBUG queryList:145 ---- <==      Total: 10
+2018-07-07 16:11:22,404 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-07-07 16:11:22,405 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-07-07 16:11:22,416 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-07-07 16:11:26,401 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-07-07 16:11:26,402 DEBUG queryList:145 ---- ==> Parameters: 20(Integer), 10(Integer)
+2018-07-07 16:11:26,422 DEBUG queryList:145 ---- <==      Total: 10
+2018-07-07 16:11:26,424 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-07-07 16:11:26,424 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-07-07 16:11:26,435 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-07-07 16:11:27,407 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-07-07 16:11:27,407 DEBUG queryList:145 ---- ==> Parameters: 30(Integer), 10(Integer)
+2018-07-07 16:11:27,428 DEBUG queryList:145 ---- <==      Total: 10
+2018-07-07 16:11:27,429 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-07-07 16:11:27,430 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-07-07 16:11:27,441 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-07-07 16:11:27,974 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-07-07 16:11:27,976 DEBUG queryList:145 ---- ==> Parameters: 40(Integer), 10(Integer)
+2018-07-07 16:11:28,008 DEBUG queryList:145 ---- <==      Total: 10
+2018-07-07 16:11:28,009 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-07-07 16:11:28,011 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-07-07 16:11:28,028 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-07-07 16:11:28,637 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-07-07 16:11:28,638 DEBUG queryList:145 ---- ==> Parameters: 50(Integer), 10(Integer)
+2018-07-07 16:11:28,658 DEBUG queryList:145 ---- <==      Total: 10
+2018-07-07 16:11:28,659 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-07-07 16:11:28,659 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-07-07 16:11:28,678 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-07-07 16:11:29,201 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-07-07 16:11:29,202 DEBUG queryList:145 ---- ==> Parameters: 60(Integer), 10(Integer)
+2018-07-07 16:11:29,222 DEBUG queryList:145 ---- <==      Total: 10
+2018-07-07 16:11:29,223 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-07-07 16:11:29,224 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-07-07 16:11:29,235 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-07-07 16:11:29,639 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-07-07 16:11:29,641 DEBUG queryList:145 ---- ==> Parameters: 70(Integer), 10(Integer)
+2018-07-07 16:11:29,662 DEBUG queryList:145 ---- <==      Total: 10
+2018-07-07 16:11:29,663 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-07-07 16:11:29,664 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-07-07 16:11:29,680 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-07-07 16:11:30,244 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-07-07 16:11:30,245 DEBUG queryList:145 ---- ==> Parameters: 80(Integer), 10(Integer)
+2018-07-07 16:11:30,266 DEBUG queryList:145 ---- <==      Total: 10
+2018-07-07 16:11:30,267 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-07-07 16:11:30,268 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-07-07 16:11:30,278 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-07-07 16:11:31,153 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-07-07 16:11:31,154 DEBUG queryList:145 ---- ==> Parameters: 180(Integer), 10(Integer)
+2018-07-07 16:11:31,175 DEBUG queryList:145 ---- <==      Total: 9
+2018-07-07 16:11:31,175 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-07-07 16:11:31,176 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-07-07 16:11:31,189 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-07-07 16:12:20,999 DEBUG JWTLoginFilter:206 ---- Request is to process authentication
+2018-07-07 16:12:21,239 DEBUG findByName:145 ---- ==>  Preparing: SELECT * FROM user WHERE name = ? 
+2018-07-07 16:12:21,242 DEBUG findByName:145 ---- ==> Parameters: a(String)
+2018-07-07 16:12:21,256 ERROR JWTLoginFilter:221 ---- An internal error occurred while trying to authenticate the user.
+org.springframework.security.authentication.InternalAuthenticationServiceException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'bmp_qa.user' doesn't exist
+### The error may exist in com/firstTry/Adventure/mapper/UserMapper.java (best guess)
+### The error may involve com.firstTry.Adventure.mapper.UserMapper.findByName-Inline
+### The error occurred while setting parameters
+### SQL: SELECT * FROM user WHERE name = ?
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'bmp_qa.user' doesn't exist
+; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'bmp_qa.user' doesn't exist
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:126)
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:144)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:174)
+	at com.firstTry.Adventure.config.JWTLoginFilter.attemptAuthentication(JWTLoginFilter.java:60)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:64)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:214)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:177)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:347)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:263)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:108)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'bmp_qa.user' doesn't exist
+### The error may exist in com/firstTry/Adventure/mapper/UserMapper.java (best guess)
+### The error may involve com.firstTry.Adventure.mapper.UserMapper.findByName-Inline
+### The error occurred while setting parameters
+### SQL: SELECT * FROM user WHERE name = ?
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'bmp_qa.user' doesn't exist
+; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'bmp_qa.user' doesn't exist
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:231)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:75)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:447)
+	at com.sun.proxy.$Proxy80.selectOne(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:167)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:75)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:53)
+	at com.sun.proxy.$Proxy132.findByName(Unknown Source)
+	at com.firstTry.Adventure.service.impl.UserServiceImpl.loadUserByUsername(UserServiceImpl.java:40)
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:114)
+	... 56 more
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'bmp_qa.user' doesn't exist
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.Util.getInstance(Util.java:386)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1053)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4074)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4006)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2468)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2629)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2719)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2155)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1379)
+	at sun.reflect.GeneratedMethodAccessor55.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.tomcat.jdbc.pool.StatementFacade$StatementProxy.invoke(StatementFacade.java:114)
+	at com.sun.proxy.$Proxy112.execute(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor55.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at com.sun.proxy.$Proxy113.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:63)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:83)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:148)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:141)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:77)
+	at sun.reflect.GeneratedMethodAccessor175.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:434)
+	... 63 more
+2018-07-07 16:12:21,274 DEBUG JWTLoginFilter:345 ---- Authentication request failed: org.springframework.security.authentication.InternalAuthenticationServiceException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'bmp_qa.user' doesn't exist
+### The error may exist in com/firstTry/Adventure/mapper/UserMapper.java (best guess)
+### The error may involve com.firstTry.Adventure.mapper.UserMapper.findByName-Inline
+### The error occurred while setting parameters
+### SQL: SELECT * FROM user WHERE name = ?
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'bmp_qa.user' doesn't exist
+; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'bmp_qa.user' doesn't exist
+org.springframework.security.authentication.InternalAuthenticationServiceException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'bmp_qa.user' doesn't exist
+### The error may exist in com/firstTry/Adventure/mapper/UserMapper.java (best guess)
+### The error may involve com.firstTry.Adventure.mapper.UserMapper.findByName-Inline
+### The error occurred while setting parameters
+### SQL: SELECT * FROM user WHERE name = ?
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'bmp_qa.user' doesn't exist
+; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'bmp_qa.user' doesn't exist
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:126)
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:144)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:174)
+	at com.firstTry.Adventure.config.JWTLoginFilter.attemptAuthentication(JWTLoginFilter.java:60)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:64)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:214)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:177)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:347)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:263)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:108)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'bmp_qa.user' doesn't exist
+### The error may exist in com/firstTry/Adventure/mapper/UserMapper.java (best guess)
+### The error may involve com.firstTry.Adventure.mapper.UserMapper.findByName-Inline
+### The error occurred while setting parameters
+### SQL: SELECT * FROM user WHERE name = ?
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'bmp_qa.user' doesn't exist
+; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'bmp_qa.user' doesn't exist
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:231)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:75)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:447)
+	at com.sun.proxy.$Proxy80.selectOne(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:167)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:75)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:53)
+	at com.sun.proxy.$Proxy132.findByName(Unknown Source)
+	at com.firstTry.Adventure.service.impl.UserServiceImpl.loadUserByUsername(UserServiceImpl.java:40)
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:114)
+	... 56 more
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'bmp_qa.user' doesn't exist
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.Util.getInstance(Util.java:386)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1053)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4074)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4006)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2468)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2629)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2719)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2155)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1379)
+	at sun.reflect.GeneratedMethodAccessor55.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.tomcat.jdbc.pool.StatementFacade$StatementProxy.invoke(StatementFacade.java:114)
+	at com.sun.proxy.$Proxy112.execute(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor55.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at com.sun.proxy.$Proxy113.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:63)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:83)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:148)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:141)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:77)
+	at sun.reflect.GeneratedMethodAccessor175.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:434)
+	... 63 more
+2018-07-07 16:12:21,277 DEBUG JWTLoginFilter:346 ---- Updated SecurityContextHolder to contain null Authentication
+2018-07-07 16:12:21,278 DEBUG JWTLoginFilter:347 ---- Delegating to authentication failure handler org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler@59700144
+2018-07-07 16:23:48,342  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 1244 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-07-07 16:23:48,345 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-07-07 16:23:48,346  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-07-07 16:23:58,941  INFO AdventureApplication:57 ---- Started AdventureApplication in 10.957 seconds (JVM running for 11.6)
+2018-07-07 16:26:34,604 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-07-07 16:26:34,645 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-07-07 16:26:34,697 DEBUG queryList:145 ---- <==      Total: 10
+2018-07-07 16:26:34,698 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-07-07 16:26:34,699 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-07-07 16:26:34,710 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-07-07 16:26:42,702 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 16:26:42,703 DEBUG queryColumns:145 ---- ==> Parameters: t_join_pay_record(String)
+2018-07-07 16:26:42,714 DEBUG queryColumns:145 ---- <==      Total: 9
+2018-07-07 16:26:49,488 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 16:26:49,489 DEBUG queryColumns:145 ---- ==> Parameters: t_app_message(String)
+2018-07-07 16:26:49,499 DEBUG queryColumns:145 ---- <==      Total: 13
+2018-07-07 16:26:55,619 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 16:26:55,620 DEBUG queryColumns:145 ---- ==> Parameters: t_join_pay_record(String)
+2018-07-07 16:26:55,629 DEBUG queryColumns:145 ---- <==      Total: 9
+2018-07-07 16:26:57,677 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 16:26:57,678 DEBUG queryColumns:145 ---- ==> Parameters: t_app_message(String)
+2018-07-07 16:26:57,691 DEBUG queryColumns:145 ---- <==      Total: 13
+2018-07-07 16:27:01,219 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 16:27:01,220 DEBUG queryColumns:145 ---- ==> Parameters: t_payment(String)
+2018-07-07 16:27:01,229 DEBUG queryColumns:145 ---- <==      Total: 18
+2018-07-07 16:27:05,496 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-07-07 16:27:05,497 DEBUG queryColumns:145 ---- ==> Parameters: t_employee_reward_exchange(String)
+2018-07-07 16:27:05,510 DEBUG queryColumns:145 ---- <==      Total: 11
+2018-07-07 16:29:00,172 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-07-07 16:29:00,173 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-07-07 16:29:00,206 DEBUG queryList:145 ---- <==      Total: 10
+2018-07-07 16:29:00,207 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-07-07 16:29:00,208 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-07-07 16:29:00,227 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-07-07 16:29:13,723 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-07-07 16:29:13,724 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-07-07 16:29:13,742 DEBUG queryList:145 ---- <==      Total: 10
+2018-07-07 16:29:13,743 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-07-07 16:29:13,744 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-07-07 16:29:13,752 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-07-07 17:02:56,236  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 1244 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-07-07 17:02:56,236 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-07-07 17:02:56,236  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-07-07 17:02:59,612  INFO AdventureApplication:57 ---- Started AdventureApplication in 3.433 seconds (JVM running for 2352.218)
+2018-07-07 17:07:00,221  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 5480 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-07-07 17:07:00,224 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-07-07 17:07:00,225  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-07-07 17:07:10,223  INFO AdventureApplication:57 ---- Started AdventureApplication in 10.389 seconds (JVM running for 11.012)
+2018-07-07 17:12:53,634  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 5480 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-07-07 17:12:53,635 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-07-07 17:12:53,635  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-07-07 17:12:58,021  INFO AdventureApplication:57 ---- Started AdventureApplication in 4.439 seconds (JVM running for 358.802)
+2018-07-07 17:13:06,855  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 5480 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-07-07 17:13:06,855 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-07-07 17:13:06,855  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-07-07 17:13:09,941  INFO AdventureApplication:57 ---- Started AdventureApplication in 3.145 seconds (JVM running for 370.722)
+2018-07-07 17:13:16,507  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 5480 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-07-07 17:13:16,507 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-07-07 17:13:16,507  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-07-07 17:13:19,218  INFO AdventureApplication:57 ---- Started AdventureApplication in 2.75 seconds (JVM running for 379.998)
+2018-07-07 17:22:11,647  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 5380 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-07-07 17:22:11,651 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-07-07 17:22:11,652  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-07-07 17:22:22,420  INFO AdventureApplication:57 ---- Started AdventureApplication in 11.158 seconds (JVM running for 11.731)
+2018-07-07 17:24:49,802  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 5380 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-07-07 17:24:49,803 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-07-07 17:24:49,803  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-07-07 17:24:53,210  INFO AdventureApplication:57 ---- Started AdventureApplication in 3.462 seconds (JVM running for 162.518)
+2018-07-07 17:24:59,719  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 5380 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-07-07 17:24:59,719 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-07-07 17:24:59,720  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-07-07 17:25:02,324  INFO AdventureApplication:57 ---- Started AdventureApplication in 2.65 seconds (JVM running for 171.632)
+2018-07-07 17:26:39,581  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 5380 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-07-07 17:26:39,581 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-07-07 17:26:39,582  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-07-07 17:26:42,093  INFO AdventureApplication:57 ---- Started AdventureApplication in 2.552 seconds (JVM running for 271.398)
+2018-07-07 17:27:20,317  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 5380 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-07-07 17:27:20,317 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-07-07 17:27:20,317  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-07-07 17:27:22,908  INFO AdventureApplication:57 ---- Started AdventureApplication in 2.636 seconds (JVM running for 312.213)
+2018-07-07 18:02:22,540  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 8976 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-07-07 18:02:22,543 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-07-07 18:02:22,544  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-07-07 18:02:34,793  INFO AdventureApplication:57 ---- Started AdventureApplication in 12.619 seconds (JVM running for 13.316)
+2018-07-07 18:02:47,013  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 8976 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-07-07 18:02:47,013 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-07-07 18:02:47,014  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-07-07 18:02:50,785  INFO AdventureApplication:57 ---- Started AdventureApplication in 3.831 seconds (JVM running for 29.308)
+2018-07-07 18:30:31,536  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 6276 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-07-07 18:30:31,539 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-07-07 18:30:31,541  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-07-07 18:30:42,265  INFO AdventureApplication:57 ---- Started AdventureApplication in 11.103 seconds (JVM running for 11.755)

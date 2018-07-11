@@ -2,6 +2,7 @@
 <html>
 <head>
 <title>代码生成器</title>
+<link rel="stylesheet" href="css/bootstrap.min.css"></link>
 <script type="text/javascript" src="js/header.js"></script>
 <script type="text/javascript" src="js/footer.js"></script>
 <meta charset="UTF-8"></meta>
@@ -19,6 +20,32 @@
 	</div>
     <table id="jqGrid"></table>
     <div id="jqGridPager"></div>
+    <!-- 設置點擊查看详情渲染的页面。默认隐藏 -->
+	<div id="showDis" style="display: none" >
+		<table class="table table-bordered" style="overflow-y:scroll; overflow-x:scroll;">
+            <thead>
+            <tr>
+                <th class="success">No.</th>
+                <th class="success">columnName</th>
+                <th class="success">dataType</th>
+                <th class="success">columnComment</th>
+                <th class="success">columnKey</th>
+                <th class="success">extra</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr v-for="(a,index) in clomnusLists" >
+                <td class="warning">{{index+1}}</td>
+              <!--   <td v-if="a.img!=''" ><img :src="a.img" style="width: 100px;height: 100px;"/></td> -->
+                <td>{{a.columnName}}</td>
+                <td>{{a.dataType}}</td>
+                <td>{{a.columnComment}}</td>
+                <td>{{a.columnKey}}</td>
+                <td>{{a.extra}}</td> 
+            </tr>
+            </tbody>
+        </table>
+	</div>
 </div>
 <script src="js/generator.js"></script>
 </body>

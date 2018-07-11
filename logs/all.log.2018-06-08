@@ -1,0 +1,370 @@
+2018-06-08 18:14:44,090  INFO AdventureApplication:48 - Starting AdventureApplication on BS1HDX84D9084A0 with PID 6248 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-06-08 18:14:44,124 DEBUG AdventureApplication:51 - Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-06-08 18:14:44,125  INFO AdventureApplication:593 - No active profile set, falling back to default profiles: default
+2018-06-08 18:14:44,990  INFO AnnotationConfigEmbeddedWebApplicationContext:583 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@58702ae9: startup date [Fri Jun 08 18:14:44 CST 2018]; root of context hierarchy
+2018-06-08 18:14:45,849  INFO Version:30 - HV000001: Hibernate Validator 5.3.6.Final
+2018-06-08 18:14:49,689  INFO RepositoryConfigurationDelegate:165 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-06-08 18:14:50,881  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 - Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$48356437] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-06-08 18:14:50,891  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$af879bfd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-06-08 18:14:50,961  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 - Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-06-08 18:14:50,964  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@3468119e' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-06-08 18:14:50,971  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 - Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$6d0a06e9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-06-08 18:14:50,996  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-06-08 18:14:52,091  INFO TomcatEmbeddedServletContainer:89 - Tomcat initialized with port(s): 80 (http)
+2018-06-08 18:14:52,537  INFO ContextLoader:276 - Root WebApplicationContext: initialization completed in 7550 ms
+2018-06-08 18:14:52,906  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-06-08 18:14:52,907  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-06-08 18:14:52,908  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-06-08 18:14:52,909  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-06-08 18:14:52,911  INFO DelegatingFilterProxyRegistrationBean:258 - Mapping filter: 'springSecurityFilterChain' to: [/*]
+2018-06-08 18:14:52,911  INFO ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+2018-06-08 18:14:55,330  INFO RequestMappingHandlerMapping:543 - Mapped "{[/go]}" onto public java.lang.String com.firstTry.Adventure.config.DefaultView.index(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-08 18:14:55,331  INFO RequestMappingHandlerMapping:543 - Mapped "{[/hello]}" onto public java.lang.String com.firstTry.Adventure.config.DefaultView.hello()
+2018-06-08 18:14:55,332  INFO RequestMappingHandlerMapping:543 - Mapped "{[/login]}" onto public java.lang.String com.firstTry.Adventure.config.DefaultView.login()
+2018-06-08 18:14:55,336  INFO RequestMappingHandlerMapping:543 - Mapped "{[/sys/generator/list]}" onto public com.firstTry.Adventure.utils.R com.firstTry.Adventure.controller.SysGeneratorController.list(java.util.Map<java.lang.String, java.lang.Object>)
+2018-06-08 18:14:55,336  INFO RequestMappingHandlerMapping:543 - Mapped "{[/sys/generator/code]}" onto public void com.firstTry.Adventure.controller.SysGeneratorController.code(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException
+2018-06-08 18:14:55,338  INFO RequestMappingHandlerMapping:543 - Mapped "{[/hi]}" onto public java.lang.String com.firstTry.Adventure.controller.UserLoginController.hello() throws java.lang.Exception
+2018-06-08 18:14:55,340  INFO RequestMappingHandlerMapping:543 - Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2018-06-08 18:14:55,345  INFO RequestMappingHandlerMapping:543 - Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2018-06-08 18:14:55,347  INFO RequestMappingHandlerMapping:543 - Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2018-06-08 18:14:55,348  INFO RequestMappingHandlerMapping:543 - Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2018-06-08 18:14:55,358  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-06-08 18:14:55,360  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-08 18:14:56,509  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-08 18:14:56,510  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-08 18:14:56,575  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-08 18:14:56,586  INFO WebMvcAutoConfiguration$WelcomePageHandlerMapping:549 - Adding welcome page: class path resource [views/index.html]
+2018-06-08 18:14:56,656  INFO DefaultSecurityFilterChain:43 - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@63df602c, org.springframework.security.web.context.SecurityContextPersistenceFilter@16cd1c39, org.springframework.security.web.header.HeaderWriterFilter@29268aa8, org.springframework.web.filter.CorsFilter@79472953, org.springframework.security.web.authentication.logout.LogoutFilter@5005b0de, com.firstTry.Adventure.config.JWTLoginFilter@7087b9a, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@10aaa2f1, com.firstTry.Adventure.config.JWTAuthenticationFilter@12ecd7ba, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@131ed636, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@bf3b243, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@aaa0bcb, org.springframework.security.web.session.SessionManagementFilter@341ef8c, org.springframework.security.web.access.ExceptionTranslationFilter@7e52c550, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6f515cd2]
+2018-06-08 18:14:56,712  INFO ThreadPoolTaskExecutor:165 - Initializing ExecutorService 
+2018-06-08 18:14:56,720  INFO ThreadPoolTaskExecutor:165 - Initializing ExecutorService  'defaultThreadPool'
+2018-06-08 18:14:57,188  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@58702ae9: startup date [Fri Jun 08 18:14:44 CST 2018]; root of context hierarchy
+2018-06-08 18:14:57,305  INFO ExceptionHandlerExceptionResolver:273 - Detected @ExceptionHandler methods in globalExceptionHandler
+2018-06-08 18:14:58,981  INFO OptionalLiveReloadServer:58 - LiveReload server is running on port 35729
+2018-06-08 18:14:58,992  WARN RedisStarterDeprecationWarningAutoConfiguration:43 - spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2018-06-08 18:14:59,079  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2018-06-08 18:14:59,129  INFO DefaultLifecycleProcessor:343 - Starting beans in phase 2147483647
+2018-06-08 18:14:59,130  INFO DocumentationPluginsBootstrapper:120 - Context refreshed
+2018-06-08 18:14:59,221  INFO DocumentationPluginsBootstrapper:123 - Found 1 custom documentation plugin(s)
+2018-06-08 18:14:59,257  INFO ApiListingReferenceScanner:41 - Scanning for api listing references
+2018-06-08 18:14:59,903  INFO CachingOperationNameGenerator:40 - Generating unique operation named: helloUsingGET_1
+2018-06-08 18:14:59,905  INFO CachingOperationNameGenerator:40 - Generating unique operation named: helloUsingHEAD_1
+2018-06-08 18:14:59,907  INFO CachingOperationNameGenerator:40 - Generating unique operation named: helloUsingPOST_1
+2018-06-08 18:14:59,908  INFO CachingOperationNameGenerator:40 - Generating unique operation named: helloUsingPUT_1
+2018-06-08 18:14:59,910  INFO CachingOperationNameGenerator:40 - Generating unique operation named: helloUsingPATCH_1
+2018-06-08 18:14:59,912  INFO CachingOperationNameGenerator:40 - Generating unique operation named: helloUsingDELETE_1
+2018-06-08 18:14:59,914  INFO CachingOperationNameGenerator:40 - Generating unique operation named: helloUsingOPTIONS_1
+2018-06-08 18:14:59,916  INFO CachingOperationNameGenerator:40 - Generating unique operation named: helloUsingTRACE_1
+2018-06-08 18:15:00,088  INFO TomcatEmbeddedServletContainer:201 - Tomcat started on port(s): 80 (http)
+2018-06-08 18:15:00,102  INFO AdventureApplication:57 - Started AdventureApplication in 16.709 seconds (JVM running for 17.913)
+2018-06-08 18:16:25,430  INFO DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+2018-06-08 18:16:25,476  INFO DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 44 ms
+2018-06-08 18:16:28,305 DEBUG queryList:145 - ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-06-08 18:16:28,332 DEBUG queryList:145 - ==> Parameters: 0(Integer), 10(Integer)
+2018-06-08 18:16:28,390 DEBUG queryList:145 - <==      Total: 10
+2018-06-08 18:16:28,393 DEBUG queryTotal:145 - ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-06-08 18:16:28,394 DEBUG queryTotal:145 - ==> Parameters: 
+2018-06-08 18:16:28,405 DEBUG queryTotal:145 - <==      Total: 1
+2018-06-08 18:16:34,981 DEBUG queryList:145 - ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) and table_name like concat('%', ?, '%') order by create_time desc limit ?, ? 
+2018-06-08 18:16:34,982 DEBUG queryList:145 - ==> Parameters: t_order(String), 0(Integer), 10(Integer)
+2018-06-08 18:16:34,993 DEBUG queryList:145 - <==      Total: 10
+2018-06-08 18:16:34,995 DEBUG queryTotal:145 - ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) and table_name like concat('%', ?, '%') 
+2018-06-08 18:16:34,996 DEBUG queryTotal:145 - ==> Parameters: t_order(String)
+2018-06-08 18:16:35,006 DEBUG queryTotal:145 - <==      Total: 1
+2018-06-08 18:16:37,058 DEBUG queryTable:145 - ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) and table_name = ? 
+2018-06-08 18:16:37,059 DEBUG queryTable:145 - ==> Parameters: t_order(String)
+2018-06-08 18:16:37,069 DEBUG queryTable:145 - <==      Total: 1
+2018-06-08 18:16:37,070 DEBUG queryColumns:145 - ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-06-08 18:16:37,071 DEBUG queryColumns:145 - ==> Parameters: t_order(String)
+2018-06-08 18:16:37,083 DEBUG queryColumns:145 - <==      Total: 39
+2018-06-08 18:17:47,753  INFO AnnotationConfigEmbeddedWebApplicationContext:984 - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@58702ae9: startup date [Fri Jun 08 18:14:44 CST 2018]; root of context hierarchy
+2018-06-08 18:17:47,756  INFO DefaultLifecycleProcessor:358 - Stopping beans in phase 2147483647
+2018-06-08 18:17:47,774  INFO AnnotationMBeanExporter:449 - Unregistering JMX-exposed beans on shutdown
+2018-06-08 18:17:47,775  INFO ThreadPoolTaskExecutor:202 - Shutting down ExecutorService 'defaultThreadPool'
+2018-06-08 18:17:48,320  INFO AdventureApplication:48 - Starting AdventureApplication on BS1HDX84D9084A0 with PID 6248 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-06-08 18:17:48,320 DEBUG AdventureApplication:51 - Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-06-08 18:17:48,321  INFO AdventureApplication:593 - No active profile set, falling back to default profiles: default
+2018-06-08 18:17:48,327  INFO AnnotationConfigEmbeddedWebApplicationContext:583 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@64f82156: startup date [Fri Jun 08 18:17:48 CST 2018]; root of context hierarchy
+2018-06-08 18:17:49,296  INFO RepositoryConfigurationDelegate:165 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-06-08 18:17:49,536  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 - Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$48356437] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-06-08 18:17:49,541  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$af879bfd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-06-08 18:17:49,548  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 - Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-06-08 18:17:49,549  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@4128fcb' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-06-08 18:17:49,552  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 - Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$6d0a06e9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-06-08 18:17:49,556  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-06-08 18:17:49,725  INFO TomcatEmbeddedServletContainer:89 - Tomcat initialized with port(s): 80 (http)
+2018-06-08 18:17:49,745  INFO ContextLoader:276 - Root WebApplicationContext: initialization completed in 1418 ms
+2018-06-08 18:17:49,861  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-06-08 18:17:49,862  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-06-08 18:17:49,862  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-06-08 18:17:49,863  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-06-08 18:17:49,864  INFO DelegatingFilterProxyRegistrationBean:258 - Mapping filter: 'springSecurityFilterChain' to: [/*]
+2018-06-08 18:17:49,865  INFO ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+2018-06-08 18:17:50,726  INFO RequestMappingHandlerMapping:543 - Mapped "{[/go]}" onto public java.lang.String com.firstTry.Adventure.config.DefaultView.index(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-08 18:17:50,727  INFO RequestMappingHandlerMapping:543 - Mapped "{[/hello]}" onto public java.lang.String com.firstTry.Adventure.config.DefaultView.hello()
+2018-06-08 18:17:50,728  INFO RequestMappingHandlerMapping:543 - Mapped "{[/login]}" onto public java.lang.String com.firstTry.Adventure.config.DefaultView.login()
+2018-06-08 18:17:50,733  INFO RequestMappingHandlerMapping:543 - Mapped "{[/sys/generator/list]}" onto public com.firstTry.Adventure.utils.R com.firstTry.Adventure.controller.SysGeneratorController.list(java.util.Map<java.lang.String, java.lang.Object>)
+2018-06-08 18:17:50,735  INFO RequestMappingHandlerMapping:543 - Mapped "{[/sys/generator/code]}" onto public void com.firstTry.Adventure.controller.SysGeneratorController.code(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException
+2018-06-08 18:17:50,736  INFO RequestMappingHandlerMapping:543 - Mapped "{[/hi]}" onto public java.lang.String com.firstTry.Adventure.controller.UserLoginController.hello() throws java.lang.Exception
+2018-06-08 18:17:50,737  INFO RequestMappingHandlerMapping:543 - Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2018-06-08 18:17:50,741  INFO RequestMappingHandlerMapping:543 - Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2018-06-08 18:17:50,742  INFO RequestMappingHandlerMapping:543 - Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2018-06-08 18:17:50,743  INFO RequestMappingHandlerMapping:543 - Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2018-06-08 18:17:50,748  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-06-08 18:17:50,749  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-08 18:17:51,090  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-08 18:17:51,091  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-08 18:17:51,136  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-08 18:17:51,139  INFO WebMvcAutoConfiguration$WelcomePageHandlerMapping:549 - Adding welcome page: class path resource [views/index.html]
+2018-06-08 18:17:51,167  INFO DefaultSecurityFilterChain:43 - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5041cf43, org.springframework.security.web.context.SecurityContextPersistenceFilter@d6969c1, org.springframework.security.web.header.HeaderWriterFilter@610c0ca3, org.springframework.web.filter.CorsFilter@1ca66cff, org.springframework.security.web.authentication.logout.LogoutFilter@29d40aeb, com.firstTry.Adventure.config.JWTLoginFilter@7aa6eda9, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@380d2c05, com.firstTry.Adventure.config.JWTAuthenticationFilter@2b1a9bfc, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7397088e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@727f6b4b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@757f720b, org.springframework.security.web.session.SessionManagementFilter@278f9ff0, org.springframework.security.web.access.ExceptionTranslationFilter@5d847082, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5c474436]
+2018-06-08 18:17:51,178  INFO ThreadPoolTaskExecutor:165 - Initializing ExecutorService 
+2018-06-08 18:17:51,179  INFO ThreadPoolTaskExecutor:165 - Initializing ExecutorService  'defaultThreadPool'
+2018-06-08 18:17:51,311  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@64f82156: startup date [Fri Jun 08 18:17:48 CST 2018]; root of context hierarchy
+2018-06-08 18:17:51,339  INFO ExceptionHandlerExceptionResolver:273 - Detected @ExceptionHandler methods in globalExceptionHandler
+2018-06-08 18:17:51,693  INFO OptionalLiveReloadServer:58 - LiveReload server is running on port 35729
+2018-06-08 18:17:51,696  WARN RedisStarterDeprecationWarningAutoConfiguration:43 - spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2018-06-08 18:17:51,745  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2018-06-08 18:17:51,754  INFO DefaultLifecycleProcessor:343 - Starting beans in phase 2147483647
+2018-06-08 18:17:51,754  INFO DocumentationPluginsBootstrapper:120 - Context refreshed
+2018-06-08 18:17:51,756  INFO DocumentationPluginsBootstrapper:123 - Found 1 custom documentation plugin(s)
+2018-06-08 18:17:51,763  INFO ApiListingReferenceScanner:41 - Scanning for api listing references
+2018-06-08 18:17:51,936  INFO CachingOperationNameGenerator:40 - Generating unique operation named: helloUsingGET_1
+2018-06-08 18:17:51,937  INFO CachingOperationNameGenerator:40 - Generating unique operation named: helloUsingHEAD_1
+2018-06-08 18:17:51,938  INFO CachingOperationNameGenerator:40 - Generating unique operation named: helloUsingPOST_1
+2018-06-08 18:17:51,940  INFO CachingOperationNameGenerator:40 - Generating unique operation named: helloUsingPUT_1
+2018-06-08 18:17:51,941  INFO CachingOperationNameGenerator:40 - Generating unique operation named: helloUsingPATCH_1
+2018-06-08 18:17:51,942  INFO CachingOperationNameGenerator:40 - Generating unique operation named: helloUsingDELETE_1
+2018-06-08 18:17:51,944  INFO CachingOperationNameGenerator:40 - Generating unique operation named: helloUsingOPTIONS_1
+2018-06-08 18:17:51,945  INFO CachingOperationNameGenerator:40 - Generating unique operation named: helloUsingTRACE_1
+2018-06-08 18:17:51,959  INFO TomcatEmbeddedServletContainer:201 - Tomcat started on port(s): 80 (http)
+2018-06-08 18:17:51,964  INFO AdventureApplication:57 - Started AdventureApplication in 3.701 seconds (JVM running for 189.772)
+2018-06-08 18:19:50,587  INFO DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+2018-06-08 18:19:50,601  INFO DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 13 ms
+2018-06-08 18:19:52,647 DEBUG queryList:145 - ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-06-08 18:19:52,648 DEBUG queryList:145 - ==> Parameters: 0(Integer), 10(Integer)
+2018-06-08 18:19:52,688 DEBUG queryList:145 - <==      Total: 10
+2018-06-08 18:19:52,689 DEBUG queryTotal:145 - ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-06-08 18:19:52,690 DEBUG queryTotal:145 - ==> Parameters: 
+2018-06-08 18:19:52,702 DEBUG queryTotal:145 - <==      Total: 1
+2018-06-08 18:19:55,637 DEBUG queryList:145 - ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) and table_name like concat('%', ?, '%') order by create_time desc limit ?, ? 
+2018-06-08 18:19:55,638 DEBUG queryList:145 - ==> Parameters: t_order(String), 0(Integer), 10(Integer)
+2018-06-08 18:19:55,650 DEBUG queryList:145 - <==      Total: 10
+2018-06-08 18:19:55,651 DEBUG queryTotal:145 - ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) and table_name like concat('%', ?, '%') 
+2018-06-08 18:19:55,652 DEBUG queryTotal:145 - ==> Parameters: t_order(String)
+2018-06-08 18:19:55,662 DEBUG queryTotal:145 - <==      Total: 1
+2018-06-08 18:19:57,856 DEBUG queryTable:145 - ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) and table_name = ? 
+2018-06-08 18:19:57,857 DEBUG queryTable:145 - ==> Parameters: t_order(String)
+2018-06-08 18:19:57,867 DEBUG queryTable:145 - <==      Total: 1
+2018-06-08 18:19:57,869 DEBUG queryColumns:145 - ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-06-08 18:19:57,870 DEBUG queryColumns:145 - ==> Parameters: t_order(String)
+2018-06-08 18:19:57,882 DEBUG queryColumns:145 - <==      Total: 39
+2018-06-08 18:20:58,492  INFO AnnotationConfigEmbeddedWebApplicationContext:984 - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@64f82156: startup date [Fri Jun 08 18:17:48 CST 2018]; root of context hierarchy
+2018-06-08 18:20:58,495  INFO DefaultLifecycleProcessor:358 - Stopping beans in phase 2147483647
+2018-06-08 18:20:58,495  INFO AnnotationMBeanExporter:449 - Unregistering JMX-exposed beans on shutdown
+2018-06-08 18:20:58,498  INFO ThreadPoolTaskExecutor:202 - Shutting down ExecutorService 'defaultThreadPool'
+2018-06-08 18:20:59,019  INFO AdventureApplication:48 - Starting AdventureApplication on BS1HDX84D9084A0 with PID 6248 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-06-08 18:20:59,020 DEBUG AdventureApplication:51 - Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-06-08 18:20:59,020  INFO AdventureApplication:593 - No active profile set, falling back to default profiles: default
+2018-06-08 18:20:59,025  INFO AnnotationConfigEmbeddedWebApplicationContext:583 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1a6d7179: startup date [Fri Jun 08 18:20:59 CST 2018]; root of context hierarchy
+2018-06-08 18:21:00,005  INFO RepositoryConfigurationDelegate:165 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-06-08 18:21:00,242  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 - Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$48356437] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-06-08 18:21:00,257  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$af879bfd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-06-08 18:21:00,264  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 - Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-06-08 18:21:00,265  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@188a1f96' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-06-08 18:21:00,267  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 - Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$6d0a06e9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-06-08 18:21:00,269  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-06-08 18:21:00,403  INFO TomcatEmbeddedServletContainer:89 - Tomcat initialized with port(s): 80 (http)
+2018-06-08 18:21:00,430  INFO ContextLoader:276 - Root WebApplicationContext: initialization completed in 1405 ms
+2018-06-08 18:21:00,530  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-06-08 18:21:00,530  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-06-08 18:21:00,530  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-06-08 18:21:00,531  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-06-08 18:21:00,531  INFO DelegatingFilterProxyRegistrationBean:258 - Mapping filter: 'springSecurityFilterChain' to: [/*]
+2018-06-08 18:21:00,531  INFO ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+2018-06-08 18:21:01,036  INFO RequestMappingHandlerMapping:543 - Mapped "{[/go]}" onto public java.lang.String com.firstTry.Adventure.config.DefaultView.index(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-08 18:21:01,037  INFO RequestMappingHandlerMapping:543 - Mapped "{[/hello]}" onto public java.lang.String com.firstTry.Adventure.config.DefaultView.hello()
+2018-06-08 18:21:01,037  INFO RequestMappingHandlerMapping:543 - Mapped "{[/login]}" onto public java.lang.String com.firstTry.Adventure.config.DefaultView.login()
+2018-06-08 18:21:01,043  INFO RequestMappingHandlerMapping:543 - Mapped "{[/sys/generator/list]}" onto public com.firstTry.Adventure.utils.R com.firstTry.Adventure.controller.SysGeneratorController.list(java.util.Map<java.lang.String, java.lang.Object>)
+2018-06-08 18:21:01,044  INFO RequestMappingHandlerMapping:543 - Mapped "{[/sys/generator/code]}" onto public void com.firstTry.Adventure.controller.SysGeneratorController.code(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException
+2018-06-08 18:21:01,046  INFO RequestMappingHandlerMapping:543 - Mapped "{[/hi]}" onto public java.lang.String com.firstTry.Adventure.controller.UserLoginController.hello() throws java.lang.Exception
+2018-06-08 18:21:01,048  INFO RequestMappingHandlerMapping:543 - Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2018-06-08 18:21:01,051  INFO RequestMappingHandlerMapping:543 - Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2018-06-08 18:21:01,052  INFO RequestMappingHandlerMapping:543 - Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2018-06-08 18:21:01,053  INFO RequestMappingHandlerMapping:543 - Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2018-06-08 18:21:01,060  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-06-08 18:21:01,061  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-08 18:21:01,418  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-08 18:21:01,418  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-08 18:21:01,447  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-08 18:21:01,449  INFO WebMvcAutoConfiguration$WelcomePageHandlerMapping:549 - Adding welcome page: class path resource [views/index.html]
+2018-06-08 18:21:01,471  INFO DefaultSecurityFilterChain:43 - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@70fea6f1, org.springframework.security.web.context.SecurityContextPersistenceFilter@15a5fe50, org.springframework.security.web.header.HeaderWriterFilter@1330b91, org.springframework.web.filter.CorsFilter@2bf84581, org.springframework.security.web.authentication.logout.LogoutFilter@65b5a093, com.firstTry.Adventure.config.JWTLoginFilter@60f3c2fc, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@76deb5c9, com.firstTry.Adventure.config.JWTAuthenticationFilter@630043d6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@62dfc261, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7ba93228, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@66ccb869, org.springframework.security.web.session.SessionManagementFilter@5a388741, org.springframework.security.web.access.ExceptionTranslationFilter@779013a6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5d52d250]
+2018-06-08 18:21:01,476  INFO ThreadPoolTaskExecutor:165 - Initializing ExecutorService 
+2018-06-08 18:21:01,477  INFO ThreadPoolTaskExecutor:165 - Initializing ExecutorService  'defaultThreadPool'
+2018-06-08 18:21:01,596  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1a6d7179: startup date [Fri Jun 08 18:20:59 CST 2018]; root of context hierarchy
+2018-06-08 18:21:01,627  INFO ExceptionHandlerExceptionResolver:273 - Detected @ExceptionHandler methods in globalExceptionHandler
+2018-06-08 18:21:01,942  INFO OptionalLiveReloadServer:58 - LiveReload server is running on port 35729
+2018-06-08 18:21:01,944  WARN RedisStarterDeprecationWarningAutoConfiguration:43 - spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2018-06-08 18:21:01,990  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2018-06-08 18:21:01,995  INFO DefaultLifecycleProcessor:343 - Starting beans in phase 2147483647
+2018-06-08 18:21:01,995  INFO DocumentationPluginsBootstrapper:120 - Context refreshed
+2018-06-08 18:21:01,996  INFO DocumentationPluginsBootstrapper:123 - Found 1 custom documentation plugin(s)
+2018-06-08 18:21:02,001  INFO ApiListingReferenceScanner:41 - Scanning for api listing references
+2018-06-08 18:21:02,182  INFO CachingOperationNameGenerator:40 - Generating unique operation named: helloUsingGET_1
+2018-06-08 18:21:02,183  INFO CachingOperationNameGenerator:40 - Generating unique operation named: helloUsingHEAD_1
+2018-06-08 18:21:02,186  INFO CachingOperationNameGenerator:40 - Generating unique operation named: helloUsingPOST_1
+2018-06-08 18:21:02,188  INFO CachingOperationNameGenerator:40 - Generating unique operation named: helloUsingPUT_1
+2018-06-08 18:21:02,190  INFO CachingOperationNameGenerator:40 - Generating unique operation named: helloUsingPATCH_1
+2018-06-08 18:21:02,191  INFO CachingOperationNameGenerator:40 - Generating unique operation named: helloUsingDELETE_1
+2018-06-08 18:21:02,192  INFO CachingOperationNameGenerator:40 - Generating unique operation named: helloUsingOPTIONS_1
+2018-06-08 18:21:02,193  INFO CachingOperationNameGenerator:40 - Generating unique operation named: helloUsingTRACE_1
+2018-06-08 18:21:02,210  INFO TomcatEmbeddedServletContainer:201 - Tomcat started on port(s): 80 (http)
+2018-06-08 18:21:02,213  INFO AdventureApplication:57 - Started AdventureApplication in 3.25 seconds (JVM running for 380.016)
+2018-06-08 18:21:06,930  INFO DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+2018-06-08 18:21:06,941  INFO DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 7 ms
+2018-06-08 18:21:11,653 DEBUG queryList:145 - ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-06-08 18:21:11,654 DEBUG queryList:145 - ==> Parameters: 0(Integer), 10(Integer)
+2018-06-08 18:21:11,681 DEBUG queryList:145 - <==      Total: 10
+2018-06-08 18:21:11,683 DEBUG queryTotal:145 - ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-06-08 18:21:11,684 DEBUG queryTotal:145 - ==> Parameters: 
+2018-06-08 18:21:11,693 DEBUG queryTotal:145 - <==      Total: 1
+2018-06-08 18:21:17,719 DEBUG queryList:145 - ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) and table_name like concat('%', ?, '%') order by create_time desc limit ?, ? 
+2018-06-08 18:21:17,720 DEBUG queryList:145 - ==> Parameters: order(String), 0(Integer), 10(Integer)
+2018-06-08 18:21:17,730 DEBUG queryList:145 - <==      Total: 10
+2018-06-08 18:21:17,732 DEBUG queryTotal:145 - ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) and table_name like concat('%', ?, '%') 
+2018-06-08 18:21:17,733 DEBUG queryTotal:145 - ==> Parameters: order(String)
+2018-06-08 18:21:17,743 DEBUG queryTotal:145 - <==      Total: 1
+2018-06-08 18:21:20,072 DEBUG queryTable:145 - ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) and table_name = ? 
+2018-06-08 18:21:20,073 DEBUG queryTable:145 - ==> Parameters: t_order(String)
+2018-06-08 18:21:20,088 DEBUG queryTable:145 - <==      Total: 1
+2018-06-08 18:21:20,089 DEBUG queryColumns:145 - ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-06-08 18:21:20,089 DEBUG queryColumns:145 - ==> Parameters: t_order(String)
+2018-06-08 18:21:20,103 DEBUG queryColumns:145 - <==      Total: 39
+2018-06-08 18:23:37,520  INFO AnnotationConfigEmbeddedWebApplicationContext:984 - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1a6d7179: startup date [Fri Jun 08 18:20:59 CST 2018]; root of context hierarchy
+2018-06-08 18:23:37,521  INFO DefaultLifecycleProcessor:358 - Stopping beans in phase 2147483647
+2018-06-08 18:23:37,522  INFO AnnotationMBeanExporter:449 - Unregistering JMX-exposed beans on shutdown
+2018-06-08 18:23:37,523  INFO ThreadPoolTaskExecutor:202 - Shutting down ExecutorService 'defaultThreadPool'
+2018-06-08 18:23:37,838  INFO AdventureApplication:48 - Starting AdventureApplication on BS1HDX84D9084A0 with PID 6248 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-06-08 18:23:37,839 DEBUG AdventureApplication:51 - Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-06-08 18:23:37,839  INFO AdventureApplication:593 - No active profile set, falling back to default profiles: default
+2018-06-08 18:23:37,841  INFO AnnotationConfigEmbeddedWebApplicationContext:583 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@34aef3f9: startup date [Fri Jun 08 18:23:37 CST 2018]; root of context hierarchy
+2018-06-08 18:23:38,535  INFO RepositoryConfigurationDelegate:165 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-06-08 18:23:38,686  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 - Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$48356437] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-06-08 18:23:38,691  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$af879bfd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-06-08 18:23:38,699  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 - Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-06-08 18:23:38,700  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@1f336f4b' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-06-08 18:23:38,701  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 - Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$6d0a06e9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-06-08 18:23:38,702  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-06-08 18:23:38,816  INFO TomcatEmbeddedServletContainer:89 - Tomcat initialized with port(s): 80 (http)
+2018-06-08 18:23:38,842  INFO ContextLoader:276 - Root WebApplicationContext: initialization completed in 1001 ms
+2018-06-08 18:23:38,944  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-06-08 18:23:38,945  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-06-08 18:23:38,945  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-06-08 18:23:38,945  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-06-08 18:23:38,945  INFO DelegatingFilterProxyRegistrationBean:258 - Mapping filter: 'springSecurityFilterChain' to: [/*]
+2018-06-08 18:23:38,945  INFO ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+2018-06-08 18:23:39,474  INFO RequestMappingHandlerMapping:543 - Mapped "{[/go]}" onto public java.lang.String com.firstTry.Adventure.config.DefaultView.index(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-08 18:23:39,475  INFO RequestMappingHandlerMapping:543 - Mapped "{[/hello]}" onto public java.lang.String com.firstTry.Adventure.config.DefaultView.hello()
+2018-06-08 18:23:39,475  INFO RequestMappingHandlerMapping:543 - Mapped "{[/login]}" onto public java.lang.String com.firstTry.Adventure.config.DefaultView.login()
+2018-06-08 18:23:39,476  INFO RequestMappingHandlerMapping:543 - Mapped "{[/sys/generator/list]}" onto public com.firstTry.Adventure.utils.R com.firstTry.Adventure.controller.SysGeneratorController.list(java.util.Map<java.lang.String, java.lang.Object>)
+2018-06-08 18:23:39,477  INFO RequestMappingHandlerMapping:543 - Mapped "{[/sys/generator/code]}" onto public void com.firstTry.Adventure.controller.SysGeneratorController.code(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException
+2018-06-08 18:23:39,477  INFO RequestMappingHandlerMapping:543 - Mapped "{[/hi]}" onto public java.lang.String com.firstTry.Adventure.controller.UserLoginController.hello() throws java.lang.Exception
+2018-06-08 18:23:39,478  INFO RequestMappingHandlerMapping:543 - Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2018-06-08 18:23:39,480  INFO RequestMappingHandlerMapping:543 - Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2018-06-08 18:23:39,481  INFO RequestMappingHandlerMapping:543 - Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2018-06-08 18:23:39,481  INFO RequestMappingHandlerMapping:543 - Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2018-06-08 18:23:39,483  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-06-08 18:23:39,484  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-08 18:23:39,734  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-08 18:23:39,734  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-08 18:23:39,760  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-08 18:23:39,762  INFO WebMvcAutoConfiguration$WelcomePageHandlerMapping:549 - Adding welcome page: class path resource [views/index.html]
+2018-06-08 18:23:39,780  INFO DefaultSecurityFilterChain:43 - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4023af07, org.springframework.security.web.context.SecurityContextPersistenceFilter@3a047bcd, org.springframework.security.web.header.HeaderWriterFilter@fec6a98, org.springframework.web.filter.CorsFilter@f7ca0ba, org.springframework.security.web.authentication.logout.LogoutFilter@52afcd6b, com.firstTry.Adventure.config.JWTLoginFilter@6137fb78, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7426fee7, com.firstTry.Adventure.config.JWTAuthenticationFilter@2225e07f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3b6c7625, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@57b8737a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7f2338ab, org.springframework.security.web.session.SessionManagementFilter@2024b6d0, org.springframework.security.web.access.ExceptionTranslationFilter@1c33bb4b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@115fef52]
+2018-06-08 18:23:39,785  INFO ThreadPoolTaskExecutor:165 - Initializing ExecutorService 
+2018-06-08 18:23:39,785  INFO ThreadPoolTaskExecutor:165 - Initializing ExecutorService  'defaultThreadPool'
+2018-06-08 18:23:39,882  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@34aef3f9: startup date [Fri Jun 08 18:23:37 CST 2018]; root of context hierarchy
+2018-06-08 18:23:39,915  INFO ExceptionHandlerExceptionResolver:273 - Detected @ExceptionHandler methods in globalExceptionHandler
+2018-06-08 18:23:40,250  INFO OptionalLiveReloadServer:58 - LiveReload server is running on port 35729
+2018-06-08 18:23:40,253  WARN RedisStarterDeprecationWarningAutoConfiguration:43 - spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2018-06-08 18:23:40,296  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2018-06-08 18:23:40,302  INFO DefaultLifecycleProcessor:343 - Starting beans in phase 2147483647
+2018-06-08 18:23:40,302  INFO DocumentationPluginsBootstrapper:120 - Context refreshed
+2018-06-08 18:23:40,303  INFO DocumentationPluginsBootstrapper:123 - Found 1 custom documentation plugin(s)
+2018-06-08 18:23:40,307  INFO ApiListingReferenceScanner:41 - Scanning for api listing references
+2018-06-08 18:23:40,490  INFO CachingOperationNameGenerator:40 - Generating unique operation named: helloUsingGET_1
+2018-06-08 18:23:40,491  INFO CachingOperationNameGenerator:40 - Generating unique operation named: helloUsingHEAD_1
+2018-06-08 18:23:40,492  INFO CachingOperationNameGenerator:40 - Generating unique operation named: helloUsingPOST_1
+2018-06-08 18:23:40,493  INFO CachingOperationNameGenerator:40 - Generating unique operation named: helloUsingPUT_1
+2018-06-08 18:23:40,495  INFO CachingOperationNameGenerator:40 - Generating unique operation named: helloUsingPATCH_1
+2018-06-08 18:23:40,496  INFO CachingOperationNameGenerator:40 - Generating unique operation named: helloUsingDELETE_1
+2018-06-08 18:23:40,497  INFO CachingOperationNameGenerator:40 - Generating unique operation named: helloUsingOPTIONS_1
+2018-06-08 18:23:40,499  INFO CachingOperationNameGenerator:40 - Generating unique operation named: helloUsingTRACE_1
+2018-06-08 18:23:40,515  INFO TomcatEmbeddedServletContainer:201 - Tomcat started on port(s): 80 (http)
+2018-06-08 18:23:40,518  INFO AdventureApplication:57 - Started AdventureApplication in 2.723 seconds (JVM running for 538.317)
+2018-06-08 18:24:48,696  INFO DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+2018-06-08 18:24:48,701  INFO DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 4 ms
+2018-06-08 18:24:49,724 DEBUG queryTable:145 - ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) and table_name = ? 
+2018-06-08 18:24:49,724 DEBUG queryTable:145 - ==> Parameters: t_order(String)
+2018-06-08 18:24:49,734 DEBUG queryTable:145 - <==      Total: 1
+2018-06-08 18:24:49,735 DEBUG queryColumns:145 - ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-06-08 18:24:49,736 DEBUG queryColumns:145 - ==> Parameters: t_order(String)
+2018-06-08 18:24:49,746 DEBUG queryColumns:145 - <==      Total: 39
+2018-06-08 18:39:22,832  INFO AnnotationConfigEmbeddedWebApplicationContext:984 - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@34aef3f9: startup date [Fri Jun 08 18:23:37 CST 2018]; root of context hierarchy
+2018-06-08 18:39:22,833  INFO DefaultLifecycleProcessor:358 - Stopping beans in phase 2147483647
+2018-06-08 18:39:22,834  INFO AnnotationMBeanExporter:449 - Unregistering JMX-exposed beans on shutdown
+2018-06-08 18:39:22,835  INFO ThreadPoolTaskExecutor:202 - Shutting down ExecutorService 'defaultThreadPool'
+2018-06-08 18:39:23,258  INFO AdventureApplication:48 - Starting AdventureApplication on BS1HDX84D9084A0 with PID 6248 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-06-08 18:39:23,259 DEBUG AdventureApplication:51 - Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-06-08 18:39:23,259  INFO AdventureApplication:593 - No active profile set, falling back to default profiles: default
+2018-06-08 18:39:23,266  INFO AnnotationConfigEmbeddedWebApplicationContext:583 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6a047213: startup date [Fri Jun 08 18:39:23 CST 2018]; root of context hierarchy
+2018-06-08 18:39:24,378  INFO RepositoryConfigurationDelegate:165 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-06-08 18:39:24,554  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 - Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$48356437] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-06-08 18:39:24,557  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$af879bfd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-06-08 18:39:24,563  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 - Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-06-08 18:39:24,564  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@27f21e20' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-06-08 18:39:24,565  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 - Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$6d0a06e9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-06-08 18:39:24,566  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-06-08 18:39:24,723  INFO TomcatEmbeddedServletContainer:89 - Tomcat initialized with port(s): 80 (http)
+2018-06-08 18:39:24,757  INFO ContextLoader:276 - Root WebApplicationContext: initialization completed in 1491 ms
+2018-06-08 18:39:24,854  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-06-08 18:39:24,855  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-06-08 18:39:24,855  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-06-08 18:39:24,855  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-06-08 18:39:24,856  INFO DelegatingFilterProxyRegistrationBean:258 - Mapping filter: 'springSecurityFilterChain' to: [/*]
+2018-06-08 18:39:24,856  INFO ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+2018-06-08 18:39:25,315  INFO RequestMappingHandlerMapping:543 - Mapped "{[/go]}" onto public java.lang.String com.firstTry.Adventure.config.DefaultView.index(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-08 18:39:25,315  INFO RequestMappingHandlerMapping:543 - Mapped "{[/hello]}" onto public java.lang.String com.firstTry.Adventure.config.DefaultView.hello()
+2018-06-08 18:39:25,316  INFO RequestMappingHandlerMapping:543 - Mapped "{[/login]}" onto public java.lang.String com.firstTry.Adventure.config.DefaultView.login()
+2018-06-08 18:39:25,316  INFO RequestMappingHandlerMapping:543 - Mapped "{[/sys/generator/list]}" onto public com.firstTry.Adventure.utils.R com.firstTry.Adventure.controller.SysGeneratorController.list(java.util.Map<java.lang.String, java.lang.Object>)
+2018-06-08 18:39:25,317  INFO RequestMappingHandlerMapping:543 - Mapped "{[/sys/generator/code]}" onto public void com.firstTry.Adventure.controller.SysGeneratorController.code(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException
+2018-06-08 18:39:25,317  INFO RequestMappingHandlerMapping:543 - Mapped "{[/hi]}" onto public java.lang.String com.firstTry.Adventure.controller.UserLoginController.hello() throws java.lang.Exception
+2018-06-08 18:39:25,318  INFO RequestMappingHandlerMapping:543 - Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2018-06-08 18:39:25,319  INFO RequestMappingHandlerMapping:543 - Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2018-06-08 18:39:25,319  INFO RequestMappingHandlerMapping:543 - Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2018-06-08 18:39:25,320  INFO RequestMappingHandlerMapping:543 - Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2018-06-08 18:39:25,322  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-06-08 18:39:25,322  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-08 18:39:25,578  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-08 18:39:25,578  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-08 18:39:25,601  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-08 18:39:25,604  INFO WebMvcAutoConfiguration$WelcomePageHandlerMapping:549 - Adding welcome page: class path resource [views/index.html]
+2018-06-08 18:39:25,624  INFO DefaultSecurityFilterChain:43 - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5d957be1, org.springframework.security.web.context.SecurityContextPersistenceFilter@59100031, org.springframework.security.web.header.HeaderWriterFilter@5a9a7614, org.springframework.web.filter.CorsFilter@2b43fe34, org.springframework.security.web.authentication.logout.LogoutFilter@499c2e12, com.firstTry.Adventure.config.JWTLoginFilter@31f8276b, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@99ae424, com.firstTry.Adventure.config.JWTAuthenticationFilter@6f1d4eb4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@30b1b963, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@391243b7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@19a16ac5, org.springframework.security.web.session.SessionManagementFilter@209a1c83, org.springframework.security.web.access.ExceptionTranslationFilter@89c3a9a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@674fadca]
+2018-06-08 18:39:25,646  INFO ThreadPoolTaskExecutor:165 - Initializing ExecutorService 
+2018-06-08 18:39:25,647  INFO ThreadPoolTaskExecutor:165 - Initializing ExecutorService  'defaultThreadPool'
+2018-06-08 18:39:25,770  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6a047213: startup date [Fri Jun 08 18:39:23 CST 2018]; root of context hierarchy
+2018-06-08 18:39:25,794  INFO ExceptionHandlerExceptionResolver:273 - Detected @ExceptionHandler methods in globalExceptionHandler
+2018-06-08 18:39:26,092  INFO OptionalLiveReloadServer:58 - LiveReload server is running on port 35729
+2018-06-08 18:39:26,093  WARN RedisStarterDeprecationWarningAutoConfiguration:43 - spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2018-06-08 18:39:26,153  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2018-06-08 18:39:26,158  INFO DefaultLifecycleProcessor:343 - Starting beans in phase 2147483647
+2018-06-08 18:39:26,158  INFO DocumentationPluginsBootstrapper:120 - Context refreshed
+2018-06-08 18:39:26,159  INFO DocumentationPluginsBootstrapper:123 - Found 1 custom documentation plugin(s)
+2018-06-08 18:39:26,163  INFO ApiListingReferenceScanner:41 - Scanning for api listing references
+2018-06-08 18:39:26,380  INFO CachingOperationNameGenerator:40 - Generating unique operation named: helloUsingGET_1
+2018-06-08 18:39:26,381  INFO CachingOperationNameGenerator:40 - Generating unique operation named: helloUsingHEAD_1
+2018-06-08 18:39:26,382  INFO CachingOperationNameGenerator:40 - Generating unique operation named: helloUsingPOST_1
+2018-06-08 18:39:26,384  INFO CachingOperationNameGenerator:40 - Generating unique operation named: helloUsingPUT_1
+2018-06-08 18:39:26,385  INFO CachingOperationNameGenerator:40 - Generating unique operation named: helloUsingPATCH_1
+2018-06-08 18:39:26,386  INFO CachingOperationNameGenerator:40 - Generating unique operation named: helloUsingDELETE_1
+2018-06-08 18:39:26,387  INFO CachingOperationNameGenerator:40 - Generating unique operation named: helloUsingOPTIONS_1
+2018-06-08 18:39:26,389  INFO CachingOperationNameGenerator:40 - Generating unique operation named: helloUsingTRACE_1
+2018-06-08 18:39:26,403  INFO TomcatEmbeddedServletContainer:201 - Tomcat started on port(s): 80 (http)
+2018-06-08 18:39:26,407  INFO AdventureApplication:57 - Started AdventureApplication in 3.209 seconds (JVM running for 1484.181)

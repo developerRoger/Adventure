@@ -1,0 +1,38 @@
+2018-06-28 10:06:17,241  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 6612 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-06-28 10:06:17,387 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-06-28 10:06:17,387  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-06-28 10:06:34,569  INFO AdventureApplication:57 ---- Started AdventureApplication in 18.566 seconds (JVM running for 19.314)
+2018-06-28 10:07:11,310 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-06-28 10:07:11,338 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-06-28 10:07:11,398 DEBUG queryList:145 ---- <==      Total: 10
+2018-06-28 10:07:11,401 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-06-28 10:07:11,402 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-06-28 10:07:11,414 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-06-28 10:07:25,245 DEBUG queryTable:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) and table_name = ? 
+2018-06-28 10:07:25,246 DEBUG queryTable:145 ---- ==> Parameters: t_merchant_pay_method(String)
+2018-06-28 10:07:25,258 DEBUG queryTable:145 ---- <==      Total: 1
+2018-06-28 10:07:25,259 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-06-28 10:07:25,260 DEBUG queryColumns:145 ---- ==> Parameters: t_merchant_pay_method(String)
+2018-06-28 10:07:25,289 DEBUG queryColumns:145 ---- <==      Total: 15
+2018-06-28 16:56:09,387  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 5708 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-06-28 16:56:09,389 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-06-28 16:56:09,392  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-06-28 16:56:20,168  INFO AdventureApplication:57 ---- Started AdventureApplication in 11.258 seconds (JVM running for 12.014)
+2018-06-28 16:56:45,083 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-06-28 16:56:45,116 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-06-28 16:56:45,170 DEBUG queryList:145 ---- <==      Total: 10
+2018-06-28 16:56:45,173 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-06-28 16:56:45,174 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-06-28 16:56:45,199 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-06-28 16:56:54,782 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) and table_name like concat('%', ?, '%') order by create_time desc limit ?, ? 
+2018-06-28 16:56:54,783 DEBUG queryList:145 ---- ==> Parameters: t_merchant(String), 0(Integer), 10(Integer)
+2018-06-28 16:56:54,798 DEBUG queryList:145 ---- <==      Total: 10
+2018-06-28 16:56:54,799 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) and table_name like concat('%', ?, '%') 
+2018-06-28 16:56:54,801 DEBUG queryTotal:145 ---- ==> Parameters: t_merchant(String)
+2018-06-28 16:56:54,811 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-06-28 16:57:03,302 DEBUG queryTable:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) and table_name = ? 
+2018-06-28 16:57:03,303 DEBUG queryTable:145 ---- ==> Parameters: t_merchant_whitelist(String)
+2018-06-28 16:57:03,314 DEBUG queryTable:145 ---- <==      Total: 1
+2018-06-28 16:57:03,315 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-06-28 16:57:03,316 DEBUG queryColumns:145 ---- ==> Parameters: t_merchant_whitelist(String)
+2018-06-28 16:57:03,327 DEBUG queryColumns:145 ---- <==      Total: 6

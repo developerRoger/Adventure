@@ -67,9 +67,7 @@
         </where>
     </sql>
 
-
-    
-    
+    <!--保存数据-->
 	<insert id="save" parameterType="${package}.entity.${className}Entity"#if($pk.extra == 'auto_increment') useGeneratedKeys="true" keyProperty="$pk.attrname"#end>
 		insert into ${tableName}
 		(
@@ -91,7 +89,7 @@
 		)
 	</insert>
 	 
-	 <!--修改内容-->
+	 <!--根据主键ID修改内容-->
 	<update id="update" parameterType="${package}.entity.${className}Entity">
 		update ${tableName} 
 		<set>
@@ -105,7 +103,7 @@
 	</update>
 	
 	  <!-- 按主键删除 -->
-	<delete id="delete" resultType="java.lang.Long">
+	<delete id="delete" >
 		delete from ${tableName} where ${pk.columnName} = #{id}
 	</delete>
 	
