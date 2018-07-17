@@ -1,301 +1,74 @@
-<<<<<<< HEAD
-2018-07-10 10:08:19,007  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 6772 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
-2018-07-10 10:08:19,019 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
-2018-07-10 10:08:19,020  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
-2018-07-10 10:08:29,215  INFO AdventureApplication:57 ---- Started AdventureApplication in 10.574 seconds (JVM running for 11.202)
-2018-07-10 11:44:56,641  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 6772 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
-2018-07-10 11:44:56,645 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
-2018-07-10 11:44:56,645  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
-2018-07-10 11:45:00,603  INFO AdventureApplication:57 ---- Started AdventureApplication in 4.01 seconds (JVM running for 5802.617)
-2018-07-10 18:19:48,991  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 7364 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
-2018-07-10 18:19:49,022 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
-2018-07-10 18:19:49,024  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
-2018-07-10 18:20:00,556  INFO AdventureApplication:57 ---- Started AdventureApplication in 11.913 seconds (JVM running for 12.481)
-2018-07-10 18:20:13,557 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
-2018-07-10 18:20:13,588 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
-2018-07-10 18:20:13,620 DEBUG queryList:145 ---- <==      Total: 10
-2018-07-10 18:20:13,623 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
-2018-07-10 18:20:13,623 DEBUG queryTotal:145 ---- ==> Parameters: 
-2018-07-10 18:20:13,643 DEBUG queryTotal:145 ---- <==      Total: 1
-2018-07-10 18:20:39,241 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) and table_name like concat('%', ?, '%') order by create_time desc limit ?, ? 
-2018-07-10 18:20:39,242 DEBUG queryList:145 ---- ==> Parameters: t_merchant_wallet(String), 0(Integer), 10(Integer)
-2018-07-10 18:20:39,251 DEBUG queryList:145 ---- <==      Total: 1
-2018-07-10 18:20:39,253 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) and table_name like concat('%', ?, '%') 
-2018-07-10 18:20:39,254 DEBUG queryTotal:145 ---- ==> Parameters: t_merchant_wallet(String)
-2018-07-10 18:20:39,263 DEBUG queryTotal:145 ---- <==      Total: 1
-2018-07-10 18:20:41,102 DEBUG queryTable:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) and table_name = ? 
-2018-07-10 18:20:41,103 DEBUG queryTable:145 ---- ==> Parameters: t_merchant_wallet(String)
-2018-07-10 18:20:41,126 DEBUG queryTable:145 ---- <==      Total: 1
-2018-07-10 18:20:41,127 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
-2018-07-10 18:20:41,128 DEBUG queryColumns:145 ---- ==> Parameters: t_merchant_wallet(String)
-2018-07-10 18:20:41,139 DEBUG queryColumns:145 ---- <==      Total: 13
-2018-07-10 18:20:55,554 DEBUG queryTable:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) and table_name = ? 
-2018-07-10 18:20:55,555 DEBUG queryTable:145 ---- ==> Parameters: t_merchant_wallet(String)
-2018-07-10 18:20:55,565 DEBUG queryTable:145 ---- <==      Total: 1
-2018-07-10 18:20:55,566 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
-2018-07-10 18:20:55,567 DEBUG queryColumns:145 ---- ==> Parameters: t_merchant_wallet(String)
-2018-07-10 18:20:55,577 DEBUG queryColumns:145 ---- <==      Total: 13
-2018-07-10 18:21:20,209 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
-2018-07-10 18:21:20,210 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
-2018-07-10 18:21:20,241 DEBUG queryList:145 ---- <==      Total: 10
-2018-07-10 18:21:20,245 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
-2018-07-10 18:21:20,246 DEBUG queryTotal:145 ---- ==> Parameters: 
-2018-07-10 18:21:20,256 DEBUG queryTotal:145 ---- <==      Total: 1
-2018-07-10 18:22:18,884  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 8664 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
-2018-07-10 18:22:18,887 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
-2018-07-10 18:22:18,888  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
-2018-07-10 18:22:29,237  INFO AdventureApplication:57 ---- Started AdventureApplication in 10.722 seconds (JVM running for 11.393)
-=======
-2018-03-30 11:31:12,767  INFO AdventureApplication:48 ---- Starting AdventureApplication on PC-20171126RQUJ with PID 7300 (D:\SpringCloud\Adventure\target\classes started by Administrator in D:\SpringCloud\Adventure)
-2018-03-30 11:31:12,771 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
-2018-03-30 11:31:12,772  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
-2018-03-30 11:31:17,970  INFO AdventureApplication:57 ---- Started AdventureApplication in 5.411 seconds (JVM running for 5.788)
-2018-03-30 11:40:41,850  INFO AdventureApplication:48 ---- Starting AdventureApplication on PC-20171126RQUJ with PID 8024 (D:\SpringCloud\Adventure\target\classes started by Administrator in D:\SpringCloud\Adventure)
-2018-03-30 11:40:41,852 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
-2018-03-30 11:40:41,852  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
-2018-03-30 11:40:46,495  INFO AdventureApplication:57 ---- Started AdventureApplication in 4.82 seconds (JVM running for 5.135)
-2018-03-30 11:47:53,132  INFO AdventureApplication:48 ---- Starting AdventureApplication on PC-20171126RQUJ with PID 600 (D:\SpringCloud\Adventure\target\classes started by Administrator in D:\SpringCloud\Adventure)
-2018-03-30 11:47:53,134 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
-2018-03-30 11:47:53,135  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
-2018-03-30 11:47:58,383  INFO AdventureApplication:57 ---- Started AdventureApplication in 5.415 seconds (JVM running for 5.748)
-2018-03-30 11:58:31,436 DEBUG JWTLoginFilter:206 ---- Request is to process authentication
-2018-03-30 11:58:33,240 DEBUG findByName:145 ---- ==>  Preparing: SELECT * FROM user WHERE name = ? 
-2018-03-30 11:58:33,263 DEBUG findByName:145 ---- ==> Parameters: (String)
-2018-03-30 11:58:33,296 DEBUG findByName:145 ---- <==      Total: 0
-2018-03-30 11:58:33,334 ERROR JWTLoginFilter:221 ---- An internal error occurred while trying to authenticate the user.
-org.springframework.security.authentication.InternalAuthenticationServiceException
-	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:126)
-	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:144)
-	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:174)
-	at com.firstTry.Adventure.config.JWTLoginFilter.attemptAuthentication(JWTLoginFilter.java:60)
-	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
-	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:96)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
-	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:64)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
-	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
-	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
-	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:214)
-	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:177)
-	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:347)
-	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:263)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:108)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.lang.Thread.run(Thread.java:745)
-Caused by: java.lang.NullPointerException
-	at com.firstTry.Adventure.service.impl.UserServiceImpl.loadUserByUsername(UserServiceImpl.java:42)
-	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:114)
-	... 56 more
-2018-03-30 11:58:33,340 DEBUG JWTLoginFilter:345 ---- Authentication request failed: org.springframework.security.authentication.InternalAuthenticationServiceException
-org.springframework.security.authentication.InternalAuthenticationServiceException
-	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:126)
-	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:144)
-	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:174)
-	at com.firstTry.Adventure.config.JWTLoginFilter.attemptAuthentication(JWTLoginFilter.java:60)
-	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
-	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:96)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
-	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:64)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
-	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
-	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
-	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:214)
-	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:177)
-	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:347)
-	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:263)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:108)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.lang.Thread.run(Thread.java:745)
-Caused by: java.lang.NullPointerException
-	at com.firstTry.Adventure.service.impl.UserServiceImpl.loadUserByUsername(UserServiceImpl.java:42)
-	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:114)
-	... 56 more
-2018-03-30 11:58:33,341 DEBUG JWTLoginFilter:346 ---- Updated SecurityContextHolder to contain null Authentication
-2018-03-30 11:58:33,341 DEBUG JWTLoginFilter:347 ---- Delegating to authentication failure handler org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler@4ca008cd
-2018-03-30 14:35:33,703 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
-2018-03-30 14:35:33,706 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
-2018-03-30 14:35:33,739 DEBUG queryList:145 ---- <==      Total: 1
-2018-03-30 14:35:33,741 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
-2018-03-30 14:35:33,742 DEBUG queryTotal:145 ---- ==> Parameters: 
-2018-03-30 14:35:33,754 DEBUG queryTotal:145 ---- <==      Total: 1
-2018-03-30 14:42:41,221 DEBUG JWTLoginFilter:206 ---- Request is to process authentication
-2018-03-30 14:42:41,278 DEBUG findByName:145 ---- ==>  Preparing: SELECT * FROM user WHERE name = ? 
-2018-03-30 14:42:41,278 DEBUG findByName:145 ---- ==> Parameters: 测试(String)
-2018-03-30 14:42:41,310 DEBUG findByName:145 ---- <==      Total: 1
-2018-03-30 14:54:43,226  INFO AdventureApplication:48 ---- Starting AdventureApplication on PC-20171126RQUJ with PID 600 (D:\SpringCloud\Adventure\target\classes started by Administrator in D:\SpringCloud\Adventure)
-2018-03-30 14:54:43,226 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
-2018-03-30 14:54:43,226  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
-2018-03-30 14:54:44,876  INFO AdventureApplication:57 ---- Started AdventureApplication in 1.672 seconds (JVM running for 11211.937)
-2018-03-30 15:13:36,528  INFO AdventureApplication:48 ---- Starting AdventureApplication on PC-20171126RQUJ with PID 600 (D:\SpringCloud\Adventure\target\classes started by Administrator in D:\SpringCloud\Adventure)
-2018-03-30 15:13:36,528 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
-2018-03-30 15:13:36,528  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
-2018-03-30 15:16:47,515  INFO AdventureApplication:48 ---- Starting AdventureApplication on PC-20171126RQUJ with PID 600 (D:\SpringCloud\Adventure\target\classes started by Administrator in D:\SpringCloud\Adventure)
-2018-03-30 15:16:47,516 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
-2018-03-30 15:16:47,516  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
-2018-03-30 15:16:54,047  INFO AdventureApplication:48 ---- Starting AdventureApplication on PC-20171126RQUJ with PID 600 (D:\SpringCloud\Adventure\target\classes started by Administrator in D:\SpringCloud\Adventure)
-2018-03-30 15:16:54,050 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
-2018-03-30 15:16:54,050  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
-2018-03-30 15:16:55,409  INFO AdventureApplication:57 ---- Started AdventureApplication in 1.404 seconds (JVM running for 12542.433)
-2018-03-30 15:17:10,960 DEBUG JWTLoginFilter:206 ---- Request is to process authentication
-2018-03-30 15:17:18,676 DEBUG findByName:145 ---- ==>  Preparing: SELECT * FROM user WHERE name = ? 
-2018-03-30 15:17:18,677 DEBUG findByName:145 ---- ==> Parameters: 测试(String)
-2018-03-30 15:17:18,708 DEBUG findByName:145 ---- <==      Total: 1
-2018-03-30 15:18:19,382  INFO AdventureApplication:48 ---- Starting AdventureApplication on PC-20171126RQUJ with PID 600 (D:\SpringCloud\Adventure\target\classes started by Administrator in D:\SpringCloud\Adventure)
-2018-03-30 15:18:19,382 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
-2018-03-30 15:18:19,382  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
-2018-03-30 15:18:20,570  INFO AdventureApplication:57 ---- Started AdventureApplication in 1.205 seconds (JVM running for 12627.592)
-2018-03-30 15:18:29,903 DEBUG JWTLoginFilter:206 ---- Request is to process authentication
-2018-03-30 15:18:31,661 DEBUG findByName:145 ---- ==>  Preparing: SELECT * FROM user WHERE name = ? 
-2018-03-30 15:18:31,662 DEBUG findByName:145 ---- ==> Parameters: 测试(String)
-2018-03-30 15:18:31,677 DEBUG findByName:145 ---- <==      Total: 1
-2018-03-30 15:18:46,669  INFO AdventureApplication:48 ---- Starting AdventureApplication on PC-20171126RQUJ with PID 600 (D:\SpringCloud\Adventure\target\classes started by Administrator in D:\SpringCloud\Adventure)
-2018-03-30 15:18:46,669 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
-2018-03-30 15:18:46,669  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
-2018-03-30 15:18:47,799  INFO AdventureApplication:57 ---- Started AdventureApplication in 1.145 seconds (JVM running for 12654.819)
-2018-03-30 15:19:13,929  INFO AdventureApplication:48 ---- Starting AdventureApplication on PC-20171126RQUJ with PID 600 (D:\SpringCloud\Adventure\target\classes started by Administrator in D:\SpringCloud\Adventure)
-2018-03-30 15:19:13,929 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
-2018-03-30 15:19:13,929  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
-2018-03-30 15:19:15,014  INFO AdventureApplication:57 ---- Started AdventureApplication in 1.101 seconds (JVM running for 12682.034)
-2018-03-30 15:19:15,838 DEBUG JWTLoginFilter:206 ---- Request is to process authentication
-2018-03-30 15:19:17,411 DEBUG findByName:145 ---- ==>  Preparing: SELECT * FROM user WHERE name = ? 
-2018-03-30 15:19:17,411 DEBUG findByName:145 ---- ==> Parameters: 测试(String)
-2018-03-30 15:19:17,424 DEBUG findByName:145 ---- <==      Total: 1
-2018-03-30 15:19:31,364 DEBUG JWTLoginFilter:206 ---- Request is to process authentication
-2018-03-30 15:19:31,381 DEBUG findByName:145 ---- ==>  Preparing: SELECT * FROM user WHERE name = ? 
-2018-03-30 15:19:31,381 DEBUG findByName:145 ---- ==> Parameters: 测试(String)
-2018-03-30 15:19:31,395 DEBUG findByName:145 ---- <==      Total: 1
-2018-03-30 15:23:33,369  INFO AdventureApplication:48 ---- Starting AdventureApplication on PC-20171126RQUJ with PID 600 (D:\SpringCloud\Adventure\target\classes started by Administrator in D:\SpringCloud\Adventure)
-2018-03-30 15:23:33,369 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
-2018-03-30 15:23:33,369  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
-2018-03-30 15:23:34,732  INFO AdventureApplication:57 ---- Started AdventureApplication in 1.388 seconds (JVM running for 12941.745)
-2018-03-30 15:24:23,014 DEBUG JWTLoginFilter:206 ---- Request is to process authentication
-2018-03-30 15:24:33,872 DEBUG findByName:145 ---- ==>  Preparing: SELECT * FROM user WHERE name = ? 
-2018-03-30 15:24:33,873 DEBUG findByName:145 ---- ==> Parameters: 测试(String)
-2018-03-30 15:24:33,890 DEBUG findByName:145 ---- <==      Total: 1
-2018-03-30 15:25:28,567  INFO AdventureApplication:48 ---- Starting AdventureApplication on PC-20171126RQUJ with PID 600 (D:\SpringCloud\Adventure\target\classes started by Administrator in D:\SpringCloud\Adventure)
-2018-03-30 15:25:28,567 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
-2018-03-30 15:25:28,568  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
-2018-03-30 15:25:29,782  INFO AdventureApplication:57 ---- Started AdventureApplication in 1.23 seconds (JVM running for 13056.792)
-2018-03-30 15:25:43,413 DEBUG JWTLoginFilter:206 ---- Request is to process authentication
-2018-03-30 15:25:56,082 DEBUG findByName:145 ---- ==>  Preparing: SELECT * FROM user WHERE name = ? 
-2018-03-30 15:25:56,083 DEBUG findByName:145 ---- ==> Parameters: 测试(String)
-2018-03-30 15:25:56,100 DEBUG findByName:145 ---- <==      Total: 1
-2018-03-30 15:26:52,634  INFO AdventureApplication:48 ---- Starting AdventureApplication on PC-20171126RQUJ with PID 600 (D:\SpringCloud\Adventure\target\classes started by Administrator in D:\SpringCloud\Adventure)
-2018-03-30 15:26:52,635 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
-2018-03-30 15:26:52,635  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
-2018-03-30 15:26:53,625  INFO AdventureApplication:57 ---- Started AdventureApplication in 1.006 seconds (JVM running for 13140.633)
-2018-03-30 15:29:03,793  INFO AdventureApplication:48 ---- Starting AdventureApplication on PC-20171126RQUJ with PID 600 (D:\SpringCloud\Adventure\target\classes started by Administrator in D:\SpringCloud\Adventure)
-2018-03-30 15:29:03,794 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
-2018-03-30 15:29:03,794  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
-2018-03-30 15:29:04,792  INFO AdventureApplication:57 ---- Started AdventureApplication in 1.013 seconds (JVM running for 13271.796)
-2018-03-30 15:46:00,984  INFO AdventureApplication:48 ---- Starting AdventureApplication on PC-20171126RQUJ with PID 600 (D:\SpringCloud\Adventure\target\classes started by Administrator in D:\SpringCloud\Adventure)
-2018-03-30 15:46:00,984 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
-2018-03-30 15:46:00,984  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
-2018-03-30 16:05:11,038  INFO AdventureApplication:48 ---- Starting AdventureApplication on PC-20171126RQUJ with PID 8960 (D:\SpringCloud\Adventure\target\classes started by Administrator in D:\SpringCloud\Adventure)
-2018-03-30 16:05:11,040 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
-2018-03-30 16:05:11,040  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
-2018-03-30 16:05:38,131  INFO AdventureApplication:48 ---- Starting AdventureApplication on PC-20171126RQUJ with PID 6880 (D:\SpringCloud\Adventure\target\classes started by Administrator in D:\SpringCloud\Adventure)
-2018-03-30 16:05:38,133 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
-2018-03-30 16:05:38,133  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
-2018-03-30 16:06:19,626  INFO AdventureApplication:48 ---- Starting AdventureApplication on PC-20171126RQUJ with PID 8092 (D:\SpringCloud\Adventure\target\classes started by Administrator in D:\SpringCloud\Adventure)
-2018-03-30 16:06:19,627 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
-2018-03-30 16:06:19,628  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
-2018-03-30 16:07:48,578  INFO AdventureApplication:48 ---- Starting AdventureApplication on PC-20171126RQUJ with PID 8052 (D:\SpringCloud\Adventure\target\classes started by Administrator in D:\SpringCloud\Adventure)
-2018-03-30 16:07:48,579 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
-2018-03-30 16:07:48,580  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
-2018-03-30 16:07:53,277  INFO AdventureApplication:57 ---- Started AdventureApplication in 4.848 seconds (JVM running for 5.155)
-2018-03-30 16:11:49,315  INFO AdventureApplication:48 ---- Starting AdventureApplication on PC-20171126RQUJ with PID 8052 (D:\SpringCloud\Adventure\target\classes started by Administrator in D:\SpringCloud\Adventure)
-2018-03-30 16:11:49,315 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
-2018-03-30 16:11:49,316  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
-2018-03-30 16:11:50,873  INFO AdventureApplication:57 ---- Started AdventureApplication in 1.582 seconds (JVM running for 242.745)
-2018-03-30 16:16:33,048  INFO AdventureApplication:48 ---- Starting AdventureApplication on PC-20171126RQUJ with PID 9012 (D:\SpringCloud\Adventure\target\classes started by Administrator in D:\SpringCloud\Adventure)
-2018-03-30 16:16:33,049 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
-2018-03-30 16:16:33,050  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
-2018-03-30 16:16:37,893  INFO AdventureApplication:57 ---- Started AdventureApplication in 4.992 seconds (JVM running for 5.326)
-2018-03-30 16:16:51,915 DEBUG JWTLoginFilter:206 ---- Request is to process authentication
-2018-03-30 16:16:53,778 DEBUG findByName:145 ---- ==>  Preparing: SELECT * FROM user WHERE name = ? 
-2018-03-30 16:16:53,809 DEBUG findByName:145 ---- ==> Parameters: 测试(String)
-2018-03-30 16:16:53,938 DEBUG findByName:145 ---- <==      Total: 1
->>>>>>> c7152e8fe7ddd9f3b04d1c196370424242755f27
-2018-07-11 17:32:16,773  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 4760 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
-2018-07-11 17:32:16,776 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
-2018-07-11 17:32:16,777  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
-2018-07-11 17:32:27,609  INFO AdventureApplication:57 ---- Started AdventureApplication in 11.2 seconds (JVM running for 11.901)
+2018-07-17 09:47:53,005  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 2864 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-07-17 09:47:53,014 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-07-17 09:47:53,015  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-07-17 09:48:03,628  INFO AdventureApplication:57 ---- Started AdventureApplication in 10.961 seconds (JVM running for 11.563)
+2018-07-17 16:40:54,725 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-07-17 16:40:54,765 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-07-17 16:40:54,796 DEBUG queryList:145 ---- <==      Total: 10
+2018-07-17 16:40:54,859 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-07-17 16:40:54,860 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-07-17 16:40:54,873 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-07-17 16:44:25,824  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 2864 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-07-17 16:44:25,825 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-07-17 16:44:25,825  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-07-17 16:44:31,733  INFO AdventureApplication:57 ---- Started AdventureApplication in 6.039 seconds (JVM running for 24997.927)
+2018-07-17 16:46:12,437 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-07-17 16:46:12,437 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-07-17 16:46:12,464 DEBUG queryList:145 ---- <==      Total: 10
+2018-07-17 16:46:12,465 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-07-17 16:46:12,466 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-07-17 16:46:12,479 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-07-17 16:46:35,621  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 2864 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-07-17 16:46:35,621 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-07-17 16:46:35,621  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-07-17 16:46:38,799  INFO AdventureApplication:57 ---- Started AdventureApplication in 3.217 seconds (JVM running for 25124.992)
+2018-07-17 16:47:39,511  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 2864 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-07-17 16:47:39,512 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-07-17 16:47:39,512  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-07-17 16:47:42,327  INFO AdventureApplication:57 ---- Started AdventureApplication in 2.861 seconds (JVM running for 25188.52)
+2018-07-17 16:47:46,742 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-07-17 16:47:46,743 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-07-17 16:47:46,764 DEBUG queryList:145 ---- <==      Total: 10
+2018-07-17 16:47:46,765 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-07-17 16:47:46,766 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-07-17 16:47:46,775 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-07-17 16:47:53,558 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-07-17 16:47:53,560 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-07-17 16:47:53,587 DEBUG queryList:145 ---- <==      Total: 10
+2018-07-17 16:47:53,591 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-07-17 16:47:53,593 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-07-17 16:47:53,604 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-07-17 16:48:26,258 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-07-17 16:48:26,260 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-07-17 16:48:26,278 DEBUG queryList:145 ---- <==      Total: 10
+2018-07-17 16:48:26,279 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-07-17 16:48:26,280 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-07-17 16:48:26,289 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-07-17 16:48:30,281 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-07-17 16:48:30,283 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-07-17 16:48:30,302 DEBUG queryList:145 ---- <==      Total: 10
+2018-07-17 16:48:30,303 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-07-17 16:48:30,304 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-07-17 16:48:30,316 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-07-17 16:48:32,798 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-07-17 16:48:32,800 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-07-17 16:48:32,829 DEBUG queryList:145 ---- <==      Total: 10
+2018-07-17 16:48:32,830 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-07-17 16:48:32,830 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-07-17 16:48:32,841 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-07-17 16:51:54,970  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 2864 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-07-17 16:51:54,970 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-07-17 16:51:54,970  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-07-17 16:51:57,512  INFO AdventureApplication:57 ---- Started AdventureApplication in 2.584 seconds (JVM running for 25443.703)
+2018-07-17 16:52:13,104 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-07-17 16:52:13,104 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-07-17 16:52:13,125 DEBUG queryList:145 ---- <==      Total: 10
+2018-07-17 16:52:13,126 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-07-17 16:52:13,127 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-07-17 16:52:13,138 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-07-17 16:58:50,818 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-07-17 16:58:50,819 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-07-17 16:58:50,837 DEBUG queryList:145 ---- <==      Total: 10
+2018-07-17 16:58:50,839 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-07-17 16:58:50,840 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-07-17 16:58:50,855 DEBUG queryTotal:145 ---- <==      Total: 1

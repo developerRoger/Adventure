@@ -42,6 +42,11 @@ var vm = new Vue({
                 shadeClose: false,
                 content: ['img/login/demo-1-bg.jpg', 'no']
             });
+        },
+        //简易版接口文档
+        swagger:function(){
+        	vm.navTitle="swagger";
+        	vm.main = "swagger-ui.html";
         }
     }
 });
@@ -53,17 +58,15 @@ routerList(router, menus);
 router.start();
 
 function routerList(router, menus){
+	console.log("------");
 	for(var index in menus){
 		router.add('#'+menus[index], function() {
 			var url = window.location.hash;
-
 			//替换iframe的url
 			vm.main = url.replace('#', '');
-
 			//导航菜单展开
 			$(".treeview-menu li").removeClass("active");
 			$("a[href='"+url+"']").parents("li").addClass("active");
-
 			vm.navTitle = $("a[href='"+url+"']").text();
 		});
 	}
