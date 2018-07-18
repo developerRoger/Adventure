@@ -1,0 +1,8 @@
+2018-07-12 11:08:56,471  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 2984 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-07-12 11:08:56,481 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-07-12 11:08:56,483  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-07-12 11:09:07,708  INFO AdventureApplication:57 ---- Started AdventureApplication in 11.601 seconds (JVM running for 12.18)
+2018-07-12 16:36:47,943  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 896 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-07-12 16:36:47,946 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-07-12 16:36:47,946  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-07-12 16:36:59,562  INFO AdventureApplication:57 ---- Started AdventureApplication in 11.976 seconds (JVM running for 12.623)
