@@ -5,8 +5,8 @@
 	<!-- 打包后状态 -->
 	<groupId>com.firstTry</groupId>
 	<artifactId>Adventure</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<version>1.0</version>
+	<packaging>jar</packaging>
 
 	<name>Adventure</name>
 	<description>Demo project for Spring Boot</description>
@@ -21,7 +21,7 @@
 	<repositories><!-- 阿里云镜像代码库 -->
 		<repository>
 			<id>maven-ali</id>
-			<url>http://maven.aliyun.com/nexus/content/groups/public//</url>
+			<url>http://maven.aliyun.com/nexus/content/groups/public/</url>
 			<releases>
 				<enabled>true</enabled>
 			</releases>
@@ -65,8 +65,8 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 			<!-- 移除嵌入式tomcat插件 -->
-			<!-- <exclusions> <exclusion> <groupId>org.springframework.boot</groupId> 
-				<artifactId>spring-boot-starter-tomcat</artifactId> </exclusion> </exclusions> -->
+		<!-- 	<exclusions> <exclusion> <groupId>org.springframework.boot</groupId> 
+				<artifactId>spring-boot-starter-tomcat</artifactId> </exclusion> </exclusions>  -->
 		</dependency>
 		<!-- redis -->
 		<dependency>
@@ -127,8 +127,8 @@
 			<version>0.7.0</version>
 		</dependency>
 		<!-- 打包时排除tomcat. -->
-		<!-- <dependency> <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-starter-tomcat</artifactId> 
-			<scope>provided</scope> </dependency> -->
+		<!--  <dependency> <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-starter-tomcat</artifactId> 
+			<scope>provided</scope> </dependency>  -->
 		<!--json-lib -->
 		<dependency>
 			<groupId>net.sf.json-lib</groupId>
@@ -198,7 +198,25 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<!-- Docker maven plugin -->
+			<plugin>
+				<groupId>com.spotify</groupId>
+				<artifactId>docker-maven-plugin</artifactId>
+				<version>1.0.0</version>
+				<configuration>
+					<!-- 镜像名称 -->
+					<imageName>adventure/docker</imageName>
+					<dockerDirectory>src/main/resources</dockerDirectory>
+					<resources>
+						<resource>
+							<targetPath>/</targetPath>
+							<directory>${project.build.directory}</directory>
+							<include>${project.build.finalName}.jar</include>
+						</resource>
+					</resources>
+				</configuration>
+			</plugin>
+			<!-- Docker maven plugin -->
 		</plugins>
 	</build>
-
 </project>

@@ -30,7 +30,8 @@ var vm = new Vue({
 	el:'#rrapp',
 	data:{
 		main:"main.html",
-        navTitle:"欢迎页"
+        navTitle:"欢迎页",
+        map:{}
 	},
     methods: {
         donate: function () {
@@ -47,6 +48,25 @@ var vm = new Vue({
         swagger:function(){
         	vm.navTitle="swagger";
         	vm.main = "swagger-ui.html";
+        },
+        //获取服务端数据
+        getMenu:function(){
+        	var _this=this;
+        	      $.ajax({
+        		      //几个参数需要注意一下
+        		        type: "POST",//方法类型
+        		        dataType: "json",//服务端接收的数据类型
+        		        url: "/adventure/application/list",
+        		        contentType: "application/json",
+        				data: null,
+        		        success: function (result) {
+        		          console.log(result);//打印服务端返回的数据(调试用)
+        		       debugger
+        		        },
+        		        error : function() {
+        		         alert("异常!");
+        		        }
+        		      });
         }
     }
 });

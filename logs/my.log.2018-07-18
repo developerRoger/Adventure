@@ -1,0 +1,16 @@
+2018-07-18 11:45:04,182  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 7076 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-07-18 11:45:04,192 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-07-18 11:45:04,193  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-07-18 11:45:20,322  INFO AdventureApplication:57 ---- Started AdventureApplication in 16.506 seconds (JVM running for 17.297)
+2018-07-18 18:16:27,697  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 6864 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-07-18 18:16:27,700 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-07-18 18:16:27,701  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-07-18 18:16:40,006  INFO AdventureApplication:57 ---- Started AdventureApplication in 12.697 seconds (JVM running for 13.333)
+2018-07-18 18:19:39,862  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 5936 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-07-18 18:19:39,865 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-07-18 18:19:39,866  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-07-18 18:19:50,447  INFO AdventureApplication:57 ---- Started AdventureApplication in 10.948 seconds (JVM running for 11.576)
+2018-07-18 18:20:42,749  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 5936 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-07-18 18:20:42,750 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-07-18 18:20:42,750  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-07-18 18:20:46,092  INFO AdventureApplication:57 ---- Started AdventureApplication in 3.397 seconds (JVM running for 67.22)

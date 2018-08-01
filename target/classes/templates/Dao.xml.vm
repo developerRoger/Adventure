@@ -6,7 +6,7 @@
 	<!-- 可根据自己的需求，是否要使用 -->
     <resultMap type="${package}.entity.${className}Entity" id="${classname}Map">
 #foreach($column in $columns)
-        <result property="${column.attrname}" column="${column.columnName}"/>
+        <result property="${column.attrName}" column="${column.columnName}"/>
 #end
     </resultMap>
 
@@ -29,6 +29,7 @@
 	
  	<select id="queryTotal" resultType="java.lang.Integer">
 		select count(1) from ${tableName} 
+		 <include refid="commonQuery"/>
 	</select>
 	 
 	 	<!-- 条件：分页 -->
@@ -42,7 +43,7 @@
     <select id="query" resultType="${className}Entity" parameterType="java.util.Map">
         SELECT
 		#foreach($column in $columns)
-            a.${column.columnName} ${column.attrname}#if($velocityCount<$columns.size()),#end
+            a.${column.columnName} ${column.attrName}#if($velocityCount<$columns.size()),#end
 
 		#end
         FROM ${tableName} a
@@ -59,8 +60,8 @@
 				AND a.${column.columnName} = #{${column.attrname}}
 			</if>
 				#else
-		<if test="${column.attrname}!=null">
-			AND a.${column.columnName} = #{${column.attrname}}
+		<if test="${column.attrName}!=null">
+			AND a.${column.columnName} = #{${column.attrName}}
 		</if>
 				#end
 			#end
@@ -82,7 +83,7 @@
 		(
 #foreach($column in $columns)
 #if($column.columnName != $pk.columnName || $pk.extra != 'auto_increment')
-			#{$column.attrname}#if($velocityCount != $columns.size()), #end
+			#{$column.attrName}#if($velocityCount != $columns.size()), #end
 
 #end			
 #end
@@ -95,7 +96,7 @@
 		<set>
 #foreach($column in $columns)
 #if($column.columnName != $pk.columnName)
-			<if test="$column.attrname != null">`$column.columnName` = #{$column.attrname}#if($velocityCount != $columns.size()), #end</if>
+			<if test="$column.attrName != null">`$column.columnName` = #{$column.attrName}#if($velocityCount != $columns.size()), #end</if>
 #end
 #end
 		</set>

@@ -1,0 +1,7 @@
+2018-07-23 09:59:58,737  INFO AdventureApplicationTests:48 ---- Starting AdventureApplicationTests on BS1HDX84D9084A0 with PID 6100 (started by Administrator in E:\Adventure\Adventure)
+2018-07-23 09:59:58,744 DEBUG AdventureApplicationTests:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-07-23 09:59:58,744  INFO AdventureApplicationTests:593 ---- No active profile set, falling back to default profiles: default
+2018-07-23 10:00:13,582  INFO AdventureApplicationTests:57 ---- Started AdventureApplicationTests in 15.919 seconds (JVM running for 17.867)
+2018-07-23 10:00:17,342 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc 
+2018-07-23 10:00:17,368 DEBUG queryList:145 ---- ==> Parameters: 
+2018-07-23 10:00:17,613 DEBUG queryList:145 ---- <==      Total: 193

@@ -60,4 +60,8 @@ public class DefaultView {
 	public String narcotics(){
 		return "html/Narcotics";
 	}
+	@RequestMapping("/preface")
+	public String preface(){
+		return "html/preface";
+	}
 }

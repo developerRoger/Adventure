@@ -19,6 +19,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
@@ -30,9 +31,12 @@ public class AdventureTest {
 //		int i=1;
 //		i++;
 //		System.out.println(i);
-		 SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
-	         System.out.println(simpleDateFormat.format(new Date()));
-	         
+/*		 SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+	         System.out.println(simpleDateFormat.format(new Date()));*/
+//	         System.out.println(new Date().getTime()/1000+15-new Date().getTime()/1000);
+			 ConcurrentHashMap<String,Object> map=new ConcurrentHashMap<>();
+	         map.put("1111","22222");
+	         map.remove("666");
 	/*	UserTest o=new UserTest();
 		o.setId(1l);
 		o.setMobie("111111111111");

@@ -5,7 +5,7 @@
 	<!-- 打包后状态 -->
 	<groupId>com.firstTry</groupId>
 	<artifactId>Adventure</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0</version>
 	<packaging>war</packaging>
 
 	<name>Adventure</name>
@@ -21,7 +21,7 @@
 	<repositories><!-- 阿里云镜像代码库 -->
 		<repository>
 			<id>maven-ali</id>
-			<url>http://maven.aliyun.com/nexus/content/groups/public//</url>
+			<url>http://maven.aliyun.com/nexus/content/groups/public/</url>
 			<releases>
 				<enabled>true</enabled>
 			</releases>
@@ -65,8 +65,8 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 			<!-- 移除嵌入式tomcat插件 -->
-			<!-- <exclusions> <exclusion> <groupId>org.springframework.boot</groupId> 
-				<artifactId>spring-boot-starter-tomcat</artifactId> </exclusion> </exclusions> -->
+			<exclusions> <exclusion> <groupId>org.springframework.boot</groupId> 
+				<artifactId>spring-boot-starter-tomcat</artifactId> </exclusion> </exclusions> 
 		</dependency>
 		<!-- redis -->
 		<dependency>
@@ -127,8 +127,8 @@
 			<version>0.7.0</version>
 		</dependency>
 		<!-- 打包时排除tomcat. -->
-		<!-- <dependency> <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-starter-tomcat</artifactId> 
-			<scope>provided</scope> </dependency> -->
+		 <dependency> <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-starter-tomcat</artifactId> 
+			<scope>provided</scope> </dependency> 
 		<!--json-lib -->
 		<dependency>
 			<groupId>net.sf.json-lib</groupId>

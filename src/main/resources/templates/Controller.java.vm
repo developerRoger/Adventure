@@ -22,7 +22,7 @@ import ${mainPath}.Adventure.utils.R;
 
 /**
  * ${comments}
- * 
+ * 控制层
  * @author ${author}
  * @email ${email}
  * @date ${datetime}
@@ -36,13 +36,13 @@ public class ${className}Controller {
 	/**	
 	 * 列表
 	 */
-	@RequestMapping("/list")
+	@RequestMapping("/queryList")
 //	@RequiresPermissions("${moduleName}:${pathName}:list")
-	public R list(@RequestParam Map<String, Object> params){
+	public R queryList(@RequestParam Map<String, Object> params){
 		//查询列表数据
         Query query = new Query(params);
 
-		List<${className}Entity> ${classname}List = ${classname}Service.queryList(query);
+		List<${className}Entity> ${classname}List = ${classname}Service.query(query);
 		int total = ${classname}Service.queryTotal(query);
 		
 		PageUtils pageUtil = new PageUtils(${classname}List, total, query.getLimit(), query.getPage());
@@ -50,6 +50,16 @@ public class ${className}Controller {
 		return R.ok().put("page", pageUtil);
 	}
 	
+	/**	
+	 * 获取所有列表
+	 */
+	@RequestMapping("/list")
+//	@RequiresPermissions("${moduleName}:${pathName}:list")
+	public List<${className}Entity> list(){
+		List<${className}Entity> ${classname}List = ${classname}Service.query(null);
+		
+		return ${classname}List;
+	}
 	
 	/**
 	 * 信息
@@ -90,6 +100,7 @@ public class ${className}Controller {
 	@RequestMapping("/delete")
 //	@RequiresPermissions("${moduleName}:${pathName}:delete")
 	public R delete(@RequestBody ${pk.attrType}[] ${pk.attrname}s){
+	   for(int a=0;a<${pk.attrname}s.length; a++)
 		${classname}Service.deleteBatch(${pk.attrname}s);
 		
 		return R.ok();

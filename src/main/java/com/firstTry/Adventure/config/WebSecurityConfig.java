@@ -31,9 +31,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	 * 静态文件也要设置
 	 */
 	private static final String[] PASS_URL = { 
+		//控制层拦截
 		"/",
 		"/index",
 		"/sys/generator/*",
+		"/adventure/application/*",
 		//访问静态资源文件去除拦截
 		"/js/**",
 		"/css/**",
@@ -47,6 +49,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		"/**/**.html",
 		"/xinxinniannian",
 		"/narcotics",
+		"/preface",
 		"/**.png",
 		"/webjars/**",
 		"/swagger-resources/**",

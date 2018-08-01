@@ -11,13 +11,8 @@ import org.apache.ibatis.annotations.Mapper;
  * @date ${datetime}
  */
 @Mapper
-public interface ${className}Dao {
-	   // 通用条件查询
-    List<${className}Entity> query(Map<String, Object> queryMap);
-    // 按主键删除
-    int deleteByKey(Map<String, Object> keyMap);
-    // 单条保存
-	int save(${className}Entity ${classname});
-	// 按主键更新全部字段
-	int update(${className}Entity ${classname});
+public interface ${className}Dao extends BaseDao<${className}Entity>{
+//BaseDao已实现基础方法
+		//根据主键查找
+		ApplicationEntity queryObject(${pk.attrType} ${pk.attrname});
 }
