@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="${package}.mapper.${className}Dao">
+<mapper namespace="${package}.mapper.${className}Mapper">
 
 	<!-- 可根据自己的需求，是否要使用 -->
     <resultMap type="${package}.entity.${className}Entity" id="${classname}Map">
 #foreach($column in $columns)
-        <result property="${column.attrName}" column="${column.columnName}"/>
+        <result property="${column.attrname}" column="${column.columnName}"/>
 #end
     </resultMap>
 
@@ -43,7 +43,7 @@
     <select id="query" resultType="${className}Entity" parameterType="java.util.Map">
         SELECT
 		#foreach($column in $columns)
-            a.${column.columnName} ${column.attrName}#if($velocityCount<$columns.size()),#end
+            a.${column.columnName} ${column.attrname}#if($velocityCount<$columns.size()),#end
 
 		#end
         FROM ${tableName} a
@@ -60,8 +60,8 @@
 				AND a.${column.columnName} = #{${column.attrname}}
 			</if>
 				#else
-		<if test="${column.attrName}!=null">
-			AND a.${column.columnName} = #{${column.attrName}}
+		<if test="${column.attrname}!=null">
+			AND a.${column.columnName} = #{${column.attrname}}
 		</if>
 				#end
 			#end
@@ -83,7 +83,7 @@
 		(
 #foreach($column in $columns)
 #if($column.columnName != $pk.columnName || $pk.extra != 'auto_increment')
-			#{$column.attrName}#if($velocityCount != $columns.size()), #end
+			#{$column.attrname}#if($velocityCount != $columns.size()), #end
 
 #end			
 #end
@@ -96,7 +96,7 @@
 		<set>
 #foreach($column in $columns)
 #if($column.columnName != $pk.columnName)
-			<if test="$column.attrName != null">`$column.columnName` = #{$column.attrName}#if($velocityCount != $columns.size()), #end</if>
+			<if test="$column.attrname != null">`$column.columnName` = #{$column.attrname}#if($velocityCount != $columns.size()), #end</if>
 #end
 #end
 		</set>

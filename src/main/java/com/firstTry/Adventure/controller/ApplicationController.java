@@ -1,5 +1,6 @@
 package com.firstTry.Adventure.controller;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.firstTry.Adventure.entity.ApplicationEntity;
 import com.firstTry.Adventure.service.ApplicationService;
+import com.firstTry.Adventure.service.MenuService;
 import com.firstTry.Adventure.utils.PageUtils;
 import com.firstTry.Adventure.utils.Query;
 import com.firstTry.Adventure.utils.R;
@@ -29,13 +31,15 @@ import com.firstTry.Adventure.utils.R;
 public class ApplicationController {
 	@Autowired
 	private ApplicationService applicationService;
-
+	
+	@Autowired
+	private MenuService menuService;//菜单
 	/**
 	 * 列表
 	 */
 	@RequestMapping("/queryList")
 	// @RequiresPermissions("Adventure:application:list")
-	public R list(@RequestParam Map<String, Object> params) {
+	public R queryList(@RequestParam Map<String, Object> params) {
 		Query query;
 		if (params.size()==0) {
 			query = null;
@@ -52,6 +56,21 @@ public class ApplicationController {
 		return R.ok().put("page", pageUtil);
 	}
 	
+	/**	
+	 * 获取所有列表
+	 */
+	@RequestMapping("/list")
+//	@RequiresPermissions("adventure:application:list")
+	public List<ApplicationEntity> list(){
+		List<ApplicationEntity> applicationList = applicationService.query(null);
+		//查询条件
+		Map<String,Object> queryMap=new HashMap<>();
+		for(ApplicationEntity app:applicationList){
+			queryMap.put("appCode", app.getCode());
+			app.setListMenu(menuService.query(queryMap));
+		}
+		return applicationList;
+	}
 
 	/**
 	 * 信息

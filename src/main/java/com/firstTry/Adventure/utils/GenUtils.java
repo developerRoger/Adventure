@@ -32,14 +32,14 @@ public class GenUtils {
 
 	public static List<String> getTemplates() {
 		List<String> templates = new ArrayList<String>();
-//		templates.add("templates/Entity.java.vm");
-//		templates.add("templates/Dao.java.vm");
-//		templates.add("templates/Dao.xml.vm");
-//		templates.add("templates/Service.java.vm");
-//		templates.add("templates/ServiceImpl.java.vm");
+		templates.add("templates/Entity.java.vm");
+		templates.add("templates/Dao.java.vm");
+		templates.add("templates/Dao.xml.vm");
+		templates.add("templates/Service.java.vm");
+		templates.add("templates/ServiceImpl.java.vm");
 		templates.add("templates/Controller.java.vm");
-//		templates.add("templates/list.html.vm");
-//		templates.add("templates/list.js.vm");
+		templates.add("templates/list.html.vm");
+		templates.add("templates/list.js.vm");
 		// templates.add("templates/menu.sql.vm");
 		// templates.add("templates/TDDL.vm");
 		return templates;
@@ -187,7 +187,7 @@ public class GenUtils {
 
 		if (template.contains("Dao.java.vm")) {
 			return "main" + File.separator + "resources" + File.separator + "dao" + File.separator + className
-					+ "Dao.java";
+					+ "Mapper.java";
 		}
 
 		if (template.contains("Service.java.vm")) {

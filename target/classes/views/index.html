@@ -26,7 +26,6 @@
 	  <div style="float:left;color:#fff;padding:15px 10px;">代码的搬运工</div>
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
-        	<li><a href="#" @click="getMenu" target="_parent"><i class="fa fa-home"></i> &nbsp;格局</a></li>
           <li><a href="#" @click="swagger" target="_parent"><i class="fa fa-home"></i> &nbsp;Swagger2</a></li>
 		  <li><a href="#" target="_blank"><i class="fa fa-lock"></i> &nbsp;项目文档</a></li>
 		</ul>
@@ -43,14 +42,19 @@
       <!-- /.search form -->
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu">
-        <li class="header">导航菜单</li>
-          <li class="active">
+        <li class="header"><h4>导航菜单</h4></li>
+<!--             <li>
               <a href="javascript:;"><i class="fa fa-cog"></i><span>代码生成器</span><i class="fa fa-angle-left pull-right"></i></a>
-              <ul class="treeview-menu menu-open" style="display: block;">
+              <ul class="treeview-menu menu-open" style="display: none;">
                   <li class="active"><a href="#main.html"><i class="fa fa-rocket"></i> 控制台</a></li>
                   <li><a href="#generator.html"><i class="fa fa-rocket"></i> 数据生成列表</a></li>
               </ul>
-              
+          </li> -->
+          <li  v-for="(a,index) in applicationLists">
+              <a href="javascript:;"><i class="fa fa-cog"></i><span>{{a.name}}</span><i class="fa fa-angle-left pull-right"></i></a>
+              <ul class="treeview-menu menu-open" style="display: none;">
+                  <li class="active" v-for="(l,index1) in a.listMenu"><a v-bind:href="'#'+l.url"><i class="fa fa-rocket"></i> {{l.name}}</a></li>
+              </ul>
           </li>
       </ul>
     </section>

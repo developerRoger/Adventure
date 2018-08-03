@@ -101,7 +101,7 @@ public class ${className}Controller {
 //	@RequiresPermissions("${moduleName}:${pathName}:delete")
 	public R delete(@RequestBody ${pk.attrType}[] ${pk.attrname}s){
 	   for(int a=0;a<${pk.attrname}s.length; a++)
-		${classname}Service.deleteBatch(${pk.attrname}s);
+		${classname}Service.delete(${pk.attrname}s[a]);
 		
 		return R.ok();
 	}

@@ -1,5 +1,5 @@
 package ${package}.mapper;
-
+import com.firstTry.Adventure.config.BaseDao;
 import ${package}.entity.${className}Entity;
 import org.apache.ibatis.annotations.Mapper;
 
@@ -14,5 +14,5 @@ import org.apache.ibatis.annotations.Mapper;
 public interface ${className}Dao extends BaseDao<${className}Entity>{
 //BaseDao已实现基础方法
 		//根据主键查找
-		ApplicationEntity queryObject(${pk.attrType} ${pk.attrname});
+		${className}Entity queryObject(${pk.attrType} ${pk.attrname});
 }

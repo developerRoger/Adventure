@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Map;
 
-import ${package}.dao.${className}Dao;
+import ${package}.mapper.${className}Mapper;
 import ${package}.entity.${className}Entity;
 import ${package}.service.${className}Service;
 

@@ -25,6 +25,8 @@ public interface BaseDao<T> {
 	List<T> query(Map<String, Object> queryMap);
 	//
 	void delete(String code);
+	//
+	void delete(Long id);
 	// 查找所有行数
 	int queryTotal(Map<String, Object> map);
 }

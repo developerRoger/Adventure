@@ -2,6 +2,7 @@ package com.firstTry.Adventure.entity;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 
 /**
@@ -32,6 +33,15 @@ public class ApplicationEntity implements Serializable {
 	private String updateBy;
 	//更新时间
 	private Date updateTime;
+	//菜单
+	List<MenuEntity> listMenu;
+	
+	public List<MenuEntity> getListMenu() {
+		return listMenu;
+	}
+	public void setListMenu(List<MenuEntity> listMenu) {
+		this.listMenu = listMenu;
+	}
 	public String getCode() {
 		return code;
 	}
@@ -93,7 +103,6 @@ public class ApplicationEntity implements Serializable {
 	public String toString() {
 		return "ApplicationEntity [code=" + code + ", name=" + name + ", status=" + status + ", description="
 				+ description + ", showOrder=" + showOrder + ", createBy=" + createBy + ", createTime=" + createTime
-				+ ", updateBy=" + updateBy + ", updateTime=" + updateTime + "]";
+				+ ", updateBy=" + updateBy + ", updateTime=" + updateTime + ", listMenu=" + listMenu + "]";
 	}
-	
 }

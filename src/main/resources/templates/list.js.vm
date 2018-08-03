@@ -119,5 +119,9 @@ var vm = new Vue({
                 page:page
             }).trigger("reloadGrid");
 		}
+	},
+	created:function(){
+	 var _this=this;
+	 console.log("welcome go  in");
 	}
 });
