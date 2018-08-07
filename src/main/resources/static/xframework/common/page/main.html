@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>沃云保核心业务管理平台</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="/xframework/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/xframework/common/page/main.css">
+<link rel="stylesheet" type="text/css" href="/xframework/common/compnt/x-tabs.css">
+<link rel="stylesheet" type="text/css" href="/xframework/common/compnt/x-navbar.css">
+<link rel="stylesheet" type="text/css" href="/xframework/common/compnt/x-tree.css">
+<script type="text/javascript" src="/xframework/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="/xframework/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/xframework/vue/vue.min.js"></script>
+<script type="text/javascript" src="/xframework/common/util/x-framework.js"></script>
+<script type="text/javascript" src="/xframework/common/compnt/x-tabs.js"></script>
+<script type="text/javascript" src="/xframework/common/compnt/x-navbar.js"></script>
+<script type="text/javascript" src="/xframework/common/compnt/x-tree.js"></script>
+<script type="text/javascript" src="/xframework/common/page/main.js"></script>
+</head>
+<body>
+	<div id="navbarArea" class="x-main-navbar x-main-navbar-bg x-main-table">
+		<div id="logo" class="x-main-logo x-main-logo-bg x-main-cell"></div>
+		<div id="applications" class="x-navbar"></div>
+		<div class="x-main-logout">
+			<span id="btnHome"><i class="glyphicon glyphicon-home"></i>&nbsp;主页</span>
+			<span id="btnModifyPassword"><i class="glyphicon glyphicon-wrench"></i>&nbsp;修改密码</span>
+			<span id="btnLogout"><i class="glyphicon glyphicon-circle-arrow-right"></i>&nbsp;退出系统</span>
+		</div>
+	</div> <!-- title end -->
+	
+	<div id="menusArea" class="x-main-menus x-main-menus-bg">
+		<div id="menuTree" class="x-tree"></div>
+	</div> <!-- menus end -->
+	
+	<div id="operateArea" class="x-main-operate">
+		<div id="operatePages" class="x-tabs">
+			<xtabs></xtabs>
+		</div>
+	</div> <!-- operate end -->
+	<div class="x-main-loading text-center" style="display: none">
+		<div class="content">数据加载中, 请稍后 ...</div>
+	</div>
+</body>
+</html>

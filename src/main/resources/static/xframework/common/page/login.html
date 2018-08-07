@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>用户登录</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="/xframework/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="/xframework/common/page/login.css" />
+<link rel="shortcut icon" href="/xframework/common/img/favicon.ico" type="image/x-icon" />
+<script type="text/javascript" src="/xframework/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="/xframework/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/xframework/common/util/x-framework.js"></script>
+<script type="text/javascript" src="/xframework/common/page/login.js"></script>
+</head>
+<body>
+	<div class="x-login-container x-login-table">
+		<div id="login-title" class="x-login-table x-login-title text-left">
+			<div id="logo" class="x-login-cell x-login-logo x-login-font18">
+				<img src="/xframework/common/img/logo.png" height="">
+			</div>
+			<div id="link" class="x-login-cell x-login-link text-right">
+				<a href="#">沃云保官网</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">帮助与文档</a>
+			</div>
+		</div>
+		<div id="login-body" class="x-login-table x-login-body">
+			<div class="form-horizontal x-login-cell" role="form">
+				<div class="col-lg-4 col-lg-offset-4 x-login-window">
+					<div class="input-group col-lg-10 col-lg-offset-1 text-center">
+						<h3 >业务管理平台</h3><hr>
+					</div>
+					<div class="input-group col-lg-10 col-lg-offset-1 x-login-margin8">
+						<span class="input-group-addon"> <span class="glyphicon glyphicon-user x-login-font14"></span>
+						</span> <input id="userName" type="text" class="form-control x-login-font14" placeholder="帐号">
+					</div>
+					<div class="input-group col-lg-10 col-lg-offset-1 x-login-margin8">
+						<span class="input-group-addon"> <span class="glyphicon glyphicon-lock x-login-font14"></span>
+						</span> <input id="password" type="password" class="form-control x-login-font14" placeholder="密码">
+					</div>
+					<div class="input-group col-lg-10 col-lg-offset-1 x-login-margin8">
+						<input type="button" id="login_btn" class="btn btn-info col-lg-12 x-login-font14" data-loading-text="Loading..." value="登 录">
+					</div>
+					<div id="login-info" class="col-lg-12 x-login-info x-login-font14 text-center"></div>
+				</div>
+			</div>
+		</div>
+		<div id="login-bottom" class="x-login-table x-login-bottom text-center">
+			<div class="x-login-cell">© 2017 woyunbao.com 版权所有 ICP证：1234567890</div>
+		</div>
+	</div>
+	<div class="x-login-loading text-center" style="display: none">
+		<div class="content">登录中，请稍后 ...</div>
+	</div>
+</body>
+</html>

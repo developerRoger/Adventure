@@ -1,0 +1,49 @@
+div.x-tree {
+	padding: 0px;
+	margin: 0px;
+	font-size: 12px;
+	font-weight: normal;
+	font-family: "\5FAE\8F6F\96C5\9ED1";
+}
+
+ul.x-tree-group {
+	padding: 0px;
+	margin: 0px;
+	list-style: none;
+}
+
+li.x-tree-node {
+	padding-left: 16px;
+	padding-top: 8px;
+	padding-bottom: 0px;
+	margin: 0px;
+}
+
+a.x-tree-node {
+	color: #fff;
+	text-decoration: none;
+}
+
+a.x-tree-node-active {
+	color: #ffa64d;
+}
+
+span.x-tree-icon {
+	display: inline-bolck;
+	color: #4dc5ff;
+}
+
+span.x-tree-icon-folder {
+	padding-right: 6px;
+	font-size: 12px;
+}
+
+span.x-tree-icon-node {
+	padding-right: 6px;
+	font-size: 12px;
+}
+
+.x-tree-middle {
+	display: inline-bolck;
+	vertical-align: middle !important;
+}

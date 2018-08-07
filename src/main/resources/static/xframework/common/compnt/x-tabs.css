@@ -1,0 +1,68 @@
+div.x-tab-title {
+	height: 36px;
+	padding-top: 6px;
+	background-color: #666;
+}
+
+div.x-tab-title ul {
+	float: left;
+	display: table;
+	vertical-align: bottom;
+	height: 30px;
+	padding: 0px;
+	margin: 0px;
+	margin-left: 4px;
+	list-style: none;
+}
+
+div.x-tab-title ul li {
+	display: table-cell;
+	vertical-align: middle;
+	padding-left: 10px;
+	padding-right: 20px;
+	cursor: default;
+	color: #fff;
+	border-radius: 2px 2px 0px 0px !important;
+	-moz-border-radius: 2px 2px 0px 0px !important;
+	-webkit-border-radius: 2px 2px 0px 0px !important;
+}
+
+div.x-tab-title ul li.active {
+	color: #444;
+	height: 30px;
+	color: #ec7600;
+	background-color: #fff;
+}
+
+div.x-tab-title ul li:hover {
+	color: #ec7600;
+	background-color: #fff;
+}
+
+div.x-tab-close {
+	float: right;
+	position: relative;
+	margin-top: -14px;
+	margin-right: -16px;
+	height: 10px;
+	width: 10px;
+	background-image: url('./icon/close.gif');
+	background-repeat: no-repeat;
+	background-size: 10px;
+	background-position: 50% 50%;
+	border-radius: 5px 5px 5px 5px !important;
+	-moz-border-radius: 5px 5px 5px 5px !important;
+	-webkit-border-radius: 2px 2px 2px 2px !important;
+}
+
+div.x-tab-close:hover {
+	border: 2px solid #ec7600;
+}
+
+div.x-tab-title iframe.hide {
+	display: none;
+}
+
+div.x-tab-title iframe.show {
+	display: '';
+}

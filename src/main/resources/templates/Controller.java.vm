@@ -64,9 +64,9 @@ public class ${className}Controller {
 	/**
 	 * 信息
 	 */
-	@RequestMapping("/info/{${pk.attrname}}")
+	@RequestMapping("/info")
 //	@RequiresPermissions("${moduleName}:${pathName}:info")
-	public R info(@PathVariable("${pk.attrname}") ${pk.attrType} ${pk.attrname}){
+	public R info(${pk.attrType} ${pk.attrname}){
 		${className}Entity ${classname} = ${classname}Service.queryObject(${pk.attrname});
 		
 		return R.ok().put("${classname}", ${classname});

@@ -1,0 +1,123 @@
+body {
+	padding: 0px;
+	margin: 0px;
+	font-family: "\5FAE\8F6F\96C5\9ED1" !important;
+}
+
+/* container */
+div.x-login-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+}
+
+div.x-login-table {
+	display: table;
+	vertical-align: middle;
+}
+
+div.x-login-cell {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+/* login-title */
+div.x-login-title {
+	height: 8%;
+	min-height: 50px;
+	width: 100%;
+	color: #fff;
+	padding-left: 10px;
+	padding-right: 10px;
+	background-color: #428bca;
+}
+
+div.x-login-logo {
+	height: 100%;
+	width: 20%;
+	min-width: 300px;
+}
+
+div.x-login-link {
+	height: 100%;
+	width: 80%;
+	min-width: 200px;
+}
+
+div.x-login-link a {
+	color: #fff;
+}
+
+/* login-body */
+div.x-login-body {
+	height: 86%;
+	min-height: 400px;
+	width: 100%;
+	background-color: #fff;
+}
+
+div.x-login-window {
+	color: #fff;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	background-color: #444;
+	border-radius: 6px 6px 6px 6px !important;
+	-moz-border-radius: 6px 6px 6px 6px !important;
+	-webkit-border-radius: 6px 6px 6px 6px !important;
+}
+
+div.x-login-info {
+	height: 12px;
+	color : #ff0000;
+}
+
+/* login-bottom */
+div.x-login-bottom {
+	height: 6%;
+	min-height: 20px;
+	width: 100%;
+	color: #fff;
+	background-color: #888;
+}
+
+/* loading */
+.x-login-loading {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	display: table;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: #fff;
+	opacity: 1;
+	z-index: 999;
+	background-image: url('../img/loading2.gif');
+	background-repeat: no-repeat;
+	background-size: 150px;
+	background-position: 50% 35%;
+}
+
+.x-login-loading .content {
+	display: table-cell;
+	vertical-align:middle;
+}
+
+.x-login-margin8 {
+	margin-bottom: 10px !important;
+}
+
+.x-login-font12 {
+	font-size: 12px;
+}
+
+.x-login-font14 {
+	font-size: 14px;
+}
+
+.x-login-font18 {
+	font-size: 18px;
+}

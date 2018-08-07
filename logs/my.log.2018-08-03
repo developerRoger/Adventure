@@ -1,0 +1,1222 @@
+2018-08-03 14:31:13,659  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 10860 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-08-03 14:31:13,696 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-08-03 14:31:13,697  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-08-03 14:31:28,577  INFO AdventureApplication:57 ---- Started AdventureApplication in 15.312 seconds (JVM running for 16.061)
+2018-08-03 14:36:32,172 DEBUG query:145 ---- ==>  Preparing: SELECT a.code Code, a.name Name, a.status Status, a.description Description, a.show_order ShowOrder, a.create_by CreateBy, a.create_time CreateTime, a.update_by UpdateBy, a.update_time UpdateTime FROM application a 
+2018-08-03 14:36:32,172 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-08-03 14:36:32,204 DEBUG query:145 ---- ==> Parameters: 
+2018-08-03 14:36:32,204 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-08-03 14:36:32,230 DEBUG queryList:145 ---- <==      Total: 10
+2018-08-03 14:36:32,237 DEBUG query:145 ---- <==      Total: 8
+2018-08-03 14:36:32,246 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-08-03 14:36:32,248 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-08-03 14:36:32,249 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 14:36:32,251 DEBUG query:145 ---- ==> Parameters: APP001(String)
+2018-08-03 14:36:32,258 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-08-03 14:36:32,270 DEBUG query:145 ---- <==      Total: 16
+2018-08-03 14:36:32,271 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 14:36:32,272 DEBUG query:145 ---- ==> Parameters: APP002(String)
+2018-08-03 14:36:32,285 DEBUG query:145 ---- <==      Total: 9
+2018-08-03 14:36:32,287 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 14:36:32,288 DEBUG query:145 ---- ==> Parameters: APP003(String)
+2018-08-03 14:36:32,301 DEBUG query:145 ---- <==      Total: 8
+2018-08-03 14:36:32,302 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 14:36:32,303 DEBUG query:145 ---- ==> Parameters: APP004(String)
+2018-08-03 14:36:32,326 DEBUG query:145 ---- <==      Total: 51
+2018-08-03 14:36:32,328 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 14:36:32,329 DEBUG query:145 ---- ==> Parameters: APP005(String)
+2018-08-03 14:36:32,347 DEBUG query:145 ---- <==      Total: 18
+2018-08-03 14:36:32,352 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 14:36:32,353 DEBUG query:145 ---- ==> Parameters: APP006(String)
+2018-08-03 14:36:32,383 DEBUG query:145 ---- <==      Total: 2
+2018-08-03 14:36:32,386 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 14:36:32,401 DEBUG query:145 ---- ==> Parameters: APP007(String)
+2018-08-03 14:36:32,415 DEBUG query:145 ---- <==      Total: 6
+2018-08-03 14:36:32,418 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 14:36:32,420 DEBUG query:145 ---- ==> Parameters: APP008(String)
+2018-08-03 14:36:32,433 DEBUG query:145 ---- <==      Total: 1
+2018-08-03 14:36:41,321 DEBUG query:145 ---- ==>  Preparing: SELECT a.code Code, a.name Name, a.status Status, a.description Description, a.show_order ShowOrder, a.create_by CreateBy, a.create_time CreateTime, a.update_by UpdateBy, a.update_time UpdateTime FROM application a 
+2018-08-03 14:36:41,329 DEBUG query:145 ---- ==> Parameters: 
+2018-08-03 14:36:41,354 DEBUG query:145 ---- <==      Total: 8
+2018-08-03 14:36:41,356 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 14:36:41,357 DEBUG query:145 ---- ==> Parameters: APP001(String)
+2018-08-03 14:36:41,742 DEBUG query:145 ---- <==      Total: 16
+2018-08-03 14:36:41,744 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 14:36:41,752 DEBUG query:145 ---- ==> Parameters: APP002(String)
+2018-08-03 14:36:41,768 DEBUG query:145 ---- <==      Total: 9
+2018-08-03 14:36:41,770 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 14:36:41,772 DEBUG query:145 ---- ==> Parameters: APP003(String)
+2018-08-03 14:36:41,779 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-08-03 14:36:41,781 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-08-03 14:36:41,787 DEBUG query:145 ---- <==      Total: 8
+2018-08-03 14:36:41,791 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 14:36:41,797 DEBUG query:145 ---- ==> Parameters: APP004(String)
+2018-08-03 14:36:41,804 DEBUG queryList:145 ---- <==      Total: 10
+2018-08-03 14:36:41,806 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-08-03 14:36:41,807 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-08-03 14:36:41,823 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-08-03 14:36:41,880 DEBUG query:145 ---- <==      Total: 51
+2018-08-03 14:36:41,882 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 14:36:41,899 DEBUG query:145 ---- ==> Parameters: APP005(String)
+2018-08-03 14:36:41,982 DEBUG query:145 ---- <==      Total: 18
+2018-08-03 14:36:41,984 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 14:36:41,985 DEBUG query:145 ---- ==> Parameters: APP006(String)
+2018-08-03 14:36:42,007 DEBUG query:145 ---- <==      Total: 2
+2018-08-03 14:36:42,009 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 14:36:42,010 DEBUG query:145 ---- ==> Parameters: APP007(String)
+2018-08-03 14:36:42,023 DEBUG query:145 ---- <==      Total: 6
+2018-08-03 14:36:42,025 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 14:36:42,026 DEBUG query:145 ---- ==> Parameters: APP008(String)
+2018-08-03 14:36:42,038 DEBUG query:145 ---- <==      Total: 1
+2018-08-03 14:45:11,943 DEBUG query:145 ---- ==>  Preparing: SELECT a.code Code, a.name Name, a.status Status, a.description Description, a.show_order ShowOrder, a.create_by CreateBy, a.create_time CreateTime, a.update_by UpdateBy, a.update_time UpdateTime FROM application a 
+2018-08-03 14:45:11,945 DEBUG query:145 ---- ==> Parameters: 
+2018-08-03 14:45:11,962 DEBUG query:145 ---- <==      Total: 8
+2018-08-03 14:45:11,968 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 14:45:11,970 DEBUG query:145 ---- ==> Parameters: APP001(String)
+2018-08-03 14:45:11,983 DEBUG query:145 ---- <==      Total: 16
+2018-08-03 14:45:11,984 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 14:45:11,986 DEBUG query:145 ---- ==> Parameters: APP002(String)
+2018-08-03 14:45:11,998 DEBUG query:145 ---- <==      Total: 9
+2018-08-03 14:45:11,999 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 14:45:12,001 DEBUG query:145 ---- ==> Parameters: APP003(String)
+2018-08-03 14:45:12,014 DEBUG query:145 ---- <==      Total: 8
+2018-08-03 14:45:12,015 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 14:45:12,017 DEBUG query:145 ---- ==> Parameters: APP004(String)
+2018-08-03 14:45:12,049 DEBUG query:145 ---- <==      Total: 51
+2018-08-03 14:45:12,050 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 14:45:12,052 DEBUG query:145 ---- ==> Parameters: APP005(String)
+2018-08-03 14:45:12,096 DEBUG query:145 ---- <==      Total: 18
+2018-08-03 14:45:12,097 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 14:45:12,099 DEBUG query:145 ---- ==> Parameters: APP006(String)
+2018-08-03 14:45:12,120 DEBUG query:145 ---- <==      Total: 2
+2018-08-03 14:45:12,121 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 14:45:12,123 DEBUG query:145 ---- ==> Parameters: APP007(String)
+2018-08-03 14:45:12,136 DEBUG query:145 ---- <==      Total: 6
+2018-08-03 14:45:12,137 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 14:45:12,138 DEBUG query:145 ---- ==> Parameters: APP008(String)
+2018-08-03 14:45:12,151 DEBUG query:145 ---- <==      Total: 1
+2018-08-03 14:45:12,571 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-08-03 14:45:12,572 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-08-03 14:45:12,584 DEBUG queryList:145 ---- <==      Total: 10
+2018-08-03 14:45:12,585 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-08-03 14:45:12,586 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-08-03 14:45:12,597 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-08-03 14:45:16,255 DEBUG query:145 ---- ==>  Preparing: SELECT a.code Code, a.name Name, a.status Status, a.description Description, a.show_order ShowOrder, a.create_by CreateBy, a.create_time CreateTime, a.update_by UpdateBy, a.update_time UpdateTime FROM application a 
+2018-08-03 14:45:16,256 DEBUG query:145 ---- ==> Parameters: 
+2018-08-03 14:45:16,276 DEBUG query:145 ---- <==      Total: 8
+2018-08-03 14:45:16,281 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 14:45:16,282 DEBUG query:145 ---- ==> Parameters: APP001(String)
+2018-08-03 14:45:16,304 DEBUG query:145 ---- <==      Total: 16
+2018-08-03 14:45:16,336 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 14:45:16,338 DEBUG query:145 ---- ==> Parameters: APP002(String)
+2018-08-03 14:45:16,361 DEBUG query:145 ---- <==      Total: 9
+2018-08-03 14:45:16,363 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 14:45:16,364 DEBUG query:145 ---- ==> Parameters: APP003(String)
+2018-08-03 14:45:16,378 DEBUG query:145 ---- <==      Total: 8
+2018-08-03 14:45:16,380 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 14:45:16,381 DEBUG query:145 ---- ==> Parameters: APP004(String)
+2018-08-03 14:45:16,408 DEBUG query:145 ---- <==      Total: 51
+2018-08-03 14:45:16,409 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 14:45:16,410 DEBUG query:145 ---- ==> Parameters: APP005(String)
+2018-08-03 14:45:16,422 DEBUG query:145 ---- <==      Total: 18
+2018-08-03 14:45:16,424 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 14:45:16,425 DEBUG query:145 ---- ==> Parameters: APP006(String)
+2018-08-03 14:45:16,439 DEBUG query:145 ---- <==      Total: 2
+2018-08-03 14:45:16,442 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 14:45:16,444 DEBUG query:145 ---- ==> Parameters: APP007(String)
+2018-08-03 14:45:16,729 DEBUG query:145 ---- <==      Total: 6
+2018-08-03 14:45:16,731 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 14:45:16,732 DEBUG query:145 ---- ==> Parameters: APP008(String)
+2018-08-03 14:45:16,745 DEBUG query:145 ---- <==      Total: 1
+2018-08-03 14:45:16,935 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-08-03 14:45:16,937 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-08-03 14:45:16,953 DEBUG queryList:145 ---- <==      Total: 10
+2018-08-03 14:45:16,955 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-08-03 14:45:16,955 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-08-03 14:45:16,966 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-08-03 14:45:22,425 DEBUG query:145 ---- ==>  Preparing: SELECT a.code Code, a.name Name, a.status Status, a.description Description, a.show_order ShowOrder, a.create_by CreateBy, a.create_time CreateTime, a.update_by UpdateBy, a.update_time UpdateTime FROM application a 
+2018-08-03 14:45:22,426 DEBUG query:145 ---- ==> Parameters: 
+2018-08-03 14:45:22,437 DEBUG query:145 ---- <==      Total: 8
+2018-08-03 14:45:22,438 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 14:45:22,439 DEBUG query:145 ---- ==> Parameters: APP001(String)
+2018-08-03 14:45:22,453 DEBUG query:145 ---- <==      Total: 16
+2018-08-03 14:45:22,454 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 14:45:22,456 DEBUG query:145 ---- ==> Parameters: APP002(String)
+2018-08-03 14:45:22,468 DEBUG query:145 ---- <==      Total: 9
+2018-08-03 14:45:22,470 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 14:45:22,471 DEBUG query:145 ---- ==> Parameters: APP003(String)
+2018-08-03 14:45:22,483 DEBUG query:145 ---- <==      Total: 8
+2018-08-03 14:45:22,485 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 14:45:22,486 DEBUG query:145 ---- ==> Parameters: APP004(String)
+2018-08-03 14:45:22,516 DEBUG query:145 ---- <==      Total: 51
+2018-08-03 14:45:22,518 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 14:45:22,519 DEBUG query:145 ---- ==> Parameters: APP005(String)
+2018-08-03 14:45:22,532 DEBUG query:145 ---- <==      Total: 18
+2018-08-03 14:45:22,533 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 14:45:22,534 DEBUG query:145 ---- ==> Parameters: APP006(String)
+2018-08-03 14:45:22,546 DEBUG query:145 ---- <==      Total: 2
+2018-08-03 14:45:22,548 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 14:45:22,549 DEBUG query:145 ---- ==> Parameters: APP007(String)
+2018-08-03 14:45:22,561 DEBUG query:145 ---- <==      Total: 6
+2018-08-03 14:45:22,563 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 14:45:22,564 DEBUG query:145 ---- ==> Parameters: APP008(String)
+2018-08-03 14:45:22,575 DEBUG query:145 ---- <==      Total: 1
+2018-08-03 14:45:30,134 DEBUG query:145 ---- ==>  Preparing: SELECT a.code Code, a.name Name, a.status Status, a.description Description, a.show_order ShowOrder, a.create_by CreateBy, a.create_time CreateTime, a.update_by UpdateBy, a.update_time UpdateTime FROM application a 
+2018-08-03 14:45:30,135 DEBUG query:145 ---- ==> Parameters: 
+2018-08-03 14:45:30,147 DEBUG query:145 ---- <==      Total: 8
+2018-08-03 14:45:30,151 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 14:45:30,154 DEBUG query:145 ---- ==> Parameters: APP001(String)
+2018-08-03 14:45:30,191 DEBUG query:145 ---- <==      Total: 16
+2018-08-03 14:45:30,192 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 14:45:30,194 DEBUG query:145 ---- ==> Parameters: APP002(String)
+2018-08-03 14:45:30,215 DEBUG query:145 ---- <==      Total: 9
+2018-08-03 14:45:30,216 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 14:45:30,218 DEBUG query:145 ---- ==> Parameters: APP003(String)
+2018-08-03 14:45:30,230 DEBUG query:145 ---- <==      Total: 8
+2018-08-03 14:45:30,231 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 14:45:30,233 DEBUG query:145 ---- ==> Parameters: APP004(String)
+2018-08-03 14:45:30,258 DEBUG query:145 ---- <==      Total: 51
+2018-08-03 14:45:30,259 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 14:45:30,260 DEBUG query:145 ---- ==> Parameters: APP005(String)
+2018-08-03 14:45:30,275 DEBUG query:145 ---- <==      Total: 18
+2018-08-03 14:45:30,277 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 14:45:30,278 DEBUG query:145 ---- ==> Parameters: APP006(String)
+2018-08-03 14:45:30,292 DEBUG query:145 ---- <==      Total: 2
+2018-08-03 14:45:30,294 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 14:45:30,295 DEBUG query:145 ---- ==> Parameters: APP007(String)
+2018-08-03 14:45:30,311 DEBUG query:145 ---- <==      Total: 6
+2018-08-03 14:45:30,313 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 14:45:30,314 DEBUG query:145 ---- ==> Parameters: APP008(String)
+2018-08-03 14:45:30,333 DEBUG query:145 ---- <==      Total: 1
+2018-08-03 14:48:17,236  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 10860 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-08-03 14:48:17,236 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-08-03 14:48:17,236  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-08-03 14:48:21,594  INFO AdventureApplication:57 ---- Started AdventureApplication in 4.423 seconds (JVM running for 1029.079)
+2018-08-03 14:49:11,283 DEBUG query:145 ---- ==>  Preparing: SELECT a.code Code, a.name Name, a.status Status, a.description Description, a.show_order ShowOrder, a.create_by CreateBy, a.create_time CreateTime, a.update_by UpdateBy, a.update_time UpdateTime FROM application a 
+2018-08-03 14:49:11,284 DEBUG query:145 ---- ==> Parameters: 
+2018-08-03 14:49:11,305 DEBUG query:145 ---- <==      Total: 8
+2018-08-03 14:49:11,308 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 14:49:11,308 DEBUG query:145 ---- ==> Parameters: APP001(String)
+2018-08-03 14:49:11,325 DEBUG query:145 ---- <==      Total: 16
+2018-08-03 14:49:11,326 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 14:49:11,327 DEBUG query:145 ---- ==> Parameters: APP002(String)
+2018-08-03 14:49:11,340 DEBUG query:145 ---- <==      Total: 9
+2018-08-03 14:49:11,341 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 14:49:11,341 DEBUG query:145 ---- ==> Parameters: APP003(String)
+2018-08-03 14:49:11,354 DEBUG query:145 ---- <==      Total: 8
+2018-08-03 14:49:11,355 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 14:49:11,356 DEBUG query:145 ---- ==> Parameters: APP004(String)
+2018-08-03 14:49:11,375 DEBUG query:145 ---- <==      Total: 51
+2018-08-03 14:49:11,376 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 14:49:11,377 DEBUG query:145 ---- ==> Parameters: APP005(String)
+2018-08-03 14:49:11,390 DEBUG query:145 ---- <==      Total: 18
+2018-08-03 14:49:11,390 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 14:49:11,391 DEBUG query:145 ---- ==> Parameters: APP006(String)
+2018-08-03 14:49:11,402 DEBUG query:145 ---- <==      Total: 2
+2018-08-03 14:49:11,403 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 14:49:11,404 DEBUG query:145 ---- ==> Parameters: APP007(String)
+2018-08-03 14:49:11,416 DEBUG query:145 ---- <==      Total: 6
+2018-08-03 14:49:11,417 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 14:49:11,418 DEBUG query:145 ---- ==> Parameters: APP008(String)
+2018-08-03 14:49:11,428 DEBUG query:145 ---- <==      Total: 1
+2018-08-03 14:49:19,040 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-08-03 14:49:19,041 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-08-03 14:49:19,052 DEBUG queryList:145 ---- <==      Total: 10
+2018-08-03 14:49:19,053 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-08-03 14:49:19,060 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-08-03 14:49:19,075 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-08-03 14:49:22,103 DEBUG query:145 ---- ==>  Preparing: SELECT a.code Code, a.name Name, a.status Status, a.description Description, a.show_order ShowOrder, a.create_by CreateBy, a.create_time CreateTime, a.update_by UpdateBy, a.update_time UpdateTime FROM application a 
+2018-08-03 14:49:22,105 DEBUG query:145 ---- ==> Parameters: 
+2018-08-03 14:49:22,125 DEBUG query:145 ---- <==      Total: 8
+2018-08-03 14:49:22,126 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 14:49:22,127 DEBUG query:145 ---- ==> Parameters: APP001(String)
+2018-08-03 14:49:22,141 DEBUG query:145 ---- <==      Total: 16
+2018-08-03 14:49:22,144 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 14:49:22,146 DEBUG query:145 ---- ==> Parameters: APP002(String)
+2018-08-03 14:49:22,159 DEBUG query:145 ---- <==      Total: 9
+2018-08-03 14:49:22,160 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 14:49:22,161 DEBUG query:145 ---- ==> Parameters: APP003(String)
+2018-08-03 14:49:22,174 DEBUG query:145 ---- <==      Total: 8
+2018-08-03 14:49:22,175 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 14:49:22,176 DEBUG query:145 ---- ==> Parameters: APP004(String)
+2018-08-03 14:49:22,193 DEBUG query:145 ---- <==      Total: 51
+2018-08-03 14:49:22,195 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 14:49:22,196 DEBUG query:145 ---- ==> Parameters: APP005(String)
+2018-08-03 14:49:22,211 DEBUG query:145 ---- <==      Total: 18
+2018-08-03 14:49:22,212 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 14:49:22,215 DEBUG query:145 ---- ==> Parameters: APP006(String)
+2018-08-03 14:49:22,230 DEBUG query:145 ---- <==      Total: 2
+2018-08-03 14:49:22,231 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 14:49:22,232 DEBUG query:145 ---- ==> Parameters: APP007(String)
+2018-08-03 14:49:22,244 DEBUG query:145 ---- <==      Total: 6
+2018-08-03 14:49:22,245 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 14:49:22,246 DEBUG query:145 ---- ==> Parameters: APP008(String)
+2018-08-03 14:49:22,266 DEBUG query:145 ---- <==      Total: 1
+2018-08-03 16:03:23,726 DEBUG query:145 ---- ==>  Preparing: SELECT a.code Code, a.name Name, a.status Status, a.description Description, a.show_order ShowOrder, a.create_by CreateBy, a.create_time CreateTime, a.update_by UpdateBy, a.update_time UpdateTime FROM application a 
+2018-08-03 16:03:23,727 DEBUG query:145 ---- ==> Parameters: 
+2018-08-03 16:03:23,754 DEBUG query:145 ---- <==      Total: 8
+2018-08-03 16:03:23,755 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:03:23,756 DEBUG query:145 ---- ==> Parameters: APP001(String)
+2018-08-03 16:03:23,766 DEBUG query:145 ---- <==      Total: 1
+2018-08-03 16:03:23,767 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:03:23,768 DEBUG query:145 ---- ==> Parameters: APP002(String)
+2018-08-03 16:03:23,779 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:03:23,780 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:03:23,780 DEBUG query:145 ---- ==> Parameters: APP003(String)
+2018-08-03 16:03:23,789 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:03:23,790 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:03:23,791 DEBUG query:145 ---- ==> Parameters: APP004(String)
+2018-08-03 16:03:23,800 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:03:23,801 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:03:23,802 DEBUG query:145 ---- ==> Parameters: APP005(String)
+2018-08-03 16:03:23,811 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:03:23,811 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:03:23,812 DEBUG query:145 ---- ==> Parameters: APP006(String)
+2018-08-03 16:03:23,822 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:03:23,822 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:03:23,823 DEBUG query:145 ---- ==> Parameters: APP007(String)
+2018-08-03 16:03:23,832 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:03:23,833 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:03:23,833 DEBUG query:145 ---- ==> Parameters: APP008(String)
+2018-08-03 16:03:23,842 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:04:15,207 DEBUG query:145 ---- ==>  Preparing: SELECT a.code Code, a.name Name, a.status Status, a.description Description, a.show_order ShowOrder, a.create_by CreateBy, a.create_time CreateTime, a.update_by UpdateBy, a.update_time UpdateTime FROM application a 
+2018-08-03 16:04:15,208 DEBUG query:145 ---- ==> Parameters: 
+2018-08-03 16:04:15,232 DEBUG query:145 ---- <==      Total: 8
+2018-08-03 16:04:15,233 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:04:15,234 DEBUG query:145 ---- ==> Parameters: APP001(String)
+2018-08-03 16:04:15,244 DEBUG query:145 ---- <==      Total: 1
+2018-08-03 16:04:15,245 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:04:15,246 DEBUG query:145 ---- ==> Parameters: APP002(String)
+2018-08-03 16:04:15,255 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:04:15,257 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:04:15,258 DEBUG query:145 ---- ==> Parameters: APP003(String)
+2018-08-03 16:04:15,267 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:04:15,269 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:04:15,272 DEBUG query:145 ---- ==> Parameters: APP004(String)
+2018-08-03 16:04:15,282 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:04:15,284 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:04:15,284 DEBUG query:145 ---- ==> Parameters: APP005(String)
+2018-08-03 16:04:15,310 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:04:15,315 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:04:15,317 DEBUG query:145 ---- ==> Parameters: APP006(String)
+2018-08-03 16:04:15,354 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:04:15,355 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:04:15,356 DEBUG query:145 ---- ==> Parameters: APP007(String)
+2018-08-03 16:04:15,367 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:04:15,390 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:04:15,391 DEBUG query:145 ---- ==> Parameters: APP008(String)
+2018-08-03 16:04:15,401 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:04:33,538 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-08-03 16:04:33,539 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-08-03 16:04:33,549 DEBUG queryList:145 ---- <==      Total: 10
+2018-08-03 16:04:33,550 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-08-03 16:04:33,551 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-08-03 16:04:33,560 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-08-03 16:04:35,072 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-08-03 16:04:35,073 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-08-03 16:04:35,382 DEBUG queryList:145 ---- <==      Total: 10
+2018-08-03 16:04:35,383 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-08-03 16:04:35,384 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-08-03 16:04:35,393 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-08-03 16:04:39,801 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-08-03 16:04:39,802 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-08-03 16:04:39,812 DEBUG queryList:145 ---- <==      Total: 10
+2018-08-03 16:04:39,813 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-08-03 16:04:39,814 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-08-03 16:04:39,823 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-08-03 16:04:41,875 DEBUG query:145 ---- ==>  Preparing: SELECT a.code Code, a.name Name, a.status Status, a.description Description, a.show_order ShowOrder, a.create_by CreateBy, a.create_time CreateTime, a.update_by UpdateBy, a.update_time UpdateTime FROM application a 
+2018-08-03 16:04:41,876 DEBUG query:145 ---- ==> Parameters: 
+2018-08-03 16:04:41,886 DEBUG query:145 ---- <==      Total: 8
+2018-08-03 16:04:41,888 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:04:41,889 DEBUG query:145 ---- ==> Parameters: APP001(String)
+2018-08-03 16:04:41,900 DEBUG query:145 ---- <==      Total: 1
+2018-08-03 16:04:41,901 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:04:41,902 DEBUG query:145 ---- ==> Parameters: APP002(String)
+2018-08-03 16:04:41,911 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:04:41,913 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:04:41,914 DEBUG query:145 ---- ==> Parameters: APP003(String)
+2018-08-03 16:04:41,933 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:04:41,934 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:04:41,935 DEBUG query:145 ---- ==> Parameters: APP004(String)
+2018-08-03 16:04:41,945 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:04:41,947 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:04:41,948 DEBUG query:145 ---- ==> Parameters: APP005(String)
+2018-08-03 16:04:41,957 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:04:41,959 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:04:41,960 DEBUG query:145 ---- ==> Parameters: APP006(String)
+2018-08-03 16:04:41,971 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:04:41,972 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:04:41,973 DEBUG query:145 ---- ==> Parameters: APP007(String)
+2018-08-03 16:04:41,984 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:04:41,987 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:04:41,988 DEBUG query:145 ---- ==> Parameters: APP008(String)
+2018-08-03 16:04:42,000 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:04:45,383 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-08-03 16:04:45,384 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-08-03 16:04:45,394 DEBUG queryList:145 ---- <==      Total: 10
+2018-08-03 16:04:45,394 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-08-03 16:04:45,395 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-08-03 16:04:45,403 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-08-03 16:04:54,027 DEBUG query:145 ---- ==>  Preparing: SELECT a.code Code, a.name Name, a.status Status, a.description Description, a.show_order ShowOrder, a.create_by CreateBy, a.create_time CreateTime, a.update_by UpdateBy, a.update_time UpdateTime FROM application a 
+2018-08-03 16:04:54,033 DEBUG query:145 ---- ==> Parameters: 
+2018-08-03 16:04:54,065 DEBUG query:145 ---- <==      Total: 8
+2018-08-03 16:04:54,066 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:04:54,067 DEBUG query:145 ---- ==> Parameters: APP001(String)
+2018-08-03 16:04:54,105 DEBUG query:145 ---- <==      Total: 1
+2018-08-03 16:04:54,107 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:04:54,108 DEBUG query:145 ---- ==> Parameters: APP002(String)
+2018-08-03 16:04:54,174 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:04:54,176 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:04:54,177 DEBUG query:145 ---- ==> Parameters: APP003(String)
+2018-08-03 16:04:54,209 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:04:54,210 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:04:54,211 DEBUG query:145 ---- ==> Parameters: APP004(String)
+2018-08-03 16:04:54,262 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:04:54,263 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:04:54,264 DEBUG query:145 ---- ==> Parameters: APP005(String)
+2018-08-03 16:04:54,284 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:04:54,286 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:04:54,288 DEBUG query:145 ---- ==> Parameters: APP006(String)
+2018-08-03 16:04:54,298 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:04:54,299 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:04:54,300 DEBUG query:145 ---- ==> Parameters: APP007(String)
+2018-08-03 16:04:54,323 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:04:54,324 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:04:54,326 DEBUG query:145 ---- ==> Parameters: APP008(String)
+2018-08-03 16:04:54,385 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:05:04,940 DEBUG query:145 ---- ==>  Preparing: SELECT a.code Code, a.name Name, a.status Status, a.description Description, a.show_order ShowOrder, a.create_by CreateBy, a.create_time CreateTime, a.update_by UpdateBy, a.update_time UpdateTime FROM application a 
+2018-08-03 16:05:04,941 DEBUG query:145 ---- ==> Parameters: 
+2018-08-03 16:05:04,955 DEBUG query:145 ---- <==      Total: 8
+2018-08-03 16:05:04,957 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:05:04,958 DEBUG query:145 ---- ==> Parameters: APP001(String)
+2018-08-03 16:05:04,968 DEBUG query:145 ---- <==      Total: 1
+2018-08-03 16:05:04,969 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:05:04,970 DEBUG query:145 ---- ==> Parameters: APP002(String)
+2018-08-03 16:05:04,981 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:05:04,983 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:05:04,984 DEBUG query:145 ---- ==> Parameters: APP003(String)
+2018-08-03 16:05:04,994 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:05:04,995 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:05:04,996 DEBUG query:145 ---- ==> Parameters: APP004(String)
+2018-08-03 16:05:05,030 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:05:05,032 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:05:05,033 DEBUG query:145 ---- ==> Parameters: APP005(String)
+2018-08-03 16:05:05,043 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:05:05,047 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:05:05,048 DEBUG query:145 ---- ==> Parameters: APP006(String)
+2018-08-03 16:05:05,058 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:05:05,059 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:05:05,060 DEBUG query:145 ---- ==> Parameters: APP007(String)
+2018-08-03 16:05:05,070 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:05:05,071 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:05:05,072 DEBUG query:145 ---- ==> Parameters: APP008(String)
+2018-08-03 16:05:05,089 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:05:09,519 DEBUG query:145 ---- ==>  Preparing: SELECT a.code Code, a.name Name, a.status Status, a.description Description, a.show_order ShowOrder, a.create_by CreateBy, a.create_time CreateTime, a.update_by UpdateBy, a.update_time UpdateTime FROM application a 
+2018-08-03 16:05:09,520 DEBUG query:145 ---- ==> Parameters: 
+2018-08-03 16:05:09,533 DEBUG query:145 ---- <==      Total: 8
+2018-08-03 16:05:09,535 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:05:09,536 DEBUG query:145 ---- ==> Parameters: APP001(String)
+2018-08-03 16:05:09,545 DEBUG query:145 ---- <==      Total: 1
+2018-08-03 16:05:09,546 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:05:09,547 DEBUG query:145 ---- ==> Parameters: APP002(String)
+2018-08-03 16:05:09,555 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:05:09,556 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:05:09,557 DEBUG query:145 ---- ==> Parameters: APP003(String)
+2018-08-03 16:05:09,566 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:05:09,567 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:05:09,568 DEBUG query:145 ---- ==> Parameters: APP004(String)
+2018-08-03 16:05:09,577 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:05:09,578 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:05:09,579 DEBUG query:145 ---- ==> Parameters: APP005(String)
+2018-08-03 16:05:09,587 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:05:09,588 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:05:09,589 DEBUG query:145 ---- ==> Parameters: APP006(String)
+2018-08-03 16:05:09,599 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:05:09,600 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:05:09,600 DEBUG query:145 ---- ==> Parameters: APP007(String)
+2018-08-03 16:05:09,926 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:05:09,927 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:05:09,927 DEBUG query:145 ---- ==> Parameters: APP008(String)
+2018-08-03 16:05:09,936 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:07:27,706 DEBUG query:145 ---- ==>  Preparing: SELECT a.code Code, a.name Name, a.status Status, a.description Description, a.show_order ShowOrder, a.create_by CreateBy, a.create_time CreateTime, a.update_by UpdateBy, a.update_time UpdateTime FROM application a 
+2018-08-03 16:07:27,707 DEBUG query:145 ---- ==> Parameters: 
+2018-08-03 16:07:27,718 DEBUG query:145 ---- <==      Total: 8
+2018-08-03 16:07:27,720 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:07:27,721 DEBUG query:145 ---- ==> Parameters: APP001(String)
+2018-08-03 16:07:27,731 DEBUG query:145 ---- <==      Total: 1
+2018-08-03 16:07:27,732 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:07:27,733 DEBUG query:145 ---- ==> Parameters: APP002(String)
+2018-08-03 16:07:27,743 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:07:27,744 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:07:27,745 DEBUG query:145 ---- ==> Parameters: APP003(String)
+2018-08-03 16:07:27,754 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:07:27,759 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:07:27,760 DEBUG query:145 ---- ==> Parameters: APP004(String)
+2018-08-03 16:07:27,769 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:07:27,770 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:07:27,771 DEBUG query:145 ---- ==> Parameters: APP005(String)
+2018-08-03 16:07:27,786 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:07:27,788 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:07:27,789 DEBUG query:145 ---- ==> Parameters: APP006(String)
+2018-08-03 16:07:27,799 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:07:27,800 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:07:27,802 DEBUG query:145 ---- ==> Parameters: APP007(String)
+2018-08-03 16:07:27,812 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:07:27,813 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:07:27,814 DEBUG query:145 ---- ==> Parameters: APP008(String)
+2018-08-03 16:07:27,824 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:07:28,181 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-08-03 16:07:28,182 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-08-03 16:07:28,191 DEBUG queryList:145 ---- <==      Total: 10
+2018-08-03 16:07:28,192 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-08-03 16:07:28,193 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-08-03 16:07:28,209 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-08-03 16:07:45,058 DEBUG query:145 ---- ==>  Preparing: SELECT a.code Code, a.name Name, a.status Status, a.description Description, a.show_order ShowOrder, a.create_by CreateBy, a.create_time CreateTime, a.update_by UpdateBy, a.update_time UpdateTime FROM application a 
+2018-08-03 16:07:45,059 DEBUG query:145 ---- ==> Parameters: 
+2018-08-03 16:07:45,071 DEBUG query:145 ---- <==      Total: 8
+2018-08-03 16:07:45,073 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:07:45,073 DEBUG query:145 ---- ==> Parameters: APP001(String)
+2018-08-03 16:07:45,090 DEBUG query:145 ---- <==      Total: 1
+2018-08-03 16:07:45,091 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:07:45,092 DEBUG query:145 ---- ==> Parameters: APP002(String)
+2018-08-03 16:07:45,133 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:07:45,134 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:07:45,135 DEBUG query:145 ---- ==> Parameters: APP003(String)
+2018-08-03 16:07:45,145 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:07:45,146 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:07:45,147 DEBUG query:145 ---- ==> Parameters: APP004(String)
+2018-08-03 16:07:45,850 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:07:45,851 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:07:45,852 DEBUG query:145 ---- ==> Parameters: APP005(String)
+2018-08-03 16:07:45,869 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:07:45,870 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:07:45,870 DEBUG query:145 ---- ==> Parameters: APP006(String)
+2018-08-03 16:07:45,881 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:07:45,882 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:07:45,883 DEBUG query:145 ---- ==> Parameters: APP007(String)
+2018-08-03 16:07:45,892 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:07:45,893 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:07:45,894 DEBUG query:145 ---- ==> Parameters: APP008(String)
+2018-08-03 16:07:45,903 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:08:04,586 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-08-03 16:08:04,587 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-08-03 16:08:04,596 DEBUG queryList:145 ---- <==      Total: 10
+2018-08-03 16:08:04,597 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-08-03 16:08:04,598 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-08-03 16:08:04,607 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-08-03 16:09:13,067 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-08-03 16:09:13,068 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-08-03 16:09:13,080 DEBUG queryList:145 ---- <==      Total: 10
+2018-08-03 16:09:13,083 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-08-03 16:09:13,084 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-08-03 16:09:13,093 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-08-03 16:09:15,403 DEBUG query:145 ---- ==>  Preparing: SELECT a.code Code, a.name Name, a.status Status, a.description Description, a.show_order ShowOrder, a.create_by CreateBy, a.create_time CreateTime, a.update_by UpdateBy, a.update_time UpdateTime FROM application a 
+2018-08-03 16:09:15,403 DEBUG query:145 ---- ==> Parameters: 
+2018-08-03 16:09:15,414 DEBUG query:145 ---- <==      Total: 8
+2018-08-03 16:09:15,415 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:09:15,415 DEBUG query:145 ---- ==> Parameters: APP001(String)
+2018-08-03 16:09:15,425 DEBUG query:145 ---- <==      Total: 1
+2018-08-03 16:09:15,427 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:09:15,428 DEBUG query:145 ---- ==> Parameters: APP002(String)
+2018-08-03 16:09:15,438 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:09:15,439 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:09:15,440 DEBUG query:145 ---- ==> Parameters: APP003(String)
+2018-08-03 16:09:15,450 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:09:15,451 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:09:15,452 DEBUG query:145 ---- ==> Parameters: APP004(String)
+2018-08-03 16:09:15,461 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:09:15,462 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:09:15,463 DEBUG query:145 ---- ==> Parameters: APP005(String)
+2018-08-03 16:09:15,938 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-08-03 16:09:15,938 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:09:15,938 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-08-03 16:09:15,939 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:09:15,940 DEBUG query:145 ---- ==> Parameters: APP006(String)
+2018-08-03 16:09:15,956 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:09:15,956 DEBUG queryList:145 ---- <==      Total: 10
+2018-08-03 16:09:15,957 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:09:15,957 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-08-03 16:09:15,958 DEBUG query:145 ---- ==> Parameters: APP007(String)
+2018-08-03 16:09:15,958 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-08-03 16:09:15,968 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-08-03 16:09:15,968 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:09:15,969 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:09:15,970 DEBUG query:145 ---- ==> Parameters: APP008(String)
+2018-08-03 16:09:15,981 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:09:46,144  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 10860 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-08-03 16:09:46,144 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-08-03 16:09:46,144  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-08-03 16:09:49,443  INFO AdventureApplication:57 ---- Started AdventureApplication in 3.335 seconds (JVM running for 5916.941)
+2018-08-03 16:10:10,299 DEBUG query:145 ---- ==>  Preparing: SELECT a.code Code, a.name Name, a.status Status, a.description Description, a.show_order ShowOrder, a.create_by CreateBy, a.create_time CreateTime, a.update_by UpdateBy, a.update_time UpdateTime FROM application a 
+2018-08-03 16:10:10,299 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-08-03 16:10:10,299 DEBUG query:145 ---- ==> Parameters: 
+2018-08-03 16:10:10,300 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-08-03 16:10:10,311 DEBUG queryList:145 ---- <==      Total: 10
+2018-08-03 16:10:10,312 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-08-03 16:10:10,312 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-08-03 16:10:10,313 DEBUG query:145 ---- <==      Total: 8
+2018-08-03 16:10:10,314 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:10:10,314 DEBUG query:145 ---- ==> Parameters: APP001(String)
+2018-08-03 16:10:10,322 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-08-03 16:10:10,326 DEBUG query:145 ---- <==      Total: 1
+2018-08-03 16:10:10,327 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:10:10,328 DEBUG query:145 ---- ==> Parameters: APP002(String)
+2018-08-03 16:10:10,339 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:10:10,340 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:10:10,340 DEBUG query:145 ---- ==> Parameters: APP003(String)
+2018-08-03 16:10:10,351 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:10:10,353 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:10:10,358 DEBUG query:145 ---- ==> Parameters: APP004(String)
+2018-08-03 16:10:10,372 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:10:10,373 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:10:10,375 DEBUG query:145 ---- ==> Parameters: APP005(String)
+2018-08-03 16:10:10,386 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:10:10,387 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:10:10,387 DEBUG query:145 ---- ==> Parameters: APP006(String)
+2018-08-03 16:10:10,398 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:10:10,399 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:10:10,399 DEBUG query:145 ---- ==> Parameters: APP007(String)
+2018-08-03 16:10:10,410 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:10:10,411 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:10:10,412 DEBUG query:145 ---- ==> Parameters: APP008(String)
+2018-08-03 16:10:10,422 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:11:55,029 DEBUG query:145 ---- ==>  Preparing: SELECT a.code Code, a.name Name, a.status Status, a.description Description, a.show_order ShowOrder, a.create_by CreateBy, a.create_time CreateTime, a.update_by UpdateBy, a.update_time UpdateTime FROM application a 
+2018-08-03 16:11:55,029 DEBUG query:145 ---- ==> Parameters: 
+2018-08-03 16:11:55,045 DEBUG query:145 ---- <==      Total: 8
+2018-08-03 16:11:55,047 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:11:55,048 DEBUG query:145 ---- ==> Parameters: APP001(String)
+2018-08-03 16:11:55,062 DEBUG query:145 ---- <==      Total: 1
+2018-08-03 16:11:55,064 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:11:55,065 DEBUG query:145 ---- ==> Parameters: APP002(String)
+2018-08-03 16:11:55,076 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:11:55,077 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:11:55,078 DEBUG query:145 ---- ==> Parameters: APP003(String)
+2018-08-03 16:11:55,089 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:11:55,090 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:11:55,090 DEBUG query:145 ---- ==> Parameters: APP004(String)
+2018-08-03 16:11:55,108 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:11:55,110 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:11:55,111 DEBUG query:145 ---- ==> Parameters: APP005(String)
+2018-08-03 16:11:55,128 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:11:55,131 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:11:55,132 DEBUG query:145 ---- ==> Parameters: APP006(String)
+2018-08-03 16:11:55,153 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:11:55,154 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:11:55,155 DEBUG query:145 ---- ==> Parameters: APP007(String)
+2018-08-03 16:11:55,171 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:11:55,173 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:11:55,173 DEBUG query:145 ---- ==> Parameters: APP008(String)
+2018-08-03 16:11:55,185 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:11:57,160 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-08-03 16:11:57,161 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-08-03 16:11:57,175 DEBUG queryList:145 ---- <==      Total: 10
+2018-08-03 16:11:57,176 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-08-03 16:11:57,176 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-08-03 16:11:57,188 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-08-03 16:12:00,950 DEBUG query:145 ---- ==>  Preparing: SELECT a.code Code, a.name Name, a.status Status, a.description Description, a.show_order ShowOrder, a.create_by CreateBy, a.create_time CreateTime, a.update_by UpdateBy, a.update_time UpdateTime FROM application a 
+2018-08-03 16:12:00,950 DEBUG query:145 ---- ==> Parameters: 
+2018-08-03 16:12:00,983 DEBUG query:145 ---- <==      Total: 8
+2018-08-03 16:12:00,984 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:12:00,986 DEBUG query:145 ---- ==> Parameters: APP001(String)
+2018-08-03 16:12:01,066 DEBUG query:145 ---- <==      Total: 1
+2018-08-03 16:12:01,067 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:12:01,067 DEBUG query:145 ---- ==> Parameters: APP002(String)
+2018-08-03 16:12:01,106 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:12:01,108 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:12:01,109 DEBUG query:145 ---- ==> Parameters: APP003(String)
+2018-08-03 16:12:01,129 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:12:01,130 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:12:01,131 DEBUG query:145 ---- ==> Parameters: APP004(String)
+2018-08-03 16:12:01,143 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:12:01,146 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:12:01,147 DEBUG query:145 ---- ==> Parameters: APP005(String)
+2018-08-03 16:12:01,166 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:12:01,167 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:12:01,168 DEBUG query:145 ---- ==> Parameters: APP006(String)
+2018-08-03 16:12:01,182 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:12:01,183 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:12:01,184 DEBUG query:145 ---- ==> Parameters: APP007(String)
+2018-08-03 16:12:01,195 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:12:01,196 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:12:01,196 DEBUG query:145 ---- ==> Parameters: APP008(String)
+2018-08-03 16:12:01,210 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:12:44,713 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-08-03 16:12:44,714 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-08-03 16:12:44,725 DEBUG queryList:145 ---- <==      Total: 10
+2018-08-03 16:12:44,727 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-08-03 16:12:44,728 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-08-03 16:12:44,738 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-08-03 16:12:47,387 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-08-03 16:12:47,388 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-08-03 16:12:47,400 DEBUG queryList:145 ---- <==      Total: 10
+2018-08-03 16:12:47,401 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-08-03 16:12:47,402 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-08-03 16:12:47,416 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-08-03 16:12:50,278 DEBUG query:145 ---- ==>  Preparing: SELECT a.code Code, a.name Name, a.status Status, a.description Description, a.show_order ShowOrder, a.create_by CreateBy, a.create_time CreateTime, a.update_by UpdateBy, a.update_time UpdateTime FROM application a 
+2018-08-03 16:12:50,279 DEBUG query:145 ---- ==> Parameters: 
+2018-08-03 16:12:50,294 DEBUG query:145 ---- <==      Total: 8
+2018-08-03 16:12:50,296 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:12:50,297 DEBUG query:145 ---- ==> Parameters: APP001(String)
+2018-08-03 16:12:50,308 DEBUG query:145 ---- <==      Total: 1
+2018-08-03 16:12:50,311 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:12:50,314 DEBUG query:145 ---- ==> Parameters: APP002(String)
+2018-08-03 16:12:50,325 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:12:50,328 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:12:50,329 DEBUG query:145 ---- ==> Parameters: APP003(String)
+2018-08-03 16:12:50,340 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:12:50,341 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:12:50,343 DEBUG query:145 ---- ==> Parameters: APP004(String)
+2018-08-03 16:12:50,354 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:12:50,356 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:12:50,356 DEBUG query:145 ---- ==> Parameters: APP005(String)
+2018-08-03 16:12:50,396 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:12:50,398 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:12:50,399 DEBUG query:145 ---- ==> Parameters: APP006(String)
+2018-08-03 16:12:50,411 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:12:50,414 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:12:50,418 DEBUG query:145 ---- ==> Parameters: APP007(String)
+2018-08-03 16:12:50,462 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:12:50,463 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:12:50,464 DEBUG query:145 ---- ==> Parameters: APP008(String)
+2018-08-03 16:12:50,475 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:12:52,129 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-08-03 16:12:52,129 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-08-03 16:12:52,141 DEBUG queryList:145 ---- <==      Total: 10
+2018-08-03 16:12:52,142 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-08-03 16:12:52,142 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-08-03 16:12:52,164 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-08-03 16:13:17,860 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-08-03 16:13:17,861 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-08-03 16:13:17,876 DEBUG queryList:145 ---- <==      Total: 10
+2018-08-03 16:13:17,878 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-08-03 16:13:17,880 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-08-03 16:13:17,897 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-08-03 16:13:19,941 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-08-03 16:13:19,942 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-08-03 16:13:19,959 DEBUG queryList:145 ---- <==      Total: 10
+2018-08-03 16:13:19,960 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-08-03 16:13:19,961 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-08-03 16:13:19,985 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-08-03 16:13:22,282 DEBUG query:145 ---- ==>  Preparing: SELECT a.code Code, a.name Name, a.status Status, a.description Description, a.show_order ShowOrder, a.create_by CreateBy, a.create_time CreateTime, a.update_by UpdateBy, a.update_time UpdateTime FROM application a 
+2018-08-03 16:13:22,283 DEBUG query:145 ---- ==> Parameters: 
+2018-08-03 16:13:22,294 DEBUG query:145 ---- <==      Total: 8
+2018-08-03 16:13:22,295 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:13:22,296 DEBUG query:145 ---- ==> Parameters: APP001(String)
+2018-08-03 16:13:22,310 DEBUG query:145 ---- <==      Total: 1
+2018-08-03 16:13:22,315 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:13:22,315 DEBUG query:145 ---- ==> Parameters: APP002(String)
+2018-08-03 16:13:22,328 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:13:22,329 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:13:22,330 DEBUG query:145 ---- ==> Parameters: APP003(String)
+2018-08-03 16:13:22,341 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:13:22,343 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:13:22,346 DEBUG query:145 ---- ==> Parameters: APP004(String)
+2018-08-03 16:13:22,359 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:13:22,360 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:13:22,360 DEBUG query:145 ---- ==> Parameters: APP005(String)
+2018-08-03 16:13:22,370 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:13:22,372 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:13:22,372 DEBUG query:145 ---- ==> Parameters: APP006(String)
+2018-08-03 16:13:22,383 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:13:22,383 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:13:22,384 DEBUG query:145 ---- ==> Parameters: APP007(String)
+2018-08-03 16:13:22,395 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:13:22,396 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:13:22,396 DEBUG query:145 ---- ==> Parameters: APP008(String)
+2018-08-03 16:13:22,407 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:13:24,709 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-08-03 16:13:24,710 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-08-03 16:13:24,734 DEBUG queryList:145 ---- <==      Total: 10
+2018-08-03 16:13:24,735 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-08-03 16:13:24,735 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-08-03 16:13:24,746 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-08-03 16:21:19,059  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 10860 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-08-03 16:21:19,059 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-08-03 16:21:19,059  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-08-03 16:21:22,076  INFO AdventureApplication:57 ---- Started AdventureApplication in 3.086 seconds (JVM running for 6609.575)
+2018-08-03 16:21:37,647 DEBUG query:145 ---- ==>  Preparing: SELECT a.code Code, a.name Name, a.status Status, a.description Description, a.show_order ShowOrder, a.create_by CreateBy, a.create_time CreateTime, a.update_by UpdateBy, a.update_time UpdateTime FROM application a 
+2018-08-03 16:21:37,647 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-08-03 16:21:37,647 DEBUG query:145 ---- ==> Parameters: 
+2018-08-03 16:21:37,648 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-08-03 16:21:37,685 DEBUG query:145 ---- <==      Total: 8
+2018-08-03 16:21:37,685 DEBUG queryList:145 ---- <==      Total: 10
+2018-08-03 16:21:37,686 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:21:37,686 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-08-03 16:21:37,686 DEBUG query:145 ---- ==> Parameters: APP001(String)
+2018-08-03 16:21:37,687 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-08-03 16:21:37,709 DEBUG query:145 ---- <==      Total: 2
+2018-08-03 16:21:37,709 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-08-03 16:21:37,709 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:21:37,710 DEBUG query:145 ---- ==> Parameters: APP002(String)
+2018-08-03 16:21:37,720 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:21:37,721 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:21:37,721 DEBUG query:145 ---- ==> Parameters: APP003(String)
+2018-08-03 16:21:37,741 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:21:37,742 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:21:37,744 DEBUG query:145 ---- ==> Parameters: APP004(String)
+2018-08-03 16:21:37,759 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:21:37,760 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:21:37,761 DEBUG query:145 ---- ==> Parameters: APP005(String)
+2018-08-03 16:21:37,772 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:21:37,773 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:21:37,774 DEBUG query:145 ---- ==> Parameters: APP006(String)
+2018-08-03 16:21:37,785 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:21:37,787 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:21:37,788 DEBUG query:145 ---- ==> Parameters: APP007(String)
+2018-08-03 16:21:37,798 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:21:37,799 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:21:37,800 DEBUG query:145 ---- ==> Parameters: APP008(String)
+2018-08-03 16:21:37,812 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:21:42,954 DEBUG query:145 ---- ==>  Preparing: SELECT a.code Code, a.name Name, a.status Status, a.description Description, a.show_order ShowOrder, a.create_by CreateBy, a.create_time CreateTime, a.update_by UpdateBy, a.update_time UpdateTime FROM application a 
+2018-08-03 16:21:42,955 DEBUG query:145 ---- ==> Parameters: 
+2018-08-03 16:21:42,974 DEBUG query:145 ---- <==      Total: 8
+2018-08-03 16:21:42,975 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:21:42,976 DEBUG query:145 ---- ==> Parameters: APP001(String)
+2018-08-03 16:21:42,987 DEBUG query:145 ---- <==      Total: 2
+2018-08-03 16:21:42,989 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:21:42,990 DEBUG query:145 ---- ==> Parameters: APP002(String)
+2018-08-03 16:21:43,020 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:21:43,021 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:21:43,023 DEBUG query:145 ---- ==> Parameters: APP003(String)
+2018-08-03 16:21:43,056 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:21:43,057 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:21:43,058 DEBUG query:145 ---- ==> Parameters: APP004(String)
+2018-08-03 16:21:43,070 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:21:43,072 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:21:43,073 DEBUG query:145 ---- ==> Parameters: APP005(String)
+2018-08-03 16:21:43,086 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:21:43,087 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:21:43,088 DEBUG query:145 ---- ==> Parameters: APP006(String)
+2018-08-03 16:21:43,098 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:21:43,099 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:21:43,100 DEBUG query:145 ---- ==> Parameters: APP007(String)
+2018-08-03 16:21:43,110 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:21:43,111 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:21:43,112 DEBUG query:145 ---- ==> Parameters: APP008(String)
+2018-08-03 16:21:43,122 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:21:56,735 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-08-03 16:21:56,737 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-08-03 16:21:56,748 DEBUG queryList:145 ---- <==      Total: 10
+2018-08-03 16:21:56,749 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-08-03 16:21:56,750 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-08-03 16:21:56,759 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-08-03 16:22:09,886 DEBUG query:145 ---- ==>  Preparing: SELECT a.code Code, a.name Name, a.status Status, a.description Description, a.show_order ShowOrder, a.create_by CreateBy, a.create_time CreateTime, a.update_by UpdateBy, a.update_time UpdateTime FROM application a 
+2018-08-03 16:22:09,886 DEBUG query:145 ---- ==> Parameters: 
+2018-08-03 16:22:09,897 DEBUG query:145 ---- <==      Total: 8
+2018-08-03 16:22:09,898 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:22:09,899 DEBUG query:145 ---- ==> Parameters: APP001(String)
+2018-08-03 16:22:09,909 DEBUG query:145 ---- <==      Total: 2
+2018-08-03 16:22:09,910 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:22:09,911 DEBUG query:145 ---- ==> Parameters: APP002(String)
+2018-08-03 16:22:09,921 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:22:09,922 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:22:09,923 DEBUG query:145 ---- ==> Parameters: APP003(String)
+2018-08-03 16:22:10,265 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:22:10,266 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:22:10,267 DEBUG query:145 ---- ==> Parameters: APP004(String)
+2018-08-03 16:22:10,277 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:22:10,278 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:22:10,279 DEBUG query:145 ---- ==> Parameters: APP005(String)
+2018-08-03 16:22:10,288 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:22:10,289 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:22:10,290 DEBUG query:145 ---- ==> Parameters: APP006(String)
+2018-08-03 16:22:10,300 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:22:10,301 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:22:10,301 DEBUG query:145 ---- ==> Parameters: APP007(String)
+2018-08-03 16:22:10,311 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:22:10,312 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:22:10,312 DEBUG query:145 ---- ==> Parameters: APP008(String)
+2018-08-03 16:22:10,322 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:22:11,863 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-08-03 16:22:11,865 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-08-03 16:22:11,885 DEBUG queryList:145 ---- <==      Total: 10
+2018-08-03 16:22:11,888 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-08-03 16:22:11,888 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-08-03 16:22:11,901 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-08-03 16:22:16,580 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-08-03 16:22:16,580 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-08-03 16:22:16,596 DEBUG queryList:145 ---- <==      Total: 10
+2018-08-03 16:22:16,597 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-08-03 16:22:16,598 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-08-03 16:22:16,610 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-08-03 16:34:18,809 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-08-03 16:34:18,810 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-08-03 16:34:18,822 DEBUG queryList:145 ---- <==      Total: 10
+2018-08-03 16:34:18,823 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-08-03 16:34:18,824 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-08-03 16:34:18,836 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-08-03 16:34:27,644 DEBUG query:145 ---- ==>  Preparing: SELECT a.code Code, a.name Name, a.status Status, a.description Description, a.show_order ShowOrder, a.create_by CreateBy, a.create_time CreateTime, a.update_by UpdateBy, a.update_time UpdateTime FROM application a 
+2018-08-03 16:34:27,645 DEBUG query:145 ---- ==> Parameters: 
+2018-08-03 16:34:27,655 DEBUG query:145 ---- <==      Total: 8
+2018-08-03 16:34:27,657 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:34:27,658 DEBUG query:145 ---- ==> Parameters: APP001(String)
+2018-08-03 16:34:27,668 DEBUG query:145 ---- <==      Total: 2
+2018-08-03 16:34:27,669 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:34:27,670 DEBUG query:145 ---- ==> Parameters: APP002(String)
+2018-08-03 16:34:27,680 DEBUG query:145 ---- <==      Total: 1
+2018-08-03 16:34:27,682 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:34:27,682 DEBUG query:145 ---- ==> Parameters: APP003(String)
+2018-08-03 16:34:27,693 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:34:27,694 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:34:27,695 DEBUG query:145 ---- ==> Parameters: APP004(String)
+2018-08-03 16:34:27,709 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:34:27,711 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:34:27,712 DEBUG query:145 ---- ==> Parameters: APP005(String)
+2018-08-03 16:34:27,722 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:34:27,723 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:34:27,724 DEBUG query:145 ---- ==> Parameters: APP006(String)
+2018-08-03 16:34:27,734 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:34:27,735 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:34:27,736 DEBUG query:145 ---- ==> Parameters: APP007(String)
+2018-08-03 16:34:27,746 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:34:27,747 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:34:27,747 DEBUG query:145 ---- ==> Parameters: APP008(String)
+2018-08-03 16:34:27,766 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:34:29,463 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-08-03 16:34:29,463 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-08-03 16:34:29,474 DEBUG queryList:145 ---- <==      Total: 10
+2018-08-03 16:34:29,475 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-08-03 16:34:29,476 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-08-03 16:34:29,486 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-08-03 16:34:35,443 DEBUG query:145 ---- ==>  Preparing: SELECT a.code Code, a.name Name, a.status Status, a.description Description, a.show_order ShowOrder, a.create_by CreateBy, a.create_time CreateTime, a.update_by UpdateBy, a.update_time UpdateTime FROM application a 
+2018-08-03 16:34:35,443 DEBUG query:145 ---- ==> Parameters: 
+2018-08-03 16:34:35,466 DEBUG query:145 ---- <==      Total: 8
+2018-08-03 16:34:35,466 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:34:35,467 DEBUG query:145 ---- ==> Parameters: APP001(String)
+2018-08-03 16:34:35,476 DEBUG query:145 ---- <==      Total: 2
+2018-08-03 16:34:35,477 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:34:35,478 DEBUG query:145 ---- ==> Parameters: APP002(String)
+2018-08-03 16:34:35,487 DEBUG query:145 ---- <==      Total: 1
+2018-08-03 16:34:35,487 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:34:35,488 DEBUG query:145 ---- ==> Parameters: APP003(String)
+2018-08-03 16:34:35,503 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:34:35,504 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:34:35,504 DEBUG query:145 ---- ==> Parameters: APP004(String)
+2018-08-03 16:34:35,513 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:34:35,514 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:34:35,514 DEBUG query:145 ---- ==> Parameters: APP005(String)
+2018-08-03 16:34:35,523 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:34:35,524 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:34:35,525 DEBUG query:145 ---- ==> Parameters: APP006(String)
+2018-08-03 16:34:35,534 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:34:35,535 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:34:35,535 DEBUG query:145 ---- ==> Parameters: APP007(String)
+2018-08-03 16:34:35,546 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:34:35,547 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:34:35,548 DEBUG query:145 ---- ==> Parameters: APP008(String)
+2018-08-03 16:34:35,557 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:34:42,619 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-08-03 16:34:42,620 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-08-03 16:34:42,631 DEBUG queryList:145 ---- <==      Total: 10
+2018-08-03 16:34:42,632 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-08-03 16:34:42,633 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-08-03 16:34:42,642 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-08-03 16:34:47,710 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-08-03 16:34:47,711 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-08-03 16:34:47,723 DEBUG queryList:145 ---- <==      Total: 10
+2018-08-03 16:34:47,725 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-08-03 16:34:47,726 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-08-03 16:34:47,736 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-08-03 16:37:47,875 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-08-03 16:37:47,876 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-08-03 16:37:47,896 DEBUG queryList:145 ---- <==      Total: 10
+2018-08-03 16:37:47,897 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-08-03 16:37:47,897 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-08-03 16:37:47,906 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-08-03 16:38:53,493  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 10860 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-08-03 16:38:53,493 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-08-03 16:38:53,493  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-08-03 16:38:56,589  INFO AdventureApplication:57 ---- Started AdventureApplication in 3.138 seconds (JVM running for 7664.091)
+2018-08-03 16:39:05,490 DEBUG query:145 ---- ==>  Preparing: SELECT a.code Code, a.name Name, a.status Status, a.description Description, a.show_order ShowOrder, a.create_by CreateBy, a.create_time CreateTime, a.update_by UpdateBy, a.update_time UpdateTime FROM application a 
+2018-08-03 16:39:05,490 DEBUG query:145 ---- ==> Parameters: 
+2018-08-03 16:39:05,502 DEBUG query:145 ---- <==      Total: 8
+2018-08-03 16:39:05,504 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:39:05,504 DEBUG query:145 ---- ==> Parameters: APP001(String)
+2018-08-03 16:39:05,514 DEBUG query:145 ---- <==      Total: 2
+2018-08-03 16:39:05,515 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:39:05,516 DEBUG query:145 ---- ==> Parameters: APP002(String)
+2018-08-03 16:39:05,526 DEBUG query:145 ---- <==      Total: 1
+2018-08-03 16:39:05,526 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:39:05,527 DEBUG query:145 ---- ==> Parameters: APP003(String)
+2018-08-03 16:39:05,537 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:39:05,538 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:39:05,538 DEBUG query:145 ---- ==> Parameters: APP004(String)
+2018-08-03 16:39:05,548 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:39:05,548 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:39:05,549 DEBUG query:145 ---- ==> Parameters: APP005(String)
+2018-08-03 16:39:05,558 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:39:05,559 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:39:05,559 DEBUG query:145 ---- ==> Parameters: APP006(String)
+2018-08-03 16:39:05,569 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:39:05,570 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:39:05,570 DEBUG query:145 ---- ==> Parameters: APP007(String)
+2018-08-03 16:39:05,580 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:39:05,581 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:39:05,582 DEBUG query:145 ---- ==> Parameters: APP008(String)
+2018-08-03 16:39:05,591 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:39:09,529 DEBUG query:145 ---- ==>  Preparing: SELECT a.code Code, a.name Name, a.status Status, a.description Description, a.show_order ShowOrder, a.create_by CreateBy, a.create_time CreateTime, a.update_by UpdateBy, a.update_time UpdateTime FROM application a 
+2018-08-03 16:39:09,529 DEBUG query:145 ---- ==> Parameters: 
+2018-08-03 16:39:09,548 DEBUG query:145 ---- <==      Total: 8
+2018-08-03 16:39:09,550 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:39:09,551 DEBUG query:145 ---- ==> Parameters: APP001(String)
+2018-08-03 16:39:09,562 DEBUG query:145 ---- <==      Total: 2
+2018-08-03 16:39:09,563 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:39:09,565 DEBUG query:145 ---- ==> Parameters: APP002(String)
+2018-08-03 16:39:09,576 DEBUG query:145 ---- <==      Total: 1
+2018-08-03 16:39:09,577 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:39:09,578 DEBUG query:145 ---- ==> Parameters: APP003(String)
+2018-08-03 16:39:09,590 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:39:09,591 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:39:09,592 DEBUG query:145 ---- ==> Parameters: APP004(String)
+2018-08-03 16:39:09,602 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:39:09,603 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:39:09,604 DEBUG query:145 ---- ==> Parameters: APP005(String)
+2018-08-03 16:39:09,614 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:39:09,616 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:39:09,616 DEBUG query:145 ---- ==> Parameters: APP006(String)
+2018-08-03 16:39:09,626 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:39:09,627 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:39:09,628 DEBUG query:145 ---- ==> Parameters: APP007(String)
+2018-08-03 16:39:09,639 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:39:09,641 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:39:09,642 DEBUG query:145 ---- ==> Parameters: APP008(String)
+2018-08-03 16:39:09,655 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:39:20,399 DEBUG query:145 ---- ==>  Preparing: SELECT a.code Code, a.name Name, a.status Status, a.description Description, a.show_order ShowOrder, a.create_by CreateBy, a.create_time CreateTime, a.update_by UpdateBy, a.update_time UpdateTime FROM application a 
+2018-08-03 16:39:20,400 DEBUG query:145 ---- ==> Parameters: 
+2018-08-03 16:39:20,411 DEBUG query:145 ---- <==      Total: 8
+2018-08-03 16:39:20,414 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:39:20,415 DEBUG query:145 ---- ==> Parameters: APP001(String)
+2018-08-03 16:39:20,426 DEBUG query:145 ---- <==      Total: 2
+2018-08-03 16:39:20,427 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:39:20,428 DEBUG query:145 ---- ==> Parameters: APP002(String)
+2018-08-03 16:39:20,437 DEBUG query:145 ---- <==      Total: 1
+2018-08-03 16:39:20,438 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:39:20,439 DEBUG query:145 ---- ==> Parameters: APP003(String)
+2018-08-03 16:39:20,452 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:39:20,453 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:39:20,453 DEBUG query:145 ---- ==> Parameters: APP004(String)
+2018-08-03 16:39:20,479 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:39:20,480 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:39:20,481 DEBUG query:145 ---- ==> Parameters: APP005(String)
+2018-08-03 16:39:21,095 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:39:21,096 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:39:21,096 DEBUG query:145 ---- ==> Parameters: APP006(String)
+2018-08-03 16:39:21,105 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:39:21,106 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:39:21,107 DEBUG query:145 ---- ==> Parameters: APP007(String)
+2018-08-03 16:39:21,123 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:39:21,124 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:39:21,124 DEBUG query:145 ---- ==> Parameters: APP008(String)
+2018-08-03 16:39:21,134 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:39:25,016 DEBUG query:145 ---- ==>  Preparing: SELECT a.code Code, a.name Name, a.status Status, a.description Description, a.show_order ShowOrder, a.create_by CreateBy, a.create_time CreateTime, a.update_by UpdateBy, a.update_time UpdateTime FROM application a 
+2018-08-03 16:39:25,017 DEBUG query:145 ---- ==> Parameters: 
+2018-08-03 16:39:25,027 DEBUG query:145 ---- <==      Total: 8
+2018-08-03 16:39:25,029 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:39:25,030 DEBUG query:145 ---- ==> Parameters: APP001(String)
+2018-08-03 16:39:25,039 DEBUG query:145 ---- <==      Total: 2
+2018-08-03 16:39:25,040 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:39:25,041 DEBUG query:145 ---- ==> Parameters: APP002(String)
+2018-08-03 16:39:25,059 DEBUG query:145 ---- <==      Total: 1
+2018-08-03 16:39:25,060 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:39:25,061 DEBUG query:145 ---- ==> Parameters: APP003(String)
+2018-08-03 16:39:25,073 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:39:25,074 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:39:25,075 DEBUG query:145 ---- ==> Parameters: APP004(String)
+2018-08-03 16:39:25,085 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:39:25,086 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:39:25,087 DEBUG query:145 ---- ==> Parameters: APP005(String)
+2018-08-03 16:39:25,121 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:39:25,124 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:39:25,128 DEBUG query:145 ---- ==> Parameters: APP006(String)
+2018-08-03 16:39:25,140 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:39:25,141 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:39:25,142 DEBUG query:145 ---- ==> Parameters: APP007(String)
+2018-08-03 16:39:25,152 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:39:25,152 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:39:25,153 DEBUG query:145 ---- ==> Parameters: APP008(String)
+2018-08-03 16:39:25,163 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:39:50,344  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 10860 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-08-03 16:39:50,344 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-08-03 16:39:50,344  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-08-03 16:39:53,173  INFO AdventureApplication:57 ---- Started AdventureApplication in 2.859 seconds (JVM running for 7720.675)
+2018-08-03 16:39:57,750 DEBUG query:145 ---- ==>  Preparing: SELECT a.code Code, a.name Name, a.status Status, a.description Description, a.show_order ShowOrder, a.create_by CreateBy, a.create_time CreateTime, a.update_by UpdateBy, a.update_time UpdateTime FROM application a 
+2018-08-03 16:39:57,751 DEBUG query:145 ---- ==> Parameters: 
+2018-08-03 16:39:57,771 DEBUG query:145 ---- <==      Total: 8
+2018-08-03 16:39:57,772 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:39:57,773 DEBUG query:145 ---- ==> Parameters: APP001(String)
+2018-08-03 16:39:57,798 DEBUG query:145 ---- <==      Total: 2
+2018-08-03 16:39:57,801 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:39:57,802 DEBUG query:145 ---- ==> Parameters: APP002(String)
+2018-08-03 16:39:57,812 DEBUG query:145 ---- <==      Total: 1
+2018-08-03 16:39:57,813 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:39:57,814 DEBUG query:145 ---- ==> Parameters: APP003(String)
+2018-08-03 16:39:57,825 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:39:57,826 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:39:57,827 DEBUG query:145 ---- ==> Parameters: APP004(String)
+2018-08-03 16:39:57,837 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:39:57,838 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:39:57,838 DEBUG query:145 ---- ==> Parameters: APP005(String)
+2018-08-03 16:39:57,848 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:39:57,848 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:39:57,849 DEBUG query:145 ---- ==> Parameters: APP006(String)
+2018-08-03 16:39:57,859 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:39:57,859 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:39:57,860 DEBUG query:145 ---- ==> Parameters: APP007(String)
+2018-08-03 16:39:57,870 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:39:57,871 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:39:57,872 DEBUG query:145 ---- ==> Parameters: APP008(String)
+2018-08-03 16:39:57,882 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:40:25,244  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 10860 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-08-03 16:40:25,244 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-08-03 16:40:25,245  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-08-03 16:40:28,471  INFO AdventureApplication:57 ---- Started AdventureApplication in 3.255 seconds (JVM running for 7755.973)
+2018-08-03 16:40:33,817 DEBUG query:145 ---- ==>  Preparing: SELECT a.code Code, a.name Name, a.status Status, a.description Description, a.show_order ShowOrder, a.create_by CreateBy, a.create_time CreateTime, a.update_by UpdateBy, a.update_time UpdateTime FROM application a 
+2018-08-03 16:40:33,818 DEBUG query:145 ---- ==> Parameters: 
+2018-08-03 16:40:33,828 DEBUG query:145 ---- <==      Total: 8
+2018-08-03 16:40:33,830 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:40:33,830 DEBUG query:145 ---- ==> Parameters: APP001(String)
+2018-08-03 16:40:33,841 DEBUG query:145 ---- <==      Total: 2
+2018-08-03 16:40:33,842 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:40:33,842 DEBUG query:145 ---- ==> Parameters: APP002(String)
+2018-08-03 16:40:33,853 DEBUG query:145 ---- <==      Total: 1
+2018-08-03 16:40:33,854 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:40:33,854 DEBUG query:145 ---- ==> Parameters: APP003(String)
+2018-08-03 16:40:33,864 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:40:33,865 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:40:33,865 DEBUG query:145 ---- ==> Parameters: APP004(String)
+2018-08-03 16:40:33,876 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:40:33,877 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:40:33,878 DEBUG query:145 ---- ==> Parameters: APP005(String)
+2018-08-03 16:40:33,888 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:40:33,889 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:40:33,889 DEBUG query:145 ---- ==> Parameters: APP006(String)
+2018-08-03 16:40:33,899 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:40:33,900 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:40:33,901 DEBUG query:145 ---- ==> Parameters: APP007(String)
+2018-08-03 16:40:33,912 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:40:33,912 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:40:33,915 DEBUG query:145 ---- ==> Parameters: APP008(String)
+2018-08-03 16:40:33,927 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:40:39,059 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-08-03 16:40:39,060 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-08-03 16:40:39,071 DEBUG queryList:145 ---- <==      Total: 10
+2018-08-03 16:40:39,074 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-08-03 16:40:39,076 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-08-03 16:40:39,087 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-08-03 16:46:19,357 DEBUG query:145 ---- ==>  Preparing: SELECT a.code Code, a.name Name, a.status Status, a.description Description, a.show_order ShowOrder, a.create_by CreateBy, a.create_time CreateTime, a.update_by UpdateBy, a.update_time UpdateTime FROM application a 
+2018-08-03 16:46:19,358 DEBUG query:145 ---- ==> Parameters: 
+2018-08-03 16:46:19,371 DEBUG query:145 ---- <==      Total: 8
+2018-08-03 16:46:19,372 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:46:19,372 DEBUG query:145 ---- ==> Parameters: APP001(String)
+2018-08-03 16:46:19,383 DEBUG query:145 ---- <==      Total: 2
+2018-08-03 16:46:19,384 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:46:19,385 DEBUG query:145 ---- ==> Parameters: APP002(String)
+2018-08-03 16:46:19,396 DEBUG query:145 ---- <==      Total: 1
+2018-08-03 16:46:19,398 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:46:19,399 DEBUG query:145 ---- ==> Parameters: APP003(String)
+2018-08-03 16:46:19,831 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:46:19,832 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:46:19,832 DEBUG query:145 ---- ==> Parameters: APP004(String)
+2018-08-03 16:46:19,843 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:46:19,844 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:46:19,845 DEBUG query:145 ---- ==> Parameters: APP005(String)
+2018-08-03 16:46:19,855 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:46:19,856 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:46:19,856 DEBUG query:145 ---- ==> Parameters: APP006(String)
+2018-08-03 16:46:19,866 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:46:19,867 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:46:19,868 DEBUG query:145 ---- ==> Parameters: APP007(String)
+2018-08-03 16:46:19,878 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:46:19,879 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:46:19,879 DEBUG query:145 ---- ==> Parameters: APP008(String)
+2018-08-03 16:46:19,890 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:46:21,338 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-08-03 16:46:21,339 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-08-03 16:46:21,351 DEBUG queryList:145 ---- <==      Total: 10
+2018-08-03 16:46:21,352 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-08-03 16:46:21,353 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-08-03 16:46:21,363 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-08-03 16:46:40,319 DEBUG query:145 ---- ==>  Preparing: SELECT a.code Code, a.name Name, a.status Status, a.description Description, a.show_order ShowOrder, a.create_by CreateBy, a.create_time CreateTime, a.update_by UpdateBy, a.update_time UpdateTime FROM application a 
+2018-08-03 16:46:40,320 DEBUG query:145 ---- ==> Parameters: 
+2018-08-03 16:46:40,332 DEBUG query:145 ---- <==      Total: 8
+2018-08-03 16:46:40,333 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:46:40,333 DEBUG query:145 ---- ==> Parameters: APP001(String)
+2018-08-03 16:46:40,344 DEBUG query:145 ---- <==      Total: 2
+2018-08-03 16:46:40,346 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:46:40,346 DEBUG query:145 ---- ==> Parameters: APP002(String)
+2018-08-03 16:46:40,360 DEBUG query:145 ---- <==      Total: 1
+2018-08-03 16:46:40,361 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:46:40,362 DEBUG query:145 ---- ==> Parameters: APP003(String)
+2018-08-03 16:46:40,376 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:46:40,377 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:46:40,378 DEBUG query:145 ---- ==> Parameters: APP004(String)
+2018-08-03 16:46:40,389 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:46:40,390 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:46:40,391 DEBUG query:145 ---- ==> Parameters: APP005(String)
+2018-08-03 16:46:40,402 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:46:40,403 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:46:40,405 DEBUG query:145 ---- ==> Parameters: APP006(String)
+2018-08-03 16:46:40,417 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:46:40,419 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:46:40,420 DEBUG query:145 ---- ==> Parameters: APP007(String)
+2018-08-03 16:46:40,430 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:46:40,432 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 16:46:40,432 DEBUG query:145 ---- ==> Parameters: APP008(String)
+2018-08-03 16:46:40,443 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 16:46:40,938 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-08-03 16:46:40,939 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-08-03 16:46:40,952 DEBUG queryList:145 ---- <==      Total: 10
+2018-08-03 16:46:40,954 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-08-03 16:46:40,955 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-08-03 16:46:40,971 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-08-03 16:55:57,478  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 4832 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-08-03 16:55:57,482 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-08-03 16:55:57,483  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-08-03 16:56:09,022  INFO AdventureApplication:57 ---- Started AdventureApplication in 11.871 seconds (JVM running for 12.548)
+2018-08-03 17:14:03,543  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 8484 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-08-03 17:14:03,547 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-08-03 17:14:03,548  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-08-03 17:14:14,465  INFO AdventureApplication:57 ---- Started AdventureApplication in 11.306 seconds (JVM running for 11.94)
+2018-08-03 17:16:21,997  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 10824 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-08-03 17:16:22,000 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-08-03 17:16:22,001  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-08-03 17:16:34,983  INFO AdventureApplication:57 ---- Started AdventureApplication in 13.353 seconds (JVM running for 14.009)
+2018-08-03 17:16:44,642 DEBUG query:145 ---- ==>  Preparing: SELECT a.code Code, a.name Name, a.status Status, a.description Description, a.show_order ShowOrder, a.create_by CreateBy, a.create_time CreateTime, a.update_by UpdateBy, a.update_time UpdateTime FROM application a 
+2018-08-03 17:16:44,693 DEBUG query:145 ---- ==> Parameters: 
+2018-08-03 17:16:44,733 DEBUG query:145 ---- <==      Total: 8
+2018-08-03 17:16:44,743 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 17:16:44,744 DEBUG query:145 ---- ==> Parameters: APP001(String)
+2018-08-03 17:16:44,758 DEBUG query:145 ---- <==      Total: 2
+2018-08-03 17:16:44,759 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 17:16:44,760 DEBUG query:145 ---- ==> Parameters: APP002(String)
+2018-08-03 17:16:44,772 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 17:16:44,774 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 17:16:44,775 DEBUG query:145 ---- ==> Parameters: APP003(String)
+2018-08-03 17:16:44,786 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 17:16:44,787 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 17:16:44,788 DEBUG query:145 ---- ==> Parameters: APP004(String)
+2018-08-03 17:16:44,804 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 17:16:44,805 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 17:16:44,806 DEBUG query:145 ---- ==> Parameters: APP005(String)
+2018-08-03 17:16:44,818 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 17:16:44,819 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 17:16:44,820 DEBUG query:145 ---- ==> Parameters: APP006(String)
+2018-08-03 17:16:44,830 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 17:16:44,832 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 17:16:44,833 DEBUG query:145 ---- ==> Parameters: APP007(String)
+2018-08-03 17:16:44,845 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 17:16:44,847 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-08-03 17:16:44,849 DEBUG query:145 ---- ==> Parameters: APP008(String)
+2018-08-03 17:16:44,860 DEBUG query:145 ---- <==      Total: 0
+2018-08-03 17:16:48,526 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-08-03 17:16:48,527 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-08-03 17:16:48,542 DEBUG queryList:145 ---- <==      Total: 10
+2018-08-03 17:16:48,543 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-08-03 17:16:48,544 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-08-03 17:16:48,557 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-08-03 17:16:52,493 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-08-03 17:16:52,494 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-08-03 17:16:52,514 DEBUG queryList:145 ---- <==      Total: 10
+2018-08-03 17:16:52,516 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-08-03 17:16:52,523 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-08-03 17:16:52,537 DEBUG queryTotal:145 ---- <==      Total: 1

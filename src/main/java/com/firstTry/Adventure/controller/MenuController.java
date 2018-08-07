@@ -64,9 +64,9 @@ public class MenuController {
 	/**
 	 * 信息
 	 */
-	@RequestMapping("/info/{id}")
+	@RequestMapping("/info")
 //	@RequiresPermissions("adventure:menu:info")
-	public R info(@PathVariable("id") Long id){
+	public R info(Long id){
 		MenuEntity menu = menuService.queryObject(id);
 		
 		return R.ok().put("menu", menu);

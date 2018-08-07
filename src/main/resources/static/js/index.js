@@ -32,7 +32,8 @@ var vm = new Vue({
 	data : {
 		main : "main.html",
 		navTitle : "欢迎页",
-		applicationLists : []
+		applicationLists : [],
+		listUrl:[]
 	},
 	methods : {
 		donate : function() {
@@ -60,9 +61,18 @@ var vm = new Vue({
 				dataType : "json",//服务端接收的数据类型
 				url : "/adventure/application/list",
 				contentType : "application/json",
+				async:false, 
 				data : null,
 				success : function(result) {
 					_this.applicationLists = result;//打印服务端返回的数据(调试用)
+					if(_this.applicationLists.length>0){
+						for(var a in _this.applicationLists){
+							for(var i in _this.applicationLists[a].listMenu){
+								//将url存储起来，已便放入动态路由
+								_this.listUrl.push(_this.applicationLists[a].listMenu[i].url);
+							}
+						}
+					}
 				},
 				error : function() {
 					console.log("异常!");
@@ -89,7 +99,7 @@ var vm = new Vue({
 		_this.getMenu();
 		//路由
 		var router = new Router();
-		var menus = [ "main.html", "generator.html" ];
+		var menus = _this.listUrl;
 		_this.routerList(router, menus);
 		router.start();
 	}

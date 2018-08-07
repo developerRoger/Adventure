@@ -36,6 +36,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		"/index",
 		"/sys/generator/*",
 		"/adventure/application/*",
+		"/adventure/menu/*",
 		//访问静态资源文件去除拦截
 		"/js/**",
 		"/css/**",
@@ -44,6 +45,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		"/favicon.ico",
 		"/libs/**",
 		"/plugins/**",
+		"/xframework/**",
 		"*/swagger-ui.html",
 		"/views/**",
 		"/**/**.html",

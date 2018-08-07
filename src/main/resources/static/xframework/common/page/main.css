@@ -1,0 +1,138 @@
+body {
+	padding: 0px;
+	margin: 0px;
+	height: 100%;
+	font-family: "\5FAE\8F6F\96C5\9ED1";
+}
+
+div.x-main-table {
+	display: table;
+	vertical-align: middle;
+}
+
+div.x-main-cell {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+/* navbar */
+div.x-main-navbar {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 6%;
+	min-height: 40px;
+	width: 100%;
+}
+
+div.x-main-navbar-bg {
+	background: #428bca;
+}
+
+div.x-main-logo {
+	height: 100%;
+	width: 15%;
+	min-width: 200px;
+	padding-left: 48px;
+	color: #fff;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+div.x-main-logo-bg {
+	background-image: url('../img/logo.png');
+	background-repeat: no-repeat;
+	/* background-size: 38px; */
+	background-position: 10px 50%;
+}
+
+/* menus */
+div.x-main-menus, div.x-main-operate {
+	position: absolute;
+	top: 6%;
+	height: 94%;
+	min-height: 400px;
+	overflow-y: auto;
+}
+
+div.x-main-menus {
+	left: 0px;
+	width: 15%;
+	min-width: 200px;
+	padding-top: 6px;
+}
+
+div.x-main-menus-bg {
+	background: #666;
+}
+
+/* operate */
+div.x-main-operate {
+	left: 15%;
+	width: 85%;
+}
+
+div.x-main-logout {
+    display: flex;
+    align-items: center;
+	position: absolute;
+    top: 0;
+    right: 10px;
+    height: 100%;
+    min-height: 40px;
+    color:#fff;
+}
+
+div.x-main-logout span {
+	margin: 0 10px;
+	cursor: pointer;
+}
+
+/* loading */
+.x-main-loading {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	display: table;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: #fff;
+	opacity: 1;
+	z-index: 999;
+	background-image: url('../img/loading3.gif');
+	background-repeat: no-repeat;
+	background-size: 150px;
+	background-position: 50% 40%;
+}
+
+.x-main-loading .content {
+	display: table-cell;
+	vertical-align:middle;
+}
+
+::-webkit-scrollbar-track-piece {
+	background-color: #e1e1e1;
+	-webkit-border-radius: 0;
+}
+
+::-webkit-scrollbar {
+	width: 6px;
+	height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+	height: 50px;
+	background-color: #444444;
+	-webkit-border-radius: 0px;
+	outline: 0px solid #fff;
+	outline-offset: -0px;
+	border: 0px solid #fff;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	height: 50px;
+	background-color: #444444;
+	-webkit-border-radius: 0px;
+}
