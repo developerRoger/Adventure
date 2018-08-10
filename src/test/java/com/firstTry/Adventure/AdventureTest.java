@@ -20,9 +20,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-
 import com.firstTry.Adventure.entity.UserTest;
 
 public class AdventureTest {
@@ -36,14 +34,14 @@ public class AdventureTest {
 //	         System.out.println(new Date().getTime()/1000+15-new Date().getTime()/1000);
 			 ConcurrentHashMap<String,Object> map=new ConcurrentHashMap<>();
 	         map.put("1111","22222");
-	         map.remove("666");
-	/*	UserTest o=new UserTest();
-		o.setId(1l);
-		o.setMobie("111111111111");
-		o.setRemark("1");
-		AdventureTest adventureTest=new AdventureTest();
-		Map<String,Object> sa=object2Map(o);
-		System.out.println(sa.get("id"));*/
+		         map.remove("666");
+		/*	UserTest o=new UserTest();
+			o.setId(1l);
+			o.setMobie("111111111111");
+			o.setRemark("1");
+			AdventureTest adventureTest=new AdventureTest();
+			Map<String,Object> sa=object2Map(o);
+			System.out.println(sa.get("id"));*/
 		
 //		System.out.println(new BCryptPasswordEncoder().encode("123"));
 	}

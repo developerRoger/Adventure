@@ -12,10 +12,10 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import com.firstTry.Adventure.config.IdProcessor;
 import com.firstTry.Adventure.entity.UserTest;
 import com.firstTry.Adventure.mapper.SysGeneratorMapper;
 import com.firstTry.Adventure.mapper.UserMapper;
-import com.firstTry.Adventure.service.SysGeneratorService;
 import com.firstTry.Adventure.service.UserService;
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -27,6 +27,9 @@ public class AdventureApplicationTests {
 	
 	@Autowired
 	private RedisTemplate<String, Object> redisTemplate;//redis实现方法
+	
+	@Autowired
+	private IdProcessor<Long> idProcessor;
 	
 	@Autowired
 	private UserMapper userMapper;
@@ -80,12 +83,22 @@ public class AdventureApplicationTests {
 	
 	/**
 	 * 测试redis
+	 * @throws Exception 
 	 */
-//	@Test
+	//@Test
 	public void testRedis(){
 		//
 		redisTemplate.opsForValue().set("111", "redis");
 		System.out.println(redisTemplate.opsForValue().get("111")+"????");
+		
+	}
+	
+	/**
+	 * 测试id自动生成(雪花算法)
+	 */
+//	@Test
+	public void testIdNext(){
+		System.out.println(idProcessor.nextId());
 	}
 	
 	/**
@@ -98,9 +111,25 @@ public class AdventureApplicationTests {
 		System.out.println(userTest.getAdders()+"======");
 	}
 	
-	@Test
+//	@Test
 	public void TestService(){
 		List<Map<String,Object>> listMap=sysGeneratorService.queryList(new HashMap<>());
 		System.out.println(listMap);
+	}
+	
+	@Test
+	public void TestFor(){
+		System.out.println(TestForIndex());
+	}
+	
+	private String TestForIndex(){
+		
+		for(int a=0 ;a<10;a++){
+			if(a==5){
+				return "---"+a;
+			}
+			System.out.println(a);
+		}
+		return "0";
 	}
 }

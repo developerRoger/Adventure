@@ -28,7 +28,7 @@
 	</select>
 	
  	<select id="queryTotal" resultType="java.lang.Integer">
-		select count(1) from ${tableName} 
+		select count(1) from ${tableName}  a
 		 <include refid="commonQuery"/>
 	</select>
 	 

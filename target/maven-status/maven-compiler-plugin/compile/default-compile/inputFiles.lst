@@ -1,5 +1,6 @@
 E:\Adventure\Adventure\src\main\java\com\firstTry\Adventure\Netty\Server\CustomServer.java
 E:\Adventure\Adventure\src\main\java\com\firstTry\Adventure\utils\BaseTypeUtil.java
+E:\Adventure\Adventure\src\main\java\com\firstTry\Adventure\service\ApplicationService.java
 E:\Adventure\Adventure\src\main\java\com\firstTry\Adventure\utils\HttpUtil.java
 E:\Adventure\Adventure\src\main\java\com\firstTry\Adventure\Netty\Agreement\ConnectorIdleStateTrigger.java
 E:\Adventure\Adventure\src\main\java\com\firstTry\Adventure\Netty\Server\AcceptorIdleStateTrigger.java
@@ -9,6 +10,8 @@ E:\Adventure\Adventure\src\main\java\com\firstTry\Adventure\utils\JSONMapperUtil
 E:\Adventure\Adventure\src\main\java\com\firstTry\Adventure\utils\ObjectToMapUtil.java
 E:\Adventure\Adventure\src\main\java\com\firstTry\Adventure\utils\PatternUtil.java
 E:\Adventure\Adventure\src\main\java\com\firstTry\Adventure\Netty\Agreement\CustomDecoder.java
+E:\Adventure\Adventure\src\main\java\com\firstTry\Adventure\mapper\MenuMapper.java
+E:\Adventure\Adventure\src\main\java\com\firstTry\Adventure\service\MenuService.java
 E:\Adventure\Adventure\src\main\java\com\firstTry\Adventure\Netty\Client\HeartBeatsClient.java
 E:\Adventure\Adventure\src\main\java\com\firstTry\Adventure\service\impl\UserServiceImpl.java
 E:\Adventure\Adventure\src\main\java\com\firstTry\Adventure\AdventureApplication.java
@@ -20,6 +23,7 @@ E:\Adventure\Adventure\src\main\java\com\firstTry\Adventure\utils\R.java
 E:\Adventure\Adventure\src\main\java\com\firstTry\Adventure\exception\MyException.java
 E:\Adventure\Adventure\src\main\java\com\firstTry\Adventure\utils\Page.java
 E:\Adventure\Adventure\src\main\java\com\firstTry\Adventure\config\DataSourceConfig.java
+E:\Adventure\Adventure\src\main\java\com\firstTry\Adventure\config\BaseDao.java
 E:\Adventure\Adventure\src\main\java\com\firstTry\Adventure\Netty\Client\CustomClient.java
 E:\Adventure\Adventure\src\main\java\com\firstTry\Adventure\utils\JSONUtil.java
 E:\Adventure\Adventure\src\main\java\com\firstTry\Adventure\mapper\SysGeneratorMapper.java
@@ -29,16 +33,21 @@ E:\Adventure\Adventure\src\main\java\com\firstTry\Adventure\config\Swagger2.java
 E:\Adventure\Adventure\src\main\java\com\firstTry\Adventure\utils\Query.java
 E:\Adventure\Adventure\src\main\java\com\firstTry\Adventure\Netty\Agreement\CustomEncoder.java
 E:\Adventure\Adventure\src\main\java\com\firstTry\Adventure\config\RedisObjectSerializer.java
+E:\Adventure\Adventure\src\main\java\com\firstTry\Adventure\controller\MenuController.java
 E:\Adventure\Adventure\src\main\java\com\firstTry\Adventure\utils\PageUtils.java
 E:\Adventure\Adventure\src\main\java\com\firstTry\Adventure\utils\DateUtils.java
+E:\Adventure\Adventure\src\main\java\com\firstTry\Adventure\service\impl\MenuServiceImpl.java
 E:\Adventure\Adventure\src\main\java\com\firstTry\Adventure\entity\ColumnEntity.java
 E:\Adventure\Adventure\src\main\java\com\firstTry\Adventure\service\UserService.java
 E:\Adventure\Adventure\src\main\java\com\firstTry\Adventure\utils\DESHelper.java
 E:\Adventure\Adventure\src\main\java\com\firstTry\Adventure\utils\MD5Util.java
 E:\Adventure\Adventure\src\main\java\com\firstTry\Adventure\Netty\Server\BaseServer.java
 E:\Adventure\Adventure\src\main\java\com\firstTry\Adventure\utils\IDUtil.java
+E:\Adventure\Adventure\src\main\java\com\firstTry\Adventure\service\impl\ApplicationServiceImpl.java
 E:\Adventure\Adventure\src\main\java\com\firstTry\Adventure\controller\SysGeneratorController.java
+E:\Adventure\Adventure\src\main\java\com\firstTry\Adventure\entity\ApplicationEntity.java
 E:\Adventure\Adventure\src\main\java\com\firstTry\Adventure\service\impl\SysGeneratorServiceImpl.java
+E:\Adventure\Adventure\src\main\java\com\firstTry\Adventure\mapper\ApplicationMapper.java
 E:\Adventure\Adventure\src\main\java\com\firstTry\Adventure\controller\UserLoginController.java
 E:\Adventure\Adventure\src\main\java\com\firstTry\Adventure\Netty\Server\BaseServerHandler.java
 E:\Adventure\Adventure\src\main\java\com\firstTry\Adventure\utils\JWTUtil.java
@@ -47,6 +56,7 @@ E:\Adventure\Adventure\src\main\java\com\firstTry\Adventure\config\DefaultView.j
 E:\Adventure\Adventure\src\main\java\com\firstTry\Adventure\Netty\Agreement\CustomMsg.java
 E:\Adventure\Adventure\src\main\java\com\firstTry\Adventure\Netty\Client\HeartBeatClientHandler.java
 E:\Adventure\Adventure\src\main\java\com\firstTry\Adventure\config\JWTAuthenticationFilter.java
+E:\Adventure\Adventure\src\main\java\com\firstTry\Adventure\entity\MenuEntity.java
 E:\Adventure\Adventure\src\main\java\com\firstTry\Adventure\exception\RRExceptionHandler.java
 E:\Adventure\Adventure\src\main\java\com\firstTry\Adventure\Netty\Client\BaseClientHandler.java
 E:\Adventure\Adventure\src\main\java\com\firstTry\Adventure\Netty\Agreement\ChannelHandlerHolder.java
@@ -56,6 +66,7 @@ E:\Adventure\Adventure\src\main\java\com\firstTry\Adventure\Netty\Client\BaseCli
 E:\Adventure\Adventure\src\main\java\com\firstTry\Adventure\service\SysGeneratorService.java
 E:\Adventure\Adventure\src\main\java\com\firstTry\Adventure\config\JWTLoginFilter.java
 E:\Adventure\Adventure\src\main\java\com\firstTry\Adventure\Netty\Server\CustomServerHandler.java
+E:\Adventure\Adventure\src\main\java\com\firstTry\Adventure\controller\ApplicationController.java
 E:\Adventure\Adventure\src\main\java\com\firstTry\Adventure\entity\TableEntity.java
 E:\Adventure\Adventure\src\main\java\com\firstTry\Adventure\exception\SessionTimeOutException.java
 E:\Adventure\Adventure\src\main\java\com\firstTry\Adventure\tasks\ScheduledTasks.java

@@ -46,7 +46,7 @@ var vm = new Vue({
 	el:'#rrapp',
 	data:{
 		q:{
-			tableName: null
+			tableName: null,
 		},
 		data:[],
 		clomnusLists:[]
@@ -55,7 +55,7 @@ var vm = new Vue({
 		query: function () {
 			$("#jqGrid").jqGrid('setGridParam',{ 
                 postData:{'tableName': vm.q.tableName},
-                page:1 
+                page:1
             }).trigger("reloadGrid");
 		},
 		generator: function() {

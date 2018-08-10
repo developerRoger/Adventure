@@ -36,4 +36,15 @@ public class ${className}Entity implements Serializable {
 		return $column.attrname;
 	}
 #end
+	@Override
+	public String toString() {
+	
+	#foreach ($column in $columns)
+	#if(${pk.attrname}==$column.attrname)
+		return "${className}Entity [$column.attrname="+$column.attrname+""+
+	#else
+		",$column.attrname="+$column.attrname+""+
+	#end
+	#end
+      "]";}
 }

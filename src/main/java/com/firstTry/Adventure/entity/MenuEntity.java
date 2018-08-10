@@ -197,4 +197,12 @@ public class MenuEntity implements Serializable {
 	public Date getUpdateTime() {
 		return updateTime;
 	}
+	@Override
+	public String toString() {
+		return "MenuEntity [id=" + id + ", appCode=" + appCode + ", level=" + level + ", parentId=" + parentId
+				+ ", name=" + name + ", url=" + url + ", httpUrl=" + httpUrl + ", showName=" + showName + ", showOrder="
+				+ showOrder + ", createBy=" + createBy + ", createTime=" + createTime + ", updateBy=" + updateBy
+				+ ", updateTime=" + updateTime + "]";
+	}
+	
 }

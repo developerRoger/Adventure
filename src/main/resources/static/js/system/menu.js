@@ -83,7 +83,7 @@ var vm = new Vue({
 							vm.reload();
 						});
 					}else{
-						alert(r.msg);
+						$.xfm.alert(r.msg);
 					}
 				}
 			});
@@ -121,6 +121,7 @@ var vm = new Vue({
 			vm.showList = true;
 			var page = $("#jqGrid").jqGrid('getGridParam','page');
 			$("#jqGrid").jqGrid('setGridParam',{ 
+				postData:vm.menu,
                 page:page
             }).trigger("reloadGrid");
 		}

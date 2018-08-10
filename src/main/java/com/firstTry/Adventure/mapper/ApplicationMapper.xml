@@ -33,7 +33,7 @@
 	</select>
 	
  	<select id="queryTotal" resultType="java.lang.Integer">
-		select count(1) from application 
+		select count(1) from application a
 		 <include refid="commonQuery"/>
 	</select>
 	 

@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Map;
-
+import ${package}.config.IdProcessor;
 import ${package}.mapper.${className}Mapper;
 import ${package}.entity.${className}Entity;
 import ${package}.service.${className}Service;
@@ -16,6 +16,9 @@ import ${package}.service.${className}Service;
 public class ${className}ServiceImpl implements ${className}Service {
 	@Autowired
 	private ${className}Mapper ${classname}Dao;
+	
+	@Autowired
+	private IdProcessor<Long> idProcessor;//id自动生成
 	
 	@Override
 	public ${className}Entity queryObject(${pk.attrType} ${pk.attrname}){
@@ -34,6 +37,9 @@ public class ${className}ServiceImpl implements ${className}Service {
 	
 	@Override
 	public void save(${className}Entity ${classname}){
+		//插入的时候加入id
+		if(null==${classname}.getId())
+			${classname}.setId(idProcessor.nextId());
 		${classname}Dao.save(${classname});
 	}
 	

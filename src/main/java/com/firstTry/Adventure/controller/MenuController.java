@@ -3,14 +3,13 @@ package com.firstTry.Adventure.controller;
 import java.util.List;
 import java.util.Map;
 
-//import org.apache.shiro.authz.annotation.RequiresPermissions;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
 import com.firstTry.Adventure.entity.MenuEntity;
 import com.firstTry.Adventure.service.MenuService;
 import com.firstTry.Adventure.utils.PageUtils;
@@ -30,15 +29,18 @@ import com.firstTry.Adventure.utils.R;
 @RestController
 @RequestMapping("/adventure/menu")
 public class MenuController {
+	
 	@Autowired
 	private MenuService menuService;
+	
+	private static Log log = LogFactory.getLog(MenuController.class);
 	
 	/**	
 	 * 列表
 	 */
 	@RequestMapping("/queryList")
-//	@RequiresPermissions("adventure:menu:list")
 	public R queryList(@RequestParam Map<String, Object> params){
+		log.info("/adventure/menu/queryList obj:"+params.toString());
 		//查询列表数据
         Query query = new Query(params);
 
@@ -54,7 +56,6 @@ public class MenuController {
 	 * 获取所有列表
 	 */
 	@RequestMapping("/list")
-//	@RequiresPermissions("adventure:menu:list")
 	public List<MenuEntity> list(){
 		List<MenuEntity> menuList = menuService.query(null);
 		
@@ -65,7 +66,6 @@ public class MenuController {
 	 * 信息
 	 */
 	@RequestMapping("/info")
-//	@RequiresPermissions("adventure:menu:info")
 	public R info(Long id){
 		MenuEntity menu = menuService.queryObject(id);
 		
@@ -76,7 +76,6 @@ public class MenuController {
 	 * 保存
 	 */
 	@RequestMapping("/save")
-//	@RequiresPermissions("adventure:menu:save")
 	public R save(@RequestBody MenuEntity menu){
 		menuService.save(menu);
 		
@@ -87,7 +86,6 @@ public class MenuController {
 	 * 修改
 	 */
 	@RequestMapping("/update")
-//	@RequiresPermissions("adventure:menu:update")
 	public R update(@RequestBody MenuEntity menu){
 		menuService.update(menu);
 		
@@ -98,7 +96,6 @@ public class MenuController {
 	 * 删除
 	 */
 	@RequestMapping("/delete")
-//	@RequiresPermissions("adventure:menu:delete")
 	public R delete(@RequestBody Long[] ids){
 	   for(int a=0;a<ids.length; a++)
 		menuService.delete(ids[a]);
