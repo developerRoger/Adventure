@@ -34,9 +34,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		//控制层拦截
 		"/",
 		"/index",
+		"/qiniu",
+		"/narcotics",
+		"/preface",
 		"/sys/generator/*",
 		"/adventure/application/*",
 		"/adventure/menu/*",
+		"/adventure/qiniu/*",
 		//访问静态资源文件去除拦截
 		"/js/**",
 		"/css/**",
@@ -49,9 +53,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		"*/swagger-ui.html",
 		"/views/**",
 		"/**/**.html",
-		"/xinxinniannian",
-		"/narcotics",
-		"/preface",
 		"/**.png",
 		"/webjars/**",
 		"/swagger-resources/**",

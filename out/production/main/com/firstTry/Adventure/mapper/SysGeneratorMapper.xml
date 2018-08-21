@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 映射mapper路径 -->
+<mapper namespace="com.firstTry.Adventure.mapper.SysGeneratorMapper">
+	<!-- 查询所有表的结构类型创建时间 -->
+	<select id="queryList" resultType="java.util.HashMap" parameterType="java.util.HashMap">
+		select table_name tableName, engine, table_comment tableComment,
+		DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime  from information_schema.tables
+		where table_schema = (select database())
+		<if test="tableName != null and tableName.trim() != ''">
+			and table_name like concat('%', #{tableName}, '%')
+		</if>
+		order by create_time desc
+		<if test="offset != null and limit != null">
+			limit #{offset}, #{limit}
+		</if>
+	</select>
+	
+	<!-- 查询数据库表数量 -->
+	<select id="queryTotal" resultType="int" parameterType="java.util.HashMap">
+		select count(1) from information_schema.tables where table_schema =
+		(select database())
+		<if test="tableName != null and tableName.trim() != ''">
+			and table_name like concat('%', #{tableName}, '%')
+		</if>
+	</select>
+
+	<!-- 查询单表数据 -->
+	<select id="queryTable" resultType="map" parameterType="java.lang.String">
+		select table_name tableName,
+		engine, table_comment tableComment, create_time createTime from
+		information_schema.tables
+		where table_schema = (select database()) and table_name = #{tableName}
+	</select>
+	
+	<!-- 查询当前表中字段和意思 -->
+	<select id="queryColumns" resultType="map" parameterType="java.lang.String">
+		select column_name
+		columnName, data_type dataType, column_comment columnComment,
+		column_key columnKey, extra from information_schema.columns
+		where table_name = #{tableName} and table_schema = (select database())
+		order by ordinal_position
+	</select>
+</mapper>

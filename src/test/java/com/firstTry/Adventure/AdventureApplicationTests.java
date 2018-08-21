@@ -85,7 +85,7 @@ public class AdventureApplicationTests {
 	 * 测试redis
 	 * @throws Exception 
 	 */
-	//@Test
+	@Test
 	public void testRedis(){
 		//
 		redisTemplate.opsForValue().set("111", "redis");
@@ -117,7 +117,7 @@ public class AdventureApplicationTests {
 		System.out.println(listMap);
 	}
 	
-	@Test
+//	@Test
 	public void TestFor(){
 		System.out.println(TestForIndex());
 	}

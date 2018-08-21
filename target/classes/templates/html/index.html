@@ -1,29 +1,57 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<link rel="stylesheet" type="text/css" href="../../xframework/bootstrap/css/bootstrap.min.css" />
-	<link rel="stylesheet" type="text/css" href="../../xframework/bootstrap-datepicker/bootstrap-datepicker.css" />
-	<link rel="stylesheet" type="text/css" href="../../xframework/common/util/x-framework.css" />
-	<link rel="stylesheet" type="text/css" href="../../xframework/common/compnt/x-calendar.css">
-	
-	<script type="text/javascript" src="../../xframework/jquery/jquery.min.js"></script>
-	<script type="text/javascript" src="../../xframework/bootstrap/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="../../xframework/vue/vue.min.js"></script>
-	<script type="text/javascript" src="../../xframework/bootstrap-datepicker/bootstrap-datepicker.js"></script>
-	<script type="text/javascript" src="../../xframework/common/compnt/x-pagenation.js"></script>
-	<script type="text/javascript" src="../../xframework/common/compnt/x-validator.js"></script>
-	<script type="text/javascript" src="../../xframework/common/compnt/x-select.js"></script>
-	<script type="text/javascript" src="../../xframework/common/util/x-framework.js"></script>
-	<script type="text/javascript" src="../../xframework/common/compnt/x-calendar.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script type="text/javascript" src="../js/header.js"></script>
+<script type="text/javascript" src="../js/footer.js"></script>
 
-    <title>念</title>
-    <style type="text/css">  
-    
+<title>文件上传</title>
+<style type="text/css">
 </style>
 </head>
 <body>
+	<div id="upload" v-cloak>
+		<h1>唯独于你，心心念念</h1>
+		<input type="file" value="" id="file" @change='onUpload'>
+		<div>{{url}}</div>
+	</div>
 
-<h1>唯独于你，心心念念</h1>
+	<script type="text/javascript">
+var vm = new Vue({
+	el:'#upload',
+	data:{
+		showList: true,
+		url: null,
+		menu: {}
+	},
+	methods: {
+		//上传图片
+		onUpload(e){
+		      var formData = new FormData(); 
+			    formData.append('image', e.target.files[0]);
+		      $.ajax({
+		        url: '/adventure/qiniu/uploadImg',//这里是后台接口需要换掉
+		        type: 'POST',
+		        dataType: 'json',
+		        cache: false,
+		        data: formData,
+		        processData: false,
+		        contentType: false,
+		        success: (res) => {        
+		        	this.url=res.url;
+		        },	
+		        error: function(err) {
+		        alert("网络错误");
+		        }
+		      });
+		}
+	},
+	created:function(){
+	 var _this=this;
+	 console.log("welcome go  in");
+	}
+});
+
+</script>
 </body>
 </html>

@@ -1,1 +1,0 @@
-2018-02-10 14:52:37,720 ERROR TemplateEngine:1085 - [THYMELEAF][http-nio-8080-exec-4] Exception processing template "error": Exception evaluating SpringEL expression: "exception.message" (error:10)

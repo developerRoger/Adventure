@@ -51,7 +51,7 @@ public class AdventureApplication extends SpringBootServletInitializer{
 	   /**
 	    * 密码采用了BCryptPasswordEncoder进行加密
 	    * @return
-	    */ 
+	    */
 	    @Bean  
 	    public BCryptPasswordEncoder bCryptPasswordEncoder() {  
 	        return new BCryptPasswordEncoder();  
