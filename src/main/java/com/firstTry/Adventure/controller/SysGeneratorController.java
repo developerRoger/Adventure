@@ -68,7 +68,7 @@ public class SysGeneratorController {
 	@RequestMapping("/code")
 	public void code(HttpServletRequest request, HttpServletResponse response) throws IOException{
 		String[] tableNames = new String[]{};
-		String tables = request.getParameter("tables").replace("_", "");
+		String tables = request.getParameter("tables");
 		tableNames = JSON.parseArray(tables).toArray(tableNames);
 		
 		byte[] data = sysGeneratorService.generatorCode(tableNames);
