@@ -85,7 +85,7 @@ public class AdventureApplicationTests {
 	 * 测试redis
 	 * @throws Exception 
 	 */
-	@Test
+//	@Test
 	public void testRedis(){
 		//
 		redisTemplate.opsForValue().set("111", "redis");
@@ -131,5 +131,15 @@ public class AdventureApplicationTests {
 			System.out.println(a);
 		}
 		return "0";
+	}
+	
+	@Test
+	public void TestBoolean(){
+		boolean i=false;
+		if(!i){
+			System.out.println("true");
+		}else{
+			System.out.println("false");
+		}
 	}
 }

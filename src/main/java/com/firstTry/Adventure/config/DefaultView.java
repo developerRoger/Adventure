@@ -51,7 +51,7 @@ public class DefaultView {
 		return "html/login";
 	}
 
-	@RequestMapping("/qiniu")
+	@RequestMapping("/hhh")
 	public String hello() {
 		return "html/index";
 	}

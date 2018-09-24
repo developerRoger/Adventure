@@ -1,0 +1,120 @@
+2018-08-24 11:48:20,925  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 47908 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-08-24 11:48:20,937 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-08-24 11:48:20,938  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-08-24 11:48:37,605  INFO AdventureApplication:57 ---- Started AdventureApplication in 17.297 seconds (JVM running for 18.402)
+2018-08-24 11:48:58,453 DEBUG query:145 ---- ==>  Preparing: SELECT a.code Code, a.name Name, a.status Status, a.description Description, a.show_order ShowOrder, a.create_by CreateBy, a.create_time CreateTime, a.update_by UpdateBy, a.update_time UpdateTime FROM application a 
+2018-08-24 11:48:58,499 DEBUG query:145 ---- ==> Parameters: 
+2018-08-24 11:53:10,859 DEBUG query:145 ---- ==>  Preparing: SELECT a.code Code, a.name Name, a.status Status, a.description Description, a.show_order ShowOrder, a.create_by CreateBy, a.create_time CreateTime, a.update_by UpdateBy, a.update_time UpdateTime FROM application a 
+2018-08-24 11:53:10,861 DEBUG query:145 ---- ==> Parameters: 
+2018-08-24 11:58:38,786 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-08-24 11:58:38,787 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-08-24 11:58:38,837 DEBUG queryList:145 ---- <==      Total: 10
+2018-08-24 11:58:38,839 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-08-24 11:58:38,840 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-08-24 11:58:38,852 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-08-24 11:58:57,182 DEBUG queryTable:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) and table_name = ? 
+2018-08-24 11:58:57,183 DEBUG queryTable:145 ---- ==> Parameters: tdiscovery(String)
+2018-08-24 11:58:57,194 DEBUG queryTable:145 ---- <==      Total: 0
+2018-08-24 11:58:57,195 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-08-24 11:58:57,195 DEBUG queryColumns:145 ---- ==> Parameters: tdiscovery(String)
+2018-08-24 11:58:57,205 DEBUG queryColumns:145 ---- <==      Total: 0
+2018-08-24 11:58:59,776 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-08-24 11:58:59,777 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-08-24 11:58:59,803 DEBUG queryList:145 ---- <==      Total: 10
+2018-08-24 11:58:59,804 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-08-24 11:58:59,805 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-08-24 11:58:59,815 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-08-24 11:59:02,106 DEBUG queryTable:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) and table_name = ? 
+2018-08-24 11:59:02,107 DEBUG queryTable:145 ---- ==> Parameters: tdiscovery(String)
+2018-08-24 11:59:02,117 DEBUG queryTable:145 ---- <==      Total: 0
+2018-08-24 11:59:02,118 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-08-24 11:59:02,119 DEBUG queryColumns:145 ---- ==> Parameters: tdiscovery(String)
+2018-08-24 11:59:02,134 DEBUG queryColumns:145 ---- <==      Total: 0
+2018-08-24 11:59:04,148 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-08-24 11:59:04,150 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-08-24 11:59:04,181 DEBUG queryList:145 ---- <==      Total: 10
+2018-08-24 11:59:04,182 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-08-24 11:59:04,183 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-08-24 11:59:04,194 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-08-24 11:59:34,065 DEBUG queryTable:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) and table_name = ? 
+2018-08-24 11:59:34,070 DEBUG queryTable:145 ---- ==> Parameters: tregionad(String)
+2018-08-24 11:59:34,081 DEBUG queryTable:145 ---- <==      Total: 0
+2018-08-24 11:59:34,082 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-08-24 11:59:34,083 DEBUG queryColumns:145 ---- ==> Parameters: tregionad(String)
+2018-08-24 11:59:34,093 DEBUG queryColumns:145 ---- <==      Total: 0
+2018-08-24 11:59:52,792 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-08-24 11:59:52,797 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-08-24 11:59:52,835 DEBUG queryList:145 ---- <==      Total: 10
+2018-08-24 11:59:52,838 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-08-24 11:59:52,840 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-08-24 11:59:52,854 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-08-24 12:00:29,957  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 47908 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-08-24 12:00:29,957 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-08-24 12:00:29,958  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-08-24 12:00:34,101  INFO AdventureApplication:57 ---- Started AdventureApplication in 4.197 seconds (JVM running for 734.894)
+2018-08-24 12:00:43,516 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-08-24 12:00:43,517 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-08-24 12:00:43,540 DEBUG queryList:145 ---- <==      Total: 10
+2018-08-24 12:00:43,541 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-08-24 12:00:43,541 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-08-24 12:00:43,555 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-08-24 12:00:44,262 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-08-24 12:00:44,263 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-08-24 12:00:44,286 DEBUG queryList:145 ---- <==      Total: 10
+2018-08-24 12:00:44,287 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-08-24 12:00:44,287 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-08-24 12:00:44,298 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-08-24 12:00:45,017 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-08-24 12:00:45,018 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-08-24 12:00:45,309 DEBUG queryList:145 ---- <==      Total: 10
+2018-08-24 12:00:45,310 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-08-24 12:00:45,311 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-08-24 12:00:45,550 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-08-24 12:00:46,665 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-08-24 12:00:46,666 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-08-24 12:00:46,687 DEBUG queryList:145 ---- <==      Total: 10
+2018-08-24 12:00:46,687 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-08-24 12:00:46,688 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-08-24 12:00:46,698 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-08-24 12:00:47,100 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-08-24 12:00:47,101 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-08-24 12:00:47,133 DEBUG queryList:145 ---- <==      Total: 10
+2018-08-24 12:00:47,134 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-08-24 12:00:47,135 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-08-24 12:00:47,148 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-08-24 12:00:49,874 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-08-24 12:00:49,875 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-08-24 12:00:49,899 DEBUG queryList:145 ---- <==      Total: 10
+2018-08-24 12:00:49,900 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-08-24 12:00:49,900 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-08-24 12:00:49,913 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-08-24 12:00:50,510 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-08-24 12:00:50,511 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-08-24 12:00:50,532 DEBUG queryList:145 ---- <==      Total: 10
+2018-08-24 12:00:50,533 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-08-24 12:00:50,534 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-08-24 12:00:50,546 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-08-24 12:00:51,188 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-08-24 12:00:51,189 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-08-24 12:00:51,325 DEBUG queryList:145 ---- <==      Total: 10
+2018-08-24 12:00:51,326 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-08-24 12:00:51,327 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-08-24 12:00:51,348 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-08-24 12:00:52,169 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-08-24 12:00:52,170 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-08-24 12:00:52,191 DEBUG queryList:145 ---- <==      Total: 10
+2018-08-24 12:00:52,192 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-08-24 12:00:52,193 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-08-24 12:00:52,204 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-08-24 12:01:01,080 DEBUG queryTable:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) and table_name = ? 
+2018-08-24 12:01:01,081 DEBUG queryTable:145 ---- ==> Parameters: t_discovery(String)
+2018-08-24 12:01:01,096 DEBUG queryTable:145 ---- <==      Total: 1
+2018-08-24 12:01:01,096 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-08-24 12:01:01,097 DEBUG queryColumns:145 ---- ==> Parameters: t_discovery(String)
+2018-08-24 12:01:01,108 DEBUG queryColumns:145 ---- <==      Total: 7
+2018-08-24 12:01:45,618 DEBUG queryTable:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) and table_name = ? 
+2018-08-24 12:01:45,619 DEBUG queryTable:145 ---- ==> Parameters: t_discovery_region(String)
+2018-08-24 12:01:45,643 DEBUG queryTable:145 ---- <==      Total: 1
+2018-08-24 12:01:45,645 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-08-24 12:01:45,646 DEBUG queryColumns:145 ---- ==> Parameters: t_discovery_region(String)
+2018-08-24 12:01:45,656 DEBUG queryColumns:145 ---- <==      Total: 6

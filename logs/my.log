@@ -1,32 +1,445 @@
-2018-08-20 19:48:24,451  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 7876 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
-2018-08-20 19:48:24,537 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
-2018-08-20 19:48:24,541  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
-2018-08-20 19:48:40,432  INFO AdventureApplication:57 ---- Started AdventureApplication in 16.944 seconds (JVM running for 18.64)
-2018-08-20 19:59:06,919  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 7876 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
-2018-08-20 19:59:06,920 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
-2018-08-20 19:59:06,920  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
-2018-08-20 19:59:11,737  INFO AdventureApplication:57 ---- Started AdventureApplication in 4.883 seconds (JVM running for 649.933)
-2018-08-20 19:59:34,284  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 7876 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
-2018-08-20 19:59:34,284 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
-2018-08-20 19:59:34,284  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
-2018-08-20 19:59:38,182  INFO AdventureApplication:57 ---- Started AdventureApplication in 3.953 seconds (JVM running for 676.377)
-2018-08-20 20:12:28,210  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 7876 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
-2018-08-20 20:12:28,211 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
-2018-08-20 20:12:28,211  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
-2018-08-20 20:12:32,519  INFO AdventureApplication:57 ---- Started AdventureApplication in 4.374 seconds (JVM running for 1450.701)
-2018-08-20 20:18:16,242  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 8968 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
-2018-08-20 20:18:16,246 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
-2018-08-20 20:18:16,247  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
-2018-08-20 20:18:30,663  INFO AdventureApplication:57 ---- Started AdventureApplication in 14.896 seconds (JVM running for 16.162)
-2018-08-20 20:20:51,909  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 8968 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
-2018-08-20 20:20:51,910 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
-2018-08-20 20:20:51,910  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
-2018-08-20 20:20:58,341  INFO AdventureApplication:57 ---- Started AdventureApplication in 6.523 seconds (JVM running for 163.839)
-2018-08-20 20:26:10,339  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 8968 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
-2018-08-20 20:26:10,340 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
-2018-08-20 20:26:10,340  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
-2018-08-20 20:26:15,918  INFO AdventureApplication:57 ---- Started AdventureApplication in 5.652 seconds (JVM running for 481.41)
-2018-08-20 20:29:14,147  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 8968 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
-2018-08-20 20:29:14,147 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
-2018-08-20 20:29:14,148  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
-2018-08-20 20:29:19,072  INFO AdventureApplication:57 ---- Started AdventureApplication in 4.983 seconds (JVM running for 664.561)
+2018-09-23 00:49:09,325  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 7008 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-09-23 00:49:09,336 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-09-23 00:49:09,338  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-09-23 00:49:22,864  INFO AdventureApplication:57 ---- Started AdventureApplication in 13.961 seconds (JVM running for 14.828)
+2018-09-23 00:57:22,712 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a 
+2018-09-23 00:57:22,752 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 00:57:22,791 DEBUG query:145 ---- <==      Total: 6
+2018-09-23 01:00:52,734 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a 
+2018-09-23 01:00:52,737 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 01:00:52,756 DEBUG query:145 ---- <==      Total: 6
+2018-09-23 01:03:17,077 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a 
+2018-09-23 01:03:17,078 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 01:03:17,134 DEBUG query:145 ---- <==      Total: 6
+2018-09-23 01:03:34,362 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a 
+2018-09-23 01:03:34,363 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 01:03:34,379 DEBUG query:145 ---- <==      Total: 6
+2018-09-23 01:04:42,749 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a 
+2018-09-23 01:04:42,751 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 01:04:42,767 DEBUG query:145 ---- <==      Total: 6
+2018-09-23 01:05:05,228 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a 
+2018-09-23 01:05:05,230 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 01:05:05,257 DEBUG query:145 ---- <==      Total: 6
+2018-09-23 01:05:22,312 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a 
+2018-09-23 01:05:22,313 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 01:05:22,331 DEBUG query:145 ---- <==      Total: 6
+2018-09-23 01:10:04,758 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a 
+2018-09-23 01:10:04,759 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 01:10:04,771 DEBUG query:145 ---- <==      Total: 6
+2018-09-23 01:10:19,436 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a 
+2018-09-23 01:10:19,437 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 01:10:19,452 DEBUG query:145 ---- <==      Total: 6
+2018-09-23 01:10:52,874 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a 
+2018-09-23 01:10:52,875 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 01:10:52,890 DEBUG query:145 ---- <==      Total: 6
+2018-09-23 01:11:45,131 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a 
+2018-09-23 01:11:45,132 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 01:11:45,155 DEBUG query:145 ---- <==      Total: 6
+2018-09-23 01:11:57,602 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a 
+2018-09-23 01:11:57,603 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 01:11:57,616 DEBUG query:145 ---- <==      Total: 6
+2018-09-23 01:12:10,625 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a 
+2018-09-23 01:12:10,626 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 01:12:10,638 DEBUG query:145 ---- <==      Total: 6
+2018-09-23 01:12:12,757 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a 
+2018-09-23 01:12:12,758 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 01:12:12,773 DEBUG query:145 ---- <==      Total: 6
+2018-09-23 01:12:13,514 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a 
+2018-09-23 01:12:13,515 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 01:12:13,549 DEBUG query:145 ---- <==      Total: 6
+2018-09-23 01:12:14,470 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a 
+2018-09-23 01:12:14,472 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 01:12:14,485 DEBUG query:145 ---- <==      Total: 6
+2018-09-23 01:12:15,373 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a 
+2018-09-23 01:12:15,374 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 01:12:15,391 DEBUG query:145 ---- <==      Total: 6
+2018-09-23 01:12:16,187 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a 
+2018-09-23 01:12:16,188 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 01:12:16,203 DEBUG query:145 ---- <==      Total: 6
+2018-09-23 01:12:24,821 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a 
+2018-09-23 01:12:24,821 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 01:12:24,835 DEBUG query:145 ---- <==      Total: 6
+2018-09-23 01:13:16,327  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 7008 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-09-23 01:13:16,328 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-09-23 01:13:16,328  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-09-23 01:13:20,326  INFO AdventureApplication:57 ---- Started AdventureApplication in 4.047 seconds (JVM running for 1452.271)
+2018-09-23 01:13:24,859 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a 
+2018-09-23 01:13:24,860 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 01:13:24,872 DEBUG query:145 ---- <==      Total: 6
+2018-09-23 01:13:58,964  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 7008 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-09-23 01:13:58,964 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-09-23 01:13:58,964  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-09-23 01:14:01,789  INFO AdventureApplication:57 ---- Started AdventureApplication in 2.879 seconds (JVM running for 1493.733)
+2018-09-23 01:14:21,845  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 7008 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-09-23 01:14:21,845 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-09-23 01:14:21,845  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-09-23 01:14:24,965  INFO AdventureApplication:57 ---- Started AdventureApplication in 3.164 seconds (JVM running for 1516.909)
+2018-09-23 01:15:06,008  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 7008 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-09-23 01:15:06,008 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-09-23 01:15:06,009  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-09-23 01:15:08,846  INFO AdventureApplication:57 ---- Started AdventureApplication in 2.874 seconds (JVM running for 1560.79)
+2018-09-23 01:15:13,989 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a 
+2018-09-23 01:15:13,991 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 01:15:14,004 DEBUG query:145 ---- <==      Total: 6
+2018-09-23 01:15:38,195  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 7008 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-09-23 01:15:38,195 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-09-23 01:15:38,195  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-09-23 01:15:40,874  INFO AdventureApplication:57 ---- Started AdventureApplication in 2.71 seconds (JVM running for 1592.817)
+2018-09-23 01:16:24,867 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a 
+2018-09-23 01:16:24,869 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 01:16:24,882 DEBUG query:145 ---- <==      Total: 6
+2018-09-23 01:17:09,478  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 7008 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-09-23 01:17:09,478 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-09-23 01:17:09,478  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-09-23 01:17:11,989  INFO AdventureApplication:57 ---- Started AdventureApplication in 2.54 seconds (JVM running for 1683.931)
+2018-09-23 01:17:16,517 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a 
+2018-09-23 01:17:16,518 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 01:17:16,533 DEBUG query:145 ---- <==      Total: 6
+2018-09-23 01:17:28,093  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 7008 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-09-23 01:17:28,093 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-09-23 01:17:28,093  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-09-23 01:17:30,319  INFO AdventureApplication:57 ---- Started AdventureApplication in 2.256 seconds (JVM running for 1702.26)
+2018-09-23 01:17:55,892  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 7008 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-09-23 01:17:55,892 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-09-23 01:17:55,892  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-09-23 01:18:03,046  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 7008 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-09-23 01:18:03,047 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-09-23 01:18:03,047  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-09-23 01:18:05,326  INFO AdventureApplication:57 ---- Started AdventureApplication in 2.305 seconds (JVM running for 1737.268)
+2018-09-23 01:18:09,077 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a 
+2018-09-23 01:18:09,078 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 01:18:09,090 DEBUG query:145 ---- <==      Total: 6
+2018-09-23 01:18:28,796  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 7008 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-09-23 01:18:28,796 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-09-23 01:18:28,796  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-09-23 01:18:31,291  INFO AdventureApplication:57 ---- Started AdventureApplication in 2.524 seconds (JVM running for 1763.232)
+2018-09-23 01:20:29,603 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a 
+2018-09-23 01:20:29,604 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 01:20:29,618 DEBUG query:145 ---- <==      Total: 6
+2018-09-23 01:24:08,494  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 7008 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-09-23 01:24:08,495 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-09-23 01:24:08,495  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-09-23 01:24:10,831  INFO AdventureApplication:57 ---- Started AdventureApplication in 2.374 seconds (JVM running for 2102.767)
+2018-09-23 01:24:37,268  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 7008 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-09-23 01:24:37,269 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-09-23 01:24:37,269  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-09-23 01:24:39,411  INFO AdventureApplication:57 ---- Started AdventureApplication in 2.174 seconds (JVM running for 2131.347)
+2018-09-23 01:24:45,809 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a 
+2018-09-23 01:24:45,810 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 01:24:45,822 DEBUG query:145 ---- <==      Total: 6
+2018-09-23 01:27:05,286 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a 
+2018-09-23 01:27:05,288 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 01:27:05,301 DEBUG query:145 ---- <==      Total: 6
+2018-09-23 01:29:26,759  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 7008 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-09-23 01:29:26,759 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-09-23 01:29:26,760  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-09-23 01:29:29,297  INFO AdventureApplication:57 ---- Started AdventureApplication in 2.6 seconds (JVM running for 2421.229)
+2018-09-23 01:29:31,171 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a 
+2018-09-23 01:29:31,172 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 01:29:31,191 DEBUG query:145 ---- <==      Total: 6
+2018-09-23 01:29:39,233  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 7008 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-09-23 01:29:39,234 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-09-23 01:29:39,234  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-09-23 01:29:41,239  INFO AdventureApplication:57 ---- Started AdventureApplication in 2.037 seconds (JVM running for 2433.171)
+2018-09-23 01:29:45,078 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a 
+2018-09-23 01:29:45,079 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 01:29:45,095 DEBUG query:145 ---- <==      Total: 6
+2018-09-23 01:30:01,641  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 7008 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-09-23 01:30:01,641 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-09-23 01:30:01,642  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-09-23 01:30:03,744  INFO AdventureApplication:57 ---- Started AdventureApplication in 2.159 seconds (JVM running for 2455.675)
+2018-09-23 01:30:31,601  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 7008 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-09-23 01:30:31,601 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-09-23 01:30:31,601  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-09-23 01:30:33,727  INFO AdventureApplication:57 ---- Started AdventureApplication in 2.161 seconds (JVM running for 2485.658)
+2018-09-23 01:30:35,613 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a 
+2018-09-23 01:30:35,614 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 01:30:35,628 DEBUG query:145 ---- <==      Total: 6
+2018-09-23 01:39:24,882 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a 
+2018-09-23 01:39:24,883 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 01:39:24,896 DEBUG query:145 ---- <==      Total: 6
+2018-09-23 01:39:26,490 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a 
+2018-09-23 01:39:26,492 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 01:39:26,512 DEBUG query:145 ---- <==      Total: 6
+2018-09-23 01:39:41,453 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a 
+2018-09-23 01:39:41,454 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 01:39:41,468 DEBUG query:145 ---- <==      Total: 6
+2018-09-23 01:39:41,965 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a 
+2018-09-23 01:39:41,966 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 01:39:41,985 DEBUG query:145 ---- <==      Total: 6
+2018-09-23 01:40:04,107  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 7008 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-09-23 01:40:04,107 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-09-23 01:40:04,107  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-09-23 01:40:06,311  INFO AdventureApplication:57 ---- Started AdventureApplication in 2.23 seconds (JVM running for 3058.234)
+2018-09-23 01:40:11,011 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a 
+2018-09-23 01:40:11,012 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 01:40:11,024 DEBUG query:145 ---- <==      Total: 6
+2018-09-23 01:42:41,881  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 7008 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-09-23 01:42:41,881 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-09-23 01:42:41,882  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-09-23 01:42:44,142  INFO AdventureApplication:57 ---- Started AdventureApplication in 2.286 seconds (JVM running for 3216.062)
+2018-09-23 01:45:03,039 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a 
+2018-09-23 01:45:03,040 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 01:45:03,054 DEBUG query:145 ---- <==      Total: 6
+2018-09-23 01:45:29,816 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a 
+2018-09-23 01:45:29,817 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 01:45:29,831 DEBUG query:145 ---- <==      Total: 6
+2018-09-23 01:45:37,864 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a 
+2018-09-23 01:45:37,864 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 01:45:37,882 DEBUG query:145 ---- <==      Total: 6
+2018-09-23 01:46:34,716 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a 
+2018-09-23 01:46:34,717 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 01:46:34,734 DEBUG query:145 ---- <==      Total: 6
+2018-09-23 01:46:47,632 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a 
+2018-09-23 01:46:47,633 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 01:46:47,646 DEBUG query:145 ---- <==      Total: 6
+2018-09-23 01:47:21,373 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a 
+2018-09-23 01:47:21,373 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 01:47:21,386 DEBUG query:145 ---- <==      Total: 6
+2018-09-23 01:47:32,879 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a 
+2018-09-23 01:47:32,880 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 01:47:32,893 DEBUG query:145 ---- <==      Total: 6
+2018-09-23 01:49:38,422 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a 
+2018-09-23 01:49:38,423 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 01:49:38,437 DEBUG query:145 ---- <==      Total: 6
+2018-09-23 01:50:00,664 DEBUG save:145 ---- ==>  Preparing: insert into qiniu_storage ( `id`, `name`, `url`, `remark`, `delete_code`, `create_by`, `create_time`, `update_by`, `update_time` ) values ( ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
+2018-09-23 01:50:00,665 DEBUG save:145 ---- ==> Parameters: 16752099048165376(Long), (String), http://pdqrhc022.bkt.clouddn.com/16752093738176512(String), null, 0(Integer), null, 2018-09-23 01:50:00.652(Timestamp), null, 2018-09-23 01:50:00.652(Timestamp)
+2018-09-23 01:50:00,680 DEBUG save:145 ---- <==    Updates: 1
+2018-09-23 01:50:00,708 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a 
+2018-09-23 01:50:00,709 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 01:50:00,721 DEBUG query:145 ---- <==      Total: 7
+2018-09-23 01:50:04,047 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a 
+2018-09-23 01:50:04,047 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 01:50:04,063 DEBUG query:145 ---- <==      Total: 7
+2018-09-23 01:51:11,368 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a 
+2018-09-23 01:51:11,368 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 01:51:11,382 DEBUG query:145 ---- <==      Total: 7
+2018-09-23 01:52:28,948 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a 
+2018-09-23 01:52:28,949 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 01:52:28,965 DEBUG query:145 ---- <==      Total: 7
+2018-09-23 01:56:34,202  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 7008 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-09-23 01:56:34,202 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-09-23 01:56:34,203  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-09-23 01:56:36,599  INFO AdventureApplication:57 ---- Started AdventureApplication in 2.429 seconds (JVM running for 4048.509)
+2018-09-23 01:56:59,148  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 7008 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-09-23 01:56:59,148 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-09-23 01:56:59,148  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-09-23 01:57:01,169  INFO AdventureApplication:57 ---- Started AdventureApplication in 2.051 seconds (JVM running for 4073.078)
+2018-09-23 01:57:04,311 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a order by a.create_time desc 
+2018-09-23 01:57:04,312 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 01:57:04,325 DEBUG query:145 ---- <==      Total: 7
+2018-09-23 01:59:59,993 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a order by a.create_time desc 
+2018-09-23 01:59:59,994 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 02:00:00,010 DEBUG query:145 ---- <==      Total: 7
+2018-09-23 02:00:02,585 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a order by a.create_time desc 
+2018-09-23 02:00:02,586 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 02:00:02,610 DEBUG query:145 ---- <==      Total: 7
+2018-09-23 02:00:03,488 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a order by a.create_time desc 
+2018-09-23 02:00:03,489 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 02:00:03,503 DEBUG query:145 ---- <==      Total: 7
+2018-09-23 02:00:32,824 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a order by a.create_time desc 
+2018-09-23 02:00:32,825 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 02:00:32,840 DEBUG query:145 ---- <==      Total: 7
+2018-09-23 02:01:53,476 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a order by a.create_time desc 
+2018-09-23 02:01:53,476 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 02:01:53,490 DEBUG query:145 ---- <==      Total: 7
+2018-09-23 02:03:00,779 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a order by a.create_time desc 
+2018-09-23 02:03:00,780 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 02:03:00,794 DEBUG query:145 ---- <==      Total: 7
+2018-09-23 02:03:12,300 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a order by a.create_time desc 
+2018-09-23 02:03:12,301 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 02:03:12,314 DEBUG query:145 ---- <==      Total: 7
+2018-09-23 02:03:27,758 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a order by a.create_time desc 
+2018-09-23 02:03:27,759 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 02:03:27,773 DEBUG query:145 ---- <==      Total: 7
+2018-09-23 02:03:51,502 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a order by a.create_time desc 
+2018-09-23 02:03:51,503 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 02:03:51,517 DEBUG query:145 ---- <==      Total: 7
+2018-09-23 02:04:34,906 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a order by a.create_time desc 
+2018-09-23 02:04:34,907 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 02:04:34,921 DEBUG query:145 ---- <==      Total: 7
+2018-09-23 02:06:06,296 DEBUG save:145 ---- ==>  Preparing: insert into qiniu_storage ( `id`, `name`, `url`, `remark`, `delete_code`, `create_by`, `create_time`, `update_by`, `update_time` ) values ( ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
+2018-09-23 02:06:06,297 DEBUG save:145 ---- ==> Parameters: 16756149202325504(Long), 11111111(String), http://pdqrhc022.bkt.clouddn.com/16756147700764672(String), null, 0(Integer), null, 2018-09-23 02:06:06.284(Timestamp), null, 2018-09-23 02:06:06.284(Timestamp)
+2018-09-23 02:06:06,311 DEBUG save:145 ---- <==    Updates: 1
+2018-09-23 02:06:06,337 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a order by a.create_time desc 
+2018-09-23 02:06:06,337 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 02:06:06,351 DEBUG query:145 ---- <==      Total: 8
+2018-09-23 02:06:14,693 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a order by a.create_time desc 
+2018-09-23 02:06:14,694 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 02:06:14,709 DEBUG query:145 ---- <==      Total: 8
+2018-09-23 02:06:19,863 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a order by a.create_time desc 
+2018-09-23 02:06:19,864 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 02:06:19,877 DEBUG query:145 ---- <==      Total: 8
+2018-09-23 02:06:45,774 DEBUG save:145 ---- ==>  Preparing: insert into qiniu_storage ( `id`, `name`, `url`, `remark`, `delete_code`, `create_by`, `create_time`, `update_by`, `update_time` ) values ( ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
+2018-09-23 02:06:45,776 DEBUG save:145 ---- ==> Parameters: 16756314780864512(Long), 采集卡(String), http://pdqrhc022.bkt.clouddn.com/16756308992724992(String), null, 0(Integer), null, 2018-09-23 02:06:45.761(Timestamp), null, 2018-09-23 02:06:45.761(Timestamp)
+2018-09-23 02:06:45,796 DEBUG save:145 ---- <==    Updates: 1
+2018-09-23 02:06:47,321 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a order by a.create_time desc 
+2018-09-23 02:06:47,321 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 02:06:47,334 DEBUG query:145 ---- <==      Total: 9
+2018-09-23 14:27:27,360  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 11084 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-09-23 14:27:27,365 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-09-23 14:27:27,366  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-09-23 14:27:40,739  INFO AdventureApplication:57 ---- Started AdventureApplication in 13.75 seconds (JVM running for 14.342)
+2018-09-23 14:27:55,441 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a order by a.create_time desc 
+2018-09-23 14:27:55,484 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 14:27:55,527 DEBUG query:145 ---- <==      Total: 9
+2018-09-23 14:28:00,788 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a order by a.create_time desc 
+2018-09-23 14:28:00,791 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 14:28:00,813 DEBUG query:145 ---- <==      Total: 9
+2018-09-23 14:28:34,152 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a order by a.create_time desc 
+2018-09-23 14:28:34,153 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 14:28:34,170 DEBUG query:145 ---- <==      Total: 9
+2018-09-23 14:28:54,672 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a order by a.create_time desc 
+2018-09-23 14:28:54,673 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 14:28:54,688 DEBUG query:145 ---- <==      Total: 0
+2018-09-23 14:29:31,994 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a order by a.create_time desc 
+2018-09-23 14:29:31,995 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 14:29:32,007 DEBUG query:145 ---- <==      Total: 0
+2018-09-23 14:30:16,307  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 11084 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-09-23 14:30:16,307 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-09-23 14:30:16,307  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-09-23 14:30:20,189  INFO AdventureApplication:57 ---- Started AdventureApplication in 3.938 seconds (JVM running for 173.79)
+2018-09-23 14:30:23,604 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a order by a.create_time desc 
+2018-09-23 14:30:23,605 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 14:30:23,618 DEBUG query:145 ---- <==      Total: 0
+2018-09-23 14:30:31,785 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a order by a.create_time desc 
+2018-09-23 14:30:31,786 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 14:30:31,822 DEBUG query:145 ---- <==      Total: 0
+2018-09-23 14:34:57,469  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 11084 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-09-23 14:34:57,469 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-09-23 14:34:57,469  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-09-23 14:35:00,966  INFO AdventureApplication:57 ---- Started AdventureApplication in 3.541 seconds (JVM running for 454.564)
+2018-09-23 14:37:09,917  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 11084 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-09-23 14:37:09,917 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-09-23 14:37:09,917  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-09-23 14:37:13,165  INFO AdventureApplication:57 ---- Started AdventureApplication in 3.297 seconds (JVM running for 586.76)
+2018-09-23 14:37:38,385 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a order by a.create_time desc 
+2018-09-23 14:37:38,387 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 14:37:38,407 DEBUG query:145 ---- <==      Total: 0
+2018-09-23 14:37:47,916 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a order by a.create_time desc 
+2018-09-23 14:37:47,917 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 14:37:47,927 DEBUG query:145 ---- <==      Total: 0
+2018-09-23 14:40:22,473  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 11084 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-09-23 14:40:22,473 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-09-23 14:40:22,473  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-09-23 14:40:25,670  INFO AdventureApplication:57 ---- Started AdventureApplication in 3.234 seconds (JVM running for 779.263)
+2018-09-23 14:41:15,287 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a order by a.create_time desc 
+2018-09-23 14:41:15,289 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 14:41:15,300 DEBUG query:145 ---- <==      Total: 0
+2018-09-23 14:41:22,896 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a order by a.create_time desc 
+2018-09-23 14:41:22,897 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 14:41:22,911 DEBUG query:145 ---- <==      Total: 0
+2018-09-23 14:43:48,967  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 11084 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-09-23 14:43:48,967 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-09-23 14:43:48,968  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-09-23 14:43:51,970  INFO AdventureApplication:57 ---- Started AdventureApplication in 3.044 seconds (JVM running for 985.56)
+2018-09-23 14:52:48,531  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 11084 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-09-23 14:52:48,532 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-09-23 14:52:48,532  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-09-23 14:52:51,234  INFO AdventureApplication:57 ---- Started AdventureApplication in 2.736 seconds (JVM running for 1524.816)
+2018-09-23 14:54:22,323 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a order by a.create_time desc 
+2018-09-23 14:54:22,324 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 14:54:22,338 DEBUG query:145 ---- <==      Total: 0
+2018-09-23 14:56:08,152  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 11084 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-09-23 14:56:08,152 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-09-23 14:56:08,152  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-09-23 14:56:10,981  INFO AdventureApplication:57 ---- Started AdventureApplication in 2.864 seconds (JVM running for 1724.559)
+2018-09-23 14:56:54,819 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a order by a.create_time desc 
+2018-09-23 14:56:54,820 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 14:56:54,831 DEBUG query:145 ---- <==      Total: 0
+2018-09-23 14:57:06,969 DEBUG save:145 ---- ==>  Preparing: insert into qiniu_storage ( `id`, `name`, `url`, `remark`, `delete_code`, `create_by`, `create_time`, `update_by`, `update_time` ) values ( ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
+2018-09-23 14:57:06,971 DEBUG save:145 ---- ==> Parameters: 16950180515549184(Long), 3333(String), http://pdqrhc022.bkt.clouddn.com/16950155425222656(String), null, 0(Integer), null, 2018-09-23 14:57:06.954(Timestamp), null, 2018-09-23 14:57:06.954(Timestamp)
+2018-09-23 14:57:06,993 DEBUG save:145 ---- <==    Updates: 1
+2018-09-23 14:57:07,026 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a order by a.create_time desc 
+2018-09-23 14:57:07,027 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 14:57:07,050 DEBUG query:145 ---- <==      Total: 1
+2018-09-23 14:59:55,588 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a order by a.create_time desc 
+2018-09-23 14:59:55,590 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 14:59:55,603 DEBUG query:145 ---- <==      Total: 1
+2018-09-23 15:00:16,627 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a order by a.create_time desc 
+2018-09-23 15:00:16,628 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 15:00:16,643 DEBUG query:145 ---- <==      Total: 1
+2018-09-23 15:02:29,444 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a order by a.create_time desc 
+2018-09-23 15:02:29,445 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 15:02:29,457 DEBUG query:145 ---- <==      Total: 1
+2018-09-23 15:04:47,193 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a order by a.create_time desc 
+2018-09-23 15:04:47,194 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 15:04:47,209 DEBUG query:145 ---- <==      Total: 1
+2018-09-23 15:05:48,581 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a order by a.create_time desc 
+2018-09-23 15:05:48,582 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 15:05:48,595 DEBUG query:145 ---- <==      Total: 1
+2018-09-23 15:05:56,544 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a order by a.create_time desc 
+2018-09-23 15:05:56,545 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 15:05:56,557 DEBUG query:145 ---- <==      Total: 1
+2018-09-23 15:31:19,765  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 10828 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-09-23 15:31:19,768 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-09-23 15:31:19,769  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-09-23 15:31:30,571  INFO AdventureApplication:57 ---- Started AdventureApplication in 11.154 seconds (JVM running for 11.747)
+2018-09-23 15:32:01,430 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a order by a.create_time desc 
+2018-09-23 15:32:01,468 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 15:32:01,509 DEBUG query:145 ---- <==      Total: 1
+2018-09-23 15:32:06,008 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a order by a.create_time desc 
+2018-09-23 15:32:06,009 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 15:32:06,023 DEBUG query:145 ---- <==      Total: 1
+2018-09-23 15:32:07,852 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a order by a.create_time desc 
+2018-09-23 15:32:07,853 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 15:32:07,868 DEBUG query:145 ---- <==      Total: 1
+2018-09-23 15:32:08,925 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a order by a.create_time desc 
+2018-09-23 15:32:08,926 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 15:32:08,939 DEBUG query:145 ---- <==      Total: 1
+2018-09-23 15:32:09,725 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a order by a.create_time desc 
+2018-09-23 15:32:09,725 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 15:32:09,738 DEBUG query:145 ---- <==      Total: 1
+2018-09-23 15:32:10,626 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a order by a.create_time desc 
+2018-09-23 15:32:10,626 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 15:32:10,639 DEBUG query:145 ---- <==      Total: 1
+2018-09-23 15:32:11,443 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a order by a.create_time desc 
+2018-09-23 15:32:11,444 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 15:32:11,456 DEBUG query:145 ---- <==      Total: 1
+2018-09-23 15:32:12,041 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a order by a.create_time desc 
+2018-09-23 15:32:12,042 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 15:32:12,055 DEBUG query:145 ---- <==      Total: 1
+2018-09-23 15:32:12,665 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a order by a.create_time desc 
+2018-09-23 15:32:12,666 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 15:32:12,678 DEBUG query:145 ---- <==      Total: 1
+2018-09-23 15:32:18,355 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a order by a.create_time desc 
+2018-09-23 15:32:18,356 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 15:32:18,370 DEBUG query:145 ---- <==      Total: 1
+2018-09-23 15:32:40,811 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a order by a.create_time desc 
+2018-09-23 15:32:40,813 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 15:32:40,826 DEBUG query:145 ---- <==      Total: 1
+2018-09-23 15:32:51,914 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a order by a.create_time desc 
+2018-09-23 15:32:51,915 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 15:32:51,927 DEBUG query:145 ---- <==      Total: 1
+2018-09-23 15:33:25,153 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a order by a.create_time desc 
+2018-09-23 15:33:25,154 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 15:33:25,169 DEBUG query:145 ---- <==      Total: 1
+2018-09-23 15:33:26,664 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a order by a.create_time desc 
+2018-09-23 15:33:26,665 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 15:33:26,679 DEBUG query:145 ---- <==      Total: 1
+2018-09-23 15:33:27,347 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a order by a.create_time desc 
+2018-09-23 15:33:27,348 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 15:33:27,362 DEBUG query:145 ---- <==      Total: 1
+2018-09-23 15:33:28,223 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a order by a.create_time desc 
+2018-09-23 15:33:28,225 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 15:33:28,248 DEBUG query:145 ---- <==      Total: 1
+2018-09-23 15:38:45,305 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a order by a.create_time desc 
+2018-09-23 15:38:45,306 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 15:38:45,319 DEBUG query:145 ---- <==      Total: 1
+2018-09-23 15:38:59,368 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a order by a.create_time desc 
+2018-09-23 15:38:59,370 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 15:38:59,387 DEBUG query:145 ---- <==      Total: 1
+2018-09-23 15:39:14,175 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a order by a.create_time desc 
+2018-09-23 15:39:14,176 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 15:39:14,191 DEBUG query:145 ---- <==      Total: 1
+2018-09-23 15:46:58,081  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 10396 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-09-23 15:46:58,084 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-09-23 15:46:58,086  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-09-23 15:47:09,112  INFO AdventureApplication:57 ---- Started AdventureApplication in 11.379 seconds (JVM running for 12.026)
+2018-09-23 16:02:36,239  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 2656 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-09-23 16:02:36,247 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-09-23 16:02:36,248  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-09-23 16:02:50,413  INFO AdventureApplication:57 ---- Started AdventureApplication in 14.583 seconds (JVM running for 15.324)
+2018-09-23 16:03:08,854 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a order by a.create_time desc 
+2018-09-23 16:03:08,899 DEBUG query:145 ---- ==> Parameters: 
+2018-09-23 16:03:08,929 DEBUG query:145 ---- <==      Total: 1

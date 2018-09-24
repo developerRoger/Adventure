@@ -30,7 +30,7 @@ function getCookie(name) { //获取一个cookie
 var vm = new Vue({
 	el : '#rrapp',
 	data : {
-		main : "main.html",
+		main : "system/generator.html",
 		navTitle : "欢迎页",
 		applicationLists : [],
 		listUrl:[]

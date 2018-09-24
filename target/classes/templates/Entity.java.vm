@@ -16,6 +16,17 @@ import java.math.BigDecimal;
  */
 public class ${className}Entity implements Serializable {
 	private static final long serialVersionUID = 1L;
+	//默认未删除
+	private final static int  UNDELETED=0;
+	//已删除
+	private final static int  DELETED=1;
+	
+	public  ${className}Entity() {
+		createTime=new Date();
+		updateTime=new Date();
+		deleteCode=UNDELETED;
+	}
+
 	
 #foreach ($column in $columns)
 	//$column.comments

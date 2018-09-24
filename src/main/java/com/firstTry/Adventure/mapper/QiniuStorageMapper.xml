@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.firstTry.Adventure.mapper.QiniuStorageMapper">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.firstTry.Adventure.entity.QiniuStorageEntity" id="qiniuStorageMap">
+        <result property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="url" column="url"/>
+        <result property="remark" column="remark"/>
+        <result property="deleteCode" column="delete_code"/>
+        <result property="createBy" column="create_by"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateBy" column="update_by"/>
+        <result property="updateTime" column="update_time"/>
+    </resultMap>
+
+	<select id="queryObject" resultType="com.firstTry.Adventure.entity.QiniuStorageEntity">
+		select * from qiniu_storage where id = #{value}
+	</select>
+	
+	<select id="queryList" resultType="com.firstTry.Adventure.entity.QiniuStorageEntity">
+		select * from qiniu_storage
+        <choose>
+            <when test="sidx != null and sidx.trim() != ''">
+                order by ${sidx} ${order}
+            </when>
+			<otherwise>
+                order by id desc
+			</otherwise>
+        </choose>
+		<include refid="commonPage"/>
+	</select>
+	
+ 	<select id="queryTotal" resultType="java.lang.Integer">
+		select count(1) from qiniu_storage  a
+		 <include refid="commonQuery"/>
+	</select>
+	 
+	 	<!-- 条件：分页 -->
+	<sql id="commonPage">
+		<if  test="offset != null and limit != null ">
+			LIMIT #{offset}, #{limit}
+		</if>
+	</sql>
+	 
+	  <!-- 通用条件查询 -->
+    <select id="query" resultType="QiniuStorageEntity" parameterType="java.util.Map">
+        SELECT
+		            a.id id,
+		            a.name name,
+		            a.url url,
+		            a.remark remark,
+		            a.delete_code deleteCode,
+		            a.create_by createBy,
+		            a.create_time createTime,
+		            a.update_by updateBy,
+		            a.update_time updateTime
+		        FROM qiniu_storage a
+        <include refid="commonQuery"/>
+         order by a.create_time desc
+        <include refid="commonPage"/>
+       
+    </select>
+    
+    <!-- 条件：通用查询 -->
+    <sql id="commonQuery">
+        <where>
+							<if test="id!=null">
+			AND a.id = #{id}
+		</if>
+											<if test="name!=null">
+			AND a.name = #{name}
+		</if>
+											<if test="url!=null">
+			AND a.url = #{url}
+		</if>
+											<if test="remark!=null">
+			AND a.remark = #{remark}
+		</if>
+											<if test="deleteCode!=null">
+			AND a.delete_code = #{deleteCode}
+		</if>
+											<if test="createBy!=null">
+			AND a.create_by = #{createBy}
+		</if>
+											<if test="createTime!=null">
+			AND a.create_time = #{createTime}
+		</if>
+											<if test="updateBy!=null">
+			AND a.update_by = #{updateBy}
+		</if>
+											<if test="updateTime!=null">
+			AND a.update_time = #{updateTime}
+		</if>
+							        </where>
+    </sql>
+
+    <!--保存数据-->
+	<insert id="save" parameterType="com.firstTry.Adventure.entity.QiniuStorageEntity">
+		insert into qiniu_storage
+		(
+			`id`, 
+			`name`, 
+			`url`, 
+			`remark`, 
+			`delete_code`, 
+			`create_by`, 
+			`create_time`, 
+			`update_by`, 
+			`update_time`
+		)
+		values
+		(
+			#{id}, 
+			#{name}, 
+			#{url}, 
+			#{remark}, 
+			#{deleteCode}, 
+			#{createBy}, 
+			#{createTime}, 
+			#{updateBy}, 
+			#{updateTime}
+		)
+	</insert>
+	 
+	 <!--根据主键ID修改内容-->
+	<update id="update" parameterType="com.firstTry.Adventure.entity.QiniuStorageEntity">
+		update qiniu_storage 
+		<set>
+			<if test="name != null">`name` = #{name}, </if>
+			<if test="url != null">`url` = #{url}, </if>
+			<if test="remark != null">`remark` = #{remark}, </if>
+			<if test="deleteCode != null">`delete_code` = #{deleteCode}, </if>
+			<if test="createBy != null">`create_by` = #{createBy}, </if>
+			<if test="createTime != null">`create_time` = #{createTime}, </if>
+			<if test="updateBy != null">`update_by` = #{updateBy}, </if>
+			<if test="updateTime != null">`update_time` = #{updateTime}</if>
+		</set>
+		where id = #{id}
+	</update>
+	
+	  <!-- 按主键删除 -->
+	<delete id="delete" >
+		delete from qiniu_storage where id = #{id}
+	</delete>
+	
+	<delete id="deleteBatch">
+		delete from qiniu_storage where id in 
+		<foreach item="id" collection="array" open="(" separator="," close=")">
+			#{id}
+		</foreach>
+	</delete>
+
+</mapper>

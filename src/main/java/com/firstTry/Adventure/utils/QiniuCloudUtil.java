@@ -55,7 +55,7 @@ public class QiniuCloudUtil {
             if (res.isOK()) {
                 Ret ret = res.jsonToObject(Ret.class);
                 //如果不需要对图片进行样式处理，则使用以下方式即可
-                return DOMAIN +"/"+ret.key;
+                return "http://"+DOMAIN +"/"+ret.key;
 //                return DOMAIN + ret.key + "?" + style;
             }
         } catch (QiniuException e) {
@@ -90,7 +90,7 @@ public class QiniuCloudUtil {
         okhttp3.Response response = client.newCall(request).execute();
         System.out.println(response);
         //如果不需要添加图片样式，使用以下方式
-        return DOMAIN + "/"+key;
+        return "http://"+DOMAIN + "/"+key;
 //        return DOMAIN + key + "?" + style;
     }
 

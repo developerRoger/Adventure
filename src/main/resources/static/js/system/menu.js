@@ -106,7 +106,7 @@ var vm = new Vue({
 								$("#jqGrid").trigger("reloadGrid");
 							});
 						}else{
-							alert(r.msg);
+							$.xfm.alert(r.msg);
 						}
 					}
 				});

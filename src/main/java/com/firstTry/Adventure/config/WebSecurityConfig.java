@@ -29,12 +29,14 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	/**
 	 * 跳过校验token验证请求的链接
 	 * 静态文件也要设置
+	 * 但是会自动给路径拼接localhost
 	 */
 	private static final String[] PASS_URL = { 
 		//控制层拦截
 		"/",
 		"/index",
-		"/qiniu",
+		"/login/*",
+		"/hhh",
 		"/narcotics",
 		"/preface",
 		"/sys/generator/*",

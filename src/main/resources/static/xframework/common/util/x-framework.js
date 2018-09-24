@@ -13,13 +13,8 @@ $.extend($.xfm, {
 	 * 通过$.when(select组件option数据请求).done(function(){});达到流程控制的目的。
 	 */
 	post : function(params) {
-		var role = localStorage.ROLE;
-		var token = '';
-		if(role){
-			token = JSON.parse(role).token;
-		}
 		var promise = $.ajax({
-			url : params.url+"?access_token="+token,
+			url : params.url,
 			// POST请求参数stringify
 			data : JSON.stringify(params.data),
 			type : "POST",
@@ -58,13 +53,9 @@ $.extend($.xfm, {
 	 * GET封装，固定部份参数。
 	 */
 	get : function(params) {
-		var role = localStorage.ROLE;
-		var token = '';
-		if(role){
-			token = JSON.parse(role).token;
-		}
+
 		var promise = $.ajax({
-			url : params.url+"?access_token="+token,
+			url : params.url,
 			data : params.data,
 			type : "GET",
 			dataType : "json",

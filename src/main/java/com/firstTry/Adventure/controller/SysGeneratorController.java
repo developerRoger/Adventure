@@ -68,14 +68,14 @@ public class SysGeneratorController {
 	@RequestMapping("/code")
 	public void code(HttpServletRequest request, HttpServletResponse response) throws IOException{
 		String[] tableNames = new String[]{};
-		String tables = request.getParameter("tables").replace("_", "");
+		String tables = request.getParameter("tables");
 		tableNames = JSON.parseArray(tables).toArray(tableNames);
 		
 		byte[] data = sysGeneratorService.generatorCode(tableNames);
 		response.reset();  
         response.setHeader("Content-Disposition", "attachment; filename=\""+tables+".zip\"");  
         response.addHeader("Content-Length", "" + data.length);  
-        response.setContentType("application/octet-stream; charset=UTF-8");  
+        response.setContentType("application/octet-stream; charset=UTF-8");                                                                                                                                                                                                                                                       
   
         IOUtils.write(data, response.getOutputStream());  
 	}

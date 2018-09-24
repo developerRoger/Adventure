@@ -1,5 +1,6 @@
 package com.firstTry.Adventure.entity;
 
+
 /**
  * 列的属性
  * 

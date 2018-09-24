@@ -1,0 +1,8 @@
+2018-08-27 14:16:20,857  INFO AdventureApplicationTests:48 ---- Starting AdventureApplicationTests on BS1HDX84D9084A0 with PID 8628 (started by Administrator in E:\Adventure\Adventure)
+2018-08-27 14:16:20,860 DEBUG AdventureApplicationTests:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-08-27 14:16:20,860  INFO AdventureApplicationTests:593 ---- No active profile set, falling back to default profiles: default
+2018-08-27 14:16:33,475  INFO AdventureApplicationTests:57 ---- Started AdventureApplicationTests in 13.271 seconds (JVM running for 14.609)
+2018-08-27 14:17:14,774  INFO AdventureApplicationTests:48 ---- Starting AdventureApplicationTests on BS1HDX84D9084A0 with PID 19920 (started by Administrator in E:\Adventure\Adventure)
+2018-08-27 14:17:14,775 DEBUG AdventureApplicationTests:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-08-27 14:17:14,781  INFO AdventureApplicationTests:593 ---- No active profile set, falling back to default profiles: default
+2018-08-27 14:17:24,696  INFO AdventureApplicationTests:57 ---- Started AdventureApplicationTests in 10.382 seconds (JVM running for 11.583)

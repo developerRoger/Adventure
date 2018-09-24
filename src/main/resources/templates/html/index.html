@@ -5,53 +5,72 @@
 <script type="text/javascript" src="../js/header.js"></script>
 <script type="text/javascript" src="../js/footer.js"></script>
 
-<title>文件上传</title>
+<title>Colorful wall</title>
 <style type="text/css">
+.reserve-item-box {
+	padding: 5px;
+	float: left;
+	background-size: 100%;
+}
 </style>
 </head>
 <body>
-	<div id="upload" v-cloak>
-		<h1>唯独于你，心心念念</h1>
-		<input type="file" value="" id="file" @change='onUpload'>
-		<div>{{url}}</div>
+
+	<div class="container-fluid" id="upload" v-cloak>
+		<div class="page-header">
+			<h1>
+				欢迎大家来到一个很Low的界面 <small>说实话我都觉得有点....</small>
+			</h1>
+			<button v-show="!nowDate" type="button" @click="changeShow(true)"
+				class="btn btn-info">只看今天的内容</button>
+			<button v-show="nowDate" type="button" @click="changeShow(false)"
+				class="btn btn-danger">我想看所有的内容</button>
+		</div>
+		<div class="row">
+			<div class="input-group input-group-lg">
+				<span class="input-group-addon" id="sizing-addon1">您可以在这里给您的照片取个标题</span>
+				<input type="text" class="form-control" v-model="name"
+					placeholder="也许这是一段最为美好的回忆" aria-describedby="sizing-addon1">
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group col-md-12 has-feedback">
+				<h3 class="col-md-4" style="margin-left: -29px">
+					<span class="label label-default">选择文件:</span>
+				</h3>
+			</div>
+			<div class="input-group">
+				<input type="text" class="form-control" onkeydown="return false;"
+					onpaste="return false;" :value="fileText"
+					placeholder="Select file..."> <label
+					class="input-group-btn"> <span class="btn btn-primary">
+						<i class="glyphicon glyphicon-folder-open"></i> Browse… <input
+						type="file" style="display: none;" @change='onUpload' multiple>
+				</span>
+				</label>
+
+			</div>
+
+		</div>
+		<section v-for="(p,index) in page" class="content col-md-4">
+			<div class="container-fluid box box-info"
+				style="background-color: #141414;">
+				<div class="reserve-item-box">
+					<div class="reserve-item leisure" style="cursor: pointer;">
+						<p class="reserve-p1" style="color: #9698A7">
+						
+							<span>{{p.name}}</span><!-- <button type="button" class="btn btn-warning" style="">（警告）Warning</button> --><br> <span>{{p.createTime}}</span>
+						<hr>
+						<br> <img class="default-image img-thumbnail" :src="p.url"
+							alt="">
+						<!-- <a :href="p.url" target="_blank">{{p.url}}</a> -->
+					</div>
+				</div>
+			</div>
+
+		</section>
+
 	</div>
-
-	<script type="text/javascript">
-var vm = new Vue({
-	el:'#upload',
-	data:{
-		showList: true,
-		url: null,
-		menu: {}
-	},
-	methods: {
-		//上传图片
-		onUpload(e){
-		      var formData = new FormData(); 
-			    formData.append('image', e.target.files[0]);
-		      $.ajax({
-		        url: '/adventure/qiniu/uploadImg',//这里是后台接口需要换掉
-		        type: 'POST',
-		        dataType: 'json',
-		        cache: false,
-		        data: formData,
-		        processData: false,
-		        contentType: false,
-		        success: (res) => {        
-		        	this.url=res.url;
-		        },	
-		        error: function(err) {
-		        alert("网络错误");
-		        }
-		      });
-		}
-	},
-	created:function(){
-	 var _this=this;
-	 console.log("welcome go  in");
-	}
-});
-
-</script>
+	<script src="../js/photoWall.js"></script>
 </body>
 </html>
