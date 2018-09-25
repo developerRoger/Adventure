@@ -12,7 +12,7 @@ var vm = new Vue({
 		queryList:function(){
 			var _this=this;
 		      $.ajax({
-			        url: '/adventure/qiniu/list?nowDate'+_this.nowDate,
+			        url: '/adventure/qiniu/list?nowDate='+_this.nowDate,
 			        type: 'POST',
 			        dataType: 'json',
 			        cache: false,
