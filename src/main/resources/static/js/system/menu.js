@@ -49,25 +49,33 @@ var vm = new Vue({
 	data:{
 		showList: true,
 		title: null,
-		menu: {}
+		menu: {},
+		btn:true
 	},
 	methods: {
 		query: function () {
 			vm.reload();
 		},
 		add: function(){
-			vm.showList = false;
-			vm.title = "新增";
+//			vm.showList = false;
+//			vm.title = "新增";
+			$('.modal-title').html("新增");
 			vm.menu = {};
+//			$('#myModal').modal('show');
+			$("#myModal").modal("toggle");
+			
+			
 		},
 		update: function (event) {
 			var id = getSelectedRow();
 			if(id == null){
 				return ;
 			}
-			vm.showList = false;
-            vm.title = "修改";
-            
+			vm.btn = false;
+//			vm.showList = false;
+//            vm.title = "修改";
+			$('.modal-title').html("修改");
+			$("#myModal").modal("toggle");
             vm.getInfo(id)
 		},
 		saveOrUpdate: function (event) {
@@ -78,9 +86,11 @@ var vm = new Vue({
                 contentType: "application/json",
 			    data: JSON.stringify(vm.menu),
 			    success: function(r){
+			    	vm.menu = {};
 			    	if(r.code === 0){
 						alert('操作成功', function(index){
 							vm.reload();
+							$('#myModal').modal('hide');
 						});
 					}else{
 						$.xfm.alert(r.msg);
@@ -114,7 +124,9 @@ var vm = new Vue({
 		},
 		getInfo: function(id){
 			$.get("/adventure/menu/info?id="+id, function(r){
+				console.log(r);
                 vm.menu = r.menu;
+                console.log(vm.menu);
             });
 		},
 		reload: function (event) {
