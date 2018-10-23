@@ -93,6 +93,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         auth.userDetailsService(userDetailsService).passwordEncoder(bCryptPasswordEncoder);  
     } 
     
+    
 /*    public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
     	System.err.println("自定义校验---------------进来了");
 

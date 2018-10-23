@@ -6,13 +6,13 @@ var vm = new Vue({
 		page: {},
 		fileText:"",
 		name:"",
-		nowDate:false
+		nowDate:true
 	},
 	methods: {
 		queryList:function(){
 			var _this=this;
 		      $.ajax({
-			        url: '/adventure/qiniu/list?nowDate'+_this.nowDate,
+			        url: '/adventure/qiniu/list?nowDate='+_this.nowDate,
 			        type: 'POST',
 			        dataType: 'json',
 			        cache: false,
@@ -65,6 +65,11 @@ var vm = new Vue({
 		        	$.xfm.alert("网络错误");
 		        }
 		      });
+		      $.xfm.alert("正在上传，请静候佳音，不要退出页面。");
+		      //2秒后隐藏该弹框
+		 	 setTimeout(function(){
+		 		 $('#test').modal('hide')
+		 		 },2000)
 		}
 	},
 	created:function(){

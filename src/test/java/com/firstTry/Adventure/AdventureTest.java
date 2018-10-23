@@ -19,31 +19,62 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.BlockingDeque;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.LinkedBlockingDeque;
+
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import com.firstTry.Adventure.entity.UserTest;
 
 public class AdventureTest {
 
 	public static void main(String[] args) {
-//		int i=1;
-//		i++;
-//		System.out.println(i);
-/*		 SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
-	         System.out.println(simpleDateFormat.format(new Date()));*/
-//	         System.out.println(new Date().getTime()/1000+15-new Date().getTime()/1000);
-			 ConcurrentHashMap<String,Object> map=new ConcurrentHashMap<>();
-	         map.put("1111","22222");
-		         map.remove("666");
-		/*	UserTest o=new UserTest();
-			o.setId(1l);
-			o.setMobie("111111111111");
-			o.setRemark("1");
-			AdventureTest adventureTest=new AdventureTest();
-			Map<String,Object> sa=object2Map(o);
-			System.out.println(sa.get("id"));*/
-		
-//		System.out.println(new BCryptPasswordEncoder().encode("123"));
+		// int i=1;
+		// i++;
+		// System.out.println(i);
+		/*
+		 * SimpleDateFormat simpleDateFormat = new SimpleDateFormat(
+		 * "yyyy-MM-dd hh:mm:ss");
+		 * System.out.println(simpleDateFormat.format(new Date()));
+		 */
+		// System.out.println(new Date().getTime()/1000+15-new
+		// Date().getTime()/1000);
+		final BlockingDeque<Integer> integers = new LinkedBlockingDeque<>();
+		try {
+			for (int a = 0; a <= 10; a++) {
+				integers.put(a);
+			}
+
+			System.out.println(integers.toString() + "---start");
+			new Thread(new Runnable() {
+				public void run() {
+					while (integers.size() > 0) {
+						int c;
+						try {
+							c = integers.take();
+
+							System.out.println(c);
+							integers.remove(c);
+						} catch (InterruptedException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+					}
+					System.out.println(integers.toString() + "---end");
+				}
+			}).start();
+
+		} catch (Exception e) {
+
+		}
+		/*
+		 * UserTest o=new UserTest(); o.setId(1l); o.setMobie("111111111111");
+		 * o.setRemark("1"); AdventureTest adventureTest=new AdventureTest();
+		 * Map<String,Object> sa=object2Map(o);
+		 * System.out.println(sa.get("id"));
+		 */
+
+		// System.out.println(new BCryptPasswordEncoder().encode("123"));
 	}
 
 	private ServerSocket ss;
@@ -53,28 +84,32 @@ public class AdventureTest {
 	private BufferedReader in;
 
 	private PrintWriter out;
+
 	/**
-     * 实体对象转成Map
-     * @param obj 实体对象
-     * @return
-     */
-    public static Map<String, Object> object2Map(Object obj) {
-        Map<String, Object> map = new HashMap<>();
-        if (obj == null) {
-            return map;
-        }
-        Class clazz = obj.getClass();
-        Field[] fields = clazz.getDeclaredFields();
-        try {
-            for (Field field : fields) {
-                field.setAccessible(true);
-                map.put(field.getName(), field.get(obj));
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return map;
-    }
+	 * 实体对象转成Map
+	 * 
+	 * @param obj
+	 *            实体对象
+	 * @return
+	 */
+	public static Map<String, Object> object2Map(Object obj) {
+		Map<String, Object> map = new HashMap<>();
+		if (obj == null) {
+			return map;
+		}
+		Class clazz = obj.getClass();
+		Field[] fields = clazz.getDeclaredFields();
+		try {
+			for (Field field : fields) {
+				field.setAccessible(true);
+				map.put(field.getName(), field.get(obj));
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return map;
+	}
+
 	public AdventureTest()
 
 	{

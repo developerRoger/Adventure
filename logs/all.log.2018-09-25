@@ -1,0 +1,214 @@
+2018-09-25 11:23:30,517  INFO AdventureApplication:48 - Starting AdventureApplication on BS1HDX84D9084A0 with PID 14180 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-09-25 11:23:30,531 DEBUG AdventureApplication:51 - Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-09-25 11:23:30,532  INFO AdventureApplication:593 - No active profile set, falling back to default profiles: default
+2018-09-25 11:23:31,694  INFO AnnotationConfigEmbeddedWebApplicationContext:583 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@74e38ba5: startup date [Tue Sep 25 11:23:31 CST 2018]; root of context hierarchy
+2018-09-25 11:23:32,900  INFO Version:30 - HV000001: Hibernate Validator 5.3.6.Final
+2018-09-25 11:23:36,746  INFO RepositoryConfigurationDelegate:165 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-09-25 11:23:40,253  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 - Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$c2a99a54] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-09-25 11:23:40,340  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$29fbd21a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-09-25 11:23:40,436  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 - Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-09-25 11:23:40,440  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@71989d70' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-09-25 11:23:40,465  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 - Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$e77e3d06] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-09-25 11:23:40,541  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-09-25 11:23:42,432  INFO TomcatEmbeddedServletContainer:89 - Tomcat initialized with port(s): 80 (http)
+2018-09-25 11:23:42,661  INFO ContextLoader:276 - Root WebApplicationContext: initialization completed in 10973 ms
+2018-09-25 11:23:43,553  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-09-25 11:23:43,554  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-09-25 11:23:43,558  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-09-25 11:23:43,558  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-09-25 11:23:43,560  INFO DelegatingFilterProxyRegistrationBean:258 - Mapping filter: 'springSecurityFilterChain' to: [/*]
+2018-09-25 11:23:43,560  INFO ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+2018-09-25 11:23:46,827  INFO RequestMappingHandlerMapping:543 - Mapped "{[/go]}" onto public java.lang.String com.firstTry.Adventure.config.DefaultView.index(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-09-25 11:23:46,829  INFO RequestMappingHandlerMapping:543 - Mapped "{[/hhh]}" onto public java.lang.String com.firstTry.Adventure.config.DefaultView.hello()
+2018-09-25 11:23:46,829  INFO RequestMappingHandlerMapping:543 - Mapped "{[/preface]}" onto public java.lang.String com.firstTry.Adventure.config.DefaultView.preface()
+2018-09-25 11:23:46,830  INFO RequestMappingHandlerMapping:543 - Mapped "{[/narcotics]}" onto public java.lang.String com.firstTry.Adventure.config.DefaultView.narcotics()
+2018-09-25 11:23:46,831  INFO RequestMappingHandlerMapping:543 - Mapped "{[/login]}" onto public java.lang.String com.firstTry.Adventure.config.DefaultView.login()
+2018-09-25 11:23:46,838  INFO RequestMappingHandlerMapping:543 - Mapped "{[/adventure/application/update]}" onto public com.firstTry.Adventure.utils.R com.firstTry.Adventure.controller.ApplicationController.update(com.firstTry.Adventure.entity.ApplicationEntity)
+2018-09-25 11:23:46,839  INFO RequestMappingHandlerMapping:543 - Mapped "{[/adventure/application/delete]}" onto public com.firstTry.Adventure.utils.R com.firstTry.Adventure.controller.ApplicationController.delete(java.lang.String[])
+2018-09-25 11:23:46,840  INFO RequestMappingHandlerMapping:543 - Mapped "{[/adventure/application/list]}" onto public java.util.List<com.firstTry.Adventure.entity.ApplicationEntity> com.firstTry.Adventure.controller.ApplicationController.list()
+2018-09-25 11:23:46,841  INFO RequestMappingHandlerMapping:543 - Mapped "{[/adventure/application/save]}" onto public com.firstTry.Adventure.utils.R com.firstTry.Adventure.controller.ApplicationController.save(com.firstTry.Adventure.entity.ApplicationEntity)
+2018-09-25 11:23:46,842  INFO RequestMappingHandlerMapping:543 - Mapped "{[/adventure/application/info/{code}]}" onto public com.firstTry.Adventure.utils.R com.firstTry.Adventure.controller.ApplicationController.info(java.lang.String)
+2018-09-25 11:23:46,843  INFO RequestMappingHandlerMapping:543 - Mapped "{[/adventure/application/queryList]}" onto public com.firstTry.Adventure.utils.R com.firstTry.Adventure.controller.ApplicationController.queryList(java.util.Map<java.lang.String, java.lang.Object>)
+2018-09-25 11:23:46,848  INFO RequestMappingHandlerMapping:543 - Mapped "{[/adventure/menu/update]}" onto public com.firstTry.Adventure.utils.R com.firstTry.Adventure.controller.MenuController.update(com.firstTry.Adventure.entity.MenuEntity)
+2018-09-25 11:23:46,849  INFO RequestMappingHandlerMapping:543 - Mapped "{[/adventure/menu/delete]}" onto public com.firstTry.Adventure.utils.R com.firstTry.Adventure.controller.MenuController.delete(java.lang.Long[])
+2018-09-25 11:23:46,850  INFO RequestMappingHandlerMapping:543 - Mapped "{[/adventure/menu/list]}" onto public java.util.List<com.firstTry.Adventure.entity.MenuEntity> com.firstTry.Adventure.controller.MenuController.list()
+2018-09-25 11:23:46,851  INFO RequestMappingHandlerMapping:543 - Mapped "{[/adventure/menu/save]}" onto public com.firstTry.Adventure.utils.R com.firstTry.Adventure.controller.MenuController.save(com.firstTry.Adventure.entity.MenuEntity)
+2018-09-25 11:23:46,852  INFO RequestMappingHandlerMapping:543 - Mapped "{[/adventure/menu/info]}" onto public com.firstTry.Adventure.utils.R com.firstTry.Adventure.controller.MenuController.info(java.lang.Long)
+2018-09-25 11:23:46,852  INFO RequestMappingHandlerMapping:543 - Mapped "{[/adventure/menu/queryList]}" onto public com.firstTry.Adventure.utils.R com.firstTry.Adventure.controller.MenuController.queryList(java.util.Map<java.lang.String, java.lang.Object>)
+2018-09-25 11:23:46,857  INFO RequestMappingHandlerMapping:543 - Mapped "{[/adventure/qiniu/update]}" onto public com.firstTry.Adventure.utils.R com.firstTry.Adventure.controller.QiniuController.update(com.firstTry.Adventure.entity.QiniuStorageEntity)
+2018-09-25 11:23:46,861  INFO RequestMappingHandlerMapping:543 - Mapped "{[/adventure/qiniu/delete]}" onto public com.firstTry.Adventure.utils.R com.firstTry.Adventure.controller.QiniuController.delete(java.lang.Long[])
+2018-09-25 11:23:46,861  INFO RequestMappingHandlerMapping:543 - Mapped "{[/adventure/qiniu/list]}" onto public java.util.List<com.firstTry.Adventure.entity.QiniuStorageEntity> com.firstTry.Adventure.controller.QiniuController.list(boolean)
+2018-09-25 11:23:46,862  INFO RequestMappingHandlerMapping:543 - Mapped "{[/adventure/qiniu/save]}" onto public com.firstTry.Adventure.utils.R com.firstTry.Adventure.controller.QiniuController.save(com.firstTry.Adventure.entity.QiniuStorageEntity)
+2018-09-25 11:23:46,863  INFO RequestMappingHandlerMapping:543 - Mapped "{[/adventure/qiniu/info]}" onto public com.firstTry.Adventure.utils.R com.firstTry.Adventure.controller.QiniuController.info(java.lang.Long)
+2018-09-25 11:23:46,864  INFO RequestMappingHandlerMapping:543 - Mapped "{[/adventure/qiniu/queryList]}" onto public com.firstTry.Adventure.utils.R com.firstTry.Adventure.controller.QiniuController.queryList(java.util.Map<java.lang.String, java.lang.Object>)
+2018-09-25 11:23:46,864  INFO RequestMappingHandlerMapping:543 - Mapped "{[/adventure/qiniu/uploadImg],methods=[POST]}" onto public com.firstTry.Adventure.utils.R com.firstTry.Adventure.controller.QiniuController.uploadImg(org.springframework.web.multipart.MultipartFile,java.lang.String,javax.servlet.http.HttpServletRequest)
+2018-09-25 11:23:46,866  INFO RequestMappingHandlerMapping:543 - Mapped "{[/sys/generator/list]}" onto public com.firstTry.Adventure.utils.R com.firstTry.Adventure.controller.SysGeneratorController.list(java.util.Map<java.lang.String, java.lang.Object>)
+2018-09-25 11:23:46,867  INFO RequestMappingHandlerMapping:543 - Mapped "{[/sys/generator/code]}" onto public void com.firstTry.Adventure.controller.SysGeneratorController.code(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException
+2018-09-25 11:23:46,867  INFO RequestMappingHandlerMapping:543 - Mapped "{[/sys/generator/queryColumns]}" onto public com.firstTry.Adventure.utils.R com.firstTry.Adventure.controller.SysGeneratorController.queryColumns(javax.servlet.http.HttpServletRequest)
+2018-09-25 11:23:46,874  INFO RequestMappingHandlerMapping:543 - Mapped "{[/hi]}" onto public java.lang.String com.firstTry.Adventure.controller.UserLoginController.hello() throws java.lang.Exception
+2018-09-25 11:23:46,877  INFO RequestMappingHandlerMapping:543 - Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2018-09-25 11:23:46,885  INFO RequestMappingHandlerMapping:543 - Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2018-09-25 11:23:46,887  INFO RequestMappingHandlerMapping:543 - Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2018-09-25 11:23:46,889  INFO RequestMappingHandlerMapping:543 - Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2018-09-25 11:23:46,904  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-09-25 11:23:46,905  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-09-25 11:23:49,045  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-25 11:23:49,046  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-25 11:23:49,185  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-09-25 11:23:49,204  INFO WebMvcAutoConfiguration$WelcomePageHandlerMapping:549 - Adding welcome page: class path resource [views/index.html]
+2018-09-25 11:23:49,318  INFO DefaultSecurityFilterChain:43 - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7c69dddf, org.springframework.security.web.context.SecurityContextPersistenceFilter@26003b07, org.springframework.security.web.header.HeaderWriterFilter@6fa0f615, org.springframework.web.filter.CorsFilter@1a2a57e0, org.springframework.security.web.authentication.logout.LogoutFilter@28a6f9af, com.firstTry.Adventure.config.JWTLoginFilter@65052a97, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2973a5d, com.firstTry.Adventure.config.JWTAuthenticationFilter@af2b754, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6b3118cc, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1ef0425f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@38c714f0, org.springframework.security.web.session.SessionManagementFilter@70af37d, org.springframework.security.web.access.ExceptionTranslationFilter@5bdcf4e9, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4842471a]
+2018-09-25 11:23:49,466  INFO ThreadPoolTaskExecutor:165 - Initializing ExecutorService 
+2018-09-25 11:23:49,495  INFO ThreadPoolTaskExecutor:165 - Initializing ExecutorService  'defaultThreadPool'
+2018-09-25 11:23:51,576  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@74e38ba5: startup date [Tue Sep 25 11:23:31 CST 2018]; root of context hierarchy
+2018-09-25 11:23:51,704  INFO ExceptionHandlerExceptionResolver:273 - Detected @ExceptionHandler methods in globalExceptionHandler
+2018-09-25 11:23:54,835  INFO OptionalLiveReloadServer:58 - LiveReload server is running on port 35729
+2018-09-25 11:23:54,846  WARN RedisStarterDeprecationWarningAutoConfiguration:43 - spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2018-09-25 11:23:55,048  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2018-09-25 11:23:55,732  INFO DefaultLifecycleProcessor:343 - Starting beans in phase 2147483647
+2018-09-25 11:23:55,733  INFO DocumentationPluginsBootstrapper:120 - Context refreshed
+2018-09-25 11:23:56,652  INFO DocumentationPluginsBootstrapper:123 - Found 1 custom documentation plugin(s)
+2018-09-25 11:23:56,695  INFO ApiListingReferenceScanner:41 - Scanning for api listing references
+2018-09-25 11:23:58,294  INFO CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingGET_1
+2018-09-25 11:23:58,299  INFO CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingHEAD_1
+2018-09-25 11:23:58,304  INFO CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingPOST_1
+2018-09-25 11:23:58,309  INFO CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingPUT_1
+2018-09-25 11:23:58,314  INFO CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingPATCH_1
+2018-09-25 11:23:58,323  INFO CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_1
+2018-09-25 11:23:58,355  INFO CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingOPTIONS_1
+2018-09-25 11:23:58,360  INFO CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingTRACE_1
+2018-09-25 11:23:58,369  INFO CachingOperationNameGenerator:40 - Generating unique operation named: infoUsingGET_1
+2018-09-25 11:23:58,376  INFO CachingOperationNameGenerator:40 - Generating unique operation named: infoUsingHEAD_1
+2018-09-25 11:23:58,383  INFO CachingOperationNameGenerator:40 - Generating unique operation named: infoUsingPOST_1
+2018-09-25 11:23:58,408  INFO CachingOperationNameGenerator:40 - Generating unique operation named: infoUsingPUT_1
+2018-09-25 11:23:58,416  INFO CachingOperationNameGenerator:40 - Generating unique operation named: infoUsingPATCH_1
+2018-09-25 11:23:58,422  INFO CachingOperationNameGenerator:40 - Generating unique operation named: infoUsingDELETE_1
+2018-09-25 11:23:58,428  INFO CachingOperationNameGenerator:40 - Generating unique operation named: infoUsingOPTIONS_1
+2018-09-25 11:23:58,447  INFO CachingOperationNameGenerator:40 - Generating unique operation named: infoUsingTRACE_1
+2018-09-25 11:23:58,455  INFO CachingOperationNameGenerator:40 - Generating unique operation named: listUsingGET_1
+2018-09-25 11:23:58,458  INFO CachingOperationNameGenerator:40 - Generating unique operation named: listUsingHEAD_1
+2018-09-25 11:23:58,463  INFO CachingOperationNameGenerator:40 - Generating unique operation named: listUsingPOST_1
+2018-09-25 11:23:58,467  INFO CachingOperationNameGenerator:40 - Generating unique operation named: listUsingPUT_1
+2018-09-25 11:23:58,470  INFO CachingOperationNameGenerator:40 - Generating unique operation named: listUsingPATCH_1
+2018-09-25 11:23:58,473  INFO CachingOperationNameGenerator:40 - Generating unique operation named: listUsingDELETE_1
+2018-09-25 11:23:58,478  INFO CachingOperationNameGenerator:40 - Generating unique operation named: listUsingOPTIONS_1
+2018-09-25 11:23:58,486  INFO CachingOperationNameGenerator:40 - Generating unique operation named: listUsingTRACE_1
+2018-09-25 11:23:58,495  INFO CachingOperationNameGenerator:40 - Generating unique operation named: queryListUsingGET_1
+2018-09-25 11:23:58,502  INFO CachingOperationNameGenerator:40 - Generating unique operation named: queryListUsingHEAD_1
+2018-09-25 11:23:58,510  INFO CachingOperationNameGenerator:40 - Generating unique operation named: queryListUsingPOST_1
+2018-09-25 11:23:58,516  INFO CachingOperationNameGenerator:40 - Generating unique operation named: queryListUsingPUT_1
+2018-09-25 11:23:58,521  INFO CachingOperationNameGenerator:40 - Generating unique operation named: queryListUsingPATCH_1
+2018-09-25 11:23:58,534  INFO CachingOperationNameGenerator:40 - Generating unique operation named: queryListUsingDELETE_1
+2018-09-25 11:23:58,540  INFO CachingOperationNameGenerator:40 - Generating unique operation named: queryListUsingOPTIONS_1
+2018-09-25 11:23:58,549  INFO CachingOperationNameGenerator:40 - Generating unique operation named: queryListUsingTRACE_1
+2018-09-25 11:23:58,572  INFO CachingOperationNameGenerator:40 - Generating unique operation named: saveUsingGET_1
+2018-09-25 11:23:58,578  INFO CachingOperationNameGenerator:40 - Generating unique operation named: saveUsingHEAD_1
+2018-09-25 11:23:58,584  INFO CachingOperationNameGenerator:40 - Generating unique operation named: saveUsingPOST_1
+2018-09-25 11:23:58,588  INFO CachingOperationNameGenerator:40 - Generating unique operation named: saveUsingPUT_1
+2018-09-25 11:23:58,599  INFO CachingOperationNameGenerator:40 - Generating unique operation named: saveUsingPATCH_1
+2018-09-25 11:23:58,606  INFO CachingOperationNameGenerator:40 - Generating unique operation named: saveUsingDELETE_1
+2018-09-25 11:23:58,621  INFO CachingOperationNameGenerator:40 - Generating unique operation named: saveUsingOPTIONS_1
+2018-09-25 11:23:58,626  INFO CachingOperationNameGenerator:40 - Generating unique operation named: saveUsingTRACE_1
+2018-09-25 11:23:58,637  INFO CachingOperationNameGenerator:40 - Generating unique operation named: updateUsingGET_1
+2018-09-25 11:23:58,645  INFO CachingOperationNameGenerator:40 - Generating unique operation named: updateUsingHEAD_1
+2018-09-25 11:23:58,658  INFO CachingOperationNameGenerator:40 - Generating unique operation named: updateUsingPOST_1
+2018-09-25 11:23:58,664  INFO CachingOperationNameGenerator:40 - Generating unique operation named: updateUsingPUT_1
+2018-09-25 11:23:58,669  INFO CachingOperationNameGenerator:40 - Generating unique operation named: updateUsingPATCH_1
+2018-09-25 11:23:58,674  INFO CachingOperationNameGenerator:40 - Generating unique operation named: updateUsingDELETE_1
+2018-09-25 11:23:58,686  INFO CachingOperationNameGenerator:40 - Generating unique operation named: updateUsingOPTIONS_1
+2018-09-25 11:23:58,691  INFO CachingOperationNameGenerator:40 - Generating unique operation named: updateUsingTRACE_1
+2018-09-25 11:23:58,779  INFO CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingGET_2
+2018-09-25 11:23:58,785  INFO CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingHEAD_2
+2018-09-25 11:23:58,821  INFO CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingPOST_2
+2018-09-25 11:23:58,830  INFO CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingPUT_2
+2018-09-25 11:23:58,840  INFO CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingPATCH_2
+2018-09-25 11:23:58,850  INFO CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_2
+2018-09-25 11:23:58,859  INFO CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingOPTIONS_2
+2018-09-25 11:23:58,868  INFO CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingTRACE_2
+2018-09-25 11:23:58,882  INFO CachingOperationNameGenerator:40 - Generating unique operation named: infoUsingGET_2
+2018-09-25 11:23:58,904  INFO CachingOperationNameGenerator:40 - Generating unique operation named: infoUsingHEAD_2
+2018-09-25 11:23:58,909  INFO CachingOperationNameGenerator:40 - Generating unique operation named: infoUsingPOST_2
+2018-09-25 11:23:58,915  INFO CachingOperationNameGenerator:40 - Generating unique operation named: infoUsingPUT_2
+2018-09-25 11:23:58,919  INFO CachingOperationNameGenerator:40 - Generating unique operation named: infoUsingPATCH_2
+2018-09-25 11:23:58,929  INFO CachingOperationNameGenerator:40 - Generating unique operation named: infoUsingDELETE_2
+2018-09-25 11:23:58,934  INFO CachingOperationNameGenerator:40 - Generating unique operation named: infoUsingOPTIONS_2
+2018-09-25 11:23:58,942  INFO CachingOperationNameGenerator:40 - Generating unique operation named: infoUsingTRACE_2
+2018-09-25 11:23:58,958  INFO CachingOperationNameGenerator:40 - Generating unique operation named: listUsingGET_2
+2018-09-25 11:23:58,964  INFO CachingOperationNameGenerator:40 - Generating unique operation named: listUsingHEAD_2
+2018-09-25 11:23:58,971  INFO CachingOperationNameGenerator:40 - Generating unique operation named: listUsingPOST_2
+2018-09-25 11:23:58,979  INFO CachingOperationNameGenerator:40 - Generating unique operation named: listUsingPUT_2
+2018-09-25 11:23:58,988  INFO CachingOperationNameGenerator:40 - Generating unique operation named: listUsingPATCH_2
+2018-09-25 11:23:58,994  INFO CachingOperationNameGenerator:40 - Generating unique operation named: listUsingDELETE_2
+2018-09-25 11:23:59,000  INFO CachingOperationNameGenerator:40 - Generating unique operation named: listUsingOPTIONS_2
+2018-09-25 11:23:59,006  INFO CachingOperationNameGenerator:40 - Generating unique operation named: listUsingTRACE_2
+2018-09-25 11:23:59,020  INFO CachingOperationNameGenerator:40 - Generating unique operation named: queryListUsingGET_2
+2018-09-25 11:23:59,025  INFO CachingOperationNameGenerator:40 - Generating unique operation named: queryListUsingHEAD_2
+2018-09-25 11:23:59,031  INFO CachingOperationNameGenerator:40 - Generating unique operation named: queryListUsingPOST_2
+2018-09-25 11:23:59,037  INFO CachingOperationNameGenerator:40 - Generating unique operation named: queryListUsingPUT_2
+2018-09-25 11:23:59,042  INFO CachingOperationNameGenerator:40 - Generating unique operation named: queryListUsingPATCH_2
+2018-09-25 11:23:59,049  INFO CachingOperationNameGenerator:40 - Generating unique operation named: queryListUsingDELETE_2
+2018-09-25 11:23:59,056  INFO CachingOperationNameGenerator:40 - Generating unique operation named: queryListUsingOPTIONS_2
+2018-09-25 11:23:59,080  INFO CachingOperationNameGenerator:40 - Generating unique operation named: queryListUsingTRACE_2
+2018-09-25 11:23:59,094  INFO CachingOperationNameGenerator:40 - Generating unique operation named: saveUsingGET_2
+2018-09-25 11:23:59,099  INFO CachingOperationNameGenerator:40 - Generating unique operation named: saveUsingHEAD_2
+2018-09-25 11:23:59,104  INFO CachingOperationNameGenerator:40 - Generating unique operation named: saveUsingPOST_2
+2018-09-25 11:23:59,109  INFO CachingOperationNameGenerator:40 - Generating unique operation named: saveUsingPUT_2
+2018-09-25 11:23:59,114  INFO CachingOperationNameGenerator:40 - Generating unique operation named: saveUsingPATCH_2
+2018-09-25 11:23:59,120  INFO CachingOperationNameGenerator:40 - Generating unique operation named: saveUsingDELETE_2
+2018-09-25 11:23:59,125  INFO CachingOperationNameGenerator:40 - Generating unique operation named: saveUsingOPTIONS_2
+2018-09-25 11:23:59,130  INFO CachingOperationNameGenerator:40 - Generating unique operation named: saveUsingTRACE_2
+2018-09-25 11:23:59,142  INFO CachingOperationNameGenerator:40 - Generating unique operation named: updateUsingGET_2
+2018-09-25 11:23:59,147  INFO CachingOperationNameGenerator:40 - Generating unique operation named: updateUsingHEAD_2
+2018-09-25 11:23:59,151  INFO CachingOperationNameGenerator:40 - Generating unique operation named: updateUsingPOST_2
+2018-09-25 11:23:59,155  INFO CachingOperationNameGenerator:40 - Generating unique operation named: updateUsingPUT_2
+2018-09-25 11:23:59,159  INFO CachingOperationNameGenerator:40 - Generating unique operation named: updateUsingPATCH_2
+2018-09-25 11:23:59,163  INFO CachingOperationNameGenerator:40 - Generating unique operation named: updateUsingDELETE_2
+2018-09-25 11:23:59,167  INFO CachingOperationNameGenerator:40 - Generating unique operation named: updateUsingOPTIONS_2
+2018-09-25 11:23:59,172  INFO CachingOperationNameGenerator:40 - Generating unique operation named: updateUsingTRACE_2
+2018-09-25 11:23:59,228  INFO CachingOperationNameGenerator:40 - Generating unique operation named: listUsingGET_3
+2018-09-25 11:23:59,232  INFO CachingOperationNameGenerator:40 - Generating unique operation named: listUsingHEAD_3
+2018-09-25 11:23:59,238  INFO CachingOperationNameGenerator:40 - Generating unique operation named: listUsingPOST_3
+2018-09-25 11:23:59,242  INFO CachingOperationNameGenerator:40 - Generating unique operation named: listUsingPUT_3
+2018-09-25 11:23:59,247  INFO CachingOperationNameGenerator:40 - Generating unique operation named: listUsingPATCH_3
+2018-09-25 11:23:59,251  INFO CachingOperationNameGenerator:40 - Generating unique operation named: listUsingDELETE_3
+2018-09-25 11:23:59,259  INFO CachingOperationNameGenerator:40 - Generating unique operation named: listUsingOPTIONS_3
+2018-09-25 11:23:59,264  INFO CachingOperationNameGenerator:40 - Generating unique operation named: listUsingTRACE_3
+2018-09-25 11:23:59,722  INFO TomcatEmbeddedServletContainer:201 - Tomcat started on port(s): 80 (http)
+2018-09-25 11:23:59,748  INFO AdventureApplication:57 - Started AdventureApplication in 29.711 seconds (JVM running for 30.602)
+2018-09-25 11:24:18,271  INFO DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+2018-09-25 11:24:18,357  INFO DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 86 ms
+2018-09-25 11:24:18,854  INFO TemplateEngine:825 - [THYMELEAF] INITIALIZING TEMPLATE ENGINE
+2018-09-25 11:24:18,965  INFO AbstractTemplateResolver:99 - [THYMELEAF] INITIALIZING TEMPLATE RESOLVER: org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+2018-09-25 11:24:18,966  INFO AbstractTemplateResolver:110 - [THYMELEAF] TEMPLATE RESOLVER INITIALIZED OK
+2018-09-25 11:24:18,967  INFO AbstractMessageResolver:72 - [THYMELEAF] INITIALIZING MESSAGE RESOLVER: org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+2018-09-25 11:24:18,967  INFO AbstractMessageResolver:78 - [THYMELEAF] MESSAGE RESOLVER INITIALIZED OK
+2018-09-25 11:24:18,977  INFO CONFIG:123 - [THYMELEAF] TEMPLATE ENGINE CONFIGURATION:
+[THYMELEAF] * Cache Factory implementation: org.thymeleaf.cache.StandardCacheManager
+[THYMELEAF] * Template modes:
+[THYMELEAF]     * XML
+[THYMELEAF]     * LEGACYHTML5
+[THYMELEAF]     * VALIDXML
+[THYMELEAF]     * VALIDXHTML
+[THYMELEAF]     * XHTML
+[THYMELEAF]     * HTML5
+[THYMELEAF] * Template resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+[THYMELEAF] * Message resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+[THYMELEAF] * Dialect [1 of 2]: org.thymeleaf.spring4.dialect.SpringStandardDialect
+[THYMELEAF]     * Prefix: "th"
+[THYMELEAF] * Dialect [2 of 2]: nz.net.ultraq.thymeleaf.LayoutDialect
+[THYMELEAF]     * Prefix: "layout"
+[THYMELEAF] TEMPLATE ENGINE CONFIGURED OK
+2018-09-25 11:24:18,977  INFO TemplateEngine:838 - [THYMELEAF] TEMPLATE ENGINE INITIALIZED
+2018-09-25 11:24:23,074 DEBUG query:145 - ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a order by a.create_time desc 
+2018-09-25 11:24:23,114 DEBUG query:145 - ==> Parameters: 
+2018-09-25 11:24:23,155 DEBUG query:145 - <==      Total: 3
+2018-09-25 11:24:26,675 DEBUG query:145 - ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a WHERE a.create_time = ? order by a.create_time desc 
+2018-09-25 11:24:26,687 DEBUG query:145 - ==> Parameters: 2018-09-25 11:24:26.611(Timestamp)
+2018-09-25 11:24:26,717 DEBUG query:145 - <==      Total: 0
+2018-09-25 11:24:29,907 DEBUG query:145 - ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a order by a.create_time desc 
+2018-09-25 11:24:29,908 DEBUG query:145 - ==> Parameters: 
+2018-09-25 11:24:29,930 DEBUG query:145 - <==      Total: 3
+2018-09-25 11:24:31,436 DEBUG query:145 - ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a WHERE a.create_time = ? order by a.create_time desc 
+2018-09-25 11:24:31,438 DEBUG query:145 - ==> Parameters: 2018-09-25 11:24:31.435(Timestamp)
+2018-09-25 11:24:31,479 DEBUG query:145 - <==      Total: 0

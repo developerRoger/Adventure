@@ -1,0 +1,342 @@
+2018-09-22 15:43:32,086  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 7376 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-09-22 15:43:32,092 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-09-22 15:43:32,093  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-09-22 15:43:48,320  INFO AdventureApplication:57 ---- Started AdventureApplication in 16.736 seconds (JVM running for 18.294)
+2018-09-22 15:44:02,022 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-09-22 15:44:02,053 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-09-22 15:44:02,146 DEBUG queryList:145 ---- <==      Total: 10
+2018-09-22 15:44:02,149 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-09-22 15:44:02,150 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-09-22 15:44:02,161 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-09-22 15:44:14,751 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-09-22 15:44:14,762 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-09-22 15:44:14,794 DEBUG queryList:145 ---- <==      Total: 10
+2018-09-22 15:44:14,797 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-09-22 15:44:14,799 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-09-22 15:44:14,811 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-09-22 15:53:32,501 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-09-22 15:53:32,503 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-09-22 15:53:32,527 DEBUG queryList:145 ---- <==      Total: 10
+2018-09-22 15:53:32,528 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-09-22 15:53:32,529 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-09-22 15:53:32,540 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-09-22 15:53:41,335 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-09-22 15:53:41,336 DEBUG queryList:145 ---- ==> Parameters: 10(Integer), 10(Integer)
+2018-09-22 15:53:41,362 DEBUG queryList:145 ---- <==      Total: 10
+2018-09-22 15:53:41,363 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-09-22 15:53:41,365 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-09-22 15:53:41,375 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-09-22 15:53:49,519 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-09-22 15:53:49,520 DEBUG queryList:145 ---- ==> Parameters: 20(Integer), 10(Integer)
+2018-09-22 15:53:49,544 DEBUG queryList:145 ---- <==      Total: 10
+2018-09-22 15:53:49,544 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-09-22 15:53:49,545 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-09-22 15:53:49,563 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-09-22 15:53:54,181 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-09-22 15:53:54,182 DEBUG queryColumns:145 ---- ==> Parameters: t_terminal(String)
+2018-09-22 15:53:54,194 DEBUG queryColumns:145 ---- <==      Total: 7
+2018-09-22 15:54:23,328  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 7616 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-09-22 15:54:23,331 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-09-22 15:54:23,332  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-09-22 15:54:34,673  INFO AdventureApplication:57 ---- Started AdventureApplication in 11.685 seconds (JVM running for 12.298)
+2018-09-22 15:56:10,298  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 7756 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-09-22 15:56:10,301 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-09-22 15:56:10,303  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-09-22 15:56:25,243  INFO AdventureApplication:57 ---- Started AdventureApplication in 15.455 seconds (JVM running for 16.468)
+2018-09-22 15:56:37,208 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-09-22 15:56:37,240 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-09-22 15:56:37,271 DEBUG queryList:145 ---- <==      Total: 10
+2018-09-22 15:56:37,274 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-09-22 15:56:37,275 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-09-22 15:56:37,286 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-09-22 15:56:51,291 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-09-22 15:56:51,292 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-09-22 15:56:51,316 DEBUG queryList:145 ---- <==      Total: 10
+2018-09-22 15:56:51,319 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-09-22 15:56:51,320 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-09-22 15:56:51,334 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-09-22 15:57:36,748 DEBUG queryTable:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, create_time createTime from information_schema.tables where table_schema = (select database()) and table_name = ? 
+2018-09-22 15:57:36,750 DEBUG queryTable:145 ---- ==> Parameters: qiniu_storage(String)
+2018-09-22 15:57:36,781 DEBUG queryTable:145 ---- <==      Total: 1
+2018-09-22 15:57:36,782 DEBUG queryColumns:145 ---- ==>  Preparing: select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns where table_name = ? and table_schema = (select database()) order by ordinal_position 
+2018-09-22 15:57:36,783 DEBUG queryColumns:145 ---- ==> Parameters: qiniu_storage(String)
+2018-09-22 15:57:36,796 DEBUG queryColumns:145 ---- <==      Total: 9
+2018-09-22 15:58:22,162  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 7756 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-09-22 15:58:22,163 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-09-22 15:58:22,166  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-09-22 16:06:18,230  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 7876 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-09-22 16:06:18,234 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-09-22 16:06:18,235  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-09-22 16:06:29,492  INFO AdventureApplication:57 ---- Started AdventureApplication in 11.596 seconds (JVM running for 12.211)
+2018-09-22 16:07:29,166 DEBUG query:145 ---- ==>  Preparing: SELECT a.code Code, a.name Name, a.status Status, a.description Description, a.show_order ShowOrder, a.create_by CreateBy, a.create_time CreateTime, a.update_by UpdateBy, a.update_time UpdateTime FROM application a 
+2018-09-22 16:07:29,202 DEBUG query:145 ---- ==> Parameters: 
+2018-09-22 16:07:29,236 DEBUG query:145 ---- <==      Total: 8
+2018-09-22 16:07:29,244 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-09-22 16:07:29,246 DEBUG query:145 ---- ==> Parameters: APP001(String)
+2018-09-22 16:07:29,259 DEBUG query:145 ---- <==      Total: 3
+2018-09-22 16:07:29,261 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-09-22 16:07:29,262 DEBUG query:145 ---- ==> Parameters: APP002(String)
+2018-09-22 16:07:29,274 DEBUG query:145 ---- <==      Total: 0
+2018-09-22 16:07:29,276 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-09-22 16:07:29,277 DEBUG query:145 ---- ==> Parameters: APP003(String)
+2018-09-22 16:07:29,289 DEBUG query:145 ---- <==      Total: 0
+2018-09-22 16:07:29,291 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-09-22 16:07:29,292 DEBUG query:145 ---- ==> Parameters: APP004(String)
+2018-09-22 16:07:29,305 DEBUG query:145 ---- <==      Total: 0
+2018-09-22 16:07:29,306 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-09-22 16:07:29,307 DEBUG query:145 ---- ==> Parameters: APP005(String)
+2018-09-22 16:07:29,320 DEBUG query:145 ---- <==      Total: 0
+2018-09-22 16:07:29,322 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-09-22 16:07:29,323 DEBUG query:145 ---- ==> Parameters: APP006(String)
+2018-09-22 16:07:29,336 DEBUG query:145 ---- <==      Total: 0
+2018-09-22 16:07:29,337 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-09-22 16:07:29,338 DEBUG query:145 ---- ==> Parameters: APP007(String)
+2018-09-22 16:07:29,350 DEBUG query:145 ---- <==      Total: 0
+2018-09-22 16:07:29,353 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-09-22 16:07:29,354 DEBUG query:145 ---- ==> Parameters: APP008(String)
+2018-09-22 16:07:29,377 DEBUG query:145 ---- <==      Total: 0
+2018-09-22 16:07:30,319 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-09-22 16:07:30,321 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-09-22 16:07:30,344 DEBUG queryList:145 ---- <==      Total: 10
+2018-09-22 16:07:30,346 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-09-22 16:07:30,347 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-09-22 16:07:30,366 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-09-22 16:16:39,272 DEBUG save:145 ---- ==>  Preparing: insert into qiniu_storage ( `id`, `name`, `url`, `remark`, `delete_code`, `create_by`, `create_time`, `update_by`, `update_time` ) values ( ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
+2018-09-22 16:16:39,274 DEBUG save:145 ---- ==> Parameters: 16607719192662016(Long), upload...(String), pdqrhc022.bkt.clouddn.com/16607715375845376(String), null, 0(Integer), null, 2018-09-22 16:16:17.812(Timestamp), null, 2018-09-22 16:16:17.812(Timestamp)
+2018-09-22 16:16:39,293 DEBUG save:145 ---- <==    Updates: 1
+2018-09-22 16:19:55,335 DEBUG save:145 ---- ==>  Preparing: insert into qiniu_storage ( `id`, `name`, `url`, `remark`, `delete_code`, `create_by`, `create_time`, `update_by`, `update_time` ) values ( ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
+2018-09-22 16:19:55,337 DEBUG save:145 ---- ==> Parameters: 16608631504113664(Long), upload...(String), pdqrhc022.bkt.clouddn.com/16608630065467392(String), null, 0(Integer), null, 2018-09-22 16:19:55.324(Timestamp), null, 2018-09-22 16:19:55.324(Timestamp)
+2018-09-22 16:19:55,351 DEBUG save:145 ---- <==    Updates: 1
+2018-09-22 16:31:46,369 DEBUG save:145 ---- ==>  Preparing: insert into qiniu_storage ( `id`, `name`, `url`, `remark`, `delete_code`, `create_by`, `create_time`, `update_by`, `update_time` ) values ( ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
+2018-09-22 16:31:46,371 DEBUG save:145 ---- ==> Parameters: 16611533991841792(Long), upload...(String), pdqrhc022.bkt.clouddn.com/16611532804853760(String), null, 0(Integer), null, 2018-09-22 16:31:27.331(Timestamp), null, 2018-09-22 16:31:27.331(Timestamp)
+2018-09-22 16:31:46,386 DEBUG save:145 ---- <==    Updates: 1
+2018-09-22 16:36:34,281 DEBUG save:145 ---- ==>  Preparing: insert into qiniu_storage ( `id`, `name`, `url`, `remark`, `delete_code`, `create_by`, `create_time`, `update_by`, `update_time` ) values ( ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
+2018-09-22 16:36:34,282 DEBUG save:145 ---- ==> Parameters: 16612741599072256(Long), upload...(String), pdqrhc022.bkt.clouddn.com/16612740374335488(String), null, 0(Integer), null, 2018-09-22 16:36:15.247(Timestamp), null, 2018-09-22 16:36:15.247(Timestamp)
+2018-09-22 16:36:34,297 DEBUG save:145 ---- <==    Updates: 1
+2018-09-22 21:22:32,265 DEBUG save:145 ---- ==>  Preparing: insert into qiniu_storage ( `id`, `name`, `url`, `remark`, `delete_code`, `create_by`, `create_time`, `update_by`, `update_time` ) values ( ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
+2018-09-22 21:22:32,267 DEBUG save:145 ---- ==> Parameters: 16684786672340992(Long), upload...(String), pdqrhc022.bkt.clouddn.com/16684785070116864(String), null, 0(Integer), null, 2018-09-22 21:22:32.131(Timestamp), null, 2018-09-22 21:22:32.131(Timestamp)
+2018-09-22 21:22:32,282 DEBUG save:145 ---- <==    Updates: 1
+2018-09-22 21:28:49,027  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 7876 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-09-22 21:28:49,027 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-09-22 21:28:49,028  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-09-22 21:28:52,772  INFO AdventureApplication:57 ---- Started AdventureApplication in 3.79 seconds (JVM running for 19352.398)
+2018-09-22 21:29:18,319 DEBUG save:145 ---- ==>  Preparing: insert into qiniu_storage ( `id`, `name`, `url`, `remark`, `delete_code`, `create_by`, `create_time`, `update_by`, `update_time` ) values ( ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
+2018-09-22 21:29:18,320 DEBUG save:145 ---- ==> Parameters: 16686485080248320(Long), hhhhhhhhhhhhh(String), pdqrhc022.bkt.clouddn.com/16686484488851456(String), null, 0(Integer), null, 2018-09-22 21:29:17.063(Timestamp), null, 2018-09-22 21:29:17.063(Timestamp)
+2018-09-22 21:29:18,334 DEBUG save:145 ---- <==    Updates: 1
+2018-09-22 22:00:56,283  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 2760 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-09-22 22:00:56,311 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-09-22 22:00:56,317  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-09-22 22:01:10,475  INFO AdventureApplication:57 ---- Started AdventureApplication in 14.755 seconds (JVM running for 15.648)
+2018-09-22 22:01:32,099 ERROR RRExceptionHandler:45 ---- java.io.IOException: 您的主机中的软件中止了一个已建立的连接。
+org.apache.catalina.connector.ClientAbortException: java.io.IOException: 您的主机中的软件中止了一个已建立的连接。
+	at org.apache.catalina.connector.OutputBuffer.realWriteBytes(OutputBuffer.java:356)
+	at org.apache.catalina.connector.OutputBuffer.flushByteBuffer(OutputBuffer.java:815)
+	at org.apache.catalina.connector.OutputBuffer.append(OutputBuffer.java:720)
+	at org.apache.catalina.connector.OutputBuffer.writeBytes(OutputBuffer.java:391)
+	at org.apache.catalina.connector.OutputBuffer.write(OutputBuffer.java:369)
+	at org.apache.catalina.connector.CoyoteOutputStream.write(CoyoteOutputStream.java:96)
+	at org.springframework.security.web.util.OnCommittedResponseWrapper$SaveContextServletOutputStream.write(OnCommittedResponseWrapper.java:639)
+	at org.springframework.util.StreamUtils.copy(StreamUtils.java:138)
+	at org.springframework.http.converter.ResourceHttpMessageConverter.writeContent(ResourceHttpMessageConverter.java:110)
+	at org.springframework.http.converter.ResourceHttpMessageConverter.writeInternal(ResourceHttpMessageConverter.java:102)
+	at org.springframework.http.converter.ResourceHttpMessageConverter.writeInternal(ResourceHttpMessageConverter.java:45)
+	at org.springframework.http.converter.AbstractHttpMessageConverter.write(AbstractHttpMessageConverter.java:227)
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:480)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:51)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:317)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:114)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at com.firstTry.Adventure.config.JWTAuthenticationFilter.doFilterInternal(JWTAuthenticationFilter.java:39)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:64)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:214)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:177)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:347)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:263)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:108)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.IOException: 您的主机中的软件中止了一个已建立的连接。
+	at sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:51)
+	at sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:93)
+	at sun.nio.ch.IOUtil.write(IOUtil.java:65)
+	at sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:471)
+	at org.apache.tomcat.util.net.NioChannel.write(NioChannel.java:134)
+	at org.apache.tomcat.util.net.NioBlockingSelector.write(NioBlockingSelector.java:101)
+	at org.apache.tomcat.util.net.NioSelectorPool.write(NioSelectorPool.java:157)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.doWrite(NioEndpoint.java:1267)
+	at org.apache.tomcat.util.net.SocketWrapperBase.doWrite(SocketWrapperBase.java:670)
+	at org.apache.tomcat.util.net.SocketWrapperBase.writeBlocking(SocketWrapperBase.java:450)
+	at org.apache.tomcat.util.net.SocketWrapperBase.write(SocketWrapperBase.java:388)
+	at org.apache.coyote.http11.Http11OutputBuffer$SocketOutputBuffer.doWrite(Http11OutputBuffer.java:644)
+	at org.apache.coyote.http11.filters.IdentityOutputFilter.doWrite(IdentityOutputFilter.java:119)
+	at org.apache.coyote.http11.Http11OutputBuffer.doWrite(Http11OutputBuffer.java:235)
+	at org.apache.coyote.Response.doWrite(Response.java:541)
+	at org.apache.catalina.connector.OutputBuffer.realWriteBytes(OutputBuffer.java:351)
+	... 97 more
+2018-09-22 22:01:32,288 ERROR RRExceptionHandler:50 ---- RRExceptionHandler 异常处理失败
+java.lang.IllegalStateException: getOutputStream() has already been called for this response
+	at org.apache.catalina.connector.Response.getWriter(Response.java:625)
+	at org.apache.catalina.connector.ResponseFacade.getWriter(ResponseFacade.java:211)
+	at javax.servlet.ServletResponseWrapper.getWriter(ServletResponseWrapper.java:109)
+	at javax.servlet.ServletResponseWrapper.getWriter(ServletResponseWrapper.java:109)
+	at org.springframework.security.web.util.OnCommittedResponseWrapper.getWriter(OnCommittedResponseWrapper.java:149)
+	at com.firstTry.Adventure.exception.RRExceptionHandler.resolveException(RRExceptionHandler.java:48)
+	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1222)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1034)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:984)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:317)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:114)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at com.firstTry.Adventure.config.JWTAuthenticationFilter.doFilterInternal(JWTAuthenticationFilter.java:39)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:64)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:214)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:177)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:347)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:263)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:108)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)

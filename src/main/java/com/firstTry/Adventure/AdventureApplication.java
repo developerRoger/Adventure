@@ -4,8 +4,10 @@ import java.util.concurrent.Executor;
 import java.util.concurrent.ThreadPoolExecutor;
 
 import org.mybatis.spring.annotation.MapperScan;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -14,6 +16,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+import org.springframework.web.client.RestTemplate;
 
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 /**
@@ -31,6 +34,12 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class})//在测试的时候不连接数据库
 */@SpringBootApplication
 public class AdventureApplication extends SpringBootServletInitializer{
+	 @Autowired
+	    private RestTemplateBuilder builder;
+	    @Bean
+	    public RestTemplate restTemplate() {
+	        return builder.build();
+	    }
 	
 	/**
 	 * 线程池配置

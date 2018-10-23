@@ -86,7 +86,7 @@
 			AND a.create_by = #{createBy}
 		</if>
 											<if test="createTime!=null">
-			AND a.create_time = #{createTime}
+			AND to_days(a.create_time) = to_days(#{createTime})
 		</if>
 											<if test="updateBy!=null">
 			AND a.update_by = #{updateBy}

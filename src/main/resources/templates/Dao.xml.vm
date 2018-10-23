@@ -11,7 +11,13 @@
     </resultMap>
 
 	<select id="queryObject" resultType="${package}.entity.${className}Entity">
-		select * from ${tableName} where ${pk.columnName} = #{value}
+		 SELECT
+		#foreach($column in $columns)
+            a.${column.columnName} ${column.attrname}#if($velocityCount<$columns.size()),#end
+
+		#end
+        FROM ${tableName} a 
+        where a.${pk.columnName} = #{value}
 	</select>
 	
 	<select id="queryList" resultType="${package}.entity.${className}Entity">
