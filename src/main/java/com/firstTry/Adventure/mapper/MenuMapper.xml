@@ -22,8 +22,22 @@
 	</resultMap>
 
 	<select id="queryObject" resultType="com.firstTry.Adventure.entity.MenuEntity">
-		select * from menu where id
-		= #{value}
+		SELECT
+		a.id id,
+		a.app_code appCode,
+		a.level level,
+		a.parent_id parentId,
+		a.name name,
+		a.url url,
+		a.http_url httpUrl,
+		a.show_name showName,
+		a.show_order showOrder,
+		a.create_by createBy,
+		a.create_time createTime,
+		a.update_by updateBy,
+		a.update_time updateTime
+		FROM menu a 
+		where id = #{value}
 	</select>
 
 	<select id="queryList" resultType="com.firstTry.Adventure.entity.MenuEntity">

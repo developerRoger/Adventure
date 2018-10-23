@@ -23,8 +23,9 @@
 	    <table id="jqGrid"></table>
 	    <div id="jqGridPager"></div>
     </div>
-    
-    <div v-show="!showList" class="panel panel-default">
+   
+   	
+    <!-- <div v-show="!showList" class="panel panel-default">
 		<div class="panel-heading">{{title}}</div>
 		<form class="form-horizontal">
 		#foreach($column in $columns)
@@ -43,7 +44,43 @@
 				&nbsp;&nbsp;<input type="button" class="btn btn-warning" @click="reload" value="返回"/>
 			</div>
 		</form>
+	</div> --> 
+	
+	
+	<div class="modal fade" tabindex="-1" id="myModal">
+		<div class="modal-dialog" role="document">
+		  <div class="modal-content">
+		    <div class="modal-header" style="border-bottom:0px">
+		      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		      <h4 class="modal-title"></h4>
+		    </div>
+		    <div class="modal-body" style="padding-top: 0px;">
+			    <form id="minConsumeForm" role="form" novalidate="novalidate" class="fv-form fv-form-bootstrap">
+			    #foreach($column in $columns)
+			    #if($column.columnName != $pk.columnName)
+				    <div class="row">
+						<div class="col-lg-6 col-md-6 col-sm-6">
+	                        <div class="form-group">
+	                            <label class="control-label">${column.comments}</label>
+	                            <input type="text" class="form-control" v-model="${classname}.${column.attrname}" placeholder="${column.comments}">
+	                        </div>
+	                     </div>	              	 
+                     </div>
+	          		#end
+					#end
+			    </form>
+		    </div>
+		    <div class="modal-footer">
+		      <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+		      <button type="button" v-show="btn" class="btn btn-primary" @click="saveOrUpdate">新增</button>
+		      <button type="button" v-show="!btn" class="btn btn-primary" @click="saveOrUpdate">修改</button>
+		    </div>
+		  </div>
+		</div>
 	</div>
+	
+	
+	
 </div>
 
 <script src="js/modules/${moduleName}/${pathName}.js"></script>
