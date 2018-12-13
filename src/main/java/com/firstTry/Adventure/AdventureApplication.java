@@ -52,7 +52,7 @@ public class AdventureApplication extends SpringBootServletInitializer{
 		executor.setMaxPoolSize(20);	//最大线程数量
 		executor.setQueueCapacity(200);  //队列最大长度
 		executor.setRejectedExecutionHandler(new ThreadPoolExecutor.CallerRunsPolicy());
-		executor.setThreadNamePrefix("AdventureExecutor-");//打印线程数量
+		executor.setThreadNamePrefix("AdventureExecutor-");//打印线程数量1
 		executor.setKeepAliveSeconds(30); //允许空闲时间
 		executor.initialize();
 		return executor;

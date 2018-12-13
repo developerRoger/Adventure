@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>connet</title>
+  <link rel="stylesheet" href="../css/bootstrap.min.css"></link>
+</head>
+<!-- ADD THE CLASS layout-boxed TO GET A BOXED LAYOUT -->
+<body class="hold-transition skin-blue sidebar-mini">
+<div id="feedbackSection">
+<h1 style="text-align: center;margin-top:400px;color:red">{{text}}</h1>
+<div><button type="button" class="btn btn-danger" @click="connet()">（危险）Danger</button>
+<hr>
+<button type="button" class="btn btn-danger" @click="test()">11111111</button></div>
+</div>
+</body>
+<script src="../libs/jquery.min.js"></script>
+<script src="../libs/vue.min.js"></script>
+<script>
+
+
+var vm = new Vue({
+    el: '#feedbackSection',
+    data: {
+        time: 20,
+        websocket: null,
+        text:"A MIN HAAPY BIRTHDAY",
+        wx: null,
+        connetId:null,
+        listFeedback: []
+    },
+    methods: {
+        init: function () {
+            var _this = this;
+            //判断当前浏览器是否支持WebSocket
+            if ('WebSocket' in window) {
+                if (location.protocol == 'http:') {
+                    _this.wx = "ws:"+ location.host+"/feedback/"+_this.connetId;
+                }
+                if (location.protocol == 'https:') {
+                    _this.wx = "wss:"+ location.host+"/feedback/"+_this.connetId;
+                }
+                console.log(_this.wx);
+                try {
+                    if (!_this.websocket || _this.websocket.readyState == 3) {
+                        _this.websocket = new WebSocket(_this.wx);
+                    }
+                } catch (e) {
+                	console.log("提示您的浏览器不支持消息通知，建议安装谷歌或火狐浏览器");
+                }
+            }
+            else {
+            	console.log("提示您的浏览器不支持消息通知，建议安装谷歌或火狐浏览器");
+            }
+
+
+            //连接发生错误的回调方法
+            _this.websocket.onerror = function () {
+            	console.log('提示连接失效，请重新刷新页面');
+            };
+
+            //连接成功建立的回调方法
+            _this.websocket.onopen = function (event) {
+            	_this.heartbeat();
+            };
+
+            //接收到消息的回调方法
+            _this.websocket.onmessage = function (event) {
+                console.log(event.data);
+                _this.text=event.data;
+            };
+            //连接关闭的回调方法
+            _this.websocket.onclose = function () {
+                console.log('websocket close');
+                try {
+                    //_this.init();
+                } catch (e) {
+                    console.log(e);
+                    console.log('提示连接失效，请重新刷新页面');
+                }
+
+            };
+
+            
+        },
+        //心跳
+        heartbeat: function () {
+        	var _this=this;
+            setInterval(function () {
+                if (_this.websocket) {
+                	_this.websocket.send('heartbeat');
+                }
+            }, 100000);
+        },
+        //连接随机socket
+        connet:function(){
+        	var _this=this;
+        	_this.websocket.send('connet');
+        },
+        test:function(){
+        	var _this=this;
+        	_this.websocket.send('111');
+        }
+        ,
+        uuid: function () {
+            var s = []; 
+            var hexDigits = "0123456789abcdef";
+            for (var i = 0; i < 12; i++) {
+                s[i] = hexDigits.substr(Math.floor(Math.random() * 0x10), 1);
+            }
+            s[14] = "4";  // bits 12-15 of the time_hi_and_version field to 0010
+            s[19] = hexDigits.substr((s[19] & 0x3) | 0x8, 1);  // bits 6-7 of the clock_seq_hi_and_reserved to 01
+            s[8] = s[13] = s[18] = s[23];
+         
+            var uuid = s.join("");
+            return uuid;
+        }
+    },
+    created: function () {
+        var _this = this;
+        //生成随机uuid为连接id
+        _this.connetId=this.uuid();
+        //初始化连接的websocket
+        _this.init();
+       
+    }
+});
+
+</script>
+</html>

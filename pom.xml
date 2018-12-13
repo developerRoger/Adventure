@@ -127,8 +127,8 @@
 			<version>0.7.0</version>
 		</dependency>
 		<!-- 打包时排除tomcat. -->
-		<!--  <dependency> <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-starter-tomcat</artifactId> 
-			<scope>provided</scope> </dependency>  -->
+		 <dependency> <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-starter-tomcat</artifactId> 
+			<scope>provided</scope> </dependency> 
 		<!--json-lib -->
 		<dependency>
 			<groupId>net.sf.json-lib</groupId>
@@ -197,6 +197,11 @@
 		    <artifactId>qiniu-java-sdk</artifactId>
 		    <version>7.1.1</version>
 		</dependency>
+		<!-- websocket -->
+		<dependency>  
+           <groupId>org.springframework.boot</groupId>  
+           <artifactId>spring-boot-starter-websocket</artifactId>  
+       </dependency>
 	</dependencies>
 	<build>
 		<plugins>

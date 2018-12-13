@@ -36,6 +36,7 @@ public class AdventureApplicationTests {
 	
 	@Autowired
 	private SysGeneratorMapper sysGeneratorService;
+	
 	 /**
      * 数据源1
      */
@@ -85,12 +86,13 @@ public class AdventureApplicationTests {
 	 * 测试redis
 	 * @throws Exception 
 	 */
-//	@Test
+	@Test
 	public void testRedis(){
 		//
 		redisTemplate.opsForValue().set("111", "redis");
 		System.out.println(redisTemplate.opsForValue().get("111")+"????");
-		
+		redisTemplate.delete("111");
+		System.out.println(redisTemplate.opsForValue().get("111")+"????");
 	}
 	
 	/**
@@ -133,7 +135,7 @@ public class AdventureApplicationTests {
 		return "0";
 	}
 	
-	@Test
+//	@Test
 	public void TestBoolean(){
 		boolean i=false;
 		if(!i){
