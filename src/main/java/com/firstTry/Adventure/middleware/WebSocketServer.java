@@ -3,12 +3,10 @@ package com.firstTry.Adventure.middleware;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.CopyOnWriteArraySet;
 import java.util.concurrent.TimeUnit;
 
 import javax.websocket.OnClose;
@@ -22,9 +20,9 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.scheduling.annotation.Async;
-import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.stereotype.Component;
+
+import com.firstTry.Adventure.utils.R;
 
 /**
  * 所有websocket的终类
@@ -63,7 +61,7 @@ public class WebSocketServer {
 		addOnlineCount(); // 在线数加1
 		log.info("有新窗口开始监听:" + sid + ",当前在线人数为" + getOnlineCount());
 		try {
-			sendMessage("连接成功", session);
+			sendMessage(R.error(100,"连接成功").toString(), session);
 		} catch (IOException e) {
 			log.error("websocket IO异常");
 		}
@@ -84,7 +82,7 @@ public class WebSocketServer {
 		}
 		try {
 			if(null!=sendId)
-			sendMessage("对方已离线，你可以重新匹配",webSocketSet.get(sendId));
+			sendMessage(R.error(504,"对方已离线，你可以重新匹配").toString(),webSocketSet.get(sendId));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -120,16 +118,16 @@ public class WebSocketServer {
 					redisTemplate.opsForValue().set(timeKey + "_" + sid, "connet", 5, TimeUnit.SECONDS);
 					randomMatching(sid);
 				} else {
-					sendInfo("你的操作太频繁，稍后再试试吧", sid);
+					sendInfo(R.error(200,"你的操作太频繁").toString(), sid);
 				}
 			} else if ("heartbeat".equals(message)) {
 				log.info("用户心跳:" + sid + ",当前在线人数为" + getOnlineCount());
 			} else {
 				// 无人匹配，返回相同内容
 				if (null == redisTemplate.opsForValue().get(sid))
-					sendInfo(message, sid);
+					sendInfo(R.error(404,message).toString(), sid);
 				else
-					sendInfo(message, (String) redisTemplate.opsForValue().get(sid));
+					sendInfo(R.error(200,message).toString(), (String) redisTemplate.opsForValue().get(sid));
 			}
 		} catch (Exception e) {
 			log.error(e.getMessage());
@@ -144,13 +142,13 @@ public class WebSocketServer {
 	 * 
 	 * @param message
 	 */
-	public void pushAllMessage(String message) {
+	public static void pushAllMessage(String message) {
 		log.info("websocketServer pushAllMessage");
 		// 群发消息
 		for (String key : webSocketSet.keySet()) {
 			try {
 				if (webSocketSet.get(key).isOpen())
-					sendMessage(message, webSocketSet.get(key));
+					sendMessage(R.error(200,message).toString(), webSocketSet.get(key));
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
@@ -173,7 +171,7 @@ public class WebSocketServer {
 		// 当递归不再执行,5秒redis自动清空值
 		if (null == redisTemplate.opsForValue().get(sid)
 				&& null == redisTemplate.opsForValue().get(timeKey + "_" + sid)) {
-			sendInfo("暂时无人匹配！稍后再来试试吧", sid);
+			sendInfo(R.error(504,"暂时无人匹配，你稍后再来试试吧").toString(), sid);
 			// socketList.remove(socketList.indexOf(sid));
 		} else if (num == 1) {// 只有一人匹配的时候
 			// 已经匹配成功
@@ -181,8 +179,8 @@ public class WebSocketServer {
 				return;
 			redisTemplate.opsForValue().set(sid, list.get(0));
 			redisTemplate.opsForValue().set(list.get(0), sid);
-			sendInfo("匹配成功1", sid);
-			sendInfo("匹配成功1", list.get(0));
+			sendInfo(R.error(200,"匹配成功").toString(), sid);
+			sendInfo(R.error(200,"匹配成功").toString(), list.get(0));
 			// 匹配成功后删除匹配母体中的对象
 			// socketList.remove(socketList.indexOf(sid));
 			// socketList.remove(socketList.indexOf(list.get(0)));
@@ -199,8 +197,8 @@ public class WebSocketServer {
 				return;
 			redisTemplate.opsForValue().set(sid, list.get(key));
 			redisTemplate.opsForValue().set(list.get(key), sid);
-			sendInfo("匹配成功", sid);
-			sendInfo("匹配成功", socketList.get(key));
+			sendInfo(R.error(200,"匹配成功").toString(), sid);
+			sendInfo(R.error(200,"匹配成功").toString(), socketList.get(key));
 			// 匹配成功后删除匹配母体中的对象
 			// socketList.remove(socketList.indexOf(sid));
 			// socketList.remove(socketList.indexOf(list.get(0)));

@@ -1,0 +1,44 @@
+2018-12-10 16:54:34,958  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 16796 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-12-10 16:54:34,972 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-12-10 16:54:34,973  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-12-10 16:54:57,267  INFO AdventureApplication:57 ---- Started AdventureApplication in 23.008 seconds (JVM running for 24.182)
+2018-12-10 16:55:11,043  INFO WebSocketServer:64 ---- 有新窗口开始监听:418dfc397f848,当前在线人数为1
+2018-12-10 16:55:59,173  INFO WebSocketServer:64 ---- 有新窗口开始监听:f5b2babe7e848,当前在线人数为2
+2018-12-10 16:56:09,000  INFO WebSocketServer:95 ---- 收到来自窗口f5b2babe7e848的信息:connet
+2018-12-10 16:56:23,409  INFO WebSocketServer:178 ---- 推送消息到窗口f5b2babe7e848，推送内容:匹配成功
+2018-12-10 16:56:24,225  INFO WebSocketServer:178 ---- 推送消息到窗口418dfc397f848，推送内容:匹配成功
+2018-12-10 16:56:50,881  INFO WebSocketServer:95 ---- 收到来自窗口f5b2babe7e848的信息:heartbeat
+2018-12-10 16:56:50,957  INFO WebSocketServer:178 ---- 推送消息到窗口418dfc397f848，推送内容:heartbeat
+2018-12-10 16:57:39,692  INFO WebSocketServer:95 ---- 收到来自窗口f5b2babe7e848的信息:heartbeat
+2018-12-10 16:57:39,707  INFO WebSocketServer:178 ---- 推送消息到窗口418dfc397f848，推送内容:heartbeat
+2018-12-10 16:57:59,618  INFO WebSocketServer:95 ---- 收到来自窗口f5b2babe7e848的信息:connet
+2018-12-10 16:57:59,627  INFO WebSocketServer:178 ---- 推送消息到窗口f5b2babe7e848，推送内容:你的操作太频繁，稍后再试试吧
+2018-12-10 16:58:31,694  INFO WebSocketServer:95 ---- 收到来自窗口f5b2babe7e848的信息:heartbeat
+2018-12-10 16:58:31,710  INFO WebSocketServer:178 ---- 推送消息到窗口418dfc397f848，推送内容:heartbeat
+2018-12-10 16:58:35,354  INFO WebSocketServer:95 ---- 收到来自窗口f5b2babe7e848的信息:connet
+2018-12-10 17:00:11,695  INFO WebSocketServer:95 ---- 收到来自窗口f5b2babe7e848的信息:heartbeat
+2018-12-10 17:00:11,711  INFO WebSocketServer:178 ---- 推送消息到窗口418dfc397f848，推送内容:heartbeat
+2018-12-10 17:01:51,696  INFO WebSocketServer:95 ---- 收到来自窗口f5b2babe7e848的信息:heartbeat
+2018-12-10 17:01:51,728  INFO WebSocketServer:178 ---- 推送消息到窗口418dfc397f848，推送内容:heartbeat
+2018-12-10 17:03:31,698  INFO WebSocketServer:95 ---- 收到来自窗口f5b2babe7e848的信息:heartbeat
+2018-12-10 17:03:31,737  INFO WebSocketServer:178 ---- 推送消息到窗口418dfc397f848，推送内容:heartbeat
+2018-12-10 17:05:11,700  INFO WebSocketServer:95 ---- 收到来自窗口f5b2babe7e848的信息:heartbeat
+2018-12-10 17:05:11,739  INFO WebSocketServer:178 ---- 推送消息到窗口418dfc397f848，推送内容:heartbeat
+2018-12-10 17:06:51,703  INFO WebSocketServer:95 ---- 收到来自窗口f5b2babe7e848的信息:heartbeat
+2018-12-10 17:06:51,736  INFO WebSocketServer:178 ---- 推送消息到窗口418dfc397f848，推送内容:heartbeat
+2018-12-10 17:08:31,704  INFO WebSocketServer:95 ---- 收到来自窗口f5b2babe7e848的信息:heartbeat
+2018-12-10 17:08:31,741  INFO WebSocketServer:178 ---- 推送消息到窗口418dfc397f848，推送内容:heartbeat
+2018-12-10 17:10:11,707  INFO WebSocketServer:95 ---- 收到来自窗口f5b2babe7e848的信息:heartbeat
+2018-12-10 17:10:11,744  INFO WebSocketServer:178 ---- 推送消息到窗口418dfc397f848，推送内容:heartbeat
+2018-12-10 17:11:51,708  INFO WebSocketServer:95 ---- 收到来自窗口f5b2babe7e848的信息:heartbeat
+2018-12-10 17:11:51,745  INFO WebSocketServer:178 ---- 推送消息到窗口418dfc397f848，推送内容:heartbeat
+2018-12-10 17:13:31,709  INFO WebSocketServer:95 ---- 收到来自窗口f5b2babe7e848的信息:heartbeat
+2018-12-10 17:13:31,746  INFO WebSocketServer:178 ---- 推送消息到窗口418dfc397f848，推送内容:heartbeat
+2018-12-10 17:15:11,717  INFO WebSocketServer:95 ---- 收到来自窗口f5b2babe7e848的信息:heartbeat
+2018-12-10 17:15:11,753  INFO WebSocketServer:178 ---- 推送消息到窗口418dfc397f848，推送内容:heartbeat
+2018-12-10 17:16:51,715  INFO WebSocketServer:95 ---- 收到来自窗口f5b2babe7e848的信息:heartbeat
+2018-12-10 17:16:51,751  INFO WebSocketServer:178 ---- 推送消息到窗口418dfc397f848，推送内容:heartbeat
+2018-12-10 17:18:31,716  INFO WebSocketServer:95 ---- 收到来自窗口f5b2babe7e848的信息:heartbeat
+2018-12-10 17:18:31,754  INFO WebSocketServer:178 ---- 推送消息到窗口418dfc397f848，推送内容:heartbeat
+2018-12-10 17:20:11,717  INFO WebSocketServer:95 ---- 收到来自窗口f5b2babe7e848的信息:heartbeat
+2018-12-10 17:20:11,752  INFO WebSocketServer:178 ---- 推送消息到窗口418dfc397f848，推送内容:heartbeat

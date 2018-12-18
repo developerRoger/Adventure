@@ -1,6 +1,4 @@
 package com.firstTry.Adventure.controller;
-
-import java.io.IOException;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -11,7 +9,6 @@ import javax.servlet.http.HttpServletRequest;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -45,8 +42,6 @@ public class QiniuController {
 	private IdProcessor<Long> idProcessor;
 	@Autowired
 	private  QiniuStorageService qiniuStorageService;
-	@Autowired
-	private RedisTemplate<String, Object> redisTemplate;
 	
 	/**
 	 * 七牛上传图片
@@ -164,13 +159,10 @@ public class QiniuController {
 		@ResponseBody
 		@RequestMapping("/socket/push")
 		public Object pushToWeb(String message) {  
-			redisTemplate.opsForValue().set("111", "redis");
-			System.out.println(redisTemplate.opsForValue().get("111")+"????");
-			redisTemplate.delete("111");
-			System.out.println(redisTemplate.opsForValue().get("111")+"????");
+		
 			try {
-				WebSocketServer.sendInfo(message,null);
-			} catch (IOException e) {
+				WebSocketServer.pushAllMessage(message);
+			} catch (Exception e) {
 				e.printStackTrace();
 				return R.error("#"+e.getMessage());
 			}  

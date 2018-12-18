@@ -1,0 +1,152 @@
+2018-11-09 10:07:26,724  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 11344 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-11-09 10:07:26,736 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-11-09 10:07:26,737  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-11-09 10:07:40,205  INFO AdventureApplication:57 ---- Started AdventureApplication in 13.925 seconds (JVM running for 14.559)
+2018-11-09 10:22:42,489 ERROR WebSocketServer:99 ---- 发生错误
+2018-11-09 10:22:42,496  INFO WebSocketServer:71 ---- 有一连接关闭！当前在线人数为-1
+2018-11-09 10:23:04,191 ERROR WebSocketServer:99 ---- 发生错误
+2018-11-09 10:23:04,215  INFO WebSocketServer:71 ---- 有一连接关闭！当前在线人数为-2
+2018-11-09 10:23:19,994  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 9916 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-11-09 10:23:19,997 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-11-09 10:23:19,998  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-11-09 10:23:36,567  INFO AdventureApplication:57 ---- Started AdventureApplication in 16.982 seconds (JVM running for 18.074)
+2018-11-09 10:56:03,657 ERROR WebSocketServer:99 ---- 发生错误
+2018-11-09 10:56:03,670  INFO WebSocketServer:71 ---- 有一连接关闭！当前在线人数为-1
+2018-11-09 10:56:03,674  INFO WebSocketServer:80 ---- 收到来自窗口的信息:heartbeat
+2018-11-09 10:56:42,758  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 9916 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-11-09 10:56:42,758 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-11-09 10:56:42,759  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-11-09 10:57:07,302  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 9916 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-11-09 10:57:07,304 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-11-09 10:57:07,304  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-11-09 10:57:13,941  INFO AdventureApplication:57 ---- Started AdventureApplication in 7.025 seconds (JVM running for 2035.427)
+2018-11-09 10:57:25,145 ERROR WebSocketServer:101 ---- 发生错误
+2018-11-09 10:57:25,155  INFO WebSocketServer:73 ---- 有一连接关闭！当前在线人数为-1
+2018-11-09 10:57:51,115  INFO AdventureApplicationTests:48 ---- Starting AdventureApplicationTests on BS1HDX84D9084A0 with PID 11424 (started by Administrator in E:\Adventure\Adventure)
+2018-11-09 10:57:51,116 DEBUG AdventureApplicationTests:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-11-09 10:57:51,118  INFO AdventureApplicationTests:593 ---- No active profile set, falling back to default profiles: default
+2018-11-09 10:59:14,994  INFO AdventureApplicationTests:48 ---- Starting AdventureApplicationTests on BS1HDX84D9084A0 with PID 3580 (started by Administrator in E:\Adventure\Adventure)
+2018-11-09 10:59:14,995 DEBUG AdventureApplicationTests:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-11-09 10:59:14,998  INFO AdventureApplicationTests:593 ---- No active profile set, falling back to default profiles: default
+2018-11-09 10:59:29,661  INFO AdventureApplicationTests:57 ---- Started AdventureApplicationTests in 15.185 seconds (JVM running for 16.503)
+2018-11-09 11:11:37,377  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 4556 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-11-09 11:11:37,380 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-11-09 11:11:37,381  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-11-09 11:11:53,327  INFO AdventureApplication:57 ---- Started AdventureApplication in 16.377 seconds (JVM running for 17.271)
+2018-11-09 11:12:30,826  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 4556 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-11-09 11:12:30,827 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-11-09 11:12:30,827  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-11-09 11:12:37,504  INFO AdventureApplication:57 ---- Started AdventureApplication in 6.767 seconds (JVM running for 61.447)
+2018-11-09 11:13:07,644 ERROR WebSocketServer:101 ---- 发生错误
+2018-11-09 11:13:07,652  INFO WebSocketServer:73 ---- 有一连接关闭！当前在线人数为-1
+2018-11-09 11:14:12,857  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 4556 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-11-09 11:14:12,858 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-11-09 11:14:12,858  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-11-09 11:14:18,039  INFO AdventureApplication:57 ---- Started AdventureApplication in 5.287 seconds (JVM running for 161.982)
+2018-11-09 11:14:47,849  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 4556 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-11-09 11:14:47,850 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-11-09 11:14:47,850  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-11-09 11:14:53,026  INFO AdventureApplication:57 ---- Started AdventureApplication in 5.237 seconds (JVM running for 196.968)
+2018-11-09 11:15:55,941  INFO AdventureApplicationTests:48 ---- Starting AdventureApplicationTests on BS1HDX84D9084A0 with PID 10736 (started by Administrator in E:\Adventure\Adventure)
+2018-11-09 11:15:55,942 DEBUG AdventureApplicationTests:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-11-09 11:15:55,946  INFO AdventureApplicationTests:593 ---- No active profile set, falling back to default profiles: default
+2018-11-09 11:16:20,688  INFO AdventureApplicationTests:48 ---- Starting AdventureApplicationTests on BS1HDX84D9084A0 with PID 12656 (started by Administrator in E:\Adventure\Adventure)
+2018-11-09 11:16:20,689 DEBUG AdventureApplicationTests:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-11-09 11:16:20,690  INFO AdventureApplicationTests:593 ---- No active profile set, falling back to default profiles: default
+2018-11-09 11:16:34,383  INFO AdventureApplicationTests:57 ---- Started AdventureApplicationTests in 14.11 seconds (JVM running for 15.371)
+2018-11-09 11:24:34,321  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 9484 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-11-09 11:24:34,324 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-11-09 11:24:34,325  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-11-09 11:24:52,021  INFO AdventureApplication:57 ---- Started AdventureApplication in 18.159 seconds (JVM running for 19.111)
+2018-11-09 11:26:18,869 ERROR WebSocketServer:101 ---- 发生错误
+2018-11-09 11:26:18,892  INFO WebSocketServer:73 ---- 有一连接关闭！当前在线人数为-1
+2018-11-09 11:26:18,895  INFO WebSocketServer:82 ---- 收到来自窗口的信息:heartbeat
+2018-11-09 11:26:18,896  INFO WebSocketServer:82 ---- 收到来自窗口的信息:heartbeat
+2018-11-09 11:26:18,897  INFO WebSocketServer:82 ---- 收到来自窗口的信息:heartbeat
+2018-11-09 11:27:02,459  INFO WebSocketServer:116 ---- 推送消息到窗口null，推送内容:999
+2018-11-09 11:28:36,954  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 9484 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-11-09 11:28:36,954 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-11-09 11:28:36,954  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-11-09 11:28:44,135  INFO AdventureApplication:57 ---- Started AdventureApplication in 7.24 seconds (JVM running for 251.223)
+2018-11-09 11:29:11,173  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 9484 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-11-09 11:29:11,173 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-11-09 11:29:11,173  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-11-09 11:29:17,094  INFO AdventureApplication:57 ---- Started AdventureApplication in 5.996 seconds (JVM running for 284.181)
+2018-11-09 11:29:32,012  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 9484 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-11-09 11:29:32,013 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-11-09 11:29:32,013  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-11-09 11:29:37,055  INFO AdventureApplication:57 ---- Started AdventureApplication in 5.111 seconds (JVM running for 304.142)
+2018-11-09 11:30:20,068  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 9484 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-11-09 11:30:20,068 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-11-09 11:30:20,068  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-11-09 11:30:25,283  INFO AdventureApplication:57 ---- Started AdventureApplication in 5.283 seconds (JVM running for 352.37)
+2018-11-09 11:31:12,546 ERROR WebSocketServer:103 ---- 发生错误
+2018-11-09 11:31:12,548  INFO WebSocketServer:75 ---- 有一连接关闭！当前在线人数为-1
+2018-11-09 11:31:37,401  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 9484 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-11-09 11:31:37,401 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-11-09 11:31:37,402  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-11-09 11:31:42,030  INFO AdventureApplication:57 ---- Started AdventureApplication in 4.694 seconds (JVM running for 429.116)
+2018-11-09 11:31:57,085 ERROR WebSocketServer:103 ---- 发生错误
+2018-11-09 11:31:57,089  INFO WebSocketServer:75 ---- 有一连接关闭！当前在线人数为-1
+2018-11-09 11:33:08,880  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 9484 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-11-09 11:33:08,880 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-11-09 11:33:08,881  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-11-09 11:33:13,138  INFO AdventureApplication:57 ---- Started AdventureApplication in 4.293 seconds (JVM running for 520.223)
+2018-11-09 11:33:17,010 ERROR WebSocketServer:103 ---- 发生错误
+2018-11-09 11:33:17,022  INFO WebSocketServer:75 ---- 有一连接关闭！当前在线人数为-1
+2018-11-09 11:33:46,069  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 9484 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-11-09 11:33:46,070 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-11-09 11:33:46,070  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-11-09 11:33:55,478  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 12200 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-11-09 11:33:55,482 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-11-09 11:33:55,483  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-11-09 11:34:12,086  INFO AdventureApplication:57 ---- Started AdventureApplication in 17.037 seconds (JVM running for 18.052)
+2018-11-09 11:35:11,382 ERROR WebSocketServer:103 ---- 发生错误
+2018-11-09 11:35:11,388  INFO WebSocketServer:75 ---- 有一连接关闭！当前在线人数为-1
+2018-11-09 11:35:25,170  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 12200 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-11-09 11:35:25,170 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-11-09 11:35:25,171  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-11-09 11:35:31,477  INFO AdventureApplication:57 ---- Started AdventureApplication in 6.376 seconds (JVM running for 97.444)
+2018-11-09 11:36:03,874 ERROR WebSocketServer:103 ---- 发生错误
+2018-11-09 11:36:03,875  INFO WebSocketServer:75 ---- 有一连接关闭！当前在线人数为-1
+2018-11-09 11:36:15,548  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 12200 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-11-09 11:36:15,548 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-11-09 11:36:15,548  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-11-09 11:37:09,555  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 12200 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-11-09 11:37:09,556 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-11-09 11:37:09,556  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-11-09 11:37:14,768  INFO AdventureApplication:57 ---- Started AdventureApplication in 5.262 seconds (JVM running for 200.733)
+2018-11-09 11:38:07,572  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 12200 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-11-09 11:38:07,573 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-11-09 11:38:07,573  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-11-09 14:28:54,298  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 13792 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-11-09 14:28:54,301 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-11-09 14:28:54,302  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-11-09 14:29:11,339  INFO AdventureApplication:57 ---- Started AdventureApplication in 17.433 seconds (JVM running for 18.417)
+2018-11-09 14:30:17,489 ERROR WebSocketServer:99 ---- 发生错误
+2018-11-09 14:30:17,497  INFO WebSocketServer:71 ---- 有一连接关闭！当前在线人数为-1
+2018-11-09 14:31:43,650  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 13792 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-11-09 14:31:43,652 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-11-09 14:31:43,652  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-11-09 14:32:04,696  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 13792 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-11-09 14:32:04,697 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-11-09 14:32:04,698  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-11-09 14:35:12,023  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 13792 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-11-09 14:35:12,024 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-11-09 14:35:12,024  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-11-09 14:36:00,225  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 13792 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-11-09 14:36:00,226 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-11-09 14:36:00,226  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-11-09 14:36:06,233  INFO AdventureApplication:57 ---- Started AdventureApplication in 6.062 seconds (JVM running for 433.301)
+2018-11-09 14:43:04,070  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 13792 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-11-09 14:43:04,070 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-11-09 14:43:04,070  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-11-09 14:43:09,241  INFO AdventureApplication:57 ---- Started AdventureApplication in 5.251 seconds (JVM running for 856.299)
+2018-11-09 14:43:36,733  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 13792 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-11-09 14:43:36,733 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-11-09 14:43:36,733  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-11-09 14:43:41,245  INFO AdventureApplication:57 ---- Started AdventureApplication in 4.576 seconds (JVM running for 888.302)
+2018-11-09 14:43:46,241  INFO WebSocketServer:54 ---- 有新窗口开始监听:36411b9579e48,当前在线人数为1
+2018-11-09 14:43:56,135  INFO WebSocketServer:80 ---- 收到来自窗口36411b9579e48的信息:heartbeat
+2018-11-09 14:44:06,134  INFO WebSocketServer:80 ---- 收到来自窗口36411b9579e48的信息:heartbeat
+2018-11-09 14:44:08,403  INFO WebSocketServer:71 ---- 有一连接关闭！当前在线人数为0

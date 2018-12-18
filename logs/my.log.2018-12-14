@@ -1,0 +1,70 @@
+2018-12-14 11:00:28,065  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 3948 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-12-14 11:00:28,149 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-12-14 11:00:28,153  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-12-14 11:00:40,087  INFO AdventureApplication:57 ---- Started AdventureApplication in 12.409 seconds (JVM running for 13.069)
+2018-12-14 11:02:06,609  INFO WebSocketServer:64 ---- 有新窗口开始监听:32f3c99096e48,当前在线人数为1
+2018-12-14 11:02:09,223  INFO WebSocketServer:94 ---- 有一连接关闭！当前在线人数为0
+2018-12-14 11:02:11,133 DEBUG query:145 ---- ==>  Preparing: SELECT a.code Code, a.name Name, a.status Status, a.description Description, a.show_order ShowOrder, a.create_by CreateBy, a.create_time CreateTime, a.update_by UpdateBy, a.update_time UpdateTime FROM application a 
+2018-12-14 11:02:11,173 DEBUG query:145 ---- ==> Parameters: 
+2018-12-14 11:02:11,208 DEBUG query:145 ---- <==      Total: 8
+2018-12-14 11:02:11,215 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-12-14 11:02:11,216 DEBUG query:145 ---- ==> Parameters: APP001(String)
+2018-12-14 11:02:11,228 DEBUG query:145 ---- <==      Total: 2
+2018-12-14 11:02:11,229 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-12-14 11:02:11,230 DEBUG query:145 ---- ==> Parameters: APP002(String)
+2018-12-14 11:02:11,240 DEBUG query:145 ---- <==      Total: 0
+2018-12-14 11:02:11,242 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-12-14 11:02:11,243 DEBUG query:145 ---- ==> Parameters: APP003(String)
+2018-12-14 11:02:11,253 DEBUG query:145 ---- <==      Total: 0
+2018-12-14 11:02:11,254 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-12-14 11:02:11,255 DEBUG query:145 ---- ==> Parameters: APP004(String)
+2018-12-14 11:02:11,264 DEBUG query:145 ---- <==      Total: 0
+2018-12-14 11:02:11,266 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-12-14 11:02:11,266 DEBUG query:145 ---- ==> Parameters: APP005(String)
+2018-12-14 11:02:11,276 DEBUG query:145 ---- <==      Total: 0
+2018-12-14 11:02:11,278 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-12-14 11:02:11,278 DEBUG query:145 ---- ==> Parameters: APP006(String)
+2018-12-14 11:02:11,291 DEBUG query:145 ---- <==      Total: 0
+2018-12-14 11:02:11,292 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-12-14 11:02:11,294 DEBUG query:145 ---- ==> Parameters: APP007(String)
+2018-12-14 11:02:11,305 DEBUG query:145 ---- <==      Total: 0
+2018-12-14 11:02:11,307 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.app_code appCode, a.level level, a.parent_id parentId, a.name name, a.url url, a.http_url httpUrl, a.show_name showName, a.show_order showOrder, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM menu a WHERE a.app_code = ? 
+2018-12-14 11:02:11,308 DEBUG query:145 ---- ==> Parameters: APP008(String)
+2018-12-14 11:02:11,318 DEBUG query:145 ---- <==      Total: 0
+2018-12-14 11:02:12,092 DEBUG queryList:145 ---- ==>  Preparing: select table_name tableName, engine, table_comment tableComment, DATE_FORMAT(create_time,'%Y-%m-%d %H:%i:%s') createTime from information_schema.tables where table_schema = (select database()) order by create_time desc limit ?, ? 
+2018-12-14 11:02:12,094 DEBUG queryList:145 ---- ==> Parameters: 0(Integer), 10(Integer)
+2018-12-14 11:02:12,106 DEBUG queryList:145 ---- <==      Total: 10
+2018-12-14 11:02:12,114 DEBUG queryTotal:145 ---- ==>  Preparing: select count(1) from information_schema.tables where table_schema = (select database()) 
+2018-12-14 11:02:12,115 DEBUG queryTotal:145 ---- ==> Parameters: 
+2018-12-14 11:02:12,125 DEBUG queryTotal:145 ---- <==      Total: 1
+2018-12-14 11:02:18,286 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a WHERE to_days(a.create_time) = to_days(?) order by a.create_time desc 
+2018-12-14 11:02:18,289 DEBUG query:145 ---- ==> Parameters: 2018-12-14 11:02:18.276(Timestamp)
+2018-12-14 11:02:18,300 DEBUG query:145 ---- <==      Total: 0
+2018-12-14 11:02:20,978 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a order by a.create_time desc 
+2018-12-14 11:02:20,979 DEBUG query:145 ---- ==> Parameters: 
+2018-12-14 11:02:20,996 DEBUG query:145 ---- <==      Total: 12
+2018-12-14 11:02:22,520 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a WHERE to_days(a.create_time) = to_days(?) order by a.create_time desc 
+2018-12-14 11:02:22,521 DEBUG query:145 ---- ==> Parameters: 2018-12-14 11:02:22.511(Timestamp)
+2018-12-14 11:02:22,531 DEBUG query:145 ---- <==      Total: 0
+2018-12-14 11:25:17,600  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 10636 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-12-14 11:25:17,604 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-12-14 11:25:17,605  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-12-14 11:25:50,463  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 3372 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-12-14 11:25:50,468 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-12-14 11:25:50,469  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-12-14 11:26:03,297  INFO AdventureApplication:57 ---- Started AdventureApplication in 13.202 seconds (JVM running for 13.798)
+2018-12-14 11:49:53,779  INFO AdventureApplicationTests:48 ---- Starting AdventureApplicationTests on BS1HDX84D9084A0 with PID 3728 (started by Administrator in E:\Adventure\Adventure)
+2018-12-14 11:49:53,780 DEBUG AdventureApplicationTests:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-12-14 11:49:53,781  INFO AdventureApplicationTests:593 ---- No active profile set, falling back to default profiles: default
+2018-12-14 14:01:36,186  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 12300 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-12-14 14:01:36,188 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-12-14 14:01:36,189  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-12-14 14:01:47,392  INFO AdventureApplication:57 ---- Started AdventureApplication in 11.534 seconds (JVM running for 12.12)
+2018-12-14 14:03:17,622  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 13220 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-12-14 14:03:17,626 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-12-14 14:03:17,627  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-12-14 14:03:30,268  INFO AdventureApplication:57 ---- Started AdventureApplication in 13.035 seconds (JVM running for 13.719)
+2018-12-14 14:03:47,034  INFO WebSocketServer:64 ---- 有新窗口开始监听:df8640fbb6048,当前在线人数为1
+2018-12-14 14:04:18,378  INFO AdventureApplicationTests:48 ---- Starting AdventureApplicationTests on BS1HDX84D9084A0 with PID 12536 (started by Administrator in E:\Adventure\Adventure)
+2018-12-14 14:04:18,379 DEBUG AdventureApplicationTests:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-12-14 14:04:18,380  INFO AdventureApplicationTests:593 ---- No active profile set, falling back to default profiles: default

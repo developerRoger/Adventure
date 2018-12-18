@@ -27,7 +27,7 @@ public class DefaultView {
 	@RequestMapping("/go")
 	public String index(HttpServletRequest request,HttpServletResponse response) {
 //		System.out.println(getIpAddress(request));
-		return "html/index2";
+		return "html/colourEgg";
 	}
 
 	/**

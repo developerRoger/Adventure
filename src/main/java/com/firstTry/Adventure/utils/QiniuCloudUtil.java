@@ -31,7 +31,7 @@ public class QiniuCloudUtil {
     // 密钥
     private static final Auth auth = Auth.create(ACCESS_KEY, SECRET_KEY);
 
-    private static final String DOMAIN = "pdqrhc022.bkt.clouddn.com";
+    private static final String DOMAIN = "cdn.xiexiaofang.top";
 
     private static final String style = "自定义的图片样式";
 

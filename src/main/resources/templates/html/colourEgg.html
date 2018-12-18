@@ -1,18 +1,82 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8"/>
-  <title>connet</title>
-  <link rel="stylesheet" href="../css/bootstrap.min.css"></link>
+<meta charset="utf-8" />
+<title>Random matching</title>
+<link rel="stylesheet" href="../css/bootstrap.min.css"></link>
 </head>
+<style type="text/css">
+.leftttt, .rightttt {
+	position: relative;
+	width: 90%;
+	min-height: 30px;
+	background: #25a23b;
+	border-radius: 5px;
+	text-align: center;
+	line-height: 50px;
+	margin-left: 40px;
+	word-break: break-word;
+	color: white;
+	padding: 5px;
+	line-height: 18px;
+}
+
+.leftttt::after {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 0;
+	height: 0;
+	border: 8px solid transparent;
+	border-right-color: #25a23b;
+	top: 5px;
+	left: -14px;
+}
+
+.rightttt::after {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 0;
+	height: 0;
+	border: 8px solid transparent;
+	border-left-color: #25a23b;
+	top: 5px;
+	right: -14px;
+}
+</style>
+
 <!-- ADD THE CLASS layout-boxed TO GET A BOXED LAYOUT -->
 <body class="hold-transition skin-blue sidebar-mini">
-<div id="feedbackSection">
-<h1 style="text-align: center;margin-top:400px;color:red">{{text}}</h1>
-<div><button type="button" class="btn btn-danger" @click="connet()">（危险）Danger</button>
-<hr>
-<button type="button" class="btn btn-danger" @click="test()">11111111</button></div>
-</div>
+	<div id="feedbackSection" class="bs-docs-section" style="height:100vh">
+	<section style="height:66%;overflow-y:auto">
+		<div v-for="a in listFeedback">
+			<p class="bg-danger leftttt" v-if="a.id==2">{{a.msg}}</p>
+			<p class="bg-danger rightttt" v-else>{{a.msg}}</p>
+		</div>
+		</section>
+		<h1 style="text-align: center; margin-top: 10px; color: red">{{text}}</h1>
+		<div></div>
+		<hr>
+		<!--   <div class="form-group">
+    <label for="exampleInputName2">Name</label>
+    <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+  -->
+		<div class="form-group">
+
+			<label for="Pornographic">Pornographic</label> <input type="text"
+				class="form-control" id="speak" v-model="speak"
+				placeholder="请在此输入你想说的话.">
+		</div>
+		<div class="bs-example" data-example-id="block-btns">
+			<div class="well center-block" style="max-width: 600px;">
+				<button type="button" class="btn btn-primary btn-lg btn-block"
+					@click="sendObject">Send invitation</button>
+				<button v-show="!nice" type="button"
+					class="btn btn-danger btn-lg btn-block" @click="connet()">随机匹配</button>
+			</div>
+		</div>
+	</div>
 </body>
 <script src="../libs/jquery.min.js"></script>
 <script src="../libs/vue.min.js"></script>
@@ -22,12 +86,15 @@
 var vm = new Vue({
     el: '#feedbackSection',
     data: {
+    	nice:false,
         time: 20,
+        speak:"",
         websocket: null,
-        text:"A MIN HAAPY BIRTHDAY",
+        text:"One's Night",
         wx: null,
         connetId:null,
-        listFeedback: []
+        listFeedback: [],
+        listSendCoordination:[]
     },
     methods: {
         init: function () {
@@ -62,12 +129,26 @@ var vm = new Vue({
             //连接成功建立的回调方法
             _this.websocket.onopen = function (event) {
             	_this.heartbeat();
+            	
             };
 
             //接收到消息的回调方法
             _this.websocket.onmessage = function (event) {
                 console.log(event.data);
-                _this.text=event.data;
+                var date=_this.param(event.data);
+                _this.text=date.msg;
+                if(date.code==100){
+                	
+                }else if(date.code==504){
+                	_this.nice=false;
+                	_this.listFeedback=[];
+                }else if(date.code==404){
+                	 _this.text="小老弟，没人跟你匹配呢。加加油";
+                	 _this.listFeedback=[];
+                }else{
+                	_this.listFeedback.push({"id":2,"msg":_this.text});
+                }
+                
             };
             //连接关闭的回调方法
             _this.websocket.onclose = function () {
@@ -95,13 +176,23 @@ var vm = new Vue({
         //连接随机socket
         connet:function(){
         	var _this=this;
+        	_this.nice=true;
         	_this.websocket.send('connet');
         },
-        test:function(){
+        //发送消息
+        sendObject:function(){
         	var _this=this;
-        	_this.websocket.send('111');
-        }
-        ,
+        	if(_this.speak==null||_this.speak=='')return;
+        	_this.websocket.send(_this.speak);
+        	_this.listFeedback.push({"id":1,"msg":_this.speak});
+        	_this.speak="";
+        },
+        //解析后端返回传递参数
+        param:function(str){
+        	var r={};
+        	str.replace(/([^={},\s]+)=([^={},\s]*)/g,(m,n,o)=>r[n]=o);
+        	return r;
+        },
         uuid: function () {
             var s = []; 
             var hexDigits = "0123456789abcdef";

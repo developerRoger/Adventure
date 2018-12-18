@@ -1,0 +1,34 @@
+2018-12-12 11:36:38,685 ERROR WebSocketServer:189 - 发生错误
+2018-12-12 17:19:57,378 ERROR WebSocketServer:116 - Index: 0, Size: 0
+2018-12-12 17:19:57,401 ERROR WebSocketServer:116 - Index: 0, Size: 0
+2018-12-12 17:20:42,352 ERROR WebSocketServer:116 - Index: 0, Size: 0
+2018-12-12 17:20:42,375 ERROR WebSocketServer:116 - Index: 0, Size: 0
+2018-12-12 17:21:06,349 ERROR WebSocketServer:116 - Index: 0, Size: 0
+2018-12-12 17:21:57,732 ERROR WebSocketServer:116 - Index: 0, Size: 0
+2018-12-12 17:22:22,650 ERROR WebSocketServer:195 - 发生错误
+2018-12-12 17:22:32,062 ERROR WebSocketServer:116 - Index: 0, Size: 0
+2018-12-12 18:10:59,499 ERROR WebSocketServer:119 - -1
+2018-12-12 18:11:04,492 ERROR WebSocketServer:119 - -1
+2018-12-12 18:11:09,575 ERROR WebSocketServer:221 - sendInfo----对方已离线！
+2018-12-12 18:11:09,583 ERROR WebSocketServer:119 - -1
+2018-12-12 18:11:14,625 ERROR WebSocketServer:221 - sendInfo----对方已离线！
+2018-12-12 18:11:14,633 ERROR WebSocketServer:119 - -1
+2018-12-12 18:11:50,452 ERROR WebSocketServer:221 - sendInfo----对方已离线！
+2018-12-12 18:11:50,461 ERROR WebSocketServer:119 - -1
+2018-12-12 18:12:02,782 ERROR WebSocketServer:202 - 发生错误
+2018-12-12 18:12:14,074 ERROR WebSocketServer:119 - -1
+2018-12-12 18:12:19,063 ERROR WebSocketServer:119 - -1
+2018-12-12 18:14:13,953 ERROR WebSocketServer:202 - 发生错误
+2018-12-12 18:19:16,685 ERROR WebSocketServer:119 - bound must be positive
+2018-12-12 18:19:17,678 ERROR WebSocketServer:119 - bound must be positive
+2018-12-12 18:19:56,217 ERROR WebSocketServer:201 - 发生错误
+2018-12-12 18:23:46,534 ERROR WebSocketServer:119 - bound must be positive
+2018-12-12 18:23:46,779 ERROR WebSocketServer:119 - bound must be positive
+2018-12-12 18:25:49,822 ERROR WebSocketServer:119 - -1
+2018-12-12 18:26:04,262 ERROR WebSocketServer:202 - 发生错误
+2018-12-12 18:29:26,096 ERROR WebSocketServer:119 - -1
+2018-12-12 18:29:39,681 ERROR WebSocketServer:202 - 发生错误
+2018-12-12 18:33:18,894 ERROR WebSocketServer:119 - bound must be positive
+2018-12-12 18:33:32,211 ERROR WebSocketServer:202 - 发生错误
+2018-12-12 18:33:37,083 ERROR WebSocketServer:221 - sendInfo----对方已离线！
+2018-12-12 18:33:48,090 ERROR WebSocketServer:202 - 发生错误

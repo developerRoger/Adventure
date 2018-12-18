@@ -1,0 +1,304 @@
+2018-12-11 11:52:35,885  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 13336 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-12-11 11:52:35,914 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-12-11 11:52:35,915  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-12-11 11:52:54,856  INFO AdventureApplication:57 ---- Started AdventureApplication in 19.591 seconds (JVM running for 21.03)
+2018-12-11 11:54:48,273  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 13336 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-12-11 11:54:48,274 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-12-11 11:54:48,274  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-12-11 11:54:52,456  INFO AdventureApplication:57 ---- Started AdventureApplication in 4.248 seconds (JVM running for 138.627)
+2018-12-11 11:54:59,859 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a WHERE to_days(a.create_time) = to_days(?) order by a.create_time desc 
+2018-12-11 11:54:59,859 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a order by a.create_time desc 
+2018-12-11 11:54:59,908 DEBUG query:145 ---- ==> Parameters: 2018-12-11 11:54:58.541(Timestamp)
+2018-12-11 11:54:59,912 DEBUG query:145 ---- ==> Parameters: 
+2018-12-11 11:54:59,940 DEBUG query:145 ---- <==      Total: 12
+2018-12-11 11:54:59,942 DEBUG query:145 ---- <==      Total: 0
+2018-12-11 11:56:59,802  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 13336 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-12-11 11:56:59,802 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-12-11 11:56:59,803  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-12-11 11:57:11,486  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 13336 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-12-11 11:57:11,486 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-12-11 11:57:11,486  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-12-11 11:57:15,500  INFO AdventureApplication:57 ---- Started AdventureApplication in 4.087 seconds (JVM running for 281.666)
+2018-12-11 11:57:42,026 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a WHERE to_days(a.create_time) = to_days(?) order by a.create_time desc 
+2018-12-11 11:57:42,027 DEBUG query:145 ---- ==> Parameters: 2018-12-11 11:57:41.101(Timestamp)
+2018-12-11 11:57:42,038 DEBUG query:145 ---- <==      Total: 0
+2018-12-11 11:57:42,305 DEBUG query:145 ---- ==>  Preparing: SELECT a.id id, a.name name, a.url url, a.remark remark, a.delete_code deleteCode, a.create_by createBy, a.create_time createTime, a.update_by updateBy, a.update_time updateTime FROM qiniu_storage a order by a.create_time desc 
+2018-12-11 11:57:42,306 DEBUG query:145 ---- ==> Parameters: 
+2018-12-11 11:57:42,319 DEBUG query:145 ---- <==      Total: 12
+2018-12-11 11:58:18,742  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 4744 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-12-11 11:58:18,748 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-12-11 11:58:18,749  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-12-11 11:58:34,676  INFO AdventureApplication:57 ---- Started AdventureApplication in 16.378 seconds (JVM running for 17.525)
+2018-12-11 11:59:13,693  INFO WebSocketServer:62 ---- 有新窗口开始监听:d40fae529ea48,当前在线人数为1
+2018-12-11 12:00:32,027  INFO WebSocketServer:62 ---- 有新窗口开始监听:4c89de0f39748,当前在线人数为2
+2018-12-11 12:00:34,372  INFO WebSocketServer:93 ---- 收到来自窗口4c89de0f39748的信息:connet
+2018-12-11 12:00:34,411  INFO WebSocketServer:204 ---- 推送消息到窗口4c89de0f39748，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-11 12:00:35,241  INFO WebSocketServer:93 ---- 收到来自窗口4c89de0f39748的信息:connet
+2018-12-11 12:00:35,250  INFO WebSocketServer:204 ---- 推送消息到窗口4c89de0f39748，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-11 12:00:47,727  INFO WebSocketServer:93 ---- 收到来自窗口4c89de0f39748的信息:connet
+2018-12-11 12:00:47,735  INFO WebSocketServer:204 ---- 推送消息到窗口4c89de0f39748，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-11 12:00:48,404  INFO WebSocketServer:93 ---- 收到来自窗口4c89de0f39748的信息:connet
+2018-12-11 12:00:48,412  INFO WebSocketServer:204 ---- 推送消息到窗口4c89de0f39748，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-11 12:00:52,866  INFO WebSocketServer:93 ---- 收到来自窗口4c89de0f39748的信息:connet
+2018-12-11 12:00:52,874  INFO WebSocketServer:204 ---- 推送消息到窗口4c89de0f39748，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-11 12:00:53,457  INFO WebSocketServer:93 ---- 收到来自窗口4c89de0f39748的信息:connet
+2018-12-11 12:00:53,465  INFO WebSocketServer:204 ---- 推送消息到窗口4c89de0f39748，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-11 12:00:53,698  INFO WebSocketServer:93 ---- 收到来自窗口4c89de0f39748的信息:connet
+2018-12-11 12:00:53,708  INFO WebSocketServer:204 ---- 推送消息到窗口4c89de0f39748，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-11 12:00:53,904  INFO WebSocketServer:93 ---- 收到来自窗口4c89de0f39748的信息:connet
+2018-12-11 12:00:53,912  INFO WebSocketServer:204 ---- 推送消息到窗口4c89de0f39748，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-11 12:00:54,113  INFO WebSocketServer:93 ---- 收到来自窗口4c89de0f39748的信息:connet
+2018-12-11 12:00:54,121  INFO WebSocketServer:204 ---- 推送消息到窗口4c89de0f39748，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-11 12:00:54,433  INFO WebSocketServer:93 ---- 收到来自窗口4c89de0f39748的信息:connet
+2018-12-11 12:00:54,441  INFO WebSocketServer:204 ---- 推送消息到窗口4c89de0f39748，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-11 12:00:54,507  INFO WebSocketServer:93 ---- 收到来自窗口4c89de0f39748的信息:heartbeat
+2018-12-11 12:00:54,515  INFO WebSocketServer:204 ---- 推送消息到窗口4c89de0f39748，推送内容:heartbeat
+2018-12-11 12:00:54,664  INFO WebSocketServer:93 ---- 收到来自窗口4c89de0f39748的信息:connet
+2018-12-11 12:00:54,672  INFO WebSocketServer:204 ---- 推送消息到窗口4c89de0f39748，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-11 12:00:55,239  INFO WebSocketServer:93 ---- 收到来自窗口4c89de0f39748的信息:connet
+2018-12-11 12:00:55,248  INFO WebSocketServer:204 ---- 推送消息到窗口4c89de0f39748，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-11 12:00:55,792  INFO WebSocketServer:93 ---- 收到来自窗口4c89de0f39748的信息:connet
+2018-12-11 12:00:55,800  INFO WebSocketServer:204 ---- 推送消息到窗口4c89de0f39748，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-11 12:00:56,017  INFO WebSocketServer:93 ---- 收到来自窗口4c89de0f39748的信息:connet
+2018-12-11 12:00:56,026  INFO WebSocketServer:204 ---- 推送消息到窗口4c89de0f39748，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-11 12:00:56,187  INFO WebSocketServer:93 ---- 收到来自窗口4c89de0f39748的信息:connet
+2018-12-11 12:00:56,195  INFO WebSocketServer:204 ---- 推送消息到窗口4c89de0f39748，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-11 12:00:56,384  INFO WebSocketServer:93 ---- 收到来自窗口4c89de0f39748的信息:connet
+2018-12-11 12:00:56,392  INFO WebSocketServer:204 ---- 推送消息到窗口4c89de0f39748，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-11 12:00:56,568  INFO WebSocketServer:93 ---- 收到来自窗口4c89de0f39748的信息:connet
+2018-12-11 12:00:56,576  INFO WebSocketServer:204 ---- 推送消息到窗口4c89de0f39748，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-11 12:00:56,767  INFO WebSocketServer:93 ---- 收到来自窗口4c89de0f39748的信息:connet
+2018-12-11 12:00:56,776  INFO WebSocketServer:204 ---- 推送消息到窗口4c89de0f39748，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-11 12:00:56,993  INFO WebSocketServer:93 ---- 收到来自窗口4c89de0f39748的信息:connet
+2018-12-11 12:00:57,001  INFO WebSocketServer:204 ---- 推送消息到窗口4c89de0f39748，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-11 12:00:57,196  INFO WebSocketServer:93 ---- 收到来自窗口4c89de0f39748的信息:connet
+2018-12-11 12:00:57,204  INFO WebSocketServer:204 ---- 推送消息到窗口4c89de0f39748，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-11 12:00:57,392  INFO WebSocketServer:93 ---- 收到来自窗口4c89de0f39748的信息:connet
+2018-12-11 12:00:57,400  INFO WebSocketServer:204 ---- 推送消息到窗口4c89de0f39748，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-11 12:00:57,592  INFO WebSocketServer:93 ---- 收到来自窗口4c89de0f39748的信息:connet
+2018-12-11 12:00:57,600  INFO WebSocketServer:204 ---- 推送消息到窗口4c89de0f39748，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-11 12:01:25,013  INFO WebSocketServer:93 ---- 收到来自窗口4c89de0f39748的信息:connet
+2018-12-11 12:02:12,154  INFO WebSocketServer:93 ---- 收到来自窗口4c89de0f39748的信息:heartbeat
+2018-12-11 12:02:12,163  INFO WebSocketServer:204 ---- 推送消息到窗口4c89de0f39748，推送内容:heartbeat
+2018-12-11 12:02:41,379  INFO WebSocketServer:204 ---- 推送消息到窗口4c89de0f39748，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-11 12:02:41,380  INFO WebSocketServer:93 ---- 收到来自窗口4c89de0f39748的信息:heartbeat
+2018-12-11 12:02:41,388  INFO WebSocketServer:204 ---- 推送消息到窗口4c89de0f39748，推送内容:heartbeat
+2018-12-11 12:02:46,816  INFO WebSocketServer:82 ---- 有一连接关闭！当前在线人数为1
+2018-12-11 12:03:08,473  INFO WebSocketServer:62 ---- 有新窗口开始监听:dafd692fe7948,当前在线人数为2
+2018-12-11 12:03:13,317  INFO WebSocketServer:93 ---- 收到来自窗口dafd692fe7948的信息:connet
+2018-12-11 12:03:13,325  INFO WebSocketServer:204 ---- 推送消息到窗口dafd692fe7948，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-11 12:03:23,908  INFO WebSocketServer:82 ---- 有一连接关闭！当前在线人数为1
+2018-12-11 12:03:25,628  INFO WebSocketServer:62 ---- 有新窗口开始监听:f4777f717be48,当前在线人数为2
+2018-12-11 12:03:29,992  INFO WebSocketServer:93 ---- 收到来自窗口f4777f717be48的信息:connet
+2018-12-11 12:03:30,001  INFO WebSocketServer:204 ---- 推送消息到窗口f4777f717be48，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-11 12:03:34,105  INFO WebSocketServer:93 ---- 收到来自窗口f4777f717be48的信息:connet
+2018-12-11 12:03:34,113  INFO WebSocketServer:204 ---- 推送消息到窗口f4777f717be48，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-11 12:04:39,026  INFO WebSocketServer:82 ---- 有一连接关闭！当前在线人数为1
+2018-12-11 12:04:39,208  INFO WebSocketServer:82 ---- 有一连接关闭！当前在线人数为0
+2018-12-11 12:04:39,643  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 4744 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-12-11 12:04:39,644 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-12-11 12:04:39,644  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-12-11 12:04:45,855  INFO AdventureApplication:57 ---- Started AdventureApplication in 6.284 seconds (JVM running for 388.636)
+2018-12-11 12:04:49,857  INFO WebSocketServer:62 ---- 有新窗口开始监听:339b061871148,当前在线人数为1
+2018-12-11 12:04:57,786  INFO WebSocketServer:62 ---- 有新窗口开始监听:a3287949b7448,当前在线人数为2
+2018-12-11 12:05:02,978  INFO WebSocketServer:94 ---- 收到来自窗口a3287949b7448的信息:connet
+2018-12-11 12:05:02,988  INFO WebSocketServer:205 ---- 推送消息到窗口a3287949b7448，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-11 12:05:03,831  INFO WebSocketServer:94 ---- 收到来自窗口a3287949b7448的信息:connet
+2018-12-11 12:05:03,840  INFO WebSocketServer:205 ---- 推送消息到窗口a3287949b7448，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-11 12:05:04,001  INFO WebSocketServer:94 ---- 收到来自窗口a3287949b7448的信息:connet
+2018-12-11 12:05:04,009  INFO WebSocketServer:205 ---- 推送消息到窗口a3287949b7448，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-11 12:05:04,175  INFO WebSocketServer:94 ---- 收到来自窗口a3287949b7448的信息:connet
+2018-12-11 12:05:04,183  INFO WebSocketServer:205 ---- 推送消息到窗口a3287949b7448，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-11 12:05:11,794  INFO WebSocketServer:94 ---- 收到来自窗口339b061871148的信息:connet
+2018-12-11 12:05:11,803  INFO WebSocketServer:205 ---- 推送消息到窗口339b061871148，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-11 12:05:36,183  INFO WebSocketServer:94 ---- 收到来自窗口339b061871148的信息:connet
+2018-12-11 12:05:36,192  INFO WebSocketServer:205 ---- 推送消息到窗口339b061871148，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-11 12:06:30,531  INFO WebSocketServer:94 ---- 收到来自窗口339b061871148的信息:heartbeat
+2018-12-11 12:06:30,540  INFO WebSocketServer:205 ---- 推送消息到窗口339b061871148，推送内容:heartbeat
+2018-12-11 12:06:44,651  INFO WebSocketServer:94 ---- 收到来自窗口a3287949b7448的信息:heartbeat
+2018-12-11 12:06:44,659  INFO WebSocketServer:205 ---- 推送消息到窗口a3287949b7448，推送内容:heartbeat
+2018-12-11 14:42:31,242  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 408 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-12-11 14:42:31,247 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-12-11 14:42:31,248  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-12-11 14:42:47,979  INFO AdventureApplication:57 ---- Started AdventureApplication in 17.158 seconds (JVM running for 17.976)
+2018-12-11 14:53:32,315  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 16952 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-12-11 14:53:32,318 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-12-11 14:53:32,319  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-12-11 14:53:47,843  INFO AdventureApplication:57 ---- Started AdventureApplication in 15.961 seconds (JVM running for 16.787)
+2018-12-11 14:54:17,513  INFO WebSocketServer:62 ---- 有新窗口开始监听:92f139a359648,当前在线人数为1
+2018-12-11 14:54:34,764  INFO WebSocketServer:62 ---- 有新窗口开始监听:092f6401d4f48,当前在线人数为2
+2018-12-11 14:54:39,994  INFO WebSocketServer:94 ---- 收到来自窗口092f6401d4f48的信息:connet
+2018-12-11 14:54:40,003  INFO WebSocketServer:205 ---- 推送消息到窗口092f6401d4f48，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-11 14:54:42,291  INFO WebSocketServer:94 ---- 收到来自窗口92f139a359648的信息:connet
+2018-12-11 14:54:42,299  INFO WebSocketServer:205 ---- 推送消息到窗口92f139a359648，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-11 14:54:42,787  INFO WebSocketServer:94 ---- 收到来自窗口92f139a359648的信息:connet
+2018-12-11 14:54:42,795  INFO WebSocketServer:205 ---- 推送消息到窗口92f139a359648，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-11 14:55:09,618  INFO WebSocketServer:82 ---- 有一连接关闭！当前在线人数为1
+2018-12-11 14:55:09,757  INFO WebSocketServer:62 ---- 有新窗口开始监听:a7bc522470d48,当前在线人数为2
+2018-12-11 14:55:10,925  INFO WebSocketServer:94 ---- 收到来自窗口a7bc522470d48的信息:connet
+2018-12-11 14:55:10,933  INFO WebSocketServer:205 ---- 推送消息到窗口a7bc522470d48，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-11 14:55:30,653  INFO WebSocketServer:94 ---- 收到来自窗口092f6401d4f48的信息:connet
+2018-12-11 14:55:30,661  INFO WebSocketServer:205 ---- 推送消息到窗口092f6401d4f48，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-11 14:55:31,741  INFO WebSocketServer:94 ---- 收到来自窗口092f6401d4f48的信息:connet
+2018-12-11 14:55:31,748  INFO WebSocketServer:205 ---- 推送消息到窗口092f6401d4f48，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-11 14:55:32,459  INFO WebSocketServer:94 ---- 收到来自窗口092f6401d4f48的信息:connet
+2018-12-11 14:55:32,467  INFO WebSocketServer:205 ---- 推送消息到窗口092f6401d4f48，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-11 14:55:32,676  INFO WebSocketServer:94 ---- 收到来自窗口092f6401d4f48的信息:connet
+2018-12-11 14:55:32,683  INFO WebSocketServer:205 ---- 推送消息到窗口092f6401d4f48，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-11 14:55:33,524  INFO WebSocketServer:94 ---- 收到来自窗口092f6401d4f48的信息:connet
+2018-12-11 14:55:33,531  INFO WebSocketServer:205 ---- 推送消息到窗口092f6401d4f48，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-11 14:55:33,532  INFO WebSocketServer:94 ---- 收到来自窗口092f6401d4f48的信息:connet
+2018-12-11 14:55:33,539  INFO WebSocketServer:205 ---- 推送消息到窗口092f6401d4f48，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-11 14:55:33,564  INFO WebSocketServer:94 ---- 收到来自窗口092f6401d4f48的信息:connet
+2018-12-11 14:55:33,573  INFO WebSocketServer:205 ---- 推送消息到窗口092f6401d4f48，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-11 14:55:33,732  INFO WebSocketServer:94 ---- 收到来自窗口092f6401d4f48的信息:connet
+2018-12-11 14:55:33,740  INFO WebSocketServer:205 ---- 推送消息到窗口092f6401d4f48，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-11 14:55:33,923  INFO WebSocketServer:94 ---- 收到来自窗口092f6401d4f48的信息:connet
+2018-12-11 14:55:33,931  INFO WebSocketServer:205 ---- 推送消息到窗口092f6401d4f48，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-11 14:55:35,855  INFO WebSocketServer:94 ---- 收到来自窗口092f6401d4f48的信息:connet
+2018-12-11 14:55:35,863  INFO WebSocketServer:205 ---- 推送消息到窗口092f6401d4f48，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-11 14:55:35,866  INFO WebSocketServer:94 ---- 收到来自窗口092f6401d4f48的信息:connet
+2018-12-11 14:55:35,875  INFO WebSocketServer:205 ---- 推送消息到窗口092f6401d4f48，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-11 14:55:35,971  INFO WebSocketServer:94 ---- 收到来自窗口092f6401d4f48的信息:connet
+2018-12-11 14:55:35,979  INFO WebSocketServer:205 ---- 推送消息到窗口092f6401d4f48，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-11 14:55:36,156  INFO WebSocketServer:94 ---- 收到来自窗口092f6401d4f48的信息:connet
+2018-12-11 14:55:36,165  INFO WebSocketServer:205 ---- 推送消息到窗口092f6401d4f48，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-11 14:55:36,918  INFO WebSocketServer:94 ---- 收到来自窗口092f6401d4f48的信息:connet
+2018-12-11 14:55:36,925  INFO WebSocketServer:205 ---- 推送消息到窗口092f6401d4f48，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-11 14:55:36,925  INFO WebSocketServer:94 ---- 收到来自窗口092f6401d4f48的信息:connet
+2018-12-11 14:55:36,933  INFO WebSocketServer:205 ---- 推送消息到窗口092f6401d4f48，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-11 14:55:36,934  INFO WebSocketServer:94 ---- 收到来自窗口092f6401d4f48的信息:connet
+2018-12-11 14:55:36,943  INFO WebSocketServer:205 ---- 推送消息到窗口092f6401d4f48，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-11 14:55:36,945  INFO WebSocketServer:94 ---- 收到来自窗口092f6401d4f48的信息:connet
+2018-12-11 14:55:36,953  INFO WebSocketServer:205 ---- 推送消息到窗口092f6401d4f48，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-11 14:55:37,100  INFO WebSocketServer:94 ---- 收到来自窗口092f6401d4f48的信息:connet
+2018-12-11 14:55:37,107  INFO WebSocketServer:205 ---- 推送消息到窗口092f6401d4f48，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-11 14:55:37,291  INFO WebSocketServer:94 ---- 收到来自窗口092f6401d4f48的信息:connet
+2018-12-11 14:55:37,299  INFO WebSocketServer:205 ---- 推送消息到窗口092f6401d4f48，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-11 14:55:37,475  INFO WebSocketServer:94 ---- 收到来自窗口092f6401d4f48的信息:connet
+2018-12-11 14:55:37,483  INFO WebSocketServer:205 ---- 推送消息到窗口092f6401d4f48，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-11 14:55:37,669  INFO WebSocketServer:94 ---- 收到来自窗口092f6401d4f48的信息:connet
+2018-12-11 14:55:37,677  INFO WebSocketServer:205 ---- 推送消息到窗口092f6401d4f48，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-11 14:55:37,950  INFO WebSocketServer:94 ---- 收到来自窗口092f6401d4f48的信息:connet
+2018-12-11 14:55:37,958  INFO WebSocketServer:205 ---- 推送消息到窗口092f6401d4f48，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-11 14:55:38,133  INFO WebSocketServer:94 ---- 收到来自窗口092f6401d4f48的信息:connet
+2018-12-11 14:55:38,140  INFO WebSocketServer:205 ---- 推送消息到窗口092f6401d4f48，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-11 14:55:38,371  INFO WebSocketServer:94 ---- 收到来自窗口092f6401d4f48的信息:connet
+2018-12-11 14:55:38,379  INFO WebSocketServer:205 ---- 推送消息到窗口092f6401d4f48，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-11 14:55:39,198  INFO WebSocketServer:94 ---- 收到来自窗口092f6401d4f48的信息:connet
+2018-12-11 14:55:39,206  INFO WebSocketServer:205 ---- 推送消息到窗口092f6401d4f48，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-11 14:55:39,207  INFO WebSocketServer:94 ---- 收到来自窗口092f6401d4f48的信息:connet
+2018-12-11 14:55:39,214  INFO WebSocketServer:205 ---- 推送消息到窗口092f6401d4f48，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-11 14:55:40,820  INFO WebSocketServer:82 ---- 有一连接关闭！当前在线人数为1
+2018-12-11 14:55:40,989  INFO WebSocketServer:62 ---- 有新窗口开始监听:142d5e88e7448,当前在线人数为2
+2018-12-11 14:55:42,544  INFO WebSocketServer:94 ---- 收到来自窗口142d5e88e7448的信息:connet
+2018-12-11 14:55:42,552  INFO WebSocketServer:205 ---- 推送消息到窗口142d5e88e7448，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-11 14:55:48,750  INFO WebSocketServer:94 ---- 收到来自窗口a7bc522470d48的信息:connet
+2018-12-11 14:55:48,758  INFO WebSocketServer:205 ---- 推送消息到窗口a7bc522470d48，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-11 14:55:52,797  INFO WebSocketServer:94 ---- 收到来自窗口142d5e88e7448的信息:connet
+2018-12-11 14:55:52,805  INFO WebSocketServer:205 ---- 推送消息到窗口142d5e88e7448，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-11 14:56:44,049  INFO WebSocketServer:82 ---- 有一连接关闭！当前在线人数为1
+2018-12-11 14:56:44,193  INFO WebSocketServer:62 ---- 有新窗口开始监听:2b68bb44a3748,当前在线人数为2
+2018-12-11 14:57:11,280  INFO WebSocketServer:62 ---- 有新窗口开始监听:54cbbdf054a48,当前在线人数为3
+2018-12-11 14:57:15,299  INFO WebSocketServer:94 ---- 收到来自窗口54cbbdf054a48的信息:connet
+2018-12-11 14:57:15,307  INFO WebSocketServer:205 ---- 推送消息到窗口54cbbdf054a48，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-11 14:57:21,527  INFO WebSocketServer:94 ---- 收到来自窗口2b68bb44a3748的信息:connet
+2018-12-11 14:57:21,534  INFO WebSocketServer:205 ---- 推送消息到窗口2b68bb44a3748，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-11 14:57:22,459  INFO WebSocketServer:94 ---- 收到来自窗口142d5e88e7448的信息:heartbeat
+2018-12-11 14:57:22,470  INFO WebSocketServer:205 ---- 推送消息到窗口142d5e88e7448，推送内容:heartbeat
+2018-12-11 14:58:24,499  INFO WebSocketServer:94 ---- 收到来自窗口2b68bb44a3748的信息:heartbeat
+2018-12-11 14:58:24,507  INFO WebSocketServer:205 ---- 推送消息到窗口2b68bb44a3748，推送内容:heartbeat
+2018-12-11 14:58:51,288  INFO WebSocketServer:94 ---- 收到来自窗口54cbbdf054a48的信息:heartbeat
+2018-12-11 14:58:51,295  INFO WebSocketServer:205 ---- 推送消息到窗口54cbbdf054a48，推送内容:heartbeat
+2018-12-11 14:59:02,190  INFO WebSocketServer:94 ---- 收到来自窗口142d5e88e7448的信息:heartbeat
+2018-12-11 14:59:02,198  INFO WebSocketServer:205 ---- 推送消息到窗口142d5e88e7448，推送内容:heartbeat
+2018-12-11 14:59:03,337 ERROR WebSocketServer:189 ---- 发生错误
+2018-12-11 14:59:03,361  INFO WebSocketServer:82 ---- 有一连接关闭！当前在线人数为2
+2018-12-11 14:59:03,383  INFO WebSocketServer:82 ---- 有一连接关闭！当前在线人数为1
+2018-12-11 14:59:13,657  INFO WebSocketServer:82 ---- 有一连接关闭！当前在线人数为0
+2018-12-11 14:59:49,071  INFO WebSocketServer:82 ---- 有一连接关闭！当前在线人数为-1
+2018-12-11 14:59:58,311  INFO WebSocketServer:62 ---- 有新窗口开始监听:21882538d0148,当前在线人数为0
+2018-12-11 15:00:19,810  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 16816 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-12-11 15:00:19,814 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-12-11 15:00:19,815  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-12-11 15:00:35,731  INFO AdventureApplication:57 ---- Started AdventureApplication in 16.37 seconds (JVM running for 17.379)
+2018-12-11 15:01:09,785  INFO WebSocketServer:62 ---- 有新窗口开始监听:5841c2a0bfe48,当前在线人数为1
+2018-12-11 15:02:30,234  INFO WebSocketServer:62 ---- 有新窗口开始监听:9bdd0db7f9d48,当前在线人数为2
+2018-12-11 15:02:47,506  INFO WebSocketServer:94 ---- 收到来自窗口5841c2a0bfe48的信息:heartbeat
+2018-12-11 15:03:11,640  INFO WebSocketServer:205 ---- 推送消息到窗口5841c2a0bfe48，推送内容:heartbeat
+2018-12-11 15:03:22,249  INFO WebSocketServer:94 ---- 收到来自窗口9bdd0db7f9d48的信息:connet
+2018-12-11 15:04:27,507  INFO WebSocketServer:94 ---- 收到来自窗口5841c2a0bfe48的信息:heartbeat
+2018-12-11 15:05:56,200  INFO WebSocketServer:205 ---- 推送消息到窗口9bdd0db7f9d48，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-11 15:06:21,794  INFO WebSocketServer:94 ---- 收到来自窗口9bdd0db7f9d48的信息:heartbeat
+2018-12-11 15:06:27,776  INFO WebSocketServer:205 ---- 推送消息到窗口5841c2a0bfe48，推送内容:heartbeat
+2018-12-11 15:06:32,494  INFO WebSocketServer:94 ---- 收到来自窗口5841c2a0bfe48的信息:heartbeat
+2018-12-11 15:06:38,462  INFO WebSocketServer:205 ---- 推送消息到窗口9bdd0db7f9d48，推送内容:heartbeat
+2018-12-11 15:06:42,678 ERROR WebSocketServer:189 ---- 发生错误
+2018-12-11 15:06:42,704  INFO WebSocketServer:82 ---- 有一连接关闭！当前在线人数为1
+2018-12-11 15:06:42,727  INFO WebSocketServer:82 ---- 有一连接关闭！当前在线人数为0
+2018-12-11 15:06:46,828  INFO WebSocketServer:205 ---- 推送消息到窗口5841c2a0bfe48，推送内容:heartbeat
+2018-12-11 15:07:47,511  INFO WebSocketServer:94 ---- 收到来自窗口5841c2a0bfe48的信息:heartbeat
+2018-12-11 15:07:50,358  INFO WebSocketServer:205 ---- 推送消息到窗口5841c2a0bfe48，推送内容:heartbeat
+2018-12-11 15:09:31,584  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 16836 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-12-11 15:09:31,587 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-12-11 15:09:31,588  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-12-11 15:09:47,108  INFO AdventureApplication:57 ---- Started AdventureApplication in 15.925 seconds (JVM running for 16.744)
+2018-12-11 15:15:00,069  INFO WebSocketServer:62 ---- 有新窗口开始监听:f0cb8429b7c48,当前在线人数为1
+2018-12-11 15:15:36,826  INFO WebSocketServer:94 ---- 收到来自窗口f0cb8429b7c48的信息:111
+2018-12-11 15:15:39,482  INFO WebSocketServer:205 ---- 推送消息到窗口f0cb8429b7c48，推送内容:111
+2018-12-11 15:15:45,287  INFO WebSocketServer:94 ---- 收到来自窗口f0cb8429b7c48的信息:111
+2018-12-11 15:15:54,176  INFO WebSocketServer:205 ---- 推送消息到窗口f0cb8429b7c48，推送内容:111
+2018-12-11 15:16:30,874  INFO WebSocketServer:62 ---- 有新窗口开始监听:95242488fa548,当前在线人数为2
+2018-12-11 15:18:03,844  INFO WebSocketServer:94 ---- 收到来自窗口f0cb8429b7c48的信息:111
+2018-12-11 15:20:01,319  INFO WebSocketServer:205 ---- 推送消息到窗口f0cb8429b7c48，推送内容:111
+2018-12-11 15:22:16,635 ERROR WebSocketServer:189 ---- 发生错误
+2018-12-11 15:22:16,680  INFO WebSocketServer:82 ---- 有一连接关闭！当前在线人数为1
+2018-12-11 15:22:16,706  INFO WebSocketServer:82 ---- 有一连接关闭！当前在线人数为0
+2018-12-11 15:35:54,880  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 16984 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-12-11 15:35:54,883 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-12-11 15:35:54,884  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-12-11 15:36:10,273  INFO AdventureApplication:57 ---- Started AdventureApplication in 15.82 seconds (JVM running for 16.734)
+2018-12-11 15:42:54,520  INFO WebSocketServer:63 ---- 有新窗口开始监听:967b27a959048,当前在线人数为1
+2018-12-11 15:43:08,251  INFO WebSocketServer:63 ---- 有新窗口开始监听:77ced56a68348,当前在线人数为2
+2018-12-11 15:43:19,837  INFO WebSocketServer:94 ---- 收到来自窗口77ced56a68348的信息:111
+2018-12-11 15:43:22,789  INFO WebSocketServer:205 ---- 推送消息到窗口77ced56a68348，推送内容:111
+2018-12-11 15:43:44,319  INFO WebSocketServer:94 ---- 收到来自窗口967b27a959048的信息:111
+2018-12-11 15:43:45,856  INFO WebSocketServer:205 ---- 推送消息到窗口967b27a959048，推送内容:111
+2018-12-11 15:45:14,606  INFO WebSocketServer:94 ---- 收到来自窗口967b27a959048的信息:connet
+2018-12-11 15:45:24,242  INFO WebSocketServer:205 ---- 推送消息到窗口967b27a959048，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-11 15:46:54,172  INFO WebSocketServer:82 ---- 有一连接关闭！当前在线人数为1
+2018-12-11 15:46:54,361  INFO WebSocketServer:82 ---- 有一连接关闭！当前在线人数为0
+2018-12-11 15:46:55,160  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 16984 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-12-11 15:46:55,161 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-12-11 15:46:55,161  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-12-11 15:47:01,919  INFO AdventureApplication:57 ---- Started AdventureApplication in 6.838 seconds (JVM running for 668.366)
+2018-12-11 15:47:54,612  INFO WebSocketServer:63 ---- 有新窗口开始监听:9ff61bc51fa48,当前在线人数为1
+2018-12-11 15:48:03,591  INFO WebSocketServer:63 ---- 有新窗口开始监听:f34d0e0402e48,当前在线人数为2
+2018-12-11 15:48:08,313  INFO WebSocketServer:95 ---- 收到来自窗口9ff61bc51fa48的信息:111
+2018-12-11 15:48:11,111  INFO WebSocketServer:206 ---- 推送消息到窗口9ff61bc51fa48，推送内容:111
+2018-12-11 15:48:29,950  INFO WebSocketServer:95 ---- 收到来自窗口f34d0e0402e48的信息:111
+2018-12-11 15:48:32,404  INFO WebSocketServer:206 ---- 推送消息到窗口f34d0e0402e48，推送内容:111
+2018-12-11 15:49:19,146  INFO WebSocketServer:95 ---- 收到来自窗口f34d0e0402e48的信息:connet
+2018-12-11 15:49:28,940  INFO WebSocketServer:206 ---- 推送消息到窗口f34d0e0402e48，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-11 15:49:32,511  INFO WebSocketServer:95 ---- 收到来自窗口9ff61bc51fa48的信息:connet
+2018-12-11 15:49:34,445  INFO WebSocketServer:206 ---- 推送消息到窗口9ff61bc51fa48，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-11 15:51:19,648 ERROR WebSocketServer:190 ---- 发生错误
+2018-12-11 15:51:19,695  INFO WebSocketServer:82 ---- 有一连接关闭！当前在线人数为1
+2018-12-11 15:51:19,719  INFO WebSocketServer:82 ---- 有一连接关闭！当前在线人数为0
+2018-12-11 18:24:12,356  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 17708 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-12-11 18:24:12,359 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-12-11 18:24:12,360  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-12-11 18:24:28,426  INFO AdventureApplication:57 ---- Started AdventureApplication in 16.488 seconds (JVM running for 17.35)
+2018-12-11 18:25:56,950  INFO WebSocketServer:63 ---- 有新窗口开始监听:14cae30e37d48,当前在线人数为1
+2018-12-11 18:26:10,552  INFO WebSocketServer:63 ---- 有新窗口开始监听:e2d7958645448,当前在线人数为2
+2018-12-11 18:26:15,622  INFO WebSocketServer:95 ---- 收到来自窗口e2d7958645448的信息:connet
+2018-12-11 18:26:19,243  INFO WebSocketServer:95 ---- 收到来自窗口14cae30e37d48的信息:connet
+2018-12-11 18:26:22,863  INFO WebSocketServer:95 ---- 收到来自窗口14cae30e37d48的信息:111
+2018-12-11 18:26:22,906  INFO WebSocketServer:210 ---- 推送消息到窗口e2d7958645448，推送内容:111
+2018-12-11 18:26:35,135  INFO WebSocketServer:95 ---- 收到来自窗口e2d7958645448的信息:111
+2018-12-11 18:26:35,154  INFO WebSocketServer:210 ---- 推送消息到窗口14cae30e37d48，推送内容:111
+2018-12-11 18:27:09,617  INFO WebSocketServer:95 ---- 收到来自窗口14cae30e37d48的信息:111
+2018-12-11 18:27:09,635  INFO WebSocketServer:210 ---- 推送消息到窗口e2d7958645448，推送内容:111
+2018-12-11 18:27:53,457 ERROR WebSocketServer:194 ---- 发生错误
+2018-12-11 18:27:53,497  INFO WebSocketServer:82 ---- 有一连接关闭！当前在线人数为1
+2018-12-11 18:27:53,525  INFO WebSocketServer:82 ---- 有一连接关闭！当前在线人数为0

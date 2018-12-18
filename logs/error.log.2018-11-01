@@ -1,0 +1,3 @@
+2018-11-01 17:34:41,283 ERROR TemplateEngine:1085 - [THYMELEAF][http-nio-80-exec-4] Exception processing template "index2": Error resolving template "index2", template might not exist or might not be accessible by any of the configured Template Resolvers
+2018-11-01 17:36:54,556 ERROR TemplateEngine:1085 - [THYMELEAF][http-nio-80-exec-2] Exception processing template "index2": Error resolving template "index2", template might not exist or might not be accessible by any of the configured Template Resolvers
+2018-11-01 17:56:35,049 ERROR WebSocketServer:88 - 发生错误

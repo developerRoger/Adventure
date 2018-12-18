@@ -1,0 +1,185 @@
+2018-12-12 11:31:42,549  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 14172 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-12-12 11:31:42,558 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-12-12 11:31:42,562  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-12-12 11:32:00,340  INFO AdventureApplication:57 ---- Started AdventureApplication in 18.425 seconds (JVM running for 19.463)
+2018-12-12 11:33:23,559  INFO WebSocketServer:60 ---- 有新窗口开始监听:b8b0309440148,当前在线人数为1
+2018-12-12 11:34:21,010  INFO WebSocketServer:60 ---- 有新窗口开始监听:f83844a606348,当前在线人数为2
+2018-12-12 11:34:43,552  INFO WebSocketServer:90 ---- 收到来自窗口f83844a606348的信息:connet
+2018-12-12 11:34:48,770  INFO WebSocketServer:90 ---- 收到来自窗口b8b0309440148的信息:connet
+2018-12-12 11:34:59,660  INFO WebSocketServer:90 ---- 收到来自窗口f83844a606348的信息:connet
+2018-12-12 11:35:04,595  INFO WebSocketServer:204 ---- 推送消息到窗口f83844a606348，推送内容:你的操作太频繁，稍后再试试吧
+2018-12-12 11:35:09,717  INFO WebSocketServer:90 ---- 收到来自窗口f83844a606348的信息:111
+2018-12-12 11:35:09,735  INFO WebSocketServer:204 ---- 推送消息到窗口b8b0309440148，推送内容:111
+2018-12-12 11:35:16,126  INFO WebSocketServer:90 ---- 收到来自窗口b8b0309440148的信息:111
+2018-12-12 11:35:16,144  INFO WebSocketServer:204 ---- 推送消息到窗口f83844a606348，推送内容:111
+2018-12-12 11:36:38,685 ERROR WebSocketServer:189 ---- 发生错误
+2018-12-12 11:36:38,728  INFO WebSocketServer:79 ---- 有一连接关闭！当前在线人数为1
+2018-12-12 17:02:08,905  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 16960 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-12-12 17:02:08,910 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-12-12 17:02:08,913  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-12-12 17:02:25,713  INFO AdventureApplication:57 ---- Started AdventureApplication in 17.339 seconds (JVM running for 18.181)
+2018-12-12 17:19:40,929  INFO WebSocketServer:60 ---- 有新窗口开始监听:b98a821c18648,当前在线人数为1
+2018-12-12 17:19:46,497  INFO WebSocketServer:60 ---- 有新窗口开始监听:42870ddc45448,当前在线人数为2
+2018-12-12 17:19:57,368  INFO WebSocketServer:90 ---- 收到来自窗口42870ddc45448的信息:connet
+2018-12-12 17:19:57,378 ERROR WebSocketServer:116 ---- Index: 0, Size: 0
+2018-12-12 17:19:57,378  INFO WebSocketServer:90 ---- 收到来自窗口b98a821c18648的信息:connet
+2018-12-12 17:19:57,401  INFO WebSocketServer:79 ---- 有一连接关闭！当前在线人数为1
+2018-12-12 17:19:57,401 ERROR WebSocketServer:116 ---- Index: 0, Size: 0
+2018-12-12 17:19:57,424  INFO WebSocketServer:79 ---- 有一连接关闭！当前在线人数为0
+2018-12-12 17:20:42,341  INFO WebSocketServer:90 ---- 收到来自窗口42870ddc45448的信息:connet
+2018-12-12 17:20:42,352 ERROR WebSocketServer:116 ---- Index: 0, Size: 0
+2018-12-12 17:20:42,368  INFO WebSocketServer:90 ---- 收到来自窗口b98a821c18648的信息:connet
+2018-12-12 17:20:42,375 ERROR WebSocketServer:116 ---- Index: 0, Size: 0
+2018-12-12 17:20:42,375  INFO WebSocketServer:79 ---- 有一连接关闭！当前在线人数为-1
+2018-12-12 17:20:42,400  INFO WebSocketServer:79 ---- 有一连接关闭！当前在线人数为-2
+2018-12-12 17:21:06,341  INFO WebSocketServer:90 ---- 收到来自窗口42870ddc45448的信息:connet
+2018-12-12 17:21:06,349 ERROR WebSocketServer:116 ---- Index: 0, Size: 0
+2018-12-12 17:21:06,372  INFO WebSocketServer:79 ---- 有一连接关闭！当前在线人数为-3
+2018-12-12 17:21:57,724  INFO WebSocketServer:90 ---- 收到来自窗口42870ddc45448的信息:connet
+2018-12-12 17:21:57,732 ERROR WebSocketServer:116 ---- Index: 0, Size: 0
+2018-12-12 17:22:05,513  INFO WebSocketServer:79 ---- 有一连接关闭！当前在线人数为-4
+2018-12-12 17:22:16,525  INFO WebSocketServer:90 ---- 收到来自窗口42870ddc45448的信息:connet
+2018-12-12 17:22:22,650 ERROR WebSocketServer:195 ---- 发生错误
+2018-12-12 17:22:22,686  INFO WebSocketServer:79 ---- 有一连接关闭！当前在线人数为-5
+2018-12-12 17:22:32,062 ERROR WebSocketServer:116 ---- Index: 0, Size: 0
+2018-12-12 17:22:32,085  INFO WebSocketServer:79 ---- 有一连接关闭！当前在线人数为-6
+2018-12-12 17:22:44,559  INFO WebSocketServer:79 ---- 有一连接关闭！当前在线人数为-7
+2018-12-12 17:22:45,102  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 16960 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-12-12 17:22:45,102 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-12-12 17:22:45,103  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-12-12 17:22:51,327  INFO AdventureApplication:57 ---- Started AdventureApplication in 6.297 seconds (JVM running for 1243.78)
+2018-12-12 17:34:09,031  INFO WebSocketServer:60 ---- 有新窗口开始监听:bbbd6e959cc48,当前在线人数为1
+2018-12-12 18:10:28,480  INFO WebSocketServer:79 ---- 有一连接关闭！当前在线人数为0
+2018-12-12 18:10:28,965  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 16960 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-12-12 18:10:28,965 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-12-12 18:10:28,965  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-12-12 18:10:35,331  INFO AdventureApplication:57 ---- Started AdventureApplication in 6.427 seconds (JVM running for 4107.9)
+2018-12-12 18:10:40,042  INFO WebSocketServer:62 ---- 有新窗口开始监听:6df5f3e1ed748,当前在线人数为1
+2018-12-12 18:10:53,576  INFO WebSocketServer:62 ---- 有新窗口开始监听:528761e9fb348,当前在线人数为2
+2018-12-12 18:10:59,286  INFO WebSocketServer:92 ---- 收到来自窗口6df5f3e1ed748的信息:connet
+2018-12-12 18:10:59,449  INFO WebSocketServer:92 ---- 收到来自窗口528761e9fb348的信息:connet
+2018-12-12 18:10:59,497  INFO WebSocketServer:217 ---- 推送消息到窗口6df5f3e1ed748，推送内容:匹配成功
+2018-12-12 18:10:59,498  INFO WebSocketServer:217 ---- 推送消息到窗口528761e9fb348，推送内容:匹配成功
+2018-12-12 18:10:59,499 ERROR WebSocketServer:119 ---- -1
+2018-12-12 18:10:59,526  INFO WebSocketServer:81 ---- 有一连接关闭！当前在线人数为1
+2018-12-12 18:11:04,486  INFO WebSocketServer:217 ---- 推送消息到窗口528761e9fb348，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-12 18:11:04,492 ERROR WebSocketServer:119 ---- -1
+2018-12-12 18:11:04,514  INFO WebSocketServer:81 ---- 有一连接关闭！当前在线人数为0
+2018-12-12 18:11:04,557  INFO WebSocketServer:92 ---- 收到来自窗口528761e9fb348的信息:connet
+2018-12-12 18:11:09,574  INFO WebSocketServer:217 ---- 推送消息到窗口528761e9fb348，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-12 18:11:09,575 ERROR WebSocketServer:221 ---- sendInfo----对方已离线！
+2018-12-12 18:11:09,583 ERROR WebSocketServer:119 ---- -1
+2018-12-12 18:11:09,605  INFO WebSocketServer:81 ---- 有一连接关闭！当前在线人数为-1
+2018-12-12 18:11:09,605  INFO WebSocketServer:92 ---- 收到来自窗口528761e9fb348的信息:connet
+2018-12-12 18:11:14,624  INFO WebSocketServer:217 ---- 推送消息到窗口528761e9fb348，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-12 18:11:14,625 ERROR WebSocketServer:221 ---- sendInfo----对方已离线！
+2018-12-12 18:11:14,633 ERROR WebSocketServer:119 ---- -1
+2018-12-12 18:11:14,654  INFO WebSocketServer:81 ---- 有一连接关闭！当前在线人数为-2
+2018-12-12 18:11:45,430  INFO WebSocketServer:92 ---- 收到来自窗口528761e9fb348的信息:connet
+2018-12-12 18:11:50,451  INFO WebSocketServer:217 ---- 推送消息到窗口528761e9fb348，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-12 18:11:50,452 ERROR WebSocketServer:221 ---- sendInfo----对方已离线！
+2018-12-12 18:11:50,461 ERROR WebSocketServer:119 ---- -1
+2018-12-12 18:11:50,484  INFO WebSocketServer:81 ---- 有一连接关闭！当前在线人数为-3
+2018-12-12 18:11:59,788  INFO WebSocketServer:81 ---- 有一连接关闭！当前在线人数为-4
+2018-12-12 18:11:59,856  INFO WebSocketServer:62 ---- 有新窗口开始监听:c533af61ee348,当前在线人数为-3
+2018-12-12 18:12:02,782 ERROR WebSocketServer:202 ---- 发生错误
+2018-12-12 18:12:02,803  INFO WebSocketServer:81 ---- 有一连接关闭！当前在线人数为-4
+2018-12-12 18:12:03,181  INFO WebSocketServer:62 ---- 有新窗口开始监听:c4add6872c848,当前在线人数为-3
+2018-12-12 18:12:13,249  INFO WebSocketServer:92 ---- 收到来自窗口c4add6872c848的信息:connet
+2018-12-12 18:12:14,019  INFO WebSocketServer:92 ---- 收到来自窗口c533af61ee348的信息:connet
+2018-12-12 18:12:14,064  INFO WebSocketServer:217 ---- 推送消息到窗口c4add6872c848，推送内容:匹配成功
+2018-12-12 18:12:14,065  INFO WebSocketServer:217 ---- 推送消息到窗口c533af61ee348，推送内容:匹配成功
+2018-12-12 18:12:14,074 ERROR WebSocketServer:119 ---- -1
+2018-12-12 18:12:14,095  INFO WebSocketServer:81 ---- 有一连接关闭！当前在线人数为-4
+2018-12-12 18:12:19,054  INFO WebSocketServer:217 ---- 推送消息到窗口c533af61ee348，推送内容:暂时无人匹配！稍后再来试试吧
+2018-12-12 18:12:19,063 ERROR WebSocketServer:119 ---- -1
+2018-12-12 18:12:19,085  INFO WebSocketServer:81 ---- 有一连接关闭！当前在线人数为-5
+2018-12-12 18:14:13,953 ERROR WebSocketServer:202 ---- 发生错误
+2018-12-12 18:14:13,994  INFO WebSocketServer:81 ---- 有一连接关闭！当前在线人数为-6
+2018-12-12 18:16:22,085  INFO WebSocketServer:81 ---- 有一连接关闭！当前在线人数为-7
+2018-12-12 18:16:22,700  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 16960 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-12-12 18:16:22,701 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-12-12 18:16:22,701  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-12-12 18:16:28,120  INFO AdventureApplication:57 ---- Started AdventureApplication in 5.467 seconds (JVM running for 4460.686)
+2018-12-12 18:18:21,929  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 16960 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-12-12 18:18:21,929 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-12-12 18:18:21,930  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-12-12 18:18:27,236  INFO AdventureApplication:57 ---- Started AdventureApplication in 5.362 seconds (JVM running for 4579.8)
+2018-12-12 18:19:03,592  INFO WebSocketServer:62 ---- 有新窗口开始监听:49bbb66437e48,当前在线人数为1
+2018-12-12 18:19:12,209  INFO WebSocketServer:62 ---- 有新窗口开始监听:d8de3b9db4c48,当前在线人数为2
+2018-12-12 18:19:16,651  INFO WebSocketServer:92 ---- 收到来自窗口d8de3b9db4c48的信息:connet
+2018-12-12 18:19:16,685 ERROR WebSocketServer:119 ---- bound must be positive
+2018-12-12 18:19:16,720  INFO WebSocketServer:81 ---- 有一连接关闭！当前在线人数为1
+2018-12-12 18:19:17,646  INFO WebSocketServer:92 ---- 收到来自窗口49bbb66437e48的信息:connet
+2018-12-12 18:19:17,678 ERROR WebSocketServer:119 ---- bound must be positive
+2018-12-12 18:19:17,701  INFO WebSocketServer:81 ---- 有一连接关闭！当前在线人数为0
+2018-12-12 18:19:56,217 ERROR WebSocketServer:201 ---- 发生错误
+2018-12-12 18:19:56,243  INFO WebSocketServer:81 ---- 有一连接关闭！当前在线人数为-1
+2018-12-12 18:20:26,593  INFO WebSocketServer:81 ---- 有一连接关闭！当前在线人数为-2
+2018-12-12 18:20:26,990  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 16960 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-12-12 18:20:26,990 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-12-12 18:20:26,990  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-12-12 18:20:32,033  INFO AdventureApplication:57 ---- Started AdventureApplication in 5.087 seconds (JVM running for 4704.597)
+2018-12-12 18:21:02,093  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 16960 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-12-12 18:21:02,094 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-12-12 18:21:02,094  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-12-12 18:21:06,502  INFO AdventureApplication:57 ---- Started AdventureApplication in 4.45 seconds (JVM running for 4739.065)
+2018-12-12 18:23:35,492  INFO WebSocketServer:62 ---- 有新窗口开始监听:0b59c4a384848,当前在线人数为1
+2018-12-12 18:23:41,074  INFO WebSocketServer:62 ---- 有新窗口开始监听:495b608088948,当前在线人数为2
+2018-12-12 18:23:46,498  INFO WebSocketServer:92 ---- 收到来自窗口0b59c4a384848的信息:connet
+2018-12-12 18:23:46,534 ERROR WebSocketServer:119 ---- bound must be positive
+2018-12-12 18:23:46,742  INFO WebSocketServer:92 ---- 收到来自窗口495b608088948的信息:connet
+2018-12-12 18:23:46,779 ERROR WebSocketServer:119 ---- bound must be positive
+2018-12-12 18:25:08,632  INFO WebSocketServer:81 ---- 有一连接关闭！当前在线人数为1
+2018-12-12 18:25:08,735  INFO WebSocketServer:81 ---- 有一连接关闭！当前在线人数为0
+2018-12-12 18:25:09,143  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 16960 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-12-12 18:25:09,143 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-12-12 18:25:09,143  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-12-12 18:25:14,145  INFO AdventureApplication:57 ---- Started AdventureApplication in 5.05 seconds (JVM running for 4986.706)
+2018-12-12 18:25:30,506  INFO WebSocketServer:62 ---- 有新窗口开始监听:23a3dd77bbb48,当前在线人数为1
+2018-12-12 18:25:35,416  INFO WebSocketServer:62 ---- 有新窗口开始监听:62c7199495f48,当前在线人数为2
+2018-12-12 18:25:49,250  INFO WebSocketServer:92 ---- 收到来自窗口23a3dd77bbb48的信息:connet
+2018-12-12 18:25:49,752  INFO WebSocketServer:92 ---- 收到来自窗口62c7199495f48的信息:connet
+2018-12-12 18:25:49,820  INFO WebSocketServer:217 ---- 推送消息到窗口23a3dd77bbb48，推送内容:匹配成功1
+2018-12-12 18:25:49,821  INFO WebSocketServer:217 ---- 推送消息到窗口62c7199495f48，推送内容:匹配成功1
+2018-12-12 18:25:49,822 ERROR WebSocketServer:119 ---- -1
+2018-12-12 18:25:53,313  INFO WebSocketServer:92 ---- 收到来自窗口23a3dd77bbb48的信息:111
+2018-12-12 18:25:53,330  INFO WebSocketServer:217 ---- 推送消息到窗口62c7199495f48，推送内容:111
+2018-12-12 18:26:04,262 ERROR WebSocketServer:202 ---- 发生错误
+2018-12-12 18:26:04,300  INFO WebSocketServer:81 ---- 有一连接关闭！当前在线人数为1
+2018-12-12 18:28:51,046  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 19168 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-12-12 18:28:51,051 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-12-12 18:28:51,052  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-12-12 18:29:06,508  INFO AdventureApplication:57 ---- Started AdventureApplication in 15.872 seconds (JVM running for 16.651)
+2018-12-12 18:29:19,075  INFO WebSocketServer:62 ---- 有新窗口开始监听:f506116b9f548,当前在线人数为1
+2018-12-12 18:29:22,397  INFO WebSocketServer:62 ---- 有新窗口开始监听:8868555009448,当前在线人数为2
+2018-12-12 18:29:25,492  INFO WebSocketServer:92 ---- 收到来自窗口f506116b9f548的信息:connet
+2018-12-12 18:29:26,015  INFO WebSocketServer:92 ---- 收到来自窗口8868555009448的信息:connet
+2018-12-12 18:29:26,094  INFO WebSocketServer:217 ---- 推送消息到窗口f506116b9f548，推送内容:匹配成功1
+2018-12-12 18:29:26,095  INFO WebSocketServer:217 ---- 推送消息到窗口8868555009448，推送内容:匹配成功1
+2018-12-12 18:29:26,096 ERROR WebSocketServer:119 ---- -1
+2018-12-12 18:29:39,681 ERROR WebSocketServer:202 ---- 发生错误
+2018-12-12 18:29:39,735  INFO WebSocketServer:81 ---- 有一连接关闭！当前在线人数为1
+2018-12-12 18:31:34,301  INFO WebSocketServer:81 ---- 有一连接关闭！当前在线人数为0
+2018-12-12 18:31:34,829  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 19168 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-12-12 18:31:34,829 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-12-12 18:31:34,830  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-12-12 18:31:41,188  INFO AdventureApplication:57 ---- Started AdventureApplication in 6.436 seconds (JVM running for 171.329)
+2018-12-12 18:32:57,452  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 19168 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-12-12 18:32:57,453 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-12-12 18:32:57,453  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-12-12 18:33:03,953  INFO AdventureApplication:57 ---- Started AdventureApplication in 6.575 seconds (JVM running for 254.093)
+2018-12-12 18:33:08,883  INFO WebSocketServer:62 ---- 有新窗口开始监听:0406e34616948,当前在线人数为1
+2018-12-12 18:33:13,972  INFO WebSocketServer:62 ---- 有新窗口开始监听:ffff6b5056148,当前在线人数为2
+2018-12-12 18:33:18,271  INFO WebSocketServer:92 ---- 收到来自窗口ffff6b5056148的信息:connet
+2018-12-12 18:33:18,832  INFO WebSocketServer:92 ---- 收到来自窗口0406e34616948的信息:connet
+2018-12-12 18:33:18,892  INFO WebSocketServer:217 ---- 推送消息到窗口ffff6b5056148，推送内容:匹配成功1
+2018-12-12 18:33:18,893  INFO WebSocketServer:217 ---- 推送消息到窗口0406e34616948，推送内容:匹配成功1
+2018-12-12 18:33:18,894 ERROR WebSocketServer:119 ---- bound must be positive
+2018-12-12 18:33:32,211 ERROR WebSocketServer:202 ---- 发生错误
+2018-12-12 18:33:32,239  INFO WebSocketServer:81 ---- 有一连接关闭！当前在线人数为1
+2018-12-12 18:33:37,065  INFO WebSocketServer:92 ---- 收到来自窗口ffff6b5056148的信息:111
+2018-12-12 18:33:37,083  INFO WebSocketServer:217 ---- 推送消息到窗口0406e34616948，推送内容:111
+2018-12-12 18:33:37,083 ERROR WebSocketServer:221 ---- sendInfo----对方已离线！
+2018-12-12 18:33:48,090 ERROR WebSocketServer:202 ---- 发生错误
+2018-12-12 18:33:48,116  INFO WebSocketServer:81 ---- 有一连接关闭！当前在线人数为0

@@ -1,0 +1,780 @@
+2018-11-07 14:47:02,527  INFO AdventureApplication:48 - Starting AdventureApplication on BS1HDX84D9084A0 with PID 9428 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-11-07 14:47:02,542 DEBUG AdventureApplication:51 - Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-11-07 14:47:02,547  INFO AdventureApplication:593 - No active profile set, falling back to default profiles: default
+2018-11-07 14:47:03,091  INFO AnnotationConfigEmbeddedWebApplicationContext:583 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@49d8bb29: startup date [Wed Nov 07 14:47:03 CST 2018]; root of context hierarchy
+2018-11-07 14:47:03,673  INFO Version:30 - HV000001: Hibernate Validator 5.3.6.Final
+2018-11-07 14:47:05,318  INFO RepositoryConfigurationDelegate:165 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-11-07 14:47:06,301  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 - Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$bc96ef4d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-07 14:47:06,313  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$23e92713] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-07 14:47:06,376  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 - Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-07 14:47:06,379  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@7ee90551' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-07 14:47:06,386  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 - Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$e16b91ff] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-07 14:47:06,405  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-07 14:47:07,187  INFO TomcatEmbeddedServletContainer:89 - Tomcat initialized with port(s): 80 (http)
+2018-11-07 14:47:07,622  INFO ContextLoader:276 - Root WebApplicationContext: initialization completed in 4535 ms
+2018-11-07 14:47:08,289  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-11-07 14:47:08,290  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-11-07 14:47:08,292  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-11-07 14:47:08,293  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-11-07 14:47:08,295  INFO DelegatingFilterProxyRegistrationBean:258 - Mapping filter: 'springSecurityFilterChain' to: [/*]
+2018-11-07 14:47:08,296  INFO ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+2018-11-07 14:47:10,823  INFO RequestMappingHandlerMapping:543 - Mapped "{[/go]}" onto public java.lang.String com.firstTry.Adventure.config.DefaultView.index(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-11-07 14:47:10,825  INFO RequestMappingHandlerMapping:543 - Mapped "{[/hhh]}" onto public java.lang.String com.firstTry.Adventure.config.DefaultView.hello()
+2018-11-07 14:47:10,826  INFO RequestMappingHandlerMapping:543 - Mapped "{[/preface]}" onto public java.lang.String com.firstTry.Adventure.config.DefaultView.preface()
+2018-11-07 14:47:10,827  INFO RequestMappingHandlerMapping:543 - Mapped "{[/login]}" onto public java.lang.String com.firstTry.Adventure.config.DefaultView.login(javax.servlet.http.HttpServletRequest)
+2018-11-07 14:47:10,832  INFO RequestMappingHandlerMapping:543 - Mapped "{[/adventure/application/update]}" onto public com.firstTry.Adventure.utils.R com.firstTry.Adventure.controller.ApplicationController.update(com.firstTry.Adventure.entity.ApplicationEntity)
+2018-11-07 14:47:10,833  INFO RequestMappingHandlerMapping:543 - Mapped "{[/adventure/application/delete]}" onto public com.firstTry.Adventure.utils.R com.firstTry.Adventure.controller.ApplicationController.delete(java.lang.String[])
+2018-11-07 14:47:10,834  INFO RequestMappingHandlerMapping:543 - Mapped "{[/adventure/application/list]}" onto public java.util.List<com.firstTry.Adventure.entity.ApplicationEntity> com.firstTry.Adventure.controller.ApplicationController.list()
+2018-11-07 14:47:10,834  INFO RequestMappingHandlerMapping:543 - Mapped "{[/adventure/application/save]}" onto public com.firstTry.Adventure.utils.R com.firstTry.Adventure.controller.ApplicationController.save(com.firstTry.Adventure.entity.ApplicationEntity)
+2018-11-07 14:47:10,835  INFO RequestMappingHandlerMapping:543 - Mapped "{[/adventure/application/info/{code}]}" onto public com.firstTry.Adventure.utils.R com.firstTry.Adventure.controller.ApplicationController.info(java.lang.String)
+2018-11-07 14:47:10,836  INFO RequestMappingHandlerMapping:543 - Mapped "{[/adventure/application/queryList]}" onto public com.firstTry.Adventure.utils.R com.firstTry.Adventure.controller.ApplicationController.queryList(java.util.Map<java.lang.String, java.lang.Object>)
+2018-11-07 14:47:10,841  INFO RequestMappingHandlerMapping:543 - Mapped "{[/adventure/menu/update]}" onto public com.firstTry.Adventure.utils.R com.firstTry.Adventure.controller.MenuController.update(com.firstTry.Adventure.entity.MenuEntity)
+2018-11-07 14:47:10,842  INFO RequestMappingHandlerMapping:543 - Mapped "{[/adventure/menu/delete]}" onto public com.firstTry.Adventure.utils.R com.firstTry.Adventure.controller.MenuController.delete(java.lang.Long[])
+2018-11-07 14:47:10,843  INFO RequestMappingHandlerMapping:543 - Mapped "{[/adventure/menu/list]}" onto public java.util.List<com.firstTry.Adventure.entity.MenuEntity> com.firstTry.Adventure.controller.MenuController.list()
+2018-11-07 14:47:10,844  INFO RequestMappingHandlerMapping:543 - Mapped "{[/adventure/menu/save]}" onto public com.firstTry.Adventure.utils.R com.firstTry.Adventure.controller.MenuController.save(com.firstTry.Adventure.entity.MenuEntity)
+2018-11-07 14:47:10,845  INFO RequestMappingHandlerMapping:543 - Mapped "{[/adventure/menu/info]}" onto public com.firstTry.Adventure.utils.R com.firstTry.Adventure.controller.MenuController.info(java.lang.Long)
+2018-11-07 14:47:10,846  INFO RequestMappingHandlerMapping:543 - Mapped "{[/adventure/menu/queryList]}" onto public com.firstTry.Adventure.utils.R com.firstTry.Adventure.controller.MenuController.queryList(java.util.Map<java.lang.String, java.lang.Object>)
+2018-11-07 14:47:10,852  INFO RequestMappingHandlerMapping:543 - Mapped "{[/adventure/qiniu/update]}" onto public com.firstTry.Adventure.utils.R com.firstTry.Adventure.controller.QiniuController.update(com.firstTry.Adventure.entity.QiniuStorageEntity)
+2018-11-07 14:47:10,853  INFO RequestMappingHandlerMapping:543 - Mapped "{[/adventure/qiniu/delete]}" onto public com.firstTry.Adventure.utils.R com.firstTry.Adventure.controller.QiniuController.delete(java.lang.Long[])
+2018-11-07 14:47:10,854  INFO RequestMappingHandlerMapping:543 - Mapped "{[/adventure/qiniu/list]}" onto public java.util.List<com.firstTry.Adventure.entity.QiniuStorageEntity> com.firstTry.Adventure.controller.QiniuController.list(boolean)
+2018-11-07 14:47:10,855  INFO RequestMappingHandlerMapping:543 - Mapped "{[/adventure/qiniu/save]}" onto public com.firstTry.Adventure.utils.R com.firstTry.Adventure.controller.QiniuController.save(com.firstTry.Adventure.entity.QiniuStorageEntity)
+2018-11-07 14:47:10,856  INFO RequestMappingHandlerMapping:543 - Mapped "{[/adventure/qiniu/info]}" onto public com.firstTry.Adventure.utils.R com.firstTry.Adventure.controller.QiniuController.info(java.lang.Long)
+2018-11-07 14:47:10,857  INFO RequestMappingHandlerMapping:543 - Mapped "{[/adventure/qiniu/queryList]}" onto public com.firstTry.Adventure.utils.R com.firstTry.Adventure.controller.QiniuController.queryList(java.util.Map<java.lang.String, java.lang.Object>)
+2018-11-07 14:47:10,858  INFO RequestMappingHandlerMapping:543 - Mapped "{[/adventure/qiniu/uploadImg],methods=[POST]}" onto public com.firstTry.Adventure.utils.R com.firstTry.Adventure.controller.QiniuController.uploadImg(org.springframework.web.multipart.MultipartFile,java.lang.String,javax.servlet.http.HttpServletRequest)
+2018-11-07 14:47:10,859  INFO RequestMappingHandlerMapping:543 - Mapped "{[/adventure/qiniu/socket/push]}" onto public java.lang.Object com.firstTry.Adventure.controller.QiniuController.pushToWeb(java.lang.String)
+2018-11-07 14:47:10,861  INFO RequestMappingHandlerMapping:543 - Mapped "{[/sys/generator/list]}" onto public com.firstTry.Adventure.utils.R com.firstTry.Adventure.controller.SysGeneratorController.list(java.util.Map<java.lang.String, java.lang.Object>)
+2018-11-07 14:47:10,862  INFO RequestMappingHandlerMapping:543 - Mapped "{[/sys/generator/code]}" onto public void com.firstTry.Adventure.controller.SysGeneratorController.code(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException
+2018-11-07 14:47:10,863  INFO RequestMappingHandlerMapping:543 - Mapped "{[/sys/generator/queryColumns]}" onto public com.firstTry.Adventure.utils.R com.firstTry.Adventure.controller.SysGeneratorController.queryColumns(javax.servlet.http.HttpServletRequest)
+2018-11-07 14:47:10,864  INFO RequestMappingHandlerMapping:543 - Mapped "{[/hi]}" onto public java.lang.String com.firstTry.Adventure.controller.UserLoginController.hello() throws java.lang.Exception
+2018-11-07 14:47:10,865  INFO RequestMappingHandlerMapping:543 - Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2018-11-07 14:47:10,870  INFO RequestMappingHandlerMapping:543 - Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2018-11-07 14:47:10,872  INFO RequestMappingHandlerMapping:543 - Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2018-11-07 14:47:10,874  INFO RequestMappingHandlerMapping:543 - Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2018-11-07 14:47:10,880  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-11-07 14:47:10,881  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-11-07 14:47:11,792  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-11-07 14:47:11,793  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-11-07 14:47:11,852  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-11-07 14:47:11,862  INFO WebMvcAutoConfiguration$WelcomePageHandlerMapping:549 - Adding welcome page: class path resource [views/index.html]
+2018-11-07 14:47:11,941  INFO DefaultSecurityFilterChain:43 - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2604b241, org.springframework.security.web.context.SecurityContextPersistenceFilter@17929d77, org.springframework.security.web.header.HeaderWriterFilter@5f83e04, org.springframework.web.filter.CorsFilter@2fb3beb1, org.springframework.security.web.authentication.logout.LogoutFilter@623a3cc0, com.firstTry.Adventure.config.JWTLoginFilter@642de5f4, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6b4cdbd5, com.firstTry.Adventure.config.JWTAuthenticationFilter@21aec3a3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@55a983fb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1a97772e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@22bbeb6d, org.springframework.security.web.session.SessionManagementFilter@33f43037, org.springframework.security.web.access.ExceptionTranslationFilter@47ce7590, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@61186c77]
+2018-11-07 14:47:12,001  INFO ThreadPoolTaskExecutor:165 - Initializing ExecutorService 
+2018-11-07 14:47:12,011  INFO ThreadPoolTaskExecutor:165 - Initializing ExecutorService  'defaultThreadPool'
+2018-11-07 14:47:12,148  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@49d8bb29: startup date [Wed Nov 07 14:47:03 CST 2018]; root of context hierarchy
+2018-11-07 14:47:12,240  INFO ExceptionHandlerExceptionResolver:273 - Detected @ExceptionHandler methods in globalExceptionHandler
+2018-11-07 14:47:13,801  INFO OptionalLiveReloadServer:58 - LiveReload server is running on port 35729
+2018-11-07 14:47:13,814  WARN RedisStarterDeprecationWarningAutoConfiguration:43 - spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2018-11-07 14:47:13,945  INFO ServerEndpointExporter:143 - Registering @ServerEndpoint class: class com.firstTry.Adventure.middleware.WebSocketServer
+2018-11-07 14:47:13,981  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2018-11-07 14:47:14,010  INFO DefaultLifecycleProcessor:343 - Starting beans in phase 2147483647
+2018-11-07 14:47:14,011  INFO DocumentationPluginsBootstrapper:120 - Context refreshed
+2018-11-07 14:47:14,077  INFO DocumentationPluginsBootstrapper:123 - Found 1 custom documentation plugin(s)
+2018-11-07 14:47:14,144  INFO ApiListingReferenceScanner:41 - Scanning for api listing references
+2018-11-07 14:47:14,668  INFO CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingGET_1
+2018-11-07 14:47:14,673  INFO CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingHEAD_1
+2018-11-07 14:47:14,678  INFO CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingPOST_1
+2018-11-07 14:47:14,683  INFO CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingPUT_1
+2018-11-07 14:47:14,687  INFO CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingPATCH_1
+2018-11-07 14:47:14,692  INFO CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_1
+2018-11-07 14:47:14,696  INFO CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingOPTIONS_1
+2018-11-07 14:47:14,701  INFO CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingTRACE_1
+2018-11-07 14:47:14,707  INFO CachingOperationNameGenerator:40 - Generating unique operation named: infoUsingGET_1
+2018-11-07 14:47:14,711  INFO CachingOperationNameGenerator:40 - Generating unique operation named: infoUsingHEAD_1
+2018-11-07 14:47:14,715  INFO CachingOperationNameGenerator:40 - Generating unique operation named: infoUsingPOST_1
+2018-11-07 14:47:14,720  INFO CachingOperationNameGenerator:40 - Generating unique operation named: infoUsingPUT_1
+2018-11-07 14:47:14,724  INFO CachingOperationNameGenerator:40 - Generating unique operation named: infoUsingPATCH_1
+2018-11-07 14:47:14,728  INFO CachingOperationNameGenerator:40 - Generating unique operation named: infoUsingDELETE_1
+2018-11-07 14:47:14,733  INFO CachingOperationNameGenerator:40 - Generating unique operation named: infoUsingOPTIONS_1
+2018-11-07 14:47:14,737  INFO CachingOperationNameGenerator:40 - Generating unique operation named: infoUsingTRACE_1
+2018-11-07 14:47:14,744  INFO CachingOperationNameGenerator:40 - Generating unique operation named: listUsingGET_1
+2018-11-07 14:47:14,747  INFO CachingOperationNameGenerator:40 - Generating unique operation named: listUsingHEAD_1
+2018-11-07 14:47:14,750  INFO CachingOperationNameGenerator:40 - Generating unique operation named: listUsingPOST_1
+2018-11-07 14:47:14,753  INFO CachingOperationNameGenerator:40 - Generating unique operation named: listUsingPUT_1
+2018-11-07 14:47:14,756  INFO CachingOperationNameGenerator:40 - Generating unique operation named: listUsingPATCH_1
+2018-11-07 14:47:14,759  INFO CachingOperationNameGenerator:40 - Generating unique operation named: listUsingDELETE_1
+2018-11-07 14:47:14,763  INFO CachingOperationNameGenerator:40 - Generating unique operation named: listUsingOPTIONS_1
+2018-11-07 14:47:14,766  INFO CachingOperationNameGenerator:40 - Generating unique operation named: listUsingTRACE_1
+2018-11-07 14:47:14,773  INFO CachingOperationNameGenerator:40 - Generating unique operation named: queryListUsingGET_1
+2018-11-07 14:47:14,778  INFO CachingOperationNameGenerator:40 - Generating unique operation named: queryListUsingHEAD_1
+2018-11-07 14:47:14,782  INFO CachingOperationNameGenerator:40 - Generating unique operation named: queryListUsingPOST_1
+2018-11-07 14:47:14,786  INFO CachingOperationNameGenerator:40 - Generating unique operation named: queryListUsingPUT_1
+2018-11-07 14:47:14,791  INFO CachingOperationNameGenerator:40 - Generating unique operation named: queryListUsingPATCH_1
+2018-11-07 14:47:14,796  INFO CachingOperationNameGenerator:40 - Generating unique operation named: queryListUsingDELETE_1
+2018-11-07 14:47:14,801  INFO CachingOperationNameGenerator:40 - Generating unique operation named: queryListUsingOPTIONS_1
+2018-11-07 14:47:14,806  INFO CachingOperationNameGenerator:40 - Generating unique operation named: queryListUsingTRACE_1
+2018-11-07 14:47:14,871  INFO CachingOperationNameGenerator:40 - Generating unique operation named: saveUsingGET_1
+2018-11-07 14:47:14,875  INFO CachingOperationNameGenerator:40 - Generating unique operation named: saveUsingHEAD_1
+2018-11-07 14:47:14,879  INFO CachingOperationNameGenerator:40 - Generating unique operation named: saveUsingPOST_1
+2018-11-07 14:47:14,884  INFO CachingOperationNameGenerator:40 - Generating unique operation named: saveUsingPUT_1
+2018-11-07 14:47:14,888  INFO CachingOperationNameGenerator:40 - Generating unique operation named: saveUsingPATCH_1
+2018-11-07 14:47:14,892  INFO CachingOperationNameGenerator:40 - Generating unique operation named: saveUsingDELETE_1
+2018-11-07 14:47:14,896  INFO CachingOperationNameGenerator:40 - Generating unique operation named: saveUsingOPTIONS_1
+2018-11-07 14:47:14,900  INFO CachingOperationNameGenerator:40 - Generating unique operation named: saveUsingTRACE_1
+2018-11-07 14:47:14,908  INFO CachingOperationNameGenerator:40 - Generating unique operation named: updateUsingGET_1
+2018-11-07 14:47:14,913  INFO CachingOperationNameGenerator:40 - Generating unique operation named: updateUsingHEAD_1
+2018-11-07 14:47:14,917  INFO CachingOperationNameGenerator:40 - Generating unique operation named: updateUsingPOST_1
+2018-11-07 14:47:14,923  INFO CachingOperationNameGenerator:40 - Generating unique operation named: updateUsingPUT_1
+2018-11-07 14:47:14,928  INFO CachingOperationNameGenerator:40 - Generating unique operation named: updateUsingPATCH_1
+2018-11-07 14:47:14,932  INFO CachingOperationNameGenerator:40 - Generating unique operation named: updateUsingDELETE_1
+2018-11-07 14:47:14,936  INFO CachingOperationNameGenerator:40 - Generating unique operation named: updateUsingOPTIONS_1
+2018-11-07 14:47:14,940  INFO CachingOperationNameGenerator:40 - Generating unique operation named: updateUsingTRACE_1
+2018-11-07 14:47:14,950  INFO CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingGET_2
+2018-11-07 14:47:14,965  INFO CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingHEAD_2
+2018-11-07 14:47:14,971  INFO CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingPOST_2
+2018-11-07 14:47:14,981  INFO CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingPUT_2
+2018-11-07 14:47:14,987  INFO CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingPATCH_2
+2018-11-07 14:47:14,991  INFO CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_2
+2018-11-07 14:47:14,998  INFO CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingOPTIONS_2
+2018-11-07 14:47:15,004  INFO CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingTRACE_2
+2018-11-07 14:47:15,012  INFO CachingOperationNameGenerator:40 - Generating unique operation named: infoUsingGET_2
+2018-11-07 14:47:15,017  INFO CachingOperationNameGenerator:40 - Generating unique operation named: infoUsingHEAD_2
+2018-11-07 14:47:15,023  INFO CachingOperationNameGenerator:40 - Generating unique operation named: infoUsingPOST_2
+2018-11-07 14:47:15,027  INFO CachingOperationNameGenerator:40 - Generating unique operation named: infoUsingPUT_2
+2018-11-07 14:47:15,032  INFO CachingOperationNameGenerator:40 - Generating unique operation named: infoUsingPATCH_2
+2018-11-07 14:47:15,036  INFO CachingOperationNameGenerator:40 - Generating unique operation named: infoUsingDELETE_2
+2018-11-07 14:47:15,040  INFO CachingOperationNameGenerator:40 - Generating unique operation named: infoUsingOPTIONS_2
+2018-11-07 14:47:15,045  INFO CachingOperationNameGenerator:40 - Generating unique operation named: infoUsingTRACE_2
+2018-11-07 14:47:15,055  INFO CachingOperationNameGenerator:40 - Generating unique operation named: listUsingGET_2
+2018-11-07 14:47:15,060  INFO CachingOperationNameGenerator:40 - Generating unique operation named: listUsingHEAD_2
+2018-11-07 14:47:15,064  INFO CachingOperationNameGenerator:40 - Generating unique operation named: listUsingPOST_2
+2018-11-07 14:47:15,071  INFO CachingOperationNameGenerator:40 - Generating unique operation named: listUsingPUT_2
+2018-11-07 14:47:15,076  INFO CachingOperationNameGenerator:40 - Generating unique operation named: listUsingPATCH_2
+2018-11-07 14:47:15,081  INFO CachingOperationNameGenerator:40 - Generating unique operation named: listUsingDELETE_2
+2018-11-07 14:47:15,086  INFO CachingOperationNameGenerator:40 - Generating unique operation named: listUsingOPTIONS_2
+2018-11-07 14:47:15,091  INFO CachingOperationNameGenerator:40 - Generating unique operation named: listUsingTRACE_2
+2018-11-07 14:47:15,135  INFO CachingOperationNameGenerator:40 - Generating unique operation named: queryListUsingGET_2
+2018-11-07 14:47:15,140  INFO CachingOperationNameGenerator:40 - Generating unique operation named: queryListUsingHEAD_2
+2018-11-07 14:47:15,144  INFO CachingOperationNameGenerator:40 - Generating unique operation named: queryListUsingPOST_2
+2018-11-07 14:47:15,148  INFO CachingOperationNameGenerator:40 - Generating unique operation named: queryListUsingPUT_2
+2018-11-07 14:47:15,152  INFO CachingOperationNameGenerator:40 - Generating unique operation named: queryListUsingPATCH_2
+2018-11-07 14:47:15,157  INFO CachingOperationNameGenerator:40 - Generating unique operation named: queryListUsingDELETE_2
+2018-11-07 14:47:15,161  INFO CachingOperationNameGenerator:40 - Generating unique operation named: queryListUsingOPTIONS_2
+2018-11-07 14:47:15,166  INFO CachingOperationNameGenerator:40 - Generating unique operation named: queryListUsingTRACE_2
+2018-11-07 14:47:15,175  INFO CachingOperationNameGenerator:40 - Generating unique operation named: saveUsingGET_2
+2018-11-07 14:47:15,180  INFO CachingOperationNameGenerator:40 - Generating unique operation named: saveUsingHEAD_2
+2018-11-07 14:47:15,184  INFO CachingOperationNameGenerator:40 - Generating unique operation named: saveUsingPOST_2
+2018-11-07 14:47:15,189  INFO CachingOperationNameGenerator:40 - Generating unique operation named: saveUsingPUT_2
+2018-11-07 14:47:15,194  INFO CachingOperationNameGenerator:40 - Generating unique operation named: saveUsingPATCH_2
+2018-11-07 14:47:15,198  INFO CachingOperationNameGenerator:40 - Generating unique operation named: saveUsingDELETE_2
+2018-11-07 14:47:15,202  INFO CachingOperationNameGenerator:40 - Generating unique operation named: saveUsingOPTIONS_2
+2018-11-07 14:47:15,206  INFO CachingOperationNameGenerator:40 - Generating unique operation named: saveUsingTRACE_2
+2018-11-07 14:47:15,214  INFO CachingOperationNameGenerator:40 - Generating unique operation named: updateUsingGET_2
+2018-11-07 14:47:15,218  INFO CachingOperationNameGenerator:40 - Generating unique operation named: updateUsingHEAD_2
+2018-11-07 14:47:15,222  INFO CachingOperationNameGenerator:40 - Generating unique operation named: updateUsingPOST_2
+2018-11-07 14:47:15,225  INFO CachingOperationNameGenerator:40 - Generating unique operation named: updateUsingPUT_2
+2018-11-07 14:47:15,228  INFO CachingOperationNameGenerator:40 - Generating unique operation named: updateUsingPATCH_2
+2018-11-07 14:47:15,232  INFO CachingOperationNameGenerator:40 - Generating unique operation named: updateUsingDELETE_2
+2018-11-07 14:47:15,236  INFO CachingOperationNameGenerator:40 - Generating unique operation named: updateUsingOPTIONS_2
+2018-11-07 14:47:15,240  INFO CachingOperationNameGenerator:40 - Generating unique operation named: updateUsingTRACE_2
+2018-11-07 14:47:15,284  INFO CachingOperationNameGenerator:40 - Generating unique operation named: listUsingGET_3
+2018-11-07 14:47:15,287  INFO CachingOperationNameGenerator:40 - Generating unique operation named: listUsingHEAD_3
+2018-11-07 14:47:15,291  INFO CachingOperationNameGenerator:40 - Generating unique operation named: listUsingPOST_3
+2018-11-07 14:47:15,295  INFO CachingOperationNameGenerator:40 - Generating unique operation named: listUsingPUT_3
+2018-11-07 14:47:15,299  INFO CachingOperationNameGenerator:40 - Generating unique operation named: listUsingPATCH_3
+2018-11-07 14:47:15,302  INFO CachingOperationNameGenerator:40 - Generating unique operation named: listUsingDELETE_3
+2018-11-07 14:47:15,307  INFO CachingOperationNameGenerator:40 - Generating unique operation named: listUsingOPTIONS_3
+2018-11-07 14:47:15,312  INFO CachingOperationNameGenerator:40 - Generating unique operation named: listUsingTRACE_3
+2018-11-07 14:47:15,791  INFO TomcatEmbeddedServletContainer:201 - Tomcat started on port(s): 80 (http)
+2018-11-07 14:47:15,801  INFO AdventureApplication:57 - Started AdventureApplication in 13.859 seconds (JVM running for 14.987)
+2018-11-07 14:51:34,059  INFO DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+2018-11-07 14:51:34,163  INFO DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 103 ms
+2018-11-07 14:51:34,293  INFO TemplateEngine:825 - [THYMELEAF] INITIALIZING TEMPLATE ENGINE
+2018-11-07 14:51:34,447  INFO AbstractTemplateResolver:99 - [THYMELEAF] INITIALIZING TEMPLATE RESOLVER: org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+2018-11-07 14:51:34,448  INFO AbstractTemplateResolver:110 - [THYMELEAF] TEMPLATE RESOLVER INITIALIZED OK
+2018-11-07 14:51:34,448  INFO AbstractMessageResolver:72 - [THYMELEAF] INITIALIZING MESSAGE RESOLVER: org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+2018-11-07 14:51:34,448  INFO AbstractMessageResolver:78 - [THYMELEAF] MESSAGE RESOLVER INITIALIZED OK
+2018-11-07 14:51:34,457  INFO CONFIG:123 - [THYMELEAF] TEMPLATE ENGINE CONFIGURATION:
+[THYMELEAF] * Cache Factory implementation: org.thymeleaf.cache.StandardCacheManager
+[THYMELEAF] * Template modes:
+[THYMELEAF]     * XHTML
+[THYMELEAF]     * HTML5
+[THYMELEAF]     * VALIDXHTML
+[THYMELEAF]     * LEGACYHTML5
+[THYMELEAF]     * XML
+[THYMELEAF]     * VALIDXML
+[THYMELEAF] * Template resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+[THYMELEAF] * Message resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+[THYMELEAF] * Dialect [1 of 2]: org.thymeleaf.spring4.dialect.SpringStandardDialect
+[THYMELEAF]     * Prefix: "th"
+[THYMELEAF] * Dialect [2 of 2]: nz.net.ultraq.thymeleaf.LayoutDialect
+[THYMELEAF]     * Prefix: "layout"
+[THYMELEAF] TEMPLATE ENGINE CONFIGURED OK
+2018-11-07 14:51:34,457  INFO TemplateEngine:838 - [THYMELEAF] TEMPLATE ENGINE INITIALIZED
+2018-11-07 14:51:34,963  INFO WebSocketServer:45 - 有新窗口开始监听:7,当前在线人数为1
+2018-11-07 14:54:10,471  INFO WebSocketServer:61 - 有一连接关闭！当前在线人数为0
+2018-11-07 14:54:10,662  INFO WebSocketServer:45 - 有新窗口开始监听:7,当前在线人数为1
+2018-11-07 15:08:52,975  INFO WebSocketServer:61 - 有一连接关闭！当前在线人数为0
+2018-11-07 15:08:53,118  INFO WebSocketServer:45 - 有新窗口开始监听:7,当前在线人数为1
+2018-11-07 15:08:56,133  INFO WebSocketServer:70 - 收到来自窗口7的信息:heartbeat
+2018-11-07 15:08:59,131  INFO WebSocketServer:70 - 收到来自窗口7的信息:heartbeat
+2018-11-07 15:09:02,131  INFO WebSocketServer:70 - 收到来自窗口7的信息:heartbeat
+2018-11-07 15:09:05,131  INFO WebSocketServer:70 - 收到来自窗口7的信息:heartbeat
+2018-11-07 15:09:08,131  INFO WebSocketServer:70 - 收到来自窗口7的信息:heartbeat
+2018-11-07 15:09:11,133  INFO WebSocketServer:70 - 收到来自窗口7的信息:heartbeat
+2018-11-07 15:09:14,132  INFO WebSocketServer:70 - 收到来自窗口7的信息:heartbeat
+2018-11-07 15:09:17,136  INFO WebSocketServer:70 - 收到来自窗口7的信息:heartbeat
+2018-11-07 15:09:20,131  INFO WebSocketServer:70 - 收到来自窗口7的信息:heartbeat
+2018-11-07 15:09:23,131  INFO WebSocketServer:70 - 收到来自窗口7的信息:heartbeat
+2018-11-07 15:09:26,131  INFO WebSocketServer:70 - 收到来自窗口7的信息:heartbeat
+2018-11-07 15:09:29,132  INFO WebSocketServer:70 - 收到来自窗口7的信息:heartbeat
+2018-11-07 15:09:32,132  INFO WebSocketServer:70 - 收到来自窗口7的信息:heartbeat
+2018-11-07 15:09:35,132  INFO WebSocketServer:70 - 收到来自窗口7的信息:heartbeat
+2018-11-07 15:09:38,132  INFO WebSocketServer:70 - 收到来自窗口7的信息:heartbeat
+2018-11-07 15:09:41,133  INFO WebSocketServer:70 - 收到来自窗口7的信息:heartbeat
+2018-11-07 15:09:44,132  INFO WebSocketServer:70 - 收到来自窗口7的信息:heartbeat
+2018-11-07 15:09:47,132  INFO WebSocketServer:70 - 收到来自窗口7的信息:heartbeat
+2018-11-07 15:09:50,132  INFO WebSocketServer:70 - 收到来自窗口7的信息:heartbeat
+2018-11-07 15:09:53,132  INFO WebSocketServer:70 - 收到来自窗口7的信息:heartbeat
+2018-11-07 15:09:56,132  INFO WebSocketServer:70 - 收到来自窗口7的信息:heartbeat
+2018-11-07 15:09:59,132  INFO WebSocketServer:70 - 收到来自窗口7的信息:heartbeat
+2018-11-07 15:10:02,133  INFO WebSocketServer:70 - 收到来自窗口7的信息:heartbeat
+2018-11-07 15:10:05,132  INFO WebSocketServer:70 - 收到来自窗口7的信息:heartbeat
+2018-11-07 15:10:08,132  INFO WebSocketServer:70 - 收到来自窗口7的信息:heartbeat
+2018-11-07 15:10:11,132  INFO WebSocketServer:70 - 收到来自窗口7的信息:heartbeat
+2018-11-07 15:10:14,132  INFO WebSocketServer:70 - 收到来自窗口7的信息:heartbeat
+2018-11-07 15:10:17,132  INFO WebSocketServer:70 - 收到来自窗口7的信息:heartbeat
+2018-11-07 15:10:20,133  INFO WebSocketServer:70 - 收到来自窗口7的信息:heartbeat
+2018-11-07 15:10:23,133  INFO WebSocketServer:70 - 收到来自窗口7的信息:heartbeat
+2018-11-07 15:10:26,134  INFO WebSocketServer:70 - 收到来自窗口7的信息:heartbeat
+2018-11-07 15:10:29,132  INFO WebSocketServer:70 - 收到来自窗口7的信息:heartbeat
+2018-11-07 15:10:32,132  INFO WebSocketServer:70 - 收到来自窗口7的信息:heartbeat
+2018-11-07 15:10:35,132  INFO WebSocketServer:70 - 收到来自窗口7的信息:heartbeat
+2018-11-07 15:10:38,133  INFO WebSocketServer:70 - 收到来自窗口7的信息:heartbeat
+2018-11-07 15:10:41,133  INFO WebSocketServer:70 - 收到来自窗口7的信息:heartbeat
+2018-11-07 15:10:44,133  INFO WebSocketServer:70 - 收到来自窗口7的信息:heartbeat
+2018-11-07 15:10:47,134  INFO WebSocketServer:70 - 收到来自窗口7的信息:heartbeat
+2018-11-07 15:10:50,132  INFO WebSocketServer:70 - 收到来自窗口7的信息:heartbeat
+2018-11-07 15:10:53,132  INFO WebSocketServer:70 - 收到来自窗口7的信息:heartbeat
+2018-11-07 15:10:56,133  INFO WebSocketServer:70 - 收到来自窗口7的信息:heartbeat
+2018-11-07 15:10:59,133  INFO WebSocketServer:70 - 收到来自窗口7的信息:heartbeat
+2018-11-07 15:11:02,133  INFO WebSocketServer:70 - 收到来自窗口7的信息:heartbeat
+2018-11-07 15:11:05,133  INFO WebSocketServer:70 - 收到来自窗口7的信息:heartbeat
+2018-11-07 15:11:08,133  INFO WebSocketServer:70 - 收到来自窗口7的信息:heartbeat
+2018-11-07 15:11:11,132  INFO WebSocketServer:70 - 收到来自窗口7的信息:heartbeat
+2018-11-07 15:11:14,133  INFO WebSocketServer:70 - 收到来自窗口7的信息:heartbeat
+2018-11-07 15:11:17,133  INFO WebSocketServer:70 - 收到来自窗口7的信息:heartbeat
+2018-11-07 15:11:20,133  INFO WebSocketServer:70 - 收到来自窗口7的信息:heartbeat
+2018-11-07 15:11:23,133  INFO WebSocketServer:70 - 收到来自窗口7的信息:heartbeat
+2018-11-07 15:11:26,133  INFO WebSocketServer:70 - 收到来自窗口7的信息:heartbeat
+2018-11-07 15:11:29,134  INFO WebSocketServer:70 - 收到来自窗口7的信息:heartbeat
+2018-11-07 15:11:32,143  INFO WebSocketServer:70 - 收到来自窗口7的信息:heartbeat
+2018-11-07 15:11:34,402  INFO WebSocketServer:61 - 有一连接关闭！当前在线人数为0
+2018-11-07 15:15:01,805  INFO WebSocketServer:45 - 有新窗口开始监听:null,当前在线人数为1
+2018-11-07 15:15:11,826  INFO WebSocketServer:70 - 收到来自窗口null的信息:heartbeat
+2018-11-07 15:15:21,826  INFO WebSocketServer:70 - 收到来自窗口null的信息:heartbeat
+2018-11-07 15:15:31,826  INFO WebSocketServer:70 - 收到来自窗口null的信息:heartbeat
+2018-11-07 15:15:38,186  INFO WebSocketServer:61 - 有一连接关闭！当前在线人数为0
+2018-11-07 15:15:38,344  INFO WebSocketServer:45 - 有新窗口开始监听:eb4d222ca8348,当前在线人数为1
+2018-11-07 15:15:49,101  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:15:59,102  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:16:09,102  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:16:19,101  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:16:29,103  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:16:39,101  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:16:49,102  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:16:59,101  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:17:09,102  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:17:19,102  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:17:29,102  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:17:39,103  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:17:49,103  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:17:59,103  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:18:09,102  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:18:19,103  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:18:29,104  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:18:39,103  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:18:49,103  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:18:59,103  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:19:09,103  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:19:19,104  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:19:29,104  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:19:39,104  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:19:49,104  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:19:59,104  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:20:09,105  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:20:19,104  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:20:29,104  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:20:39,104  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:20:49,105  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:20:59,105  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:21:09,105  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:21:19,105  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:21:29,105  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:21:39,105  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:21:49,105  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:21:59,107  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:22:09,105  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:22:19,106  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:22:29,106  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:22:39,107  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:22:49,106  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:22:59,106  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:23:09,107  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:23:19,106  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:23:29,107  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:23:39,106  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:23:49,108  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:23:59,106  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:24:09,107  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:24:19,108  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:24:29,107  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:24:39,108  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:24:49,108  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:24:59,108  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:25:09,107  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:25:19,108  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:25:29,108  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:25:39,113  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:25:49,108  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:25:59,108  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:26:09,110  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:26:19,109  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:26:29,174  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:26:39,109  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:26:49,109  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:26:59,109  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:27:09,109  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:27:19,109  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:27:29,109  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:27:39,109  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:27:49,110  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:27:59,109  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:28:09,110  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:28:19,110  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:28:29,110  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:28:38,575  INFO WebSocketServer:70 - 收到来自窗口eb4d222ca8348的信息:heartbeat
+2018-11-07 15:28:40,391  INFO WebSocketServer:61 - 有一连接关闭！当前在线人数为0
+2018-11-07 15:28:40,509  INFO WebSocketServer:45 - 有新窗口开始监听:80923c2734c48,当前在线人数为1
+2018-11-07 15:28:50,541  INFO WebSocketServer:70 - 收到来自窗口80923c2734c48的信息:heartbeat
+2018-11-07 16:28:35,650  INFO AdventureApplication:48 - Starting AdventureApplication on BS1HDX84D9084A0 with PID 15008 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-11-07 16:28:35,653 DEBUG AdventureApplication:51 - Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-11-07 16:28:35,654  INFO AdventureApplication:593 - No active profile set, falling back to default profiles: default
+2018-11-07 16:28:36,098  INFO AnnotationConfigEmbeddedWebApplicationContext:583 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2ecfc40c: startup date [Wed Nov 07 16:28:36 CST 2018]; root of context hierarchy
+2018-11-07 16:28:36,558  INFO Version:30 - HV000001: Hibernate Validator 5.3.6.Final
+2018-11-07 16:28:38,307  INFO RepositoryConfigurationDelegate:165 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-11-07 16:28:39,289  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 - Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$96a2f205] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-07 16:28:39,301  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$fdf529cb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-07 16:28:39,359  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 - Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-07 16:28:39,362  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@1f4a7b52' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-07 16:28:39,375  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 - Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$bb7794b7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-07 16:28:39,395  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-07 16:28:40,207  INFO TomcatEmbeddedServletContainer:89 - Tomcat initialized with port(s): 80 (http)
+2018-11-07 16:28:40,410  INFO ContextLoader:276 - Root WebApplicationContext: initialization completed in 4316 ms
+2018-11-07 16:28:40,783  INFO FilterRegistrationBean:258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-11-07 16:28:40,784  INFO FilterRegistrationBean:258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-11-07 16:28:40,786  INFO FilterRegistrationBean:258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-11-07 16:28:40,786  INFO FilterRegistrationBean:258 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-11-07 16:28:40,788  INFO DelegatingFilterProxyRegistrationBean:258 - Mapping filter: 'springSecurityFilterChain' to: [/*]
+2018-11-07 16:28:40,789  INFO ServletRegistrationBean:190 - Mapping servlet: 'dispatcherServlet' to [/]
+2018-11-07 16:28:43,136  INFO RequestMappingHandlerMapping:543 - Mapped "{[/go]}" onto public java.lang.String com.firstTry.Adventure.config.DefaultView.index(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-11-07 16:28:43,137  INFO RequestMappingHandlerMapping:543 - Mapped "{[/hhh]}" onto public java.lang.String com.firstTry.Adventure.config.DefaultView.hello()
+2018-11-07 16:28:43,138  INFO RequestMappingHandlerMapping:543 - Mapped "{[/preface]}" onto public java.lang.String com.firstTry.Adventure.config.DefaultView.preface()
+2018-11-07 16:28:43,138  INFO RequestMappingHandlerMapping:543 - Mapped "{[/login]}" onto public java.lang.String com.firstTry.Adventure.config.DefaultView.login(javax.servlet.http.HttpServletRequest)
+2018-11-07 16:28:43,143  INFO RequestMappingHandlerMapping:543 - Mapped "{[/adventure/application/update]}" onto public com.firstTry.Adventure.utils.R com.firstTry.Adventure.controller.ApplicationController.update(com.firstTry.Adventure.entity.ApplicationEntity)
+2018-11-07 16:28:43,144  INFO RequestMappingHandlerMapping:543 - Mapped "{[/adventure/application/delete]}" onto public com.firstTry.Adventure.utils.R com.firstTry.Adventure.controller.ApplicationController.delete(java.lang.String[])
+2018-11-07 16:28:43,145  INFO RequestMappingHandlerMapping:543 - Mapped "{[/adventure/application/list]}" onto public java.util.List<com.firstTry.Adventure.entity.ApplicationEntity> com.firstTry.Adventure.controller.ApplicationController.list()
+2018-11-07 16:28:43,146  INFO RequestMappingHandlerMapping:543 - Mapped "{[/adventure/application/save]}" onto public com.firstTry.Adventure.utils.R com.firstTry.Adventure.controller.ApplicationController.save(com.firstTry.Adventure.entity.ApplicationEntity)
+2018-11-07 16:28:43,146  INFO RequestMappingHandlerMapping:543 - Mapped "{[/adventure/application/info/{code}]}" onto public com.firstTry.Adventure.utils.R com.firstTry.Adventure.controller.ApplicationController.info(java.lang.String)
+2018-11-07 16:28:43,149  INFO RequestMappingHandlerMapping:543 - Mapped "{[/adventure/application/queryList]}" onto public com.firstTry.Adventure.utils.R com.firstTry.Adventure.controller.ApplicationController.queryList(java.util.Map<java.lang.String, java.lang.Object>)
+2018-11-07 16:28:43,155  INFO RequestMappingHandlerMapping:543 - Mapped "{[/adventure/menu/update]}" onto public com.firstTry.Adventure.utils.R com.firstTry.Adventure.controller.MenuController.update(com.firstTry.Adventure.entity.MenuEntity)
+2018-11-07 16:28:43,156  INFO RequestMappingHandlerMapping:543 - Mapped "{[/adventure/menu/delete]}" onto public com.firstTry.Adventure.utils.R com.firstTry.Adventure.controller.MenuController.delete(java.lang.Long[])
+2018-11-07 16:28:43,156  INFO RequestMappingHandlerMapping:543 - Mapped "{[/adventure/menu/list]}" onto public java.util.List<com.firstTry.Adventure.entity.MenuEntity> com.firstTry.Adventure.controller.MenuController.list()
+2018-11-07 16:28:43,157  INFO RequestMappingHandlerMapping:543 - Mapped "{[/adventure/menu/save]}" onto public com.firstTry.Adventure.utils.R com.firstTry.Adventure.controller.MenuController.save(com.firstTry.Adventure.entity.MenuEntity)
+2018-11-07 16:28:43,157  INFO RequestMappingHandlerMapping:543 - Mapped "{[/adventure/menu/info]}" onto public com.firstTry.Adventure.utils.R com.firstTry.Adventure.controller.MenuController.info(java.lang.Long)
+2018-11-07 16:28:43,158  INFO RequestMappingHandlerMapping:543 - Mapped "{[/adventure/menu/queryList]}" onto public com.firstTry.Adventure.utils.R com.firstTry.Adventure.controller.MenuController.queryList(java.util.Map<java.lang.String, java.lang.Object>)
+2018-11-07 16:28:43,163  INFO RequestMappingHandlerMapping:543 - Mapped "{[/adventure/qiniu/update]}" onto public com.firstTry.Adventure.utils.R com.firstTry.Adventure.controller.QiniuController.update(com.firstTry.Adventure.entity.QiniuStorageEntity)
+2018-11-07 16:28:43,163  INFO RequestMappingHandlerMapping:543 - Mapped "{[/adventure/qiniu/delete]}" onto public com.firstTry.Adventure.utils.R com.firstTry.Adventure.controller.QiniuController.delete(java.lang.Long[])
+2018-11-07 16:28:43,164  INFO RequestMappingHandlerMapping:543 - Mapped "{[/adventure/qiniu/list]}" onto public java.util.List<com.firstTry.Adventure.entity.QiniuStorageEntity> com.firstTry.Adventure.controller.QiniuController.list(boolean)
+2018-11-07 16:28:43,165  INFO RequestMappingHandlerMapping:543 - Mapped "{[/adventure/qiniu/save]}" onto public com.firstTry.Adventure.utils.R com.firstTry.Adventure.controller.QiniuController.save(com.firstTry.Adventure.entity.QiniuStorageEntity)
+2018-11-07 16:28:43,165  INFO RequestMappingHandlerMapping:543 - Mapped "{[/adventure/qiniu/info]}" onto public com.firstTry.Adventure.utils.R com.firstTry.Adventure.controller.QiniuController.info(java.lang.Long)
+2018-11-07 16:28:43,166  INFO RequestMappingHandlerMapping:543 - Mapped "{[/adventure/qiniu/queryList]}" onto public com.firstTry.Adventure.utils.R com.firstTry.Adventure.controller.QiniuController.queryList(java.util.Map<java.lang.String, java.lang.Object>)
+2018-11-07 16:28:43,167  INFO RequestMappingHandlerMapping:543 - Mapped "{[/adventure/qiniu/uploadImg],methods=[POST]}" onto public com.firstTry.Adventure.utils.R com.firstTry.Adventure.controller.QiniuController.uploadImg(org.springframework.web.multipart.MultipartFile,java.lang.String,javax.servlet.http.HttpServletRequest)
+2018-11-07 16:28:43,167  INFO RequestMappingHandlerMapping:543 - Mapped "{[/adventure/qiniu/socket/push]}" onto public java.lang.Object com.firstTry.Adventure.controller.QiniuController.pushToWeb(java.lang.String)
+2018-11-07 16:28:43,170  INFO RequestMappingHandlerMapping:543 - Mapped "{[/sys/generator/list]}" onto public com.firstTry.Adventure.utils.R com.firstTry.Adventure.controller.SysGeneratorController.list(java.util.Map<java.lang.String, java.lang.Object>)
+2018-11-07 16:28:43,171  INFO RequestMappingHandlerMapping:543 - Mapped "{[/sys/generator/code]}" onto public void com.firstTry.Adventure.controller.SysGeneratorController.code(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException
+2018-11-07 16:28:43,172  INFO RequestMappingHandlerMapping:543 - Mapped "{[/sys/generator/queryColumns]}" onto public com.firstTry.Adventure.utils.R com.firstTry.Adventure.controller.SysGeneratorController.queryColumns(javax.servlet.http.HttpServletRequest)
+2018-11-07 16:28:43,173  INFO RequestMappingHandlerMapping:543 - Mapped "{[/hi]}" onto public java.lang.String com.firstTry.Adventure.controller.UserLoginController.hello() throws java.lang.Exception
+2018-11-07 16:28:43,175  INFO RequestMappingHandlerMapping:543 - Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2018-11-07 16:28:43,180  INFO RequestMappingHandlerMapping:543 - Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2018-11-07 16:28:43,181  INFO RequestMappingHandlerMapping:543 - Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2018-11-07 16:28:43,183  INFO RequestMappingHandlerMapping:543 - Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2018-11-07 16:28:43,188  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-11-07 16:28:43,189  INFO RequestMappingHandlerMapping:543 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-11-07 16:28:44,091  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-11-07 16:28:44,091  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-11-07 16:28:44,146  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-11-07 16:28:44,156  INFO WebMvcAutoConfiguration$WelcomePageHandlerMapping:549 - Adding welcome page: class path resource [views/index.html]
+2018-11-07 16:28:44,226  INFO DefaultSecurityFilterChain:43 - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7c1c0640, org.springframework.security.web.context.SecurityContextPersistenceFilter@57f678a5, org.springframework.security.web.header.HeaderWriterFilter@612fbad0, org.springframework.web.filter.CorsFilter@5654a4d5, org.springframework.security.web.authentication.logout.LogoutFilter@2822e378, com.firstTry.Adventure.config.JWTLoginFilter@3dfd437b, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7aadce52, com.firstTry.Adventure.config.JWTAuthenticationFilter@d95c7ad, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@37aa9d29, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@11b79e92, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@11a7fe59, org.springframework.security.web.session.SessionManagementFilter@6cce2fd3, org.springframework.security.web.access.ExceptionTranslationFilter@29fa9d8d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1118e132]
+2018-11-07 16:28:44,296  INFO ThreadPoolTaskExecutor:165 - Initializing ExecutorService 
+2018-11-07 16:28:44,306  INFO ThreadPoolTaskExecutor:165 - Initializing ExecutorService  'defaultThreadPool'
+2018-11-07 16:28:44,455  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2ecfc40c: startup date [Wed Nov 07 16:28:36 CST 2018]; root of context hierarchy
+2018-11-07 16:28:44,531  INFO ExceptionHandlerExceptionResolver:273 - Detected @ExceptionHandler methods in globalExceptionHandler
+2018-11-07 16:28:45,750  INFO OptionalLiveReloadServer:58 - LiveReload server is running on port 35729
+2018-11-07 16:28:45,760  WARN RedisStarterDeprecationWarningAutoConfiguration:43 - spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2018-11-07 16:28:45,856  INFO ServerEndpointExporter:143 - Registering @ServerEndpoint class: class com.firstTry.Adventure.middleware.WebSocketServer
+2018-11-07 16:28:45,879  INFO AnnotationMBeanExporter:431 - Registering beans for JMX exposure on startup
+2018-11-07 16:28:45,896  INFO DefaultLifecycleProcessor:343 - Starting beans in phase 2147483647
+2018-11-07 16:28:45,896  INFO DocumentationPluginsBootstrapper:120 - Context refreshed
+2018-11-07 16:28:45,934  INFO DocumentationPluginsBootstrapper:123 - Found 1 custom documentation plugin(s)
+2018-11-07 16:28:45,957  INFO ApiListingReferenceScanner:41 - Scanning for api listing references
+2018-11-07 16:28:46,509  INFO CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingGET_1
+2018-11-07 16:28:46,512  INFO CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingHEAD_1
+2018-11-07 16:28:46,515  INFO CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingPOST_1
+2018-11-07 16:28:46,519  INFO CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingPUT_1
+2018-11-07 16:28:46,522  INFO CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingPATCH_1
+2018-11-07 16:28:46,525  INFO CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_1
+2018-11-07 16:28:46,529  INFO CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingOPTIONS_1
+2018-11-07 16:28:46,533  INFO CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingTRACE_1
+2018-11-07 16:28:46,539  INFO CachingOperationNameGenerator:40 - Generating unique operation named: infoUsingGET_1
+2018-11-07 16:28:46,543  INFO CachingOperationNameGenerator:40 - Generating unique operation named: infoUsingHEAD_1
+2018-11-07 16:28:46,547  INFO CachingOperationNameGenerator:40 - Generating unique operation named: infoUsingPOST_1
+2018-11-07 16:28:46,551  INFO CachingOperationNameGenerator:40 - Generating unique operation named: infoUsingPUT_1
+2018-11-07 16:28:46,555  INFO CachingOperationNameGenerator:40 - Generating unique operation named: infoUsingPATCH_1
+2018-11-07 16:28:46,559  INFO CachingOperationNameGenerator:40 - Generating unique operation named: infoUsingDELETE_1
+2018-11-07 16:28:46,563  INFO CachingOperationNameGenerator:40 - Generating unique operation named: infoUsingOPTIONS_1
+2018-11-07 16:28:46,567  INFO CachingOperationNameGenerator:40 - Generating unique operation named: infoUsingTRACE_1
+2018-11-07 16:28:46,572  INFO CachingOperationNameGenerator:40 - Generating unique operation named: listUsingGET_1
+2018-11-07 16:28:46,575  INFO CachingOperationNameGenerator:40 - Generating unique operation named: listUsingHEAD_1
+2018-11-07 16:28:46,576  INFO CachingOperationNameGenerator:40 - Generating unique operation named: listUsingPOST_1
+2018-11-07 16:28:46,579  INFO CachingOperationNameGenerator:40 - Generating unique operation named: listUsingPUT_1
+2018-11-07 16:28:46,581  INFO CachingOperationNameGenerator:40 - Generating unique operation named: listUsingPATCH_1
+2018-11-07 16:28:46,583  INFO CachingOperationNameGenerator:40 - Generating unique operation named: listUsingDELETE_1
+2018-11-07 16:28:46,585  INFO CachingOperationNameGenerator:40 - Generating unique operation named: listUsingOPTIONS_1
+2018-11-07 16:28:46,588  INFO CachingOperationNameGenerator:40 - Generating unique operation named: listUsingTRACE_1
+2018-11-07 16:28:46,594  INFO CachingOperationNameGenerator:40 - Generating unique operation named: queryListUsingGET_1
+2018-11-07 16:28:46,597  INFO CachingOperationNameGenerator:40 - Generating unique operation named: queryListUsingHEAD_1
+2018-11-07 16:28:46,600  INFO CachingOperationNameGenerator:40 - Generating unique operation named: queryListUsingPOST_1
+2018-11-07 16:28:46,604  INFO CachingOperationNameGenerator:40 - Generating unique operation named: queryListUsingPUT_1
+2018-11-07 16:28:46,608  INFO CachingOperationNameGenerator:40 - Generating unique operation named: queryListUsingPATCH_1
+2018-11-07 16:28:46,611  INFO CachingOperationNameGenerator:40 - Generating unique operation named: queryListUsingDELETE_1
+2018-11-07 16:28:46,615  INFO CachingOperationNameGenerator:40 - Generating unique operation named: queryListUsingOPTIONS_1
+2018-11-07 16:28:46,619  INFO CachingOperationNameGenerator:40 - Generating unique operation named: queryListUsingTRACE_1
+2018-11-07 16:28:46,628  INFO CachingOperationNameGenerator:40 - Generating unique operation named: saveUsingGET_1
+2018-11-07 16:28:46,631  INFO CachingOperationNameGenerator:40 - Generating unique operation named: saveUsingHEAD_1
+2018-11-07 16:28:46,635  INFO CachingOperationNameGenerator:40 - Generating unique operation named: saveUsingPOST_1
+2018-11-07 16:28:46,639  INFO CachingOperationNameGenerator:40 - Generating unique operation named: saveUsingPUT_1
+2018-11-07 16:28:46,643  INFO CachingOperationNameGenerator:40 - Generating unique operation named: saveUsingPATCH_1
+2018-11-07 16:28:46,648  INFO CachingOperationNameGenerator:40 - Generating unique operation named: saveUsingDELETE_1
+2018-11-07 16:28:46,651  INFO CachingOperationNameGenerator:40 - Generating unique operation named: saveUsingOPTIONS_1
+2018-11-07 16:28:46,654  INFO CachingOperationNameGenerator:40 - Generating unique operation named: saveUsingTRACE_1
+2018-11-07 16:28:46,659  INFO CachingOperationNameGenerator:40 - Generating unique operation named: updateUsingGET_1
+2018-11-07 16:28:46,662  INFO CachingOperationNameGenerator:40 - Generating unique operation named: updateUsingHEAD_1
+2018-11-07 16:28:46,666  INFO CachingOperationNameGenerator:40 - Generating unique operation named: updateUsingPOST_1
+2018-11-07 16:28:46,670  INFO CachingOperationNameGenerator:40 - Generating unique operation named: updateUsingPUT_1
+2018-11-07 16:28:46,674  INFO CachingOperationNameGenerator:40 - Generating unique operation named: updateUsingPATCH_1
+2018-11-07 16:28:46,678  INFO CachingOperationNameGenerator:40 - Generating unique operation named: updateUsingDELETE_1
+2018-11-07 16:28:46,682  INFO CachingOperationNameGenerator:40 - Generating unique operation named: updateUsingOPTIONS_1
+2018-11-07 16:28:46,686  INFO CachingOperationNameGenerator:40 - Generating unique operation named: updateUsingTRACE_1
+2018-11-07 16:28:46,694  INFO CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingGET_2
+2018-11-07 16:28:46,699  INFO CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingHEAD_2
+2018-11-07 16:28:46,704  INFO CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingPOST_2
+2018-11-07 16:28:46,709  INFO CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingPUT_2
+2018-11-07 16:28:46,714  INFO CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingPATCH_2
+2018-11-07 16:28:46,719  INFO CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_2
+2018-11-07 16:28:46,722  INFO CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingOPTIONS_2
+2018-11-07 16:28:46,726  INFO CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingTRACE_2
+2018-11-07 16:28:46,733  INFO CachingOperationNameGenerator:40 - Generating unique operation named: infoUsingGET_2
+2018-11-07 16:28:46,737  INFO CachingOperationNameGenerator:40 - Generating unique operation named: infoUsingHEAD_2
+2018-11-07 16:28:46,742  INFO CachingOperationNameGenerator:40 - Generating unique operation named: infoUsingPOST_2
+2018-11-07 16:28:46,746  INFO CachingOperationNameGenerator:40 - Generating unique operation named: infoUsingPUT_2
+2018-11-07 16:28:46,750  INFO CachingOperationNameGenerator:40 - Generating unique operation named: infoUsingPATCH_2
+2018-11-07 16:28:46,754  INFO CachingOperationNameGenerator:40 - Generating unique operation named: infoUsingDELETE_2
+2018-11-07 16:28:46,758  INFO CachingOperationNameGenerator:40 - Generating unique operation named: infoUsingOPTIONS_2
+2018-11-07 16:28:46,762  INFO CachingOperationNameGenerator:40 - Generating unique operation named: infoUsingTRACE_2
+2018-11-07 16:28:46,771  INFO CachingOperationNameGenerator:40 - Generating unique operation named: listUsingGET_2
+2018-11-07 16:28:46,776  INFO CachingOperationNameGenerator:40 - Generating unique operation named: listUsingHEAD_2
+2018-11-07 16:28:46,780  INFO CachingOperationNameGenerator:40 - Generating unique operation named: listUsingPOST_2
+2018-11-07 16:28:46,785  INFO CachingOperationNameGenerator:40 - Generating unique operation named: listUsingPUT_2
+2018-11-07 16:28:46,788  INFO CachingOperationNameGenerator:40 - Generating unique operation named: listUsingPATCH_2
+2018-11-07 16:28:46,792  INFO CachingOperationNameGenerator:40 - Generating unique operation named: listUsingDELETE_2
+2018-11-07 16:28:46,797  INFO CachingOperationNameGenerator:40 - Generating unique operation named: listUsingOPTIONS_2
+2018-11-07 16:28:46,801  INFO CachingOperationNameGenerator:40 - Generating unique operation named: listUsingTRACE_2
+2018-11-07 16:28:46,842  INFO CachingOperationNameGenerator:40 - Generating unique operation named: queryListUsingGET_2
+2018-11-07 16:28:46,846  INFO CachingOperationNameGenerator:40 - Generating unique operation named: queryListUsingHEAD_2
+2018-11-07 16:28:46,850  INFO CachingOperationNameGenerator:40 - Generating unique operation named: queryListUsingPOST_2
+2018-11-07 16:28:46,853  INFO CachingOperationNameGenerator:40 - Generating unique operation named: queryListUsingPUT_2
+2018-11-07 16:28:46,857  INFO CachingOperationNameGenerator:40 - Generating unique operation named: queryListUsingPATCH_2
+2018-11-07 16:28:46,861  INFO CachingOperationNameGenerator:40 - Generating unique operation named: queryListUsingDELETE_2
+2018-11-07 16:28:46,865  INFO CachingOperationNameGenerator:40 - Generating unique operation named: queryListUsingOPTIONS_2
+2018-11-07 16:28:46,869  INFO CachingOperationNameGenerator:40 - Generating unique operation named: queryListUsingTRACE_2
+2018-11-07 16:28:46,877  INFO CachingOperationNameGenerator:40 - Generating unique operation named: saveUsingGET_2
+2018-11-07 16:28:46,880  INFO CachingOperationNameGenerator:40 - Generating unique operation named: saveUsingHEAD_2
+2018-11-07 16:28:46,882  INFO CachingOperationNameGenerator:40 - Generating unique operation named: saveUsingPOST_2
+2018-11-07 16:28:46,885  INFO CachingOperationNameGenerator:40 - Generating unique operation named: saveUsingPUT_2
+2018-11-07 16:28:46,887  INFO CachingOperationNameGenerator:40 - Generating unique operation named: saveUsingPATCH_2
+2018-11-07 16:28:46,891  INFO CachingOperationNameGenerator:40 - Generating unique operation named: saveUsingDELETE_2
+2018-11-07 16:28:46,895  INFO CachingOperationNameGenerator:40 - Generating unique operation named: saveUsingOPTIONS_2
+2018-11-07 16:28:46,899  INFO CachingOperationNameGenerator:40 - Generating unique operation named: saveUsingTRACE_2
+2018-11-07 16:28:46,904  INFO CachingOperationNameGenerator:40 - Generating unique operation named: updateUsingGET_2
+2018-11-07 16:28:46,909  INFO CachingOperationNameGenerator:40 - Generating unique operation named: updateUsingHEAD_2
+2018-11-07 16:28:46,913  INFO CachingOperationNameGenerator:40 - Generating unique operation named: updateUsingPOST_2
+2018-11-07 16:28:46,917  INFO CachingOperationNameGenerator:40 - Generating unique operation named: updateUsingPUT_2
+2018-11-07 16:28:46,920  INFO CachingOperationNameGenerator:40 - Generating unique operation named: updateUsingPATCH_2
+2018-11-07 16:28:46,925  INFO CachingOperationNameGenerator:40 - Generating unique operation named: updateUsingDELETE_2
+2018-11-07 16:28:46,928  INFO CachingOperationNameGenerator:40 - Generating unique operation named: updateUsingOPTIONS_2
+2018-11-07 16:28:46,932  INFO CachingOperationNameGenerator:40 - Generating unique operation named: updateUsingTRACE_2
+2018-11-07 16:28:46,970  INFO CachingOperationNameGenerator:40 - Generating unique operation named: listUsingGET_3
+2018-11-07 16:28:46,973  INFO CachingOperationNameGenerator:40 - Generating unique operation named: listUsingHEAD_3
+2018-11-07 16:28:46,977  INFO CachingOperationNameGenerator:40 - Generating unique operation named: listUsingPOST_3
+2018-11-07 16:28:46,980  INFO CachingOperationNameGenerator:40 - Generating unique operation named: listUsingPUT_3
+2018-11-07 16:28:46,984  INFO CachingOperationNameGenerator:40 - Generating unique operation named: listUsingPATCH_3
+2018-11-07 16:28:46,988  INFO CachingOperationNameGenerator:40 - Generating unique operation named: listUsingDELETE_3
+2018-11-07 16:28:46,992  INFO CachingOperationNameGenerator:40 - Generating unique operation named: listUsingOPTIONS_3
+2018-11-07 16:28:46,995  INFO CachingOperationNameGenerator:40 - Generating unique operation named: listUsingTRACE_3
+2018-11-07 16:28:47,135  INFO TomcatEmbeddedServletContainer:201 - Tomcat started on port(s): 80 (http)
+2018-11-07 16:28:47,143  INFO AdventureApplication:57 - Started AdventureApplication in 11.921 seconds (JVM running for 12.559)
+2018-11-07 16:28:47,420  INFO DispatcherServlet:489 - FrameworkServlet 'dispatcherServlet': initialization started
+2018-11-07 16:28:47,458  INFO DispatcherServlet:508 - FrameworkServlet 'dispatcherServlet': initialization completed in 38 ms
+2018-11-07 16:28:47,566  INFO WebSocketServer:45 - 有新窗口开始监听:80923c2734c48,当前在线人数为1
+2018-11-07 16:28:51,154  INFO WebSocketServer:70 - 收到来自窗口80923c2734c48的信息:heartbeat
+2018-11-07 16:28:58,153  INFO WebSocketServer:70 - 收到来自窗口80923c2734c48的信息:heartbeat
+2018-11-07 16:29:01,154  INFO WebSocketServer:70 - 收到来自窗口80923c2734c48的信息:heartbeat
+2018-11-07 16:29:07,550  INFO WebSocketServer:70 - 收到来自窗口80923c2734c48的信息:heartbeat
+2018-11-07 16:29:07,637  INFO TemplateEngine:825 - [THYMELEAF] INITIALIZING TEMPLATE ENGINE
+2018-11-07 16:29:07,726  INFO AbstractTemplateResolver:99 - [THYMELEAF] INITIALIZING TEMPLATE RESOLVER: org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+2018-11-07 16:29:07,727  INFO AbstractTemplateResolver:110 - [THYMELEAF] TEMPLATE RESOLVER INITIALIZED OK
+2018-11-07 16:29:07,728  INFO AbstractMessageResolver:72 - [THYMELEAF] INITIALIZING MESSAGE RESOLVER: org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+2018-11-07 16:29:07,729  INFO AbstractMessageResolver:78 - [THYMELEAF] MESSAGE RESOLVER INITIALIZED OK
+2018-11-07 16:29:07,736  INFO CONFIG:123 - [THYMELEAF] TEMPLATE ENGINE CONFIGURATION:
+[THYMELEAF] * Cache Factory implementation: org.thymeleaf.cache.StandardCacheManager
+[THYMELEAF] * Template modes:
+[THYMELEAF]     * HTML5
+[THYMELEAF]     * VALIDXML
+[THYMELEAF]     * XHTML
+[THYMELEAF]     * XML
+[THYMELEAF]     * VALIDXHTML
+[THYMELEAF]     * LEGACYHTML5
+[THYMELEAF] * Template resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+[THYMELEAF] * Message resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+[THYMELEAF] * Dialect [1 of 2]: org.thymeleaf.spring4.dialect.SpringStandardDialect
+[THYMELEAF]     * Prefix: "th"
+[THYMELEAF] * Dialect [2 of 2]: nz.net.ultraq.thymeleaf.LayoutDialect
+[THYMELEAF]     * Prefix: "layout"
+[THYMELEAF] TEMPLATE ENGINE CONFIGURED OK
+2018-11-07 16:29:07,737  INFO TemplateEngine:838 - [THYMELEAF] TEMPLATE ENGINE INITIALIZED
+2018-11-07 16:29:07,853  INFO WebSocketServer:61 - 有一连接关闭！当前在线人数为0
+2018-11-07 16:29:09,086  INFO WebSocketServer:45 - 有新窗口开始监听:1918695147a48,当前在线人数为1
+2018-11-07 16:29:19,093  INFO WebSocketServer:70 - 收到来自窗口1918695147a48的信息:heartbeat
+2018-11-07 16:29:29,092  INFO WebSocketServer:70 - 收到来自窗口1918695147a48的信息:heartbeat
+2018-11-07 16:29:39,093  INFO WebSocketServer:70 - 收到来自窗口1918695147a48的信息:heartbeat
+2018-11-07 16:29:49,092  INFO WebSocketServer:70 - 收到来自窗口1918695147a48的信息:heartbeat
+2018-11-07 16:29:59,093  INFO WebSocketServer:70 - 收到来自窗口1918695147a48的信息:heartbeat
+2018-11-07 16:30:09,093  INFO WebSocketServer:70 - 收到来自窗口1918695147a48的信息:heartbeat
+2018-11-07 16:30:19,093  INFO WebSocketServer:70 - 收到来自窗口1918695147a48的信息:heartbeat
+2018-11-07 16:30:29,094  INFO WebSocketServer:70 - 收到来自窗口1918695147a48的信息:heartbeat
+2018-11-07 16:30:39,092  INFO WebSocketServer:70 - 收到来自窗口1918695147a48的信息:heartbeat
+2018-11-07 16:30:49,094  INFO WebSocketServer:70 - 收到来自窗口1918695147a48的信息:heartbeat
+2018-11-07 16:30:59,093  INFO WebSocketServer:70 - 收到来自窗口1918695147a48的信息:heartbeat
+2018-11-07 16:31:09,156  INFO WebSocketServer:70 - 收到来自窗口1918695147a48的信息:heartbeat
+2018-11-07 16:31:19,154  INFO WebSocketServer:70 - 收到来自窗口1918695147a48的信息:heartbeat
+2018-11-07 16:31:25,020  INFO WebSocketServer:45 - 有新窗口开始监听:bfbc1237ae148,当前在线人数为2
+2018-11-07 16:31:29,155  INFO WebSocketServer:70 - 收到来自窗口1918695147a48的信息:heartbeat
+2018-11-07 16:31:35,037  INFO WebSocketServer:70 - 收到来自窗口bfbc1237ae148的信息:heartbeat
+2018-11-07 16:31:39,155  INFO WebSocketServer:70 - 收到来自窗口1918695147a48的信息:heartbeat
+2018-11-07 16:31:45,039  INFO WebSocketServer:70 - 收到来自窗口bfbc1237ae148的信息:heartbeat
+2018-11-07 16:31:46,625  INFO WebSocketServer:103 - 推送消息到窗口null，推送内容:null
+2018-11-07 16:31:46,639  WARN ExceptionHandlerExceptionResolver:189 - Resolved exception caused by Handler execution: java.lang.IllegalArgumentException: Invalid null data argument
+2018-11-07 16:31:49,155  INFO WebSocketServer:70 - 收到来自窗口1918695147a48的信息:heartbeat
+2018-11-07 16:31:55,039  INFO WebSocketServer:70 - 收到来自窗口bfbc1237ae148的信息:heartbeat
+2018-11-07 16:31:59,155  INFO WebSocketServer:70 - 收到来自窗口1918695147a48的信息:heartbeat
+2018-11-07 16:32:03,543  INFO WebSocketServer:103 - 推送消息到窗口null，推送内容:444
+2018-11-07 16:32:05,332  INFO WebSocketServer:70 - 收到来自窗口bfbc1237ae148的信息:heartbeat
+2018-11-07 16:32:09,155  INFO WebSocketServer:70 - 收到来自窗口1918695147a48的信息:heartbeat
+2018-11-07 16:32:15,040  INFO WebSocketServer:70 - 收到来自窗口bfbc1237ae148的信息:heartbeat
+2018-11-07 16:32:19,095  INFO WebSocketServer:70 - 收到来自窗口1918695147a48的信息:heartbeat
+2018-11-07 16:32:25,197  INFO WebSocketServer:70 - 收到来自窗口bfbc1237ae148的信息:heartbeat
+2018-11-07 16:32:29,093  INFO WebSocketServer:70 - 收到来自窗口1918695147a48的信息:heartbeat
+2018-11-07 16:32:32,277  INFO WebSocketServer:103 - 推送消息到窗口null，推送内容:888
+2018-11-07 16:32:35,346  INFO WebSocketServer:70 - 收到来自窗口bfbc1237ae148的信息:heartbeat
+2018-11-07 16:32:39,095  INFO WebSocketServer:70 - 收到来自窗口1918695147a48的信息:heartbeat
+2018-11-07 16:32:45,039  INFO WebSocketServer:70 - 收到来自窗口bfbc1237ae148的信息:heartbeat
+2018-11-07 16:32:49,095  INFO WebSocketServer:70 - 收到来自窗口1918695147a48的信息:heartbeat
+2018-11-07 16:32:55,064  INFO WebSocketServer:70 - 收到来自窗口bfbc1237ae148的信息:heartbeat
+2018-11-07 16:32:59,095  INFO WebSocketServer:70 - 收到来自窗口1918695147a48的信息:heartbeat
+2018-11-07 16:33:05,040  INFO WebSocketServer:70 - 收到来自窗口bfbc1237ae148的信息:heartbeat
+2018-11-07 16:33:09,095  INFO WebSocketServer:70 - 收到来自窗口1918695147a48的信息:heartbeat
+2018-11-07 16:33:15,040  INFO WebSocketServer:70 - 收到来自窗口bfbc1237ae148的信息:heartbeat
+2018-11-07 16:33:19,095  INFO WebSocketServer:70 - 收到来自窗口1918695147a48的信息:heartbeat
+2018-11-07 16:33:25,243  INFO WebSocketServer:70 - 收到来自窗口bfbc1237ae148的信息:heartbeat
+2018-11-07 16:33:29,097  INFO WebSocketServer:70 - 收到来自窗口1918695147a48的信息:heartbeat
+2018-11-07 16:33:35,040  INFO WebSocketServer:70 - 收到来自窗口bfbc1237ae148的信息:heartbeat
+2018-11-07 16:33:39,095  INFO WebSocketServer:70 - 收到来自窗口1918695147a48的信息:heartbeat
+2018-11-07 16:33:44,488  INFO WebSocketServer:61 - 有一连接关闭！当前在线人数为1
+2018-11-07 16:33:44,656  INFO WebSocketServer:45 - 有新窗口开始监听:8d16f0d948a48,当前在线人数为2
+2018-11-07 16:33:45,040  INFO WebSocketServer:70 - 收到来自窗口bfbc1237ae148的信息:heartbeat
+2018-11-07 16:33:54,661  INFO WebSocketServer:70 - 收到来自窗口8d16f0d948a48的信息:heartbeat
+2018-11-07 16:33:55,058  INFO WebSocketServer:70 - 收到来自窗口bfbc1237ae148的信息:heartbeat
+2018-11-07 16:34:04,662  INFO WebSocketServer:70 - 收到来自窗口8d16f0d948a48的信息:heartbeat
+2018-11-07 16:34:05,567  INFO WebSocketServer:70 - 收到来自窗口bfbc1237ae148的信息:heartbeat
+2018-11-07 16:34:08,834  INFO WebSocketServer:103 - 推送消息到窗口null，推送内容:凯伟大傻逼
+2018-11-07 16:34:09,012 ERROR WebSocketServer:88 - 发生错误
+2018-11-07 16:34:09,015  INFO WebSocketServer:61 - 有一连接关闭！当前在线人数为1
+2018-11-07 16:34:13,870  INFO WebSocketServer:45 - 有新窗口开始监听:ef74d92979e48,当前在线人数为2
+2018-11-07 16:34:14,138  INFO WebSocketServer:61 - 有一连接关闭！当前在线人数为1
+2018-11-07 16:34:14,661  INFO WebSocketServer:70 - 收到来自窗口8d16f0d948a48的信息:heartbeat
+2018-11-07 16:34:14,876  INFO WebSocketServer:45 - 有新窗口开始监听:0316d5e904848,当前在线人数为2
+2018-11-07 16:34:24,661  INFO WebSocketServer:70 - 收到来自窗口8d16f0d948a48的信息:heartbeat
+2018-11-07 16:34:25,333  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat
+2018-11-07 16:34:28,122  INFO WebSocketServer:103 - 推送消息到窗口null，推送内容:111
+2018-11-07 16:34:34,080  INFO WebSocketServer:103 - 推送消息到窗口null，推送内容:凯伟大傻逼
+2018-11-07 16:34:34,661  INFO WebSocketServer:70 - 收到来自窗口8d16f0d948a48的信息:heartbeat
+2018-11-07 16:34:34,943  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat
+2018-11-07 16:34:44,662  INFO WebSocketServer:70 - 收到来自窗口8d16f0d948a48的信息:heartbeat
+2018-11-07 16:34:44,901  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat
+2018-11-07 16:34:54,662  INFO WebSocketServer:70 - 收到来自窗口8d16f0d948a48的信息:heartbeat
+2018-11-07 16:34:54,906  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat
+2018-11-07 16:35:04,662  INFO WebSocketServer:70 - 收到来自窗口8d16f0d948a48的信息:heartbeat
+2018-11-07 16:35:04,902  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat
+2018-11-07 16:35:14,663  INFO WebSocketServer:70 - 收到来自窗口8d16f0d948a48的信息:heartbeat
+2018-11-07 16:35:15,099  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat
+2018-11-07 16:35:24,663  INFO WebSocketServer:70 - 收到来自窗口8d16f0d948a48的信息:heartbeat
+2018-11-07 16:35:26,771  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat
+2018-11-07 16:35:30,792  INFO WebSocketServer:103 - 推送消息到窗口null，推送内容:我用这个打给你啊
+2018-11-07 16:35:34,662  INFO WebSocketServer:70 - 收到来自窗口8d16f0d948a48的信息:heartbeat
+2018-11-07 16:35:34,901  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat
+2018-11-07 16:35:44,663  INFO WebSocketServer:70 - 收到来自窗口8d16f0d948a48的信息:heartbeat
+2018-11-07 16:35:44,903  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat
+2018-11-07 16:35:47,623  INFO WebSocketServer:103 - 推送消息到窗口null，推送内容:不就是qq
+2018-11-07 16:35:54,663  INFO WebSocketServer:70 - 收到来自窗口8d16f0d948a48的信息:heartbeat
+2018-11-07 16:35:55,597  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat
+2018-11-07 16:35:59,270  INFO WebSocketServer:103 - 推送消息到窗口null，推送内容:有个毛用
+2018-11-07 16:36:04,662  INFO WebSocketServer:70 - 收到来自窗口8d16f0d948a48的信息:heartbeat
+2018-11-07 16:36:04,902  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat
+2018-11-07 16:36:14,663  INFO WebSocketServer:70 - 收到来自窗口8d16f0d948a48的信息:heartbeat
+2018-11-07 16:36:15,188  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat
+2018-11-07 16:36:24,921  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat
+2018-11-07 16:36:25,160  INFO WebSocketServer:70 - 收到来自窗口8d16f0d948a48的信息:heartbeat
+2018-11-07 16:36:34,905  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat
+2018-11-07 16:36:35,160  INFO WebSocketServer:70 - 收到来自窗口8d16f0d948a48的信息:heartbeat
+2018-11-07 16:36:44,923  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat
+2018-11-07 16:36:45,160  INFO WebSocketServer:70 - 收到来自窗口8d16f0d948a48的信息:heartbeat
+2018-11-07 16:36:54,906  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat
+2018-11-07 16:36:55,160  INFO WebSocketServer:70 - 收到来自窗口8d16f0d948a48的信息:heartbeat
+2018-11-07 16:37:04,913  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat
+2018-11-07 16:37:05,160  INFO WebSocketServer:70 - 收到来自窗口8d16f0d948a48的信息:heartbeat
+2018-11-07 16:37:15,133  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat
+2018-11-07 16:37:15,160  INFO WebSocketServer:70 - 收到来自窗口8d16f0d948a48的信息:heartbeat
+2018-11-07 16:37:24,902  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat
+2018-11-07 16:37:25,160  INFO WebSocketServer:70 - 收到来自窗口8d16f0d948a48的信息:heartbeat
+2018-11-07 16:37:34,907  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat
+2018-11-07 16:37:35,161  INFO WebSocketServer:70 - 收到来自窗口8d16f0d948a48的信息:heartbeat
+2018-11-07 16:37:44,952  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat
+2018-11-07 16:37:45,161  INFO WebSocketServer:70 - 收到来自窗口8d16f0d948a48的信息:heartbeat
+2018-11-07 16:37:55,160  INFO WebSocketServer:70 - 收到来自窗口8d16f0d948a48的信息:heartbeat
+2018-11-07 16:37:55,294  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat
+2018-11-07 16:38:04,917  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat
+2018-11-07 16:38:05,161  INFO WebSocketServer:70 - 收到来自窗口8d16f0d948a48的信息:heartbeat
+2018-11-07 16:38:14,943  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat
+2018-11-07 16:38:15,162  INFO WebSocketServer:70 - 收到来自窗口8d16f0d948a48的信息:heartbeat
+2018-11-07 16:38:24,908  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat
+2018-11-07 16:38:25,161  INFO WebSocketServer:70 - 收到来自窗口8d16f0d948a48的信息:heartbeat
+2018-11-07 16:38:34,904  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat
+2018-11-07 16:38:35,161  INFO WebSocketServer:70 - 收到来自窗口8d16f0d948a48的信息:heartbeat
+2018-11-07 16:38:44,918  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat
+2018-11-07 16:38:45,161  INFO WebSocketServer:70 - 收到来自窗口8d16f0d948a48的信息:heartbeat
+2018-11-07 16:38:55,162  INFO WebSocketServer:70 - 收到来自窗口8d16f0d948a48的信息:heartbeat
+2018-11-07 16:38:55,769  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat
+2018-11-07 16:39:04,931  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat
+2018-11-07 16:39:05,161  INFO WebSocketServer:70 - 收到来自窗口8d16f0d948a48的信息:heartbeat
+2018-11-07 16:39:15,162  INFO WebSocketServer:70 - 收到来自窗口8d16f0d948a48的信息:heartbeat
+2018-11-07 16:39:15,209  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat
+2018-11-07 16:39:24,908  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat
+2018-11-07 16:39:25,161  INFO WebSocketServer:70 - 收到来自窗口8d16f0d948a48的信息:heartbeat
+2018-11-07 16:39:35,162  INFO WebSocketServer:70 - 收到来自窗口8d16f0d948a48的信息:heartbeat
+2018-11-07 16:39:35,211  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat
+2018-11-07 16:39:45,004  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat
+2018-11-07 16:39:45,190  INFO WebSocketServer:70 - 收到来自窗口8d16f0d948a48的信息:heartbeat
+2018-11-07 16:39:54,910  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat
+2018-11-07 16:39:55,162  INFO WebSocketServer:70 - 收到来自窗口8d16f0d948a48的信息:heartbeat
+2018-11-07 16:40:05,163  INFO WebSocketServer:70 - 收到来自窗口8d16f0d948a48的信息:heartbeat
+2018-11-07 16:40:06,409  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat
+2018-11-07 16:40:14,665  INFO WebSocketServer:70 - 收到来自窗口8d16f0d948a48的信息:heartbeat
+2018-11-07 16:40:15,210  INFO WebSocketServer:61 - 有一连接关闭！当前在线人数为1
+2018-11-07 16:40:15,331  INFO WebSocketServer:45 - 有新窗口开始监听:3112707272548,当前在线人数为2
+2018-11-07 16:40:17,587  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat
+2018-11-07 16:40:25,351  INFO WebSocketServer:70 - 收到来自窗口3112707272548的信息:heartbeat
+2018-11-07 16:40:28,577  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat
+2018-11-07 16:40:35,350  INFO WebSocketServer:70 - 收到来自窗口3112707272548的信息:heartbeat
+2018-11-07 16:40:36,829  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat
+2018-11-07 16:40:45,400  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat
+2018-11-07 16:40:46,163  INFO WebSocketServer:70 - 收到来自窗口3112707272548的信息:heartbeat
+2018-11-07 16:40:56,162  INFO WebSocketServer:70 - 收到来自窗口3112707272548的信息:heartbeat
+2018-11-07 16:41:06,162  INFO WebSocketServer:70 - 收到来自窗口3112707272548的信息:heartbeat
+2018-11-07 16:41:15,393  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat
+2018-11-07 16:41:15,393  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat
+2018-11-07 16:41:15,393  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat
+2018-11-07 16:41:16,163  INFO WebSocketServer:70 - 收到来自窗口3112707272548的信息:heartbeat
+2018-11-07 16:41:26,165  INFO WebSocketServer:70 - 收到来自窗口3112707272548的信息:heartbeat
+2018-11-07 16:41:29,849  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat
+2018-11-07 16:41:35,778  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat
+2018-11-07 16:41:36,163  INFO WebSocketServer:70 - 收到来自窗口3112707272548的信息:heartbeat
+2018-11-07 16:41:46,164  INFO WebSocketServer:70 - 收到来自窗口3112707272548的信息:heartbeat
+2018-11-07 16:41:49,497  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat
+2018-11-07 16:41:56,167  INFO WebSocketServer:70 - 收到来自窗口3112707272548的信息:heartbeat
+2018-11-07 16:41:58,164  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat
+2018-11-07 16:42:06,164  INFO WebSocketServer:70 - 收到来自窗口3112707272548的信息:heartbeat
+2018-11-07 16:42:06,240  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat
+2018-11-07 16:42:15,674  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat
+2018-11-07 16:42:16,163  INFO WebSocketServer:70 - 收到来自窗口3112707272548的信息:heartbeat
+2018-11-07 16:42:25,333  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat
+2018-11-07 16:42:26,164  INFO WebSocketServer:70 - 收到来自窗口3112707272548的信息:heartbeat
+2018-11-07 16:42:31,385  INFO WebSocketServer:61 - 有一连接关闭！当前在线人数为1
+2018-11-07 16:42:31,495  INFO WebSocketServer:45 - 有新窗口开始监听:aff981d812148,当前在线人数为2
+2018-11-07 16:42:35,372  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat
+2018-11-07 16:42:41,510  INFO WebSocketServer:70 - 收到来自窗口aff981d812148的信息:heartbeat
+2018-11-07 16:42:49,225  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat
+2018-11-07 16:42:51,510  INFO WebSocketServer:70 - 收到来自窗口aff981d812148的信息:heartbeat
+2018-11-07 16:43:01,511  INFO WebSocketServer:70 - 收到来自窗口aff981d812148的信息:heartbeat
+2018-11-07 16:43:09,602  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat
+2018-11-07 16:43:09,627  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat
+2018-11-07 16:43:11,510  INFO WebSocketServer:70 - 收到来自窗口aff981d812148的信息:heartbeat
+2018-11-07 16:43:17,546  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat
+2018-11-07 16:43:21,510  INFO WebSocketServer:70 - 收到来自窗口aff981d812148的信息:heartbeat
+2018-11-07 16:43:28,622  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat
+2018-11-07 16:43:31,510  INFO WebSocketServer:70 - 收到来自窗口aff981d812148的信息:heartbeat
+2018-11-07 16:43:38,033  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat
+2018-11-07 16:43:41,511  INFO WebSocketServer:70 - 收到来自窗口aff981d812148的信息:heartbeat
+2018-11-07 16:43:47,456  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat
+2018-11-07 16:43:51,511  INFO WebSocketServer:70 - 收到来自窗口aff981d812148的信息:heartbeat
+2018-11-07 16:43:55,621  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat
+2018-11-07 16:44:01,510  INFO WebSocketServer:70 - 收到来自窗口aff981d812148的信息:heartbeat
+2018-11-07 16:44:06,141  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat
+2018-11-07 16:44:11,511  INFO WebSocketServer:70 - 收到来自窗口aff981d812148的信息:heartbeat
+2018-11-07 16:44:15,380  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat
+2018-11-07 16:44:21,511  INFO WebSocketServer:70 - 收到来自窗口aff981d812148的信息:heartbeat
+2018-11-07 16:44:25,349  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat
+2018-11-07 16:44:31,512  INFO WebSocketServer:70 - 收到来自窗口aff981d812148的信息:heartbeat
+2018-11-07 16:44:35,377  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat
+2018-11-07 16:44:41,511  INFO WebSocketServer:70 - 收到来自窗口aff981d812148的信息:heartbeat
+2018-11-07 16:44:45,459  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat
+2018-11-07 16:44:51,511  INFO WebSocketServer:70 - 收到来自窗口aff981d812148的信息:heartbeat
+2018-11-07 16:44:53,872  INFO WebSocketServer:103 - 推送消息到窗口null，推送内容:有个毛用
+2018-11-07 16:44:54,920  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat
+2018-11-07 16:45:01,511  INFO WebSocketServer:70 - 收到来自窗口aff981d812148的信息:heartbeat
+2018-11-07 16:45:05,229  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat
+2018-11-07 16:45:06,984  INFO WebSocketServer:103 - 推送消息到窗口null，推送内容:kaiweisb
+2018-11-07 16:45:11,512  INFO WebSocketServer:70 - 收到来自窗口aff981d812148的信息:heartbeat
+2018-11-07 16:45:15,268  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat
+2018-11-07 16:45:21,512  INFO WebSocketServer:70 - 收到来自窗口aff981d812148的信息:heartbeat
+2018-11-07 16:45:25,124  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat
+2018-11-07 16:45:31,511  INFO WebSocketServer:70 - 收到来自窗口aff981d812148的信息:heartbeat
+2018-11-07 16:45:35,337  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat
+2018-11-07 16:45:41,513  INFO WebSocketServer:70 - 收到来自窗口aff981d812148的信息:heartbeat
+2018-11-07 16:45:46,878  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat
+2018-11-07 16:45:51,512  INFO WebSocketServer:70 - 收到来自窗口aff981d812148的信息:heartbeat
+2018-11-07 16:45:54,922  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat
+2018-11-07 16:46:01,513  INFO WebSocketServer:70 - 收到来自窗口aff981d812148的信息:heartbeat
+2018-11-07 16:46:05,442  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat
+2018-11-07 16:46:11,512  INFO WebSocketServer:70 - 收到来自窗口aff981d812148的信息:heartbeat
+2018-11-07 16:46:15,497  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat
+2018-11-07 16:46:21,512  INFO WebSocketServer:70 - 收到来自窗口aff981d812148的信息:heartbeat
+2018-11-07 16:46:24,924  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat
+2018-11-07 16:46:31,513  INFO WebSocketServer:70 - 收到来自窗口aff981d812148的信息:heartbeat
+2018-11-07 16:46:34,923  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat
+2018-11-07 16:46:41,513  INFO WebSocketServer:70 - 收到来自窗口aff981d812148的信息:heartbeat
+2018-11-07 16:46:44,934  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat
+2018-11-07 16:46:51,513  INFO WebSocketServer:70 - 收到来自窗口aff981d812148的信息:heartbeat
+2018-11-07 16:46:54,924  INFO WebSocketServer:70 - 收到来自窗口0316d5e904848的信息:heartbeat

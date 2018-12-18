@@ -1,0 +1,19 @@
+2018-12-11 11:57:05,601 ERROR LoggingFailureAnalysisReporter:42 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Cannot determine embedded database driver class for database type NONE
+
+Action:
+
+If you want an embedded database please put a supported one on the classpath. If you have database settings to be loaded from a particular profile you may need to active it (no profiles are currently active).
+
+2018-12-11 14:59:03,337 ERROR WebSocketServer:189 - 发生错误
+2018-12-11 15:06:42,678 ERROR WebSocketServer:189 - 发生错误
+2018-12-11 15:22:16,635 ERROR WebSocketServer:189 - 发生错误
+2018-12-11 15:51:19,648 ERROR WebSocketServer:190 - 发生错误
+2018-12-11 18:27:53,457 ERROR WebSocketServer:194 - 发生错误
