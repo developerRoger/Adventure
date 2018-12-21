@@ -48,12 +48,14 @@ public class AdventureApplication extends SpringBootServletInitializer{
 	@Bean
 	public Executor defaultThreadPool() {
 		ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();
-		executor.setCorePoolSize(20);	//基本线程数量
+		executor.setCorePoolSize(5);	//基本线程数量
 		executor.setMaxPoolSize(20);	//最大线程数量
-		executor.setQueueCapacity(200);  //队列最大长度
+		executor.setQueueCapacity(20);  //队列最大长度
 		executor.setRejectedExecutionHandler(new ThreadPoolExecutor.CallerRunsPolicy());
 		executor.setThreadNamePrefix("AdventureExecutor-");//打印线程数量1
 		executor.setKeepAliveSeconds(30); //允许空闲时间
+		 // 等待所有任务结束后再关闭线程池
+        executor.setWaitForTasksToCompleteOnShutdown(true);
 		executor.initialize();
 		return executor;
 	}

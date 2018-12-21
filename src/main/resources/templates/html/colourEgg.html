@@ -11,7 +11,7 @@
 	width: 90%;
 	min-height: 30px;
 	background: #25a23b;
-	border-radius: 5px;
+	border-radius: 7px;
 	text-align: center;
 	line-height: 50px;
 	margin-left: 40px;
@@ -44,18 +44,39 @@
 	top: 5px;
 	right: -14px;
 }
+
+.scroll li {
+	position: fixed;
+	display: inline-block;
+	color: #fff;
+	left: 100%;
+	white-space: nowrap;
+	font-size: 24px;
+	text-align: center;
+	z-index: 100;
+	background: rgba(0, 0, 0, 0.5);
+	padding: 10px 30px;
+	border-radius: 20px;
+	font-size: 16px;
+	list-style: none;
+}
 </style>
 
 <!-- ADD THE CLASS layout-boxed TO GET A BOXED LAYOUT -->
 <body class="hold-transition skin-blue sidebar-mini">
-	<div id="feedbackSection" class="bs-docs-section" style="height:100vh">
-	<section style="height:66%;overflow-y:auto">
-		<div v-for="a in listFeedback">
-			<p class="bg-danger leftttt" v-if="a.id==2">{{a.msg}}</p>
-			<p class="bg-danger rightttt" v-else>{{a.msg}}</p>
-		</div>
+	<div id="feedbackSection" class="bs-docs-section" style="height: 100vh"
+		v-cloak>
+		<section style="height: 66%; overflow-y: auto">
+			<ul v-if="listBarrage!=null" class="scroll">
+				<li v-for="l in listBarrage">{{l}}</li>
+			</ul>
+			<div v-for="a in listFeedback">
+				<p class="bg-danger leftttt" v-if="a.id==2">{{a.msg}}</p>
+				<p class="bg-danger rightttt" v-else>{{a.msg}}</p>
+			</div>
 		</section>
-		<h1 style="text-align: center; margin-top: 10px; color: red">{{text}}</h1>
+		<h1 style="text-align: center; margin-top: 10px; color: red"
+			v-if="text!=null">{{text}}</h1>
 		<div></div>
 		<hr>
 		<!--   <div class="form-group">
@@ -66,14 +87,14 @@
 
 			<label for="Pornographic">Pornographic</label> <input type="text"
 				class="form-control" id="speak" v-model="speak"
-				placeholder="请在此输入你想说的话.">
+				@keyup.enter="sendObject" placeholder="请在此输入你想说的话.">
 		</div>
 		<div class="bs-example" data-example-id="block-btns">
 			<div class="well center-block" style="max-width: 600px;">
 				<button type="button" class="btn btn-primary btn-lg btn-block"
 					@click="sendObject">Send invitation</button>
 				<button v-show="!nice" type="button"
-					class="btn btn-danger btn-lg btn-block" @click="connet()">随机匹配</button>
+					class="btn btn-danger btn-lg btn-block" @click="connet">随机匹配</button>
 			</div>
 		</div>
 	</div>
@@ -93,8 +114,9 @@ var vm = new Vue({
         text:"One's Night",
         wx: null,
         connetId:null,
+        arrColor: ['#5dd9ff','#fbe091','#ff0','#b5d8f4','#0f0','#0ff','#83dd57','#fff','#b4f4ff','#ccc','#fff'],
         listFeedback: [],
-        listSendCoordination:[]
+        listBarrage:[]
     },
     methods: {
         init: function () {
@@ -141,12 +163,21 @@ var vm = new Vue({
                 	
                 }else if(date.code==504){
                 	_this.nice=false;
-                	_this.listFeedback=[];
+                	
                 }else if(date.code==404){
                 	 _this.text="小老弟，没人跟你匹配呢。加加油";
                 	 _this.listFeedback=[];
+                }else if(date.code==666){
+                	//有值的情况不给推送
+                	if(_this.listFeedback.length==0){
+	                 	_this.text=null;
+	                	_this.listBarrage.push(date.msg);
+	                	_this.systemPush(); 
+                	}
                 }else{
                 	_this.listFeedback.push({"id":2,"msg":_this.text});
+                	//设置滚动条一直在最底部
+                	$("section").scrollTop($('section')[0].scrollHeight );
                 }
                 
             };
@@ -178,7 +209,20 @@ var vm = new Vue({
         	var _this=this;
         	_this.nice=true;
         	_this.websocket.send('connet');
+        	_this.listFeedback=[];
         },
+         systemPush:function() {
+        	 var _this=this;
+        	 if(_this.listBarrage.length==0)return;
+        	 var num=_this.listBarrage.length-2;
+       	         $('.scroll li').eq(num).css('color',_this.arrColor[parseInt(10*Math.random())]);
+       	         $('.scroll li').eq(num).animate({'left':-200},15000,function () {
+    	         $('.scroll li').eq(num).css('left','100%');
+       	         });
+       	         //做个限制
+       	         if(_this.listBarrage.length>=10)
+       	        	_this.listBarrage=[];
+       	     },
         //发送消息
         sendObject:function(){
         	var _this=this;
@@ -186,6 +230,8 @@ var vm = new Vue({
         	_this.websocket.send(_this.speak);
         	_this.listFeedback.push({"id":1,"msg":_this.speak});
         	_this.speak="";
+        	//设置滚动条一直在最底部
+        	$("section").scrollTop($('section')[0].scrollHeight );
         },
         //解析后端返回传递参数
         param:function(str){
@@ -213,7 +259,7 @@ var vm = new Vue({
         _this.connetId=this.uuid();
         //初始化连接的websocket
         _this.init();
-       
+        _this.systemPush();
     }
 });
 

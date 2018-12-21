@@ -22,6 +22,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
 
+import com.firstTry.Adventure.exception.RRException;
 import com.firstTry.Adventure.utils.R;
 
 /**
@@ -61,7 +62,7 @@ public class WebSocketServer {
 		addOnlineCount(); // 在线数加1
 		log.info("有新窗口开始监听:" + sid + ",当前在线人数为" + getOnlineCount());
 		try {
-			sendMessage(R.error(100,"连接成功").toString(), session);
+			sendMessage(R.error(100, "连接成功").toString(), session);
 		} catch (IOException e) {
 			log.error("websocket IO异常");
 		}
@@ -73,16 +74,16 @@ public class WebSocketServer {
 	@OnClose
 	public void onClose(@PathParam("sid") String sid) {
 		webSocketSet.remove(sid); // 从set中删除
-		//对方已离线，发送消息
-		String sendId=null;
+		// 对方已离线，发送消息
+		String sendId = null;
 		if (null != redisTemplate.opsForValue().get(sid)) {
-			sendId=redisTemplate.opsForValue().get(sid).toString();
+			sendId = redisTemplate.opsForValue().get(sid).toString();
 			redisTemplate.delete((String) redisTemplate.opsForValue().get(sid));
 			redisTemplate.delete(sid);
 		}
 		try {
-			if(null!=sendId)
-			sendMessage(R.error(504,"对方已离线，你可以重新匹配").toString(),webSocketSet.get(sendId));
+			if (null != sendId)
+				sendMessage(R.error(504, "对方已离线，你可以重新匹配").toString(), webSocketSet.get(sendId));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -101,38 +102,45 @@ public class WebSocketServer {
 	@OnMessage
 	public void onMessage(String message, Session session, @PathParam("sid") String sid) {
 		log.info("收到来自窗口" + sid + "的信息:" + message);
-		try {
-			if ("connet".equals(message)) {
-				// 如果已经有值匹配了，不会进入随机匹配
-				if (null == redisTemplate.opsForValue().get(sid)) {
-					/*
-					 * if(socketList.size()>0){
-					 * redisTemplate.opsForValue().set(sid, socketList.get(0));
-					 * redisTemplate.opsForValue().set(socketList.get(0), sid);
-					 * }
-					 */
-					// 存到母体中，等待匹配
-					if (!socketList.contains(sid))
-						socketList.add(sid);
-					// 5秒后过期
-					redisTemplate.opsForValue().set(timeKey + "_" + sid, "connet", 5, TimeUnit.SECONDS);
-					randomMatching(sid);
-				} else {
-					sendInfo(R.error(200,"你的操作太频繁").toString(), sid);
+
+		new Thread(new Runnable() {
+
+			@Override
+			public void run() {
+				try {
+					// TODO Auto-generated method stub
+					if ("connet".equals(message)) {
+						// 如果已经有值匹配了，不会进入随机匹配
+						if (null == redisTemplate.opsForValue().get(sid)) {
+							// 存到母体中，等待匹配
+							if (!socketList.contains(sid))
+								socketList.add(sid);
+							// 5秒后过期
+							redisTemplate.opsForValue().set(timeKey + "_" + sid, "connet", 5, TimeUnit.SECONDS);
+							//全员通知
+							pushAllMessage("当前有人正在等待匹配....ing");
+							randomMatching(sid);
+						} else {
+							sendInfo(R.error(200, "你的操作太频繁").toString(), sid);
+						}
+					} else if ("heartbeat".equals(message)) {
+						log.info("用户心跳:" + sid + ",当前在线人数为" + getOnlineCount());
+					} else {
+						// 无人匹配，返回相同内容
+						if (null == redisTemplate.opsForValue().get(sid))
+							sendInfo(R.error(404, message).toString(), sid);
+						else
+							sendInfo(R.error(200, message).toString(), (String) redisTemplate.opsForValue().get(sid));
+					}
+				} catch (Exception e) {
+					log.error(e.getMessage());
+					redisTemplate.delete(sid);
+					// 异常后，直接关闭
 				}
-			} else if ("heartbeat".equals(message)) {
-				log.info("用户心跳:" + sid + ",当前在线人数为" + getOnlineCount());
-			} else {
-				// 无人匹配，返回相同内容
-				if (null == redisTemplate.opsForValue().get(sid))
-					sendInfo(R.error(404,message).toString(), sid);
-				else
-					sendInfo(R.error(200,message).toString(), (String) redisTemplate.opsForValue().get(sid));
 			}
-		} catch (Exception e) {
-			log.error(e.getMessage());
-			// 异常后，直接关闭
-		}
+
+		}).start();
+
 		System.out.println(session.getId());
 
 	}
@@ -148,7 +156,7 @@ public class WebSocketServer {
 		for (String key : webSocketSet.keySet()) {
 			try {
 				if (webSocketSet.get(key).isOpen())
-					sendMessage(R.error(200,message).toString(), webSocketSet.get(key));
+					sendMessage(R.error(666, message).toString(), webSocketSet.get(key));
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
@@ -171,25 +179,23 @@ public class WebSocketServer {
 		// 当递归不再执行,5秒redis自动清空值
 		if (null == redisTemplate.opsForValue().get(sid)
 				&& null == redisTemplate.opsForValue().get(timeKey + "_" + sid)) {
-			sendInfo(R.error(504,"暂时无人匹配，你稍后再来试试吧").toString(), sid);
-			// socketList.remove(socketList.indexOf(sid));
+			sendInfo(R.error(504, "暂时无人匹配，你稍后再来试试吧").toString(), sid);
 		} else if (num == 1) {// 只有一人匹配的时候
 			// 已经匹配成功
-			if (null != redisTemplate.opsForValue().get(list.get(0))||null != redisTemplate.opsForValue().get(sid))
+			if (null != redisTemplate.opsForValue().get(sid)) 
 				return;
+			if (null != redisTemplate.opsForValue().get(list.get(0))){
+				sendInfo(R.error(504, "(ｷ｀ﾟДﾟ´)!!不巧，你的对象刚刚偷偷溜走了").toString(), sid);
+				return;
+			}
 			redisTemplate.opsForValue().set(sid, list.get(0));
 			redisTemplate.opsForValue().set(list.get(0), sid);
-			sendInfo(R.error(200,"匹配成功").toString(), sid);
-			sendInfo(R.error(200,"匹配成功").toString(), list.get(0));
-			// 匹配成功后删除匹配母体中的对象
-			// socketList.remove(socketList.indexOf(sid));
-			// socketList.remove(socketList.indexOf(list.get(0)));
+			sendInfo(R.error(200, "匹配成功").toString(), sid);
+			sendInfo(R.error(200, "匹配成功").toString(), list.get(0));
 			return;
-		} else {
+		} else if (num > 1) {
 			if (null != redisTemplate.opsForValue().get(timeKey + "_" + sid) && num == 0)
 				randomMatching(sid);
-			if (num == 0)
-				return;
 			Random random = new Random();
 			int key = random.nextInt(num);
 			// 已经匹配成功
@@ -197,14 +203,11 @@ public class WebSocketServer {
 				return;
 			redisTemplate.opsForValue().set(sid, list.get(key));
 			redisTemplate.opsForValue().set(list.get(key), sid);
-			sendInfo(R.error(200,"匹配成功").toString(), sid);
-			sendInfo(R.error(200,"匹配成功").toString(), socketList.get(key));
-			// 匹配成功后删除匹配母体中的对象
-			// socketList.remove(socketList.indexOf(sid));
-			// socketList.remove(socketList.indexOf(list.get(0)));
+			sendInfo(R.error(200, "匹配成功").toString(), sid);
+			sendInfo(R.error(200, "匹配成功").toString(), list.get(key));
 			return;
 		}
-		// 递归持续执行
+		// 递归持续执行6
 		if (null != redisTemplate.opsForValue().get(timeKey + "_" + sid)
 				&& null == redisTemplate.opsForValue().get(sid))
 			randomMatching(sid);
@@ -218,7 +221,7 @@ public class WebSocketServer {
 	@OnError
 	public void onError(Session session, Throwable error) {
 		log.error("发生错误");
-//		error.printStackTrace();
+		// error.printStackTrace();
 		log.error(error.getMessage());
 	}
 

@@ -45,6 +45,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		"/adventure/application/*",
 		"/adventure/menu/*",
 		"/adventure/qiniu/*",
+		"/adventure/qiniu/*/*",
 		//访问静态资源文件去除拦截
 		"/js/**",
 		"/css/**",

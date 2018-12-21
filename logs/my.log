@@ -1,510 +1,658 @@
-2018-12-18 10:04:47,648  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 9148 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
-2018-12-18 10:04:47,661 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
-2018-12-18 10:04:47,662  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
-2018-12-18 10:05:01,342  INFO AdventureApplication:57 ---- Started AdventureApplication in 14.067 seconds (JVM running for 14.753)
-2018-12-18 10:06:44,483  INFO WebSocketServer:66 ---- 有新窗口开始监听:d212aa4c14948,当前在线人数为1
-2018-12-18 10:06:56,231  INFO WebSocketServer:96 ---- 有一连接关闭！当前在线人数为0
-2018-12-18 10:06:56,418  INFO WebSocketServer:66 ---- 有新窗口开始监听:bbdbd9eb7e148,当前在线人数为1
-2018-12-18 10:13:50,521  INFO WebSocketServer:96 ---- 有一连接关闭！当前在线人数为0
-2018-12-18 10:13:50,645  INFO WebSocketServer:66 ---- 有新窗口开始监听:fabdb43d92448,当前在线人数为1
-2018-12-18 10:14:57,587  INFO WebSocketServer:96 ---- 有一连接关闭！当前在线人数为0
-2018-12-18 10:14:57,783  INFO WebSocketServer:66 ---- 有新窗口开始监听:abf36d6b0c248,当前在线人数为1
-2018-12-18 10:33:18,493  INFO WebSocketServer:96 ---- 有一连接关闭！当前在线人数为0
-2018-12-18 10:33:18,608  INFO WebSocketServer:66 ---- 有新窗口开始监听:8387894df4a48,当前在线人数为1
-2018-12-18 10:35:14,099  INFO WebSocketServer:107 ---- 收到来自窗口8387894df4a48的信息:heartbeat
-2018-12-18 10:35:14,099  INFO WebSocketServer:128 ---- 用户心跳:8387894df4a48,当前在线人数为1
-2018-12-18 10:36:54,097  INFO WebSocketServer:107 ---- 收到来自窗口8387894df4a48的信息:heartbeat
-2018-12-18 10:36:54,097  INFO WebSocketServer:128 ---- 用户心跳:8387894df4a48,当前在线人数为1
-2018-12-18 10:38:34,097  INFO WebSocketServer:107 ---- 收到来自窗口8387894df4a48的信息:heartbeat
-2018-12-18 10:38:34,097  INFO WebSocketServer:128 ---- 用户心跳:8387894df4a48,当前在线人数为1
-2018-12-18 10:40:14,097  INFO WebSocketServer:107 ---- 收到来自窗口8387894df4a48的信息:heartbeat
-2018-12-18 10:40:14,097  INFO WebSocketServer:128 ---- 用户心跳:8387894df4a48,当前在线人数为1
-2018-12-18 10:41:54,096  INFO WebSocketServer:107 ---- 收到来自窗口8387894df4a48的信息:heartbeat
-2018-12-18 10:41:54,097  INFO WebSocketServer:128 ---- 用户心跳:8387894df4a48,当前在线人数为1
-2018-12-18 10:43:34,095  INFO WebSocketServer:107 ---- 收到来自窗口8387894df4a48的信息:heartbeat
-2018-12-18 10:43:34,095  INFO WebSocketServer:128 ---- 用户心跳:8387894df4a48,当前在线人数为1
-2018-12-18 10:45:14,095  INFO WebSocketServer:107 ---- 收到来自窗口8387894df4a48的信息:heartbeat
-2018-12-18 10:45:14,095  INFO WebSocketServer:128 ---- 用户心跳:8387894df4a48,当前在线人数为1
-2018-12-18 10:46:54,094  INFO WebSocketServer:107 ---- 收到来自窗口8387894df4a48的信息:heartbeat
-2018-12-18 10:46:54,094  INFO WebSocketServer:128 ---- 用户心跳:8387894df4a48,当前在线人数为1
-2018-12-18 10:48:34,092  INFO WebSocketServer:107 ---- 收到来自窗口8387894df4a48的信息:heartbeat
-2018-12-18 10:48:34,093  INFO WebSocketServer:128 ---- 用户心跳:8387894df4a48,当前在线人数为1
-2018-12-18 10:50:14,092  INFO WebSocketServer:107 ---- 收到来自窗口8387894df4a48的信息:heartbeat
-2018-12-18 10:50:14,093  INFO WebSocketServer:128 ---- 用户心跳:8387894df4a48,当前在线人数为1
-2018-12-18 10:51:54,092  INFO WebSocketServer:107 ---- 收到来自窗口8387894df4a48的信息:heartbeat
-2018-12-18 10:51:54,092  INFO WebSocketServer:128 ---- 用户心跳:8387894df4a48,当前在线人数为1
-2018-12-18 10:53:34,092  INFO WebSocketServer:107 ---- 收到来自窗口8387894df4a48的信息:heartbeat
-2018-12-18 10:53:34,092  INFO WebSocketServer:128 ---- 用户心跳:8387894df4a48,当前在线人数为1
-2018-12-18 10:55:14,091  INFO WebSocketServer:107 ---- 收到来自窗口8387894df4a48的信息:heartbeat
-2018-12-18 10:55:14,091  INFO WebSocketServer:128 ---- 用户心跳:8387894df4a48,当前在线人数为1
-2018-12-18 10:56:54,090  INFO WebSocketServer:107 ---- 收到来自窗口8387894df4a48的信息:heartbeat
-2018-12-18 10:56:54,091  INFO WebSocketServer:128 ---- 用户心跳:8387894df4a48,当前在线人数为1
-2018-12-18 10:58:34,090  INFO WebSocketServer:107 ---- 收到来自窗口8387894df4a48的信息:heartbeat
-2018-12-18 10:58:34,090  INFO WebSocketServer:128 ---- 用户心跳:8387894df4a48,当前在线人数为1
-2018-12-18 11:00:14,090  INFO WebSocketServer:107 ---- 收到来自窗口8387894df4a48的信息:heartbeat
-2018-12-18 11:00:14,090  INFO WebSocketServer:128 ---- 用户心跳:8387894df4a48,当前在线人数为1
-2018-12-18 11:01:54,088  INFO WebSocketServer:107 ---- 收到来自窗口8387894df4a48的信息:heartbeat
-2018-12-18 11:01:54,088  INFO WebSocketServer:128 ---- 用户心跳:8387894df4a48,当前在线人数为1
-2018-12-18 11:03:34,088  INFO WebSocketServer:107 ---- 收到来自窗口8387894df4a48的信息:heartbeat
-2018-12-18 11:03:34,088  INFO WebSocketServer:128 ---- 用户心跳:8387894df4a48,当前在线人数为1
-2018-12-18 11:05:14,087  INFO WebSocketServer:107 ---- 收到来自窗口8387894df4a48的信息:heartbeat
-2018-12-18 11:05:14,088  INFO WebSocketServer:128 ---- 用户心跳:8387894df4a48,当前在线人数为1
-2018-12-18 11:06:54,086  INFO WebSocketServer:107 ---- 收到来自窗口8387894df4a48的信息:heartbeat
-2018-12-18 11:06:54,087  INFO WebSocketServer:128 ---- 用户心跳:8387894df4a48,当前在线人数为1
-2018-12-18 11:07:56,727  INFO WebSocketServer:96 ---- 有一连接关闭！当前在线人数为0
-2018-12-18 11:07:56,817  INFO WebSocketServer:66 ---- 有新窗口开始监听:611f70b767348,当前在线人数为1
-2018-12-18 11:08:31,139  INFO WebSocketServer:96 ---- 有一连接关闭！当前在线人数为0
-2018-12-18 11:08:31,323  INFO WebSocketServer:66 ---- 有新窗口开始监听:51fcad8353f48,当前在线人数为1
-2018-12-18 11:08:35,316  INFO WebSocketServer:107 ---- 收到来自窗口51fcad8353f48的信息:connet
-2018-12-18 11:08:40,350  INFO WebSocketServer:240 ---- 推送消息到窗口51fcad8353f48，推送内容:{msg=暂时无人匹配，你稍后再来试试吧, code=504}
-2018-12-18 11:10:15,387  INFO WebSocketServer:107 ---- 收到来自窗口51fcad8353f48的信息:heartbeat
-2018-12-18 11:10:15,394  INFO WebSocketServer:128 ---- 用户心跳:51fcad8353f48,当前在线人数为1
-2018-12-18 11:11:55,385  INFO WebSocketServer:107 ---- 收到来自窗口51fcad8353f48的信息:heartbeat
-2018-12-18 11:11:55,385  INFO WebSocketServer:128 ---- 用户心跳:51fcad8353f48,当前在线人数为1
-2018-12-18 11:13:35,384  INFO WebSocketServer:107 ---- 收到来自窗口51fcad8353f48的信息:heartbeat
-2018-12-18 11:13:35,384  INFO WebSocketServer:128 ---- 用户心跳:51fcad8353f48,当前在线人数为1
-2018-12-18 11:15:15,384  INFO WebSocketServer:107 ---- 收到来自窗口51fcad8353f48的信息:heartbeat
-2018-12-18 11:15:15,385  INFO WebSocketServer:128 ---- 用户心跳:51fcad8353f48,当前在线人数为1
-2018-12-18 11:16:37,685  INFO WebSocketServer:96 ---- 有一连接关闭！当前在线人数为0
-2018-12-18 11:16:38,085  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 9148 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
-2018-12-18 11:16:38,086 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
-2018-12-18 11:16:38,086  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
-2018-12-18 11:16:42,488  INFO AdventureApplication:57 ---- Started AdventureApplication in 4.463 seconds (JVM running for 4315.921)
-2018-12-18 11:19:47,055  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 9148 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
-2018-12-18 11:19:47,055 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
-2018-12-18 11:19:47,056  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
-2018-12-18 11:19:50,894  INFO AdventureApplication:57 ---- Started AdventureApplication in 3.886 seconds (JVM running for 4504.328)
-2018-12-18 11:23:04,586  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 9148 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
-2018-12-18 11:23:04,586 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
-2018-12-18 11:23:04,587  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
-2018-12-18 11:23:07,971  INFO AdventureApplication:57 ---- Started AdventureApplication in 3.426 seconds (JVM running for 4701.407)
-2018-12-18 11:26:51,124  INFO WebSocketServer:62 ---- 有新窗口开始监听:23a0ae0ffb848,当前在线人数为1
-2018-12-18 11:26:55,609  INFO WebSocketServer:103 ---- 收到来自窗口23a0ae0ffb848的信息:sss
-2018-12-18 11:26:55,620  INFO WebSocketServer:236 ---- 推送消息到窗口23a0ae0ffb848，推送内容:{msg=sss, code=404}
-2018-12-18 11:26:55,674  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为0
-2018-12-18 11:26:55,888  INFO WebSocketServer:62 ---- 有新窗口开始监听:8125e40e10048,当前在线人数为1
-2018-12-18 11:27:50,409  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为0
-2018-12-18 11:27:50,600  INFO WebSocketServer:62 ---- 有新窗口开始监听:17e6271214a48,当前在线人数为1
-2018-12-18 11:27:58,836  INFO WebSocketServer:103 ---- 收到来自窗口17e6271214a48的信息:sss
-2018-12-18 11:27:58,845  INFO WebSocketServer:236 ---- 推送消息到窗口17e6271214a48，推送内容:{msg=sss, code=404}
-2018-12-18 11:27:58,903  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为0
-2018-12-18 11:27:59,084  INFO WebSocketServer:62 ---- 有新窗口开始监听:ef684e0942648,当前在线人数为1
-2018-12-18 11:28:30,382  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为0
-2018-12-18 11:28:30,548  INFO WebSocketServer:62 ---- 有新窗口开始监听:120bc49b2f248,当前在线人数为1
-2018-12-18 11:28:35,421  INFO WebSocketServer:103 ---- 收到来自窗口120bc49b2f248的信息:ssss
-2018-12-18 11:28:35,431  INFO WebSocketServer:236 ---- 推送消息到窗口120bc49b2f248，推送内容:{msg=ssss, code=404}
-2018-12-18 11:28:35,477  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为0
-2018-12-18 11:28:35,659  INFO WebSocketServer:62 ---- 有新窗口开始监听:acc11ab53a848,当前在线人数为1
-2018-12-18 11:28:48,374  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 2000 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
-2018-12-18 11:28:48,376 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
-2018-12-18 11:28:48,377  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
-2018-12-18 11:29:05,098  INFO AdventureApplication:57 ---- Started AdventureApplication in 17.108 seconds (JVM running for 18.324)
-2018-12-18 11:29:25,701  INFO WebSocketServer:62 ---- 有新窗口开始监听:44c646b503a48,当前在线人数为1
-2018-12-18 11:29:28,834  INFO WebSocketServer:103 ---- 收到来自窗口44c646b503a48的信息:666
-2018-12-18 11:29:29,120  INFO WebSocketServer:62 ---- 有新窗口开始监听:2cc20ab937e48,当前在线人数为2
-2018-12-18 11:29:44,013  INFO WebSocketServer:236 ---- 推送消息到窗口44c646b503a48，推送内容:{msg=666, code=404}
-2018-12-18 11:29:52,543 ERROR WebSocketServer:220 ---- 发生错误
-2018-12-18 11:29:52,550 ERROR WebSocketServer:222 ---- java.io.IOException: 您的主机中的软件中止了一个已建立的连接。
-2018-12-18 11:29:52,559  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为1
-2018-12-18 11:30:55,605  INFO WebSocketServer:103 ---- 收到来自窗口2cc20ab937e48的信息:sss
-2018-12-18 11:30:55,932  INFO WebSocketServer:62 ---- 有新窗口开始监听:12529ebbcff48,当前在线人数为2
-2018-12-18 11:30:59,299  INFO WebSocketServer:236 ---- 推送消息到窗口2cc20ab937e48，推送内容:{msg=sss, code=404}
-2018-12-18 11:31:55,017 ERROR WebSocketServer:220 ---- 发生错误
-2018-12-18 11:31:55,018 ERROR WebSocketServer:222 ---- java.io.IOException: 您的主机中的软件中止了一个已建立的连接。
-2018-12-18 11:31:55,030  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为1
-2018-12-18 11:32:19,390  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 6624 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
-2018-12-18 11:32:19,395 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
-2018-12-18 11:32:19,396  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
-2018-12-18 11:32:37,303  INFO AdventureApplication:57 ---- Started AdventureApplication in 18.507 seconds (JVM running for 19.428)
-2018-12-18 11:33:15,632  INFO WebSocketServer:62 ---- 有新窗口开始监听:1bc4bdaaa9748,当前在线人数为1
-2018-12-18 11:34:19,226  INFO WebSocketServer:103 ---- 收到来自窗口1bc4bdaaa9748的信息:sss
-2018-12-18 11:34:19,526  INFO WebSocketServer:62 ---- 有新窗口开始监听:0edc935c3c748,当前在线人数为2
-2018-12-18 11:34:27,368  INFO WebSocketServer:236 ---- 推送消息到窗口1bc4bdaaa9748，推送内容:{msg=sss, code=404}
-2018-12-18 11:35:02,292 ERROR WebSocketServer:220 ---- 发生错误
-2018-12-18 11:35:02,296 ERROR WebSocketServer:222 ---- java.io.IOException: 您的主机中的软件中止了一个已建立的连接。
-2018-12-18 11:35:02,306  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为1
-2018-12-18 11:36:05,517  INFO WebSocketServer:103 ---- 收到来自窗口0edc935c3c748的信息:heartbeat
-2018-12-18 11:36:05,517  INFO WebSocketServer:124 ---- 用户心跳:0edc935c3c748,当前在线人数为1
-2018-12-18 11:36:27,828  INFO WebSocketServer:103 ---- 收到来自窗口0edc935c3c748的信息:333
-2018-12-18 11:36:28,194  INFO WebSocketServer:62 ---- 有新窗口开始监听:5bece10f9c148,当前在线人数为2
-2018-12-18 11:36:35,048  INFO WebSocketServer:236 ---- 推送消息到窗口0edc935c3c748，推送内容:{msg=333, code=404}
-2018-12-18 11:36:50,212 ERROR WebSocketServer:220 ---- 发生错误
-2018-12-18 11:36:50,212 ERROR WebSocketServer:222 ---- java.io.IOException: 您的主机中的软件中止了一个已建立的连接。
-2018-12-18 11:36:50,221  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为1
-2018-12-18 11:37:53,220  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 9464 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
-2018-12-18 11:37:53,226 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
-2018-12-18 11:37:53,231  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
-2018-12-18 11:38:13,252  INFO AdventureApplication:57 ---- Started AdventureApplication in 20.617 seconds (JVM running for 21.703)
-2018-12-18 11:39:52,812  INFO WebSocketServer:62 ---- 有新窗口开始监听:238b985cbe948,当前在线人数为1
-2018-12-18 11:39:55,430  INFO WebSocketServer:103 ---- 收到来自窗口238b985cbe948的信息:77
-2018-12-18 11:39:55,447  INFO WebSocketServer:236 ---- 推送消息到窗口238b985cbe948，推送内容:{msg=77, code=404}
-2018-12-18 11:39:55,503  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为0
-2018-12-18 11:39:55,656  INFO WebSocketServer:62 ---- 有新窗口开始监听:9c6e191a1df48,当前在线人数为1
-2018-12-18 11:40:48,967  INFO WebSocketServer:103 ---- 收到来自窗口9c6e191a1df48的信息:sss
-2018-12-18 11:40:48,977  INFO WebSocketServer:236 ---- 推送消息到窗口9c6e191a1df48，推送内容:{msg=sss, code=404}
-2018-12-18 11:40:49,055  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为0
-2018-12-18 11:40:49,224  INFO WebSocketServer:62 ---- 有新窗口开始监听:a6c87a38aec48,当前在线人数为1
-2018-12-18 11:41:31,945  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为0
-2018-12-18 11:41:32,066  INFO WebSocketServer:62 ---- 有新窗口开始监听:cc69a8a25e048,当前在线人数为1
-2018-12-18 11:41:35,465  INFO WebSocketServer:103 ---- 收到来自窗口cc69a8a25e048的信息:wwww
-2018-12-18 11:41:35,472  INFO WebSocketServer:236 ---- 推送消息到窗口cc69a8a25e048，推送内容:{msg=wwww, code=404}
-2018-12-18 11:42:17,313  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为0
-2018-12-18 11:42:17,513  INFO WebSocketServer:62 ---- 有新窗口开始监听:b85f35425ec48,当前在线人数为1
-2018-12-18 11:42:19,763  INFO WebSocketServer:103 ---- 收到来自窗口b85f35425ec48的信息:ssss
-2018-12-18 11:42:19,770  INFO WebSocketServer:236 ---- 推送消息到窗口b85f35425ec48，推送内容:{msg=ssss, code=404}
-2018-12-18 11:44:03,077  INFO WebSocketServer:103 ---- 收到来自窗口b85f35425ec48的信息:heartbeat
-2018-12-18 11:44:03,077  INFO WebSocketServer:124 ---- 用户心跳:b85f35425ec48,当前在线人数为1
-2018-12-18 11:44:50,906  INFO WebSocketServer:62 ---- 有新窗口开始监听:ce8f7755d1148,当前在线人数为2
-2018-12-18 11:44:55,601  INFO WebSocketServer:103 ---- 收到来自窗口b85f35425ec48的信息:connet
-2018-12-18 11:44:55,970  INFO WebSocketServer:103 ---- 收到来自窗口ce8f7755d1148的信息:connet
-2018-12-18 11:44:56,052  INFO WebSocketServer:236 ---- 推送消息到窗口b85f35425ec48，推送内容:{msg=匹配成功, code=200}
-2018-12-18 11:44:56,052  INFO WebSocketServer:236 ---- 推送消息到窗口ce8f7755d1148，推送内容:{msg=匹配成功, code=200}
-2018-12-18 11:45:01,299  INFO WebSocketServer:103 ---- 收到来自窗口b85f35425ec48的信息:1111
-2018-12-18 11:45:01,317  INFO WebSocketServer:236 ---- 推送消息到窗口ce8f7755d1148，推送内容:{msg=1111, code=200}
-2018-12-18 11:45:09,454  INFO WebSocketServer:103 ---- 收到来自窗口ce8f7755d1148的信息:，回来了
-2018-12-18 11:45:09,474  INFO WebSocketServer:236 ---- 推送消息到窗口b85f35425ec48，推送内容:{msg=，回来了, code=200}
-2018-12-18 11:45:16,690 ERROR WebSocketServer:220 ---- 发生错误
-2018-12-18 11:45:16,691 ERROR WebSocketServer:222 ---- null
-2018-12-18 11:45:16,738  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为1
-2018-12-18 11:45:42,628  INFO WebSocketServer:103 ---- 收到来自窗口b85f35425ec48的信息:heartbeat
-2018-12-18 11:45:42,629  INFO WebSocketServer:124 ---- 用户心跳:b85f35425ec48,当前在线人数为1
-2018-12-18 11:47:23,075  INFO WebSocketServer:103 ---- 收到来自窗口b85f35425ec48的信息:heartbeat
-2018-12-18 11:47:23,076  INFO WebSocketServer:124 ---- 用户心跳:b85f35425ec48,当前在线人数为1
-2018-12-18 11:49:03,074  INFO WebSocketServer:103 ---- 收到来自窗口b85f35425ec48的信息:heartbeat
-2018-12-18 11:49:03,075  INFO WebSocketServer:124 ---- 用户心跳:b85f35425ec48,当前在线人数为1
-2018-12-18 11:50:43,074  INFO WebSocketServer:103 ---- 收到来自窗口b85f35425ec48的信息:heartbeat
-2018-12-18 11:50:43,076  INFO WebSocketServer:124 ---- 用户心跳:b85f35425ec48,当前在线人数为1
-2018-12-18 11:52:23,074  INFO WebSocketServer:103 ---- 收到来自窗口b85f35425ec48的信息:heartbeat
-2018-12-18 11:52:23,074  INFO WebSocketServer:124 ---- 用户心跳:b85f35425ec48,当前在线人数为1
-2018-12-18 14:38:31,395  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 12076 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
-2018-12-18 14:38:31,398 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
-2018-12-18 14:38:31,399  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
-2018-12-18 14:38:44,451  INFO AdventureApplication:57 ---- Started AdventureApplication in 13.512 seconds (JVM running for 14.204)
-2018-12-18 14:38:58,294  INFO WebSocketServer:62 ---- 有新窗口开始监听:389c558d07748,当前在线人数为1
-2018-12-18 14:39:50,841  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为0
-2018-12-18 14:39:50,977  INFO WebSocketServer:62 ---- 有新窗口开始监听:401c3f27f4648,当前在线人数为1
-2018-12-18 14:40:53,820  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为0
-2018-12-18 14:40:53,997  INFO WebSocketServer:62 ---- 有新窗口开始监听:2f26d75228a48,当前在线人数为1
-2018-12-18 14:42:34,473  INFO WebSocketServer:103 ---- 收到来自窗口2f26d75228a48的信息:heartbeat
-2018-12-18 14:42:34,473  INFO WebSocketServer:124 ---- 用户心跳:2f26d75228a48,当前在线人数为1
-2018-12-18 14:44:09,597  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为0
-2018-12-18 14:44:09,829  INFO WebSocketServer:62 ---- 有新窗口开始监听:7d9e1a92efa48,当前在线人数为1
-2018-12-18 14:44:58,056  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为0
-2018-12-18 14:44:58,213  INFO WebSocketServer:62 ---- 有新窗口开始监听:04a7091804248,当前在线人数为1
-2018-12-18 14:46:05,368  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为0
-2018-12-18 14:46:05,540  INFO WebSocketServer:62 ---- 有新窗口开始监听:93f9d28af6a48,当前在线人数为1
-2018-12-18 14:47:44,298  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为0
-2018-12-18 14:47:44,458  INFO WebSocketServer:62 ---- 有新窗口开始监听:911ace8dbe748,当前在线人数为1
-2018-12-18 14:47:47,648  INFO WebSocketServer:103 ---- 收到来自窗口911ace8dbe748的信息:connet
-2018-12-18 14:47:52,670  INFO WebSocketServer:236 ---- 推送消息到窗口911ace8dbe748，推送内容:{msg=暂时无人匹配，你稍后再来试试吧, code=504}
-2018-12-18 14:48:25,202  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为0
-2018-12-18 14:48:25,356  INFO WebSocketServer:62 ---- 有新窗口开始监听:33c21616c6848,当前在线人数为1
-2018-12-18 14:48:47,651  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为0
-2018-12-18 14:48:47,889  INFO WebSocketServer:62 ---- 有新窗口开始监听:fe3a679b95f48,当前在线人数为1
-2018-12-18 14:49:57,141  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为0
-2018-12-18 14:49:57,268  INFO WebSocketServer:62 ---- 有新窗口开始监听:d14ccd3d8f548,当前在线人数为1
-2018-12-18 14:50:07,375  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为0
-2018-12-18 14:50:07,489  INFO WebSocketServer:62 ---- 有新窗口开始监听:348668cdb5548,当前在线人数为1
-2018-12-18 14:51:48,479  INFO WebSocketServer:103 ---- 收到来自窗口348668cdb5548的信息:heartbeat
-2018-12-18 14:51:48,479  INFO WebSocketServer:124 ---- 用户心跳:348668cdb5548,当前在线人数为1
-2018-12-18 14:53:18,840  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为0
-2018-12-18 14:53:18,989  INFO WebSocketServer:62 ---- 有新窗口开始监听:9569d38cb5c48,当前在线人数为1
-2018-12-18 14:53:27,618  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为0
-2018-12-18 14:53:27,827  INFO WebSocketServer:62 ---- 有新窗口开始监听:b9659b8052648,当前在线人数为1
-2018-12-18 14:53:29,899  INFO WebSocketServer:103 ---- 收到来自窗口b9659b8052648的信息:connet
-2018-12-18 14:55:07,848  INFO WebSocketServer:103 ---- 收到来自窗口b9659b8052648的信息:heartbeat
-2018-12-18 14:55:07,849  INFO WebSocketServer:124 ---- 用户心跳:b9659b8052648,当前在线人数为1
-2018-12-18 14:55:15,391  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为0
-2018-12-18 14:55:15,531  INFO WebSocketServer:62 ---- 有新窗口开始监听:ddb80857dfc48,当前在线人数为1
-2018-12-18 14:55:18,049  INFO WebSocketServer:103 ---- 收到来自窗口ddb80857dfc48的信息:connet
-2018-12-18 14:55:23,079  INFO WebSocketServer:236 ---- 推送消息到窗口ddb80857dfc48，推送内容:{msg=暂时无人匹配，你稍后再来试试吧, code=504}
-2018-12-18 14:56:09,389  INFO WebSocketServer:103 ---- 收到来自窗口ddb80857dfc48的信息:connet
-2018-12-18 14:56:14,411  INFO WebSocketServer:236 ---- 推送消息到窗口ddb80857dfc48，推送内容:{msg=暂时无人匹配，你稍后再来试试吧, code=504}
-2018-12-18 14:56:55,559  INFO WebSocketServer:103 ---- 收到来自窗口ddb80857dfc48的信息:heartbeat
-2018-12-18 14:56:55,559  INFO WebSocketServer:124 ---- 用户心跳:ddb80857dfc48,当前在线人数为1
-2018-12-18 14:58:07,089  INFO WebSocketServer:62 ---- 有新窗口开始监听:c6b0fd87fb748,当前在线人数为2
-2018-12-18 14:58:11,745  INFO WebSocketServer:103 ---- 收到来自窗口c6b0fd87fb748的信息:connet
-2018-12-18 14:58:12,737  INFO WebSocketServer:103 ---- 收到来自窗口ddb80857dfc48的信息:connet
-2018-12-18 14:58:12,828  INFO WebSocketServer:236 ---- 推送消息到窗口c6b0fd87fb748，推送内容:{msg=匹配成功, code=200}
-2018-12-18 14:58:12,829  INFO WebSocketServer:236 ---- 推送消息到窗口ddb80857dfc48，推送内容:{msg=匹配成功, code=200}
-2018-12-18 14:58:35,561  INFO WebSocketServer:103 ---- 收到来自窗口ddb80857dfc48的信息:heartbeat
-2018-12-18 14:58:35,562  INFO WebSocketServer:124 ---- 用户心跳:ddb80857dfc48,当前在线人数为2
-2018-12-18 14:58:48,589 ERROR WebSocketServer:220 ---- 发生错误
-2018-12-18 14:58:48,589 ERROR WebSocketServer:222 ---- null
-2018-12-18 14:58:48,629  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为1
-2018-12-18 15:00:15,562  INFO WebSocketServer:103 ---- 收到来自窗口ddb80857dfc48的信息:heartbeat
-2018-12-18 15:00:15,562  INFO WebSocketServer:124 ---- 用户心跳:ddb80857dfc48,当前在线人数为1
-2018-12-18 15:01:55,563  INFO WebSocketServer:103 ---- 收到来自窗口ddb80857dfc48的信息:heartbeat
-2018-12-18 15:01:55,563  INFO WebSocketServer:124 ---- 用户心跳:ddb80857dfc48,当前在线人数为1
-2018-12-18 15:03:35,564  INFO WebSocketServer:103 ---- 收到来自窗口ddb80857dfc48的信息:heartbeat
-2018-12-18 15:03:35,565  INFO WebSocketServer:124 ---- 用户心跳:ddb80857dfc48,当前在线人数为1
-2018-12-18 15:46:36,373  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 11356 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
-2018-12-18 15:46:36,377 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
-2018-12-18 15:46:36,378  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
-2018-12-18 15:46:49,036  INFO AdventureApplication:57 ---- Started AdventureApplication in 13.034 seconds (JVM running for 13.706)
-2018-12-18 15:47:09,398  INFO WebSocketServer:62 ---- 有新窗口开始监听:a51f3bfc28c48,当前在线人数为1
-2018-12-18 15:47:49,185  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为0
-2018-12-18 15:47:49,392  INFO WebSocketServer:62 ---- 有新窗口开始监听:1899712cced48,当前在线人数为1
-2018-12-18 15:47:58,440  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为0
-2018-12-18 15:47:58,650  INFO WebSocketServer:62 ---- 有新窗口开始监听:95590c8990048,当前在线人数为1
-2018-12-18 15:48:06,983  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为0
-2018-12-18 15:48:07,160  INFO WebSocketServer:62 ---- 有新窗口开始监听:3aa87ea482448,当前在线人数为1
-2018-12-18 15:48:18,224  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为0
-2018-12-18 15:48:18,427  INFO WebSocketServer:62 ---- 有新窗口开始监听:7b73ba8510e48,当前在线人数为1
-2018-12-18 15:49:58,441  INFO WebSocketServer:103 ---- 收到来自窗口7b73ba8510e48的信息:heartbeat
-2018-12-18 15:49:58,441  INFO WebSocketServer:124 ---- 用户心跳:7b73ba8510e48,当前在线人数为1
-2018-12-18 15:51:38,442  INFO WebSocketServer:103 ---- 收到来自窗口7b73ba8510e48的信息:heartbeat
-2018-12-18 15:51:38,444  INFO WebSocketServer:124 ---- 用户心跳:7b73ba8510e48,当前在线人数为1
-2018-12-18 15:52:02,268  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为0
-2018-12-18 15:52:02,379  INFO WebSocketServer:62 ---- 有新窗口开始监听:04896d9bd2348,当前在线人数为1
-2018-12-18 15:52:24,252  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为0
-2018-12-18 15:52:24,379  INFO WebSocketServer:62 ---- 有新窗口开始监听:bf92ea618d648,当前在线人数为1
-2018-12-18 15:53:23,015  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为0
-2018-12-18 15:53:23,191  INFO WebSocketServer:62 ---- 有新窗口开始监听:a60832ce7ff48,当前在线人数为1
-2018-12-18 15:53:41,440  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为0
-2018-12-18 15:53:41,614  INFO WebSocketServer:62 ---- 有新窗口开始监听:def7c55fd3348,当前在线人数为1
-2018-12-18 15:55:22,528  INFO WebSocketServer:103 ---- 收到来自窗口def7c55fd3348的信息:heartbeat
-2018-12-18 15:55:22,528  INFO WebSocketServer:124 ---- 用户心跳:def7c55fd3348,当前在线人数为1
-2018-12-18 15:57:02,528  INFO WebSocketServer:103 ---- 收到来自窗口def7c55fd3348的信息:heartbeat
-2018-12-18 15:57:02,528  INFO WebSocketServer:124 ---- 用户心跳:def7c55fd3348,当前在线人数为1
-2018-12-18 15:58:42,530  INFO WebSocketServer:103 ---- 收到来自窗口def7c55fd3348的信息:heartbeat
-2018-12-18 15:58:42,530  INFO WebSocketServer:124 ---- 用户心跳:def7c55fd3348,当前在线人数为1
-2018-12-18 16:00:22,531  INFO WebSocketServer:103 ---- 收到来自窗口def7c55fd3348的信息:heartbeat
-2018-12-18 16:00:22,532  INFO WebSocketServer:124 ---- 用户心跳:def7c55fd3348,当前在线人数为1
-2018-12-18 16:02:02,532  INFO WebSocketServer:103 ---- 收到来自窗口def7c55fd3348的信息:heartbeat
-2018-12-18 16:02:02,532  INFO WebSocketServer:124 ---- 用户心跳:def7c55fd3348,当前在线人数为1
-2018-12-18 16:03:42,533  INFO WebSocketServer:103 ---- 收到来自窗口def7c55fd3348的信息:heartbeat
-2018-12-18 16:03:42,533  INFO WebSocketServer:124 ---- 用户心跳:def7c55fd3348,当前在线人数为1
-2018-12-18 16:05:22,535  INFO WebSocketServer:103 ---- 收到来自窗口def7c55fd3348的信息:heartbeat
-2018-12-18 16:05:22,535  INFO WebSocketServer:124 ---- 用户心跳:def7c55fd3348,当前在线人数为1
-2018-12-18 16:07:01,670  INFO WebSocketServer:103 ---- 收到来自窗口def7c55fd3348的信息:heartbeat
-2018-12-18 16:07:01,670  INFO WebSocketServer:124 ---- 用户心跳:def7c55fd3348,当前在线人数为1
-2018-12-18 16:08:41,673  INFO WebSocketServer:103 ---- 收到来自窗口def7c55fd3348的信息:heartbeat
-2018-12-18 16:08:41,673  INFO WebSocketServer:124 ---- 用户心跳:def7c55fd3348,当前在线人数为1
-2018-12-18 16:10:22,538  INFO WebSocketServer:103 ---- 收到来自窗口def7c55fd3348的信息:heartbeat
-2018-12-18 16:10:22,538  INFO WebSocketServer:124 ---- 用户心跳:def7c55fd3348,当前在线人数为1
-2018-12-18 16:12:01,032  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为0
-2018-12-18 16:34:23,379  INFO WebSocketServer:62 ---- 有新窗口开始监听:e67a70f399748,当前在线人数为1
-2018-12-18 16:36:03,481  INFO WebSocketServer:103 ---- 收到来自窗口e67a70f399748的信息:heartbeat
-2018-12-18 16:36:03,481  INFO WebSocketServer:124 ---- 用户心跳:e67a70f399748,当前在线人数为1
-2018-12-18 16:37:43,481  INFO WebSocketServer:103 ---- 收到来自窗口e67a70f399748的信息:heartbeat
-2018-12-18 16:37:43,482  INFO WebSocketServer:124 ---- 用户心跳:e67a70f399748,当前在线人数为1
-2018-12-18 16:39:23,482  INFO WebSocketServer:103 ---- 收到来自窗口e67a70f399748的信息:heartbeat
-2018-12-18 16:39:23,482  INFO WebSocketServer:124 ---- 用户心跳:e67a70f399748,当前在线人数为1
-2018-12-18 16:39:23,899  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为0
-2018-12-18 16:39:24,115  INFO WebSocketServer:62 ---- 有新窗口开始监听:ffdf42beb7148,当前在线人数为1
-2018-12-18 16:41:04,125  INFO WebSocketServer:103 ---- 收到来自窗口ffdf42beb7148的信息:heartbeat
-2018-12-18 16:41:04,125  INFO WebSocketServer:124 ---- 用户心跳:ffdf42beb7148,当前在线人数为1
-2018-12-18 16:42:44,127  INFO WebSocketServer:103 ---- 收到来自窗口ffdf42beb7148的信息:heartbeat
-2018-12-18 16:42:44,127  INFO WebSocketServer:124 ---- 用户心跳:ffdf42beb7148,当前在线人数为1
-2018-12-18 16:44:24,127  INFO WebSocketServer:103 ---- 收到来自窗口ffdf42beb7148的信息:heartbeat
-2018-12-18 16:44:24,127  INFO WebSocketServer:124 ---- 用户心跳:ffdf42beb7148,当前在线人数为1
-2018-12-18 16:46:04,130  INFO WebSocketServer:103 ---- 收到来自窗口ffdf42beb7148的信息:heartbeat
-2018-12-18 16:46:04,130  INFO WebSocketServer:124 ---- 用户心跳:ffdf42beb7148,当前在线人数为1
-2018-12-18 16:47:44,130  INFO WebSocketServer:103 ---- 收到来自窗口ffdf42beb7148的信息:heartbeat
-2018-12-18 16:47:44,132  INFO WebSocketServer:124 ---- 用户心跳:ffdf42beb7148,当前在线人数为1
-2018-12-18 16:49:24,131  INFO WebSocketServer:103 ---- 收到来自窗口ffdf42beb7148的信息:heartbeat
-2018-12-18 16:49:24,131  INFO WebSocketServer:124 ---- 用户心跳:ffdf42beb7148,当前在线人数为1
-2018-12-18 16:51:04,569  INFO WebSocketServer:103 ---- 收到来自窗口ffdf42beb7148的信息:heartbeat
-2018-12-18 16:51:04,569  INFO WebSocketServer:124 ---- 用户心跳:ffdf42beb7148,当前在线人数为1
-2018-12-18 16:51:26,526  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为0
-2018-12-18 16:51:26,698  INFO WebSocketServer:62 ---- 有新窗口开始监听:c2f16cecc2548,当前在线人数为1
-2018-12-18 16:52:05,067  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为0
-2018-12-18 16:52:05,257  INFO WebSocketServer:62 ---- 有新窗口开始监听:195f399b79a48,当前在线人数为1
-2018-12-18 16:52:27,755  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为0
-2018-12-18 16:52:27,947  INFO WebSocketServer:62 ---- 有新窗口开始监听:5648d65e16248,当前在线人数为1
-2018-12-18 16:52:28,874  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为0
-2018-12-18 16:52:29,003  INFO WebSocketServer:62 ---- 有新窗口开始监听:bfe69e154f848,当前在线人数为1
-2018-12-18 16:53:02,795  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为0
-2018-12-18 16:53:02,994  INFO WebSocketServer:62 ---- 有新窗口开始监听:1fbb1e3dac348,当前在线人数为1
-2018-12-18 16:53:55,615  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为0
-2018-12-18 16:53:55,780  INFO WebSocketServer:62 ---- 有新窗口开始监听:09d93cedec248,当前在线人数为1
-2018-12-18 16:54:04,127  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为0
-2018-12-18 16:54:04,353  INFO WebSocketServer:62 ---- 有新窗口开始监听:fe0180bdde948,当前在线人数为1
-2018-12-18 16:54:51,608  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为0
-2018-12-18 16:54:51,803  INFO WebSocketServer:62 ---- 有新窗口开始监听:c99567df06148,当前在线人数为1
-2018-12-18 16:55:15,362  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为0
-2018-12-18 16:55:15,518  INFO WebSocketServer:62 ---- 有新窗口开始监听:5c9cc989c2948,当前在线人数为1
-2018-12-18 16:56:09,249  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为0
-2018-12-18 16:56:09,366  INFO WebSocketServer:62 ---- 有新窗口开始监听:6cdac6697cf48,当前在线人数为1
-2018-12-18 16:57:46,033  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为0
-2018-12-18 16:57:46,132  INFO WebSocketServer:62 ---- 有新窗口开始监听:4910caedef548,当前在线人数为1
-2018-12-18 16:58:13,937  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为0
-2018-12-18 16:58:14,072  INFO WebSocketServer:62 ---- 有新窗口开始监听:f926e81be8348,当前在线人数为1
-2018-12-18 16:59:21,908  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为0
-2018-12-18 16:59:22,028  INFO WebSocketServer:62 ---- 有新窗口开始监听:ba02bfbe4b548,当前在线人数为1
-2018-12-18 16:59:35,046  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为0
-2018-12-18 16:59:35,135  INFO WebSocketServer:62 ---- 有新窗口开始监听:8db892ca15a48,当前在线人数为1
-2018-12-18 16:59:53,113  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为0
-2018-12-18 16:59:53,226  INFO WebSocketServer:62 ---- 有新窗口开始监听:f01d4715cb548,当前在线人数为1
-2018-12-18 17:01:33,577  INFO WebSocketServer:103 ---- 收到来自窗口f01d4715cb548的信息:heartbeat
-2018-12-18 17:01:33,577  INFO WebSocketServer:124 ---- 用户心跳:f01d4715cb548,当前在线人数为1
-2018-12-18 17:03:13,579  INFO WebSocketServer:103 ---- 收到来自窗口f01d4715cb548的信息:heartbeat
-2018-12-18 17:03:13,580  INFO WebSocketServer:124 ---- 用户心跳:f01d4715cb548,当前在线人数为1
-2018-12-18 17:03:40,577  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为0
-2018-12-18 17:03:40,751  INFO WebSocketServer:62 ---- 有新窗口开始监听:f3267a1d77748,当前在线人数为1
-2018-12-18 17:04:15,072  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为0
-2018-12-18 17:04:15,205  INFO WebSocketServer:62 ---- 有新窗口开始监听:12deff9c09f48,当前在线人数为1
-2018-12-18 17:04:32,380  INFO WebSocketServer:103 ---- 收到来自窗口12deff9c09f48的信息:1111
-2018-12-18 17:04:32,389  INFO WebSocketServer:236 ---- 推送消息到窗口12deff9c09f48，推送内容:{msg=1111, code=404}
-2018-12-18 17:05:55,581  INFO WebSocketServer:103 ---- 收到来自窗口12deff9c09f48的信息:heartbeat
-2018-12-18 17:05:55,582  INFO WebSocketServer:124 ---- 用户心跳:12deff9c09f48,当前在线人数为1
-2018-12-18 17:07:35,581  INFO WebSocketServer:103 ---- 收到来自窗口12deff9c09f48的信息:heartbeat
-2018-12-18 17:07:35,581  INFO WebSocketServer:124 ---- 用户心跳:12deff9c09f48,当前在线人数为1
-2018-12-18 17:08:14,456  INFO WebSocketServer:62 ---- 有新窗口开始监听:8e1a2894dfe48,当前在线人数为2
-2018-12-18 17:08:53,286 ERROR WebSocketServer:220 ---- 发生错误
-2018-12-18 17:08:53,287 ERROR WebSocketServer:222 ---- null
-2018-12-18 17:08:53,296  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为1
-2018-12-18 17:08:53,722  INFO WebSocketServer:62 ---- 有新窗口开始监听:7d7450304d548,当前在线人数为2
-2018-12-18 17:09:15,582  INFO WebSocketServer:103 ---- 收到来自窗口12deff9c09f48的信息:heartbeat
-2018-12-18 17:09:15,583  INFO WebSocketServer:124 ---- 用户心跳:12deff9c09f48,当前在线人数为2
-2018-12-18 17:10:17,762 ERROR WebSocketServer:220 ---- 发生错误
-2018-12-18 17:10:17,763 ERROR WebSocketServer:222 ---- null
-2018-12-18 17:10:17,792  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为1
-2018-12-18 17:10:55,208  INFO WebSocketServer:103 ---- 收到来自窗口12deff9c09f48的信息:heartbeat
-2018-12-18 17:10:55,208  INFO WebSocketServer:124 ---- 用户心跳:12deff9c09f48,当前在线人数为1
-2018-12-18 17:12:35,587  INFO WebSocketServer:103 ---- 收到来自窗口12deff9c09f48的信息:heartbeat
-2018-12-18 17:12:35,587  INFO WebSocketServer:124 ---- 用户心跳:12deff9c09f48,当前在线人数为1
-2018-12-18 17:14:15,586  INFO WebSocketServer:103 ---- 收到来自窗口12deff9c09f48的信息:heartbeat
-2018-12-18 17:14:15,586  INFO WebSocketServer:124 ---- 用户心跳:12deff9c09f48,当前在线人数为1
-2018-12-18 17:15:55,587  INFO WebSocketServer:103 ---- 收到来自窗口12deff9c09f48的信息:heartbeat
-2018-12-18 17:15:55,588  INFO WebSocketServer:124 ---- 用户心跳:12deff9c09f48,当前在线人数为1
-2018-12-18 17:17:35,588  INFO WebSocketServer:103 ---- 收到来自窗口12deff9c09f48的信息:heartbeat
-2018-12-18 17:17:35,589  INFO WebSocketServer:124 ---- 用户心跳:12deff9c09f48,当前在线人数为1
-2018-12-18 17:19:15,589  INFO WebSocketServer:103 ---- 收到来自窗口12deff9c09f48的信息:heartbeat
-2018-12-18 17:19:15,590  INFO WebSocketServer:124 ---- 用户心跳:12deff9c09f48,当前在线人数为1
-2018-12-18 17:19:34,037  INFO WebSocketServer:62 ---- 有新窗口开始监听:985ad10b22d48,当前在线人数为2
-2018-12-18 17:19:36,788  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为1
-2018-12-18 17:19:36,970  INFO WebSocketServer:62 ---- 有新窗口开始监听:526a68135b048,当前在线人数为2
-2018-12-18 17:20:00,077  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为1
-2018-12-18 17:20:00,286  INFO WebSocketServer:62 ---- 有新窗口开始监听:aa66ee8379848,当前在线人数为2
-2018-12-18 17:20:04,094 ERROR WebSocketServer:220 ---- 发生错误
-2018-12-18 17:20:04,094 ERROR WebSocketServer:222 ---- null
-2018-12-18 17:20:04,104  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为1
-2018-12-18 17:20:05,153  INFO WebSocketServer:62 ---- 有新窗口开始监听:5235835f5f448,当前在线人数为2
-2018-12-18 17:20:09,794  INFO WebSocketServer:103 ---- 收到来自窗口5235835f5f448的信息:connet
-2018-12-18 17:20:10,182  INFO WebSocketServer:103 ---- 收到来自窗口aa66ee8379848的信息:connet
-2018-12-18 17:20:10,265  INFO WebSocketServer:236 ---- 推送消息到窗口5235835f5f448，推送内容:{msg=匹配成功, code=200}
-2018-12-18 17:20:10,265  INFO WebSocketServer:236 ---- 推送消息到窗口aa66ee8379848，推送内容:{msg=匹配成功, code=200}
-2018-12-18 17:20:18,833  INFO WebSocketServer:103 ---- 收到来自窗口aa66ee8379848的信息:111
-2018-12-18 17:20:18,852  INFO WebSocketServer:236 ---- 推送消息到窗口5235835f5f448，推送内容:{msg=111, code=200}
-2018-12-18 17:20:28,877  INFO WebSocketServer:103 ---- 收到来自窗口5235835f5f448的信息:鬼鬼
-2018-12-18 17:20:28,896  INFO WebSocketServer:236 ---- 推送消息到窗口aa66ee8379848，推送内容:{msg=鬼鬼, code=200}
-2018-12-18 17:21:40,591  INFO WebSocketServer:103 ---- 收到来自窗口aa66ee8379848的信息:heartbeat
-2018-12-18 17:21:40,592  INFO WebSocketServer:124 ---- 用户心跳:aa66ee8379848,当前在线人数为2
-2018-12-18 17:21:45,151  INFO WebSocketServer:103 ---- 收到来自窗口5235835f5f448的信息:heartbeat
-2018-12-18 17:21:45,151  INFO WebSocketServer:124 ---- 用户心跳:5235835f5f448,当前在线人数为2
-2018-12-18 17:22:29,554 ERROR WebSocketServer:220 ---- 发生错误
-2018-12-18 17:22:29,554 ERROR WebSocketServer:222 ---- null
-2018-12-18 17:22:29,622  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为1
-2018-12-18 17:23:20,592  INFO WebSocketServer:103 ---- 收到来自窗口aa66ee8379848的信息:heartbeat
-2018-12-18 17:23:20,593  INFO WebSocketServer:124 ---- 用户心跳:aa66ee8379848,当前在线人数为1
-2018-12-18 17:25:00,595  INFO WebSocketServer:103 ---- 收到来自窗口aa66ee8379848的信息:heartbeat
-2018-12-18 17:25:00,595  INFO WebSocketServer:124 ---- 用户心跳:aa66ee8379848,当前在线人数为1
-2018-12-18 17:26:40,595  INFO WebSocketServer:103 ---- 收到来自窗口aa66ee8379848的信息:heartbeat
-2018-12-18 17:26:40,596  INFO WebSocketServer:124 ---- 用户心跳:aa66ee8379848,当前在线人数为1
-2018-12-18 17:28:20,597  INFO WebSocketServer:103 ---- 收到来自窗口aa66ee8379848的信息:heartbeat
-2018-12-18 17:28:20,599  INFO WebSocketServer:124 ---- 用户心跳:aa66ee8379848,当前在线人数为1
-2018-12-18 17:30:00,486  INFO WebSocketServer:103 ---- 收到来自窗口aa66ee8379848的信息:heartbeat
-2018-12-18 17:30:00,486  INFO WebSocketServer:124 ---- 用户心跳:aa66ee8379848,当前在线人数为1
-2018-12-18 17:31:40,487  INFO WebSocketServer:103 ---- 收到来自窗口aa66ee8379848的信息:heartbeat
-2018-12-18 17:31:40,487  INFO WebSocketServer:124 ---- 用户心跳:aa66ee8379848,当前在线人数为1
-2018-12-18 17:33:20,487  INFO WebSocketServer:103 ---- 收到来自窗口aa66ee8379848的信息:heartbeat
-2018-12-18 17:33:20,488  INFO WebSocketServer:124 ---- 用户心跳:aa66ee8379848,当前在线人数为1
-2018-12-18 17:35:00,489  INFO WebSocketServer:103 ---- 收到来自窗口aa66ee8379848的信息:heartbeat
-2018-12-18 17:35:00,490  INFO WebSocketServer:124 ---- 用户心跳:aa66ee8379848,当前在线人数为1
-2018-12-18 17:36:40,491  INFO WebSocketServer:103 ---- 收到来自窗口aa66ee8379848的信息:heartbeat
-2018-12-18 17:36:40,491  INFO WebSocketServer:124 ---- 用户心跳:aa66ee8379848,当前在线人数为1
-2018-12-18 17:38:20,492  INFO WebSocketServer:103 ---- 收到来自窗口aa66ee8379848的信息:heartbeat
-2018-12-18 17:38:20,492  INFO WebSocketServer:124 ---- 用户心跳:aa66ee8379848,当前在线人数为1
-2018-12-18 17:39:17,260  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为0
-2018-12-18 17:39:17,417  INFO WebSocketServer:62 ---- 有新窗口开始监听:e70b3f0cd8a48,当前在线人数为1
-2018-12-18 17:39:22,094  INFO WebSocketServer:62 ---- 有新窗口开始监听:425c4243f0448,当前在线人数为2
-2018-12-18 17:39:23,409  INFO WebSocketServer:103 ---- 收到来自窗口425c4243f0448的信息:connet
-2018-12-18 17:39:24,491  INFO WebSocketServer:103 ---- 收到来自窗口e70b3f0cd8a48的信息:connet
-2018-12-18 17:39:24,590  INFO WebSocketServer:236 ---- 推送消息到窗口425c4243f0448，推送内容:{msg=匹配成功, code=200}
-2018-12-18 17:39:24,591  INFO WebSocketServer:236 ---- 推送消息到窗口e70b3f0cd8a48，推送内容:{msg=匹配成功, code=200}
-2018-12-18 17:39:29,597  INFO WebSocketServer:103 ---- 收到来自窗口e70b3f0cd8a48的信息:77777
-2018-12-18 17:39:29,616  INFO WebSocketServer:236 ---- 推送消息到窗口425c4243f0448，推送内容:{msg=77777, code=200}
-2018-12-18 17:39:31,991  INFO WebSocketServer:103 ---- 收到来自窗口e70b3f0cd8a48的信息:88888888
-2018-12-18 17:39:32,009  INFO WebSocketServer:236 ---- 推送消息到窗口425c4243f0448，推送内容:{msg=88888888, code=200}
-2018-12-18 17:39:33,489  INFO WebSocketServer:103 ---- 收到来自窗口e70b3f0cd8a48的信息:444
-2018-12-18 17:39:33,507  INFO WebSocketServer:236 ---- 推送消息到窗口425c4243f0448，推送内容:{msg=444, code=200}
-2018-12-18 17:39:35,095  INFO WebSocketServer:103 ---- 收到来自窗口e70b3f0cd8a48的信息:444
-2018-12-18 17:39:35,119  INFO WebSocketServer:236 ---- 推送消息到窗口425c4243f0448，推送内容:{msg=444, code=200}
-2018-12-18 17:39:37,225  INFO WebSocketServer:103 ---- 收到来自窗口e70b3f0cd8a48的信息:444
-2018-12-18 17:39:37,243  INFO WebSocketServer:236 ---- 推送消息到窗口425c4243f0448，推送内容:{msg=444, code=200}
-2018-12-18 17:40:57,431  INFO WebSocketServer:103 ---- 收到来自窗口e70b3f0cd8a48的信息:heartbeat
-2018-12-18 17:40:57,431  INFO WebSocketServer:124 ---- 用户心跳:e70b3f0cd8a48,当前在线人数为2
-2018-12-18 17:41:02,102  INFO WebSocketServer:103 ---- 收到来自窗口425c4243f0448的信息:heartbeat
-2018-12-18 17:41:02,102  INFO WebSocketServer:124 ---- 用户心跳:425c4243f0448,当前在线人数为2
-2018-12-18 17:41:24,033 ERROR WebSocketServer:220 ---- 发生错误
-2018-12-18 17:41:24,033 ERROR WebSocketServer:222 ---- null
-2018-12-18 17:41:24,098  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为1
-2018-12-18 17:42:37,494  INFO WebSocketServer:103 ---- 收到来自窗口e70b3f0cd8a48的信息:heartbeat
-2018-12-18 17:42:37,495  INFO WebSocketServer:124 ---- 用户心跳:e70b3f0cd8a48,当前在线人数为1
-2018-12-18 17:43:45,000  INFO WebSocketServer:103 ---- 收到来自窗口e70b3f0cd8a48的信息:sss
-2018-12-18 17:43:45,028  INFO WebSocketServer:236 ---- 推送消息到窗口e70b3f0cd8a48，推送内容:{msg=sss, code=404}
-2018-12-18 17:43:48,429  INFO WebSocketServer:103 ---- 收到来自窗口e70b3f0cd8a48的信息:aaaa
-2018-12-18 17:43:48,437  INFO WebSocketServer:236 ---- 推送消息到窗口e70b3f0cd8a48，推送内容:{msg=aaaa, code=404}
-2018-12-18 17:44:14,467  INFO WebSocketServer:103 ---- 收到来自窗口e70b3f0cd8a48的信息:5555
-2018-12-18 17:44:14,476  INFO WebSocketServer:236 ---- 推送消息到窗口e70b3f0cd8a48，推送内容:{msg=5555, code=404}
-2018-12-18 17:44:16,093  INFO WebSocketServer:103 ---- 收到来自窗口e70b3f0cd8a48的信息:555
-2018-12-18 17:44:16,103  INFO WebSocketServer:236 ---- 推送消息到窗口e70b3f0cd8a48，推送内容:{msg=555, code=404}
-2018-12-18 17:44:17,415  INFO WebSocketServer:103 ---- 收到来自窗口e70b3f0cd8a48的信息:555
-2018-12-18 17:44:17,423  INFO WebSocketServer:236 ---- 推送消息到窗口e70b3f0cd8a48，推送内容:{msg=555, code=404}
-2018-12-18 17:44:17,434  INFO WebSocketServer:103 ---- 收到来自窗口e70b3f0cd8a48的信息:heartbeat
-2018-12-18 17:44:17,436  INFO WebSocketServer:124 ---- 用户心跳:e70b3f0cd8a48,当前在线人数为1
-2018-12-18 17:44:19,092  INFO WebSocketServer:103 ---- 收到来自窗口e70b3f0cd8a48的信息:555
-2018-12-18 17:44:19,101  INFO WebSocketServer:236 ---- 推送消息到窗口e70b3f0cd8a48，推送内容:{msg=555, code=404}
-2018-12-18 17:44:27,739  INFO WebSocketServer:103 ---- 收到来自窗口e70b3f0cd8a48的信息:555
-2018-12-18 17:44:27,747  INFO WebSocketServer:236 ---- 推送消息到窗口e70b3f0cd8a48，推送内容:{msg=555, code=404}
-2018-12-18 17:44:42,622  INFO WebSocketServer:103 ---- 收到来自窗口e70b3f0cd8a48的信息:77
-2018-12-18 17:44:42,633  INFO WebSocketServer:236 ---- 推送消息到窗口e70b3f0cd8a48，推送内容:{msg=77, code=404}
-2018-12-18 17:45:57,496  INFO WebSocketServer:103 ---- 收到来自窗口e70b3f0cd8a48的信息:heartbeat
-2018-12-18 17:45:57,496  INFO WebSocketServer:124 ---- 用户心跳:e70b3f0cd8a48,当前在线人数为1
-2018-12-18 17:46:00,213  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为0
-2018-12-18 17:46:00,310  INFO WebSocketServer:62 ---- 有新窗口开始监听:9a784f7a38c48,当前在线人数为1
-2018-12-18 17:46:06,329  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为0
-2018-12-18 17:46:06,501  INFO WebSocketServer:62 ---- 有新窗口开始监听:c3627aa2c4748,当前在线人数为1
-2018-12-18 17:46:08,499  INFO WebSocketServer:103 ---- 收到来自窗口c3627aa2c4748的信息:ssss
-2018-12-18 17:46:08,507  INFO WebSocketServer:236 ---- 推送消息到窗口c3627aa2c4748，推送内容:{msg=ssss, code=404}
-2018-12-18 17:47:32,522  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为0
-2018-12-18 17:47:32,591  INFO WebSocketServer:62 ---- 有新窗口开始监听:a4e3346778b48,当前在线人数为1
-2018-12-18 17:47:35,599  INFO WebSocketServer:103 ---- 收到来自窗口a4e3346778b48的信息:444
-2018-12-18 17:47:35,607  INFO WebSocketServer:236 ---- 推送消息到窗口a4e3346778b48，推送内容:{msg=444, code=404}
-2018-12-18 17:47:37,825  INFO WebSocketServer:103 ---- 收到来自窗口a4e3346778b48的信息:4444
-2018-12-18 17:47:37,836  INFO WebSocketServer:236 ---- 推送消息到窗口a4e3346778b48，推送内容:{msg=4444, code=404}
-2018-12-18 17:47:40,741  INFO WebSocketServer:103 ---- 收到来自窗口a4e3346778b48的信息:444
-2018-12-18 17:47:40,749  INFO WebSocketServer:236 ---- 推送消息到窗口a4e3346778b48，推送内容:{msg=444, code=404}
-2018-12-18 17:48:49,433  INFO WebSocketServer:103 ---- 收到来自窗口a4e3346778b48的信息:445
-2018-12-18 17:48:49,463  INFO WebSocketServer:236 ---- 推送消息到窗口a4e3346778b48，推送内容:{msg=445, code=404}
-2018-12-18 17:48:52,053  INFO WebSocketServer:103 ---- 收到来自窗口a4e3346778b48的信息:4545
-2018-12-18 17:48:52,061  INFO WebSocketServer:236 ---- 推送消息到窗口a4e3346778b48，推送内容:{msg=4545, code=404}
-2018-12-18 17:48:53,857  INFO WebSocketServer:103 ---- 收到来自窗口a4e3346778b48的信息:454545
-2018-12-18 17:48:53,866  INFO WebSocketServer:236 ---- 推送消息到窗口a4e3346778b48，推送内容:{msg=454545, code=404}
-2018-12-18 17:48:56,319  INFO WebSocketServer:103 ---- 收到来自窗口a4e3346778b48的信息:4545
-2018-12-18 17:48:56,327  INFO WebSocketServer:236 ---- 推送消息到窗口a4e3346778b48，推送内容:{msg=4545, code=404}
-2018-12-18 17:48:59,005  INFO WebSocketServer:103 ---- 收到来自窗口a4e3346778b48的信息:45454
-2018-12-18 17:48:59,013  INFO WebSocketServer:236 ---- 推送消息到窗口a4e3346778b48，推送内容:{msg=45454, code=404}
-2018-12-18 17:49:01,182  INFO WebSocketServer:103 ---- 收到来自窗口a4e3346778b48的信息:454545
-2018-12-18 17:49:01,196  INFO WebSocketServer:236 ---- 推送消息到窗口a4e3346778b48，推送内容:{msg=454545, code=404}
-2018-12-18 17:49:02,837  INFO WebSocketServer:103 ---- 收到来自窗口a4e3346778b48的信息:454545
-2018-12-18 17:49:02,845  INFO WebSocketServer:236 ---- 推送消息到窗口a4e3346778b48，推送内容:{msg=454545, code=404}
-2018-12-18 17:49:04,601  INFO WebSocketServer:103 ---- 收到来自窗口a4e3346778b48的信息:454545
-2018-12-18 17:49:04,609  INFO WebSocketServer:236 ---- 推送消息到窗口a4e3346778b48，推送内容:{msg=454545, code=404}
-2018-12-18 17:49:06,257  INFO WebSocketServer:103 ---- 收到来自窗口a4e3346778b48的信息:454545
-2018-12-18 17:49:06,265  INFO WebSocketServer:236 ---- 推送消息到窗口a4e3346778b48，推送内容:{msg=454545, code=404}
-2018-12-18 17:49:08,082  INFO WebSocketServer:103 ---- 收到来自窗口a4e3346778b48的信息:4545
-2018-12-18 17:49:08,091  INFO WebSocketServer:236 ---- 推送消息到窗口a4e3346778b48，推送内容:{msg=4545, code=404}
-2018-12-18 17:49:12,612  INFO WebSocketServer:103 ---- 收到来自窗口a4e3346778b48的信息:heartbeat
-2018-12-18 17:49:12,613  INFO WebSocketServer:124 ---- 用户心跳:a4e3346778b48,当前在线人数为1
-2018-12-18 17:50:52,613  INFO WebSocketServer:103 ---- 收到来自窗口a4e3346778b48的信息:heartbeat
-2018-12-18 17:50:52,614  INFO WebSocketServer:124 ---- 用户心跳:a4e3346778b48,当前在线人数为1
-2018-12-18 17:52:32,615  INFO WebSocketServer:103 ---- 收到来自窗口a4e3346778b48的信息:heartbeat
-2018-12-18 17:52:32,615  INFO WebSocketServer:124 ---- 用户心跳:a4e3346778b48,当前在线人数为1
-2018-12-18 17:55:13,978  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 10864 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
-2018-12-18 17:55:13,982 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
-2018-12-18 17:55:13,986  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
-2018-12-18 17:55:27,239  INFO AdventureApplication:57 ---- Started AdventureApplication in 13.642 seconds (JVM running for 14.29)
-2018-12-18 17:55:49,840  INFO WebSocketServer:62 ---- 有新窗口开始监听:c6e2a0c745948,当前在线人数为1
+2018-12-21 11:23:53,911  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 11892 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-12-21 11:23:53,940 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-12-21 11:23:53,941  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-12-21 11:24:11,086  INFO AdventureApplication:57 ---- Started AdventureApplication in 18.378 seconds (JVM running for 19.548)
+2018-12-21 11:24:44,449  INFO WebSocketServer:62 ---- 有新窗口开始监听:8b71b93cf0348,当前在线人数为1
+2018-12-21 11:24:52,124  INFO WebSocketServer:62 ---- 有新窗口开始监听:efde10f315448,当前在线人数为2
+2018-12-21 11:24:54,994  INFO WebSocketServer:103 ---- 收到来自窗口8b71b93cf0348的信息:connet
+2018-12-21 11:24:55,298  INFO WebSocketServer:103 ---- 收到来自窗口efde10f315448的信息:connet
+2018-12-21 11:24:55,395  INFO WebSocketServer:249 ---- 推送消息到窗口8b71b93cf0348，推送内容:{msg=匹配成功, code=200}
+2018-12-21 11:24:55,396  INFO WebSocketServer:249 ---- 推送消息到窗口efde10f315448，推送内容:{msg=匹配成功, code=200}
+2018-12-21 11:25:02,309  INFO WebSocketServer:103 ---- 收到来自窗口efde10f315448的信息:111111
+2018-12-21 11:25:02,328  INFO WebSocketServer:249 ---- 推送消息到窗口8b71b93cf0348，推送内容:{msg=111111, code=200}
+2018-12-21 11:25:08,099  INFO WebSocketServer:103 ---- 收到来自窗口efde10f315448的信息:Wqw
+2018-12-21 11:25:08,117  INFO WebSocketServer:249 ---- 推送消息到窗口8b71b93cf0348，推送内容:{msg=Wqw, code=200}
+2018-12-21 11:25:11,705  INFO WebSocketServer:103 ---- 收到来自窗口efde10f315448的信息:2333
+2018-12-21 11:25:11,724  INFO WebSocketServer:249 ---- 推送消息到窗口8b71b93cf0348，推送内容:{msg=2333, code=200}
+2018-12-21 11:25:14,501  INFO WebSocketServer:103 ---- 收到来自窗口efde10f315448的信息:Eeee
+2018-12-21 11:25:14,520  INFO WebSocketServer:249 ---- 推送消息到窗口8b71b93cf0348，推送内容:{msg=Eeee, code=200}
+2018-12-21 11:25:16,931  INFO WebSocketServer:103 ---- 收到来自窗口efde10f315448的信息:Sdrt
+2018-12-21 11:25:16,950  INFO WebSocketServer:249 ---- 推送消息到窗口8b71b93cf0348，推送内容:{msg=Sdrt, code=200}
+2018-12-21 11:25:20,612  INFO WebSocketServer:103 ---- 收到来自窗口efde10f315448的信息:Ddft
+2018-12-21 11:25:20,630  INFO WebSocketServer:249 ---- 推送消息到窗口8b71b93cf0348，推送内容:{msg=Ddft, code=200}
+2018-12-21 11:25:23,258  INFO WebSocketServer:103 ---- 收到来自窗口efde10f315448的信息:Ftyyy
+2018-12-21 11:25:23,277  INFO WebSocketServer:249 ---- 推送消息到窗口8b71b93cf0348，推送内容:{msg=Ftyyy, code=200}
+2018-12-21 11:25:25,944  INFO WebSocketServer:103 ---- 收到来自窗口efde10f315448的信息:Sdft
+2018-12-21 11:25:25,962  INFO WebSocketServer:249 ---- 推送消息到窗口8b71b93cf0348，推送内容:{msg=Sdft, code=200}
+2018-12-21 11:25:29,004  INFO WebSocketServer:103 ---- 收到来自窗口efde10f315448的信息:Tresty
+2018-12-21 11:25:29,025  INFO WebSocketServer:249 ---- 推送消息到窗口8b71b93cf0348，推送内容:{msg=Tresty, code=200}
+2018-12-21 11:25:31,602  INFO WebSocketServer:103 ---- 收到来自窗口efde10f315448的信息:Gffdf
+2018-12-21 11:25:31,621  INFO WebSocketServer:249 ---- 推送消息到窗口8b71b93cf0348，推送内容:{msg=Gffdf, code=200}
+2018-12-21 11:25:34,327  INFO WebSocketServer:103 ---- 收到来自窗口efde10f315448的信息:Fffyyu
+2018-12-21 11:25:34,345  INFO WebSocketServer:249 ---- 推送消息到窗口8b71b93cf0348，推送内容:{msg=Fffyyu, code=200}
+2018-12-21 11:25:36,807  INFO WebSocketServer:103 ---- 收到来自窗口efde10f315448的信息:Ffstyu
+2018-12-21 11:25:36,825  INFO WebSocketServer:249 ---- 推送消息到窗口8b71b93cf0348，推送内容:{msg=Ffstyu, code=200}
+2018-12-21 11:25:39,379  INFO WebSocketServer:103 ---- 收到来自窗口efde10f315448的信息:Retyuuh
+2018-12-21 11:25:39,398  INFO WebSocketServer:249 ---- 推送消息到窗口8b71b93cf0348，推送内容:{msg=Retyuuh, code=200}
+2018-12-21 11:25:42,107  INFO WebSocketServer:103 ---- 收到来自窗口efde10f315448的信息:Tryhyu
+2018-12-21 11:25:42,126  INFO WebSocketServer:249 ---- 推送消息到窗口8b71b93cf0348，推送内容:{msg=Tryhyu, code=200}
+2018-12-21 11:25:45,481  INFO WebSocketServer:103 ---- 收到来自窗口efde10f315448的信息:Fffyy
+2018-12-21 11:25:45,500  INFO WebSocketServer:249 ---- 推送消息到窗口8b71b93cf0348，推送内容:{msg=Fffyy, code=200}
+2018-12-21 11:25:49,646  INFO WebSocketServer:103 ---- 收到来自窗口efde10f315448的信息:Yytyuu
+2018-12-21 11:25:49,664  INFO WebSocketServer:249 ---- 推送消息到窗口8b71b93cf0348，推送内容:{msg=Yytyuu, code=200}
+2018-12-21 11:26:20,905 ERROR WebSocketServer:233 ---- 发生错误
+2018-12-21 11:26:20,908 ERROR WebSocketServer:235 ---- null
+2018-12-21 11:26:20,955  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为1
+2018-12-21 11:26:25,273  INFO WebSocketServer:103 ---- 收到来自窗口8b71b93cf0348的信息:heartbeat
+2018-12-21 11:26:25,274  INFO WebSocketServer:131 ---- 用户心跳:8b71b93cf0348,当前在线人数为1
+2018-12-21 11:28:05,165  INFO WebSocketServer:103 ---- 收到来自窗口8b71b93cf0348的信息:heartbeat
+2018-12-21 11:28:05,165  INFO WebSocketServer:131 ---- 用户心跳:8b71b93cf0348,当前在线人数为1
+2018-12-21 11:29:45,178  INFO WebSocketServer:103 ---- 收到来自窗口8b71b93cf0348的信息:heartbeat
+2018-12-21 11:29:45,180  INFO WebSocketServer:131 ---- 用户心跳:8b71b93cf0348,当前在线人数为1
+2018-12-21 11:31:14,550  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为0
+2018-12-21 11:31:14,674  INFO WebSocketServer:62 ---- 有新窗口开始监听:2f391723fce48,当前在线人数为1
+2018-12-21 11:31:16,465  INFO WebSocketServer:157 ---- websocketServer pushAllMessage
+2018-12-21 11:31:16,733  INFO WebSocketServer:157 ---- websocketServer pushAllMessage
+2018-12-21 11:31:16,918  INFO WebSocketServer:157 ---- websocketServer pushAllMessage
+2018-12-21 11:31:17,075  INFO WebSocketServer:157 ---- websocketServer pushAllMessage
+2018-12-21 11:31:17,207  INFO WebSocketServer:157 ---- websocketServer pushAllMessage
+2018-12-21 11:31:17,348  INFO WebSocketServer:157 ---- websocketServer pushAllMessage
+2018-12-21 11:31:21,099  INFO WebSocketServer:157 ---- websocketServer pushAllMessage
+2018-12-21 11:31:21,662  INFO WebSocketServer:157 ---- websocketServer pushAllMessage
+2018-12-21 11:31:41,140  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为0
+2018-12-21 11:31:41,265  INFO WebSocketServer:62 ---- 有新窗口开始监听:61f2ee1adb148,当前在线人数为1
+2018-12-21 11:31:45,316  INFO WebSocketServer:157 ---- websocketServer pushAllMessage
+2018-12-21 11:31:45,484  INFO WebSocketServer:157 ---- websocketServer pushAllMessage
+2018-12-21 11:31:45,672  INFO WebSocketServer:157 ---- websocketServer pushAllMessage
+2018-12-21 11:31:45,887  INFO WebSocketServer:157 ---- websocketServer pushAllMessage
+2018-12-21 11:31:46,053  INFO WebSocketServer:157 ---- websocketServer pushAllMessage
+2018-12-21 11:31:46,216  INFO WebSocketServer:157 ---- websocketServer pushAllMessage
+2018-12-21 11:31:46,391  INFO WebSocketServer:157 ---- websocketServer pushAllMessage
+2018-12-21 11:31:46,553  INFO WebSocketServer:157 ---- websocketServer pushAllMessage
+2018-12-21 11:31:46,714  INFO WebSocketServer:157 ---- websocketServer pushAllMessage
+2018-12-21 11:31:46,847  INFO WebSocketServer:157 ---- websocketServer pushAllMessage
+2018-12-21 11:31:47,139  INFO WebSocketServer:157 ---- websocketServer pushAllMessage
+2018-12-21 11:31:47,281  INFO WebSocketServer:157 ---- websocketServer pushAllMessage
+2018-12-21 11:31:47,441  INFO WebSocketServer:157 ---- websocketServer pushAllMessage
+2018-12-21 11:31:47,595  INFO WebSocketServer:157 ---- websocketServer pushAllMessage
+2018-12-21 11:31:47,737  INFO WebSocketServer:157 ---- websocketServer pushAllMessage
+2018-12-21 11:31:47,873  INFO WebSocketServer:157 ---- websocketServer pushAllMessage
+2018-12-21 11:32:37,678  INFO WebSocketServer:157 ---- websocketServer pushAllMessage
+2018-12-21 11:32:37,849  INFO WebSocketServer:157 ---- websocketServer pushAllMessage
+2018-12-21 11:33:22,171  INFO WebSocketServer:103 ---- 收到来自窗口61f2ee1adb148的信息:heartbeat
+2018-12-21 11:33:22,171  INFO WebSocketServer:131 ---- 用户心跳:61f2ee1adb148,当前在线人数为1
+2018-12-21 11:35:02,172  INFO WebSocketServer:103 ---- 收到来自窗口61f2ee1adb148的信息:heartbeat
+2018-12-21 11:35:02,175  INFO WebSocketServer:131 ---- 用户心跳:61f2ee1adb148,当前在线人数为1
+2018-12-21 11:36:42,173  INFO WebSocketServer:103 ---- 收到来自窗口61f2ee1adb148的信息:heartbeat
+2018-12-21 11:36:42,175  INFO WebSocketServer:131 ---- 用户心跳:61f2ee1adb148,当前在线人数为1
+2018-12-21 11:38:21,375  INFO WebSocketServer:103 ---- 收到来自窗口61f2ee1adb148的信息:heartbeat
+2018-12-21 11:38:21,375  INFO WebSocketServer:131 ---- 用户心跳:61f2ee1adb148,当前在线人数为1
+2018-12-21 11:38:55,085  INFO WebSocketServer:157 ---- websocketServer pushAllMessage
+2018-12-21 11:38:55,263  INFO WebSocketServer:157 ---- websocketServer pushAllMessage
+2018-12-21 11:38:55,425  INFO WebSocketServer:157 ---- websocketServer pushAllMessage
+2018-12-21 11:38:55,588  INFO WebSocketServer:157 ---- websocketServer pushAllMessage
+2018-12-21 11:38:55,878  INFO WebSocketServer:157 ---- websocketServer pushAllMessage
+2018-12-21 11:38:56,234  INFO WebSocketServer:157 ---- websocketServer pushAllMessage
+2018-12-21 11:38:56,397  INFO WebSocketServer:157 ---- websocketServer pushAllMessage
+2018-12-21 11:38:56,549  INFO WebSocketServer:157 ---- websocketServer pushAllMessage
+2018-12-21 11:39:10,279  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为0
+2018-12-21 11:39:10,422  INFO WebSocketServer:62 ---- 有新窗口开始监听:0d780e33c5448,当前在线人数为1
+2018-12-21 11:39:17,811  INFO WebSocketServer:157 ---- websocketServer pushAllMessage
+2018-12-21 11:39:18,040  INFO WebSocketServer:157 ---- websocketServer pushAllMessage
+2018-12-21 11:39:18,295  INFO WebSocketServer:157 ---- websocketServer pushAllMessage
+2018-12-21 11:39:18,446  INFO WebSocketServer:157 ---- websocketServer pushAllMessage
+2018-12-21 11:39:18,606  INFO WebSocketServer:157 ---- websocketServer pushAllMessage
+2018-12-21 11:39:18,750  INFO WebSocketServer:157 ---- websocketServer pushAllMessage
+2018-12-21 11:39:19,047  INFO WebSocketServer:157 ---- websocketServer pushAllMessage
+2018-12-21 11:39:19,214  INFO WebSocketServer:157 ---- websocketServer pushAllMessage
+2018-12-21 11:39:19,369  INFO WebSocketServer:157 ---- websocketServer pushAllMessage
+2018-12-21 11:39:19,540  INFO WebSocketServer:157 ---- websocketServer pushAllMessage
+2018-12-21 11:39:19,701  INFO WebSocketServer:157 ---- websocketServer pushAllMessage
+2018-12-21 11:39:19,849  INFO WebSocketServer:157 ---- websocketServer pushAllMessage
+2018-12-21 11:39:20,019  INFO WebSocketServer:157 ---- websocketServer pushAllMessage
+2018-12-21 11:39:20,220  INFO WebSocketServer:157 ---- websocketServer pushAllMessage
+2018-12-21 11:39:20,369  INFO WebSocketServer:157 ---- websocketServer pushAllMessage
+2018-12-21 11:39:20,545  INFO WebSocketServer:157 ---- websocketServer pushAllMessage
+2018-12-21 11:39:20,724  INFO WebSocketServer:157 ---- websocketServer pushAllMessage
+2018-12-21 11:39:20,897  INFO WebSocketServer:157 ---- websocketServer pushAllMessage
+2018-12-21 11:39:21,085  INFO WebSocketServer:157 ---- websocketServer pushAllMessage
+2018-12-21 11:39:21,244  INFO WebSocketServer:157 ---- websocketServer pushAllMessage
+2018-12-21 11:39:21,451  INFO WebSocketServer:157 ---- websocketServer pushAllMessage
+2018-12-21 11:39:21,665  INFO WebSocketServer:157 ---- websocketServer pushAllMessage
+2018-12-21 11:39:21,921  INFO WebSocketServer:157 ---- websocketServer pushAllMessage
+2018-12-21 11:39:22,049  INFO WebSocketServer:157 ---- websocketServer pushAllMessage
+2018-12-21 11:39:22,589  INFO WebSocketServer:157 ---- websocketServer pushAllMessage
+2018-12-21 11:40:50,449  INFO WebSocketServer:103 ---- 收到来自窗口0d780e33c5448的信息:heartbeat
+2018-12-21 11:40:50,450  INFO WebSocketServer:131 ---- 用户心跳:0d780e33c5448,当前在线人数为1
+2018-12-21 15:27:15,567  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 17208 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-12-21 15:27:15,574 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-12-21 15:27:15,576  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-12-21 15:27:29,174  INFO AdventureApplication:57 ---- Started AdventureApplication in 14.068 seconds (JVM running for 14.723)
+2018-12-21 15:29:52,943  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 17208 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-12-21 15:29:52,943 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-12-21 15:29:52,943  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-12-21 15:29:57,822  INFO AdventureApplication:57 ---- Started AdventureApplication in 4.951 seconds (JVM running for 163.368)
+2018-12-21 15:29:59,164  INFO WebSocketServer:62 ---- 有新窗口开始监听:839564a3d1b48,当前在线人数为1
+2018-12-21 15:30:00,417  INFO WebSocketServer:103 ---- 收到来自窗口839564a3d1b48的信息:connet
+2018-12-21 15:30:00,447  INFO WebSocketServer:159 ---- websocketServer pushAllMessage
+2018-12-21 15:30:05,456  INFO WebSocketServer:251 ---- 推送消息到窗口839564a3d1b48，推送内容:{msg=暂时无人匹配，你稍后再来试试吧, code=504}
+2018-12-21 15:30:07,286  INFO WebSocketServer:103 ---- 收到来自窗口839564a3d1b48的信息:connet
+2018-12-21 15:30:07,307  INFO WebSocketServer:159 ---- websocketServer pushAllMessage
+2018-12-21 15:30:12,321  INFO WebSocketServer:251 ---- 推送消息到窗口839564a3d1b48，推送内容:{msg=暂时无人匹配，你稍后再来试试吧, code=504}
+2018-12-21 15:31:39,033  INFO WebSocketServer:103 ---- 收到来自窗口839564a3d1b48的信息:heartbeat
+2018-12-21 15:31:39,034  INFO WebSocketServer:133 ---- 用户心跳:839564a3d1b48,当前在线人数为1
+2018-12-21 15:32:50,351  INFO WebSocketServer:62 ---- 有新窗口开始监听:3b58234317d48,当前在线人数为2
+2018-12-21 15:33:19,038  INFO WebSocketServer:103 ---- 收到来自窗口839564a3d1b48的信息:heartbeat
+2018-12-21 15:33:19,039  INFO WebSocketServer:133 ---- 用户心跳:839564a3d1b48,当前在线人数为2
+2018-12-21 15:33:22,470  INFO WebSocketServer:62 ---- 有新窗口开始监听:7b3f678c99b48,当前在线人数为3
+2018-12-21 15:33:28,928  INFO WebSocketServer:103 ---- 收到来自窗口3b58234317d48的信息:connet
+2018-12-21 15:33:28,944  INFO WebSocketServer:159 ---- websocketServer pushAllMessage
+2018-12-21 15:33:37,834  INFO WebSocketServer:103 ---- 收到来自窗口7b3f678c99b48的信息:connet
+2018-12-21 15:33:37,849  INFO WebSocketServer:159 ---- websocketServer pushAllMessage
+2018-12-21 15:33:42,866  INFO WebSocketServer:251 ---- 推送消息到窗口7b3f678c99b48，推送内容:{msg=暂时无人匹配，你稍后再来试试吧, code=504}
+2018-12-21 15:33:49,895  INFO WebSocketServer:103 ---- 收到来自窗口7b3f678c99b48的信息:connet
+2018-12-21 15:33:49,911  INFO WebSocketServer:159 ---- websocketServer pushAllMessage
+2018-12-21 15:33:52,589  INFO WebSocketServer:103 ---- 收到来自窗口839564a3d1b48的信息:connet
+2018-12-21 15:33:52,629  INFO WebSocketServer:159 ---- websocketServer pushAllMessage
+2018-12-21 15:33:52,667  INFO WebSocketServer:251 ---- 推送消息到窗口7b3f678c99b48，推送内容:{msg=匹配成功, code=200}
+2018-12-21 15:33:52,668  INFO WebSocketServer:251 ---- 推送消息到窗口839564a3d1b48，推送内容:{msg=匹配成功, code=200}
+2018-12-21 15:34:39,975  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为2
+2018-12-21 15:34:40,294  INFO WebSocketServer:62 ---- 有新窗口开始监听:f5dafa2f68e48,当前在线人数为3
+2018-12-21 15:34:44,246  INFO WebSocketServer:103 ---- 收到来自窗口f5dafa2f68e48的信息:connet
+2018-12-21 15:34:44,266  INFO WebSocketServer:159 ---- websocketServer pushAllMessage
+2018-12-21 15:34:49,275  INFO WebSocketServer:251 ---- 推送消息到窗口f5dafa2f68e48，推送内容:{msg=暂时无人匹配，你稍后再来试试吧, code=504}
+2018-12-21 15:34:59,037  INFO WebSocketServer:103 ---- 收到来自窗口839564a3d1b48的信息:heartbeat
+2018-12-21 15:34:59,039  INFO WebSocketServer:133 ---- 用户心跳:839564a3d1b48,当前在线人数为3
+2018-12-21 15:35:05,374  INFO WebSocketServer:103 ---- 收到来自窗口7b3f678c99b48的信息:heartbeat
+2018-12-21 15:35:05,374  INFO WebSocketServer:133 ---- 用户心跳:7b3f678c99b48,当前在线人数为3
+2018-12-21 15:36:00,602 ERROR WebSocketServer:235 ---- 发生错误
+2018-12-21 15:36:00,603 ERROR WebSocketServer:237 ---- null
+2018-12-21 15:36:00,692  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为2
+2018-12-21 15:36:39,040  INFO WebSocketServer:103 ---- 收到来自窗口839564a3d1b48的信息:heartbeat
+2018-12-21 15:36:39,041  INFO WebSocketServer:133 ---- 用户心跳:839564a3d1b48,当前在线人数为2
+2018-12-21 15:38:19,042  INFO WebSocketServer:103 ---- 收到来自窗口839564a3d1b48的信息:heartbeat
+2018-12-21 15:38:19,044  INFO WebSocketServer:133 ---- 用户心跳:839564a3d1b48,当前在线人数为2
+2018-12-21 15:38:49,742  INFO WebSocketServer:103 ---- 收到来自窗口f5dafa2f68e48的信息:heartbeat
+2018-12-21 15:38:49,743  INFO WebSocketServer:133 ---- 用户心跳:f5dafa2f68e48,当前在线人数为2
+2018-12-21 15:39:59,045  INFO WebSocketServer:103 ---- 收到来自窗口839564a3d1b48的信息:heartbeat
+2018-12-21 15:39:59,045  INFO WebSocketServer:133 ---- 用户心跳:839564a3d1b48,当前在线人数为2
+2018-12-21 15:40:10,955  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为1
+2018-12-21 15:40:11,218  INFO WebSocketServer:62 ---- 有新窗口开始监听:c848e9482f048,当前在线人数为2
+2018-12-21 15:40:20,281  INFO WebSocketServer:62 ---- 有新窗口开始监听:39eb25dd81148,当前在线人数为3
+2018-12-21 15:40:21,775  INFO WebSocketServer:103 ---- 收到来自窗口39eb25dd81148的信息:connet
+2018-12-21 15:40:21,792  INFO WebSocketServer:159 ---- websocketServer pushAllMessage
+2018-12-21 15:40:26,814  INFO WebSocketServer:251 ---- 推送消息到窗口39eb25dd81148，推送内容:{msg=暂时无人匹配，你稍后再来试试吧, code=504}
+2018-12-21 15:41:40,202  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为2
+2018-12-21 15:41:40,422  INFO WebSocketServer:62 ---- 有新窗口开始监听:34547f8679148,当前在线人数为3
+2018-12-21 15:42:00,511  INFO WebSocketServer:103 ---- 收到来自窗口39eb25dd81148的信息:heartbeat
+2018-12-21 15:42:00,512  INFO WebSocketServer:133 ---- 用户心跳:39eb25dd81148,当前在线人数为3
+2018-12-21 15:42:10,334  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为2
+2018-12-21 15:42:10,562  INFO WebSocketServer:62 ---- 有新窗口开始监听:3f57edb395b48,当前在线人数为3
+2018-12-21 15:42:31,779 ERROR WebSocketServer:235 ---- 发生错误
+2018-12-21 15:42:31,779 ERROR WebSocketServer:237 ---- null
+2018-12-21 15:42:31,788  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为2
+2018-12-21 15:42:48,034  INFO WebSocketServer:103 ---- 收到来自窗口3f57edb395b48的信息:connet
+2018-12-21 15:42:48,052  INFO WebSocketServer:159 ---- websocketServer pushAllMessage
+2018-12-21 15:42:53,071  INFO WebSocketServer:251 ---- 推送消息到窗口3f57edb395b48，推送内容:{msg=暂时无人匹配，你稍后再来试试吧, code=504}
+2018-12-21 15:43:09,616  INFO WebSocketServer:103 ---- 收到来自窗口3f57edb395b48的信息:connet
+2018-12-21 15:43:09,634  INFO WebSocketServer:159 ---- websocketServer pushAllMessage
+2018-12-21 15:43:14,644  INFO WebSocketServer:251 ---- 推送消息到窗口3f57edb395b48，推送内容:{msg=暂时无人匹配，你稍后再来试试吧, code=504}
+2018-12-21 15:43:58,326  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为1
+2018-12-21 15:43:58,526  INFO WebSocketServer:62 ---- 有新窗口开始监听:5b18731f74948,当前在线人数为2
+2018-12-21 15:44:17,198  INFO WebSocketServer:103 ---- 收到来自窗口5b18731f74948的信息:connet
+2018-12-21 15:44:17,222  INFO WebSocketServer:159 ---- websocketServer pushAllMessage
+2018-12-21 15:44:37,888  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为1
+2018-12-21 15:44:38,118  INFO WebSocketServer:62 ---- 有新窗口开始监听:23c1737b93048,当前在线人数为2
+2018-12-21 15:45:21,743  INFO WebSocketServer:103 ---- 收到来自窗口23c1737b93048的信息:connet
+2018-12-21 15:45:21,763  INFO WebSocketServer:159 ---- websocketServer pushAllMessage
+2018-12-21 15:45:48,564  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为1
+2018-12-21 15:45:48,810  INFO WebSocketServer:62 ---- 有新窗口开始监听:e79f70988c548,当前在线人数为2
+2018-12-21 15:46:01,858  INFO WebSocketServer:103 ---- 收到来自窗口e79f70988c548的信息:connet
+2018-12-21 15:46:01,877  INFO WebSocketServer:159 ---- websocketServer pushAllMessage
+2018-12-21 15:46:06,894  INFO WebSocketServer:251 ---- 推送消息到窗口e79f70988c548，推送内容:{msg=暂时无人匹配，你稍后再来试试吧, code=504}
+2018-12-21 15:46:12,833  INFO WebSocketServer:103 ---- 收到来自窗口e79f70988c548的信息:connet
+2018-12-21 15:46:12,850  INFO WebSocketServer:159 ---- websocketServer pushAllMessage
+2018-12-21 15:46:17,859  INFO WebSocketServer:251 ---- 推送消息到窗口e79f70988c548，推送内容:{msg=暂时无人匹配，你稍后再来试试吧, code=504}
+2018-12-21 15:46:28,130  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为1
+2018-12-21 15:46:28,416  INFO WebSocketServer:62 ---- 有新窗口开始监听:7970c6e432948,当前在线人数为2
+2018-12-21 15:46:39,580  INFO WebSocketServer:103 ---- 收到来自窗口7970c6e432948的信息:connet
+2018-12-21 15:46:39,598  INFO WebSocketServer:159 ---- websocketServer pushAllMessage
+2018-12-21 15:46:44,609  INFO WebSocketServer:251 ---- 推送消息到窗口7970c6e432948，推送内容:{msg=暂时无人匹配，你稍后再来试试吧, code=504}
+2018-12-21 15:47:09,044  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为1
+2018-12-21 15:47:09,260  INFO WebSocketServer:62 ---- 有新窗口开始监听:fc1e797b54848,当前在线人数为2
+2018-12-21 15:47:17,383  INFO WebSocketServer:103 ---- 收到来自窗口fc1e797b54848的信息:connet
+2018-12-21 15:47:17,401  INFO WebSocketServer:159 ---- websocketServer pushAllMessage
+2018-12-21 15:47:22,423  INFO WebSocketServer:251 ---- 推送消息到窗口fc1e797b54848，推送内容:{msg=暂时无人匹配，你稍后再来试试吧, code=504}
+2018-12-21 15:47:26,809  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为1
+2018-12-21 15:47:26,983  INFO WebSocketServer:62 ---- 有新窗口开始监听:95b6c064ef448,当前在线人数为2
+2018-12-21 15:48:02,028  INFO WebSocketServer:103 ---- 收到来自窗口95b6c064ef448的信息:connet
+2018-12-21 15:48:02,051  INFO WebSocketServer:159 ---- websocketServer pushAllMessage
+2018-12-21 15:48:05,273  INFO WebSocketServer:103 ---- 收到来自窗口f5dafa2f68e48的信息:heartbeat
+2018-12-21 15:48:05,273  INFO WebSocketServer:133 ---- 用户心跳:f5dafa2f68e48,当前在线人数为2
+2018-12-21 15:48:07,057  INFO WebSocketServer:251 ---- 推送消息到窗口95b6c064ef448，推送内容:{msg=暂时无人匹配，你稍后再来试试吧, code=504}
+2018-12-21 15:48:40,507  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为1
+2018-12-21 15:48:40,670  INFO WebSocketServer:62 ---- 有新窗口开始监听:4d34d758cba48,当前在线人数为2
+2018-12-21 15:48:46,368  INFO WebSocketServer:103 ---- 收到来自窗口4d34d758cba48的信息:connet
+2018-12-21 15:48:46,387  INFO WebSocketServer:159 ---- websocketServer pushAllMessage
+2018-12-21 15:49:15,149  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为1
+2018-12-21 15:49:15,314  INFO WebSocketServer:62 ---- 有新窗口开始监听:23a07f7adda48,当前在线人数为2
+2018-12-21 15:49:53,769  INFO WebSocketServer:103 ---- 收到来自窗口23a07f7adda48的信息:connet
+2018-12-21 15:49:53,786  INFO WebSocketServer:159 ---- websocketServer pushAllMessage
+2018-12-21 15:49:58,792  INFO WebSocketServer:251 ---- 推送消息到窗口23a07f7adda48，推送内容:{msg=暂时无人匹配，你稍后再来试试吧, code=504}
+2018-12-21 15:50:08,661  INFO WebSocketServer:103 ---- 收到来自窗口23a07f7adda48的信息:connet
+2018-12-21 15:50:08,679  INFO WebSocketServer:159 ---- websocketServer pushAllMessage
+2018-12-21 15:50:13,695  INFO WebSocketServer:251 ---- 推送消息到窗口23a07f7adda48，推送内容:{msg=暂时无人匹配，你稍后再来试试吧, code=504}
+2018-12-21 15:50:15,240  INFO WebSocketServer:103 ---- 收到来自窗口23a07f7adda48的信息:connet
+2018-12-21 15:50:15,257  INFO WebSocketServer:159 ---- websocketServer pushAllMessage
+2018-12-21 15:50:20,269  INFO WebSocketServer:251 ---- 推送消息到窗口23a07f7adda48，推送内容:{msg=暂时无人匹配，你稍后再来试试吧, code=504}
+2018-12-21 15:50:52,004  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为1
+2018-12-21 15:50:52,207  INFO WebSocketServer:62 ---- 有新窗口开始监听:da5cd03b8f848,当前在线人数为2
+2018-12-21 15:51:04,477  INFO WebSocketServer:103 ---- 收到来自窗口da5cd03b8f848的信息:connet
+2018-12-21 15:51:04,495  INFO WebSocketServer:159 ---- websocketServer pushAllMessage
+2018-12-21 15:51:45,329  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为1
+2018-12-21 15:51:45,500  INFO WebSocketServer:62 ---- 有新窗口开始监听:a3816f6380148,当前在线人数为2
+2018-12-21 15:51:47,918  INFO WebSocketServer:103 ---- 收到来自窗口a3816f6380148的信息:connet
+2018-12-21 15:51:47,937  INFO WebSocketServer:159 ---- websocketServer pushAllMessage
+2018-12-21 15:51:52,955  INFO WebSocketServer:251 ---- 推送消息到窗口a3816f6380148，推送内容:{msg=暂时无人匹配，你稍后再来试试吧, code=504}
+2018-12-21 15:51:54,057  INFO WebSocketServer:103 ---- 收到来自窗口a3816f6380148的信息:connet
+2018-12-21 15:51:54,075  INFO WebSocketServer:159 ---- websocketServer pushAllMessage
+2018-12-21 15:52:37,510  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为1
+2018-12-21 15:52:37,646  INFO WebSocketServer:62 ---- 有新窗口开始监听:bffb5f2a10848,当前在线人数为2
+2018-12-21 15:52:38,892  INFO WebSocketServer:103 ---- 收到来自窗口bffb5f2a10848的信息:connet
+2018-12-21 15:52:38,914  INFO WebSocketServer:159 ---- websocketServer pushAllMessage
+2018-12-21 15:52:43,924  INFO WebSocketServer:251 ---- 推送消息到窗口bffb5f2a10848，推送内容:{msg=暂时无人匹配，你稍后再来试试吧, code=504}
+2018-12-21 15:52:45,017  INFO WebSocketServer:103 ---- 收到来自窗口bffb5f2a10848的信息:connet
+2018-12-21 15:52:45,035  INFO WebSocketServer:159 ---- websocketServer pushAllMessage
+2018-12-21 15:52:50,048  INFO WebSocketServer:251 ---- 推送消息到窗口bffb5f2a10848，推送内容:{msg=暂时无人匹配，你稍后再来试试吧, code=504}
+2018-12-21 15:52:51,630  INFO WebSocketServer:103 ---- 收到来自窗口bffb5f2a10848的信息:connet
+2018-12-21 15:52:51,648  INFO WebSocketServer:159 ---- websocketServer pushAllMessage
+2018-12-21 15:52:56,652  INFO WebSocketServer:251 ---- 推送消息到窗口bffb5f2a10848，推送内容:{msg=暂时无人匹配，你稍后再来试试吧, code=504}
+2018-12-21 15:53:00,499  INFO WebSocketServer:103 ---- 收到来自窗口bffb5f2a10848的信息:connet
+2018-12-21 15:53:00,518  INFO WebSocketServer:159 ---- websocketServer pushAllMessage
+2018-12-21 15:53:05,523  INFO WebSocketServer:251 ---- 推送消息到窗口bffb5f2a10848，推送内容:{msg=暂时无人匹配，你稍后再来试试吧, code=504}
+2018-12-21 15:54:11,529  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为1
+2018-12-21 15:54:11,734  INFO WebSocketServer:62 ---- 有新窗口开始监听:1604bbca85048,当前在线人数为2
+2018-12-21 15:54:12,995  INFO WebSocketServer:103 ---- 收到来自窗口1604bbca85048的信息:connet
+2018-12-21 15:54:13,013  INFO WebSocketServer:159 ---- websocketServer pushAllMessage
+2018-12-21 15:54:18,017  INFO WebSocketServer:251 ---- 推送消息到窗口1604bbca85048，推送内容:{msg=暂时无人匹配，你稍后再来试试吧, code=504}
+2018-12-21 15:54:18,884  INFO WebSocketServer:103 ---- 收到来自窗口1604bbca85048的信息:connet
+2018-12-21 15:54:18,902  INFO WebSocketServer:159 ---- websocketServer pushAllMessage
+2018-12-21 15:54:46,020  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为1
+2018-12-21 15:54:46,186  INFO WebSocketServer:62 ---- 有新窗口开始监听:616734637ac48,当前在线人数为2
+2018-12-21 15:54:47,409  INFO WebSocketServer:103 ---- 收到来自窗口616734637ac48的信息:connet
+2018-12-21 15:54:47,428  INFO WebSocketServer:159 ---- websocketServer pushAllMessage
+2018-12-21 15:56:13,305  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 16848 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-12-21 15:56:13,309 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-12-21 15:56:13,310  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-12-21 15:56:31,844  INFO AdventureApplication:57 ---- Started AdventureApplication in 19.031 seconds (JVM running for 20.159)
+2018-12-21 16:02:39,987  INFO WebSocketServer:62 ---- 有新窗口开始监听:548fe827aae48,当前在线人数为1
+2018-12-21 16:03:21,899  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为0
+2018-12-21 16:03:22,406  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 16848 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-12-21 16:03:22,406 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-12-21 16:03:22,407  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-12-21 16:03:29,325  INFO AdventureApplication:57 ---- Started AdventureApplication in 7.018 seconds (JVM running for 437.631)
+2018-12-21 16:03:46,993  INFO WebSocketServer:62 ---- 有新窗口开始监听:b01c8bf3d3248,当前在线人数为1
+2018-12-21 16:03:48,340  INFO WebSocketServer:103 ---- 收到来自窗口b01c8bf3d3248的信息:connet
+2018-12-21 16:03:48,367  INFO WebSocketServer:159 ---- websocketServer pushAllMessage
+2018-12-21 16:05:10,075  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为0
+2018-12-21 16:05:10,225  INFO WebSocketServer:62 ---- 有新窗口开始监听:9df192ad97e48,当前在线人数为1
+2018-12-21 16:05:11,366  INFO WebSocketServer:103 ---- 收到来自窗口9df192ad97e48的信息:connet
+2018-12-21 16:05:11,384  INFO WebSocketServer:159 ---- websocketServer pushAllMessage
+2018-12-21 16:06:00,185  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为0
+2018-12-21 16:06:00,355  INFO WebSocketServer:62 ---- 有新窗口开始监听:a7c58e87f6e48,当前在线人数为1
+2018-12-21 16:06:01,333  INFO WebSocketServer:103 ---- 收到来自窗口a7c58e87f6e48的信息:connet
+2018-12-21 16:06:01,351  INFO WebSocketServer:159 ---- websocketServer pushAllMessage
+2018-12-21 16:06:21,366  INFO WebSocketServer:251 ---- 推送消息到窗口a7c58e87f6e48，推送内容:{msg=暂时无人匹配，你稍后再来试试吧, code=504}
+2018-12-21 16:07:30,598  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为0
+2018-12-21 16:07:31,131  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 16848 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-12-21 16:07:31,131 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-12-21 16:07:31,131  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-12-21 16:07:37,211  INFO AdventureApplication:57 ---- Started AdventureApplication in 6.139 seconds (JVM running for 685.51)
+2018-12-21 16:07:49,987  INFO WebSocketServer:62 ---- 有新窗口开始监听:3e3b25a7ff048,当前在线人数为1
+2018-12-21 16:07:51,368  INFO WebSocketServer:103 ---- 收到来自窗口3e3b25a7ff048的信息:connet
+2018-12-21 16:07:51,386  INFO WebSocketServer:159 ---- websocketServer pushAllMessage
+2018-12-21 16:08:11,393  INFO WebSocketServer:253 ---- 推送消息到窗口3e3b25a7ff048，推送内容:{msg=暂时无人匹配，你稍后再来试试吧, code=504}
+2018-12-21 16:08:43,867  INFO WebSocketServer:92 ---- 有一连接关闭！当前在线人数为0
+2018-12-21 16:08:44,743  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 16848 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-12-21 16:08:44,743 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-12-21 16:08:44,743  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-12-21 16:08:50,367  INFO AdventureApplication:57 ---- Started AdventureApplication in 5.671 seconds (JVM running for 758.665)
+2018-12-21 16:08:53,459  INFO WebSocketServer:62 ---- 有新窗口开始监听:8dcaa86430d48,当前在线人数为1
+2018-12-21 16:08:54,481  INFO WebSocketServer:103 ---- 收到来自窗口8dcaa86430d48的信息:connet
+2018-12-21 16:08:54,499  INFO WebSocketServer:159 ---- websocketServer pushAllMessage
+2018-12-21 16:08:59,520  INFO WebSocketServer:253 ---- 推送消息到窗口8dcaa86430d48，推送内容:{msg=暂时无人匹配，你稍后再来试试吧, code=504}
+2018-12-21 16:10:33,451  INFO WebSocketServer:103 ---- 收到来自窗口8dcaa86430d48的信息:heartbeat
+2018-12-21 16:10:33,451  INFO WebSocketServer:133 ---- 用户心跳:8dcaa86430d48,当前在线人数为1
+2018-12-21 16:12:13,453  INFO WebSocketServer:103 ---- 收到来自窗口8dcaa86430d48的信息:heartbeat
+2018-12-21 16:12:13,453  INFO WebSocketServer:133 ---- 用户心跳:8dcaa86430d48,当前在线人数为1
+2018-12-21 16:12:24,494  INFO WebSocketServer:93 ---- 有一连接关闭！当前在线人数为0
+2018-12-21 16:12:25,009  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 16848 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-12-21 16:12:25,009 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-12-21 16:12:25,010  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-12-21 16:12:30,290  INFO AdventureApplication:57 ---- Started AdventureApplication in 5.356 seconds (JVM running for 978.582)
+2018-12-21 16:12:40,402  INFO WebSocketServer:63 ---- 有新窗口开始监听:46160ec4e2b48,当前在线人数为1
+2018-12-21 16:12:41,385  INFO WebSocketServer:104 ---- 收到来自窗口46160ec4e2b48的信息:connet
+2018-12-21 16:12:41,404  INFO WebSocketServer:160 ---- websocketServer pushAllMessage
+2018-12-21 16:12:46,412  INFO WebSocketServer:254 ---- 推送消息到窗口46160ec4e2b48，推送内容:{msg=暂时无人匹配，你稍后再来试试吧, code=504}
+2018-12-21 16:12:46,421 ERROR WebSocketServer:143 ---- 错误的连接
+2018-12-21 16:12:47,216  INFO WebSocketServer:104 ---- 收到来自窗口46160ec4e2b48的信息:connet
+2018-12-21 16:12:47,232  INFO WebSocketServer:160 ---- websocketServer pushAllMessage
+2018-12-21 16:12:52,256  INFO WebSocketServer:254 ---- 推送消息到窗口46160ec4e2b48，推送内容:{msg=暂时无人匹配，你稍后再来试试吧, code=504}
+2018-12-21 16:12:52,265 ERROR WebSocketServer:143 ---- 错误的连接
+2018-12-21 16:12:53,481  INFO WebSocketServer:104 ---- 收到来自窗口46160ec4e2b48的信息:connet
+2018-12-21 16:12:53,497  INFO WebSocketServer:160 ---- websocketServer pushAllMessage
+2018-12-21 16:12:58,512  INFO WebSocketServer:254 ---- 推送消息到窗口46160ec4e2b48，推送内容:{msg=暂时无人匹配，你稍后再来试试吧, code=504}
+2018-12-21 16:12:58,522 ERROR WebSocketServer:143 ---- 错误的连接
+2018-12-21 16:12:59,229  INFO WebSocketServer:104 ---- 收到来自窗口46160ec4e2b48的信息:connet
+2018-12-21 16:12:59,261  INFO WebSocketServer:160 ---- websocketServer pushAllMessage
+2018-12-21 16:13:04,265 ERROR WebSocketServer:143 ---- 错误的连接
+2018-12-21 16:14:20,433  INFO WebSocketServer:104 ---- 收到来自窗口46160ec4e2b48的信息:heartbeat
+2018-12-21 16:14:20,433  INFO WebSocketServer:134 ---- 用户心跳:46160ec4e2b48,当前在线人数为1
+2018-12-21 16:16:00,456  INFO WebSocketServer:104 ---- 收到来自窗口46160ec4e2b48的信息:heartbeat
+2018-12-21 16:16:00,457  INFO WebSocketServer:134 ---- 用户心跳:46160ec4e2b48,当前在线人数为1
+2018-12-21 16:16:53,489  INFO WebSocketServer:93 ---- 有一连接关闭！当前在线人数为0
+2018-12-21 16:16:53,618  INFO WebSocketServer:63 ---- 有新窗口开始监听:940e37d5c7948,当前在线人数为1
+2018-12-21 16:16:54,621  INFO WebSocketServer:104 ---- 收到来自窗口940e37d5c7948的信息:connet
+2018-12-21 16:16:54,636  INFO WebSocketServer:160 ---- websocketServer pushAllMessage
+2018-12-21 16:16:59,640 ERROR WebSocketServer:143 ---- 错误的连接
+2018-12-21 16:17:24,143  INFO WebSocketServer:93 ---- 有一连接关闭！当前在线人数为0
+2018-12-21 16:17:24,278  INFO WebSocketServer:63 ---- 有新窗口开始监听:69c29931d2048,当前在线人数为1
+2018-12-21 16:17:28,982  INFO WebSocketServer:104 ---- 收到来自窗口69c29931d2048的信息:connet
+2018-12-21 16:17:28,997  INFO WebSocketServer:160 ---- websocketServer pushAllMessage
+2018-12-21 16:17:54,751 ERROR WebSocketServer:143 ---- 错误的连接
+2018-12-21 16:19:04,358  INFO WebSocketServer:104 ---- 收到来自窗口69c29931d2048的信息:heartbeat
+2018-12-21 16:19:04,358  INFO WebSocketServer:134 ---- 用户心跳:69c29931d2048,当前在线人数为1
+2018-12-21 16:20:44,360  INFO WebSocketServer:104 ---- 收到来自窗口69c29931d2048的信息:heartbeat
+2018-12-21 16:20:44,362  INFO WebSocketServer:134 ---- 用户心跳:69c29931d2048,当前在线人数为1
+2018-12-21 16:22:24,361  INFO WebSocketServer:104 ---- 收到来自窗口69c29931d2048的信息:heartbeat
+2018-12-21 16:22:24,361  INFO WebSocketServer:134 ---- 用户心跳:69c29931d2048,当前在线人数为1
+2018-12-21 16:23:54,370  INFO WebSocketServer:93 ---- 有一连接关闭！当前在线人数为0
+2018-12-21 16:23:54,495  INFO WebSocketServer:63 ---- 有新窗口开始监听:d966a24f70848,当前在线人数为1
+2018-12-21 16:23:55,393  INFO WebSocketServer:104 ---- 收到来自窗口d966a24f70848的信息:connet
+2018-12-21 16:24:16,408  INFO WebSocketServer:160 ---- websocketServer pushAllMessage
+2018-12-21 16:24:19,092  INFO WebSocketServer:254 ---- 推送消息到窗口d966a24f70848，推送内容:{msg=暂时无人匹配，你稍后再来试试吧, code=504}
+2018-12-21 16:24:25,754 ERROR WebSocketServer:143 ---- 错误的连接
+2018-12-21 16:25:03,214  INFO WebSocketServer:104 ---- 收到来自窗口d966a24f70848的信息:connet
+2018-12-21 16:25:03,235  INFO WebSocketServer:160 ---- websocketServer pushAllMessage
+2018-12-21 16:25:09,262  INFO WebSocketServer:254 ---- 推送消息到窗口d966a24f70848，推送内容:{msg=暂时无人匹配，你稍后再来试试吧, code=504}
+2018-12-21 16:25:16,284 ERROR WebSocketServer:143 ---- 错误的连接
+2018-12-21 16:25:28,101  INFO WebSocketServer:104 ---- 收到来自窗口d966a24f70848的信息:connet
+2018-12-21 16:25:28,120  INFO WebSocketServer:160 ---- websocketServer pushAllMessage
+2018-12-21 16:25:33,556  INFO WebSocketServer:254 ---- 推送消息到窗口d966a24f70848，推送内容:{msg=暂时无人匹配，你稍后再来试试吧, code=504}
+2018-12-21 16:25:33,572 ERROR WebSocketServer:143 ---- 错误的连接
+2018-12-21 16:25:34,568  INFO WebSocketServer:104 ---- 收到来自窗口d966a24f70848的信息:heartbeat
+2018-12-21 16:25:34,568  INFO WebSocketServer:134 ---- 用户心跳:d966a24f70848,当前在线人数为1
+2018-12-21 16:25:46,017  INFO WebSocketServer:104 ---- 收到来自窗口d966a24f70848的信息:connet
+2018-12-21 16:25:46,035  INFO WebSocketServer:160 ---- websocketServer pushAllMessage
+2018-12-21 16:25:51,035  INFO WebSocketServer:254 ---- 推送消息到窗口d966a24f70848，推送内容:{msg=暂时无人匹配，你稍后再来试试吧, code=504}
+2018-12-21 16:25:51,045 ERROR WebSocketServer:143 ---- 错误的连接
+2018-12-21 16:25:52,957  INFO WebSocketServer:104 ---- 收到来自窗口d966a24f70848的信息:connet
+2018-12-21 16:25:52,975  INFO WebSocketServer:160 ---- websocketServer pushAllMessage
+2018-12-21 16:25:57,990  INFO WebSocketServer:254 ---- 推送消息到窗口d966a24f70848，推送内容:{msg=暂时无人匹配，你稍后再来试试吧, code=504}
+2018-12-21 16:25:58,000 ERROR WebSocketServer:143 ---- 错误的连接
+2018-12-21 16:26:00,800  INFO WebSocketServer:93 ---- 有一连接关闭！当前在线人数为0
+2018-12-21 16:26:00,939  INFO WebSocketServer:63 ---- 有新窗口开始监听:3a32eeaf5c848,当前在线人数为1
+2018-12-21 16:26:01,829  INFO WebSocketServer:104 ---- 收到来自窗口3a32eeaf5c848的信息:connet
+2018-12-21 16:26:01,847  INFO WebSocketServer:160 ---- websocketServer pushAllMessage
+2018-12-21 16:26:06,850 ERROR WebSocketServer:143 ---- 错误的连接
+2018-12-21 16:26:47,336  INFO WebSocketServer:93 ---- 有一连接关闭！当前在线人数为0
+2018-12-21 16:26:47,535  INFO WebSocketServer:63 ---- 有新窗口开始监听:f74c4d4dc4948,当前在线人数为1
+2018-12-21 16:26:47,889  INFO WebSocketServer:93 ---- 有一连接关闭！当前在线人数为0
+2018-12-21 16:26:48,304  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 16848 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-12-21 16:26:48,305 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-12-21 16:26:48,305  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-12-21 16:26:53,224  INFO AdventureApplication:57 ---- Started AdventureApplication in 4.963 seconds (JVM running for 1841.495)
+2018-12-21 16:26:56,402  INFO WebSocketServer:63 ---- 有新窗口开始监听:3a09288d85d48,当前在线人数为1
+2018-12-21 16:26:57,560  INFO WebSocketServer:104 ---- 收到来自窗口3a09288d85d48的信息:connet
+2018-12-21 16:26:57,579  INFO WebSocketServer:160 ---- websocketServer pushAllMessage
+2018-12-21 16:27:02,585  INFO WebSocketServer:254 ---- 推送消息到窗口3a09288d85d48，推送内容:{msg=暂时无人匹配，你稍后再来试试吧, code=504}
+2018-12-21 16:27:02,594  INFO WebSocketServer:254 ---- 推送消息到窗口3a09288d85d48，推送内容:{msg=(ｷ｀ﾟДﾟ´)!!不巧,你的对象刚刚偷偷溜走了, code=504}
+2018-12-21 16:28:04,998  INFO WebSocketServer:104 ---- 收到来自窗口3a09288d85d48的信息:connet
+2018-12-21 16:28:05,018  INFO WebSocketServer:160 ---- websocketServer pushAllMessage
+2018-12-21 16:28:10,035  INFO WebSocketServer:254 ---- 推送消息到窗口3a09288d85d48，推送内容:{msg=暂时无人匹配，你稍后再来试试吧, code=504}
+2018-12-21 16:28:10,045  INFO WebSocketServer:254 ---- 推送消息到窗口3a09288d85d48，推送内容:{msg=(ｷ｀ﾟДﾟ´)!!不巧,你的对象刚刚偷偷溜走了, code=504}
+2018-12-21 16:28:12,450  INFO WebSocketServer:104 ---- 收到来自窗口3a09288d85d48的信息:connet
+2018-12-21 16:28:12,468  INFO WebSocketServer:160 ---- websocketServer pushAllMessage
+2018-12-21 16:28:17,489  INFO WebSocketServer:254 ---- 推送消息到窗口3a09288d85d48，推送内容:{msg=暂时无人匹配，你稍后再来试试吧, code=504}
+2018-12-21 16:28:17,498  INFO WebSocketServer:254 ---- 推送消息到窗口3a09288d85d48，推送内容:{msg=(ｷ｀ﾟДﾟ´)!!不巧,你的对象刚刚偷偷溜走了, code=504}
+2018-12-21 16:28:36,504  INFO WebSocketServer:104 ---- 收到来自窗口3a09288d85d48的信息:heartbeat
+2018-12-21 16:28:36,504  INFO WebSocketServer:134 ---- 用户心跳:3a09288d85d48,当前在线人数为1
+2018-12-21 16:28:37,523  INFO WebSocketServer:104 ---- 收到来自窗口3a09288d85d48的信息:connet
+2018-12-21 16:31:37,382  INFO WebSocketServer:160 ---- websocketServer pushAllMessage
+2018-12-21 16:31:37,468  INFO WebSocketServer:254 ---- 推送消息到窗口3a09288d85d48，推送内容:{msg=暂时无人匹配，你稍后再来试试吧, code=504}
+2018-12-21 16:31:37,493  INFO WebSocketServer:254 ---- 推送消息到窗口3a09288d85d48，推送内容:{msg=(ｷ｀ﾟДﾟ´)!!不巧,你的对象刚刚偷偷溜走了, code=504}
+2018-12-21 16:31:37,494  INFO WebSocketServer:104 ---- 收到来自窗口3a09288d85d48的信息:heartbeat
+2018-12-21 16:31:37,495  INFO WebSocketServer:134 ---- 用户心跳:3a09288d85d48,当前在线人数为1
+2018-12-21 16:31:56,507  INFO WebSocketServer:104 ---- 收到来自窗口3a09288d85d48的信息:heartbeat
+2018-12-21 16:31:56,508  INFO WebSocketServer:134 ---- 用户心跳:3a09288d85d48,当前在线人数为1
+2018-12-21 16:32:01,580  INFO WebSocketServer:93 ---- 有一连接关闭！当前在线人数为0
+2018-12-21 16:32:02,181  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 16848 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-12-21 16:32:02,181 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-12-21 16:32:02,182  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-12-21 16:32:06,651  INFO AdventureApplication:57 ---- Started AdventureApplication in 4.533 seconds (JVM running for 2154.915)
+2018-12-21 16:32:11,522  INFO WebSocketServer:63 ---- 有新窗口开始监听:45053473fb348,当前在线人数为1
+2018-12-21 16:32:12,312  INFO WebSocketServer:104 ---- 收到来自窗口45053473fb348的信息:connet
+2018-12-21 16:32:16,941  INFO WebSocketServer:161 ---- websocketServer pushAllMessage
+2018-12-21 16:32:37,322  INFO WebSocketServer:63 ---- 有新窗口开始监听:da63ee4e36f48,当前在线人数为2
+2018-12-21 16:32:38,256  INFO WebSocketServer:104 ---- 收到来自窗口da63ee4e36f48的信息:connet
+2018-12-21 16:32:38,286  INFO WebSocketServer:161 ---- websocketServer pushAllMessage
+2018-12-21 16:32:38,350  INFO WebSocketServer:255 ---- 推送消息到窗口45053473fb348，推送内容:{msg=匹配成功, code=200}
+2018-12-21 16:32:38,352 ERROR WebSocketServer:239 ---- 发生错误
+2018-12-21 16:32:38,353 ERROR WebSocketServer:241 ---- java.io.IOException: 您的主机中的软件中止了一个已建立的连接。
+2018-12-21 16:32:38,400  INFO WebSocketServer:93 ---- 有一连接关闭！当前在线人数为1
+2018-12-21 16:32:38,401 ERROR WebSocketServer:264 ---- sendInfo----发送异常！
+2018-12-21 16:32:38,402  INFO WebSocketServer:255 ---- 推送消息到窗口da63ee4e36f48，推送内容:{msg=匹配成功, code=200}
+2018-12-21 16:32:38,404 ERROR WebSocketServer:239 ---- 发生错误
+2018-12-21 16:32:38,404 ERROR WebSocketServer:241 ---- null
+2018-12-21 16:32:49,580  INFO WebSocketServer:63 ---- 有新窗口开始监听:f00efb4b49d48,当前在线人数为2
+2018-12-21 16:32:50,419  INFO WebSocketServer:104 ---- 收到来自窗口f00efb4b49d48的信息:connet
+2018-12-21 16:32:50,444  INFO WebSocketServer:161 ---- websocketServer pushAllMessage
+2018-12-21 16:32:50,504  INFO WebSocketServer:255 ---- 推送消息到窗口da63ee4e36f48，推送内容:{msg=匹配成功, code=200}
+2018-12-21 16:32:50,506 ERROR WebSocketServer:239 ---- 发生错误
+2018-12-21 16:32:50,506 ERROR WebSocketServer:241 ---- java.io.IOException: 您的主机中的软件中止了一个已建立的连接。
+2018-12-21 16:32:50,550  INFO WebSocketServer:93 ---- 有一连接关闭！当前在线人数为1
+2018-12-21 16:32:50,551 ERROR WebSocketServer:264 ---- sendInfo----发送异常！
+2018-12-21 16:32:50,551  INFO WebSocketServer:255 ---- 推送消息到窗口f00efb4b49d48，推送内容:{msg=匹配成功, code=200}
+2018-12-21 16:32:50,553 ERROR WebSocketServer:239 ---- 发生错误
+2018-12-21 16:32:50,553 ERROR WebSocketServer:241 ---- null
+2018-12-21 16:33:18,626  INFO WebSocketServer:93 ---- 有一连接关闭！当前在线人数为0
+2018-12-21 16:33:24,284  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 16848 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-12-21 16:33:24,284 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-12-21 16:33:24,285  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-12-21 16:33:28,643  INFO AdventureApplication:57 ---- Started AdventureApplication in 4.404 seconds (JVM running for 2236.906)
+2018-12-21 16:33:56,787  INFO WebSocketServer:63 ---- 有新窗口开始监听:9bf760a450a48,当前在线人数为1
+2018-12-21 16:33:57,541  INFO WebSocketServer:104 ---- 收到来自窗口9bf760a450a48的信息:connet
+2018-12-21 16:33:57,570  INFO WebSocketServer:161 ---- websocketServer pushAllMessage
+2018-12-21 16:35:09,343  INFO WebSocketServer:93 ---- 有一连接关闭！当前在线人数为0
+2018-12-21 16:35:15,186  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 16848 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-12-21 16:35:15,186 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-12-21 16:35:15,186  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-12-21 16:35:19,789  INFO AdventureApplication:57 ---- Started AdventureApplication in 4.65 seconds (JVM running for 2348.049)
+2018-12-21 16:35:26,980  INFO WebSocketServer:63 ---- 有新窗口开始监听:2c55844105948,当前在线人数为1
+2018-12-21 16:35:28,058  INFO WebSocketServer:104 ---- 收到来自窗口2c55844105948的信息:connet
+2018-12-21 16:35:28,078  INFO WebSocketServer:160 ---- websocketServer pushAllMessage
+2018-12-21 16:35:33,081  INFO WebSocketServer:254 ---- 推送消息到窗口2c55844105948，推送内容:{msg=(ｷ｀ﾟДﾟ´)!!不巧,你的对象刚刚偷偷溜走了, code=504}
+2018-12-21 16:37:07,487  INFO WebSocketServer:104 ---- 收到来自窗口2c55844105948的信息:heartbeat
+2018-12-21 16:37:07,487  INFO WebSocketServer:134 ---- 用户心跳:2c55844105948,当前在线人数为1
+2018-12-21 16:37:44,156  INFO WebSocketServer:93 ---- 有一连接关闭！当前在线人数为0
+2018-12-21 16:37:45,324  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 16848 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-12-21 16:37:45,324 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-12-21 16:37:45,324  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-12-21 16:37:51,083  INFO AdventureApplication:57 ---- Started AdventureApplication in 5.805 seconds (JVM running for 2499.34)
+2018-12-21 16:37:52,970  INFO WebSocketServer:63 ---- 有新窗口开始监听:53d5fa3831048,当前在线人数为1
+2018-12-21 16:37:56,093  INFO WebSocketServer:104 ---- 收到来自窗口53d5fa3831048的信息:connet
+2018-12-21 16:37:56,112  INFO WebSocketServer:161 ---- websocketServer pushAllMessage
+2018-12-21 16:38:01,117  INFO WebSocketServer:255 ---- 推送消息到窗口53d5fa3831048，推送内容:{msg=(ｷ｀ﾟДﾟ´)!!不巧,你的对象刚刚偷偷溜走了, code=504}
+2018-12-21 16:38:02,557  INFO WebSocketServer:104 ---- 收到来自窗口53d5fa3831048的信息:connet
+2018-12-21 16:38:02,574  INFO WebSocketServer:161 ---- websocketServer pushAllMessage
+2018-12-21 16:38:07,587  INFO WebSocketServer:255 ---- 推送消息到窗口53d5fa3831048，推送内容:{msg=暂时无人匹配,你稍后再来试试吧, code=504}
+2018-12-21 16:38:07,595  INFO WebSocketServer:255 ---- 推送消息到窗口53d5fa3831048，推送内容:{msg=(ｷ｀ﾟДﾟ´)!!不巧,你的对象刚刚偷偷溜走了, code=504}
+2018-12-21 16:39:33,490  INFO WebSocketServer:104 ---- 收到来自窗口53d5fa3831048的信息:heartbeat
+2018-12-21 16:39:33,490  INFO WebSocketServer:134 ---- 用户心跳:53d5fa3831048,当前在线人数为1
+2018-12-21 16:41:04,667  INFO WebSocketServer:93 ---- 有一连接关闭！当前在线人数为0
+2018-12-21 16:41:06,416  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 16848 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-12-21 16:41:06,416 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-12-21 16:41:06,416  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-12-21 16:41:11,275  INFO AdventureApplication:57 ---- Started AdventureApplication in 4.909 seconds (JVM running for 2699.525)
+2018-12-21 16:41:15,984  INFO WebSocketServer:63 ---- 有新窗口开始监听:184fd4b8c7a48,当前在线人数为1
+2018-12-21 16:41:17,649  INFO WebSocketServer:104 ---- 收到来自窗口184fd4b8c7a48的信息:connet
+2018-12-21 16:41:17,670  INFO WebSocketServer:161 ---- websocketServer pushAllMessage
+2018-12-21 16:41:22,672  INFO WebSocketServer:255 ---- 推送消息到窗口184fd4b8c7a48，推送内容:{msg=暂时无人匹配,你稍后再来试试吧, code=504}
+2018-12-21 16:41:22,682  INFO WebSocketServer:255 ---- 推送消息到窗口184fd4b8c7a48，推送内容:{msg=不巧,你的对象刚刚偷偷溜走了, code=504}
+2018-12-21 16:42:08,287  INFO WebSocketServer:104 ---- 收到来自窗口184fd4b8c7a48的信息:connet
+2018-12-21 16:42:08,306  INFO WebSocketServer:161 ---- websocketServer pushAllMessage
+2018-12-21 16:42:13,331  INFO WebSocketServer:255 ---- 推送消息到窗口184fd4b8c7a48，推送内容:{msg=暂时无人匹配,你稍后再来试试吧, code=504}
+2018-12-21 16:42:13,341  INFO WebSocketServer:255 ---- 推送消息到窗口184fd4b8c7a48，推送内容:{msg=不巧,你的对象刚刚偷偷溜走了, code=504}
+2018-12-21 16:42:38,688  INFO WebSocketServer:93 ---- 有一连接关闭！当前在线人数为0
+2018-12-21 16:42:40,368  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 16848 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-12-21 16:42:40,368 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-12-21 16:42:40,368  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-12-21 16:42:44,653  INFO AdventureApplication:57 ---- Started AdventureApplication in 4.326 seconds (JVM running for 2792.902)
+2018-12-21 16:42:48,139  INFO WebSocketServer:63 ---- 有新窗口开始监听:e9a44969b8e48,当前在线人数为1
+2018-12-21 16:42:49,155  INFO WebSocketServer:104 ---- 收到来自窗口e9a44969b8e48的信息:connet
+2018-12-21 16:42:49,179  INFO WebSocketServer:161 ---- websocketServer pushAllMessage
+2018-12-21 16:42:54,183  INFO WebSocketServer:253 ---- 推送消息到窗口e9a44969b8e48，推送内容:{msg=暂时无人匹配,你稍后再来试试吧, code=504}
+2018-12-21 16:43:19,065 ERROR WebSocketServer:237 ---- 发生错误
+2018-12-21 16:43:19,066 ERROR WebSocketServer:239 ---- null
+2018-12-21 16:43:31,121 ERROR WebSocketServer:237 ---- 发生错误
+2018-12-21 16:43:31,122 ERROR WebSocketServer:239 ---- null
+2018-12-21 16:44:28,515  INFO WebSocketServer:104 ---- 收到来自窗口e9a44969b8e48的信息:heartbeat
+2018-12-21 16:44:28,515  INFO WebSocketServer:134 ---- 用户心跳:e9a44969b8e48,当前在线人数为1
+2018-12-21 16:46:08,500  INFO WebSocketServer:104 ---- 收到来自窗口e9a44969b8e48的信息:heartbeat
+2018-12-21 16:46:08,500  INFO WebSocketServer:134 ---- 用户心跳:e9a44969b8e48,当前在线人数为1
+2018-12-21 16:47:48,501  INFO WebSocketServer:104 ---- 收到来自窗口e9a44969b8e48的信息:heartbeat
+2018-12-21 16:47:48,502  INFO WebSocketServer:134 ---- 用户心跳:e9a44969b8e48,当前在线人数为1
+2018-12-21 16:49:28,505  INFO WebSocketServer:104 ---- 收到来自窗口e9a44969b8e48的信息:heartbeat
+2018-12-21 16:49:28,505  INFO WebSocketServer:134 ---- 用户心跳:e9a44969b8e48,当前在线人数为1
+2018-12-21 16:51:08,507  INFO WebSocketServer:104 ---- 收到来自窗口e9a44969b8e48的信息:heartbeat
+2018-12-21 16:51:08,507  INFO WebSocketServer:134 ---- 用户心跳:e9a44969b8e48,当前在线人数为1
+2018-12-21 16:52:48,510  INFO WebSocketServer:104 ---- 收到来自窗口e9a44969b8e48的信息:heartbeat
+2018-12-21 16:52:48,511  INFO WebSocketServer:134 ---- 用户心跳:e9a44969b8e48,当前在线人数为1
+2018-12-21 16:54:28,512  INFO WebSocketServer:104 ---- 收到来自窗口e9a44969b8e48的信息:heartbeat
+2018-12-21 16:54:28,513  INFO WebSocketServer:134 ---- 用户心跳:e9a44969b8e48,当前在线人数为1
+2018-12-21 16:56:08,514  INFO WebSocketServer:104 ---- 收到来自窗口e9a44969b8e48的信息:heartbeat
+2018-12-21 16:56:08,514  INFO WebSocketServer:134 ---- 用户心跳:e9a44969b8e48,当前在线人数为1
+2018-12-21 16:57:48,517  INFO WebSocketServer:104 ---- 收到来自窗口e9a44969b8e48的信息:heartbeat
+2018-12-21 16:57:48,518  INFO WebSocketServer:134 ---- 用户心跳:e9a44969b8e48,当前在线人数为1
+2018-12-21 16:59:28,519  INFO WebSocketServer:104 ---- 收到来自窗口e9a44969b8e48的信息:heartbeat
+2018-12-21 16:59:28,519  INFO WebSocketServer:134 ---- 用户心跳:e9a44969b8e48,当前在线人数为1
+2018-12-21 17:01:08,523  INFO WebSocketServer:104 ---- 收到来自窗口e9a44969b8e48的信息:heartbeat
+2018-12-21 17:01:08,524  INFO WebSocketServer:134 ---- 用户心跳:e9a44969b8e48,当前在线人数为1
+2018-12-21 17:02:48,524  INFO WebSocketServer:104 ---- 收到来自窗口e9a44969b8e48的信息:heartbeat
+2018-12-21 17:02:48,524  INFO WebSocketServer:134 ---- 用户心跳:e9a44969b8e48,当前在线人数为1
+2018-12-21 17:04:28,526  INFO WebSocketServer:104 ---- 收到来自窗口e9a44969b8e48的信息:heartbeat
+2018-12-21 17:04:28,526  INFO WebSocketServer:134 ---- 用户心跳:e9a44969b8e48,当前在线人数为1
+2018-12-21 17:06:08,528  INFO WebSocketServer:104 ---- 收到来自窗口e9a44969b8e48的信息:heartbeat
+2018-12-21 17:06:08,528  INFO WebSocketServer:134 ---- 用户心跳:e9a44969b8e48,当前在线人数为1
+2018-12-21 17:07:48,539  INFO WebSocketServer:104 ---- 收到来自窗口e9a44969b8e48的信息:heartbeat
+2018-12-21 17:07:48,539  INFO WebSocketServer:134 ---- 用户心跳:e9a44969b8e48,当前在线人数为1
+2018-12-21 17:09:28,533  INFO WebSocketServer:104 ---- 收到来自窗口e9a44969b8e48的信息:heartbeat
+2018-12-21 17:09:28,534  INFO WebSocketServer:134 ---- 用户心跳:e9a44969b8e48,当前在线人数为1
+2018-12-21 17:11:08,536  INFO WebSocketServer:104 ---- 收到来自窗口e9a44969b8e48的信息:heartbeat
+2018-12-21 17:11:08,536  INFO WebSocketServer:134 ---- 用户心跳:e9a44969b8e48,当前在线人数为1
+2018-12-21 17:12:48,537  INFO WebSocketServer:104 ---- 收到来自窗口e9a44969b8e48的信息:heartbeat
+2018-12-21 17:12:48,537  INFO WebSocketServer:134 ---- 用户心跳:e9a44969b8e48,当前在线人数为1
+2018-12-21 17:14:28,540  INFO WebSocketServer:104 ---- 收到来自窗口e9a44969b8e48的信息:heartbeat
+2018-12-21 17:14:28,540  INFO WebSocketServer:134 ---- 用户心跳:e9a44969b8e48,当前在线人数为1
+2018-12-21 17:16:08,543  INFO WebSocketServer:104 ---- 收到来自窗口e9a44969b8e48的信息:heartbeat
+2018-12-21 17:16:08,544  INFO WebSocketServer:134 ---- 用户心跳:e9a44969b8e48,当前在线人数为1
+2018-12-21 17:17:48,544  INFO WebSocketServer:104 ---- 收到来自窗口e9a44969b8e48的信息:heartbeat
+2018-12-21 17:17:48,544  INFO WebSocketServer:134 ---- 用户心跳:e9a44969b8e48,当前在线人数为1
+2018-12-21 17:19:28,547  INFO WebSocketServer:104 ---- 收到来自窗口e9a44969b8e48的信息:heartbeat
+2018-12-21 17:19:28,548  INFO WebSocketServer:134 ---- 用户心跳:e9a44969b8e48,当前在线人数为1
+2018-12-21 17:21:08,548  INFO WebSocketServer:104 ---- 收到来自窗口e9a44969b8e48的信息:heartbeat
+2018-12-21 17:21:08,549  INFO WebSocketServer:134 ---- 用户心跳:e9a44969b8e48,当前在线人数为1
+2018-12-21 17:22:48,552  INFO WebSocketServer:104 ---- 收到来自窗口e9a44969b8e48的信息:heartbeat
+2018-12-21 17:22:48,553  INFO WebSocketServer:134 ---- 用户心跳:e9a44969b8e48,当前在线人数为1
+2018-12-21 17:24:28,555  INFO WebSocketServer:104 ---- 收到来自窗口e9a44969b8e48的信息:heartbeat
+2018-12-21 17:24:28,555  INFO WebSocketServer:134 ---- 用户心跳:e9a44969b8e48,当前在线人数为1
+2018-12-21 17:26:08,556  INFO WebSocketServer:104 ---- 收到来自窗口e9a44969b8e48的信息:heartbeat
+2018-12-21 17:26:08,556  INFO WebSocketServer:134 ---- 用户心跳:e9a44969b8e48,当前在线人数为1
+2018-12-21 17:27:48,559  INFO WebSocketServer:104 ---- 收到来自窗口e9a44969b8e48的信息:heartbeat
+2018-12-21 17:27:48,559  INFO WebSocketServer:134 ---- 用户心跳:e9a44969b8e48,当前在线人数为1
+2018-12-21 17:29:28,562  INFO WebSocketServer:104 ---- 收到来自窗口e9a44969b8e48的信息:heartbeat
+2018-12-21 17:29:28,562  INFO WebSocketServer:134 ---- 用户心跳:e9a44969b8e48,当前在线人数为1
+2018-12-21 17:31:08,563  INFO WebSocketServer:104 ---- 收到来自窗口e9a44969b8e48的信息:heartbeat
+2018-12-21 17:31:08,563  INFO WebSocketServer:134 ---- 用户心跳:e9a44969b8e48,当前在线人数为1
+2018-12-21 17:32:48,566  INFO WebSocketServer:104 ---- 收到来自窗口e9a44969b8e48的信息:heartbeat
+2018-12-21 17:32:48,566  INFO WebSocketServer:134 ---- 用户心跳:e9a44969b8e48,当前在线人数为1
+2018-12-21 17:34:28,568  INFO WebSocketServer:104 ---- 收到来自窗口e9a44969b8e48的信息:heartbeat
+2018-12-21 17:34:28,568  INFO WebSocketServer:134 ---- 用户心跳:e9a44969b8e48,当前在线人数为1
+2018-12-21 17:36:08,570  INFO WebSocketServer:104 ---- 收到来自窗口e9a44969b8e48的信息:heartbeat
+2018-12-21 17:36:08,570  INFO WebSocketServer:134 ---- 用户心跳:e9a44969b8e48,当前在线人数为1
+2018-12-21 17:37:48,572  INFO WebSocketServer:104 ---- 收到来自窗口e9a44969b8e48的信息:heartbeat
+2018-12-21 17:37:48,573  INFO WebSocketServer:134 ---- 用户心跳:e9a44969b8e48,当前在线人数为1
+2018-12-21 17:39:28,575  INFO WebSocketServer:104 ---- 收到来自窗口e9a44969b8e48的信息:heartbeat
+2018-12-21 17:39:28,575  INFO WebSocketServer:134 ---- 用户心跳:e9a44969b8e48,当前在线人数为1
+2018-12-21 17:46:08,525  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 18204 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-12-21 17:46:08,537 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-12-21 17:46:08,539  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-12-21 17:46:21,567  INFO AdventureApplication:57 ---- Started AdventureApplication in 13.462 seconds (JVM running for 14.099)
+2018-12-21 17:46:33,728  INFO WebSocketServer:63 ---- 有新窗口开始监听:f186507dfe048,当前在线人数为1
+2018-12-21 17:46:34,232  INFO WebSocketServer:104 ---- 收到来自窗口f186507dfe048的信息:connet
+2018-12-21 17:46:34,256  INFO WebSocketServer:154 ---- websocketServer pushAllMessage
+2018-12-21 17:46:48,816  INFO WebSocketServer:93 ---- 有一连接关闭！当前在线人数为0
+2018-12-21 17:46:48,990  INFO WebSocketServer:63 ---- 有新窗口开始监听:a2b26beb83648,当前在线人数为1
+2018-12-21 17:46:49,941  INFO WebSocketServer:104 ---- 收到来自窗口a2b26beb83648的信息:connet
+2018-12-21 17:46:49,960  INFO WebSocketServer:154 ---- websocketServer pushAllMessage
+2018-12-21 17:48:11,381  INFO WebSocketServer:93 ---- 有一连接关闭！当前在线人数为0
+2018-12-21 17:48:11,540  INFO WebSocketServer:63 ---- 有新窗口开始监听:144a2f45d3648,当前在线人数为1
+2018-12-21 17:48:12,941  INFO WebSocketServer:104 ---- 收到来自窗口144a2f45d3648的信息:connet
+2018-12-21 17:48:12,958  INFO WebSocketServer:154 ---- websocketServer pushAllMessage
+2018-12-21 17:48:50,546  INFO WebSocketServer:93 ---- 有一连接关闭！当前在线人数为0
+2018-12-21 17:48:50,826  INFO WebSocketServer:63 ---- 有新窗口开始监听:09748e50bab48,当前在线人数为1
+2018-12-21 17:48:51,743  INFO WebSocketServer:104 ---- 收到来自窗口09748e50bab48的信息:connet
+2018-12-21 17:48:51,760  INFO WebSocketServer:154 ---- websocketServer pushAllMessage
+2018-12-21 17:48:56,771  INFO WebSocketServer:239 ---- 推送消息到窗口09748e50bab48，推送内容:{msg=暂时无人匹配,你稍后再来试试吧, code=504}
+2018-12-21 17:49:08,141  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 18668 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-12-21 17:49:08,145 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-12-21 17:49:08,146  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-12-21 17:49:21,441  INFO AdventureApplication:57 ---- Started AdventureApplication in 13.77 seconds (JVM running for 14.598)
+2018-12-21 17:49:49,791  INFO WebSocketServer:63 ---- 有新窗口开始监听:10ef7fabe2248,当前在线人数为1
+2018-12-21 17:49:50,685  INFO WebSocketServer:104 ---- 收到来自窗口10ef7fabe2248的信息:connet
+2018-12-21 17:49:50,710  INFO WebSocketServer:154 ---- websocketServer pushAllMessage
+2018-12-21 17:49:55,720  INFO WebSocketServer:239 ---- 推送消息到窗口10ef7fabe2248，推送内容:{msg=暂时无人匹配,你稍后再来试试吧, code=504}
+2018-12-21 17:50:43,190  INFO WebSocketServer:104 ---- 收到来自窗口10ef7fabe2248的信息:connet
+2018-12-21 17:50:43,212  INFO WebSocketServer:154 ---- websocketServer pushAllMessage
+2018-12-21 17:50:48,223  INFO WebSocketServer:239 ---- 推送消息到窗口10ef7fabe2248，推送内容:{msg=暂时无人匹配,你稍后再来试试吧, code=504}
+2018-12-21 17:51:37,089  INFO WebSocketServer:104 ---- 收到来自窗口10ef7fabe2248的信息:connet
+2018-12-21 17:51:37,114  INFO WebSocketServer:154 ---- websocketServer pushAllMessage
+2018-12-21 17:51:42,125  INFO WebSocketServer:239 ---- 推送消息到窗口10ef7fabe2248，推送内容:{msg=暂时无人匹配,你稍后再来试试吧, code=504}
+2018-12-21 17:52:19,364  INFO WebSocketServer:93 ---- 有一连接关闭！当前在线人数为0
+2018-12-21 17:52:19,606  INFO WebSocketServer:63 ---- 有新窗口开始监听:6f8e21bedf048,当前在线人数为1
+2018-12-21 17:52:25,019  INFO WebSocketServer:104 ---- 收到来自窗口6f8e21bedf048的信息:connet
+2018-12-21 17:52:25,041  INFO WebSocketServer:154 ---- websocketServer pushAllMessage
+2018-12-21 17:52:40,719  INFO WebSocketServer:93 ---- 有一连接关闭！当前在线人数为0
+2018-12-21 17:52:40,855  INFO WebSocketServer:63 ---- 有新窗口开始监听:579adc18f9f48,当前在线人数为1
+2018-12-21 17:52:41,849  INFO WebSocketServer:104 ---- 收到来自窗口579adc18f9f48的信息:connet
+2018-12-21 17:52:41,872  INFO WebSocketServer:154 ---- websocketServer pushAllMessage
+2018-12-21 17:52:46,876  INFO WebSocketServer:239 ---- 推送消息到窗口579adc18f9f48，推送内容:{msg=暂时无人匹配,你稍后再来试试吧, code=504}
+2018-12-21 17:53:27,094  INFO WebSocketServer:93 ---- 有一连接关闭！当前在线人数为0
+2018-12-21 17:53:27,391  INFO WebSocketServer:63 ---- 有新窗口开始监听:018c72bb18848,当前在线人数为1
+2018-12-21 17:53:28,389  INFO WebSocketServer:104 ---- 收到来自窗口018c72bb18848的信息:connet
+2018-12-21 17:53:28,410  INFO WebSocketServer:154 ---- websocketServer pushAllMessage
+2018-12-21 17:53:33,426  INFO WebSocketServer:239 ---- 推送消息到窗口018c72bb18848，推送内容:{msg=暂时无人匹配,你稍后再来试试吧, code=504}
+2018-12-21 17:55:07,417  INFO WebSocketServer:104 ---- 收到来自窗口018c72bb18848的信息:heartbeat
+2018-12-21 17:55:07,418  INFO WebSocketServer:127 ---- 用户心跳:018c72bb18848,当前在线人数为1
+2018-12-21 17:55:11,533  INFO WebSocketServer:93 ---- 有一连接关闭！当前在线人数为0
+2018-12-21 17:55:11,954  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 18668 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
+2018-12-21 17:55:11,955 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-12-21 17:55:11,955  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
+2018-12-21 17:55:16,173  INFO AdventureApplication:57 ---- Started AdventureApplication in 4.272 seconds (JVM running for 369.322)
+2018-12-21 17:55:48,443  INFO WebSocketServer:63 ---- 有新窗口开始监听:14516b7a36748,当前在线人数为1
+2018-12-21 17:55:49,785  INFO WebSocketServer:104 ---- 收到来自窗口14516b7a36748的信息:connet
+2018-12-21 17:55:49,810  INFO WebSocketServer:154 ---- websocketServer pushAllMessage
+2018-12-21 17:55:54,829  INFO WebSocketServer:239 ---- 推送消息到窗口14516b7a36748，推送内容:{msg=暂时无人匹配，你稍后再来试试吧, code=504}
+2018-12-21 17:56:02,659  INFO WebSocketServer:104 ---- 收到来自窗口14516b7a36748的信息:connet
+2018-12-21 17:56:02,681  INFO WebSocketServer:154 ---- websocketServer pushAllMessage
+2018-12-21 17:56:07,695  INFO WebSocketServer:239 ---- 推送消息到窗口14516b7a36748，推送内容:{msg=暂时无人匹配，你稍后再来试试吧, code=504}
+2018-12-21 17:57:28,601  INFO WebSocketServer:104 ---- 收到来自窗口14516b7a36748的信息:heartbeat
+2018-12-21 17:57:28,602  INFO WebSocketServer:127 ---- 用户心跳:14516b7a36748,当前在线人数为1
+2018-12-21 17:59:08,603  INFO WebSocketServer:104 ---- 收到来自窗口14516b7a36748的信息:heartbeat
+2018-12-21 17:59:08,605  INFO WebSocketServer:127 ---- 用户心跳:14516b7a36748,当前在线人数为1
+2018-12-21 18:00:48,605  INFO WebSocketServer:104 ---- 收到来自窗口14516b7a36748的信息:heartbeat
+2018-12-21 18:00:48,607  INFO WebSocketServer:127 ---- 用户心跳:14516b7a36748,当前在线人数为1
+2018-12-21 18:02:28,611  INFO WebSocketServer:104 ---- 收到来自窗口14516b7a36748的信息:heartbeat
+2018-12-21 18:02:28,613  INFO WebSocketServer:127 ---- 用户心跳:14516b7a36748,当前在线人数为1
+2018-12-21 18:04:08,611  INFO WebSocketServer:104 ---- 收到来自窗口14516b7a36748的信息:heartbeat
+2018-12-21 18:04:08,612  INFO WebSocketServer:127 ---- 用户心跳:14516b7a36748,当前在线人数为1

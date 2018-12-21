@@ -17,6 +17,7 @@ import com.firstTry.Adventure.utils.Page;
  */
 @ControllerAdvice
 public class GlobalExceptionHandler {
+	
 	  //错误
 	  public static final String DEFAULT_ERROR_VIEW = "Error";
 	  
@@ -33,6 +34,7 @@ public class GlobalExceptionHandler {
 	        mav.addObject("exception", e);
 	        mav.addObject("url", req.getRequestURL());
 	        mav.setViewName(DEFAULT_ERROR_VIEW);
+	        
 	        return mav;
 	    }
 	    /**
