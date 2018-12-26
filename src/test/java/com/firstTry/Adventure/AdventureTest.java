@@ -39,34 +39,9 @@ public class AdventureTest {
 		 */
 		// System.out.println(new Date().getTime()/1000+15-new
 		// Date().getTime()/1000);
-		final BlockingDeque<Integer> integers = new LinkedBlockingDeque<>();
-		try {
-			for (int a = 0; a <= 10; a++) {
-				integers.put(a);
-			}
-
-			System.out.println(integers.toString() + "---start");
-			new Thread(new Runnable() {
-				public void run() {
-					while (integers.size() > 0) {
-						int c;
-						try {
-							c = integers.take();
-
-							System.out.println(c);
-							integers.remove(c);
-						} catch (InterruptedException e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						}
-					}
-					System.out.println(integers.toString() + "---end");
-				}
-			}).start();
-
-		} catch (Exception e) {
-
-		}
+		HashMap<String, Object> map=new HashMap<String,Object>();
+		map.put("s", 1);
+		System.out.println(map);
 		/*
 		 * UserTest o=new UserTest(); o.setId(1l); o.setMobie("111111111111");
 		 * o.setRemark("1"); AdventureTest adventureTest=new AdventureTest();
