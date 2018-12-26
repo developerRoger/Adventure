@@ -1,5 +1,0 @@
-2018-12-17 10:55:12,423  INFO AdventureApplication:48 ---- Starting AdventureApplication on BS1HDX84D9084A0 with PID 9016 (E:\Adventure\Adventure\target\classes started by Administrator in E:\Adventure\Adventure)
-2018-12-17 10:55:12,434 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
-2018-12-17 10:55:12,436  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
-2018-12-17 10:55:30,498  INFO AdventureApplication:57 ---- Started AdventureApplication in 18.62 seconds (JVM running for 19.583)
-2018-12-17 10:55:45,438  INFO WebSocketServer:64 ---- 有新窗口开始监听:f853aa5015f48,当前在线人数为1

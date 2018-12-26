@@ -1,4 +1,0 @@
-2018-06-01 11:54:58,794  INFO LoggingHandler:101 - [id: 0x6bc79df5] REGISTERED
-2018-06-01 11:54:58,800  INFO LoggingHandler:101 - [id: 0x6bc79df5] BIND(0.0.0.0/0.0.0.0:8080)
-2018-06-01 11:54:58,807  INFO LoggingHandler:101 - [id: 0x6bc79df5, /0:0:0:0:0:0:0:0:8080] ACTIVE
-2018-06-01 11:55:03,734  INFO LoggingHandler:101 - [id: 0x6bc79df5, /0:0:0:0:0:0:0:0:8080] RECEIVED: [id: 0x4738a949, /127.0.0.1:54929 => /127.0.0.1:8080]

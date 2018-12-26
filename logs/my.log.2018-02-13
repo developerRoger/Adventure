@@ -1,4 +1,0 @@
-2018-02-13 11:53:03,921  INFO AdventureApplication:48 ---- Starting AdventureApplication on PC-20171126RQUJ with PID 11472 (D:\SpringCloud\Adventure\target\classes started by Administrator in D:\SpringCloud\Adventure)
-2018-02-13 11:53:03,927 DEBUG AdventureApplication:51 ---- Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
-2018-02-13 11:53:03,927  INFO AdventureApplication:593 ---- No active profile set, falling back to default profiles: default
-2018-02-13 11:53:07,683  INFO AdventureApplication:57 ---- Started AdventureApplication in 3.963 seconds (JVM running for 4.302)
