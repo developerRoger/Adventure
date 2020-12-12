@@ -17,7 +17,7 @@ import com.firstTry.Adventure.service.UserService;
  */
 @Configuration
 @EnableWebSecurity
-@Order(SecurityProperties.ACCESS_OVERRIDE_ORDER)  
+@Order(1)
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	
@@ -39,6 +39,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		"/hhh",
 		"/go",
 		"/narcotics",
+			"/test",
 		"/preface",
 		"/feedback/*",
 		"/sys/generator/*",

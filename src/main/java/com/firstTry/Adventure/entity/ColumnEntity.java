@@ -24,7 +24,7 @@ public class ColumnEntity {
     private String attrType;
     //auto_increment
     private String extra;
-    
+
 	public String getColumnName() {
 		return columnName;
 	}
