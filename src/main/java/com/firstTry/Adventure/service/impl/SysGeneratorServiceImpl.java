@@ -23,8 +23,11 @@ import java.util.zip.ZipOutputStream;
 @Service
 public class SysGeneratorServiceImpl implements SysGeneratorService{
 	
-	@Autowired
-	private SysGeneratorMapper sysGeneratorDao;
+	private final SysGeneratorMapper sysGeneratorDao;
+
+	SysGeneratorServiceImpl(SysGeneratorMapper sysGeneratorDao) {
+		this.sysGeneratorDao = sysGeneratorDao;
+	}
 
 	public List<Map<String, Object>> queryList(Map<String, Object> map) {
 		return sysGeneratorDao.queryList(map);

@@ -5,9 +5,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
-import java.util.Random;
+import java.util.Set;
+import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.CopyOnWriteArraySet;
 
 import javax.websocket.OnClose;
 import javax.websocket.OnError;
@@ -16,17 +17,20 @@ import javax.websocket.OnOpen;
 import javax.websocket.Session;
 import javax.websocket.server.PathParam;
 import javax.websocket.server.ServerEndpoint;
+
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
 
-import com.firstTry.Adventure.exception.RRException;
-import com.firstTry.Adventure.utils.R;
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 
 /**
- * 所有websocket的终类
+ * 所有websocket的终类（多人房间制聊天室）
+ * 
+ * 支持两种加入方式：
+ * 1. 指定房间key加入：发送 {"type":"join","room":"房间key"}
+ * 2. 随机匹配：发送 {"type":"match"}，服务端自动将其加入一个未满的房间
  * 
  * @author Roger
  * @date 2018/11/9
@@ -35,34 +39,36 @@ import com.firstTry.Adventure.utils.R;
 @Component
 public class WebSocketServer {
 
-	@Autowired
-	private RedisTemplate<String, Object> redisTemplate;
-
 	static Log log = LogFactory.getLog(WebSocketServer.class);
+	// 单个房间最大人数
+	private static final int MAX_ROOM_SIZE = 50;
+
 	// 静态变量，用来记录当前在线连接数。应该把它设计成线程安全的。
 	private static int onlineCount = 0;
-	// concurrent包的线程安全Map，用来存放每个客户端对应的MyWebSocket对象。
+	// concurrent包的线程安全Map，用来存放每个客户端对应的Session对象。
 	private static Map<String, Session> webSocketSet = new ConcurrentHashMap<>();
-	// 存储连接用户id数组(用作随机匹配母体)
-	private static List<String> socketList = Collections.synchronizedList(new ArrayList<String>());
-
-	private static final String timeKey = "im";
+	// 用户sid -> 所在房间key
+	private static Map<String, String> userRoomMap = new ConcurrentHashMap<>();
+	// 房间key -> 房间内成员sid集合
+	private static Map<String, Set<String>> roomMap = new ConcurrentHashMap<>();
+	// 等待随机匹配的用户sid队列
+	private static List<String> waitingQueue = Collections.synchronizedList(new ArrayList<String>());
 
 	/**
 	 * 连接建立成功调用的方法
 	 */
 	@OnOpen
 	public void onOpen(Session session, @PathParam("sid") String sid) {
-		if (!webSocketSet.containsKey(sid))
-			webSocketSet.put(sid, session); // 加入put中
-		if (sid != null) {
-			// 存入redis
-			redisTemplate.opsForValue().set(sid, null);
-		}
+		webSocketSet.put(sid, session); // 加入put中
 		addOnlineCount(); // 在线数加1
 		log.info("有新窗口开始监听:" + sid + ",当前在线人数为" + getOnlineCount());
 		try {
-			sendMessage(R.error(100, "连接成功").toString(), session);
+			JSONObject obj = new JSONObject();
+			obj.put("code", 100);
+			obj.put("type", "system");
+			obj.put("msg", "连接成功");
+			obj.put("sid", sid);
+			sendMessage(obj.toJSONString(), session);
 		} catch (IOException e) {
 			log.error("websocket IO异常");
 		}
@@ -74,21 +80,7 @@ public class WebSocketServer {
 	@OnClose
 	public void onClose(@PathParam("sid") String sid) {
 		webSocketSet.remove(sid); // 从set中删除
-		// 对方已离线，发送消息
-		String sendId = null;
-		if (null != redisTemplate.opsForValue().get(sid)) {
-			sendId = redisTemplate.opsForValue().get(sid).toString();
-			redisTemplate.delete((String) redisTemplate.opsForValue().get(sid));
-			redisTemplate.delete(sid);
-		}
-		try {
-			if (null != sendId)
-				sendMessage(R.error(504, "对方已离线，你可以重新匹配").toString(), webSocketSet.get(sendId));
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		socketList.remove(sid);
+		leaveRoom(sid, true);
 		subOnlineCount(); // 在线数减1
 		log.info("有一连接关闭！当前在线人数为" + getOnlineCount());
 	}
@@ -102,61 +94,241 @@ public class WebSocketServer {
 	@OnMessage
 	public void onMessage(String message, Session session, @PathParam("sid") String sid) {
 		log.info("收到来自窗口" + sid + "的信息:" + message);
-
-		new Thread(new Runnable() {
-
-			@Override
-			public void run() {
-				try {
-					// TODO Auto-generated method stub
-					if ("connet".equals(message)) {
-						// 如果已经有值匹配了，不会进入随机匹配
-						if (null == redisTemplate.opsForValue().get(sid)) {
-							// 存到母体中，等待匹配
-							if (!socketList.contains(sid))
-								socketList.add(sid);
-							// 5秒后过期
-							redisTemplate.opsForValue().set(timeKey + "_" + sid, "connet", 5, TimeUnit.SECONDS);
-							//全员通知
-							pushAllMessage("当前有人正在等待匹配....ing");
-							randomMatching(sid);
-						} else {
-							sendInfo(R.error(200, "你的操作太频繁").toString(), sid);
-						}
-					} else if ("heartbeat".equals(message)) {
-						log.info("用户心跳:" + sid + ",当前在线人数为" + getOnlineCount());
-					} else {
-						// 无人匹配，返回相同内容
-						if (null == redisTemplate.opsForValue().get(sid))
-							sendInfo(R.error(404, message).toString(), sid);
-						else
-							sendInfo(R.error(200, message).toString(), (String) redisTemplate.opsForValue().get(sid));
-					}
-				} catch (Exception e) {
-					log.error(e.getMessage());
-					redisTemplate.delete(sid);
-					// 异常后，直接关闭
+		try {
+			if (message == null || message.trim().length() == 0) {
+				return;
+			}
+			String type = null;
+			String roomKey = null;
+			String content = null;
+			// 兼容旧协议：纯文本 "connet" 视为随机匹配，"heartbeat" 为心跳，其余视为聊天内容
+			if (message.startsWith("{")) {
+				JSONObject json = JSON.parseObject(message);
+				type = json.getString("type");
+				roomKey = json.getString("room");
+				content = json.getString("msg");
+			} else {
+				if ("connet".equals(message)) {
+					type = "match";
+				} else if ("heartbeat".equals(message)) {
+					type = "heartbeat";
+				} else {
+					type = "chat";
+					content = message;
 				}
 			}
 
-		}).start();
-
-		System.out.println(session.getId());
-
+			if ("match".equals(type)) {
+				// 随机匹配
+				randomMatch(sid);
+			} else if ("join".equals(type)) {
+				// 指定key加入房间
+				if (roomKey == null || roomKey.trim().length() == 0) {
+					sendError(sid, "房间key不能为空");
+				} else {
+					joinRoom(sid, roomKey.trim());
+				}
+			} else if ("chat".equals(type)) {
+				// 聊天消息，广播给房间内其他人
+				sendChat(sid, content == null ? "" : content);
+			} else if ("heartbeat".equals(type)) {
+				log.info("用户心跳:" + sid + ",当前在线人数为" + getOnlineCount());
+			} else {
+				sendError(sid, "无法识别的消息类型");
+			}
+		} catch (Exception e) {
+			log.error("处理消息异常：" + e.getMessage(), e);
+			try {
+				sendError(sid, "处理消息异常");
+			} catch (Exception ex) {
+				log.error("推送错误消息失败");
+			}
+		}
 	}
 
 	/**
-	 * 群发信息
+	 * 指定key加入房间，房间不存在则创建
+	 * 
+	 * @param sid
+	 * @param roomKey
+	 */
+	private synchronized void joinRoom(String sid, String roomKey) {
+		// 已在目标房间，直接返回
+		String oldRoom = userRoomMap.get(sid);
+		if (roomKey.equals(oldRoom)) {
+			sendSystem(sid, "你已在房间 " + roomKey + " 中", roomKey);
+			return;
+		}
+		// 先离开旧房间
+		leaveRoom(sid, true);
+
+		Set<String> members = roomMap.get(roomKey);
+		if (members != null && members.size() >= MAX_ROOM_SIZE) {
+			sendError(sid, "房间 " + roomKey + " 已满，最多 " + MAX_ROOM_SIZE + " 人");
+			return;
+		}
+		addToRoom(sid, roomKey);
+	}
+
+	/**
+	 * 随机匹配：优先加入未满房间，否则创建新房间等待
+	 * 
+	 * @param sid
+	 */
+	private synchronized void randomMatch(String sid) {
+		// 先离开旧房间
+		leaveRoom(sid, true);
+		waitingQueue.remove(sid);
+		waitingQueue.add(sid);
+
+		// 找一个未满的房间加入（为避免所有人都挤进同一个房间，优先选择等待队列所在房间）
+		String targetRoom = null;
+		// 先看等待队列其他人所在的房间
+		for (String w : waitingQueue) {
+			if (w.equals(sid)) {
+				continue;
+			}
+			String wRoom = userRoomMap.get(w);
+			if (wRoom != null && roomMap.get(wRoom) != null && roomMap.get(wRoom).size() < MAX_ROOM_SIZE) {
+				targetRoom = wRoom;
+				break;
+			}
+		}
+		// 再找任意未满房间
+		if (targetRoom == null) {
+			for (Map.Entry<String, Set<String>> entry : roomMap.entrySet()) {
+				if (entry.getValue().size() < MAX_ROOM_SIZE) {
+					targetRoom = entry.getKey();
+					break;
+				}
+			}
+		}
+		// 都满了或没有房间，创建新房间
+		if (targetRoom == null) {
+			targetRoom = "room-" + UUID.randomUUID().toString().substring(0, 8);
+		}
+		waitingQueue.remove(sid);
+		addToRoom(sid, targetRoom);
+	}
+
+	/**
+	 * 将用户加入房间并广播
+	 * 
+	 * @param sid
+	 * @param roomKey
+	 */
+	private void addToRoom(String sid, String roomKey) {
+		Set<String> members = roomMap.computeIfAbsent(roomKey, k -> new CopyOnWriteArraySet<String>());
+		members.add(sid);
+		userRoomMap.put(sid, roomKey);
+		// 通知房间内其他人
+		JSONObject sysMsg = new JSONObject();
+		sysMsg.put("code", 200);
+		sysMsg.put("type", "system");
+		sysMsg.put("msg", "用户 " + sid + " 加入了房间 " + roomKey);
+		sysMsg.put("room", roomKey);
+		broadcast(roomKey, sid, sysMsg.toJSONString());
+		// 通知自己加入成功
+		JSONObject selfMsg = new JSONObject();
+		selfMsg.put("code", 200);
+		selfMsg.put("type", "joined");
+		selfMsg.put("msg", "已加入房间 " + roomKey + "，当前房间人数：" + members.size());
+		selfMsg.put("room", roomKey);
+		selfMsg.put("members", members.size());
+		sendInfo(selfMsg.toJSONString(), sid);
+	}
+
+	/**
+	 * 离开房间
+	 * 
+	 * @param sid
+	 * @param notifyOthers 是否通知房间内其他人
+	 */
+	private void leaveRoom(String sid, boolean notifyOthers) {
+		String roomKey = userRoomMap.remove(sid);
+		if (roomKey == null) {
+			return;
+		}
+		Set<String> members = roomMap.get(roomKey);
+		if (members != null) {
+			members.remove(sid);
+			if (members.isEmpty()) {
+				roomMap.remove(roomKey);
+			} else if (notifyOthers) {
+				JSONObject sysMsg = new JSONObject();
+				sysMsg.put("code", 200);
+				sysMsg.put("type", "system");
+				sysMsg.put("msg", "用户 " + sid + " 离开了房间 " + roomKey + "，当前人数：" + members.size());
+				sysMsg.put("room", roomKey);
+				broadcast(roomKey, sid, sysMsg.toJSONString());
+			}
+		}
+	}
+
+	/**
+	 * 发送聊天消息给房间内其他人
+	 * 
+	 * @param sid
+	 * @param content
+	 */
+	private void sendChat(String sid, String content) {
+		String roomKey = userRoomMap.get(sid);
+		if (roomKey == null) {
+			sendError(sid, "你还没有加入房间，请先随机匹配或输入房间key加入");
+			return;
+		}
+		JSONObject chatMsg = new JSONObject();
+		chatMsg.put("code", 200);
+		chatMsg.put("type", "chat");
+		chatMsg.put("msg", content);
+		chatMsg.put("from", sid);
+		chatMsg.put("room", roomKey);
+		broadcast(roomKey, sid, chatMsg.toJSONString());
+	}
+
+	/**
+	 * 广播消息给房间内除自己以外的所有人
+	 * 
+	 * @param roomKey
+	 * @param excludeSid
+	 * @param message
+	 */
+	private void broadcast(String roomKey, String excludeSid, String message) {
+		Set<String> members = roomMap.get(roomKey);
+		if (members == null) {
+			return;
+		}
+		for (String member : members) {
+			if (member.equals(excludeSid)) {
+				continue;
+			}
+			Session session = webSocketSet.get(member);
+			if (session != null && session.isOpen()) {
+				try {
+					sendMessage(message, session);
+				} catch (IOException e) {
+					log.error("广播消息失败, sid=" + member, e);
+				}
+			}
+		}
+	}
+
+	/**
+	 * 群发信息（给所有在线用户）
 	 * 
 	 * @param message
 	 */
 	public static void pushAllMessage(String message) {
 		log.info("websocketServer pushAllMessage");
+		JSONObject obj = new JSONObject();
+		obj.put("code", 666);
+		obj.put("type", "system");
+		obj.put("msg", message);
 		// 群发消息
 		for (String key : webSocketSet.keySet()) {
 			try {
 				if (webSocketSet.get(key).isOpen())
-					sendMessage(R.error(666, message).toString(), webSocketSet.get(key));
+					sendMessage(obj.toJSONString(), webSocketSet.get(key));
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
@@ -164,53 +336,41 @@ public class WebSocketServer {
 	}
 
 	/**
+	 * 给指定用户发送错误提示
 	 * 
-	 * @param a
 	 * @param sid
-	 * @throws IOException
+	 * @param msg
 	 */
-	private synchronized void randomMatching(String sid) throws IOException {
-		// 随机匹配之前先删除自己
-		List<String> list = new ArrayList<>();
-		list = socketList;
-
-		list.remove(sid);
-		int num = list.size();
-		// 当递归不再执行,5秒redis自动清空值
-		if (null == redisTemplate.opsForValue().get(sid)
-				&& null == redisTemplate.opsForValue().get(timeKey + "_" + sid)) {
-			sendInfo(R.error(504, "暂时无人匹配，你稍后再来试试吧").toString(), sid);
-		} else if (num == 1) {// 只有一人匹配的时候
-			// 已经匹配成功
-			if (null != redisTemplate.opsForValue().get(sid)) 
-				return;
-			if (null != redisTemplate.opsForValue().get(list.get(0))){
-				sendInfo(R.error(504, "(ｷ｀ﾟДﾟ´)!!不巧，你的对象刚刚偷偷溜走了").toString(), sid);
-				return;
-			}
-			redisTemplate.opsForValue().set(sid, list.get(0));
-			redisTemplate.opsForValue().set(list.get(0), sid);
-			sendInfo(R.error(200, "匹配成功").toString(), sid);
-			sendInfo(R.error(200, "匹配成功").toString(), list.get(0));
-			return;
-		} else if (num > 1) {
-			if (null != redisTemplate.opsForValue().get(timeKey + "_" + sid) && num == 0)
-				randomMatching(sid);
-			Random random = new Random();
-			int key = random.nextInt(num);
-			// 已经匹配成功
-			if (null != redisTemplate.opsForValue().get(list.get(key)))
-				return;
-			redisTemplate.opsForValue().set(sid, list.get(key));
-			redisTemplate.opsForValue().set(list.get(key), sid);
-			sendInfo(R.error(200, "匹配成功").toString(), sid);
-			sendInfo(R.error(200, "匹配成功").toString(), list.get(key));
-			return;
+	private void sendError(String sid, String msg) {
+		JSONObject obj = new JSONObject();
+		obj.put("code", 504);
+		obj.put("type", "error");
+		obj.put("msg", msg);
+		try {
+			sendInfo(obj.toJSONString(), sid);
+		} catch (IOException e) {
+			log.error("发送错误消息失败, sid=" + sid, e);
 		}
-		// 递归持续执行6
-		if (null != redisTemplate.opsForValue().get(timeKey + "_" + sid)
-				&& null == redisTemplate.opsForValue().get(sid))
-			randomMatching(sid);
+	}
+
+	/**
+	 * 给指定用户发送系统消息
+	 * 
+	 * @param sid
+	 * @param msg
+	 * @param roomKey
+	 */
+	private void sendSystem(String sid, String msg, String roomKey) {
+		JSONObject obj = new JSONObject();
+		obj.put("code", 200);
+		obj.put("type", "system");
+		obj.put("msg", msg);
+		obj.put("room", roomKey);
+		try {
+			sendInfo(obj.toJSONString(), sid);
+		} catch (IOException e) {
+			log.error("发送系统消息失败, sid=" + sid, e);
+		}
 	}
 
 	/**
@@ -221,7 +381,6 @@ public class WebSocketServer {
 	@OnError
 	public void onError(Session session, Throwable error) {
 		log.error("发生错误");
-		// error.printStackTrace();
 		log.error(error.getMessage());
 	}
 
@@ -229,7 +388,9 @@ public class WebSocketServer {
 	 * 实现服务器主动推送
 	 */
 	public static void sendMessage(String message, Session session) throws IOException {
-		session.getBasicRemote().sendText(message);
+		if (session != null && session.isOpen()) {
+			session.getBasicRemote().sendText(message);
+		}
 	}
 
 	/**
@@ -238,7 +399,6 @@ public class WebSocketServer {
 	public static void sendInfo(String message, @PathParam("sid") String sid) throws IOException {
 		log.info("推送消息到窗口" + sid + "，推送内容:" + message);
 		try {
-
 			if (!webSocketSet.containsKey(sid)) {
 				log.error("sendInfo----对方已离线！");
 			} else {
@@ -247,7 +407,6 @@ public class WebSocketServer {
 		} catch (IOException e) {
 			log.error("sendInfo----发送异常！");
 		}
-
 	}
 
 	public static synchronized int getOnlineCount() {

@@ -5,6 +5,7 @@ var vm = new Vue({
     	nice:false,
         time: 20,
         speak:"",
+        roomKey:"",
         websocket: null,
         text:"One's Night",
         wx: null,
@@ -46,33 +47,32 @@ var vm = new Vue({
             //连接成功建立的回调方法
             _this.websocket.onopen = function (event) {
             	_this.heartbeat();
-            	
             };
 
             //接收到消息的回调方法
             _this.websocket.onmessage = function (event) {
                 console.log(event.data);
-                var date=_this.param(event.data);
-                _this.text=date.msg;
-                if(date.code==100){
-                	
-                }else if(date.code==504){
-                	_this.nice=false;
-                	
-                }else if(date.code==404){
-                	 _this.text="小老弟，没人跟你匹配呢。加加油";
-                	 _this.listFeedback=[];
-                }else if(date.code==666){
-                	//有值的情况不给推送
-                	if(_this.listFeedback.length==0){
-	                 	_this.text=null;
-	                	_this.listBarrage.push(date.msg);
-	                	_this.systemPush(); 
+                var date = JSON.parse(event.data);
+                if (date.type == 'system') {
+                	//弹幕消息
+                	if (date.code == 666) {
+                		_this.listBarrage.push(date.msg);
+                		_this.systemPush();
                 	}
-                }else{
-                	_this.listFeedback.push({"id":2,"msg":_this.text});
-                	//设置滚动条一直在最底部
+                } else if (date.type == 'joined') {
+                	//加入房间成功
+                	_this.nice = true;
+                	_this.text = date.msg;
+                	_this.listFeedback = [];
+                } else if (date.type == 'chat') {
+                	//收到的聊天消息
+                	_this.listFeedback.push({"id":2,"name":date.from,"msg":date.msg});
                 	$("section").scrollTop($('section')[0].scrollHeight );
+                } else if (date.type == 'error') {
+                	_this.text = date.msg;
+                	_this.nice = false;
+                } else {
+                	_this.text = date.msg;
                 }
                 
             };
@@ -95,15 +95,27 @@ var vm = new Vue({
         	var _this=this;
             setInterval(function () {
                 if (_this.websocket) {
-                	_this.websocket.send('heartbeat');
+                	_this.websocket.send('{"type":"heartbeat"}');
                 }
             }, 100000);
         },
-        //连接随机socket
+        //随机匹配
         connet:function(){
         	var _this=this;
         	_this.nice=true;
-        	_this.websocket.send('connet');
+        	_this.websocket.send('{"type":"match"}');
+        	_this.listFeedback=[];
+        	_this.text="正在匹配中，请稍候...";
+        },
+        //输入key加入指定房间
+        joinRoom:function(){
+        	var _this=this;
+        	if(_this.roomKey==null||_this.roomKey==''){
+        		alert('请输入聊天室key');
+        		return;
+        	}
+        	_this.nice=true;
+        	_this.websocket.send('{"type":"join","room":"'+_this.roomKey+'"}');
         	_this.listFeedback=[];
         },
          systemPush:function() {
@@ -122,17 +134,11 @@ var vm = new Vue({
         sendObject:function(){
         	var _this=this;
         	if(_this.speak==null||_this.speak=='')return;
-        	_this.websocket.send(_this.speak);
-        	_this.listFeedback.push({"id":1,"msg":_this.speak});
+        	_this.websocket.send('{"type":"chat","msg":"'+_this.speak+'"}');
+        	_this.listFeedback.push({"id":1,"name":"我","msg":_this.speak});
         	_this.speak="";
         	//设置滚动条一直在最底部
         	$("section").scrollTop($('section')[0].scrollHeight );
-        },
-        //解析后端返回传递参数
-        param:function(str){
-        	var r={};
-        	str.replace(/([^={},\s]+)=([^={},\s]*)/g,(m,n,o)=>r[n]=o);
-        	return r;
         },
         uuid: function () {
             var s = []; 

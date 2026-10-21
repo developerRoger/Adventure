@@ -71,8 +71,8 @@
 				<li v-for="l in listBarrage">{{l}}</li>
 			</ul>
 			<div v-for="a in listFeedback">
-				<p class="bg-danger leftttt" v-if="a.id==2">{{a.msg}}</p>
-				<p class="bg-danger rightttt" v-else>{{a.msg}}</p>
+				<p class="bg-danger rightttt" v-if="a.id==1"><small>{{a.name}}:</small> {{a.msg}}</p>
+				<p class="bg-danger leftttt" v-else><small>{{a.name}}:</small> {{a.msg}}</p>
 			</div>
 		</section>
 		<h1 style="text-align: center; margin-top: 10px; color: red"
@@ -89,12 +89,22 @@
 				class="form-control" id="speak" v-model="speak"
 				@keyup.enter="sendObject" placeholder="请在此输入你想说的话.">
 		</div>
+		<div class="form-group">
+			<label for="RoomKey">Room Key</label>
+			<div class="input-group">
+				<input type="text" class="form-control" id="roomKey" v-model="roomKey"
+					@keyup.enter="joinRoom" placeholder="输入聊天室key加入指定房间">
+				<span class="input-group-btn">
+					<button type="button" class="btn btn-info" @click="joinRoom">加入房间</button>
+				</span>
+			</div>
+		</div>
 		<div class="bs-example" data-example-id="block-btns">
 			<div class="well center-block" style="max-width: 600px;">
 				<button type="button" class="btn btn-primary btn-lg btn-block"
 					@click="sendObject">Send invitation</button>
-				<button v-show="!nice" type="button"
-					class="btn btn-danger btn-lg btn-block" @click="connet">随机匹配</button>
+				<button type="button" class="btn btn-danger btn-lg btn-block"
+					@click="connet">随机匹配</button>
 			</div>
 		</div>
 	</div>
