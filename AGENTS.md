@@ -40,6 +40,7 @@ mvn spring-boot:run -Dspring-boot.run.profiles=prod
 - 统一响应使用 `utils/R.java`（`R.ok()` / `R.error(...)`），分页使用 `PageUtils` / `Query`。
 - 实体类使用 Lombok，Java 版本为 1.8。
 - 新增 Mapper XML 放在与接口同目录（`mapper/`）下，注意与 `@MapperScan` 包名保持一致。
+- 能用最新的lambad语法就使用lambad，但是要写复杂语法注释
 
 ## 注意事项
 
@@ -47,3 +48,4 @@ mvn spring-boot:run -Dspring-boot.run.profiles=prod
 - 多环境配置：`application.yml` 通过 `spring.profiles.active` 切换 `dev` / `prod`。
 - `AdventureApplication` 中 `@MapperScan("com.firstTry.adventure.mapper")` 与实际包名 `com.firstTry.Adventure.mapper` 存在大小写差异，修改 Mapper 扫描或包名时需保持一致。
 - 提交前请运行 `mvn clean package` 确认编译通过。
+

@@ -66,11 +66,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
-        <!-- mysql链接 =此依赖已包含spring-boot-starter-jdbc依赖 -->
+        <!-- mybatis-plus（内置mybatis，支持BaseMapper+Wrapper链式查询） -->
         <dependency>
-            <groupId>org.mybatis.spring.boot</groupId>
-            <artifactId>mybatis-spring-boot-starter</artifactId>
-            <version>1.1.1</version>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>3.3.2</version>
         </dependency>
         <!-- 工具类map解析包 -->
         <dependency>

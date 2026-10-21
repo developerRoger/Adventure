@@ -6,8 +6,11 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.client.RestTemplate;
 
+import com.firstTry.Adventure.middleware.WebSocketServer;
+import com.firstTry.Adventure.service.WebSocketVisitLogService;
 import com.firstTry.Adventure.vo.IpVo;
 import com.firstTry.Adventure.vo.SinaIpVo;
 import com.google.gson.Gson;
@@ -24,10 +27,55 @@ public class DefaultView {
     @Autowired
     private RestTemplate restTemplate;
     
+    @Autowired
+    private WebSocketVisitLogService webSocketVisitLogService;
+    
 	@RequestMapping("/go")
 	public String index(HttpServletRequest request,HttpServletResponse response) {
 //		System.out.println(getIpAddress(request));
 		return "html/colourEgg";
+	}
+
+	/**
+	 * 查询websocket访问记录（IP、进入时间、房间名）
+	 * 
+	 * @return
+	 */
+	@ResponseBody
+	@RequestMapping("/visitLogs")
+	public Object visitLogs() {
+		return webSocketVisitLogService.queryList();
+	}
+
+	/**
+	 * 获取当前请求的真实IP（优先X-Forwarded-For代理头，其次远程地址），
+	 * 供前端拼接到websocket连接地址，解决直连场景下无法记录IP的问题
+	 * 
+	 * @param request
+	 * @return
+	 */
+	@ResponseBody
+	@RequestMapping("/getIp")
+	public String getIp(HttpServletRequest request) {
+		String ip = request.getHeader("X-Forwarded-For");
+		if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
+			ip = request.getRemoteAddr();
+		} else if (ip.indexOf(",") != -1) {
+			// 多次代理时取第一个真实IP
+			ip = ip.split(",")[0].trim();
+		}
+		return ip;
+	}
+
+	/**
+	 * 获取当前所有聊天室（房间key + 人数），供前端浮窗展示
+	 * 
+	 * @return
+	 */
+	@ResponseBody
+	@RequestMapping("/rooms")
+	public Object rooms() {
+		return WebSocketServer.getRoomList();
 	}
 
 	/**

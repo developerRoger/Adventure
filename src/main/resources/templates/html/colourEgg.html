@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <title>Random matching</title>
 <link rel="stylesheet" href="../css/bootstrap.min.css"></link>
 </head>
@@ -60,12 +61,116 @@
 	font-size: 16px;
 	list-style: none;
 }
+
+/* ===== 房间列表浮窗 ===== */
+.room-panel {
+	position: fixed;
+	top: 10px;
+	right: 10px;
+	z-index: 9999;
+	width: 230px;
+	background: rgba(0, 0, 0, 0.72);
+	border-radius: 10px;
+	color: #fff;
+	font-size: 13px;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.room-panel .room-header {
+	padding: 10px 12px;
+	cursor: pointer;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.room-panel .room-header .badge {
+	background: #25a23b;
+}
+
+.room-panel .room-body {
+	max-height: 200px;
+	overflow-y: auto;
+	padding: 0 12px 10px;
+	display: none;
+}
+
+.room-panel.open .room-body {
+	display: block;
+}
+
+.room-item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 6px 8px;
+	border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
+}
+
+.room-item:last-child {
+	border-bottom: none;
+}
+
+.room-item .room-key {
+	font-family: Menlo, Consolas, monospace;
+	letter-spacing: 1px;
+}
+
+.room-item .room-num {
+	color: #5dd9ff;
+}
+
+.room-empty {
+	padding: 8px;
+	text-align: center;
+	color: #aaa;
+}
+
+/* ===== 移动端适配 ===== */
+@media (max-width: 768px) {
+	.leftttt, .rightttt {
+		width: 85%;
+		margin-left: 15px;
+		font-size: 14px;
+	}
+	.room-panel {
+		width: 180px;
+		font-size: 12px;
+	}
+	.room-panel .room-header {
+		padding: 8px 10px;
+	}
+	#feedbackSection h1 {
+		font-size: 16px;
+		margin: 6px 0 !important;
+	}
+	#feedbackSection .form-group {
+		margin-bottom: 8px;
+	}
+	#feedbackSection .btn {
+		font-size: 15px;
+	}
+}
 </style>
 
 <!-- ADD THE CLASS layout-boxed TO GET A BOXED LAYOUT -->
 <body class="hold-transition skin-blue sidebar-mini">
 	<div id="feedbackSection" class="bs-docs-section" style="height: 100vh; display: flex; flex-direction: column"
 		v-cloak>
+		<!-- 房间列表浮窗 -->
+		<div class="room-panel" :class="{open: roomOpen}">
+			<div class="room-header" @click="roomOpen = !roomOpen">
+				<span>聊天室 <b>{{rooms.length}}</b> 个</span>
+				<span class="badge">{{roomOpen ? '收起' : '展开'}}</span>
+			</div>
+			<div class="room-body">
+				<div v-if="rooms.length == 0" class="room-empty">暂无聊天室</div>
+				<div v-for="r in rooms" class="room-item" @click="joinByRoom(r.room)">
+					<span class="room-key">{{r.room}}</span>
+					<span class="room-num">{{r.members}} 人</span>
+				</div>
+			</div>
+		</div>
 		<section style="flex: 1; overflow-y: auto">
 			<ul v-if="listBarrage!=null" class="scroll">
 				<li v-for="l in listBarrage">{{l}}</li>
@@ -86,14 +191,14 @@
 		<div class="form-group">
 
 			<label for="Pornographic">Pornographic</label> <input type="text"
-				class="form-control" id="speak" v-model="speak"
+				class="form-control" id="speak" v-model="speak" maxlength="500"
 				@keyup.enter="sendObject" placeholder="请在此输入你想说的话.">
 		</div>
 		<div class="form-group">
-			<label for="RoomKey">Room Key</label>
+			<label for="RoomKey">房间名</label>
 			<div class="input-group">
 				<input type="text" class="form-control" id="roomKey" v-model="roomKey"
-					@keyup.enter="joinRoom" placeholder="输入聊天室key加入指定房间">
+					@keyup.enter="joinRoom" maxlength="6" placeholder="输入房间名（6位）加入指定房间">
 				<span class="input-group-btn">
 					<button type="button" class="btn btn-info" @click="joinRoom">加入房间</button>
 				</span>
@@ -105,6 +210,8 @@
 					@click="sendObject">Send invitation</button>
 				<button type="button" class="btn btn-danger btn-lg btn-block"
 					@click="connet">随机匹配</button>
+				<button type="button" class="btn btn-default btn-lg btn-block"
+					@click="clearScreen">清屏</button>
 			</div>
 		</div>
 	</div>

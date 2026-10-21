@@ -19,12 +19,13 @@ public class WebSocketConfig {
   
     /**
      * 这个实例化是为了能够在websocket的时候能够spring进行注入
+     * 同时解析客户端IP用于记录访问日志
      * @return
      */
     @Bean
-    public SpringConfigurator newConfigure()
+    public WebSocketConfigurator newConfigure()
     {
-        return new SpringConfigurator();
+        return new WebSocketConfigurator();
     }
 
 } 

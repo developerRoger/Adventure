@@ -3,12 +3,14 @@ package com.firstTry.Adventure.middleware;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArraySet;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import javax.websocket.OnClose;
 import javax.websocket.OnError;
@@ -20,10 +22,13 @@ import javax.websocket.server.ServerEndpoint;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
+import com.firstTry.Adventure.entity.WebSocketVisitLogEntity;
+import com.firstTry.Adventure.service.WebSocketVisitLogService;
 
 /**
  * 所有websocket的终类（多人房间制聊天室）
@@ -35,11 +40,15 @@ import com.alibaba.fastjson.JSONObject;
  * @author Roger
  * @date 2018/11/9
  */
-@ServerEndpoint(value = "/feedback/{sid}", configurator = SpringConfigurator.class)
+@ServerEndpoint(value = "/feedback/{sid}", configurator = WebSocketConfigurator.class)
 @Component
 public class WebSocketServer {
 
 	static Log log = LogFactory.getLog(WebSocketServer.class);
+
+	// websocket访问记录服务（记录IP、进入时间、房间名）
+	@Autowired
+	private WebSocketVisitLogService webSocketVisitLogService;
 	// 单个房间最大人数
 	private static final int MAX_ROOM_SIZE = 50;
 
@@ -54,6 +63,73 @@ public class WebSocketServer {
 	// 等待随机匹配的用户sid队列
 	private static List<String> waitingQueue = Collections.synchronizedList(new ArrayList<String>());
 
+	// 随机房间key使用的字符集（去掉易混淆的 0/O、1/I/L）
+	private static final String ROOM_KEY_CHARS = "ABCDEFGHJKMNPQRSTUVWXYZ23456789";
+
+	// 敏感词/辱骂词列表，匹配到的内容统一替换为 ***
+	private static final String[] SENSITIVE_WORDS = {
+		"傻逼", "傻b", "sb", "尼玛", "草泥马", "你妈", "妈的", "操你", "卧槽",
+		"fuck", "cnm", "贱人", "婊子", "白痴", "脑残", "去死", "狗屎", "滚蛋",
+		"垃圾", "废物", "蠢货", "蠢猪", "艹", "cao", "神经病", "恶心"
+	};
+
+	/**
+	 * 敏感词脱敏：将文本中出现的敏感词统一替换为 ***
+	 * 
+	 * @param text
+	 * @return
+	 */
+	private static String filterSensitive(String text) {
+		if (text == null || text.length() == 0) {
+			return text;
+		}
+		String result = text;
+		for (String word : SENSITIVE_WORDS) {
+			// Pattern.quote 避免正则特殊字符，(?i) 忽略大小写（针对英文敏感词）
+			result = result.replaceAll("(?i)" + Pattern.quote(word), Matcher.quoteReplacement(mask(word)));
+		}
+		return result;
+	}
+
+	/**
+	 * 敏感词统一替换为固定三个星号
+	 * 
+	 * @param word
+	 * @return
+	 */
+	private static String mask(String word) {
+		return "***";
+	}
+
+	/**
+	 * 生成6位短房间key，方便用户口头/手动输入
+	 * 
+	 * @return
+	 */
+	private static String generateRoomKey() {
+		StringBuilder sb = new StringBuilder();
+		for (int i = 0; i < 6; i++) {
+			sb.append(ROOM_KEY_CHARS.charAt((int) (Math.random() * ROOM_KEY_CHARS.length())));
+		}
+		return sb.toString();
+	}
+
+	/**
+	 * 查询当前所有聊天室（房间key + 人数），供前端浮窗展示
+	 * 
+	 * @return
+	 */
+	public static List<Map<String, Object>> getRoomList() {
+		List<Map<String, Object>> list = new ArrayList<Map<String, Object>>();
+		for (Map.Entry<String, Set<String>> entry : roomMap.entrySet()) {
+			Map<String, Object> room = new java.util.HashMap<String, Object>();
+			room.put("room", entry.getKey());
+			room.put("members", entry.getValue().size());
+			list.add(room);
+		}
+		return list;
+	}
+
 	/**
 	 * 连接建立成功调用的方法
 	 */
@@ -61,6 +137,8 @@ public class WebSocketServer {
 	public void onOpen(Session session, @PathParam("sid") String sid) {
 		webSocketSet.put(sid, session); // 加入put中
 		addOnlineCount(); // 在线数加1
+		// 记录访问日志：IP、进入时间、sid
+		recordVisit(sid, session);
 		log.info("有新窗口开始监听:" + sid + ",当前在线人数为" + getOnlineCount());
 		try {
 			JSONObject obj = new JSONObject();
@@ -71,6 +149,45 @@ public class WebSocketServer {
 			sendMessage(obj.toJSONString(), session);
 		} catch (IOException e) {
 			log.error("websocket IO异常");
+		}
+	}
+
+	/**
+	 * 记录websocket访问日志（IP、进入时间、连接标识）
+	 * IP从握手阶段由WebSocketConfigurator解析后存放在session的userProperties中
+	 * 
+	 * @param sid
+	 * @param session
+	 */
+	private void recordVisit(String sid, Session session) {
+		try {
+			WebSocketVisitLogEntity entity = new WebSocketVisitLogEntity();
+			entity.setSid(sid);
+			// 从握手阶段存入的userProperties中取客户端IP
+			String clientIp = session.getUserProperties().get("clientIp") == null ? null
+					: session.getUserProperties().get("clientIp").toString();
+			entity.setIp(clientIp);
+			entity.setEnterTime(new Date());
+			webSocketVisitLogService.save(entity);
+			log.info("websocket访问记录已保存, sid=" + sid + ", ip=" + clientIp);
+		} catch (Exception e) {
+			log.error("保存websocket访问记录失败, sid=" + sid, e);
+		}
+	}
+
+	/**
+	 * 用户加入房间后，回填访问记录中的房间名
+	 * 
+	 * @param sid
+	 * @param roomKey
+	 */
+	private void updateVisitRoom(String sid, String roomKey) {
+		try {
+			if (roomKey != null) {
+				webSocketVisitLogService.updateRoomName(sid, roomKey);
+			}
+		} catch (Exception e) {
+			log.error("回填websocket访问记录房间名失败, sid=" + sid, e);
 		}
 	}
 
@@ -122,11 +239,11 @@ public class WebSocketServer {
 				// 随机匹配
 				randomMatch(sid);
 			} else if ("join".equals(type)) {
-				// 指定key加入房间
+				// 指定房间名加入房间
 				if (roomKey == null || roomKey.trim().length() == 0) {
-					sendError(sid, "房间key不能为空");
+					sendError(sid, "房间名不能为空");
 				} else {
-					joinRoom(sid, roomKey.trim());
+					joinRoom(sid, roomKey.trim().toUpperCase());
 				}
 			} else if ("chat".equals(type)) {
 				// 聊天消息，广播给房间内其他人
@@ -153,6 +270,13 @@ public class WebSocketServer {
 	 * @param roomKey
 	 */
 	private synchronized void joinRoom(String sid, String roomKey) {
+		// 房间名长度限制（6位短码）
+		if (roomKey.length() > 6) {
+			sendError(sid, "房间名最多 6 位，请重新输入");
+			return;
+		}
+		// 房间名敏感词脱敏，防止恶意房间名
+		roomKey = filterSensitive(roomKey);
 		// 已在目标房间，直接返回
 		String oldRoom = userRoomMap.get(sid);
 		if (roomKey.equals(oldRoom)) {
@@ -203,9 +327,9 @@ public class WebSocketServer {
 				}
 			}
 		}
-		// 都满了或没有房间，创建新房间
+		// 都满了或没有房间，创建新房间（6位短key）
 		if (targetRoom == null) {
-			targetRoom = "room-" + UUID.randomUUID().toString().substring(0, 8);
+			targetRoom = generateRoomKey();
 		}
 		waitingQueue.remove(sid);
 		addToRoom(sid, targetRoom);
@@ -221,6 +345,8 @@ public class WebSocketServer {
 		Set<String> members = roomMap.computeIfAbsent(roomKey, k -> new CopyOnWriteArraySet<String>());
 		members.add(sid);
 		userRoomMap.put(sid, roomKey);
+		// 回填访问记录的房间名
+		updateVisitRoom(sid, roomKey);
 		// 通知房间内其他人
 		JSONObject sysMsg = new JSONObject();
 		sysMsg.put("code", 200);
@@ -276,13 +402,19 @@ public class WebSocketServer {
 	private void sendChat(String sid, String content) {
 		String roomKey = userRoomMap.get(sid);
 		if (roomKey == null) {
-			sendError(sid, "你还没有加入房间，请先随机匹配或输入房间key加入");
+			sendError(sid, "你还没有加入房间，请先随机匹配或输入房间名加入");
 			return;
+		}
+		// 聊天内容敏感词脱敏
+		String filtered = filterSensitive(content);
+		// 限制聊天内容长度不超过500字符，防止超长消息（前端已限制，此处兜底）
+		if (filtered.length() > 500) {
+			filtered = filtered.substring(0, 500);
 		}
 		JSONObject chatMsg = new JSONObject();
 		chatMsg.put("code", 200);
 		chatMsg.put("type", "chat");
-		chatMsg.put("msg", content);
+		chatMsg.put("msg", filtered);
 		chatMsg.put("from", sid);
 		chatMsg.put("room", roomKey);
 		broadcast(roomKey, sid, chatMsg.toJSONString());
