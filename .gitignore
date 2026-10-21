@@ -9,6 +9,7 @@ logs/
 .idea/
 .vscode/
 .trae/
+.settings/
 *.iml
 
 # 系统文件
