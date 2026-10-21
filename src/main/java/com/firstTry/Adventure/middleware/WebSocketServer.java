@@ -225,8 +225,9 @@ public class WebSocketServer {
 		JSONObject sysMsg = new JSONObject();
 		sysMsg.put("code", 200);
 		sysMsg.put("type", "system");
-		sysMsg.put("msg", "用户 " + sid + " 加入了房间 " + roomKey);
+		sysMsg.put("msg", "用户 " + sid + " 加入了房间 " + roomKey + "，当前房间人数：" + members.size());
 		sysMsg.put("room", roomKey);
+		sysMsg.put("members", members.size());
 		broadcast(roomKey, sid, sysMsg.toJSONString());
 		// 通知自己加入成功
 		JSONObject selfMsg = new JSONObject();
@@ -260,6 +261,7 @@ public class WebSocketServer {
 				sysMsg.put("type", "system");
 				sysMsg.put("msg", "用户 " + sid + " 离开了房间 " + roomKey + "，当前人数：" + members.size());
 				sysMsg.put("room", roomKey);
+				sysMsg.put("members", members.size());
 				broadcast(roomKey, sid, sysMsg.toJSONString());
 			}
 		}
@@ -346,11 +348,7 @@ public class WebSocketServer {
 		obj.put("code", 504);
 		obj.put("type", "error");
 		obj.put("msg", msg);
-		try {
-			sendInfo(obj.toJSONString(), sid);
-		} catch (IOException e) {
-			log.error("发送错误消息失败, sid=" + sid, e);
-		}
+		sendInfo(obj.toJSONString(), sid);
 	}
 
 	/**
@@ -366,11 +364,7 @@ public class WebSocketServer {
 		obj.put("type", "system");
 		obj.put("msg", msg);
 		obj.put("room", roomKey);
-		try {
-			sendInfo(obj.toJSONString(), sid);
-		} catch (IOException e) {
-			log.error("发送系统消息失败, sid=" + sid, e);
-		}
+		sendInfo(obj.toJSONString(), sid);
 	}
 
 	/**
@@ -396,7 +390,7 @@ public class WebSocketServer {
 	/**
 	 * 群发自定义消息
 	 */
-	public static void sendInfo(String message, @PathParam("sid") String sid) throws IOException {
+	public static void sendInfo(String message, @PathParam("sid") String sid) {
 		log.info("推送消息到窗口" + sid + "，推送内容:" + message);
 		try {
 			if (!webSocketSet.containsKey(sid)) {

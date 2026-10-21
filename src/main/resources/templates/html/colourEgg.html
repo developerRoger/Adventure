@@ -64,9 +64,9 @@
 
 <!-- ADD THE CLASS layout-boxed TO GET A BOXED LAYOUT -->
 <body class="hold-transition skin-blue sidebar-mini">
-	<div id="feedbackSection" class="bs-docs-section" style="height: 100vh"
+	<div id="feedbackSection" class="bs-docs-section" style="height: 100vh; display: flex; flex-direction: column"
 		v-cloak>
-		<section style="height: 66%; overflow-y: auto">
+		<section style="flex: 1; overflow-y: auto">
 			<ul v-if="listBarrage!=null" class="scroll">
 				<li v-for="l in listBarrage">{{l}}</li>
 			</ul>

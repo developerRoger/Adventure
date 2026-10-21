@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration scan="true" scanPeriod="60 seconds">
 
-    <!-- 日志输出目录 -->
-    <property name="LOG_PATH" value="/home/apps/logs"/>
+    <!-- 日志输出目录：优先读取配置 log.path，默认生产路径 /home/apps/logs -->
+    <springProperty scope="context" name="LOG_PATH" source="log.path" defaultValue="/home/apps/logs"/>
 
     <!-- 控制台输出：仅打印 INFO 与 ERROR -->
     <appender name="console" class="ch.qos.logback.core.ConsoleAppender">

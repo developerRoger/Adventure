@@ -6,6 +6,8 @@ var vm = new Vue({
         time: 20,
         speak:"",
         roomKey:"",
+        currentRoom:"",
+        memberCount:0,
         websocket: null,
         text:"One's Night",
         wx: null,
@@ -58,10 +60,21 @@ var vm = new Vue({
                 	if (date.code == 666) {
                 		_this.listBarrage.push(date.msg);
                 		_this.systemPush();
+                	} else {
+                		//加入/离开等系统通知，显示到聊天区
+                		_this.listFeedback.push({"id":0,"name":"系统","msg":date.msg});
+                		$("section").scrollTop($('section')[0].scrollHeight );
+                		//人数变化时同步更新顶部显示
+                		if (date.members != null) {
+                			_this.memberCount = date.members;
+                			_this.text = "已加入房间 " + _this.currentRoom + "，当前房间人数：" + _this.memberCount;
+                		}
                 	}
                 } else if (date.type == 'joined') {
                 	//加入房间成功
                 	_this.nice = true;
+                	_this.currentRoom = date.room;
+                	_this.memberCount = date.members;
                 	_this.text = date.msg;
                 	_this.listFeedback = [];
                 } else if (date.type == 'chat') {

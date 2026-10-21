@@ -1,6 +1,10 @@
 server:
   port: 8001
 
+# 本地日志输出目录（生产默认 /home/apps/logs）
+log:
+  path: ./logs
+
 spring:
   datasource:
     url: jdbc:mysql://localhost:3306/bmp_sysmanage?characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2B8
