@@ -28,44 +28,27 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	private BCryptPasswordEncoder bCryptPasswordEncoder;  
 	/**
 	 * 跳过校验token验证请求的链接
-	 * 静态文件也要设置
-	 * 但是会自动给路径拼接localhost
+	 * 目前项目只开放聊天室入口，仅放行聊天室相关页面、接口与所需静态资源，
+	 * 其余页面（登录、后台、代码生成、七牛、Swagger等）一律要求登录鉴权，对匿名用户关闭
 	 */
 	private static final String[] PASS_URL = { 
-		//控制层拦截
+		//聊天室入口（根路径与/index会重定向到/go）
 		"/",
 		"/index",
-		"/login/*",
-		"/hhh",
 		"/go",
+		//聊天室支撑接口：房间列表、访问记录、客户端IP
 		"/rooms",
 		"/visitLogs",
 		"/getIp",
-		"/narcotics",
-			"/test",
-		"/preface",
+		//websocket连接
 		"/feedback/*",
-		"/sys/generator/*",
-		"/adventure/application/*",
-		"/adventure/menu/*",
-		"/adventure/qiniu/*",
-		"/adventure/qiniu/*/*",
-		//访问静态资源文件去除拦截
+		//聊天页所需的静态资源
 		"/js/**",
 		"/css/**",
 		"/img/**",
 		"/fonts/**",
-		"/favicon.ico",
 		"/libs/**",
-		"/plugins/**",
-		"/xframework/**",
-		"*/swagger-ui.html",
-		"/views/**",
-		"/**/**.html",
-		"/**.png",
-		"/webjars/**",
-		"/swagger-resources/**",
-		"/v2/**"
+		"/favicon.ico"
 	};
 
     public WebSecurityConfig(UserService userDetailsService, BCryptPasswordEncoder bCryptPasswordEncoder) {  
@@ -80,19 +63,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http.cors().and().csrf().disable().authorizeRequests()
                 //允许以下请求
                 .antMatchers(PASS_URL).permitAll()
-                // 所有请求需要身份认证
+                //所有请求需要身份认证（未放行的路径对匿名用户返回403，登录页面入口已关闭）
                 .anyRequest().authenticated()
                 .and()
-                //验证登陆
+                //验证登陆（JWTLoginFilter仅拦截POST /login签发token，管理员API登录仍可用）
                 .addFilter(new JWTLoginFilter(authenticationManager()))
                 //验证token
-                .addFilter(new JWTAuthenticationFilter(authenticationManager()))
-                .formLogin()
-                .loginPage("/login")
-                .permitAll()
-                .and()
-	            .logout()
-                .permitAll();
+                .addFilter(new JWTAuthenticationFilter(authenticationManager()));
     }
     
     @Override  

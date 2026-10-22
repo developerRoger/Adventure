@@ -19,7 +19,3 @@ spring:
         max-idle: 8
         min-idle: 0
       timeout: 3000
-
-application:
-  workerId: 1
-  datacenterId: 1

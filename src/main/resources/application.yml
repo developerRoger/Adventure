@@ -15,7 +15,6 @@ spring:
   resources:
     static-locations:
       - classpath:/static/
-      - classpath:/views/
       - classpath:/META-INF/resources/webjars/
       - classpath:/META-INF/resources/
 

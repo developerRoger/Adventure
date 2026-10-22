@@ -1,22 +1,18 @@
 package com.firstTry.Adventure.config;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.client.RestTemplate;
 
 import com.firstTry.Adventure.middleware.WebSocketServer;
 import com.firstTry.Adventure.service.WebSocketVisitLogService;
-import com.firstTry.Adventure.vo.IpVo;
-import com.firstTry.Adventure.vo.SinaIpVo;
-import com.google.gson.Gson;
 
 /**
  * 默认首页,请求/
+ * 目前项目只保留聊天室入口
  * 
  * @author Roger
  *
@@ -25,14 +21,30 @@ import com.google.gson.Gson;
 public class DefaultView {
 	
     @Autowired
-    private RestTemplate restTemplate;
-    
-    @Autowired
     private WebSocketVisitLogService webSocketVisitLogService;
     
+	/**
+	 * 站点根路径与/index统一重定向到聊天室，保证访客只进入聊天室入口
+	 * 
+	 * @return
+	 */
+	@RequestMapping("/")
+	public String root() {
+		return "redirect:/go";
+	}
+
+	@RequestMapping("/index")
+	public String indexPage() {
+		return "redirect:/go";
+	}
+
+	/**
+	 * 聊天室入口
+	 * 
+	 * @return
+	 */
 	@RequestMapping("/go")
-	public String index(HttpServletRequest request,HttpServletResponse response) {
-//		System.out.println(getIpAddress(request));
+	public String index() {
 		return "html/colourEgg";
 	}
 
@@ -76,64 +88,5 @@ public class DefaultView {
 	@RequestMapping("/rooms")
 	public Object rooms() {
 		return WebSocketServer.getRoomList();
-	}
-
-	/**
-	 * 获取登录用户远程主机ip地址
-	 * 
-	 * @param request
-	 * @return
-	 */
-	public String getIpAddress(HttpServletRequest request) {
-		String ip = request.getHeader("x-forwarded-for");
-		
-	        if(ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
-	            ip = request.getHeader("Proxy-Client-IP");
-	        }
-	        if(ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
-	            ip = request.getHeader("WL-Proxy-Client-IP");
-	        }
-	        if(ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
-	            ip = request.getRemoteAddr();
-	        }
-	        if (ip != null && ip.length() != 0 && !"unknown".equalsIgnoreCase(ip)) {
-	            // 多次反向代理后会有多个ip值，第一个ip才是真实ip
-	            if( ip.indexOf(",")!=-1 ){
-	                ip = ip.split(",")[0];
-	            }
-	        }
-	        //新浪查询失败查询阿里
-/*	        String sina = restTemplate.getForObject("http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=json&ip={ip}", String.class,ip);
-	        SinaIpVo sinaIpVo = new Gson().fromJson(sina, SinaIpVo.class);
-	        if(sinaIpVo.getRet()!=-1){
-	            System.out.println(sinaIpVo.getProvince());
-	            System.out.println(sinaIpVo.getCity());
-	        }else{*/
-	            String object = restTemplate.getForObject("http://ip.taobao.com/service/getIpInfo.php?ip={ip}", String.class,ip);
-	            IpVo ipVo = new Gson().fromJson(object, IpVo.class);
-	            // XX表示内网 
-	            if(ipVo.getCode()==0 && !ipVo.getAddress().getRegion().equals("XX")){
-	                System.out.println(ipVo.getAddress().getRegion());
-	                System.out.println(ipVo.getAddress().getCity());
-//	            }
-	        }
-	            System.out.println(ip);
-		return ip;
-	}
-
-	@RequestMapping("/login")
-	public String login(HttpServletRequest request) {
-		getIpAddress(request);
-		return "html/login";
-	}
-
-	@RequestMapping("/hhh")
-	public String hello() {
-		return "html/index";
-	}
-	
-	@RequestMapping("/preface")
-	public String preface(){
-		return "html/preface";
 	}
 }
