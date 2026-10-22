@@ -126,6 +126,107 @@
 	color: #aaa;
 }
 
+/* 浮窗最小化后的小角标：固定在右上角，点击恢复完整浮窗 */
+.room-mini {
+	position: fixed;
+	top: 10px;
+	right: 10px;
+	z-index: 9999;
+	background: rgba(0, 0, 0, 0.72);
+	color: #fff;
+	border: none;
+	border-radius: 8px;
+	padding: 6px 10px;
+	font-size: 13px;
+	cursor: pointer;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+	line-height: 1;
+}
+
+.room-mini:hover {
+	background: rgba(0, 0, 0, 0.85);
+}
+
+/* 浮窗标题栏的最小化按钮 */
+.room-header .mini-btn {
+	background: rgba(255, 255, 255, 0.15);
+	color: #fff;
+	border: none;
+	border-radius: 4px;
+	font-size: 12px;
+	line-height: 1;
+	padding: 3px 7px;
+	cursor: pointer;
+	margin-left: 8px;
+}
+
+.room-header .mini-btn:hover {
+	background: rgba(255, 255, 255, 0.3);
+}
+
+/* ===== 聊天图片消息 ===== */
+.img-bubble {
+	position: relative;
+	max-width: 70%;
+	min-height: 30px;
+	background: #25a23b;
+	border-radius: 7px;
+	color: #fff;
+	padding: 5px;
+	margin: 8px 40px;
+	word-break: break-word;
+	line-height: 18px;
+	font-size: 14px;
+}
+
+.img-bubble::after {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 0;
+	height: 0;
+	border: 8px solid transparent;
+	border-right-color: #25a23b;
+	top: 5px;
+	left: -14px;
+}
+
+.img-bubble.mine::after {
+	border-right-color: transparent;
+	border-left-color: #25a23b;
+	left: auto;
+	right: -14px;
+}
+
+.img-bubble .chat-img {
+	max-width: 100%;
+	max-height: 220px;
+	border-radius: 6px;
+	display: block;
+	margin-top: 4px;
+	cursor: pointer;
+}
+
+/* 图片点击放大预览浮层 */
+.lightbox {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.85);
+	z-index: 99999;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+
+.lightbox img {
+	max-width: 92%;
+	max-height: 92%;
+}
+
 /* ===== 移动端适配 ===== */
 @media (max-width: 768px) {
 	.leftttt, .rightttt {
@@ -133,12 +234,20 @@
 		margin-left: 15px;
 		font-size: 14px;
 	}
+	.img-bubble {
+		margin: 6px 15px;
+		max-width: 80%;
+	}
 	.room-panel {
 		width: 180px;
 		font-size: 12px;
 	}
 	.room-panel .room-header {
 		padding: 8px 10px;
+	}
+	.room-mini {
+		font-size: 12px;
+		padding: 5px 8px;
 	}
 	#feedbackSection h1 {
 		font-size: 16px;
@@ -157,11 +266,14 @@
 <body class="hold-transition skin-blue sidebar-mini">
 	<div id="feedbackSection" class="bs-docs-section" style="height: 100vh; display: flex; flex-direction: column"
 		v-cloak>
-		<!-- 房间列表浮窗 -->
-		<div class="room-panel" :class="{open: roomOpen}">
+		<!-- 房间列表浮窗（可最小化到小角标） -->
+		<div class="room-panel" :class="{open: roomOpen}" v-show="!panelHidden">
 			<div class="room-header" @click="roomOpen = !roomOpen">
 				<span>聊天室 <b>{{rooms.length}}</b> 个</span>
-				<span class="badge">{{roomOpen ? '收起' : '展开'}}</span>
+				<span>
+					<span class="badge">{{roomOpen ? '收起' : '展开'}}</span>
+					<button type="button" class="mini-btn" title="最小化" @click.stop="panelHidden = true">−</button>
+				</span>
 			</div>
 			<div class="room-body">
 				<div v-if="rooms.length == 0" class="room-empty">暂无聊天室</div>
@@ -171,12 +283,23 @@
 				</div>
 			</div>
 		</div>
+		<!-- 最小化后的小角标，点击恢复完整浮窗 -->
+		<button type="button" class="room-mini" title="展开房间列表" v-show="panelHidden"
+			@click="panelHidden = false">房间 <b>{{rooms.length}}</b> 个</button>
 		<section style="flex: 1; overflow-y: auto">
 			<ul v-if="listBarrage!=null" class="scroll">
 				<li v-for="l in listBarrage">{{l}}</li>
 			</ul>
 			<div v-for="a in listFeedback">
 				<p class="bg-danger rightttt" v-if="a.id==1"><small>{{a.name}}:</small> {{a.msg}}</p>
+				<div class="img-bubble mine" v-else-if="a.img && a.id==3">
+					<small>{{a.name}}:</small><br/>
+					<img :src="a.img" class="chat-img" @load="onImgLoad" @click="previewSrc = a.img" alt="聊天图片"/>
+				</div>
+				<div class="img-bubble" v-else-if="a.img">
+					<small>{{a.name}}:</small><br/>
+					<img :src="a.img" class="chat-img" @load="onImgLoad" @click="previewSrc = a.img" alt="聊天图片"/>
+				</div>
 				<p class="bg-danger leftttt" v-else><small>{{a.name}}:</small> {{a.msg}}</p>
 			</div>
 		</section>
@@ -190,9 +313,16 @@
   -->
 		<div class="form-group">
 
-			<label for="Pornographic">Pornographic</label> <input type="text"
-				class="form-control" id="speak" v-model="speak" maxlength="500"
-				@keyup.enter="sendObject" placeholder="请在此输入你想说的话.">
+			<label for="Pornographic">Pornographic</label>
+			<div style="display: flex; align-items: center;">
+				<input type="text"
+					class="form-control" id="speak" v-model="speak" maxlength="500"
+					@keyup.enter="sendObject" placeholder="请在此输入你想说的话." style="flex: 1;">
+				<button type="button" class="btn btn-success"
+					style="margin-left: 6px; white-space: nowrap;" @click="openFilePicker">图片</button>
+			</div>
+			<!-- 隐藏的图片选择框 -->
+			<input type="file" id="imgFile" accept="image/*" style="display: none;" @change="onFileChange">
 		</div>
 		<div class="form-group">
 			<label for="RoomKey">房间名</label>
@@ -213,6 +343,10 @@
 				<button type="button" class="btn btn-default btn-lg btn-block"
 					@click="clearScreen">清屏</button>
 			</div>
+		</div>
+		<!-- 图片点击放大预览，点击任意位置关闭 -->
+		<div class="lightbox" v-show="previewSrc" @click="previewSrc = ''">
+			<img :src="previewSrc" alt="图片预览"/>
 		</div>
 	</div>
 </body>

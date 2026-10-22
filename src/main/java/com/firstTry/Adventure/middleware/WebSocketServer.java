@@ -1,9 +1,12 @@
 package com.firstTry.Adventure.middleware;
 
 import java.io.IOException;
+import java.nio.ByteBuffer;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Date;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -62,6 +65,29 @@ public class WebSocketServer {
 	private static Map<String, Set<String>> roomMap = new ConcurrentHashMap<>();
 	// 等待随机匹配的用户sid队列
 	private static List<String> waitingQueue = Collections.synchronizedList(new ArrayList<String>());
+
+	// ===== 图片消息分片转发（二进制帧） =====
+	// 二进制帧头：前32字节msgId + 后4字节片序号(大端)，帧总开销36字节
+	private static final int MSG_ID_LEN = 32;
+	private static final int BIN_HEADER_LEN = 36;
+	// 单图上限1MB、分片64KB约16片，此处留余量
+	private static final int MAX_IMAGE_CHUNK = 20;
+	// 图片传输上下文：msgId -> 传输信息（发送者、总片数、转发目标），仅存元数据，不缓存图片数据
+	private static Map<String, ImageTransfer> imageTransferMap = new ConcurrentHashMap<>();
+
+	/**
+	 * 一次图片传输的上下文信息
+	 */
+	private static class ImageTransfer {
+		String sid; // 发送者sid
+		int totalChunk; // 总片数
+		Set<String> targets; // 转发目标（房间内除发送者外的人）
+		ImageTransfer(String sid, int totalChunk, Set<String> targets) {
+			this.sid = sid;
+			this.totalChunk = totalChunk;
+			this.targets = targets;
+		}
+	}
 
 	// 随机房间key使用的字符集（去掉易混淆的 0/O、1/I/L）
 	private static final String ROOM_KEY_CHARS = "ABCDEFGHJKMNPQRSTUVWXYZ23456789";
@@ -136,6 +162,8 @@ public class WebSocketServer {
 	@OnOpen
 	public void onOpen(Session session, @PathParam("sid") String sid) {
 		webSocketSet.put(sid, session); // 加入put中
+		// 调大二进制消息缓冲，保证64KB图片分片（含36字节帧头）能整帧收到，无需服务端拼接
+		session.setMaxBinaryMessageBufferSize(128 * 1024);
 		addOnlineCount(); // 在线数加1
 		// 记录访问日志：IP、进入时间、sid
 		recordVisit(sid, session);
@@ -218,12 +246,17 @@ public class WebSocketServer {
 			String type = null;
 			String roomKey = null;
 			String content = null;
+			String msgId = null;
+			int totalChunk = 0;
+			JSONObject json = null;
 			// 兼容旧协议：纯文本 "connet" 视为随机匹配，"heartbeat" 为心跳，其余视为聊天内容
 			if (message.startsWith("{")) {
-				JSONObject json = JSON.parseObject(message);
+				json = JSON.parseObject(message);
 				type = json.getString("type");
 				roomKey = json.getString("room");
 				content = json.getString("msg");
+				msgId = json.getString("msgId");
+				totalChunk = json.getIntValue("totalChunk");
 			} else {
 				if ("connet".equals(message)) {
 					type = "match";
@@ -248,6 +281,9 @@ public class WebSocketServer {
 			} else if ("chat".equals(type)) {
 				// 聊天消息，广播给房间内其他人
 				sendChat(sid, content == null ? "" : content);
+			} else if ("image_meta".equals(type)) {
+				// 图片消息元信息（文本帧）：登记分片转发上下文，后续二进制分片逐片实时转发
+				forwardImageMeta(sid, msgId, json, totalChunk);
 			} else if ("heartbeat".equals(type)) {
 				log.info("用户心跳:" + sid + ",当前在线人数为" + getOnlineCount());
 			} else {
@@ -372,6 +408,8 @@ public class WebSocketServer {
 	 * @param notifyOthers 是否通知房间内其他人
 	 */
 	private void leaveRoom(String sid, boolean notifyOthers) {
+		// 清理该用户发起的进行中的图片传输（接收者则从转发目标中移除）
+		cleanupImageTransfers(sid);
 		String roomKey = userRoomMap.remove(sid);
 		if (roomKey == null) {
 			return;
@@ -418,6 +456,112 @@ public class WebSocketServer {
 		chatMsg.put("from", sid);
 		chatMsg.put("room", roomKey);
 		broadcast(roomKey, sid, chatMsg.toJSONString());
+	}
+
+	/**
+	 * 处理图片元信息（文本帧）：校验并登记分片转发上下文，立即把元信息转发给房间内其他人
+	 * 重点：不在服务端缓存/组装图片数据，二进制分片到达后逐片实时转发
+	 * 
+	 * @param sid        发送者sid
+	 * @param msgId      图片消息唯一标识
+	 * @param meta       元信息JSON（含filename、mime、totalChunk等）
+	 * @param totalChunk 总片数
+	 */
+	private void forwardImageMeta(String sid, String msgId, JSONObject meta, int totalChunk) {
+		if (msgId == null || msgId.trim().length() == 0) {
+			sendError(sid, "图片消息标识为空");
+			return;
+		}
+		if (totalChunk < 1 || totalChunk > MAX_IMAGE_CHUNK) {
+			sendError(sid, "图片分片数量不合法（最多 " + MAX_IMAGE_CHUNK + " 片）");
+			return;
+		}
+		String roomKey = userRoomMap.get(sid);
+		if (roomKey == null) {
+			sendError(sid, "请先加入房间再发送图片");
+			return;
+		}
+		Set<String> members = roomMap.get(roomKey);
+		if (members == null || members.isEmpty()) {
+			return;
+		}
+		// 记录转发目标：房间内除发送者外的所有人（快照，随分片实时转发）
+		Set<String> targets = new CopyOnWriteArraySet<String>();
+		targets.addAll(members);
+		targets.remove(sid);
+		imageTransferMap.put(msgId, new ImageTransfer(sid, totalChunk, targets));
+		// 文件名敏感词脱敏 + 长度限制，随元信息转发
+		String filename = meta.getString("filename");
+		if (filename != null) {
+			filename = filterSensitive(filename);
+			if (filename.length() > 100) {
+				filename = filename.substring(0, 100);
+			}
+			meta.put("filename", filename);
+		}
+		meta.put("from", sid);
+		meta.put("room", roomKey);
+		broadcast(roomKey, sid, meta.toJSONString());
+	}
+
+	/**
+	 * 收到二进制帧（图片分片）：解析 msgId + 片序号，立即原样转发给目标用户
+	 * 重点：不在服务端拼接/组装完整图片，分片组装由前端完成，极大降低JVM内存压力
+	 * 
+	 * 帧格式：前32字节msgId + 4字节片序号(大端) + 图片分片数据
+	 */
+	@OnMessage
+	public void onMessage(byte[] bytes, Session session, @PathParam("sid") String sid) {
+		try {
+			if (bytes == null || bytes.length <= BIN_HEADER_LEN) {
+				return;
+			}
+			// 解析帧头：前32字节msgId（不足部分以0填充，trim可去除），后4字节大端片序号
+			String msgId = new String(bytes, 0, MSG_ID_LEN, StandardCharsets.UTF_8).trim();
+			int chunkIndex = ((bytes[32] & 0xFF) << 24) | ((bytes[33] & 0xFF) << 16)
+					| ((bytes[34] & 0xFF) << 8) | (bytes[35] & 0xFF);
+			ImageTransfer transfer = imageTransferMap.get(msgId);
+			if (transfer == null) {
+				return; // 未登记的图片传输（元信息未到或已结束），直接忽略
+			}
+			if (chunkIndex < 0 || chunkIndex >= transfer.totalChunk) {
+				return; // 片序号越界，忽略
+			}
+			// 立即原样转发给房间内目标用户（不缓存、不组装）
+			for (String target : transfer.targets) {
+				Session ts = webSocketSet.get(target);
+				if (ts != null && ts.isOpen()) {
+					try {
+						ts.getBasicRemote().sendBinary(ByteBuffer.wrap(bytes));
+					} catch (IOException e) {
+						log.error("转发图片分片失败, 目标sid=" + target, e);
+					}
+				}
+			}
+			// 最后一片转发完成后清理传输上下文
+			if (chunkIndex == transfer.totalChunk - 1) {
+				imageTransferMap.remove(msgId);
+			}
+		} catch (Exception e) {
+			log.error("处理图片分片异常, sid=" + sid, e);
+		}
+	}
+
+	/**
+	 * 清理图片传输上下文：发送者断开/离开则删除其全部传输记录；接收者离开则从转发目标中移除
+	 * 
+	 * @param sid
+	 */
+	private void cleanupImageTransfers(String sid) {
+		Iterator<Map.Entry<String, ImageTransfer>> it = imageTransferMap.entrySet().iterator();
+		while (it.hasNext()) {
+			Map.Entry<String, ImageTransfer> entry = it.next();
+			if (sid.equals(entry.getValue().sid)) {
+				it.remove();
+			} else {
+				entry.getValue().targets.remove(sid);
+			}
+		}
 	}
 
 	/**
