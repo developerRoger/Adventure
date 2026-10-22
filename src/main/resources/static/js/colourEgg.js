@@ -31,6 +31,10 @@ var vm = new Vue({
         imageIncoming: {},
         // 点击放大的图片地址
         previewSrc: '',
+        // 自定义轻提示内容与确认弹框数据（替代浏览器原生 alert/confirm）
+        toastMsg: '',
+        toastTimer: null,
+        confirmData: null,
         text:"One's Night",
         wx: null,
         connetId:null,
@@ -134,8 +138,9 @@ var vm = new Vue({
                 	//收到的聊天消息（再过滤一次兜底，确保任何情况下都不显示敏感词）
                 	_this.listFeedback.push({"id":2,"name":date.from,"msg":_this.filterSensitive(date.msg)});
                 } else if (date.type == 'error') {
-                	_this.text = date.msg;
                 	_this.nice = false;
+                	//错误提示改用自定义轻提示展示，不再显示到下方红色标题
+                	_this.showToast(date.msg);
                 } else {
                 	_this.text = date.msg;
                 }
@@ -167,14 +172,18 @@ var vm = new Vue({
         //随机匹配
         connet:function(){
         	var _this=this;
+        	var doMatch = function(){
+        		_this.nice=true;
+        		_this.websocket.send('{"type":"match"}');
+        		_this.listFeedback=[];
+        		_this.text="正在匹配中，请稍候...";
+        	};
         	//已在房间时，需确认后才能重新随机匹配
-        	if(_this.currentRoom && !confirm('你当前在房间 ' + _this.currentRoom + '，确定要离开并随机匹配新房间吗？')){
+        	if(_this.currentRoom){
+        		_this.confirmBox('你当前在房间 ' + _this.currentRoom + '，确定要离开并随机匹配新房间吗？', doMatch);
         		return;
         	}
-        	_this.nice=true;
-        	_this.websocket.send('{"type":"match"}');
-        	_this.listFeedback=[];
-        	_this.text="正在匹配中，请稍候...";
+        	doMatch();
         },
         //敏感词脱敏：把聊天文字中的敏感词统一替换为 ***
         filterSensitive:function(text){
@@ -186,40 +195,33 @@ var vm = new Vue({
         	}
         	return t;
         },
-        //切换房间确认：已在房间且目标不是当前房间时，弹确认框
-        confirmSwitchRoom:function(targetRoom){
+        //切换房间确认：已在房间且目标不是当前房间时，弹自定义确认框，确认后执行onOk
+        confirmSwitchRoom:function(targetRoom, onOk){
         	var _this=this;
         	if(_this.currentRoom && _this.currentRoom != targetRoom){
-        		return confirm('你当前在房间 ' + _this.currentRoom + '，确定要离开并加入房间 ' + targetRoom + ' 吗？');
+        		_this.confirmBox('你当前在房间 ' + _this.currentRoom + '，确定要离开并加入房间 ' + targetRoom + ' 吗？', onOk);
+        		return;
         	}
-        	return true;
+        	onOk();
         },
         //输入房间名加入指定房间
         joinRoom:function(){
         	var _this=this;
         	if(_this.roomKey==null||_this.roomKey.trim()==''){
-        		alert('请输入房间名');
+        		_this.showToast('请输入房间名');
         		return;
         	}
         	var room = _this.roomKey.trim().toUpperCase();
-        	if(!_this.confirmSwitchRoom(room)){
-        		return;
-        	}
-        	_this.nice=true;
-        	_this.websocket.send('{"type":"join","room":"'+room+'"}');
-        	_this.listFeedback=[];
+        	_this.confirmSwitchRoom(room, function(){ _this.doJoin(room); });
         },
         //点击浮窗房间列表，直接加入对应房间
         joinByRoom:function(room){
         	var _this=this;
         	if(!room)return;
-        	if(!_this.confirmSwitchRoom(room)){
-        		return;
-        	}
-        	_this.roomKey=room;
-        	_this.nice=true;
-        	_this.websocket.send('{"type":"join","room":"'+room+'"}');
-        	_this.listFeedback=[];
+        	_this.confirmSwitchRoom(room, function(){
+        		_this.roomKey=room;
+        		_this.doJoin(room);
+        	});
         	_this.roomOpen=false;
         },
         //轮询获取当前所有聊天室列表
@@ -264,6 +266,30 @@ var vm = new Vue({
         clearScreen:function(){
         	this.listFeedback = [];
         },
+        //自定义轻提示（替代原生alert）：居中浮层展示，2.5秒后自动消失，点击可立即关闭
+        showToast:function(msg){
+        	var _this=this;
+        	_this.toastMsg = msg;
+        	if(_this.toastTimer) clearTimeout(_this.toastTimer);
+        	_this.toastTimer = setTimeout(function(){ _this.toastMsg=''; }, 2500);
+        },
+        //自定义确认弹框（替代原生confirm）：点击"确定"后执行回调，点击"取消"/遮罩则关闭
+        confirmBox:function(message, callback){
+        	this.confirmData = {message: message, callback: callback};
+        },
+        //点击"确定"：关闭弹框并执行确认回调
+        confirmOk:function(){
+        	var cb = this.confirmData ? this.confirmData.callback : null;
+        	this.confirmData = null;
+        	if(cb) cb();
+        },
+        //执行加入房间（切换确认通过后统一调用）
+        doJoin:function(room){
+        	var _this=this;
+        	_this.nice=true;
+        	_this.websocket.send('{"type":"join","room":"'+room+'"}');
+        	_this.listFeedback=[];
+        },
         //打开图片选择框
         openFilePicker:function(){
         	document.getElementById('imgFile').click();
@@ -275,7 +301,7 @@ var vm = new Vue({
         	e.target.value=''; //清空，允许下次选择同一张图片
         	if(!file)return;
         	if(file.type.indexOf('image/') != 0){
-        		alert('只能发送图片文件');
+        		_this.showToast('只能发送图片文件');
         		return;
         	}
         	var filename = _this.filterSensitive(file.name || 'image.jpg');
@@ -286,9 +312,9 @@ var vm = new Vue({
         		//超过1MB，canvas压缩到1MB以内
         		_this.compressImage(file, function(blob){
         			if(!blob){
-        				alert('图片压缩失败，请换一张图片试试');
-        				return;
-        			}
+        			_this.showToast('图片压缩失败，请换一张图片试试');
+        			return;
+        		}
         			_this.sendImage(blob, filename);
         		});
         	}
@@ -331,11 +357,11 @@ var vm = new Vue({
         sendImage:function(blob, filename){
         	var _this=this;
         	if(!_this.websocket || _this.websocket.readyState != 1){
-        		alert('连接已断开，请刷新页面重试');
+        		_this.showToast('连接已断开，请刷新页面重试');
         		return;
         	}
         	if(!_this.currentRoom){
-        		alert('请先加入房间再发送图片');
+        		_this.showToast('请先加入房间再发送图片');
         		return;
         	}
         	//msgId仅含ASCII字符，便于二进制帧头固定32字节解析（不足部分以0填充）

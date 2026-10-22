@@ -2,11 +2,27 @@
 <html>
 <head>
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
 <title>Random matching</title>
 <link rel="stylesheet" href="../css/bootstrap.min.css"></link>
 </head>
 <style type="text/css">
+/* ===== 微信/移动端基础适配 ===== */
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	/* 阻止微信内置浏览器按系统字体大小缩放页面，避免布局变形 */
+	-webkit-text-size-adjust: 100%;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* 主容器高度用 100% 而非 100vh：100vh 在微信/手机浏览器中会超出可视高度，
+   导致底部输入区与按钮被虚拟键盘或地址栏遮挡 */
+#feedbackSection {
+	height: 100%;
+}
+
 .leftttt, .rightttt {
 	position: relative;
 	width: 90%;
@@ -44,6 +60,21 @@
 	border-left-color: #25a23b;
 	top: 5px;
 	right: -14px;
+}
+
+/* ===== 系统消息（系统本身发出的通知，如"连接成功"、加入/离开房间，黑色背景） ===== */
+.sys-msg {
+	width: max-content;
+	max-width: 90%;
+	background: #000;
+	color: #fff;
+	border-radius: 5px;
+	padding: 4px 12px;
+	margin: 8px auto;
+	font-size: 12px;
+	line-height: 18px;
+	text-align: center;
+	word-break: break-word;
 }
 
 .scroll li {
@@ -145,6 +176,83 @@
 
 .room-mini:hover {
 	background: rgba(0, 0, 0, 0.85);
+}
+
+/* ===== 当前房间状态悬浮（左上角），进入/切换房间时实时更新 ===== */
+.room-status {
+	position: fixed;
+	top: 10px;
+	left: 10px;
+	z-index: 9998;
+	background: rgba(0, 0, 0, 0.72);
+	color: #fff;
+	font-size: 13px;
+	padding: 6px 10px;
+	border-radius: 8px;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+	max-width: calc(100% - 260px);
+	min-width: 100px;
+	line-height: 1.4;
+	word-break: break-all;
+}
+
+/* ===== 自定义轻提示（替代浏览器原生 alert） ===== */
+.toast {
+	position: fixed;
+	top: 45%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 99998;
+	background: rgba(0, 0, 0, 0.78);
+	color: #fff;
+	font-size: 14px;
+	padding: 10px 18px;
+	border-radius: 8px;
+	max-width: 80%;
+	text-align: center;
+	word-break: break-word;
+	line-height: 1.5;
+}
+
+/* ===== 自定义确认弹框（替代浏览器原生 confirm） ===== */
+.modal-mask {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.5);
+	z-index: 99997;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.modal-box {
+	width: 300px;
+	max-width: 85%;
+	background: #fff;
+	border-radius: 10px;
+	padding: 18px 16px;
+	text-align: center;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.modal-msg {
+	font-size: 15px;
+	color: #333;
+	line-height: 1.6;
+	word-break: break-word;
+	margin-bottom: 16px;
+}
+
+.modal-btns {
+	display: flex;
+	justify-content: space-around;
+}
+
+.modal-btns .btn {
+	min-width: 90px;
 }
 
 /* 浮窗标题栏的最小化按钮 */
@@ -249,9 +357,10 @@
 		font-size: 12px;
 		padding: 5px 8px;
 	}
-	#feedbackSection h1 {
-		font-size: 16px;
-		margin: 6px 0 !important;
+	.room-status {
+		font-size: 12px;
+		padding: 5px 8px;
+		max-width: calc(100% - 205px);
 	}
 	#feedbackSection .form-group {
 		margin-bottom: 8px;
@@ -259,12 +368,22 @@
 	#feedbackSection .btn {
 		font-size: 15px;
 	}
+	/* 微信内置浏览器（iOS）：输入框字号小于16px时聚焦会自动放大页面，这里统一16px避免 */
+	#feedbackSection input,
+	#feedbackSection textarea {
+		font-size: 16px;
+	}
+	/* 底部操作区适配 iPhone 刘海屏/底部安全区，避免被遮挡 */
+	#feedbackSection .bs-example {
+		padding-bottom: calc(8px + env(safe-area-inset-bottom, 0px));
+		margin-bottom: 0;
+	}
 }
 </style>
 
 <!-- ADD THE CLASS layout-boxed TO GET A BOXED LAYOUT -->
 <body class="hold-transition skin-blue sidebar-mini">
-	<div id="feedbackSection" class="bs-docs-section" style="height: 100vh; display: flex; flex-direction: column"
+	<div id="feedbackSection" class="bs-docs-section" style="display: flex; flex-direction: column"
 		v-cloak>
 		<!-- 房间列表浮窗（可最小化到小角标） -->
 		<div class="room-panel" :class="{open: roomOpen}" v-show="!panelHidden">
@@ -291,7 +410,8 @@
 				<li v-for="l in listBarrage">{{l}}</li>
 			</ul>
 			<div v-for="a in listFeedback">
-				<p class="bg-danger rightttt" v-if="a.id==1"><small>{{a.name}}:</small> {{a.msg}}</p>
+				<p class="sys-msg" v-if="a.id==0"><small>{{a.name}}:</small> {{a.msg}}</p>
+				<p class="bg-danger rightttt" v-else-if="a.id==1"><small>{{a.name}}:</small> {{a.msg}}</p>
 				<div class="img-bubble mine" v-else-if="a.img && a.id==3">
 					<small>{{a.name}}:</small><br/>
 					<img :src="a.img" class="chat-img" @load="onImgLoad" @click="previewSrc = a.img" alt="聊天图片"/>
@@ -303,10 +423,9 @@
 				<p class="bg-danger leftttt" v-else><small>{{a.name}}:</small> {{a.msg}}</p>
 			</div>
 		</section>
-		<h1 style="text-align: center; margin-top: 10px; color: red"
-			v-if="text!=null">{{text}}</h1>
+		<!-- 当前房间状态：悬浮在左上角，进入/切换房间时实时更新 -->
+		<div class="room-status" v-if="nice && text">{{text}}</div>
 		<div></div>
-		<hr>
 		<!--   <div class="form-group">
     <label for="exampleInputName2">Name</label>
     <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
@@ -347,6 +466,18 @@
 		<!-- 图片点击放大预览，点击任意位置关闭 -->
 		<div class="lightbox" v-show="previewSrc" @click="previewSrc = ''">
 			<img :src="previewSrc" alt="图片预览"/>
+		</div>
+		<!-- 自定义轻提示：替代浏览器原生 alert，2.5秒自动消失，点击可立即关闭 -->
+		<div class="toast" v-if="toastMsg" @click="toastMsg=''">{{toastMsg}}</div>
+		<!-- 自定义确认弹框：替代浏览器原生 confirm -->
+		<div class="modal-mask" v-if="confirmData" @click.self="confirmData=null">
+			<div class="modal-box">
+				<p class="modal-msg">{{confirmData.message}}</p>
+				<div class="modal-btns">
+					<button type="button" class="btn btn-default" @click="confirmData=null">取消</button>
+					<button type="button" class="btn btn-success" @click="confirmOk">确定</button>
+				</div>
+			</div>
 		</div>
 	</div>
 </body>

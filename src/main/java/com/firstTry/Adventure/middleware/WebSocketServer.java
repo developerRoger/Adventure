@@ -53,7 +53,7 @@ public class WebSocketServer {
 	@Autowired
 	private WebSocketVisitLogService webSocketVisitLogService;
 	// 单个房间最大人数
-	private static final int MAX_ROOM_SIZE = 50;
+	private static final int MAX_ROOM_SIZE = 10;
 
 	// 静态变量，用来记录当前在线连接数。应该把它设计成线程安全的。
 	private static int onlineCount = 0;
