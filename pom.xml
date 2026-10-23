@@ -117,6 +117,12 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-websocket</artifactId>
         </dependency>
+        <!-- IP 归属地解析（离线 ip2region，xdb 数据文件位于 resources 下，省/市精度） -->
+        <dependency>
+            <groupId>org.lionsoul</groupId>
+            <artifactId>ip2region</artifactId>
+            <version>3.3.7</version>
+        </dependency>
     </dependencies>
     <profiles>
         <profile>

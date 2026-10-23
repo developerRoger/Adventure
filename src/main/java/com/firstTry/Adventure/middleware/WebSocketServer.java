@@ -3,6 +3,7 @@ package com.firstTry.Adventure.middleware;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.charset.StandardCharsets;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Date;
@@ -32,6 +33,7 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.firstTry.Adventure.entity.WebSocketVisitLogEntity;
 import com.firstTry.Adventure.service.WebSocketVisitLogService;
+import com.firstTry.Adventure.utils.IpRegionUtil;
 
 /**
  * 所有websocket的终类（多人房间制聊天室）
@@ -195,6 +197,9 @@ public class WebSocketServer {
 			String clientIp = session.getUserProperties().get("clientIp") == null ? null
 					: session.getUserProperties().get("clientIp").toString();
 			entity.setIp(clientIp);
+			// 解析IP归属地省/市（离线ip2region库；区级一般无法从IP精确获取，留空）
+			entity.setProvince(IpRegionUtil.getProvince(clientIp));
+			entity.setCity(IpRegionUtil.getCity(clientIp));
 			entity.setEnterTime(new Date());
 			webSocketVisitLogService.save(entity);
 			log.info("websocket访问记录已保存, sid=" + sid + ", ip=" + clientIp);
@@ -387,7 +392,7 @@ public class WebSocketServer {
 		JSONObject sysMsg = new JSONObject();
 		sysMsg.put("code", 200);
 		sysMsg.put("type", "system");
-		sysMsg.put("msg", "用户 " + sid + " 加入了房间 " + roomKey + "，当前房间人数：" + members.size());
+		sysMsg.put("msg", "用户 " + sid + " 在" + nowTime() + " 加入了房间 " + roomKey + "，当前房间人数：" + members.size());
 		sysMsg.put("room", roomKey);
 		sysMsg.put("members", members.size());
 		broadcast(roomKey, sid, sysMsg.toJSONString());
@@ -423,12 +428,22 @@ public class WebSocketServer {
 				JSONObject sysMsg = new JSONObject();
 				sysMsg.put("code", 200);
 				sysMsg.put("type", "system");
-				sysMsg.put("msg", "用户 " + sid + " 离开了房间 " + roomKey + "，当前人数：" + members.size());
+				sysMsg.put("msg", "用户 " + sid + " 在" + nowTime() + " 离开了房间 " + roomKey + "，当前人数：" + members.size());
 				sysMsg.put("room", roomKey);
 				sysMsg.put("members", members.size());
 				broadcast(roomKey, sid, sysMsg.toJSONString());
 			}
 		}
+	}
+
+	/**
+	 * 当前时间，格式 HH:mm:ss（用于系统消息中标记加入/离开时刻，如"在12:55:23"）
+	 * 
+	 * @return
+	 */
+	private String nowTime() {
+		// 每个实例维护自己的格式化器，避免 SimpleDateFormat 多线程共享的线程安全问题
+		return new SimpleDateFormat("HH:mm:ss").format(new Date());
 	}
 
 	/**

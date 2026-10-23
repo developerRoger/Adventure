@@ -11,6 +11,118 @@ function _base64ToBytes(dataUrl) {
 	return bytes;
 }
 
+// ===== 图片分片加密（ChaCha20 流密码，纯JS实现，无外部依赖） =====
+// 目的：图片二进制分片在网络上不再是明文，防止截流后把分片直接拼接还原出图片。
+// 方案：发送方每张图片随机生成32字节密钥，随 image_meta 元信息帧（key字段 base64）带给接收方；
+//       各分片按固定64KB对齐，每片用独立位置的keystream异或加密，可乱序到达、逐片独立解密。
+var IMG_CHUNK_SIZE = 64 * 1024; // 分片大小（与发送分片保持一致，接收端据此计算每片加密偏移）
+
+// ChaCha20 quarter round：对状态x的a/b/c/d四个字做一轮运算（32位无符号环绕）
+function _chachaQr(x, a, b, c, d) {
+	x[a] = (x[a] + x[b]) | 0; x[d] ^= x[a]; x[d] = ((x[d] << 16) | (x[d] >>> 16)) >>> 0;
+	x[c] = (x[c] + x[d]) | 0; x[b] ^= x[c]; x[b] = ((x[b] << 12) | (x[b] >>> 20)) >>> 0;
+	x[a] = (x[a] + x[b]) | 0; x[d] ^= x[a]; x[d] = ((x[d] << 8) | (x[d] >>> 24)) >>> 0;
+	x[c] = (x[c] + x[d]) | 0; x[b] ^= x[c]; x[b] = ((x[b] << 7) | (x[b] >>> 25)) >>> 0;
+}
+
+// 生成 ChaCha20 一个64字节keystream块（IETF变体：counter为32位，nonce为12字节）
+function _chachaBlock(key, nonce, counter) {
+	var CONST = [0x61707865, 0x3320646e, 0x79622d32, 0x6b206574]; // "expand 32-byte k"
+	var state = new Array(16);
+	state[0] = CONST[0]; state[1] = CONST[1]; state[2] = CONST[2]; state[3] = CONST[3];
+	// key: 32字节 -> 8个字（小端）
+	for (var i = 0; i < 8; i++) {
+		state[4 + i] = ((key[i * 4] & 0xFF) | ((key[i * 4 + 1] & 0xFF) << 8) | ((key[i * 4 + 2] & 0xFF) << 16) | ((key[i * 4 + 3] & 0xFF) << 24)) >>> 0;
+	}
+	state[12] = counter >>> 0; // 计数器（低32位）
+	// nonce: 12字节 -> 3个字（小端）
+	state[13] = ((nonce[0] & 0xFF) | ((nonce[1] & 0xFF) << 8) | ((nonce[2] & 0xFF) << 16) | ((nonce[3] & 0xFF) << 24)) >>> 0;
+	state[14] = ((nonce[4] & 0xFF) | ((nonce[5] & 0xFF) << 8) | ((nonce[6] & 0xFF) << 16) | ((nonce[7] & 0xFF) << 24)) >>> 0;
+	state[15] = ((nonce[8] & 0xFF) | ((nonce[9] & 0xFF) << 8) | ((nonce[10] & 0xFF) << 16) | ((nonce[11] & 0xFF) << 24)) >>> 0;
+	var x = state.slice();
+	// 10轮（每轮两次quarter-round循环，共20轮）
+	for (var round = 0; round < 10; round++) {
+		_chachaQr(x, 0, 4, 8, 12);
+		_chachaQr(x, 1, 5, 9, 13);
+		_chachaQr(x, 2, 6, 10, 14);
+		_chachaQr(x, 3, 7, 11, 15);
+		_chachaQr(x, 0, 5, 10, 15);
+		_chachaQr(x, 1, 6, 11, 12);
+		_chachaQr(x, 2, 7, 8, 13);
+		_chachaQr(x, 3, 4, 9, 14);
+	}
+	// 输出 = 最终状态 + 初始状态，按小端写出64字节
+	var out = new Uint8Array(64);
+	for (var i = 0; i < 16; i++) {
+		var v = (x[i] + state[i]) >>> 0;
+		out[i * 4] = v & 0xFF;
+		out[i * 4 + 1] = (v >>> 8) & 0xFF;
+		out[i * 4 + 2] = (v >>> 16) & 0xFF;
+		out[i * 4 + 3] = (v >>> 24) & 0xFF;
+	}
+	return out;
+}
+
+// 生成从字节偏移start起、长度length的keystream（分片加解密按整图字节偏移对齐）
+function _chachaKeystream(key, nonce, start, length) {
+	var out = new Uint8Array(length);
+	var blockIdx = Math.floor(start / 64);
+	var inOffset = start % 64;
+	var written = 0;
+	while (written < length) {
+		var block = _chachaBlock(key, nonce, blockIdx);
+		var take = Math.min(64 - inOffset, length - written);
+		out.set(block.subarray(inOffset, inOffset + take), written);
+		written += take;
+		blockIdx++;
+		inOffset = 0;
+	}
+	return out;
+}
+
+// 生成32字节随机密钥（优先用 crypto.getRandomValues，普通http环境也可用）
+function _randomKey32() {
+	var key = new Uint8Array(32);
+	if (typeof crypto !== 'undefined' && crypto.getRandomValues) {
+		crypto.getRandomValues(key);
+	} else {
+		for (var i = 0; i < 32; i++) key[i] = Math.floor(Math.random() * 256);
+	}
+	return key;
+}
+
+// 字节数组转base64（仅用于传输32字节密钥）
+function _bytesToB64(bytes) {
+	var bin = '';
+	for (var i = 0; i < bytes.length; i++) bin += String.fromCharCode(bytes[i]);
+	return btoa(bin);
+}
+
+// base64转字节数组（还原32字节密钥）
+function _b64ToBytes(str) {
+	var bin = atob(str);
+	var bytes = new Uint8Array(bin.length);
+	for (var i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+	return bytes;
+}
+
+// 由msgId派生12字节nonce（双方由同一msgId算出，无需额外传输）
+function _imgNonce(msgId) {
+	var nonce = new Uint8Array(12);
+	for (var i = 0; i < 12 && i < msgId.length; i++) {
+		nonce[i] = msgId.charCodeAt(i) & 0xFF;
+	}
+	return nonce;
+}
+
+// 对一段分片数据做加密/解密（异或同一段keystream），offset为该分片在整图中的字节偏移
+function _cryptChunk(data, key, nonce, offset) {
+	var ks = _chachaKeystream(key, nonce, offset, data.length);
+	var out = new Uint8Array(data.length);
+	for (var i = 0; i < data.length; i++) out[i] = data[i] ^ ks[i];
+	return out;
+}
+
 var vm = new Vue({
     el: '#feedbackSection',
     data: {
@@ -115,11 +227,11 @@ var vm = new Vue({
                 		}
                 	}
                 } else if (date.type == 'image_meta') {
-                	//图片消息元信息：初始化接收缓存，等待后续二进制分片收齐后组装显示
-                	if (date.msgId && date.totalChunk && date.totalChunk > 0) {
-                		var rec = {chunks: [], totalChunk: date.totalChunk, filename: date.filename, mime: date.mime, from: date.from};
-                		rec.chunks.length = date.totalChunk;
-                		_this.imageIncoming[date.msgId] = rec;
+	                	//图片消息元信息：初始化接收缓存，等待后续二进制分片收齐后组装显示（含解密密钥key）
+	                	if (date.msgId && date.totalChunk && date.totalChunk > 0) {
+	                		var rec = {chunks: [], totalChunk: date.totalChunk, filename: date.filename, mime: date.mime, from: date.from, key: date.key ? _b64ToBytes(date.key) : null};
+	                		rec.chunks.length = date.totalChunk;
+	                		_this.imageIncoming[date.msgId] = rec;
                 		//60秒未收齐自动丢弃，防止接收缓存内存泄漏
                 		setTimeout(function () {
                 			if (_this.imageIncoming[date.msgId]) {
@@ -353,7 +465,7 @@ var vm = new Vue({
         	};
         	reader.readAsDataURL(file);
         },
-        //发送图片：先发文本帧(image_meta)，再按64KB/片发二进制帧（32字节msgId + 4字节大端片序号 + 数据）
+        //发送图片：先发文本帧(image_meta)，再按64KB/片发二进制帧（32字节msgId + 4字节大端片序号 + 加密数据）
         sendImage:function(blob, filename){
         	var _this=this;
         	if(!_this.websocket || _this.websocket.readyState != 1){
@@ -366,16 +478,19 @@ var vm = new Vue({
         	}
         	//msgId仅含ASCII字符，便于二进制帧头固定32字节解析（不足部分以0填充）
         	var msgId = 'IMG' + Date.now().toString(36) + Math.random().toString(36).substr(2, 6);
+        	//图片分片加密：每张图随机32字节密钥（随元信息帧携带）+ msgId派生nonce，分片逐片ChaCha20加密
+        	var imgKey = _randomKey32();
+        	var nonce = _imgNonce(msgId);
         	var reader = new FileReader();
         	reader.onload = function(e){
         		var buf = e.target.result;
         		var total = buf.byteLength;
-        		var CHUNK = 64 * 1024; //64KB/片
+        		var CHUNK = IMG_CHUNK_SIZE; //64KB/片
         		var totalChunk = Math.max(1, Math.ceil(total / CHUNK));
         		var mime = blob.type || 'image/jpeg';
-        		//1. 文本帧：图片元信息
-        		_this.websocket.send(JSON.stringify({msgId: msgId, type: 'image_meta', filename: filename, mime: mime, totalChunk: totalChunk}));
-        		//2. 二进制帧：逐片发送
+        		//1. 文本帧：图片元信息（含密钥key字段，接收方据此解密）
+        		_this.websocket.send(JSON.stringify({msgId: msgId, type: 'image_meta', filename: filename, mime: mime, totalChunk: totalChunk, enc: true, key: _bytesToB64(imgKey)}));
+        		//2. 二进制帧：逐片加密后发送
         		var headBytes = new Uint8Array(32);
         		for(var i=0; i<msgId.length && i<32; i++){
         			headBytes[i] = msgId.charCodeAt(i);
@@ -383,13 +498,15 @@ var vm = new Vue({
         		for(var i=0; i<totalChunk; i++){
         			var start = i * CHUNK;
         			var end = Math.min(start + CHUNK, total);
-        			var frame = new Uint8Array(36 + (end - start));
+        			// 对整图字节偏移start处的本片数据加密（长度不变，帧头明文仅用于路由）
+        			var enc = _cryptChunk(new Uint8Array(buf, start, end - start), imgKey, nonce, start);
+        			var frame = new Uint8Array(36 + enc.length);
         			frame.set(headBytes, 0);
         			frame[32] = (i >> 24) & 0xFF;
         			frame[33] = (i >> 16) & 0xFF;
         			frame[34] = (i >> 8) & 0xFF;
         			frame[35] = i & 0xFF;
-        			frame.set(new Uint8Array(buf, start, end - start), 36);
+        			frame.set(enc, 36);
         			_this.websocket.send(frame.buffer);
         		}
         		//3. 本地回显压缩后的图片（后端广播不包含发送者自己）
@@ -416,10 +533,15 @@ var vm = new Vue({
         		msgId += String.fromCharCode(arr[i]);
         	}
         	var chunkIndex = ((arr[32] & 0xFF) << 24) | ((arr[33] & 0xFF) << 16) | ((arr[34] & 0xFF) << 8) | (arr[35] & 0xFF);
-        	var rec = _this.imageIncoming[msgId];
-        	if(!rec)return; //元信息未到或已超时
-        	if(chunkIndex < 0 || chunkIndex >= rec.totalChunk)return;
-        	rec.chunks[chunkIndex] = arr.subarray(36);
+	        	var rec = _this.imageIncoming[msgId];
+	        	if(!rec)return; //元信息未到或已超时
+	        	if(chunkIndex < 0 || chunkIndex >= rec.totalChunk)return;
+	        	var chunkData = arr.subarray(36);
+	        	//分片加密：按64KB对齐偏移逐片ChaCha20解密（无key则为旧协议明文分片，直接使用）
+	        	if(rec.key){
+	        		chunkData = _cryptChunk(chunkData, rec.key, _imgNonce(msgId), chunkIndex * IMG_CHUNK_SIZE);
+	        	}
+	        	rec.chunks[chunkIndex] = chunkData;
         	//统计已收到的分片数，全部收齐后组装为Blob显示
         	var received = 0;
         	for(var k=0; k<rec.totalChunk; k++){

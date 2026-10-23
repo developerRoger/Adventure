@@ -25,7 +25,9 @@ html, body {
 
 .leftttt, .rightttt {
 	position: relative;
-	width: 90%;
+	/* 气泡宽度跟随内容自适应（内容多长气泡多长），最多占容器90% */
+	width: fit-content;
+	max-width: 90%;
 	min-height: 30px;
 	background: #25a23b;
 	border-radius: 7px;
@@ -48,6 +50,11 @@ html, body {
 	border-right-color: #25a23b;
 	top: 5px;
 	left: -14px;
+}
+
+/* 自己的消息（a.id==1）靠右显示：块级元素 margin-left:auto 会把它推到容器右侧 */
+.rightttt {
+	margin-left: auto;
 }
 
 .rightttt::after {
@@ -275,6 +282,8 @@ html, body {
 /* ===== 聊天图片消息 ===== */
 .img-bubble {
 	position: relative;
+	/* 图片气泡宽度跟随图片自适应（图片多宽气泡多宽），最多占容器70% */
+	width: fit-content;
 	max-width: 70%;
 	min-height: 30px;
 	background: #25a23b;
@@ -306,9 +315,18 @@ html, body {
 	right: -14px;
 }
 
+/* 自己发的图片消息（a.id==3）靠右显示，右侧留 40px 给箭头 */
+.img-bubble.mine {
+	margin-left: auto;
+	margin-right: 40px;
+}
+
 .img-bubble .chat-img {
+	/* width/height 显式 auto，保证高图按 max-height 等比缩放后，气泡宽度跟随实际显示尺寸 */
 	max-width: 100%;
 	max-height: 220px;
+	width: auto;
+	height: auto;
 	border-radius: 6px;
 	display: block;
 	margin-top: 4px;
@@ -342,9 +360,17 @@ html, body {
 		margin-left: 15px;
 		font-size: 14px;
 	}
+	/* 移动端自己的消息仍需靠右（media 中的合并规则会覆盖 margin-left，这里重新声明） */
+	.rightttt {
+		margin-left: auto;
+	}
 	.img-bubble {
 		margin: 6px 15px;
 		max-width: 80%;
+	}
+	.img-bubble.mine {
+		margin-left: auto;
+		margin-right: 15px;
 	}
 	.room-panel {
 		width: 180px;
