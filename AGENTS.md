@@ -7,8 +7,8 @@
 - 项目名：Adventure（`com.firstTry:Adventure:1.0`），Maven 项目，打包方式 `jar`
 - Java 版本：1.8
 - Spring Boot：`2.0.5.RELEASE`
-- 主要技术：Spring Boot、MyBatis-Plus（`BaseMapper` + Wrapper，无 XML）、MySQL、Redis、Spring Security + JWT、Thymeleaf、WebSocket
-- 项目定位：**仅保留聊天室功能**（WebSocket 房间制多人聊天 + 图片消息 + 访问记录），已移除 Swagger2、Netty、七牛云、Velocity 代码生成、Nacos、后台管理及测试用例
+- 主要技术：Spring Boot、MyBatis-Plus（`BaseMapper` + Wrapper，无 XML）、MySQL、Spring Security + JWT、Thymeleaf、WebSocket、离线 ip2region（IP 归属地解析）、图片加密（纯 JS ChaCha20）
+- 项目定位：**仅保留聊天室功能**（WebSocket 房间制多人聊天 + 图片消息 + 访问记录），已移除 Swagger2、Netty、七牛云、Velocity 代码生成、Nacos、Redis（`RedisConfig`/`RedisObjectSerializer`/yml redis 配置/`spring-boot-starter-redis` 依赖）、Docker（`Dockerfile`/docker-maven-plugin）、后台管理及测试用例
 
 ## 常用命令
 
@@ -28,10 +28,10 @@ mvn spring-boot:run -Dspring-boot.run.profiles=prod
 ## 目录结构
 
 - 源码根包：`src/main/java/com/firstTry/Adventure/`
-  - `config/` 配置类（Spring Security、JWT、Redis、默认视图），`middleware/` WebSocket 中间件
+  - `config/` 配置类（Spring Security、JWT、默认视图），`middleware/` WebSocket 中间件
   - `entity/` 实体，`mapper/` 数据访问层（MyBatis-Plus，无 XML 文件），`service/`（含 `impl/`）业务层
   - `exception/` 异常处理，`utils/` 工具类
-- 资源目录：`src/main/resources/`（application*.yml、logback-spring.xml、静态资源、templates/html/colourEgg.html 聊天室页面）
+- 资源目录：`src/main/resources/`（application*.yml、logback-spring.xml、ip2region.xdb、静态资源、templates/html/colourEgg.html 聊天室页面）
 
 ## 开发约定
 
@@ -46,6 +46,7 @@ mvn spring-boot:run -Dspring-boot.run.profiles=prod
 - 日志框架必须使用 logback，禁止使用 LOG4J；日志输出仅保留 error 和 info 级别。
 - 日志输出目录生产环境固定为 `/home/apps/logs/`（通过 `log.path` 配置，本地 dev 配置为 `./logs`），单文件最大 5MB，保留 5 天。
 - 项目不使用 Nacos，所有 nacos 相关配置均已移除。
+- 项目不使用 Redis 与 Docker：`RedisConfig`/`RedisObjectSerializer`、yml 中的 redis 配置、`spring-boot-starter-redis` 依赖以及 `Dockerfile`/docker-maven-plugin 均已移除，勿再引入。
 - WebSocket 图片消息分片转发**禁止在服务端拼接组装**，分片组装完全交给前端处理，以降低 JVM 内存压力。
 - `AdventureApplication` 中 `@MapperScan("com.firstTry.adventure.mapper")` 与实际包名 `com.firstTry.Adventure.mapper` 存在大小写差异，修改 Mapper 扫描或包名时需保持一致。
 - 入口拦截保留 Spring Security 白名单配置（`config/WebSecurityConfig.java`），非聊天室入口匿名访问返回 403。

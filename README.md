@@ -7,26 +7,28 @@
 ## 项目简介
 
 - 核心功能：WebSocket 房间制多人聊天（指定 6 位房间码加入或随机匹配）、图片消息、访问记录
-- 仅保留聊天室功能 + Redis + MySQL + MyBatis-Plus，已移除 Swagger2、Netty、七牛云、Velocity 代码生成、Nacos 等无关组件
+- 仅保留聊天室功能 + MySQL + MyBatis-Plus，已移除 Swagger2、Netty、七牛云、Velocity 代码生成、Nacos、Redis、Docker 等无关组件与配置
 - 启动后访问 `http://localhost:8001/go` 即可进入聊天室
 
 ## 技术栈
 
 - Spring Boot 2.0.5、Java 1.8
 - MyBatis-Plus 3.3.2（BaseMapper + Wrapper，无 XML）
-- MySQL、Redis
+- MySQL
 - Spring Security + JWT（入口拦截保留，非聊天室入口匿名返回 403）
 - Thymeleaf、WebSocket
+- 离线 ip2region（IP 归属地解析，省/市精度）
 - Logback 日志（仅 INFO/ERROR）
 
 ## 主要功能
 
 - 房间制多人聊天（单房间最多 50 人）
 - 6 位短房间码（去除易混淆字符，大小写不敏感）
-- 图片消息：canvas 压缩 ≤1MB、64KB 分片二进制帧传输、前端组装
+- 图片消息：canvas 压缩 ≤1MB、64KB 分片二进制帧传输，前端 ChaCha20 逐片独立密钥加密、前端组装
 - 敏感词脱敏（前后端双重拦截）
 - 房间列表浮窗（实时房间名 + 人数，可最小化）
-- WebSocket 访问记录（IP、进入时间、房间名）
+- WebSocket 访问记录（IP、省/市归属地、进入时间、房间名）
+- 消息气泡自适应内容宽度，本人消息在右、他人消息在左
 - 消息 500 字符上限、一键清屏、自动滚动到底部、移动端适配
 
 ## 快速启动

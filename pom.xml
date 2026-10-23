@@ -22,8 +22,6 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
-        <spring-profile>dev</spring-profile>
-        <docker.image.name>adventure/docker:${spring-profile}</docker.image.name>
     </properties>
 
     <dependencies>
@@ -49,12 +47,6 @@
             <!-- 	<exclusions> <exclusion> <groupId>org.springframework.boot</groupId>
                     <artifactId>spring-boot-starter-tomcat</artifactId> </exclusion> </exclusions>  -->
         </dependency>
-        <!-- redis -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-redis</artifactId>
-            <version>1.4.7.RELEASE</version>
-        </dependency>
         <!-- 单元测试 -->
         <!-- 项目已清理测试用例，如后续需要再引入 spring-boot-starter-test -->
         <!-- 使用Thymeleaf模板引擎渲染web视图 -->
@@ -67,12 +59,6 @@
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
             <version>3.3.2</version>
-        </dependency>
-        <!-- 工具类map解析包 -->
-        <dependency>
-            <groupId>commons-beanutils</groupId>
-            <artifactId>commons-beanutils</artifactId>
-            <version>1.9.3</version>
         </dependency>
         <!-- mysql-start -->
         <dependency>
@@ -124,49 +110,12 @@
             <version>3.3.7</version>
         </dependency>
     </dependencies>
-    <profiles>
-        <profile>
-            <id>dev</id>
-            <properties>
-                <spring-profile>dev</spring-profile>
-                <docker.image.name>adventure/docker:dev</docker.image.name>
-            </properties>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-        </profile>
-        <profile>
-            <id>prod</id>
-            <properties>
-                <spring-profile>prod</spring-profile>
-                <docker.image.name>adventure/docker:latest</docker.image.name>
-            </properties>
-        </profile>
-    </profiles>
     <build>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
-            <!-- Docker maven plugin -->
-            <plugin>
-                <groupId>com.spotify</groupId>
-                <artifactId>docker-maven-plugin</artifactId>
-                <version>1.0.0</version>
-                <configuration>
-                    <imageName>${docker.image.name}</imageName>
-                    <dockerDirectory>src/main/resources</dockerDirectory>
-                    <resources>
-                        <resource>
-                            <targetPath>/</targetPath>
-                            <directory>${project.build.directory}</directory>
-                            <include>${project.build.finalName}.jar</include>
-                        </resource>
-                    </resources>
-                </configuration>
-            </plugin>
-            <!-- Docker maven plugin -->
         </plugins>
     </build>
 </project>
