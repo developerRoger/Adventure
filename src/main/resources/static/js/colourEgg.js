@@ -211,16 +211,18 @@ var vm = new Vue({
             //连接成功建立的回调方法
             _this.websocket.onopen = function (event) {
             	_this.heartbeat();
+            	// 断线重连成功：若之前在房间中，自动重新加入，恢复与房间的联系
+            	if (_this.currentRoom) { _this.doJoin(_this.currentRoom); }
             };
 
             //接收到消息的回调方法
             _this.websocket.onmessage = function (event) {
-                console.log(event.data);
-                //二进制帧（图片分片），直接走分片接收组装逻辑
+                //二进制帧（图片分片）：不打日志（64KB块全量打印会严重阻塞接收端），直接走分片接收组装逻辑
                 if (event.data instanceof ArrayBuffer || event.data instanceof Blob) {
                 	_this.onBinary(event.data);
                 	return;
                 }
+                console.log(event.data);
                 var date = JSON.parse(event.data);
                 if (date.type == 'system') {
                 	//弹幕消息
@@ -277,12 +279,16 @@ var vm = new Vue({
             //连接关闭的回调方法
             _this.websocket.onclose = function () {
                 console.log('websocket close');
-                try {
-                    //_this.init();
-                } catch (e) {
-                    console.log(e);
-                    console.log('提示连接失效，请重新刷新页面');
-                }
+                _this.nice = false;
+                // 断线后自动重连：延迟2秒重建连接（避免服务器刚重启时反复抖动），重连成功后自动回到原房间
+                setTimeout(function () {
+                	if (_this.websocket && (_this.websocket.readyState == 0 || _this.websocket.readyState == 1)) return;
+                	try {
+                		_this.init();
+                	} catch (e) {
+                		console.log('提示连接失效，请重新刷新页面');
+                	}
+                }, 2000);
 
             };
 
@@ -290,9 +296,10 @@ var vm = new Vue({
         },
         //心跳
         heartbeat: function () {
+        	if (this._heartbeatTimer) clearInterval(this._heartbeatTimer);
         	var _this=this;
             setInterval(function () {
-                if (_this.websocket) {
+                if (_this.websocket && _this.websocket.readyState == 1) {
                 	_this.websocket.send('{"type":"heartbeat"}');
                 }
             }, 100000);
@@ -385,7 +392,7 @@ var vm = new Vue({
         	if(_this.speak==null||_this.speak=='')return;
         	//发送前先做敏感词脱敏，自己这边也显示脱敏后的内容
         	var msg = _this.filterSensitive(_this.speak);
-        	_this.websocket.send('{"type":"chat","msg":"'+msg+'"}');
+        	_this.websocket.send(JSON.stringify({type:'chat', msg: msg}));
         	_this.listFeedback.push({"id":1,"name":"我","msg":msg});
         	_this.speak="";
         	//自动滚动到底部由watch统一处理

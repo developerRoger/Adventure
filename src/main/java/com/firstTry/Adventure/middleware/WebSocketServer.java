@@ -5,6 +5,7 @@ import java.nio.ByteBuffer;
 import java.nio.charset.StandardCharsets;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.Date;
 import java.util.Iterator;
@@ -538,7 +539,7 @@ public class WebSocketServer {
 	 * 帧格式：前32字节msgId + 4字节片序号(大端) + 图片分片数据
 	 */
 	@OnMessage
-	public void onMessage(byte[] bytes, Session session, @PathParam("sid") String sid) {
+	public void onMessage(byte[] bytes, Session session, @PathParam("sid") String sid) throws IOException {
 		try {
 			if (bytes == null || bytes.length <= BIN_HEADER_LEN) {
 				return;
@@ -559,8 +560,8 @@ public class WebSocketServer {
 				Session ts = webSocketSet.get(target);
 				if (ts != null && ts.isOpen()) {
 					try {
-						ts.getBasicRemote().sendBinary(ByteBuffer.wrap(bytes));
-					} catch (IOException e) {
+						ts.getAsyncRemote().sendBinary(ByteBuffer.wrap(Arrays.copyOf(bytes, bytes.length))); // 异步转发+复制字节，避免阻塞读线程并防异步写入期被复用
+					} catch (Exception e) {
 						log.error("转发媒体分片失败, 目标sid=" + target, e);
 					}
 				}
@@ -734,8 +735,7 @@ public class WebSocketServer {
 	 */
 	@OnError
 	public void onError(Session session, Throwable error) {
-		log.error("发生错误");
-		log.error(error.getMessage());
+		log.error("WebSocket发生错误, sid=" + (session != null ? session.getId() : "unknown"), error);
 	}
 
 	/**
