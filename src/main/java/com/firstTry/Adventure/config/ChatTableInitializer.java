@@ -34,6 +34,15 @@ public class ChatTableInitializer {
 			+ "  KEY idx_room_created (room_key, created_at)"
 			+ ") ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='隐藏房间聊天记录'";
 
+	private static final String IP_BLACKLIST_CREATE_SQL = "CREATE TABLE IF NOT EXISTS ip_blacklist ("
+			+ "  id BIGINT NOT NULL AUTO_INCREMENT COMMENT '主键',"
+			+ "  ip VARCHAR(64) NOT NULL COMMENT '被限制的IP',"
+			+ "  remark VARCHAR(255) DEFAULT NULL COMMENT '备注',"
+			+ "  create_time DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',"
+			+ "  PRIMARY KEY (id),"
+			+ "  UNIQUE KEY uk_ip (ip)"
+			+ ") ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='IP黑名单'";
+
 	@Autowired
 	private DataSource dataSource;
 
@@ -44,6 +53,12 @@ public class ChatTableInitializer {
 			log.info("隐藏房间聊天记录表 chat_message 已就绪");
 		} catch (Exception e) {
 			log.error("初始化 chat_message 表失败，请手动执行 src/main/resources/sql/chat_message.sql", e);
+		}
+		try {
+			new JdbcTemplate(dataSource).execute(IP_BLACKLIST_CREATE_SQL);
+			log.info("IP黑名单表 ip_blacklist 已就绪");
+		} catch (Exception e) {
+			log.error("初始化 ip_blacklist 表失败，请手动执行 src/main/resources/sql/ip_blacklist.sql", e);
 		}
 	}
 }

@@ -8,7 +8,7 @@
 - Java 版本：1.8
 - Spring Boot：`2.0.5.RELEASE`
 - 主要技术：Spring Boot、MyBatis-Plus（`BaseMapper` + Wrapper，无 XML）、MySQL、Spring Security + JWT、Thymeleaf、WebSocket、离线 ip2region（IP 归属地解析）、媒体加密（纯 JS ChaCha20，图片/GIF/视频共用）、隐藏房间聊天记录落库（保留 10 天 + 定时清理）
-- 项目定位：**仅保留聊天室功能**（WebSocket 房间制多人聊天 + 图片/GIF/视频消息 + 访问记录 + 系统内置隐藏房间），已移除 Swagger2、Netty、七牛云、Velocity 代码生成、Nacos、Redis（`RedisConfig`/`RedisObjectSerializer`/yml redis 配置/`spring-boot-starter-redis` 依赖）、Docker（`Dockerfile`/docker-maven-plugin）、后台管理及测试用例
+- 项目定位：**仅保留聊天室功能**（WebSocket 房间制多人聊天 + 图片/GIF/视频消息 + 访问记录 + 系统内置隐藏房间 + IP 黑名单拦截），已移除 Swagger2、Netty、七牛云、Velocity 代码生成、Nacos、Redis（`RedisConfig`/`RedisObjectSerializer`/yml redis 配置/`spring-boot-starter-redis` 依赖）、Docker（`Dockerfile`/docker-maven-plugin）、后台管理及测试用例
 
 ## 常用命令
 
@@ -55,5 +55,7 @@ mvn spring-boot:run -Dspring-boot.run.profiles=prod
 - 聊天历史查询接口 `GET /chatHistory`（参数 `room`、可选 `beforeId` 游标、`size` 默认 20）：DB 按 id 倒序取 top N 后 `Collections.reverse` 反转成正序返回（旧在前）；`GET /online` 返回当前在线连接数（`WebSocketServer.getOnlineCount()`）。二者均在 `PASS_URL` 白名单内放行。
 - WebSocket 消息类型：`join`/`match`/`chat`/`image_meta`/`media_end`/`retrans`/`heartbeat` 之外，新增 `leave`（客户端主动离开，服务端执行 `leaveRoom` 后回 `left`）。
 - 前端按钮状态联动：不在房间时显示「加入房间」+「随机匹配」并在右上角悬浮展示在线人数；加入房间后「加入房间」变「离开」、「随机匹配」与在线人数均隐藏；离开房间先弹确认框再发送 `leave`。隐藏房间无独立进入按钮，通过在房间名输入框输入 `CSYY` 触发密码弹框进入，进入后默认加载最近 20 条历史，向上滑动经 `/chatHistory?beforeId=` 翻页。
+- IP 黑名单：表 `ip_blacklist`（字段 `ip`/`remark`/`create_time`），启动时由 `config/ChatTableInitializer` 自动建表；`WebSocketServer` 在 `join`/`match` 前实时查库拦截命中 IP（`IpBlacklistService.isBlocked`），MySQL 里插入即生效、无需重启；查询异常默认放行（fail-open）。目前仅按完整 IP 精确匹配，不支持网段/通配符。
+- 随机匹配 `randomMatch` 必须跳过隐藏房间：`waitingQueue` 与 `roomMap` 两个查找房间的循环都要加 `isHiddenRoom(...)` 过滤，隐藏房间只能通过 `join` + 密码进入，禁止被随机匹配选中。
 - `target/` 已被 `.gitignore` 忽略，不要提交编译产物。
 - 提交前请运行 `mvn clean package` 确认编译通过。

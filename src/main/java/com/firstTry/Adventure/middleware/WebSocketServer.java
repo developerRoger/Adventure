@@ -37,6 +37,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.firstTry.Adventure.entity.ChatMessageEntity;
 import com.firstTry.Adventure.entity.WebSocketVisitLogEntity;
 import com.firstTry.Adventure.service.ChatMessageService;
+import com.firstTry.Adventure.service.IpBlacklistService;
 import com.firstTry.Adventure.service.WebSocketVisitLogService;
 import com.firstTry.Adventure.utils.ChaCha20;
 import com.firstTry.Adventure.utils.IpRegionUtil;
@@ -63,6 +64,9 @@ public class WebSocketServer {
 	// 隐藏房间聊天记录落库服务
 	@Autowired
 	private ChatMessageService chatMessageService;
+	// IP黑名单服务（加入房间前校验）
+	@Autowired
+	private IpBlacklistService ipBlacklistService;
 	// 单个房间最大人数
 	private static final int MAX_ROOM_SIZE = 10;
 	// 隐藏房间（系统内置，加入需密码，聊天数据落库保留10天）
@@ -159,6 +163,25 @@ public class WebSocketServer {
 	 */
 	private static boolean isHiddenRoom(String roomKey) {
 		return HIDDEN_ROOM_KEY.equals(roomKey);
+	}
+
+	/**
+	 * 判断连接客户端IP是否在IP黑名单中
+	 * 
+	 * @param session
+	 * @return
+	 */
+	private boolean isIpBlocked(Session session) {
+		try {
+			Object ipObj = session.getUserProperties().get("clientIp");
+			if (ipObj == null) {
+				return false;
+			}
+			return ipBlacklistService.isBlocked(ipObj.toString());
+		} catch (Exception e) {
+			log.error("查询IP黑名单失败", e);
+			return false;
+		}
 	}
 
 	/**
@@ -323,6 +346,12 @@ public class WebSocketServer {
 				}
 			}
 
+			// IP黑名单校验：加入/随机匹配前拦截被限制的IP（动态读取数据库，插入即生效）
+			if (("match".equals(type) || "join".equals(type)) && isIpBlocked(session)) {
+				sendError(sid, "您的IP已被限制，无法加入房间");
+				return;
+			}
+
 			if ("match".equals(type)) {
 				// 随机匹配
 				randomMatch(sid);
@@ -423,7 +452,7 @@ public class WebSocketServer {
 				continue;
 			}
 			String wRoom = userRoomMap.get(w);
-			if (wRoom != null && roomMap.get(wRoom) != null && roomMap.get(wRoom).size() < MAX_ROOM_SIZE) {
+			if (wRoom != null && !isHiddenRoom(wRoom) && roomMap.get(wRoom) != null && roomMap.get(wRoom).size() < MAX_ROOM_SIZE) {
 				targetRoom = wRoom;
 				break;
 			}
@@ -431,7 +460,7 @@ public class WebSocketServer {
 		// 再找任意未满房间
 		if (targetRoom == null) {
 			for (Map.Entry<String, Set<String>> entry : roomMap.entrySet()) {
-				if (entry.getValue().size() < MAX_ROOM_SIZE) {
+				if (!isHiddenRoom(entry.getKey()) && entry.getValue().size() < MAX_ROOM_SIZE) {
 					targetRoom = entry.getKey();
 					break;
 				}
