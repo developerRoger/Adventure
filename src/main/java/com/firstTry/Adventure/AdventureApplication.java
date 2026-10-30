@@ -9,6 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.scheduling.annotation.EnableAsync;
+import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
@@ -19,6 +20,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  *
  */
 @EnableAsync//线程异步使用注解
+@EnableScheduling//开启定时任务（隐藏房间聊天记录定时清理）
 @EnableTransactionManagement
 @ComponentScan(value={"com.firstTry.Adventure.*"})
 @MapperScan("com.firstTry.adventure.mapper")

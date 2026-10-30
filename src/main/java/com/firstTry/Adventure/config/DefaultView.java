@@ -1,13 +1,19 @@
 package com.firstTry.Adventure.config;
 
+import java.util.Collections;
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.firstTry.Adventure.entity.ChatMessageEntity;
 import com.firstTry.Adventure.middleware.WebSocketServer;
+import com.firstTry.Adventure.service.ChatMessageService;
 import com.firstTry.Adventure.service.WebSocketVisitLogService;
 
 /**
@@ -22,6 +28,9 @@ public class DefaultView {
 	
     @Autowired
     private WebSocketVisitLogService webSocketVisitLogService;
+    
+    @Autowired
+    private ChatMessageService chatMessageService;
     
 	/**
 	 * 站点根路径与/index统一重定向到聊天室，保证访客只进入聊天室入口
@@ -88,5 +97,37 @@ public class DefaultView {
 	@RequestMapping("/rooms")
 	public Object rooms() {
 		return WebSocketServer.getRoomList();
+	}
+
+	/**
+	 * 获取当前在线总人数（websocket连接数），供前端右上角悬浮展示
+	 * 
+	 * @return
+	 */
+	@ResponseBody
+	@RequestMapping("/online")
+	public Object online() {
+		return WebSocketServer.getOnlineCount();
+	}
+
+	/**
+	 * 查询房间聊天历史（隐藏房间已落库消息），支持向上翻页
+	 * 首次加载不传 beforeId，翻页时传当前已加载最早一条的id
+	 * 
+	 * @param room 房间key
+	 * @param beforeId 翻页游标：取id更小的更早记录（可选）
+	 * @param size 每页条数，默认20，最大50
+	 * @return 按id正序（旧的在前）的消息列表
+	 */
+	@ResponseBody
+	@RequestMapping("/chatHistory")
+	public Object chatHistory(@RequestParam("room") String room,
+			@RequestParam(value = "beforeId", required = false) Long beforeId,
+			@RequestParam(value = "size", defaultValue = "20") int size) {
+		int limit = (size <= 0 || size > 50) ? 20 : size;
+		List<ChatMessageEntity> list = chatMessageService.queryHistory(room, beforeId, limit);
+		// DB 按id倒序取回（新的在前），翻转为正序（旧的在前）便于前端直接顺序拼接
+		Collections.reverse(list);
+		return list;
 	}
 }

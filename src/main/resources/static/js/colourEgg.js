@@ -25,6 +25,9 @@ var VIDEO_COMPRESS_MAX = 20 * 1024 * 1024; // 视频：>20MB拦截，11~20MB压�
 // 聊天区最多保留的消息条数，超出丢弃最旧消息并释放其图片/视频的 Blob 对象URL，防止长时间聊天内存只增不减
 var FEEDBACK_MAX = 300;
 
+// 系统内置隐藏房间：加入需输入密码（密码由后端校验，这里只记录key用于"进入隐藏房间"按钮与断线重连回房）
+var HIDDEN_ROOM_KEY = 'CSYY';
+
 // ChaCha20 quarter round：对状态x的a/b/c/d四个字做一轮运算（32位无符号环绕）
 function _chachaQr(x, a, b, c, d) {
 	x[a] = (x[a] + x[b]) | 0; x[d] ^= x[a]; x[d] = ((x[d] << 16) | (x[d] >>> 16)) >>> 0;
@@ -141,6 +144,8 @@ var vm = new Vue({
         currentRoom:"",
         memberCount:0,
         rooms: [],
+        // 当前总在线人数（右上角悬浮展示，进入房间后隐藏）
+        onlineCount: 0,
         roomOpen: false,
         // 房间列表浮窗是否已最小化（缩成右上角小角标）
         panelHidden: false,
@@ -157,6 +162,15 @@ var vm = new Vue({
         toastMsg: '',
         toastTimer: null,
         confirmData: null,
+        // 隐藏房间密码弹框：pwdOpen 控制显示，pwdInput 为用户输入，hiddenPwd 记录密码用于断线重连回房
+        pwdOpen: false,
+        pwdInput: '',
+        hiddenPwd: '',
+        // 隐藏房间历史记录：分页加载状态
+        historyLoading: false,   // 是否正在加载历史
+        hasMoreHistory: true,    // 是否还有更早的历史
+        historyEarliestId: null, // 已加载最早一条记录的id，用于向上翻页
+        showBackBottom: false,   // 是否显示"回到最下面"小提示
         text:"One's Night",
         wx: null,
         connetId:null,
@@ -212,7 +226,7 @@ var vm = new Vue({
             _this.websocket.onopen = function (event) {
             	_this.heartbeat();
             	// 断线重连成功：若之前在房间中，自动重新加入，恢复与房间的联系
-            	if (_this.currentRoom) { _this.doJoin(_this.currentRoom); }
+            	if (_this.currentRoom) { _this.doJoin(_this.currentRoom, (_this.currentRoom == HIDDEN_ROOM_KEY) ? _this.hiddenPwd : ''); }
             };
 
             //接收到消息的回调方法
@@ -264,6 +278,19 @@ var vm = new Vue({
                 	_this.memberCount = date.members;
                 	_this.text = date.msg;
                 	_this.listFeedback = [];
+                	_this.resetHistoryState();
+                	//进入隐藏房间时加载最近20条历史记录
+                	if(_this.currentRoom == HIDDEN_ROOM_KEY){
+                		_this.loadHistory(null);
+                	}
+                } else if (date.type == 'left') {
+                	//主动离开房间成功：清空聊天与历史，恢复"加入/随机匹配"按钮
+                	_this.nice = false;
+                	_this.currentRoom = '';
+                	_this.memberCount = 0;
+                	_this.text = date.msg;
+                	_this.listFeedback = [];
+                	_this.resetHistoryState();
                 } else if (date.type == 'chat') {
                 	//收到的聊天消息（再过滤一次兜底，确保任何情况下都不显示敏感词）
                 	_this.listFeedback.push({"id":2,"name":date.from,"msg":_this.filterSensitive(date.msg)});
@@ -347,6 +374,12 @@ var vm = new Vue({
         		return;
         	}
         	var room = _this.roomKey.trim().toUpperCase();
+        	//输入隐藏房间key时弹出密码框，输入密码后再进入
+        	if(room == HIDDEN_ROOM_KEY){
+        		_this.pwdInput = '';
+        		_this.pwdOpen = true;
+        		return;
+        	}
         	_this.confirmSwitchRoom(room, function(){ _this.doJoin(room); });
         },
         //点击浮窗房间列表，直接加入对应房间
@@ -368,6 +401,21 @@ var vm = new Vue({
         		dataType:'json',
         		success:function(data){
         			_this.rooms=data;
+        		},
+        		error:function(){
+        			//静默失败，不打扰用户
+        		}
+        	});
+        },
+        //轮询获取当前总在线人数（右上角悬浮展示，进入房间后隐藏）
+        loadOnline:function(){
+        	var _this=this;
+        	$.ajax({
+        		url:'/online',
+        		type:'get',
+        		dataType:'json',
+        		success:function(data){
+        			_this.onlineCount = data;
         		},
         		error:function(){
         			//静默失败，不打扰用户
@@ -425,11 +473,141 @@ var vm = new Vue({
         	if(cb) cb();
         },
         //执行加入房间（切换确认通过后统一调用）
-        doJoin:function(room){
+        doJoin:function(room, password){
         	var _this=this;
         	_this.nice=true;
-        	_this.websocket.send('{"type":"join","room":"'+room+'"}');
+        	var pwd = password || '';
+        	//进入隐藏房间时记住密码，供断线重连自动回房
+        	if(room == HIDDEN_ROOM_KEY && pwd){ _this.hiddenPwd = pwd; }
+        	_this.websocket.send(JSON.stringify({type:'join', room: room, password: pwd}));
         	_this.listFeedback=[];
+        },
+        //主动离开当前房间：先弹确认框，确认后才发送leave消息
+        leaveRoom:function(){
+        	var _this=this;
+        	if(!_this.currentRoom){ return; }
+        	var doLeave = function(){
+        		if(_this.websocket && _this.websocket.readyState == 1){
+        			_this.websocket.send('{"type":"leave"}');
+        		}
+        	};
+        	_this.confirmBox('确定要离开房间 ' + _this.currentRoom + ' 吗？', doLeave);
+        },
+        //重置隐藏房间历史分页状态（离开或重新加入时调用）
+        resetHistoryState:function(){
+        	var _this=this;
+        	_this.historyLoading = false;
+        	_this.hasMoreHistory = true;
+        	_this.historyEarliestId = null;
+        	_this.showBackBottom = false;
+        	_this._suppressScroll = false;
+        },
+        //后端历史记录Entity映射为前端消息项（text/image/video，按发送者是否自己区分左右）
+        mapHistory:function(item){
+        	var _this=this;
+        	var isMine = item.sender && item.sender == _this.connetId;
+        	if(item.msgType == 'image' && item.mediaData){
+        		//图片：mediaData为服务端解密还原后的base64真实图片，以dataURL直接展示
+        		var mime = item.mediaMime || 'image/jpeg';
+        		return {id: isMine ? 3 : 4, name: isMine ? '我' : item.sender, img: 'data:' + mime + ';base64,' + item.mediaData};
+        	}
+        	if(item.msgType == 'video'){
+        		//视频仅落文件名标记，按文本气泡展示
+        		return {id: isMine ? 1 : 2, name: isMine ? '我' : item.sender, msg: item.content || ('[视频] ' + (item.mediaName || ''))};
+        	}
+        	//文本
+        	return {id: isMine ? 1 : 2, name: isMine ? '我' : item.sender, msg: item.content || ''};
+        },
+        //加载隐藏房间历史记录（默认20条，向上翻页时beforeId传已加载最早一条id）
+        loadHistory:function(beforeId){
+        	var _this=this;
+        	if(!_this.currentRoom || _this.currentRoom != HIDDEN_ROOM_KEY){ return; }
+        	if(_this.historyLoading){ return; }
+        	if(beforeId != null && !_this.hasMoreHistory){ return; }
+        	_this.historyLoading = true;
+        	var params = {room: HIDDEN_ROOM_KEY, size: 20};
+        	if(beforeId != null){ params.beforeId = beforeId; }
+        	$.ajax({
+        		url:'/chatHistory',
+        		type:'get',
+        		data: params,
+        		dataType:'json',
+        		success:function(data){
+        			_this.historyLoading = false;
+        			var list = data || [];
+        			if(list.length < 20){ _this.hasMoreHistory = false; }
+        			if(beforeId == null){
+        				//首次加载：整段覆盖为最近20条并滚动到底部
+        				var mapped = [];
+        				for(var i=0;i<list.length;i++){ mapped.push(_this.mapHistory(list[i])); }
+        				_this.listFeedback = mapped;
+        				_this.historyEarliestId = list.length > 0 ? list[0].id : null;
+        				_this.$nextTick(function(){ _this.scrollToBottom(); });
+        			}else{
+        				//向上翻页：旧记录原地插入最前，保持滚动位置不跳动
+        				_this.prependHistory(list);
+        			}
+        		},
+        		error:function(){
+        			_this.historyLoading = false;
+        		}
+        	});
+        },
+        //把更早的历史记录逐条插入列表最前，并保持当前滚动位置不跳动
+        prependHistory:function(list){
+        	var _this=this;
+        	if(!list || list.length == 0){ return; }
+        	var el = document.querySelector('#feedbackSection section');
+        	var prevHeight = el ? el.scrollHeight : 0;
+        	var prevTop = el ? el.scrollTop : 0;
+        	//抑制watch自动滚动，防止插入时跳到底部
+        	_this._suppressScroll = true;
+        	//后端返回升序(旧在前)，倒序unshift到最前，保证[旧...新]顺序正确
+        	for(var i=list.length-1; i>=0; i--){
+        		_this.listFeedback.unshift(_this.mapHistory(list[i]));
+        	}
+        	_this.historyEarliestId = list[0].id;
+        	_this.$nextTick(function(){
+        		if(el){
+        			//新增高度全部加在顶部，scrollTop后移相应距离以保持视觉位置
+        			var addedHeight = el.scrollHeight - prevHeight;
+        			el.scrollTop = prevTop + addedHeight;
+        		}
+        		//延迟解除抑制，避开watch内部$nextTick的异步时序
+        		setTimeout(function(){ _this._suppressScroll = false; }, 0);
+        	});
+        },
+        //聊天区滚动：距底部较远时显示"回到最下面"小提示
+        onChatScroll:function(){
+        	var _this=this;
+        	var el = document.querySelector('#feedbackSection section');
+        	if(!el) return;
+        	var distance = el.scrollHeight - el.scrollTop - el.clientHeight;
+        	_this.showBackBottom = distance > 30;
+        },
+        //点击"回到最下面"：滚动到底部并隐藏提示
+        backToBottom:function(){
+        	var _this=this;
+        	_this.showBackBottom = false;
+        	_this.scrollToBottom();
+        },
+        //关闭隐藏房间密码弹框
+        cancelPwd:function(){
+        	this.pwdOpen = false;
+        	this.pwdInput = '';
+        },
+        //确认密码加入隐藏房间
+        confirmPwd:function(){
+        	var _this=this;
+        	var pwd = (_this.pwdInput || '').trim();
+        	if(!pwd){
+        		_this.showToast('请输入密码');
+        		return;
+        	}
+        	_this.pwdOpen = false;
+        	_this.confirmSwitchRoom(HIDDEN_ROOM_KEY, function(){
+        		_this.doJoin(HIDDEN_ROOM_KEY, pwd);
+        	});
         },
         //打开图片选择框
         openFilePicker:function(){
@@ -766,6 +944,8 @@ var vm = new Vue({
         },
         //图片加载完成回调：图片是异步加载的，加载后才会撑开布局，此时重新滚动到底部
         onImgLoad:function(){
+        	//用户已向上翻看历史或正在插入历史时不强行拉回底部
+        	if(this._suppressScroll || this.showBackBottom) return;
         	this.scrollToBottom();
         },
         uuid: function () {
@@ -787,7 +967,11 @@ var vm = new Vue({
         listFeedback: function (newVal, oldVal) {
             var _this = this;
             _this.$nextTick(function () {
-                _this.scrollToBottom();
+                //向上翻页插入历史时抑制自动滚动；用户已在历史中时不强行拉回底部
+                if (_this._suppressScroll) return;
+                if (!_this.showBackBottom) {
+                    _this.scrollToBottom();
+                }
             });
             // 清屏（整体替换数组）时，释放旧消息里图片/视频的 Blob 对象URL，避免内存只增不减
             if (oldVal && oldVal !== newVal) {
@@ -810,6 +994,7 @@ var vm = new Vue({
         _this.systemPush();
         //加载聊天室列表并定时刷新
         _this.loadRooms();
-        setInterval(function(){ _this.loadRooms(); }, 5000);
+        _this.loadOnline();
+        setInterval(function(){ _this.loadRooms(); _this.loadOnline(); }, 5000);
     }
 });

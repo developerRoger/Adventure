@@ -1,11 +1,13 @@
 package com.firstTry.Adventure.middleware;
 
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.charset.StandardCharsets;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Base64;
 import java.util.Collections;
 import java.util.Date;
 import java.util.Iterator;
@@ -32,8 +34,11 @@ import org.springframework.stereotype.Component;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
+import com.firstTry.Adventure.entity.ChatMessageEntity;
 import com.firstTry.Adventure.entity.WebSocketVisitLogEntity;
+import com.firstTry.Adventure.service.ChatMessageService;
 import com.firstTry.Adventure.service.WebSocketVisitLogService;
+import com.firstTry.Adventure.utils.ChaCha20;
 import com.firstTry.Adventure.utils.IpRegionUtil;
 
 /**
@@ -55,8 +60,16 @@ public class WebSocketServer {
 	// websocket访问记录服务（记录IP、进入时间、房间名）
 	@Autowired
 	private WebSocketVisitLogService webSocketVisitLogService;
+	// 隐藏房间聊天记录落库服务
+	@Autowired
+	private ChatMessageService chatMessageService;
 	// 单个房间最大人数
 	private static final int MAX_ROOM_SIZE = 10;
+	// 隐藏房间（系统内置，加入需密码，聊天数据落库保留10天）
+	public static final String HIDDEN_ROOM_KEY = "CSYY";
+	public static final String HIDDEN_ROOM_PASSWORD = "csyy";
+	// 媒体分片大小（与前端 IMG_CHUNK_SIZE 保持一致，64KB，用于图片解密偏移计算）
+	private static final int MEDIA_CHUNK_SIZE = 64 * 1024;
 
 	// 静态变量，用来记录当前在线连接数。应该把它设计成线程安全的。
 	private static int onlineCount = 0;
@@ -88,6 +101,13 @@ public class WebSocketServer {
 		int totalChunk; // 总片数
 		Set<String> targets; // 转发目标（房间内除发送者外的人）
 		long createdAt; // 创建时间，用于TTL惰性清理（支持重传期间保持上下文）
+		// ===== 隐藏房间图片落库所需 =====
+		boolean persistContent; // 是否为需要在服务端缓存分片并落库的图片
+		boolean persisted; // 是否已完成落库（重传补发的分片不再缓存）
+		byte[] key; // 32字节解密key（image_meta的key字段base64解码）
+		String mime; // 媒体MIME类型
+		String filename; // 媒体文件名
+		Map<Integer, byte[]> chunks; // 片序号 -> 加密分片数据
 		ImageTransfer(String sid, int totalChunk, Set<String> targets) {
 			this.sid = sid;
 			this.totalChunk = totalChunk;
@@ -135,6 +155,25 @@ public class WebSocketServer {
 	}
 
 	/**
+	 * 判断是否为系统内置隐藏房间
+	 */
+	private static boolean isHiddenRoom(String roomKey) {
+		return HIDDEN_ROOM_KEY.equals(roomKey);
+	}
+
+	/**
+	 * 由msgId派生12字节nonce（与前端 _imgNonce 保持一致）
+	 */
+	private static byte[] deriveNonce(String msgId) {
+		byte[] nonce = new byte[12];
+		int len = Math.min(12, msgId.length());
+		for (int i = 0; i < len; i++) {
+			nonce[i] = (byte) (msgId.charAt(i) & 0xFF);
+		}
+		return nonce;
+	}
+
+	/**
 	 * 生成6位短房间key，方便用户口头/手动输入
 	 * 
 	 * @return
@@ -155,6 +194,10 @@ public class WebSocketServer {
 	public static List<Map<String, Object>> getRoomList() {
 		List<Map<String, Object>> list = new ArrayList<Map<String, Object>>();
 		for (Map.Entry<String, Set<String>> entry : roomMap.entrySet()) {
+			// 隐藏房间不展示在公开房间列表中
+			if (isHiddenRoom(entry.getKey())) {
+				continue;
+			}
 			Map<String, Object> room = new java.util.HashMap<String, Object>();
 			room.put("room", entry.getKey());
 			room.put("members", entry.getValue().size());
@@ -257,6 +300,7 @@ public class WebSocketServer {
 			String roomKey = null;
 			String content = null;
 			String msgId = null;
+			String password = null;
 			int totalChunk = 0;
 			JSONObject json = null;
 			// 兼容旧协议：纯文本 "connet" 视为随机匹配，"heartbeat" 为心跳，其余视为聊天内容
@@ -266,6 +310,7 @@ public class WebSocketServer {
 				roomKey = json.getString("room");
 				content = json.getString("msg");
 				msgId = json.getString("msgId");
+				password = json.getString("password");
 				totalChunk = json.getIntValue("totalChunk");
 			} else {
 				if ("connet".equals(message)) {
@@ -286,8 +331,16 @@ public class WebSocketServer {
 				if (roomKey == null || roomKey.trim().length() == 0) {
 					sendError(sid, "房间名不能为空");
 				} else {
-					joinRoom(sid, roomKey.trim().toUpperCase());
+					joinRoom(sid, roomKey.trim().toUpperCase(), password);
 				}
+			} else if ("leave".equals(type)) {
+				// 主动离开房间：移出房间并通知自己，前端据此恢复"加入/随机匹配"按钮
+				leaveRoom(sid, true);
+				JSONObject leftMsg = new JSONObject();
+				leftMsg.put("code", 200);
+				leftMsg.put("type", "left");
+				leftMsg.put("msg", "已离开房间");
+				sendInfo(leftMsg.toJSONString(), sid);
 			} else if ("chat".equals(type)) {
 				// 聊天消息，广播给房间内其他人
 				sendChat(sid, content == null ? "" : content);
@@ -321,10 +374,15 @@ public class WebSocketServer {
 	 * @param sid
 	 * @param roomKey
 	 */
-	private synchronized void joinRoom(String sid, String roomKey) {
+	private synchronized void joinRoom(String sid, String roomKey, String password) {
 		// 房间名长度限制（6位短码）
 		if (roomKey.length() > 6) {
 			sendError(sid, "房间名最多 6 位，请重新输入");
+			return;
+		}
+		// 隐藏房间需要密码校验（放在离开旧房间之前，密码错误不影响当前所在房间）
+		if (isHiddenRoom(roomKey) && (password == null || !HIDDEN_ROOM_PASSWORD.equals(password))) {
+			sendError(sid, "密码错误");
 			return;
 		}
 		// 房间名敏感词脱敏，防止恶意房间名
@@ -482,6 +540,10 @@ public class WebSocketServer {
 		chatMsg.put("from", sid);
 		chatMsg.put("room", roomKey);
 		broadcast(roomKey, sid, chatMsg.toJSONString());
+		// 隐藏房间聊天文字落库
+		if (isHiddenRoom(roomKey)) {
+			saveChatMessage(roomKey, sid, "text", filtered, null, null, null);
+		}
 	}
 
 	/**
@@ -515,9 +577,6 @@ public class WebSocketServer {
 		Set<String> targets = new CopyOnWriteArraySet<String>();
 		targets.addAll(members);
 		targets.remove(sid);
-		// 注册新传输前惰性清理已过期的旧上下文（TTL已到且未清理的），防止map无界增长
-		purgeExpiredTransfers();
-		imageTransferMap.put(msgId, new ImageTransfer(sid, totalChunk, targets));
 		// 文件名敏感词脱敏 + 长度限制，随元信息转发
 		String filename = meta.getString("filename");
 		if (filename != null) {
@@ -526,6 +585,27 @@ public class WebSocketServer {
 				filename = filename.substring(0, 100);
 			}
 			meta.put("filename", filename);
+		}
+		String mime = meta.getString("mime");
+		boolean isImage = mime != null && mime.startsWith("image/");
+		boolean isVideo = mime != null && mime.startsWith("video/");
+		// 注册新传输前惰性清理已过期的旧上下文（TTL已到且未清理的），防止map无界增长
+		purgeExpiredTransfers();
+		ImageTransfer transfer = new ImageTransfer(sid, totalChunk, targets);
+		imageTransferMap.put(msgId, transfer);
+		// 隐藏房间媒体落库：图片在服务端缓存加密分片，media_end 时重组解密还原后存真实图片内容；
+		// 视频不存视频内容，仅落一行文件名标记（[视频] xxx.mp4）
+		if (isHiddenRoom(roomKey)) {
+			transfer.mime = mime;
+			transfer.filename = filename;
+			if (isImage) {
+				transfer.persistContent = true;
+				String keyB64 = meta.getString("key");
+				transfer.key = keyB64 == null ? null : Base64.getDecoder().decode(keyB64);
+				transfer.chunks = new ConcurrentHashMap<Integer, byte[]>();
+			} else if (isVideo) {
+				saveChatMessage(roomKey, sid, "video", "[视频] " + (filename == null ? "" : filename), filename, mime, null);
+			}
 		}
 		meta.put("from", sid);
 		meta.put("room", roomKey);
@@ -565,6 +645,10 @@ public class WebSocketServer {
 						log.error("转发媒体分片失败, 目标sid=" + target, e);
 					}
 				}
+			}
+			// 隐藏房间图片落库：缓存该加密分片（按片序号覆盖，重传补发也正确），media_end 时统一解密重组入库
+			if (transfer.persistContent && !transfer.persisted && transfer.chunks != null) {
+				transfer.chunks.put(chunkIndex, Arrays.copyOfRange(bytes, BIN_HEADER_LEN, bytes.length));
 			}
 			// 注意：不在此处删除传输上下文，改为TTL惰性清理，以支持丢包重传(片序号二次到达)
 		} catch (Exception e) {
@@ -626,6 +710,11 @@ public class WebSocketServer {
 				}
 			}
 		}
+		// 隐藏房间图片：分片已全部收到，重组加密分片并解密还原后落库
+		if (transfer.persistContent && !transfer.persisted) {
+			transfer.persisted = true;
+			persistImage(sid, msgId, transfer);
+		}
 	}
 
 	/**
@@ -645,6 +734,63 @@ public class WebSocketServer {
 				sender.getBasicRemote().sendText(json.toJSONString());
 			} catch (IOException e) {
 				log.error("转发重传请求失败, 发送者sid=" + transfer.sid, e);
+			}
+		}
+	}
+
+	/**
+	 * 隐藏房间聊天记录落库（文字/视频标记/图片三者共用统一入口）
+	 */
+	private void saveChatMessage(String roomKey, String sender, String msgType, String content,
+			String mediaName, String mediaMime, String mediaData) {
+		try {
+			ChatMessageEntity entity = new ChatMessageEntity();
+			entity.setRoomKey(roomKey);
+			entity.setSender(sender);
+			entity.setMsgType(msgType);
+			entity.setContent(content);
+			entity.setMediaName(mediaName);
+			entity.setMediaMime(mediaMime);
+			entity.setMediaData(mediaData);
+			entity.setCreatedAt(new Date());
+			chatMessageService.save(entity);
+		} catch (Exception e) {
+			log.error("保存隐藏房间聊天记录失败, roomKey=" + roomKey, e);
+		}
+	}
+
+	/**
+	 * 隐藏房间图片落库：把缓存的加密分片按片序号重组，逐片ChaCha20解密还原为真实图片字节，
+	 * 再base64编码后存入数据库 media_data。处理完释放分片缓存，避免大图长期占用内存。
+	 */
+	private void persistImage(String sid, String msgId, ImageTransfer transfer) {
+		try {
+			String roomKey = userRoomMap.get(sid);
+			if (roomKey == null) {
+				roomKey = HIDDEN_ROOM_KEY;
+			}
+			byte[] nonce = deriveNonce(msgId);
+			ByteArrayOutputStream out = new ByteArrayOutputStream();
+			for (int i = 0; i < transfer.totalChunk; i++) {
+				byte[] chunk = transfer.chunks == null ? null : transfer.chunks.get(i);
+				if (chunk == null) {
+					log.error("隐藏房间图片分片缺失，放弃落库, msgId=" + msgId + ", 缺失片=" + i);
+					return;
+				}
+				byte[] plain = transfer.key == null ? chunk
+						: ChaCha20.crypt(chunk, transfer.key, nonce, (long) i * MEDIA_CHUNK_SIZE);
+				out.write(plain);
+			}
+			String mediaData = Base64.getEncoder().encodeToString(out.toByteArray());
+			String filename = transfer.filename == null ? "" : transfer.filename;
+			saveChatMessage(roomKey, sid, "image", "[图片] " + filename, filename, transfer.mime, mediaData);
+			log.info("隐藏房间图片已落库, msgId=" + msgId + ", 大小=" + out.size() + "字节");
+		} catch (Exception e) {
+			log.error("隐藏房间图片落库失败, msgId=" + msgId, e);
+		} finally {
+			// 无论成败都释放分片缓存，避免大图长期占用内存
+			if (transfer.chunks != null) {
+				transfer.chunks.clear();
 			}
 		}
 	}

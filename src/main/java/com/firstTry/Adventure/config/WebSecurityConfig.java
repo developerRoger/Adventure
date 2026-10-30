@@ -36,10 +36,12 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		"/",
 		"/index",
 		"/go",
-		//聊天室支撑接口：房间列表、访问记录、客户端IP
+		//聊天室支撑接口：房间列表、访问记录、客户端IP、聊天历史
 		"/rooms",
 		"/visitLogs",
 		"/getIp",
+		"/chatHistory",
+		"/online",
 		//websocket连接
 		"/feedback/*",
 		//聊天页所需的静态资源
