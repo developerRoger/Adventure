@@ -333,6 +333,17 @@ html, body {
 	cursor: pointer;
 }
 
+/* 聊天视频消息：自适应气泡宽度，限制最大高度，黑色底播放 */
+.img-bubble .chat-video {
+	max-width: 100%;
+	max-height: 240px;
+	width: auto;
+	border-radius: 6px;
+	display: block;
+	margin-top: 4px;
+	background: #000;
+}
+
 /* 图片点击放大预览浮层 */
 .lightbox {
 	position: fixed;
@@ -446,6 +457,14 @@ html, body {
 					<small>{{a.name}}:</small><br/>
 					<img :src="a.img" class="chat-img" @load="onImgLoad" @click="previewSrc = a.img" alt="聊天图片"/>
 				</div>
+				<div class="img-bubble mine" v-else-if="a.video && a.id==5">
+					<small>{{a.name}}:</small><br/>
+					<video :src="a.video" class="chat-video" controls playsinline preload="metadata"></video>
+				</div>
+				<div class="img-bubble" v-else-if="a.video">
+					<small>{{a.name}}:</small><br/>
+					<video :src="a.video" class="chat-video" controls playsinline preload="metadata"></video>
+				</div>
 				<p class="bg-danger leftttt" v-else><small>{{a.name}}:</small> {{a.msg}}</p>
 			</div>
 		</section>
@@ -465,9 +484,12 @@ html, body {
 					@keyup.enter="sendObject" placeholder="请在此输入你想说的话." style="flex: 1;">
 				<button type="button" class="btn btn-success"
 					style="margin-left: 6px; white-space: nowrap;" @click="openFilePicker">图片</button>
+					<button type="button" class="btn btn-info"
+						style="margin-left: 6px; white-space: nowrap;" @click="openVideoPicker">视频</button>
 			</div>
 			<!-- 隐藏的图片选择框 -->
 			<input type="file" id="imgFile" accept="image/*" style="display: none;" @change="onFileChange">
+				<input type="file" id="videoFile" accept="video/*" style="display: none;" @change="onVideoFileChange">
 		</div>
 		<div class="form-group">
 			<label for="RoomKey">房间名</label>

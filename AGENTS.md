@@ -7,8 +7,8 @@
 - 项目名：Adventure（`com.firstTry:Adventure:1.0`），Maven 项目，打包方式 `jar`
 - Java 版本：1.8
 - Spring Boot：`2.0.5.RELEASE`
-- 主要技术：Spring Boot、MyBatis-Plus（`BaseMapper` + Wrapper，无 XML）、MySQL、Spring Security + JWT、Thymeleaf、WebSocket、离线 ip2region（IP 归属地解析）、图片加密（纯 JS ChaCha20）
-- 项目定位：**仅保留聊天室功能**（WebSocket 房间制多人聊天 + 图片消息 + 访问记录），已移除 Swagger2、Netty、七牛云、Velocity 代码生成、Nacos、Redis（`RedisConfig`/`RedisObjectSerializer`/yml redis 配置/`spring-boot-starter-redis` 依赖）、Docker（`Dockerfile`/docker-maven-plugin）、后台管理及测试用例
+- 主要技术：Spring Boot、MyBatis-Plus（`BaseMapper` + Wrapper，无 XML）、MySQL、Spring Security + JWT、Thymeleaf、WebSocket、离线 ip2region（IP 归属地解析）、媒体加密（纯 JS ChaCha20，图片/GIF/视频共用）
+- 项目定位：**仅保留聊天室功能**（WebSocket 房间制多人聊天 + 图片/GIF/视频消息 + 访问记录），已移除 Swagger2、Netty、七牛云、Velocity 代码生成、Nacos、Redis（`RedisConfig`/`RedisObjectSerializer`/yml redis 配置/`spring-boot-starter-redis` 依赖）、Docker（`Dockerfile`/docker-maven-plugin）、后台管理及测试用例
 
 ## 常用命令
 
@@ -47,7 +47,7 @@ mvn spring-boot:run -Dspring-boot.run.profiles=prod
 - 日志输出目录生产环境固定为 `/home/apps/logs/`（通过 `log.path` 配置，本地 dev 配置为 `./logs`），单文件最大 5MB，保留 5 天。
 - 项目不使用 Nacos，所有 nacos 相关配置均已移除。
 - 项目不使用 Redis 与 Docker：`RedisConfig`/`RedisObjectSerializer`、yml 中的 redis 配置、`spring-boot-starter-redis` 依赖以及 `Dockerfile`/docker-maven-plugin 均已移除，勿再引入。
-- WebSocket 图片消息分片转发**禁止在服务端拼接组装**，分片组装完全交给前端处理，以降低 JVM 内存压力。
+- WebSocket 媒体消息(图片/GIF/视频)分片转发**禁止在服务端拼接组装**，分片组装完全交给前端处理，以降低 JVM 内存压力；丢包通过「片序号 + 重传」由前端自行处理，服务端仅按 msgId 路由重传请求（`media_end`/`retrans`）。
 - `AdventureApplication` 中 `@MapperScan("com.firstTry.adventure.mapper")` 与实际包名 `com.firstTry.Adventure.mapper` 存在大小写差异，修改 Mapper 扫描或包名时需保持一致。
 - 入口拦截保留 Spring Security 白名单配置（`config/WebSecurityConfig.java`），非聊天室入口匿名访问返回 403。
 - `target/` 已被 `.gitignore` 忽略，不要提交编译产物。

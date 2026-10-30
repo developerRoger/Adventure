@@ -68,26 +68,30 @@ public class WebSocketServer {
 	// 等待随机匹配的用户sid队列
 	private static List<String> waitingQueue = Collections.synchronizedList(new ArrayList<String>());
 
-	// ===== 图片消息分片转发（二进制帧） =====
+	// ===== 媒体消息(图片/GIF/视频)分片转发（二进制帧） =====
 	// 二进制帧头：前32字节msgId + 后4字节片序号(大端)，帧总开销36字节
 	private static final int MSG_ID_LEN = 32;
 	private static final int BIN_HEADER_LEN = 36;
-	// 单图上限1MB、分片64KB约16片，此处留余量
-	private static final int MAX_IMAGE_CHUNK = 20;
-	// 图片传输上下文：msgId -> 传输信息（发送者、总片数、转发目标），仅存元数据，不缓存图片数据
+	// 媒体分片数量上限：视频≤10MB、64KB/片约160片，留余量取200（同时兼容大图/压缩视频）
+	private static final int MAX_MEDIA_CHUNK = 200;
+	// 媒体传输上下文保留时长(毫秒)：期间允许丢包重传(片序号可二次到达仍继续转发)，到期惰性清理
+	private static final long MEDIA_TRANSFER_TTL = 60000L;
+	// 媒体传输上下文：msgId -> 传输信息（发送者、总片数、转发目标），仅存元数据，不缓存媒体数据
 	private static Map<String, ImageTransfer> imageTransferMap = new ConcurrentHashMap<>();
 
 	/**
-	 * 一次图片传输的上下文信息
+	 * 一次媒体传输的上下文信息
 	 */
 	private static class ImageTransfer {
 		String sid; // 发送者sid
 		int totalChunk; // 总片数
 		Set<String> targets; // 转发目标（房间内除发送者外的人）
+		long createdAt; // 创建时间，用于TTL惰性清理（支持重传期间保持上下文）
 		ImageTransfer(String sid, int totalChunk, Set<String> targets) {
 			this.sid = sid;
 			this.totalChunk = totalChunk;
 			this.targets = targets;
+			this.createdAt = System.currentTimeMillis();
 		}
 	}
 
@@ -287,10 +291,16 @@ public class WebSocketServer {
 				// 聊天消息，广播给房间内其他人
 				sendChat(sid, content == null ? "" : content);
 			} else if ("image_meta".equals(type)) {
-				// 图片消息元信息（文本帧）：登记分片转发上下文，后续二进制分片逐片实时转发
+				// 媒体消息元信息（文本帧）：登记分片转发上下文，后续二进制分片逐片实时转发（图片/GIF/视频共用）
 				forwardImageMeta(sid, msgId, json, totalChunk);
+			} else if ("media_end".equals(type)) {
+				// 媒体分片全部发送完成标记：转发给房间内其他接收者，触发其校验缺失分片并发起重传
+				forwardMediaEnd(sid, msgId, json);
+			} else if ("retrans".equals(type)) {
+				// 丢包重传请求：路由给该msgId对应的发送者，由发送者重发缺失分片
+				forwardRetrans(msgId, json);
 			} else if ("heartbeat".equals(type)) {
-				log.info("用户心跳:" + sid + ",当前在线人数为" + getOnlineCount());
+				// 心跳仅用于保活，入站信息已在上方统一记录，此处无需重复日志
 			} else {
 				sendError(sid, "无法识别的消息类型");
 			}
@@ -487,8 +497,8 @@ public class WebSocketServer {
 			sendError(sid, "图片消息标识为空");
 			return;
 		}
-		if (totalChunk < 1 || totalChunk > MAX_IMAGE_CHUNK) {
-			sendError(sid, "图片分片数量不合法（最多 " + MAX_IMAGE_CHUNK + " 片）");
+		if (totalChunk < 1 || totalChunk > MAX_MEDIA_CHUNK) {
+			sendError(sid, "媒体分片数量不合法（最多 " + MAX_MEDIA_CHUNK + " 片）");
 			return;
 		}
 		String roomKey = userRoomMap.get(sid);
@@ -504,6 +514,8 @@ public class WebSocketServer {
 		Set<String> targets = new CopyOnWriteArraySet<String>();
 		targets.addAll(members);
 		targets.remove(sid);
+		// 注册新传输前惰性清理已过期的旧上下文（TTL已到且未清理的），防止map无界增长
+		purgeExpiredTransfers();
 		imageTransferMap.put(msgId, new ImageTransfer(sid, totalChunk, targets));
 		// 文件名敏感词脱敏 + 长度限制，随元信息转发
 		String filename = meta.getString("filename");
@@ -549,16 +561,13 @@ public class WebSocketServer {
 					try {
 						ts.getBasicRemote().sendBinary(ByteBuffer.wrap(bytes));
 					} catch (IOException e) {
-						log.error("转发图片分片失败, 目标sid=" + target, e);
+						log.error("转发媒体分片失败, 目标sid=" + target, e);
 					}
 				}
 			}
-			// 最后一片转发完成后清理传输上下文
-			if (chunkIndex == transfer.totalChunk - 1) {
-				imageTransferMap.remove(msgId);
-			}
+			// 注意：不在此处删除传输上下文，改为TTL惰性清理，以支持丢包重传(片序号二次到达)
 		} catch (Exception e) {
-			log.error("处理图片分片异常, sid=" + sid, e);
+			log.error("处理媒体分片异常, sid=" + sid, e);
 		}
 	}
 
@@ -575,6 +584,66 @@ public class WebSocketServer {
 				it.remove();
 			} else {
 				entry.getValue().targets.remove(sid);
+			}
+		}
+	}
+
+	/**
+	 * 惰性清理已过期的媒体传输上下文（超过TTL仍未结束的），防止map无界增长
+	 * 在注册新传输时被调用，无需独立定时任务
+	 */
+	private void purgeExpiredTransfers() {
+		long now = System.currentTimeMillis();
+		Iterator<Map.Entry<String, ImageTransfer>> it = imageTransferMap.entrySet().iterator();
+		while (it.hasNext()) {
+			if (now - it.next().getValue().createdAt > MEDIA_TRANSFER_TTL) {
+				it.remove();
+			}
+		}
+	}
+
+	/**
+	 * 转发媒体分片发送完成标记（media_end）给房间内其他接收者，
+	 * 接收者据此校验是否有缺失分片并主动发起丢包重传
+	 * 
+	 * @param sid   发送者sid
+	 * @param msgId 媒体消息唯一标识
+	 * @param json  原样转发的结束标记JSON
+	 */
+	private void forwardMediaEnd(String sid, String msgId, JSONObject json) {
+		ImageTransfer transfer = imageTransferMap.get(msgId);
+		if (transfer == null) {
+			return; // 传输上下文已失效（未登记或已超时清理）
+		}
+		for (String target : transfer.targets) {
+			Session ts = webSocketSet.get(target);
+			if (ts != null && ts.isOpen()) {
+				try {
+					ts.getBasicRemote().sendText(json.toJSONString());
+				} catch (IOException e) {
+					log.error("转发媒体结束标记失败, sid=" + target, e);
+				}
+			}
+		}
+	}
+
+	/**
+	 * 转发丢包重传请求（retrans）给对应msgId的发送者，由发送者重发缺失分片
+	 * 
+	 * @param msgId 媒体消息唯一标识
+	 * @param json  重传请求JSON（含chunks缺失片序号数组）
+	 */
+	private void forwardRetrans(String msgId, JSONObject json) {
+		ImageTransfer transfer = imageTransferMap.get(msgId);
+		if (transfer == null) {
+			return; // 传输上下文已失效，无法定位发送者
+		}
+		Session sender = webSocketSet.get(transfer.sid);
+		if (sender != null && sender.isOpen()) {
+			try {
+				sender.getBasicRemote().sendText(json.toJSONString());
+			} catch (IOException e) {
+				log.error("转发重传请求失败, 发送者sid=" + transfer.sid, e);
 			}
 		}
 	}
@@ -623,7 +692,7 @@ public class WebSocketServer {
 				if (webSocketSet.get(key).isOpen())
 					sendMessage(obj.toJSONString(), webSocketSet.get(key));
 			} catch (IOException e) {
-				e.printStackTrace();
+				log.error("群发消息失败", e);
 			}
 		}
 	}
